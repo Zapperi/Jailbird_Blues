@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
+  m_Name: New Card 1
+  m_EditorClassIdentifier: 
+  name: test2
+  BackgroundImage: {fileID: 0}
+  Npc: {fileID: 0}
+  Switches: 
+  timeOfDay: 0
+  storyPhase: 0
+  cardText: Now we are testing again
+  OptionsOn: 1
+  endCard: 0
+  Option1On: 1
+  option1: yay
+  option1IrsReputation: 0
+  option1PunkReputation: 0
+  option1ShakeReputation: 0
+  option1GuardReputation: 0
+  option1FollowCard: {fileID: 0}
+  Option2On: 1
+  option2: bravo
+  option2IrsReputation: 0
+  option2PunkReputation: 0
+  option2ShakeReputation: 0
+  option2GuardReputation: 0
+  option2FollowCard: {fileID: 0}
+  Option3On: 1
+  option3: wow
+  option3IrsReputation: 0
+  option3PunkReputation: 0
+  option3ShakeReputation: 0
+  option3GuardReputation: 0
+  option3FollowCard: {fileID: 0}
+  Option4On: 1
+  option4: gr8
+  option4IrsReputation: 0
+  option4PunkReputation: 0
+  option4ShakeReputation: 0
+  option4GuardReputation: 0
+  option4FollowCard: {fileID: 0}
