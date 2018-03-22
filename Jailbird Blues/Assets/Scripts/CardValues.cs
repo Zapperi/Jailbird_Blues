@@ -3,14 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-[CreateAssetMenu (fileName = "New Card", menuName = "Card")]
-public class CardValues : ScriptableObject {
+[CreateAssetMenu(fileName = "New Card", menuName = "Card")]
+public class CardValues : ScriptableObject
+{
     //Card's name, can be used as a followup more easily.
     //public new string name;
     public Sprite BackgroundImage;
     public Sprite Npc;
     public List<int> Switches;
-    // Time: 0:Morning, 1:Afternoon, ...
+    [Header("What is required to acivate the card")]
+    public int RepIrs;
+    public int RepPunks;
+    public int RepShake;
+    public int RepGuard;
+    [Header("Time: 1:Morning, 2:Lunch, 3:Work/yardtime, 4:Nighttime")]
     public int timeOfDay;
     public int storyPhase;
 
@@ -18,8 +24,10 @@ public class CardValues : ScriptableObject {
     //Card's text
     public string cardText;
 
-    public bool OptionsOn = true;
+
     public bool endCard = false;
+    [Header("If options are off, use 4th option to add your follow card")]
+    public bool OptionsOn = true;
     //Option 1 values
     public bool Option1On = true;
     public string option1;
@@ -58,7 +66,9 @@ public class CardValues : ScriptableObject {
     public int option4GuardReputation;
     public CardValues option4FollowCard;
 
+    public bool repeatable;
+    public bool used;
 
 
-
+    
 }

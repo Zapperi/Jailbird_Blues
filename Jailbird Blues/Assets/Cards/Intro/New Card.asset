@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
+  m_Name: New Card
+  m_EditorClassIdentifier: 
+  BackgroundImage: {fileID: 0}
+  Npc: {fileID: 0}
+  Switches: 
+  RepIrs: 0
+  RepPunks: 0
+  RepShake: 0
+  RepGuard: 0
+  timeOfDay: 1
+  storyPhase: 1
+  cardText: Gimme shoes plz
+  endCard: 0
+  OptionsOn: 1
+  Option1On: 1
+  option1: Give
+  option1IrsReputation: -1
+  option1PunkReputation: 0
+  option1ShakeReputation: 0
+  option1GuardReputation: 2
+  option1FollowCard: {fileID: 11400000, guid: c86a54b01b47e3b47806a632338dbe30, type: 2}
+  Option2On: 1
+  option2: nope lol
+  option2IrsReputation: 0
+  option2PunkReputation: -2
+  option2ShakeReputation: 3
+  option2GuardReputation: 0
+  option2FollowCard: {fileID: 11400000, guid: 7911c6cf7a7d0284ea7139d8ff846831, type: 2}
+  Option3On: 1
+  option3: gimme urs
+  option3IrsReputation: 0
+  option3PunkReputation: 0
+  option3ShakeReputation: 0
+  option3GuardReputation: 0
+  option3FollowCard: {fileID: 11400000, guid: 8226b5ede50d9214dba45d62caab4185, type: 2}
+  Option4On: 1
+  option4: i give you 1 you give me 1 of urs
+  option4IrsReputation: 0
+  option4PunkReputation: 0
+  option4ShakeReputation: 0
+  option4GuardReputation: 0
+  option4FollowCard: {fileID: 11400000, guid: 748dbc28e0d23044ea834716251df166, type: 2}
+  repeatable: 0
+  used: 0
