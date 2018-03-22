@@ -22,6 +22,8 @@ public class CardDisplay : MonoBehaviour {
 
     void Start()
     {
+       
+
 
     }
     void Update () {
@@ -32,14 +34,83 @@ public class CardDisplay : MonoBehaviour {
         button3text.text = card.option3;
         button4text.text = card.option4;
 
-        Button option1 = button1.GetComponent<Button>();
-        option1.onClick.AddListener(Button1Pressed);
+        button1.onClick.AddListener(button1pressed);
+        button2.onClick.AddListener(button2pressed);
+        button3.onClick.AddListener(button3pressed);
+        button4.onClick.AddListener(button4pressed);
 
+        if (card.OptionsOn == false)
+        {
+            card.Option1On = false;
+            card.Option2On = false;
+            card.Option3On = false;
+            card.Option4On = true;
+            button4text.text = "Continue...";
+        }
+
+        if (card.Option1On == true)
+        {
+            button1.gameObject.SetActive(true);
+        }
+        else
+        {
+            button1.gameObject.SetActive(false);
+        }
+
+        if (card.Option2On == true)
+        {
+            button2.gameObject.SetActive(true);
+        }
+        else
+        {
+            button2.gameObject.SetActive(false);
+        }
+
+        if (card.Option3On == true)
+        {
+            button3.gameObject.SetActive(true);
+        }
+        else
+        {
+            button3.gameObject.SetActive(false);
+        }
+
+        if (card.Option4On == true)
+        {
+            button4.gameObject.SetActive(true);
+        }
+        else
+        {
+            button4.gameObject.SetActive(false);
+        }
     }
-    void Button1Pressed()
+
+	void button1pressed()
     {
-        if(card.option1FollowCard)
-        card = card.option1FollowCard;
+        if (card.option1FollowCard)
+        {
+            card = card.option1FollowCard;
+        }
     }
-	
+    void button2pressed()
+    {
+        if (card.option2FollowCard)
+        {
+            card = card.option2FollowCard;
+        }
+    }
+    void button3pressed()
+    {
+        if (card.option3FollowCard)
+        {
+            card = card.option3FollowCard;
+        }
+    }
+    void button4pressed()
+    {
+        if (card.option4FollowCard)
+        {
+            card = card.option4FollowCard;
+        }
+    }
 }
