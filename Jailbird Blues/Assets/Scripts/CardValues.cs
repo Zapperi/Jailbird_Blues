@@ -10,6 +10,10 @@ public class CardValues : ScriptableObject {
     public Sprite BackgroundImage;
     public Sprite Npc;
     public List<int> Switches;
+    public int RepIrs;
+    public int RepPunks;
+    public int RepShake;
+    public int RepGuard;
     // Time: 0:Morning, 1:Afternoon, ...
     public int timeOfDay;
     public int storyPhase;
