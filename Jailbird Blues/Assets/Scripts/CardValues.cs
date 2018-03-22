@@ -10,11 +10,12 @@ public class CardValues : ScriptableObject {
     public Sprite BackgroundImage;
     public Sprite Npc;
     public List<int> Switches;
+    [Header("What is required to acivate the card")]
     public int RepIrs;
     public int RepPunks;
     public int RepShake;
     public int RepGuard;
-    // Time: 0:Morning, 1:Afternoon, ...
+    [Header ("Time: 1:Morning, 2:Lunch, 3:Work/yardtime, 4:Nighttime")]
     public int timeOfDay;
     public int storyPhase;
 
@@ -22,9 +23,10 @@ public class CardValues : ScriptableObject {
     //Card's text
     public string cardText;
 
-    public bool OptionsOn = true;
+    
     public bool endCard = false;
     //Option 1 values
+    public bool OptionsOn = true;
     public bool Option1On = true;
     public string option1;
     public int option1IrsReputation;
@@ -62,7 +64,7 @@ public class CardValues : ScriptableObject {
     public int option4GuardReputation;
     public CardValues option4FollowCard;
 
-
-
+    public bool repeatable;
+    public bool used;
 
 }

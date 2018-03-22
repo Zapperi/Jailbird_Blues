@@ -11,15 +11,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
   m_Name: New Card 1
   m_EditorClassIdentifier: 
-  name: test2
   BackgroundImage: {fileID: 0}
   Npc: {fileID: 0}
   Switches: 
+  RepIrs: 0
+  RepPunks: 0
+  RepShake: 0
+  RepGuard: 0
   timeOfDay: 0
   storyPhase: 0
-  cardText: Now we are testing again
-  OptionsOn: 1
+  cardText: Now we are testing again, we test lenght and sometimes it's the hardest
+    and most frustrating thign to do. Why is it so frustrating you ask? Well because
+    you have to wite a shitton of nonsense. \nAin't \n that \nright?!
   endCard: 0
+  OptionsOn: 1
   Option1On: 1
   option1: yay
   option1IrsReputation: 0
@@ -48,3 +53,5 @@ MonoBehaviour:
   option4ShakeReputation: 0
   option4GuardReputation: 0
   option4FollowCard: {fileID: 0}
+  repeatable: 0
+  used: 0
