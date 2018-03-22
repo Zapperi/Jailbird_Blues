@@ -89,6 +89,7 @@ public class CardDisplay : MonoBehaviour {
     {
         if (card.option1FollowCard)
         {
+			GameController.gameController.UpdateReputations(card.option1IrsReputation, card.option1PunkReputation, card.option1ShakeReputation, card.option1GuardReputation);
             card = card.option1FollowCard;
         }
     }
@@ -96,6 +97,7 @@ public class CardDisplay : MonoBehaviour {
     {
         if (card.option2FollowCard)
         {
+			GameController.gameController.UpdateReputations(card.option2IrsReputation, card.option2PunkReputation, card.option2ShakeReputation, card.option2GuardReputation);
             card = card.option2FollowCard;
         }
     }
@@ -103,6 +105,7 @@ public class CardDisplay : MonoBehaviour {
     {
         if (card.option3FollowCard)
         {
+			GameController.gameController.UpdateReputations(card.option3IrsReputation, card.option3PunkReputation, card.option3ShakeReputation, card.option3GuardReputation);
             card = card.option3FollowCard;
         }
     }
@@ -110,6 +113,7 @@ public class CardDisplay : MonoBehaviour {
     {
         if (card.option4FollowCard)
         {
+			GameController.gameController.UpdateReputations(card.option4IrsReputation, card.option4PunkReputation, card.option4ShakeReputation, card.option4GuardReputation);
             card = card.option4FollowCard;
         }
     }
