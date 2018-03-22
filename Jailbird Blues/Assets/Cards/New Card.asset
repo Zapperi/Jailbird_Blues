@@ -11,22 +11,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
   m_Name: New Card
   m_EditorClassIdentifier: 
-  name: Intro
   BackgroundImage: {fileID: 0}
   Npc: {fileID: 0}
   Switches: 
+  RepIrs: 0
+  RepPunks: 0
+  RepShake: 0
+  RepGuard: 0
   timeOfDay: 1
   storyPhase: 1
   cardText: Gimme shoes plz
-  OptionsOn: 1
   endCard: 0
+  OptionsOn: 1
   Option1On: 1
   option1: Give
   option1IrsReputation: -1
   option1PunkReputation: 0
   option1ShakeReputation: 0
   option1GuardReputation: 2
-  option1FollowCard: {fileID: 0}
+  option1FollowCard: {fileID: 11400000, guid: 20edccf9db0ef5b4cadaef23506aa2f7, type: 2}
   Option2On: 1
   option2: nope lol
   option2IrsReputation: 0
@@ -48,3 +51,5 @@ MonoBehaviour:
   option4ShakeReputation: 0
   option4GuardReputation: 0
   option4FollowCard: {fileID: 0}
+  repeatable: 0
+  used: 0
