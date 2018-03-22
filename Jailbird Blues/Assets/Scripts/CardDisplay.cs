@@ -13,7 +13,7 @@ public class CardDisplay : MonoBehaviour {
     public Text button3;
     public Text button4;
 
-    void Start () {
+    void Update () {
 
         cardText.text = card.cardText;
         button1.text = card.option1;
