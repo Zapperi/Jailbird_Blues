@@ -163,7 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19499a928573f4f4db7f1269a318bc62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  card: {fileID: 11400000, guid: f2acf61facc5eb74da1da81812ccc879, type: 2}
+  card: {fileID: 11400000, guid: 6f58c856d796edf44a521eaacfd16c51, type: 2}
   cardText: {fileID: 241077107}
   button1text: {fileID: 2136315351}
   button2text: {fileID: 2034647858}
@@ -174,8 +174,8 @@ MonoBehaviour:
   button2: {fileID: 1429661922}
   button3: {fileID: 438571046}
   button4: {fileID: 1268578306}
-  background: {fileID: 0}
-  npc: {fileID: 0}
+  background: {fileID: 1072023749}
+  npc: {fileID: 1424018757}
 --- !u!1 &57536591
 GameObject:
   m_ObjectHideFlags: 0

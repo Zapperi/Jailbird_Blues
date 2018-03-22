@@ -17,8 +17,8 @@ public class CardDisplay : MonoBehaviour {
     public Button button2;
     public Button button3;
     public Button button4;
-    public Sprite background;
-    public Sprite npc;
+    public Image background;
+    public Image npc;
 
     void Start()
     {
@@ -28,11 +28,19 @@ public class CardDisplay : MonoBehaviour {
     }
     void Update () {
 
+        background.sprite = card.BackgroundImage;
+        npc.sprite = card.Npc;
+
         cardText.text = card.cardText.Replace("\\n", "\n");
         button1text.text = card.option1;
         button2text.text = card.option2;
         button3text.text = card.option3;
         button4text.text = card.option4;
+
+        button1.onClick.RemoveAllListeners();
+        button2.onClick.RemoveAllListeners();
+        button3.onClick.RemoveAllListeners();
+        button4.onClick.RemoveAllListeners();
 
         button1.onClick.AddListener(button1pressed);
         button2.onClick.AddListener(button2pressed);
