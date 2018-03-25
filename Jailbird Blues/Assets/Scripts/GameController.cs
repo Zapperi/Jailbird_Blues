@@ -16,7 +16,7 @@ public class GameController : MonoBehaviour {
 	public List<CardValues> messCards;
 	public List<CardValues> workshopCards;
 	public List<CardValues> cellCards;
-	public CardValues currentCard;
+    public GameObject card;
 
 	void Awake()
 	{
@@ -30,7 +30,8 @@ public class GameController : MonoBehaviour {
 			guardsRep = 0;
 			day = 1;
 			schedule = 1;
-			//GetNextCard();
+            card.GetComponent<CardDisplay>().card=yardCards[0];//testivaiheessa
+            
 
 		}
 		else if (gameController != this)
@@ -53,20 +54,20 @@ public class GameController : MonoBehaviour {
 		{
 		case (1):
 			int index = Random.Range(0, yardCards.Count);
-			currentCard = yardCards[index];
-			break;
+                card.GetComponent<CardDisplay>().card = yardCards[index];
+                break;
 		case (2):
 			index = Random.Range(0, messCards.Count);
-			currentCard = messCards[index];
-			break;
+                card.GetComponent<CardDisplay>().card = messCards[index];
+                break;
 		case (3):
 			index = Random.Range(0, workshopCards.Count);
-			currentCard = workshopCards[index];
-			break;
+                card.GetComponent<CardDisplay>().card = workshopCards[index];
+                break;
 		case (4):
 			index = Random.Range(0, cellCards.Count);
-			currentCard = cellCards[index];
-			break;
+                card.GetComponent<CardDisplay>().card = cellCards[index];
+                break;
 		}
 	}
 }
