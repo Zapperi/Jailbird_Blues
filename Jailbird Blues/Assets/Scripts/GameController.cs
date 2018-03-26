@@ -6,13 +6,19 @@ public class GameController : MonoBehaviour {
 
 	public static GameController gameController;									//a reference to the gamecontroller
 
-	public int punksRep;															//the players reputation among the Punks
+    private bool addToDeck;                                                         //Used to track if card can be added
+    public int punksRep;															//the players reputation among the Punks
 	public int irsRep;																//the players reputation among the I.R.S
 	public int shakersRep;															//the players reputation among the Protein Shakers
 	public int guardsRep;															//the players reputation among the prison guards
-	public int day;																	//counter for days passed in game
-	public int schedule;															//integer switch for the daily activities
-	public List<CardValues> yardCards;												//list of cards in the yard time deck
+	public int day;                                                                 //counter for days passed in game
+
+    private int scheduleSize = 4;                                                   //integer for schedule size, incase we need to expand it
+    public int schedule;                                                            //integer switch for the daily activities
+
+    public List<bool> allSwitches;
+    public List<CardValues> allCards;
+    public List<CardValues> yardCards;												//list of cards in the yard time deck
 	public List<CardValues> messCards;												//list of cards in the lunchtime deck
 	public List<CardValues> workshopCards;											//list of cards in the workshop time deck
 	public List<CardValues> cellCards;												//list of cards in the cell time deck
@@ -20,7 +26,15 @@ public class GameController : MonoBehaviour {
 
 	void Awake()																	//when the game starts
 	{
-		if (gameController == null)													//if there is no gamecontroller
+        //Debug testing starts
+        allSwitches[0] = true;
+        allSwitches[1] = false;
+        allSwitches[2] = true;
+        BuildDeck();
+        //Debuggin ends
+
+
+        if (gameController == null)													//if there is no gamecontroller
 		{
 			DontDestroyOnLoad(gameObject);											//the gamecontroller won't reset when switching scenes
 			gameController = this;													//this gamecontroller will be the gamecontroller
@@ -29,7 +43,7 @@ public class GameController : MonoBehaviour {
 			shakersRep = 0;
 			guardsRep = 0;
 			day = 1;																//the game starts at day 1
-			schedule = 1;															//the day begins with the first activity in the schedule 
+			schedule = 0;															//the day begins with the first activity in the schedule 
 			//GetNextCard();
 
 		}
@@ -51,8 +65,12 @@ public class GameController : MonoBehaviour {
 	{
 		switch (schedule)															//chooses the deck based on schedule
 		{
-		case (1):
-			int index = Random.Range(0, yardCards.Count);							//picks a random number using the amount of cards in the deck as the range
+        case (0):
+            int index = Random.Range(0, cellCards.Count);
+            currentCard = cellCards[index];
+            break;
+         case (1):
+			index = Random.Range(0, yardCards.Count);							//picks a random number using the amount of cards in the deck as the range
 			currentCard = yardCards[index];											//activates the card with the index matching the random number
 			break;
 		case (2):
@@ -69,4 +87,72 @@ public class GameController : MonoBehaviour {
 			break;
 		}
 	}
+
+    //Cycles through all the cards in the game and adds the possible cards to their decks
+    public void BuildDeck()
+    {
+        //TimeofDay 0 = Cell, 1 = Yard, 2 = Mess, 3 = workshop
+        for (int i = 0; i < allCards.Count; i++)
+        {
+            Debug.Log("Starting the cycle");
+            //reset addToDeck to true
+            addToDeck = true;
+            //create cellDeck
+            if(allCards[i].timeOfDay == 0 && ((allCards[i].RepGuard == 0 && allCards[i].RepIrs == 0 && allCards[i].RepPunks == 0 && allCards[i].RepShake == 0) || guardsRep > 0 && guardsRep > allCards[i].RepGuard) || (irsRep > 0 && irsRep > allCards[i].RepIrs) || (punksRep > 0 && punksRep > allCards[i].RepPunks || (shakersRep > 0 && shakersRep > allCards[i].RepShake)) )
+            {
+                //Cycles through gameController's switchlist and compares it to the current card's switch requirments..
+                for (int j = 0; j < allCards[i].Switches.Count; j++)
+                {
+                    //if current card's switch requirment is not found, discard the current card.
+                    if (!allSwitches[allCards[i].Switches[j]])
+                    {
+                        
+                        Debug.Log(allCards[i].Switches[j] + " Switch is false");
+                        addToDeck = false;
+                        break;
+                    }
+                }
+                //if all required switches were true, add card to the deck.
+                if (addToDeck)
+                    cellCards.Add(allCards[i]);
+                
+
+            }
+            //else if (allCards[i].timeOfDay == 0 && (guardsRep < 0 && guardsRep < allCards[i].RepGuard) || (irsRep < 0 && irsRep < allCards[i].RepIrs) ||)
+            //{
+            //    cellCards.Add(allCards[i]);
+            //}
+            //create yardDeck
+            if (allCards[i].timeOfDay == 1)
+            {
+
+            }
+            //create messDeck
+            if (allCards[i].timeOfDay == 2)
+            {
+
+            }
+            //create workshopDeck
+            if (allCards[i].timeOfDay == 3)
+            {
+
+            }
+
+
+
+
+
+        }
+    }
+
+    //Advances the schedule, adds a new day if reaches the end.
+    public void AddTime()
+    {
+        schedule++;
+        if (schedule > scheduleSize)
+        {
+            schedule = 0;
+            day++;
+        }
+    }
 }
