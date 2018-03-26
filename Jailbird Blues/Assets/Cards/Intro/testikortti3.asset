@@ -9,36 +9,36 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: testiop2
+  m_Name: testikortti3
   m_EditorClassIdentifier: 
   Switches: 
   RepIrs: 0
   RepPunks: 0
   RepShake: 0
   RepGuard: 0
-  timeOfDay: 0
+  timeOfDay: 1
   storyPhase: 0
   backgroundImage: {fileID: 0}
   foregroundImage: {fileID: 0}
-  cardText: Op2 pressed\nNow you fucked up\nYou fucked up now
+  cardText: 
   endCard: 0
   repeatable: 0
-  OptionsOn: 0
-  Option1On: 0
+  OptionsOn: 1
+  Option1On: 1
   option1: 
   option1IrsReputation: 0
   option1PunkReputation: 0
   option1ShakeReputation: 0
   option1GuardReputation: 0
   option1FollowCard: {fileID: 0}
-  Option2On: 0
+  Option2On: 1
   option2: 
   option2IrsReputation: 0
   option2PunkReputation: 0
   option2ShakeReputation: 0
   option2GuardReputation: 0
   option2FollowCard: {fileID: 0}
-  Option3On: 0
+  Option3On: 1
   option3: 
   option3IrsReputation: 0
   option3PunkReputation: 0
@@ -51,4 +51,4 @@ MonoBehaviour:
   option4PunkReputation: 0
   option4ShakeReputation: 0
   option4GuardReputation: 0
-  option4FollowCard: {fileID: 11400000, guid: 20edccf9db0ef5b4cadaef23506aa2f7, type: 2}
+  option4FollowCard: {fileID: 0}

@@ -8,21 +8,35 @@ public class CardValues : ScriptableObject									//switched the surface from M
 {
     //Card's name, can be used as a followup more easily.
     //public new string name;
-    public Sprite BackgroundImage;											//reference to the image that will be set as the background
-	public Sprite Npc;														//reference to the image that will be set as the non playable character
-    public List<int> Switches;												//the list of cards and choices that have been played
-    [Header("What is required to acivate the card")]						//inspector directions
-    public int RepIrs;														//the required reputation among the I.R.S. to activate this card
-	public int RepPunks;													//the required reputation among the Punks to activate this card
-	public int RepShake;													//the required reputation among the Protein Shaker to activate this card
-	public int RepGuard;													//the required reputation among the guards to activate this card
-    [Header("Time: 1:Morning, 2:Lunch, 3:Work/yardtime, 4:Nighttime")]		//inspector directions
-    public int timeOfDay;													//shcedule
-    public int storyPhase;													//progress
+    [Header("What is required to acivate the card")]                        //inspector directions
+    [Tooltip("List of booleans required by the card. See reference file for values!")]
+    public List<int> Switches;												//list of switches that are required by the card to activate
+    [Tooltip("Required I.R.S reputation")]
+    public int RepIrs;                                                       //the required reputation among the I.R.S. to activate this card
+    [Tooltip("Required Punks reputation")]
+    public int RepPunks;                                                  //the required reputation among the Punks to activate this card
+    [Tooltip("Required Protein Shakers reputation")]
+    public int RepShake;                                                  //the required reputation among the Protein Shaker to activate this card
+    [Tooltip("Required Guard reputation")]
+    public int RepGuard;                                                    //the required reputation among the guards to activate this card
+    [Tooltip("Required time/schedule: 0:Morning, 1:Lunch, 2:Work, 3:Yardtime, 4:Nighttime")]     //inspector directions	
+    public int timeOfDay;                                                   //shcedule
+    [Tooltip("Required story phase")]
+    public int storyPhase;                                                  //progress
 
-	public string cardText;													//Card's text
-
-    public bool endCard = false;											//is the card one of the final cards in the game
+    [Header("Card information")]
+    [Tooltip("What image shows on the background.")]
+    public Sprite backgroundImage;                                          //reference to the image that will be set as the background
+    [Tooltip("What image shows on the foreground.")]
+    public Sprite foregroundImage;                                                      //reference to the image that will be set as the non playable character
+    [Tooltip("Text that shows on the card")]
+    [TextArea]
+    public string cardText;													//Card's text
+    [Tooltip("Does this card trigger a game ending?")]
+    public bool endCard = false;                                            //is the card one of the final cards in the game
+    [Tooltip("Can this card appear multiple times?")]
+    public bool repeatable;                                                 //can this card happen multiple times during one playthrough
+    private bool used;														//has the card been played already?
     [Header("If options are off, use 4th option to add your follow card")]	//inspector directions
     public bool OptionsOn = true;											//does the card have options?
 
@@ -33,9 +47,10 @@ public class CardValues : ScriptableObject									//switched the surface from M
     public int option1PunkReputation;
     public int option1ShakeReputation;
     public int option1GuardReputation;
-    public CardValues option1FollowCard;									//does this card have a follow-up card and if yes, which card?
+    public CardValues option1FollowCard;                                    //does this card have a follow-up card and if yes, which card?
 
     //Option 2 values
+    [Space(10)]
     public bool Option2On = true;
     public string option2;
     public int option2IrsReputation;
@@ -46,6 +61,7 @@ public class CardValues : ScriptableObject									//switched the surface from M
 
 
     //Option 3 values
+    [Space(10)]
     public bool Option3On = true;
     public string option3;
     public int option3IrsReputation;
@@ -56,6 +72,7 @@ public class CardValues : ScriptableObject									//switched the surface from M
 
 
     //Option 4 values
+    [Space(10)]
     public bool Option4On = true;
     public string option4;
     public int option4IrsReputation;
@@ -64,6 +81,5 @@ public class CardValues : ScriptableObject									//switched the surface from M
     public int option4GuardReputation;
     public CardValues option4FollowCard;
 
-    public bool repeatable;													//can this card happen multiple times during one playthrough
-    public bool used;														//has the card been played already?
+
 }

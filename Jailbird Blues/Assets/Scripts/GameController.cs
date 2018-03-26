@@ -30,7 +30,8 @@ public class GameController : MonoBehaviour {
         allSwitches[0] = true;
         allSwitches[1] = false;
         allSwitches[2] = true;
-        BuildDeck();
+        BuildDeck(cellCards);
+        BuildDeck(yardCards);
         //Debuggin ends
 
 
@@ -61,87 +62,207 @@ public class GameController : MonoBehaviour {
 		guardsRep += guards;
 	}
 
-	public void GetNextCard()														//activates the next card after the previous card has been played
+	public void GetNextCard()														//activates the next card from a new deck after the previous card has been resolved
 	{
 		switch (schedule)															//chooses the deck based on schedule
 		{
         case (0):
-            int index = Random.Range(0, cellCards.Count);
-            currentCard = cellCards[index];
-            break;
+                BuildDeck(cellCards);                                               //builds a new card deck from scratch
+                int index = Random.Range(0, cellCards.Count);						//picks a random number using the amount of cards in the deck as the range
+                currentCard = cellCards[index];										//activates the card with the index matching the random number
+                break;
          case (1):
-			index = Random.Range(0, yardCards.Count);							//picks a random number using the amount of cards in the deck as the range
-			currentCard = yardCards[index];											//activates the card with the index matching the random number
-			break;
+                BuildDeck(yardCards);
+                index = Random.Range(0, yardCards.Count);
+			    currentCard = yardCards[index];
+			    break;
 		case (2):
-			index = Random.Range(0, messCards.Count);
-			currentCard = messCards[index];
-			break;
+                BuildDeck(messCards);
+                index = Random.Range(0, messCards.Count);
+			    currentCard = messCards[index];
+			    break;
 		case (3):
-			index = Random.Range(0, workshopCards.Count);
-			currentCard = workshopCards[index];
-			break;
+                BuildDeck(workshopCards);
+                index = Random.Range(0, workshopCards.Count);
+			    currentCard = workshopCards[index];
+			    break;
 		case (4):
-			index = Random.Range(0, cellCards.Count);
-			currentCard = cellCards[index];
-			break;
+                BuildDeck(cellCards);
+                index = Random.Range(0, cellCards.Count);
+			    currentCard = cellCards[index];
+			    break;
 		}
 	}
 
-    //Cycles through all the cards in the game and adds the possible cards to their decks
-    public void BuildDeck()
+    //Cycles through all the cards in the game and adds the possible cards to given parameter deck..
+    public void BuildDeck(List<CardValues> targetDeck)
     {
-        //TimeofDay 0 = Cell, 1 = Yard, 2 = Mess, 3 = workshop
+        targetDeck.Clear();
+        //TimeofDay 0 = Cell, 1 = Yard, 2 = Mess, 3 = Workshop
         for (int i = 0; i < allCards.Count; i++)
         {
-            Debug.Log("Starting the cycle");
             //reset addToDeck to true
             addToDeck = true;
-            //create cellDeck
-            if(allCards[i].timeOfDay == 0 && ((allCards[i].RepGuard == 0 && allCards[i].RepIrs == 0 && allCards[i].RepPunks == 0 && allCards[i].RepShake == 0) || guardsRep > 0 && guardsRep > allCards[i].RepGuard) || (irsRep > 0 && irsRep > allCards[i].RepIrs) || (punksRep > 0 && punksRep > allCards[i].RepPunks || (shakersRep > 0 && shakersRep > allCards[i].RepShake)) )
+            
+            //--Create cellDeck--
+            if(targetDeck == cellCards)
             {
-                //Cycles through gameController's switchlist and compares it to the current card's switch requirments..
-                for (int j = 0; j < allCards[i].Switches.Count; j++)
+                //Checks the time of day and positive reputation values, if true..
+                if (allCards[i].timeOfDay == 0 && ((allCards[i].RepGuard == 0 && allCards[i].RepIrs == 0 && allCards[i].RepPunks == 0 && allCards[i].RepShake == 0) || (guardsRep > 0 && guardsRep > allCards[i].RepGuard) || (irsRep > 0 && irsRep > allCards[i].RepIrs) || (punksRep > 0 && punksRep > allCards[i].RepPunks) || (shakersRep > 0 && shakersRep > allCards[i].RepShake)))
                 {
-                    //if current card's switch requirment is not found, discard the current card.
-                    if (!allSwitches[allCards[i].Switches[j]])
+                    //Cycles through gameController's switchlist and compares it to the current card's switch requirments..
+                    for (int j = 0; j < allCards[i].Switches.Count; j++)
                     {
-                        
-                        Debug.Log(allCards[i].Switches[j] + " Switch is false");
-                        addToDeck = false;
-                        break;
+                        //if current card's switch requirment is not found, discard the current card.
+                        if (!allSwitches[allCards[i].Switches[j]])
+                        {
+                            addToDeck = false;
+                            break;
+                        }
                     }
+                    //if all required switches were true, add card to the deck.
+                    if (addToDeck)
+                        targetDeck.Add(allCards[i]);
                 }
-                //if all required switches were true, add card to the deck.
-                if (addToDeck)
-                    cellCards.Add(allCards[i]);
+                //Checks the time and negative reputation values, if true..
+                else if (allCards[i].timeOfDay == 0 && ((guardsRep > 0 && guardsRep > allCards[i].RepGuard) || (irsRep > 0 && irsRep > allCards[i].RepIrs) || (punksRep > 0 && punksRep > allCards[i].RepPunks) || (shakersRep > 0 && shakersRep > allCards[i].RepShake)))
+                {
+                    for (int j = 0; j < allCards[i].Switches.Count; j++)
+                    {
+                        //if current card's switch requirment is not found, discard the current card.
+                        if (!allSwitches[allCards[i].Switches[j]])
+                        {
+                            addToDeck = false;
+                            break;
+                        }
+                    }
+                    //if all required switches were true, add card to the deck.
+                    if (addToDeck)
+                        targetDeck.Add(allCards[i]);
+                }
+            
                 
 
             }
-            //else if (allCards[i].timeOfDay == 0 && (guardsRep < 0 && guardsRep < allCards[i].RepGuard) || (irsRep < 0 && irsRep < allCards[i].RepIrs) ||)
-            //{
-            //    cellCards.Add(allCards[i]);
-            //}
-            //create yardDeck
-            if (allCards[i].timeOfDay == 1)
+
+            //--Create yardDeck--
+            if (targetDeck == yardCards)
             {
+                //Checks the time of day and positive reputation values, if true..
+                if (allCards[i].timeOfDay == 1 && ((allCards[i].RepGuard == 0 && allCards[i].RepIrs == 0 && allCards[i].RepPunks == 0 && allCards[i].RepShake == 0) || (guardsRep > 0 && guardsRep > allCards[i].RepGuard) || (irsRep > 0 && irsRep > allCards[i].RepIrs) || (punksRep > 0 && punksRep > allCards[i].RepPunks) || (shakersRep > 0 && shakersRep > allCards[i].RepShake)))
+                {
+                    //Cycles through gameController's switchlist and compares it to the current card's switch requirments..
+                    for (int j = 0; j < allCards[i].Switches.Count; j++)
+                    {
+                        //if current card's switch requirment is not found, discard the current card.
+                        if (!allSwitches[allCards[i].Switches[j]])
+                        {
+                            addToDeck = false;
+                            break;
+                        }
+                    }
+                    //if all required switches were true, add card to the deck.
+                    if (addToDeck)
+                        targetDeck.Add(allCards[i]);
+                }
+                //Checks the time and negative reputation values, if true..
+                else if (allCards[i].timeOfDay == 1 && ((guardsRep > 0 && guardsRep > allCards[i].RepGuard) || (irsRep > 0 && irsRep > allCards[i].RepIrs) || (punksRep > 0 && punksRep > allCards[i].RepPunks) || (shakersRep > 0 && shakersRep > allCards[i].RepShake)))
+                {
+                    for (int j = 0; j < allCards[i].Switches.Count; j++)
+                    {
+                        //if current card's switch requirment is not found, discard the current card.
+                        if (!allSwitches[allCards[i].Switches[j]])
+                        {
+                            addToDeck = false;
+                            break;
+                        }
+                    }
+                    //if all required switches were true, add card to the deck.
+                    if (addToDeck)
+                        targetDeck.Add(allCards[i]);
+                }
+            
+                
 
             }
-            //create messDeck
-            if (allCards[i].timeOfDay == 2)
+
+            //--Create messDeck--
+            else if (targetDeck == messCards)
             {
+                //Checks the time of day and positive reputation values, if true..
+                if (allCards[i].timeOfDay == 2 && ((allCards[i].RepGuard == 0 && allCards[i].RepIrs == 0 && allCards[i].RepPunks == 0 && allCards[i].RepShake == 0) || (guardsRep > 0 && guardsRep > allCards[i].RepGuard) || (irsRep > 0 && irsRep > allCards[i].RepIrs) || (punksRep > 0 && punksRep > allCards[i].RepPunks) || (shakersRep > 0 && shakersRep > allCards[i].RepShake)))
+                {
+                    //Cycles through gameController's switchlist and compares it to the current card's switch requirments..
+                    for (int j = 0; j < allCards[i].Switches.Count; j++)
+                    {
+                        //if current card's switch requirment is not found, discard the current card.
+                        if (!allSwitches[allCards[i].Switches[j]])
+                        {
+                            addToDeck = false;
+                            break;
+                        }
+                    }
+                    //if all required switches were true, add card to the deck.
+                    if (addToDeck)
+                        targetDeck.Add(allCards[i]);
+                }
+                //Checks the time and negative reputation values, if true..
+                else if (allCards[i].timeOfDay == 2 && ((guardsRep > 0 && guardsRep > allCards[i].RepGuard) || (irsRep > 0 && irsRep > allCards[i].RepIrs) || (punksRep > 0 && punksRep > allCards[i].RepPunks) || (shakersRep > 0 && shakersRep > allCards[i].RepShake)))
+                {
+                    for (int j = 0; j < allCards[i].Switches.Count; j++)
+                    {
+                        //if current card's switch requirment is not found, discard the current card.
+                        if (!allSwitches[allCards[i].Switches[j]])
+                        {
+                            addToDeck = false;
+                            break;
+                        }
+                    }
+                    //if all required switches were true, add card to the deck.
+                    if (addToDeck)
+                       targetDeck.Add(allCards[i]);
+                }
 
             }
-            //create workshopDeck
-            if (allCards[i].timeOfDay == 3)
+
+            //--Create workshopDeck--
+            else if (targetDeck == workshopCards)
             {
-
+                //Checks the time of day and positive reputation values, if true..
+                if (allCards[i].timeOfDay == 3 && ((allCards[i].RepGuard == 0 && allCards[i].RepIrs == 0 && allCards[i].RepPunks == 0 && allCards[i].RepShake == 0) || (guardsRep > 0 && guardsRep > allCards[i].RepGuard) || (irsRep > 0 && irsRep > allCards[i].RepIrs) || (punksRep > 0 && punksRep > allCards[i].RepPunks) || (shakersRep > 0 && shakersRep > allCards[i].RepShake)))
+                {
+                    //Cycles through gameController's switchlist and compares it to the current card's switch requirments..
+                    for (int j = 0; j < allCards[i].Switches.Count; j++)
+                    {
+                        //if current card's switch requirment is not found, discard the current card.
+                        if (!allSwitches[allCards[i].Switches[j]])
+                        {
+                            addToDeck = false;
+                            break;
+                        }
+                    }
+                    //if all required switches were true, add card to the deck.
+                    if (addToDeck)
+                        targetDeck.Add(allCards[i]);
+                }
+                //Checks the time and negative reputation values, if true..
+                else if (allCards[i].timeOfDay == 3 && ((guardsRep > 0 && guardsRep > allCards[i].RepGuard) || (irsRep > 0 && irsRep > allCards[i].RepIrs) || (punksRep > 0 && punksRep > allCards[i].RepPunks) || (shakersRep > 0 && shakersRep > allCards[i].RepShake)))
+                {
+                    for (int j = 0; j < allCards[i].Switches.Count; j++)
+                    {
+                        //if current card's switch requirment is not found, discard the current card.
+                        if (!allSwitches[allCards[i].Switches[j]])
+                        {
+                            addToDeck = false;
+                            break;
+                        }
+                    }
+                    //if all required switches were true, add card to the deck.
+                    if (addToDeck)
+                        targetDeck.Add(allCards[i]);
+                }
             }
-
-
-
-
-
+            
         }
     }
 

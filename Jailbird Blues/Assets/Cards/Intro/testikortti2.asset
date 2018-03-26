@@ -9,19 +9,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: testikortti
+  m_Name: testikortti2
   m_EditorClassIdentifier: 
-  BackgroundImage: {fileID: 0}
-  Npc: {fileID: 0}
-  Switches: 0000000002000000
+  Switches: 01000000
   RepIrs: 0
   RepPunks: 0
   RepShake: 0
   RepGuard: 0
   timeOfDay: 0
   storyPhase: 0
+  backgroundImage: {fileID: 0}
+  foregroundImage: {fileID: 0}
   cardText: 
   endCard: 0
+  repeatable: 0
   OptionsOn: 1
   Option1On: 1
   option1: 
@@ -51,5 +52,3 @@ MonoBehaviour:
   option4ShakeReputation: 0
   option4GuardReputation: 0
   option4FollowCard: {fileID: 0}
-  repeatable: 0
-  used: 0
