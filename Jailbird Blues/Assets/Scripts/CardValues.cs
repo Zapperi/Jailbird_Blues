@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
 [CreateAssetMenu(fileName = "New Card", menuName = "Card")]					//tells Unity that this is a custom asset
 public class CardValues : ScriptableObject									//switched the surface from MonoBehavior into ScriptableObject
 {
@@ -37,7 +36,7 @@ public class CardValues : ScriptableObject									//switched the surface from M
     [Tooltip("Can this card appear multiple times?")]
     public bool repeatable;                                                 //can this card happen multiple times during one playthrough
     private bool used;														//has the card been played already?
-    [Header("If options are off, use 4th option to add your follow card")]	//inspector directions
+    [Header("If options are off, use 4th option to add your follow card")]  //inspector directions
     public bool OptionsOn = true;											//does the card have options?
 
     //Option 1 values
@@ -80,6 +79,4 @@ public class CardValues : ScriptableObject									//switched the surface from M
     public int option4ShakeReputation;
     public int option4GuardReputation;
     public CardValues option4FollowCard;
-
-
 }

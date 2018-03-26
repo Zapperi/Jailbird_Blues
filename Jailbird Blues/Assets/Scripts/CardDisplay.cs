@@ -51,7 +51,7 @@ public class CardDisplay : MonoBehaviour {
             card.Option3On = false;
             card.Option4On = true;
             button4text.text = "Continue...";
-        }  
+        }
         //Activate the button gameobjects when needed, hide otherwise.
         if (card.Option1On == true)
         {
