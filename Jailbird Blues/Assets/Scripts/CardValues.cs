@@ -3,39 +3,37 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-[CreateAssetMenu(fileName = "New Card", menuName = "Card")]
-public class CardValues : ScriptableObject
+[CreateAssetMenu(fileName = "New Card", menuName = "Card")]					//tells Unity that this is a custom asset
+public class CardValues : ScriptableObject									//switched the surface from MonoBehavior into ScriptableObject
 {
     //Card's name, can be used as a followup more easily.
     //public new string name;
-    public Sprite BackgroundImage;
-    public Sprite Npc;
-    public List<int> Switches;
-    [Header("What is required to acivate the card")]
-    public int RepIrs;
-    public int RepPunks;
-    public int RepShake;
-    public int RepGuard;
-    [Header("Time: 1:Morning, 2:Lunch, 3:Work/yardtime, 4:Nighttime")]
-    public int timeOfDay;
-    public int storyPhase;
+    public Sprite BackgroundImage;											//reference to the image that will be set as the background
+	public Sprite Npc;														//reference to the image that will be set as the non playable character
+    public List<int> Switches;												//the list of cards and choices that have been played
+    [Header("What is required to acivate the card")]						//inspector directions
+    public int RepIrs;														//the required reputation among the I.R.S. to activate this card
+	public int RepPunks;													//the required reputation among the Punks to activate this card
+	public int RepShake;													//the required reputation among the Protein Shaker to activate this card
+	public int RepGuard;													//the required reputation among the guards to activate this card
+    [Header("Time: 1:Morning, 2:Lunch, 3:Work/yardtime, 4:Nighttime")]		//inspector directions
+    public int timeOfDay;													//shcedule
+    public int storyPhase;													//progress
 
+	public string cardText;													//Card's text
 
-    //Card's text
-    public string cardText;
+    public bool endCard = false;											//is the card one of the final cards in the game
+    [Header("If options are off, use 4th option to add your follow card")]	//inspector directions
+    public bool OptionsOn = true;											//does the card have options?
 
-
-    public bool endCard = false;
-    [Header("If options are off, use 4th option to add your follow card")]
-    public bool OptionsOn = true;
     //Option 1 values
-    public bool Option1On = true;
-    public string option1;
-    public int option1IrsReputation;
+	public bool Option1On = true;											//is the option present?
+    public string option1;													//what is the option?
+    public int option1IrsReputation;										//how does the reputation change from this option
     public int option1PunkReputation;
     public int option1ShakeReputation;
     public int option1GuardReputation;
-    public CardValues option1FollowCard;
+    public CardValues option1FollowCard;									//does this card have a follow-up card and if yes, which card?
 
     //Option 2 values
     public bool Option2On = true;
@@ -66,9 +64,6 @@ public class CardValues : ScriptableObject
     public int option4GuardReputation;
     public CardValues option4FollowCard;
 
-    public bool repeatable;
-    public bool used;
-
-
-    
+    public bool repeatable;													//can this card happen multiple times during one playthrough
+    public bool used;														//has the card been played already?
 }
