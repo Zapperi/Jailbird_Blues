@@ -9,47 +9,48 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: testiop1
+  m_Name: New Card 1
   m_EditorClassIdentifier: 
-  BackgroundImage: {fileID: 0}
-  Npc: {fileID: 0}
-  Switches: 01000000
+  Switches: 
   RepIrs: 0
   RepPunks: 0
   RepShake: 0
   RepGuard: 0
-  timeOfDay: 0
+  timeOfDay: 1
   storyPhase: 0
-  cardText: Option 1 was pressed\nNothing happened
+  backgroundImage: {fileID: 0}
+  foregroundImage: {fileID: 0}
+  cardText: Now we are testing again, we test lenght and sometimes it's the hardest
+    and most frustrating thign to do. Why is it so frustrating you ask? Well because
+    you have to wite a shitton of nonsense. \nAin't \n that \nright?!
   endCard: 0
-  OptionsOn: 0
-  Option1On: 0
-  option1: 
+  repeatable: 0
+  OptionsOn: 1
+  Option1On: 1
+  option1: yay
   option1IrsReputation: 0
   option1PunkReputation: 0
   option1ShakeReputation: 0
   option1GuardReputation: 0
-  option1FollowCard: {fileID: 0}
-  Option2On: 0
-  option2: 
+  option1FollowCard: {fileID: 11400000, guid: f2acf61facc5eb74da1da81812ccc879, type: 2}
+  Option2On: 1
+  option2: bravo
   option2IrsReputation: 0
   option2PunkReputation: 0
   option2ShakeReputation: 0
   option2GuardReputation: 0
   option2FollowCard: {fileID: 0}
-  Option3On: 0
-  option3: 
+  Option3On: 1
+  option3: wow
   option3IrsReputation: 0
   option3PunkReputation: 0
   option3ShakeReputation: 0
   option3GuardReputation: 0
   option3FollowCard: {fileID: 0}
   Option4On: 1
-  option4: 
+  option4: gr8
   option4IrsReputation: 0
   option4PunkReputation: 0
   option4ShakeReputation: 0
   option4GuardReputation: 0
-  option4FollowCard: {fileID: 11400000, guid: 20edccf9db0ef5b4cadaef23506aa2f7, type: 2}
-  repeatable: 0
-  used: 0
+  option4FollowCard: {fileID: 0}

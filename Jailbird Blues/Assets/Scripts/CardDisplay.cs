@@ -28,6 +28,13 @@ public class CardDisplay : MonoBehaviour {
     }
     void Update () {
 
+        card = GameController.gameController.currentCard;
+
+        button1.onClick.RemoveAllListeners();
+        button2.onClick.RemoveAllListeners();
+        button3.onClick.RemoveAllListeners();
+        button4.onClick.RemoveAllListeners();
+
         //Replace any \n in card's text string with line break
         cardText.text = card.cardText.Replace("\\n", "\n");
         
@@ -101,7 +108,7 @@ public class CardDisplay : MonoBehaviour {
             //Update the reputation values in gameController with current card values.
             GameController.gameController.UpdateReputations(card.option1IrsReputation, card.option1PunkReputation, card.option1ShakeReputation, card.option1GuardReputation);
             //Setup the result card.
-            card = card.option1FollowCard;
+            GameController.gameController.currentCard = card.option1FollowCard;
         }
         else { }
         //If card is a result card, do this..
@@ -112,7 +119,7 @@ public class CardDisplay : MonoBehaviour {
         if (card.option2FollowCard)
         {
 			GameController.gameController.UpdateReputations(card.option2IrsReputation, card.option2PunkReputation, card.option2ShakeReputation, card.option2GuardReputation);
-            card = card.option2FollowCard;
+            GameController.gameController.currentCard = card.option2FollowCard;
         }
         else { }
         //If card is a result card, do this..
@@ -123,7 +130,7 @@ public class CardDisplay : MonoBehaviour {
         if (card.option3FollowCard)
         {
 			GameController.gameController.UpdateReputations(card.option3IrsReputation, card.option3PunkReputation, card.option3ShakeReputation, card.option3GuardReputation);
-            card = card.option3FollowCard;
+            GameController.gameController.currentCard = card.option3FollowCard;
         }
         else { }
         //If card is a result card, do this..
@@ -133,10 +140,18 @@ public class CardDisplay : MonoBehaviour {
         //If card is not a result card, do this..
         if (card.option4FollowCard)
         {
-			GameController.gameController.UpdateReputations(card.option4IrsReputation, card.option4PunkReputation, card.option4ShakeReputation, card.option4GuardReputation);
-            card = card.option4FollowCard;
+            
+
+            GameController.gameController.UpdateReputations(card.option4IrsReputation, card.option4PunkReputation, card.option4ShakeReputation, card.option4GuardReputation);
+            GameController.gameController.currentCard = card.option4FollowCard;
+           
         }
-        else { }
+        
+        else if (card.endCard == true)
+        {
+            GameController.gameController.endcardOn = true;
+        }
+        
         //If card is a result card, do this..
     }
 }

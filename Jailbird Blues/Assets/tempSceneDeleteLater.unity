@@ -77,15 +77,18 @@ LightmapSettings:
     m_PVRDirectSampleCount: 32
     m_PVRSampleCount: 500
     m_PVRBounces: 2
-    m_PVRFiltering: 0
+    m_PVRFilterTypeDirect: 0
+    m_PVRFilterTypeIndirect: 0
+    m_PVRFilterTypeAO: 0
     m_PVRFilteringMode: 1
     m_PVRCulling: 1
     m_PVRFilteringGaussRadiusDirect: 1
     m_PVRFilteringGaussRadiusIndirect: 5
     m_PVRFilteringGaussRadiusAO: 2
-    m_PVRFilteringAtrousColorSigma: 1
-    m_PVRFilteringAtrousNormalSigma: 1
-    m_PVRFilteringAtrousPositionSigma: 1
+    m_PVRFilteringAtrousPositionSigmaDirect: 0.5
+    m_PVRFilteringAtrousPositionSigmaIndirect: 2
+    m_PVRFilteringAtrousPositionSigmaAO: 1
+    m_ShowResolutionOverlay: 1
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -107,6 +110,8 @@ NavMeshSettings:
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
+    debug:
+      m_Flags: 0
   m_NavMeshData: {fileID: 0}
 --- !u!4 &8401931 stripped
 Transform:
@@ -176,11 +181,11 @@ Camera:
   m_TargetEye: 3
   m_HDR: 1
   m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
-  m_StereoMirrorMode: 0
 --- !u!4 &57536595
 Transform:
   m_ObjectHideFlags: 0
@@ -237,7 +242,7 @@ Prefab:
         type: 2}
       propertyPath: card
       value: 
-      objectReference: {fileID: 11400000, guid: df8b44972028d46488f142889f271dd9,
+      objectReference: {fileID: 11400000, guid: 2c4b19502e30c804a8662649b4b5c8eb,
         type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a3ab09f29257ea244a9cd7c582d06ca3, type: 2}
@@ -408,7 +413,7 @@ Prefab:
     - target: {fileID: 114743166947194950, guid: a5ca0da45ae9cf94f8ba95b70b239f82,
         type: 2}
       propertyPath: allCards.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 114743166947194950, guid: a5ca0da45ae9cf94f8ba95b70b239f82,
         type: 2}
@@ -474,6 +479,18 @@ Prefab:
       propertyPath: allCards.Array.data[2]
       value: 
       objectReference: {fileID: 11400000, guid: e28bfd2cefaf6454c9b3af80dd235cda,
+        type: 2}
+    - target: {fileID: 114743166947194950, guid: a5ca0da45ae9cf94f8ba95b70b239f82,
+        type: 2}
+      propertyPath: allCards.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: 2c4b19502e30c804a8662649b4b5c8eb,
+        type: 2}
+    - target: {fileID: 114743166947194950, guid: a5ca0da45ae9cf94f8ba95b70b239f82,
+        type: 2}
+      propertyPath: currentCard
+      value: 
+      objectReference: {fileID: 11400000, guid: 2c4b19502e30c804a8662649b4b5c8eb,
         type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a5ca0da45ae9cf94f8ba95b70b239f82, type: 2}

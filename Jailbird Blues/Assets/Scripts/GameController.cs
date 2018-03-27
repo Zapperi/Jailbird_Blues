@@ -23,7 +23,7 @@ public class GameController : MonoBehaviour {
 	public List<CardValues> workshopCards;											//list of cards in the workshop time deck
 	public List<CardValues> cellCards;												//list of cards in the cell time deck
 	public CardValues currentCard;													//the card that is currently active in the scene
-
+    public bool endcardOn;
 	void Awake()																	//when the game starts
 	{
         //Debug testing starts
@@ -52,7 +52,18 @@ public class GameController : MonoBehaviour {
 		{
 			Destroy(gameObject);													//delete them
 		}
+
+
 	}
+    void Update()
+    {
+        if (endcardOn == true)                                                       //Get next card if end card option is enabled and button 4 is pressed
+        {
+            Debug.Log("arvo uusi kortti");
+            GetNextCard();
+            endcardOn = false;
+        }
+    }
 
 	public void UpdateReputations(int irs, int punks, int shakers, int guards)		//updates the reputations among factions. function used by CardDisplay
 	{
@@ -93,6 +104,7 @@ public class GameController : MonoBehaviour {
 			    break;
 		}
 	}
+    
 
     //Cycles through all the cards in the game and adds the possible cards to given parameter deck..
     public void BuildDeck(List<CardValues> targetDeck)
@@ -276,4 +288,9 @@ public class GameController : MonoBehaviour {
             day++;
         }
     }
+
+
+    
 }
+
+

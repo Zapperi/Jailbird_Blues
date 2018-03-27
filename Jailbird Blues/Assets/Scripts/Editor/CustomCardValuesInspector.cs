@@ -8,7 +8,8 @@
 
 
 //[CustomEditor(typeof(CardValues))]                              //Create a custom editor, typecast it as CardValues script
-//public class CustomCardValuesInspector : Editor {               //We are using Editor, not MonoBehaviour
+//public class CustomCardValuesInspector : Editor
+//{               //We are using Editor, not MonoBehaviour
 //    CardValues cd;                                              //Short reference to CardValues
 //    private string saveOption4String;                           //Used to save option 4 textstring for later use
 
@@ -23,7 +24,7 @@
 //        cd.OptionsOn = GUILayout.Toggle(cd.OptionsOn, "Toggle all options");
 //        if (cd.OptionsOn)                                       //If options are toggled on...
 //        {
-            
+
 //            cd.Option1On = GUILayout.Toggle(cd.Option1On, "Toggle option 1");                               //set each option to active..
 //            cd.Option2On = GUILayout.Toggle(cd.Option2On, "Toggle option 2");
 //            cd.Option3On = GUILayout.Toggle(cd.Option3On, "Toggle option 3");
@@ -35,13 +36,13 @@
 //        }
 //        else                                                    //If Options are toggled off..
 //        {
-            
+
 //            cd.Option1On = false;                               //set each option to inactive..
 //            cd.Option2On = false;
 //            cd.Option3On = false;
 //            cd.Option4On = true;                                //set option 4 to active
 //            if (!cd.option4.Contains("Continue..."))            //Override option 4 text and save the overriden text for later use
-//            { 
+//            {
 //                saveOption4String = cd.option4;
 //                cd.option4 = ("Continue...");
 //            }
@@ -49,7 +50,7 @@
 //            //base.OnInspectorGUI();                             //Shows the default Unity Inspector GUI              
 //        }
 
-        
+
 //    }
 
 //}
