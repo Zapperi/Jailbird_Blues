@@ -13,19 +13,25 @@ public class CardDisplay : MonoBehaviour
     public Text button2text;
     public Text button3text;
     public Text button4text;
+    public Text buttonNoteBooktext;
     public Text location;
     public Button button1;
     public Button button2;
     public Button button3;
     public Button button4;
+    public Button buttonNoteBook;
     public Sprite background;
     public Sprite npc;
     public Image fadeImage;
     public float fadeSpeed = 0.25f;
+    public GameObject noteBook;
 
     void Start()
     {
         fadeImage.gameObject.SetActive(false);
+        buttonNoteBook.onClick.RemoveAllListeners();
+        buttonNoteBooktext.text = "NoteBook";
+        buttonNoteBook.onClick.AddListener(buttonNotebookPressed);
 
 
     }
@@ -34,10 +40,8 @@ public class CardDisplay : MonoBehaviour
 
         card = GameController.gameController.currentCard;
 
-        button1.onClick.RemoveAllListeners();
-        button2.onClick.RemoveAllListeners();
-        button3.onClick.RemoveAllListeners();
-        button4.onClick.RemoveAllListeners();
+        
+        
 
         //Replace any \n in card's text string with line break
         cardText.text = card.cardText.Replace("\\n", "\n");
@@ -47,6 +51,7 @@ public class CardDisplay : MonoBehaviour
         button2text.text = card.option2;
         button3text.text = card.option3;
         button4text.text = card.option4;
+        
 
         //Update current button functions
         button1.onClick.RemoveAllListeners();
@@ -57,6 +62,7 @@ public class CardDisplay : MonoBehaviour
         button2.onClick.AddListener(button2pressed);
         button3.onClick.AddListener(button3pressed);
         button4.onClick.AddListener(button4pressed);
+        
 
         //Check if card is result card, if so, leave last button active and set the text.
         if (card.OptionsOn == false)
@@ -120,7 +126,9 @@ public class CardDisplay : MonoBehaviour
             GameController.gameController.currentCard = card.option1FollowCard;
             card = card.option1FollowCard;            
         }
-        else { }
+        else {
+            GameController.gameController.UpdateReputations(card.option1IrsReputation, card.option1PunkReputation, card.option1ShakeReputation, card.option1GuardReputation);
+        }
         //If card is a result card, do this..
     }
     void button2pressed()
@@ -131,10 +139,12 @@ public class CardDisplay : MonoBehaviour
             StartCoroutine(FadeImage(fadeSpeed));
             GameController.gameController.UpdateReputations(card.option2IrsReputation, card.option2PunkReputation, card.option2ShakeReputation, card.option2GuardReputation);
             GameController.gameController.currentCard = card.option2FollowCard;         
-            GameController.gameController.UpdateReputations(card.option2IrsReputation, card.option2PunkReputation, card.option2ShakeReputation, card.option2GuardReputation);
+            
             card = card.option2FollowCard;
         }
-        else { }
+        else {
+            GameController.gameController.UpdateReputations(card.option2IrsReputation, card.option2PunkReputation, card.option2ShakeReputation, card.option2GuardReputation);
+        }
         //If card is a result card, do this..
     }
     void button3pressed()
@@ -145,10 +155,12 @@ public class CardDisplay : MonoBehaviour
             StartCoroutine(FadeImage(fadeSpeed));
             GameController.gameController.UpdateReputations(card.option3IrsReputation, card.option3PunkReputation, card.option3ShakeReputation, card.option3GuardReputation);
             GameController.gameController.currentCard = card.option3FollowCard;
-            GameController.gameController.UpdateReputations(card.option3IrsReputation, card.option3PunkReputation, card.option3ShakeReputation, card.option3GuardReputation);
+            
             card = card.option3FollowCard;
         }
-        else { }
+        else {
+            GameController.gameController.UpdateReputations(card.option3IrsReputation, card.option3PunkReputation, card.option3ShakeReputation, card.option3GuardReputation);
+        }
         //If card is a result card, do this..
     }
     void button4pressed()
@@ -160,16 +172,31 @@ public class CardDisplay : MonoBehaviour
             StartCoroutine(FadeImage(fadeSpeed));
             GameController.gameController.UpdateReputations(card.option4IrsReputation, card.option4PunkReputation, card.option4ShakeReputation, card.option4GuardReputation);
             GameController.gameController.currentCard = card.option4FollowCard;                  
-            GameController.gameController.UpdateReputations(card.option4IrsReputation, card.option4PunkReputation, card.option4ShakeReputation, card.option4GuardReputation);
+            
             card = card.option4FollowCard;
         }
         
         else if (card.endCard == true)
         {
+            GameController.gameController.UpdateReputations(card.option4IrsReputation, card.option4PunkReputation, card.option4ShakeReputation, card.option4GuardReputation);
             GameController.gameController.endcardOn = true;
         }
         
         //If card is a result card, do this..
+    }
+    void buttonNotebookPressed()
+    {
+        if (noteBook.gameObject.activeSelf == false)
+        {
+            noteBook.gameObject.SetActive(true);
+            
+        }
+        else
+        {
+            noteBook.gameObject.SetActive(false);
+            
+        }
+         
     }
 
     //Coroutine for image fade between cards, takes in time (float) as parameter
