@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: Tutorial1
+  m_Name: Card23
   m_EditorClassIdentifier: 
   Switches: 
   RepIrs: 0
@@ -17,13 +17,13 @@ MonoBehaviour:
   RepShake: 0
   RepGuard: 0
   timeOfDay: 0
-  storyPhase: 1
+  storyPhase: 0
   backgroundImage: {fileID: 0}
   foregroundImage: {fileID: 0}
-  cardText: "A guard leads you through the prison hallways while the barred doors
-    close behind you. The echoes fade like your hopes getting out this hellhole.  The
-    guard speaks:\n\u201DFreddie Cooks here mentors you in how we do things here.
-    Play nice and you\u2019ll go a long way.\u201D\r\n"
+  cardText: "\u201DAnd lastly the Punks. They are sort of a political cult, but what
+    their actual political beliefs are is a total mystery. They defy authority all
+    the time and so keep everyone on their toes. Are they wicked, mad or just plain
+    stupid is everyone\u2019s guess.\u201D"
   endCard: 0
   repeatable: 0
   OptionsOn: 0
@@ -54,4 +54,4 @@ MonoBehaviour:
   option4PunkReputation: 0
   option4ShakeReputation: 0
   option4GuardReputation: 0
-  option4FollowCard: {fileID: 11400000, guid: 9c739ba597ac8014ab15656d5476dc88, type: 2}
+  option4FollowCard: {fileID: 11400000, guid: c07fce3482684904eb6250c97ba62ec6, type: 2}

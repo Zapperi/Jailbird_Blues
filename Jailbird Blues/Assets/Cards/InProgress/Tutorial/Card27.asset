@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: Tutorial1
+  m_Name: Card27
   m_EditorClassIdentifier: 
   Switches: 
   RepIrs: 0
@@ -17,13 +17,13 @@ MonoBehaviour:
   RepShake: 0
   RepGuard: 0
   timeOfDay: 0
-  storyPhase: 1
+  storyPhase: 0
   backgroundImage: {fileID: 0}
   foregroundImage: {fileID: 0}
-  cardText: "A guard leads you through the prison hallways while the barred doors
-    close behind you. The echoes fade like your hopes getting out this hellhole.  The
-    guard speaks:\n\u201DFreddie Cooks here mentors you in how we do things here.
-    Play nice and you\u2019ll go a long way.\u201D\r\n"
+  cardText: "You interrupt a rowdy and noisy conversation about the merits of cottage
+    cheese and protein quark. Before you can even sit down at the table one Protein
+    shaker goon lifts you up and throws you away on the ground. It\u2019s hilarious
+    for everyone who witnesses it.\r\n\u201DSorry, but you don\u2019t even lift!\u201D\r\n"
   endCard: 0
   repeatable: 0
   OptionsOn: 0
@@ -54,4 +54,4 @@ MonoBehaviour:
   option4PunkReputation: 0
   option4ShakeReputation: 0
   option4GuardReputation: 0
-  option4FollowCard: {fileID: 11400000, guid: 9c739ba597ac8014ab15656d5476dc88, type: 2}
+  option4FollowCard: {fileID: 11400000, guid: 49b7d614925f4f645ac5e164a6a75217, type: 2}

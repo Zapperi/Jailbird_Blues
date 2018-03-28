@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: Tutorial1
+  m_Name: Card39
   m_EditorClassIdentifier: 
   Switches: 
   RepIrs: 0
@@ -17,31 +17,28 @@ MonoBehaviour:
   RepShake: 0
   RepGuard: 0
   timeOfDay: 0
-  storyPhase: 1
+  storyPhase: 0
   backgroundImage: {fileID: 0}
   foregroundImage: {fileID: 0}
-  cardText: "A guard leads you through the prison hallways while the barred doors
-    close behind you. The echoes fade like your hopes getting out this hellhole.  The
-    guard speaks:\n\u201DFreddie Cooks here mentors you in how we do things here.
-    Play nice and you\u2019ll go a long way.\u201D\r\n"
+  cardText: 
   endCard: 0
   repeatable: 0
-  OptionsOn: 0
-  Option1On: 0
+  OptionsOn: 1
+  Option1On: 1
   option1: 
   option1IrsReputation: 0
   option1PunkReputation: 0
   option1ShakeReputation: 0
   option1GuardReputation: 0
   option1FollowCard: {fileID: 0}
-  Option2On: 0
+  Option2On: 1
   option2: 
   option2IrsReputation: 0
   option2PunkReputation: 0
   option2ShakeReputation: 0
   option2GuardReputation: 0
   option2FollowCard: {fileID: 0}
-  Option3On: 0
+  Option3On: 1
   option3: 
   option3IrsReputation: 0
   option3PunkReputation: 0
@@ -54,4 +51,4 @@ MonoBehaviour:
   option4PunkReputation: 0
   option4ShakeReputation: 0
   option4GuardReputation: 0
-  option4FollowCard: {fileID: 11400000, guid: 9c739ba597ac8014ab15656d5476dc88, type: 2}
+  option4FollowCard: {fileID: 0}

@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: Tutorial1
+  m_Name: Card25
   m_EditorClassIdentifier: 
   Switches: 
   RepIrs: 0
@@ -17,13 +17,14 @@ MonoBehaviour:
   RepShake: 0
   RepGuard: 0
   timeOfDay: 0
-  storyPhase: 1
+  storyPhase: 0
   backgroundImage: {fileID: 0}
   foregroundImage: {fileID: 0}
-  cardText: "A guard leads you through the prison hallways while the barred doors
-    close behind you. The echoes fade like your hopes getting out this hellhole.  The
-    guard speaks:\n\u201DFreddie Cooks here mentors you in how we do things here.
-    Play nice and you\u2019ll go a long way.\u201D\r\n"
+  cardText: "As you sit down the members of the I.R.S. look you over and whisper inaudibly
+    something. Then they all turn to you and smilingly nod.\r\n\u201DYou\u2019re new
+    here it seems. If you play your cards right we might be interested in new recruits,
+    but right now we are in the middle of a meeting. So if you could kindly go somewhere
+    else. We\u2019ll be in contact whenever we need you.\u201D\r\n"
   endCard: 0
   repeatable: 0
   OptionsOn: 0
@@ -33,14 +34,14 @@ MonoBehaviour:
   option1PunkReputation: 0
   option1ShakeReputation: 0
   option1GuardReputation: 0
-  option1FollowCard: {fileID: 0}
+  option1FollowCard: {fileID: 11400000, guid: e8a8c2ee21dd82440a83646542b04d58, type: 2}
   Option2On: 0
   option2: 
   option2IrsReputation: 0
   option2PunkReputation: 0
   option2ShakeReputation: 0
   option2GuardReputation: 0
-  option2FollowCard: {fileID: 0}
+  option2FollowCard: {fileID: 11400000, guid: 49b7d614925f4f645ac5e164a6a75217, type: 2}
   Option3On: 0
   option3: 
   option3IrsReputation: 0
@@ -54,4 +55,4 @@ MonoBehaviour:
   option4PunkReputation: 0
   option4ShakeReputation: 0
   option4GuardReputation: 0
-  option4FollowCard: {fileID: 11400000, guid: 9c739ba597ac8014ab15656d5476dc88, type: 2}
+  option4FollowCard: {fileID: 11400000, guid: e8a8c2ee21dd82440a83646542b04d58, type: 2}
