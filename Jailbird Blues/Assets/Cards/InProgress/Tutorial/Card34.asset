@@ -20,25 +20,29 @@ MonoBehaviour:
   storyPhase: 0
   backgroundImage: {fileID: 0}
   foregroundImage: {fileID: 0}
-  cardText: 
+  cardText: "The guard escorts you back towards your cell. The Freddie\u2019s footsteps
+    grow fainter. The guard speaks.\r\n\u201DAlmost twenty years and now he\u2019s
+    finally out. Too bad Freddie ain\u2019t going to survive in the outside world.
+    It ain\u2019t like he remembers it anymore. I\u2019m willing to bet twenty bucks
+    that after four weeks he\u2019ll be back here like nothing\u2019s changed.\u201D\r"
   endCard: 0
   repeatable: 0
-  OptionsOn: 1
-  Option1On: 1
+  OptionsOn: 0
+  Option1On: 0
   option1: 
   option1IrsReputation: 0
   option1PunkReputation: 0
   option1ShakeReputation: 0
   option1GuardReputation: 0
   option1FollowCard: {fileID: 0}
-  Option2On: 1
+  Option2On: 0
   option2: 
   option2IrsReputation: 0
   option2PunkReputation: 0
   option2ShakeReputation: 0
   option2GuardReputation: 0
   option2FollowCard: {fileID: 0}
-  Option3On: 1
+  Option3On: 0
   option3: 
   option3IrsReputation: 0
   option3PunkReputation: 0
@@ -51,4 +55,4 @@ MonoBehaviour:
   option4PunkReputation: 0
   option4ShakeReputation: 0
   option4GuardReputation: 0
-  option4FollowCard: {fileID: 0}
+  option4FollowCard: {fileID: 11400000, guid: 7e5b833f2143912418eb4fa0d214f13d, type: 2}

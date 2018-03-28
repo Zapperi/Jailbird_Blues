@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: Card33
+  m_Name: Card35c 1
   m_EditorClassIdentifier: 
   Switches: 
   RepIrs: 0
@@ -20,13 +20,12 @@ MonoBehaviour:
   storyPhase: 0
   backgroundImage: {fileID: 0}
   foregroundImage: {fileID: 0}
-  cardText: "You are escorting Freddie in the hallway towards freedom. A guard is
-    walking ahead.\r\n\u201DKinda funny that my last act in this prison is to welcome
-    a newbie in it. Like life and death are both needed to make the world go around,
-    but in this case it\u2019s just to keep the prison system staying afloat. I don\u2019t
-    have any other passing wisdom except be careful and stay alive, it\u2019s only
-    going to get worse.\u201D\r\n"
-  endCard: 0
+  cardText: "The guard leaves back to his post. Kowalski sneaks closer and whispers.\r\n\u201DThe
+    guards can\u2019t watch over you forever. You just made me lose my smile, and
+    I\u2019m gonna make you feel worse than what I would\u2019ve today. I\u2019ll
+    be expecting those shoes tomorrow. This is my cell and you\u2019re only a tourist
+    in it. Good night\u201D\r\nYou both go to sleep.\r"
+  endCard: 1
   repeatable: 0
   OptionsOn: 0
   Option1On: 0
@@ -56,4 +55,4 @@ MonoBehaviour:
   option4PunkReputation: 0
   option4ShakeReputation: 0
   option4GuardReputation: 0
-  option4FollowCard: {fileID: 11400000, guid: 0319f90b4aa80fa4f8ea462ed9c8fc93, type: 2}
+  option4FollowCard: {fileID: 0}
