@@ -57,6 +57,7 @@ public class GameController : MonoBehaviour {
 	}
     void Update()
     {
+
         if (endcardOn == true)                                                       //Get next card if end card option is enabled and button 4 is pressed
         {
             Debug.Log("arvo uusi kortti");
@@ -71,6 +72,7 @@ public class GameController : MonoBehaviour {
 		punksRep += punks;
 		shakersRep += shakers;
 		guardsRep += guards;
+        Debug.Log("Update works");
 	}
 
 	public void GetNextCard()														//activates the next card from a new deck after the previous card has been resolved
@@ -97,11 +99,11 @@ public class GameController : MonoBehaviour {
                 index = Random.Range(0, workshopCards.Count);
 			    currentCard = workshopCards[index];
 			    break;
-		case (4):
-                BuildDeck(cellCards);
-                index = Random.Range(0, cellCards.Count);
-			    currentCard = cellCards[index];
-			    break;
+		//case (4):
+  //              BuildDeck(cellCards);
+  //              index = Random.Range(0, cellCards.Count);
+		//	    currentCard = cellCards[index];
+		//	    break;
 		}
 	}
     
