@@ -600,15 +600,18 @@ MonoBehaviour:
   button2text: {fileID: 114377901099804506}
   button3text: {fileID: 114167576016302916}
   button4text: {fileID: 114697841656664154}
+  buttonNoteBooktext: {fileID: 114735904079225820}
   location: {fileID: 114281583563082066}
   button1: {fileID: 114815402935155278}
   button2: {fileID: 114240550987602980}
   button3: {fileID: 114965174271843848}
   button4: {fileID: 114716653438802012}
+  buttonNoteBook: {fileID: 114557707679007810}
   background: {fileID: 0}
   npc: {fileID: 0}
   fadeImage: {fileID: 0}
   fadeSpeed: 0.25
+  noteBook: {fileID: 0}
 --- !u!114 &114418707910392720
 MonoBehaviour:
   m_ObjectHideFlags: 1
