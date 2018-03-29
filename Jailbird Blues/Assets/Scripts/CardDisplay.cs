@@ -20,8 +20,11 @@ public class CardDisplay : MonoBehaviour
     public Button button3;
     public Button button4;
     public Button buttonNoteBook;
-    public Sprite background;
-    public Sprite npc;
+    public Image background;
+    public Image foregroundImage1;
+    public Image foregroundImage2;
+    public Image foregroundImage3;
+    public Image foregroundImage4;
     public Image fadeImage;
     public float fadeSpeed = 0.25f;
     public GameObject noteBook;
@@ -39,12 +42,29 @@ public class CardDisplay : MonoBehaviour
     {
 
         card = GameController.gameController.currentCard;
+        // Update the card images from the current card
+        background.sprite = card.backgroundImage;
+        foregroundImage1.sprite = card.foregroundImage;
+        foregroundImage2.sprite = card.foregroundImage2;
+        foregroundImage3.sprite = card.foregroundImage3;
+        foregroundImage4.sprite = card.foregroundImage4;
+        // IF there is no image, hide the field. Otherwise show the new image
+        if (!foregroundImage1.sprite)
+            foregroundImage1.gameObject.SetActive(false);
+        else
+            foregroundImage1.gameObject.SetActive(true);
+        if (!foregroundImage2.sprite)
+            foregroundImage2.gameObject.SetActive(false);
+        else
+            foregroundImage2.gameObject.SetActive(true);
+        if (!foregroundImage3.sprite)
+            foregroundImage3.gameObject.SetActive(false);
+        if(!foregroundImage4.sprite)
+            foregroundImage4.gameObject.SetActive(false);
+        else
 
-        
-        
-
-        //Replace any \n in card's text string with line break
-        cardText.text = card.cardText.Replace("\\n", "\n");
+            //Replace any \n in card's text string with line break
+            cardText.text = card.cardText.Replace("\\n", "\n");
 
         //Update options's texts to current ones
         button1text.text = card.option1;

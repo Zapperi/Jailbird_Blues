@@ -26,8 +26,14 @@ public class CardValues : ScriptableObject									//switched the surface from M
     [Header("Card information")]
     [Tooltip("What image shows on the background.")]
     public Sprite backgroundImage;                                          //reference to the image that will be set as the background
-    [Tooltip("What image shows on the foreground.")]
+    [Tooltip("What image shows on the foreground, slot 1.")]
     public Sprite foregroundImage;                                                      //reference to the image that will be set as the non playable character
+    [Tooltip("What image shows on the foreground, slot 2.")]
+    public Sprite foregroundImage2;
+    [Tooltip("What image shows on the foreground, slot 3.")]
+    public Sprite foregroundImage3;
+    [Tooltip("What image shows on the foreground, slot 4.")]
+    public Sprite foregroundImage4;
     [Tooltip("Text that shows on the card")]
     [TextArea]
     public string cardText;													//Card's text

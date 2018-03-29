@@ -19,7 +19,10 @@ MonoBehaviour:
   timeOfDay: 0
   storyPhase: 0
   backgroundImage: {fileID: 0}
-  foregroundImage: {fileID: 0}
+  foregroundImage: {fileID: 21300000, guid: 99808a1fc3777a24ba3fe07077fdbc7e, type: 3}
+  foregroundImage2: {fileID: 0}
+  foregroundImage3: {fileID: 0}
+  foregroundImage4: {fileID: 0}
   cardText: "The guard leaves you with Freddie Cooks. Cooks speaks.\r\n\u201DYou don\u2019t
     look like you belong here. What did you do?\u201D\r\n"
   endCard: 0

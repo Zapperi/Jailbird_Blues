@@ -19,7 +19,10 @@ MonoBehaviour:
   timeOfDay: 0
   storyPhase: 0
   backgroundImage: {fileID: 0}
-  foregroundImage: {fileID: 0}
+  foregroundImage: {fileID: 21300000, guid: 99808a1fc3777a24ba3fe07077fdbc7e, type: 3}
+  foregroundImage2: {fileID: 0}
+  foregroundImage3: {fileID: 0}
+  foregroundImage4: {fileID: 0}
   cardText: "You arrive at a cell. Cooks speaks.\r\n\u201DThis is where you sleep
     and wait for the morning count. You probably have share it sometime with other
     people. But right now you are free to choose your bunk.\u201D\r"
