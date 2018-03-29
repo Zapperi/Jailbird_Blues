@@ -48,6 +48,7 @@ public class CardDisplay : MonoBehaviour
         foregroundImage2.sprite = card.foregroundImage2;
         foregroundImage3.sprite = card.foregroundImage3;
         foregroundImage4.sprite = card.foregroundImage4;
+        
         // IF there is no image, hide the field. Otherwise show the new image
         if (!foregroundImage1.sprite)
             foregroundImage1.gameObject.SetActive(false);
@@ -59,12 +60,15 @@ public class CardDisplay : MonoBehaviour
             foregroundImage2.gameObject.SetActive(true);
         if (!foregroundImage3.sprite)
             foregroundImage3.gameObject.SetActive(false);
-        if(!foregroundImage4.sprite)
+        else
+            foregroundImage3.gameObject.SetActive(true);
+        if (!foregroundImage4.sprite)
             foregroundImage4.gameObject.SetActive(false);
         else
-
-            //Replace any \n in card's text string with line break
-            cardText.text = card.cardText.Replace("\\n", "\n");
+            foregroundImage4.gameObject.SetActive(true);
+        
+        //Replace any \n in card's text string with line break
+        cardText.text = card.cardText.Replace("\\n", "\n");
 
         //Update options's texts to current ones
         button1text.text = card.option1;
