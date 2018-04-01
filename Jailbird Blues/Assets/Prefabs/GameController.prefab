@@ -51,3 +51,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae57894b462750541b777f140cd81dc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  punksRep: 0
+  irsRep: 0
+  shakersRep: 0
+  guardsRep: 0
+  day: 0
+  schedule: 0
+  allSwitches: 010001
+  allCards:
+  - {fileID: 11400000, guid: df8b44972028d46488f142889f271dd9, type: 2}
+  - {fileID: 11400000, guid: 531d898ff3ada9d48a891bc947b764d7, type: 2}
+  - {fileID: 11400000, guid: e28bfd2cefaf6454c9b3af80dd235cda, type: 2}
+  - {fileID: 11400000, guid: 2c4b19502e30c804a8662649b4b5c8eb, type: 2}
+  yardCards: []
+  messCards: []
+  workshopCards: []
+  cellCards: []
+  currentCard: {fileID: 11400000, guid: 2c4b19502e30c804a8662649b4b5c8eb, type: 2}
+  endcardOn: 0

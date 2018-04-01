@@ -26,17 +26,21 @@ public class GameController : MonoBehaviour {
     public bool endcardOn;
 	void Awake()																	//when the game starts
 	{
-        //Debug testing starts
-        allSwitches[0] = true;
-        allSwitches[1] = false;
-        allSwitches[2] = true;
-        BuildDeck(cellCards);
-        BuildDeck(yardCards);
-        //Debuggin ends
+        //// --FOR DEBUGGIN, REMOVE BEFORE BUILD!--
+        ////Debug testing starts
+        //allSwitches[0] = true;
+        //allSwitches[1] = false;
+        //allSwitches[2] = true;
+        //BuildDeck(cellCards);
+        //BuildDeck(yardCards);
+        ////Debuggin ends
 
 
         if (gameController == null)													//if there is no gamecontroller
 		{
+            //// !! DISABLED FOR DEBUGGIN !!
+            //for (int i = 0; i < allSwitches.Count; i++)                             // At the start of the game, make sure all switches are set to false.
+            //    allSwitches[i] = false;               
 			DontDestroyOnLoad(gameObject);											//the gamecontroller won't reset when switching scenes
 			gameController = this;													//this gamecontroller will be the gamecontroller
 			punksRep = 0;															//player's reputation among factions starts at zero
