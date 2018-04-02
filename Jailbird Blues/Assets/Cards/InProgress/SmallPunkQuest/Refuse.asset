@@ -20,35 +20,46 @@ MonoBehaviour:
   storyPhase: 0
   backgroundImage: {fileID: 0}
   foregroundImage: {fileID: 0}
+  foregroundImage2: {fileID: 0}
+  foregroundImage3: {fileID: 0}
+  foregroundImage4: {fileID: 0}
   cardText: '"Well screw you then"'
   endCard: 0
   repeatable: 0
   OptionsOn: 1
   Option1On: 0
-  option1: 
+  option1ReqSwitches: 
+  option1text: 
   option1IrsReputation: 0
   option1PunkReputation: 0
   option1ShakeReputation: 0
   option1GuardReputation: 0
+  option1ObtainedSwitches: 
   option1FollowCard: {fileID: 0}
   Option2On: 1
-  option2: Walk away
+  option2ReqSwitches: 
+  option2text: Walk away
   option2IrsReputation: 0
   option2PunkReputation: 0
   option2ShakeReputation: 0
   option2GuardReputation: 0
+  option2ObtainedSwitches: 
   option2FollowCard: {fileID: 11400000, guid: f869679608a18914bba3b0bc522fc73c, type: 2}
   Option3On: 1
-  option3: Go tell the guard
+  option3ReqSwitches: 
+  option3text: Go tell the guard
   option3IrsReputation: 0
   option3PunkReputation: 0
   option3ShakeReputation: 0
   option3GuardReputation: 0
+  option3ObtainedSwitches: 
   option3FollowCard: {fileID: 11400000, guid: 13679125543b3fa429325e6b910b178f, type: 2}
   Option4On: 0
-  option4: 
+  option4ReqSwitches: 
+  option4text: 
   option4IrsReputation: 0
   option4PunkReputation: 0
   option4ShakeReputation: 0
   option4GuardReputation: 0
+  option4ObtainedSwitches: 
   option4FollowCard: {fileID: 0}
