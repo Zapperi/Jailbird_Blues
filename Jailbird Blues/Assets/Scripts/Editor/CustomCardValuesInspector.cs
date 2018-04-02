@@ -8,8 +8,9 @@
 
 
 //[CustomEditor(typeof(CardValues))]                              //Create a custom editor, typecast it as CardValues script
-//public class CustomCardValuesInspector : Editor
-//{               //We are using Editor, not MonoBehaviour
+//public class CustomCardValuesInspector : Editor                 //We are using Editor, not MonoBehaviour
+//{
+//    private int addedInt;
 //    CardValues cd;                                              //Short reference to CardValues
 //    private string saveOption4String;                           //Used to save option 4 textstring for later use
 
@@ -21,22 +22,28 @@
 
 //    public override void OnInspectorGUI()                       //calls override on default Unity inspector GUI
 //    {
+//        OptionsToggle();
+//        CardRequirements();
+
+//    }
+
+//    private void OptionsToggle()
+//    {
 //        cd.OptionsOn = GUILayout.Toggle(cd.OptionsOn, "Toggle all options");
 //        if (cd.OptionsOn)                                       //If options are toggled on...
 //        {
-
+//            GUILayout.BeginHorizontal();
 //            cd.Option1On = GUILayout.Toggle(cd.Option1On, "Toggle option 1");                               //set each option to active..
 //            cd.Option2On = GUILayout.Toggle(cd.Option2On, "Toggle option 2");
 //            cd.Option3On = GUILayout.Toggle(cd.Option3On, "Toggle option 3");
 //            if (cd.option4text.Contains("Continue..."))             //Replaces the option 4 text with previously saved string
 //                cd.option4text = saveOption4String;
 //            cd.Option4On = GUILayout.Toggle(cd.Option4On, "Toggle option 4");
-//            DrawDefaultInspector();
-//            //base.OnInspectorGUI();                              //Shows the default Unity Inspector GUI            
+//            GUILayout.EndHorizontal();
+//            //DrawDefaultInspector();
 //        }
 //        else                                                    //If Options are toggled off..
 //        {
-
 //            cd.Option1On = false;                               //set each option to inactive..
 //            cd.Option2On = false;
 //            cd.Option3On = false;
@@ -46,11 +53,24 @@
 //                saveOption4String = cd.option4text;
 //                cd.option4text = ("Continue...");
 //            }
-//            DrawDefaultInspector();
-//            //base.OnInspectorGUI();                             //Shows the default Unity Inspector GUI              
+//            //DrawDefaultInspector();
 //        }
-
-
 //    }
+//    private void CardRequirements()
+//    {
+        
+//        serializedObject.Update();
+//        EditorGUIUtility.labelWidth = 100;
+//        EditorGUILayout.PropertyField(serializedObject.FindProperty("requiredSwitches"), true);
+//        serializedObject.ApplyModifiedProperties();
+//        EditorGUILayout.BeginHorizontal();
 
+//        EditorGUIUtility.labelWidth = 48;
+//        EditorGUIUtility.fieldWidth = 15;
+//        cd.RepIrs = EditorGUILayout.IntField("I.R.S:", cd.RepIrs);
+//        cd.RepPunks = EditorGUILayout.IntField("Punks:", cd.RepPunks);
+//        cd.RepShake = EditorGUILayout.IntField("Shaker:", cd.RepShake);
+//        cd.RepGuard = EditorGUILayout.IntField("Guard:", cd.RepGuard);
+//        GUILayout.EndHorizontal();
+//    }
 //}

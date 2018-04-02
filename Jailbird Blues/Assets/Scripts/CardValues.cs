@@ -9,7 +9,7 @@ public class CardValues : ScriptableObject									//switched the surface from M
     //public new string name;
     [Header("What is required to acivate the card")]                        //inspector directions
     [Tooltip("List of booleans required by the card. See reference file for values!")]
-    public List<int> Switches;												//list of switches that are required by the card to activate
+    public List<int> requiredSwitches;												//list of switches that are required by the card to activate
     [Tooltip("Required I.R.S reputation.")]
     public int RepIrs;                                                       //the required reputation among the I.R.S. to activate this card
     [Tooltip("Required Punks reputation.")]
