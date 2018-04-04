@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
   m_Name: punk smoke
   m_EditorClassIdentifier: 
-  Switches: 
+  requiredSwitches: 02000000
   RepIrs: 0
   RepPunks: 0
   RepShake: 0
@@ -36,7 +36,7 @@ MonoBehaviour:
   option1GuardReputation: 0
   option1ObtainedSwitches: 
   option1FollowCard: {fileID: 0}
-  Option2On: 1
+  Option2On: 0
   option2ReqSwitches: 
   option2text: give him the cigs
   option2IrsReputation: -2
@@ -45,7 +45,7 @@ MonoBehaviour:
   option2GuardReputation: -1
   option2ObtainedSwitches: 
   option2FollowCard: {fileID: 11400000, guid: 98866060e2df8a049a8045e5348ffc78, type: 2}
-  Option3On: 1
+  Option3On: 0
   option3ReqSwitches: 
   option3text: '"sorry man I got nothin''"'
   option3IrsReputation: 0
@@ -54,7 +54,7 @@ MonoBehaviour:
   option3GuardReputation: 1
   option3ObtainedSwitches: 
   option3FollowCard: {fileID: 11400000, guid: 3777e705c9f543640970dae0334c9442, type: 2}
-  Option4On: 0
+  Option4On: 1
   option4ReqSwitches: 
   option4text: 
   option4IrsReputation: 0

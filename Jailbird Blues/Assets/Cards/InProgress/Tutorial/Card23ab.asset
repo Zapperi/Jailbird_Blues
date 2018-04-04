@@ -9,9 +9,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: 23ab
+  m_Name: Card23ab
   m_EditorClassIdentifier: 
-  requiredSwitches: 
+  requiredSwitches: 01000000
   RepIrs: 0
   RepPunks: 0
   RepShake: 0
@@ -23,7 +23,13 @@ MonoBehaviour:
   foregroundImage2: {fileID: 0}
   foregroundImage3: {fileID: 0}
   foregroundImage4: {fileID: 0}
-  cardText: 
+  cardText: "Kowalski punches you hard in the liver. The pain hits you like thousand
+    supernovas and you\u2019re out of breath. Kowalski searches you and finds the
+    brownie.\r\n\u201DIf you didn\u2019t have anything else with you, then I guess
+    this is just mine. I\u2019ll make it clear to you that this is my cell and you\u2019re
+    the tourist. I expect payment everyday, or else you\u2019re gonna feel much worse
+    than right now. Good night.\u201D\r\nYour last image of the day is Kowalski gobbling
+    down the brownie and you pass out from the pain.\r"
   endCard: 0
   repeatable: 0
   OptionsOn: 1

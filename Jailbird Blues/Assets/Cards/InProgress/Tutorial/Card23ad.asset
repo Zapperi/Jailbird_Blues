@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
   m_Name: Card23ad
   m_EditorClassIdentifier: 
-  requiredSwitches: 
+  requiredSwitches: 01000000
   RepIrs: 0
   RepPunks: 0
   RepShake: 0
@@ -23,7 +23,11 @@ MonoBehaviour:
   foregroundImage2: {fileID: 0}
   foregroundImage3: {fileID: 0}
   foregroundImage4: {fileID: 0}
-  cardText: 
+  cardText: "\u201DI ain\u2019t gonna beat you up is what I\u2019m willing to pay.
+    Hand it over\u201D\r\nKowalski grabs the brownie.\r\n\u201DI\u2019ll make it clear
+    to you that this is my cell and you\u2019re the tourist. I expect payment everyday,
+    or else you\u2019re gonna feel real bad. Good night.\u201D\r\nYou can hear Kowalski
+    munching the brownie in bed. You both go to sleep.\r"
   endCard: 0
   repeatable: 0
   OptionsOn: 1

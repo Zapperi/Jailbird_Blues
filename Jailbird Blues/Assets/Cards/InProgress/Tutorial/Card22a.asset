@@ -9,9 +9,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: Card35a
+  m_Name: Card22a
   m_EditorClassIdentifier: 
-  Switches: 
+  requiredSwitches: 
   RepIrs: 0
   RepPunks: 0
   RepShake: 0
@@ -45,7 +45,7 @@ MonoBehaviour:
   option2ShakeReputation: 0
   option2GuardReputation: 0
   option2ObtainedSwitches: 
-  option2FollowCard: {fileID: 0}
+  option2FollowCard: {fileID: 11400000, guid: 2422600f90ee16343b4ab5b8b86ccc1e, type: 2}
   Option3On: 1
   option3ReqSwitches: 
   option3text: "\u201DDepends how much you\u2019re willing to pay?\u201D"
@@ -54,13 +54,13 @@ MonoBehaviour:
   option3ShakeReputation: 0
   option3GuardReputation: 0
   option3ObtainedSwitches: 
-  option3FollowCard: {fileID: 0}
-  Option4On: 0
+  option3FollowCard: {fileID: 11400000, guid: ac1a2f03dbf9cfb47bcddcc4aa2af080, type: 2}
+  Option4On: 1
   option4ReqSwitches: 
-  option4text: 
+  option4text: "\u201DDepends how much you\u2019re willing to pay?\u201D"
   option4IrsReputation: 0
   option4PunkReputation: 0
   option4ShakeReputation: 0
   option4GuardReputation: 0
   option4ObtainedSwitches: 
-  option4FollowCard: {fileID: 0}
+  option4FollowCard: {fileID: 11400000, guid: da24977372e545a42a48bea2becd4b92, type: 2}

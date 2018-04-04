@@ -23,7 +23,15 @@ MonoBehaviour:
   foregroundImage2: {fileID: 0}
   foregroundImage3: {fileID: 0}
   foregroundImage4: {fileID: 0}
-  cardText: 
+  cardText: "\u201DI ain\u2019t gonna beat you up is what I\u2019m willing to pay.
+    Hand it over\u201D\r\nKowalski searches your clothes, but finds nothing. He looks
+    really mad.\r\n\u201DYou trying to make me look like fool? Let\u2019s see who\u2019s
+    laughing now!\u201D\r\nKowalski punches you in the liver. The pain hits you like
+    a thousand supernovas, but before you can recover Kowalski starts kicking you
+    with your shoes everywhere really bad. Kowalski starts screaming.\r\n\u201DThis
+    is my cell you fool. You ain\u2019t nothing but a tourist here!\u201D\r\nThe guards
+    finally apprehend Kowalski and you\u2019re moved to the infirmary. The sweet bliss
+    of unconsciousness takes hold and you black out.\r"
   endCard: 0
   repeatable: 0
   OptionsOn: 1
