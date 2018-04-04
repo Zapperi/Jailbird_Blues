@@ -27,6 +27,7 @@ public class CardDisplay : MonoBehaviour
     public Image fadeImage;
     public float fadeSpeed = 0.25f;         // set how fast the overlaying image fades in and out.
     public GameObject noteBook;
+    
 
 
     void Start()
@@ -98,19 +99,19 @@ public class CardDisplay : MonoBehaviour
         }
 
         //Activate the button gameobjects when needed, hide otherwise.
-        if (card.Option1On == true)
+        if (card.Option1On == true && GameController.gameController.Check1Switches() == true)
             button1.gameObject.SetActive(true);
         else
             button1.gameObject.SetActive(false);
-        if (card.Option2On == true)
+        if (card.Option2On == true && GameController.gameController.Check2Switches() == true)
             button2.gameObject.SetActive(true);
         else
             button2.gameObject.SetActive(false);
-        if (card.Option3On == true)
+        if (card.Option3On == true && GameController.gameController.Check3Switches() == true)
             button3.gameObject.SetActive(true);
         else
             button3.gameObject.SetActive(false);
-        if (card.Option4On == true)
+        if (card.Option4On == true && GameController.gameController.Check4Switches() == true)
             button4.gameObject.SetActive(true);
         else
             button4.gameObject.SetActive(false);
@@ -119,6 +120,8 @@ public class CardDisplay : MonoBehaviour
     //--BUTTON FUNCTIONS--
     void button1pressed()
     {
+        GameController.gameController.Add1Switches();
+        GameController.gameController.Remove1Switches();
         if (card.option1FollowCard)                                                // If card is not a result card, do this..
         {     
             StartCoroutine(FadeImage(fadeSpeed));                               // Fade in and out a overlay image and update card values under it.
@@ -135,6 +138,8 @@ public class CardDisplay : MonoBehaviour
     }
     void button2pressed()
     {
+        GameController.gameController.Add2Switches();
+        GameController.gameController.Remove2Switches();
         if (card.option2FollowCard)
         {
             StartCoroutine(FadeImage(fadeSpeed));
@@ -148,6 +153,8 @@ public class CardDisplay : MonoBehaviour
     }
     void button3pressed()
     {
+        GameController.gameController.Add3Switches();
+        GameController.gameController.Remove3Switches();
         if (card.option3FollowCard)
         {
             StartCoroutine(FadeImage(fadeSpeed));
@@ -161,6 +168,8 @@ public class CardDisplay : MonoBehaviour
     }
     void button4pressed()
     {
+        GameController.gameController.Add4Switches();
+        GameController.gameController.Remove4Switches();
         if (card.option4FollowCard)
         {
             StartCoroutine(FadeImage(fadeSpeed));
@@ -188,6 +197,8 @@ public class CardDisplay : MonoBehaviour
         else
             noteBook.gameObject.SetActive(false);                   // If notebook is active, set it to disabled.
     }
+
+    
 
     // Coroutine for image fade between cards, takes in time (float) as parameter.
     IEnumerator FadeImage(float time)                                       

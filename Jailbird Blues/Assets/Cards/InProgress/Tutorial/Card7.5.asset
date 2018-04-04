@@ -64,4 +64,4 @@ MonoBehaviour:
   option4ShakeReputation: 0
   option4GuardReputation: 0
   option4ObtainedSwitches: 
-  option4FollowCard: {fileID: 11400000, guid: 7c978cdfa44ffb74fbf26014d0a73b6a, type: 2}
+  option4FollowCard: {fileID: 11400000, guid: 280d311b9b1448b468fef84ffbf752f1, type: 2}

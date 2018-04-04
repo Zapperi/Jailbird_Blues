@@ -65,6 +65,8 @@ public class CardValues : ScriptableObject									//switched the surface from M
     public int option1GuardReputation;
     [Tooltip("Which triggers are triggered by this option.")]
     public List<int> option1ObtainedSwitches;                               // Which switches are triggered by this option
+    [Tooltip("Which triggers are removed by this option.")]
+    public List<int> option1RemovedSwitches;
     [Tooltip("What card comes after this option?")]
     public CardValues option1FollowCard;                                    // Does this card have a follow-up card and if yes, which card?
 
@@ -87,6 +89,8 @@ public class CardValues : ScriptableObject									//switched the surface from M
     public int option2GuardReputation;
     [Tooltip("Which triggers are triggered by this option.")]
     public List<int> option2ObtainedSwitches;                               // Which switches are triggered by this option
+    [Tooltip("Which triggers are removed by this option.")]
+    public List<int> option2RemovedSwitches;
     [Tooltip("What card comes after this option?")]
     public CardValues option2FollowCard;                                    // Does this card have a follow-up card and if yes, which card?
 
@@ -109,6 +113,8 @@ public class CardValues : ScriptableObject									//switched the surface from M
     public int option3GuardReputation;
     [Tooltip("Which triggers are triggered by this option.")]
     public List<int> option3ObtainedSwitches;                               // Which switches are triggered by this option
+    [Tooltip("Which triggers are removed by this option.")]
+    public List<int> option3RemovedSwitches;
     [Tooltip("What card comes after this option?")]
     public CardValues option3FollowCard;                                    // Does this card have a follow-up card and if yes, which card?
 
@@ -131,6 +137,8 @@ public class CardValues : ScriptableObject									//switched the surface from M
     public int option4GuardReputation;
     [Tooltip("Which triggers are triggered by this option.")]
     public List<int> option4ObtainedSwitches;                               // Which switches are triggered by this option
+    [Tooltip("Which triggers are removed by this option.")]
+    public List<int> option4RemovedSwitches;
     [Tooltip("What card comes after this option?")]
     public CardValues option4FollowCard;                                    // Does this card have a follow-up card and if yes, which card?
 }

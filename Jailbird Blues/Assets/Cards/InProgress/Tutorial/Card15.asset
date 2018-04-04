@@ -38,6 +38,7 @@ MonoBehaviour:
   option1ShakeReputation: 0
   option1GuardReputation: 0
   option1ObtainedSwitches: 
+  option1RemovedSwitches: 
   option1FollowCard: {fileID: 0}
   Option2On: 0
   option2ReqSwitches: 
@@ -47,6 +48,7 @@ MonoBehaviour:
   option2ShakeReputation: 0
   option2GuardReputation: 0
   option2ObtainedSwitches: 
+  option2RemovedSwitches: 
   option2FollowCard: {fileID: 0}
   Option3On: 0
   option3ReqSwitches: 
@@ -56,6 +58,7 @@ MonoBehaviour:
   option3ShakeReputation: 0
   option3GuardReputation: 0
   option3ObtainedSwitches: 
+  option3RemovedSwitches: 
   option3FollowCard: {fileID: 0}
   Option4On: 1
   option4ReqSwitches: 
@@ -65,4 +68,5 @@ MonoBehaviour:
   option4ShakeReputation: 0
   option4GuardReputation: 0
   option4ObtainedSwitches: 
-  option4FollowCard: {fileID: 11400000, guid: c07fce3482684904eb6250c97ba62ec6, type: 2}
+  option4RemovedSwitches: 
+  option4FollowCard: {fileID: 11400000, guid: 013a9191a6c268349b28e02527bad238, type: 2}
