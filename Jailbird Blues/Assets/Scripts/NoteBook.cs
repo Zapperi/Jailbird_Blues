@@ -7,9 +7,23 @@ public class NoteBook : MonoBehaviour {
 
     public Text noteBookText;
     public Button buttonQuit;
+    public Button logButton;
+    public Button inventoryButton;
+    public Button statsButton;
+    public Button optionsButton;
+    public GameObject logPage;
+    public GameObject inventoryPage;
+    public GameObject statsPage;
+    public GameObject optionsPage;
 	// Use this for initialization
 	void Start () {
-      
+
+        buttonQuit.onClick.AddListener(ButtonQuitpressed);
+        inventoryButton.onClick.AddListener(InventoryButtonpressed);
+        statsButton.onClick.AddListener(StatsButtonpressed);
+        logButton.onClick.AddListener(LogButtonpressed);
+        optionsButton.onClick.AddListener(OptionsButtonpressed);
+        this.gameObject.SetActive(false);
 
 
     }
@@ -18,14 +32,53 @@ public class NoteBook : MonoBehaviour {
 	void Update () {
 
         
-        buttonQuit.onClick.AddListener(buttonQuitpressed);
+        
 
         noteBookText.text = "IRS rep: " + GameController.gameController.irsRep + "\n" + "Punks rep: " + GameController.gameController.punksRep + "\n" +
             "Shakers rep: " + GameController.gameController.shakersRep + "\n" + "Guards rep: " + GameController.gameController.guardsRep;
 
         
     }
-    void buttonQuitpressed()
+
+    public void UpdateNotebook()
+    {
+        logPage.GetComponent<LogScript>().UpdateLogText();
+    }
+
+    void LogButtonpressed()
+    {
+        logPage.gameObject.SetActive(true);
+        inventoryPage.gameObject.SetActive(false);
+        statsPage.gameObject.SetActive(false);
+        optionsPage.gameObject.SetActive(false);
+        logPage.GetComponent<LogScript>().UpdateLogText();
+    }
+
+    void InventoryButtonpressed()
+    {
+        logPage.gameObject.SetActive(false);
+        inventoryPage.gameObject.SetActive(true);
+        statsPage.gameObject.SetActive(false);
+        optionsPage.gameObject.SetActive(false);
+    }
+
+    void StatsButtonpressed()
+    {
+        logPage.gameObject.SetActive(false);
+        inventoryPage.gameObject.SetActive(false);
+        statsPage.gameObject.SetActive(true);
+        optionsPage.gameObject.SetActive(false);
+    }
+
+    void OptionsButtonpressed()
+    {
+        logPage.gameObject.SetActive(false);
+        inventoryPage.gameObject.SetActive(false);
+        statsPage.gameObject.SetActive(false);
+        optionsPage.gameObject.SetActive(true);
+    }
+
+    void ButtonQuitpressed()
     {
 #if UNITY_EDITOR
 
@@ -36,5 +89,10 @@ public class NoteBook : MonoBehaviour {
           Application.Quit();
         
 #endif
+    }
+    //this function exists just so we don't need to declare logpage gameobject in other scripts
+    public void AddEventToLog(int index)
+    {
+        logPage.GetComponent<LogScript>().AddLogEvent(index);
     }
 }

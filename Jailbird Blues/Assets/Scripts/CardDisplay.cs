@@ -181,7 +181,10 @@ public class CardDisplay : MonoBehaviour
     void buttonNotebookPressed()
     {
         if (noteBook.gameObject.activeSelf == false)                // If notebook is not active, set it to enabled.
+        {
             noteBook.gameObject.SetActive(true);
+            noteBook.GetComponent<NoteBook>().UpdateNotebook();
+        }
         else
             noteBook.gameObject.SetActive(false);                   // If notebook is active, set it to disabled.
     }
