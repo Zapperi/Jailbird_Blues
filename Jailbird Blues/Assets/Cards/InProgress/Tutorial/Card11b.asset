@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: Card22
+  m_Name: Card16
   m_EditorClassIdentifier: 
   Switches: 
   RepIrs: 0
@@ -18,15 +18,15 @@ MonoBehaviour:
   RepGuard: 0
   timeOfDay: 0
   storyPhase: 0
-  backgroundImage: {fileID: 21300000, guid: 131dee0c67f126347b72cba445163453, type: 3}
+  backgroundImage: {fileID: 21300000, guid: 6418a1561f9767d4f9ab671e48f42dde, type: 3}
   foregroundImage: {fileID: 21300000, guid: 99808a1fc3777a24ba3fe07077fdbc7e, type: 3}
   foregroundImage2: {fileID: 0}
   foregroundImage3: {fileID: 0}
   foregroundImage4: {fileID: 0}
-  cardText: "\u201DThe protein shakers value physical strength, power and muscle mass.
-    Mostly violent criminals who have sculpted themselves to be the pinnacle of human
-    athletic perfection. All the other inmates want to get out, but Protein shakers
-    seem to be quite happy in their gym.\u201D\r\n"
+  cardText: "\u201DSometimes it\u2019s better to just give \u2019em what they want,
+    but there\u2019s a risk of them taking advantage of you. Nobody here wants to
+    be seen as weak as they get eaten. Sometimes literally. Thankfully I retire today,
+    because that money was fake. But now, let\u2019s go eat!\u201D"
   endCard: 0
   repeatable: 0
   OptionsOn: 0
@@ -65,4 +65,4 @@ MonoBehaviour:
   option4ShakeReputation: 0
   option4GuardReputation: 0
   option4ObtainedSwitches: 
-  option4FollowCard: {fileID: 11400000, guid: 4c024c5fb01ea0a4d8512b3c696f01b8, type: 2}
+  option4FollowCard: {fileID: 11400000, guid: f58d31edf61b70642a2c3eb340f141b2, type: 2}

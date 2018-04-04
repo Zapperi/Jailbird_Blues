@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: Card23
+  m_Name: Card15
   m_EditorClassIdentifier: 
   Switches: 
   RepIrs: 0
@@ -18,15 +18,13 @@ MonoBehaviour:
   RepGuard: 0
   timeOfDay: 0
   storyPhase: 0
-  backgroundImage: {fileID: 21300000, guid: 131dee0c67f126347b72cba445163453, type: 3}
-  foregroundImage: {fileID: 21300000, guid: 99808a1fc3777a24ba3fe07077fdbc7e, type: 3}
-  foregroundImage2: {fileID: 0}
+  backgroundImage: {fileID: 21300000, guid: 6418a1561f9767d4f9ab671e48f42dde, type: 3}
+  foregroundImage: {fileID: 0}
+  foregroundImage2: {fileID: 21300000, guid: a3e0d85196877f444a37d9c76066bf97, type: 3}
   foregroundImage3: {fileID: 0}
   foregroundImage4: {fileID: 0}
-  cardText: "\u201DAnd lastly the Punks. They are sort of a political cult, but what
-    their actual political beliefs are is a total mystery. They defy authority all
-    the time and so keep everyone on their toes. Are they wicked, mad or just plain
-    stupid is everyone\u2019s guess.\u201D"
+  cardText: "The inmate counts his money as the bell rings for dinner. The inmate
+    turns and scampers away.\r\n\u201DBe seeing you around newbie!\u201D\r"
   endCard: 0
   repeatable: 0
   OptionsOn: 0
@@ -65,4 +63,4 @@ MonoBehaviour:
   option4ShakeReputation: 0
   option4GuardReputation: 0
   option4ObtainedSwitches: 
-  option4FollowCard: {fileID: 11400000, guid: c07fce3482684904eb6250c97ba62ec6, type: 2}
+  option4FollowCard: {fileID: 11400000, guid: 013a9191a6c268349b28e02527bad238, type: 2}
