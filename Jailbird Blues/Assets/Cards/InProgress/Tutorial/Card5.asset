@@ -37,24 +37,27 @@ MonoBehaviour:
   option1ShakeReputation: 0
   option1GuardReputation: 0
   option1ObtainedSwitches: 
+  option1RemovedSwitches: 
   option1FollowCard: {fileID: 0}
   Option2On: 1
-  option2ReqSwitches: 01000000
+  option2ReqSwitches: 
   option2text: 'Top bunk '
   option2IrsReputation: 0
   option2PunkReputation: 0
   option2ShakeReputation: 0
   option2GuardReputation: 0
   option2ObtainedSwitches: 
+  option2RemovedSwitches: 
   option2FollowCard: {fileID: 11400000, guid: ace9fa9467e953245985a29fcfc72700, type: 2}
   Option3On: 1
-  option3ReqSwitches: 02000000
+  option3ReqSwitches: 
   option3text: Bottom bunk
   option3IrsReputation: 0
   option3PunkReputation: 0
   option3ShakeReputation: 0
   option3GuardReputation: 0
   option3ObtainedSwitches: 
+  option3RemovedSwitches: 
   option3FollowCard: {fileID: 11400000, guid: ace9fa9467e953245985a29fcfc72700, type: 2}
   Option4On: 0
   option4ReqSwitches: 
@@ -64,4 +67,5 @@ MonoBehaviour:
   option4ShakeReputation: 0
   option4GuardReputation: 0
   option4ObtainedSwitches: 
+  option4RemovedSwitches: 
   option4FollowCard: {fileID: 0}
