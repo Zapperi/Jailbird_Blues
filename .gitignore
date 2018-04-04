@@ -8,7 +8,7 @@
 [Bb]uild/
 [Bb]uilds/
 Assets/AssetStoreTools*
-
+*.ProjectVersion.txt
 # Visual Studio 2015 cache directory
 .vs/
 
