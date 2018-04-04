@@ -55,6 +55,8 @@ public class CardValues : ScriptableObject									//switched the surface from M
     public List<int> option1ReqSwitches;                                    // What switches are required for this option
     [Tooltip("The text of the option.")]
     public string option1text;                                              // what is the option?
+    [Tooltip("The text for log book entry.")]
+    public string option1LogText;
     [Tooltip("How much I.R.S reputation changes.")]
     public int option1IrsReputation;                                        // How does the reputation change from this option
     [Tooltip("How much Punks reputation changes.")]
@@ -79,6 +81,8 @@ public class CardValues : ScriptableObject									//switched the surface from M
     public List<int> option2ReqSwitches;                                    // What switches are required for this option
     [Tooltip("The text of the option.")]
     public string option2text;                                              // what is the option?
+    [Tooltip("The text for log book entry.")]
+    public string option2LogText;
     [Tooltip("How much I.R.S reputation changes.")]
     public int option2IrsReputation;                                        // How does the reputation change from this option
     [Tooltip("How much Punks reputation changes.")]
@@ -103,6 +107,8 @@ public class CardValues : ScriptableObject									//switched the surface from M
     public List<int> option3ReqSwitches;                                    // What switches are required for this option
     [Tooltip("The text of the option.")]
     public string option3text;                                              // what is the option?
+    [Tooltip("The text for log book entry.")]
+    public string option3LogText;
     [Tooltip("How much I.R.S reputation changes.")]
     public int option3IrsReputation;                                        // How does the reputation change from this option
     [Tooltip("How much Punks reputation changes.")]
@@ -127,6 +133,8 @@ public class CardValues : ScriptableObject									//switched the surface from M
     public List<int> option4ReqSwitches;                                    // What switches are required for this option
     [Tooltip("The text of the option.")]
     public string option4text;                                              // what is the option?
+    [Tooltip("The text for log book entry.")]
+    public string option4LogText;
     [Tooltip("How much I.R.S reputation changes.")]
     public int option4IrsReputation;                                        // How does the reputation change from this option
     [Tooltip("How much Punks reputation changes.")]
