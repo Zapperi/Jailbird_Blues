@@ -23,11 +23,13 @@ MonoBehaviour:
   foregroundImage2: {fileID: 0}
   foregroundImage3: {fileID: 0}
   foregroundImage4: {fileID: 0}
-  cardText: 
+  cardText: "\"That's cool bro, but you won't get this kinda guns by stopping lifting
+    though.\"\r\nHe starts flexing and grunting \"Uhh... bruh. Hnghhhh... BRO\" while
+    you walk away."
   endCard: 0
   repeatable: 0
-  OptionsOn: 1
-  Option1On: 1
+  OptionsOn: 0
+  Option1On: 0
   option1ReqSwitches: 
   option1text: 
   option1IrsReputation: 0
@@ -37,7 +39,7 @@ MonoBehaviour:
   option1ObtainedSwitches: 
   option1RemovedSwitches: 
   option1FollowCard: {fileID: 0}
-  Option2On: 1
+  Option2On: 0
   option2ReqSwitches: 
   option2text: 
   option2IrsReputation: 0
@@ -47,7 +49,7 @@ MonoBehaviour:
   option2ObtainedSwitches: 
   option2RemovedSwitches: 
   option2FollowCard: {fileID: 0}
-  Option3On: 1
+  Option3On: 0
   option3ReqSwitches: 
   option3text: 
   option3IrsReputation: 0

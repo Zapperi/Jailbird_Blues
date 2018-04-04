@@ -23,11 +23,12 @@ MonoBehaviour:
   foregroundImage2: {fileID: 0}
   foregroundImage3: {fileID: 0}
   foregroundImage4: {fileID: 0}
-  cardText: 
+  cardText: You start feeling lightheaded while the sweat keeps on pouring. "Yeah
+    bro keep it up!"
   endCard: 0
   repeatable: 0
   OptionsOn: 1
-  Option1On: 1
+  Option1On: 0
   option1ReqSwitches: 
   option1text: 
   option1IrsReputation: 0
@@ -39,25 +40,25 @@ MonoBehaviour:
   option1FollowCard: {fileID: 0}
   Option2On: 1
   option2ReqSwitches: 
-  option2text: 
+  option2text: Push through the pain!
   option2IrsReputation: 0
   option2PunkReputation: 0
-  option2ShakeReputation: 0
+  option2ShakeReputation: 2
   option2GuardReputation: 0
   option2ObtainedSwitches: 
   option2RemovedSwitches: 
-  option2FollowCard: {fileID: 0}
+  option2FollowCard: {fileID: 11400000, guid: f2fd1409f8349a34aabe62fd6af7915e, type: 2}
   Option3On: 1
   option3ReqSwitches: 
-  option3text: 
+  option3text: Okay, I'm done.
   option3IrsReputation: 0
   option3PunkReputation: 0
-  option3ShakeReputation: 0
+  option3ShakeReputation: 1
   option3GuardReputation: 0
   option3ObtainedSwitches: 
   option3RemovedSwitches: 
-  option3FollowCard: {fileID: 0}
-  Option4On: 1
+  option3FollowCard: {fileID: 11400000, guid: 7b61d3283261aa646bdf4c5f26a229e4, type: 2}
+  Option4On: 0
   option4ReqSwitches: 
   option4text: 
   option4IrsReputation: 0

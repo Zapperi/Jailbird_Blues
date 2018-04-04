@@ -14,7 +14,7 @@ MonoBehaviour:
   requiredSwitches: 
   RepIrs: 0
   RepPunks: 0
-  RepShake: 0
+  RepShake: 20
   RepGuard: 0
   timeOfDay: 0
   storyPhase: 0
@@ -23,11 +23,13 @@ MonoBehaviour:
   foregroundImage2: {fileID: 0}
   foregroundImage3: {fileID: 0}
   foregroundImage4: {fileID: 0}
-  cardText: 
+  cardText: "You walk up to the exercise area, you see some Protein shakers there.\r\n\r\n\"Yeah
+    bro, today I lifted atleast 35 sets on the...\"\r\nThey notice you and turn to
+    your direction.\r\n\"Hey little bro, how's it going?\""
   endCard: 0
   repeatable: 0
   OptionsOn: 1
-  Option1On: 1
+  Option1On: 0
   option1ReqSwitches: 
   option1text: 
   option1IrsReputation: 0
@@ -35,26 +37,29 @@ MonoBehaviour:
   option1ShakeReputation: 0
   option1GuardReputation: 0
   option1ObtainedSwitches: 
+  option1RemovedSwitches: 
   option1FollowCard: {fileID: 0}
   Option2On: 1
   option2ReqSwitches: 
-  option2text: 
+  option2text: Pretty good.
   option2IrsReputation: 0
   option2PunkReputation: 0
   option2ShakeReputation: 0
   option2GuardReputation: 0
   option2ObtainedSwitches: 
-  option2FollowCard: {fileID: 0}
+  option2RemovedSwitches: 
+  option2FollowCard: {fileID: 11400000, guid: 6309d4c3d6d1bb44fa2f2ebf74ecd5e6, type: 2}
   Option3On: 1
   option3ReqSwitches: 
-  option3text: 
+  option3text: A bit busy, have to go.
   option3IrsReputation: 0
   option3PunkReputation: 0
   option3ShakeReputation: 0
   option3GuardReputation: 0
   option3ObtainedSwitches: 
+  option3RemovedSwitches: 
   option3FollowCard: {fileID: 0}
-  Option4On: 1
+  Option4On: 0
   option4ReqSwitches: 
   option4text: 
   option4IrsReputation: 0
@@ -62,4 +67,5 @@ MonoBehaviour:
   option4ShakeReputation: 0
   option4GuardReputation: 0
   option4ObtainedSwitches: 
+  option4RemovedSwitches: 
   option4FollowCard: {fileID: 0}
