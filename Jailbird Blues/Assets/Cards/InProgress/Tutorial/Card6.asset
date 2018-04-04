@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: Card6
+  m_Name: Card7
   m_EditorClassIdentifier: 
   Switches: 
   RepIrs: 0
@@ -23,7 +23,8 @@ MonoBehaviour:
   foregroundImage2: {fileID: 0}
   foregroundImage3: {fileID: 0}
   foregroundImage4: {fileID: 0}
-  cardText: Good choise! I like that one aswell
+  cardText: "\u201DAlright, I\u2019ll show you the rest of the place. We probably
+    have some time to catch fresh air before the luchtime starts.\u201D"
   endCard: 0
   repeatable: 0
   OptionsOn: 0
@@ -62,4 +63,4 @@ MonoBehaviour:
   option4ShakeReputation: 0
   option4GuardReputation: 0
   option4ObtainedSwitches: 
-  option4FollowCard: {fileID: 11400000, guid: b1e3799bfd683a249b8db29602b4d7b0, type: 2}
+  option4FollowCard: {fileID: 11400000, guid: 280d311b9b1448b468fef84ffbf752f1, type: 2}

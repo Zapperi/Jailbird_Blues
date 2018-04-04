@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: Card13
+  m_Name: Card21
   m_EditorClassIdentifier: 
   Switches: 
   RepIrs: 0
@@ -18,15 +18,15 @@ MonoBehaviour:
   RepGuard: 0
   timeOfDay: 0
   storyPhase: 0
-  backgroundImage: {fileID: 21300000, guid: 6418a1561f9767d4f9ab671e48f42dde, type: 3}
+  backgroundImage: {fileID: 21300000, guid: 131dee0c67f126347b72cba445163453, type: 3}
   foregroundImage: {fileID: 21300000, guid: 99808a1fc3777a24ba3fe07077fdbc7e, type: 3}
   foregroundImage2: {fileID: 0}
   foregroundImage3: {fileID: 0}
   foregroundImage4: {fileID: 0}
-  cardText: "\u201DI already paid him yesterday, but some people just can\u2019t help
-    themselves. I appreciate you helping me, but sometimes it\u2019s better to stay
-    out of the way. Especially if it doesn\u2019t concern things related to you. But
-    we better get going if we wanna eat.\u201D"
+  cardText: "Freddie sits down and starts eating and at the same time voicing his
+    knowledge.\r\n\u201DThe I.R.S. are tax evaders and other white collar criminals.
+    They have a good foothold on the prison contraband business and they respect the
+    invisible hand of free-market the most.\u201D\r\n"
   endCard: 0
   repeatable: 0
   OptionsOn: 0
@@ -65,4 +65,4 @@ MonoBehaviour:
   option4ShakeReputation: 0
   option4GuardReputation: 0
   option4ObtainedSwitches: 
-  option4FollowCard: {fileID: 11400000, guid: f58d31edf61b70642a2c3eb340f141b2, type: 2}
+  option4FollowCard: {fileID: 11400000, guid: 4eba9a3ab7f3cc44e922d4ca70bdd98c, type: 2}

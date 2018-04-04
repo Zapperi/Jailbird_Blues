@@ -9,29 +9,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: Card34
+  m_Name: Card23ac
   m_EditorClassIdentifier: 
-  Switches: 
+  requiredSwitches: 
   RepIrs: 0
   RepPunks: 0
   RepShake: 0
   RepGuard: 0
   timeOfDay: 0
   storyPhase: 0
-  backgroundImage: {fileID: 21300000, guid: b61dd8398c47e8e448443dddb58594e9, type: 3}
+  backgroundImage: {fileID: 0}
   foregroundImage: {fileID: 0}
-  foregroundImage2: {fileID: 21300000, guid: e3169fcbf4dfa1848a550c64d0810ce8, type: 3}
+  foregroundImage2: {fileID: 0}
   foregroundImage3: {fileID: 0}
   foregroundImage4: {fileID: 0}
-  cardText: "The guard escorts you back towards your cell. The Freddie\u2019s footsteps
-    grow fainter. The guard speaks.\r\n\u201DAlmost twenty years and now he\u2019s
-    finally out. Too bad Freddie ain\u2019t going to survive in the outside world.
-    It ain\u2019t like he remembers it anymore. I\u2019m willing to bet twenty bucks
-    that after four weeks he\u2019ll be back here like nothing\u2019s changed.\u201D\r"
+  cardText: 
   endCard: 0
   repeatable: 0
-  OptionsOn: 0
-  Option1On: 0
+  OptionsOn: 1
+  Option1On: 1
   option1ReqSwitches: 
   option1text: 
   option1IrsReputation: 0
@@ -40,7 +36,7 @@ MonoBehaviour:
   option1GuardReputation: 0
   option1ObtainedSwitches: 
   option1FollowCard: {fileID: 0}
-  Option2On: 0
+  Option2On: 1
   option2ReqSwitches: 
   option2text: 
   option2IrsReputation: 0
@@ -49,7 +45,7 @@ MonoBehaviour:
   option2GuardReputation: 0
   option2ObtainedSwitches: 
   option2FollowCard: {fileID: 0}
-  Option3On: 0
+  Option3On: 1
   option3ReqSwitches: 
   option3text: 
   option3IrsReputation: 0
@@ -66,4 +62,4 @@ MonoBehaviour:
   option4ShakeReputation: 0
   option4GuardReputation: 0
   option4ObtainedSwitches: 
-  option4FollowCard: {fileID: 11400000, guid: 7e5b833f2143912418eb4fa0d214f13d, type: 2}
+  option4FollowCard: {fileID: 0}
