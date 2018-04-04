@@ -9,9 +9,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: Card10
+  m_Name: Card8
   m_EditorClassIdentifier: 
-  Switches: 
+  requiredSwitches: 
   RepIrs: 0
   RepPunks: 0
   RepShake: 0
@@ -29,7 +29,7 @@ MonoBehaviour:
   repeatable: 0
   OptionsOn: 1
   Option1On: 1
-  option1ReqSwitches: 
+  option1ReqSwitches: 01000000
   option1text: 'Intervene '
   option1IrsReputation: 0
   option1PunkReputation: 0
@@ -38,7 +38,7 @@ MonoBehaviour:
   option1ObtainedSwitches: 
   option1FollowCard: {fileID: 11400000, guid: f9564b106dd31da40af5d0787d70c836, type: 2}
   Option2On: 1
-  option2ReqSwitches: 
+  option2ReqSwitches: 02000000
   option2text: Stay out of it
   option2IrsReputation: 0
   option2PunkReputation: 0

@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
   m_Name: Card5
   m_EditorClassIdentifier: 
-  Switches: 
+  requiredSwitches: 
   RepIrs: 0
   RepPunks: 0
   RepShake: 0
@@ -39,7 +39,7 @@ MonoBehaviour:
   option1ObtainedSwitches: 
   option1FollowCard: {fileID: 0}
   Option2On: 1
-  option2ReqSwitches: 
+  option2ReqSwitches: 01000000
   option2text: 'Top bunk '
   option2IrsReputation: 0
   option2PunkReputation: 0
@@ -48,7 +48,7 @@ MonoBehaviour:
   option2ObtainedSwitches: 
   option2FollowCard: {fileID: 11400000, guid: ace9fa9467e953245985a29fcfc72700, type: 2}
   Option3On: 1
-  option3ReqSwitches: 
+  option3ReqSwitches: 02000000
   option3text: Bottom bunk
   option3IrsReputation: 0
   option3PunkReputation: 0

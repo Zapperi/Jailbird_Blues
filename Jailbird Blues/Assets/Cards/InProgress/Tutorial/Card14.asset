@@ -9,9 +9,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: Card22
+  m_Name: Card14
   m_EditorClassIdentifier: 
-  Switches: 
+  requiredSwitches: 
   RepIrs: 0
   RepPunks: 0
   RepShake: 0
@@ -65,4 +65,4 @@ MonoBehaviour:
   option4ShakeReputation: 0
   option4GuardReputation: 0
   option4ObtainedSwitches: 
-  option4FollowCard: {fileID: 11400000, guid: 4c024c5fb01ea0a4d8512b3c696f01b8, type: 2}
+  option4FollowCard: {fileID: 0}

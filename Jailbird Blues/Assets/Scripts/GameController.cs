@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameController : MonoBehaviour {
 
 	public static GameController gameController;									//a reference to the gamecontroller
+    public CardValues cardValues;
 
     private bool addToDeck;                                                         //Used to track if card can be added
     public int punksRep;															//the players reputation among the Punks
@@ -281,6 +282,170 @@ public class GameController : MonoBehaviour {
                 }
             }
             
+        }
+    }
+    //checks if player has required switches for that option
+    public bool Check1Switches()
+    {
+        if (currentCard.option1ReqSwitches.Count > 0)
+        {
+            for (int i = 0; i < currentCard.option1ReqSwitches.Count; i++)
+            {
+                if (allSwitches[currentCard.option1ReqSwitches[i]] == true)
+                {
+                    continue;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+    //checks if player has required switches for that option
+    public bool Check2Switches()
+    {
+        if (currentCard.option2ReqSwitches.Count > 0)
+        {
+            for (int i = 0; i < currentCard.option2ReqSwitches.Count; i++)
+            {
+                if (allSwitches[currentCard.option2ReqSwitches[i]] == true)
+                {
+                    continue;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+    //checks if player has required switches for that option
+    public bool Check3Switches()
+    {
+        if (currentCard.option3ReqSwitches.Count > 0)
+        {
+            for (int i = 0; i < currentCard.option3ReqSwitches.Count; i++)
+            {
+                if (allSwitches[currentCard.option3ReqSwitches[i]] == true)
+                {
+                    continue;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+    //checks if player has required switches for that option
+    public bool Check4Switches()
+    {
+        if (currentCard.option4ReqSwitches.Count > 0)
+        {
+            for (int i = 0; i < currentCard.option4ReqSwitches.Count; i++)
+            {
+                if (allSwitches[currentCard.option4ReqSwitches[i]] == true)
+                {
+                    continue;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+    //Adds switches from that opinion to allswitched[]
+    public void Add1Switches()
+    {
+        if (currentCard.option1ObtainedSwitches.Count > 0)
+        {
+            for (int i = 0; i < currentCard.option1ObtainedSwitches.Count; i++)
+            {
+                allSwitches[currentCard.option1ObtainedSwitches[i]] = true;
+            }
+        }
+    }
+    //Adds switches from that opinion to allswitched[]
+    public void Add2Switches()
+    {
+        if (currentCard.option2ObtainedSwitches.Count > 0)
+        {
+            for (int i = 0; i < currentCard.option2ObtainedSwitches.Count; i++)
+            {
+                allSwitches[currentCard.option2ObtainedSwitches[i]] = true;
+            }
+        }
+    }
+    //Adds switches from that opinion to allswitched[]
+    public void Add3Switches()
+    {
+        if (currentCard.option2ObtainedSwitches.Count > 0)
+        {
+            for (int i = 0; i < currentCard.option3ObtainedSwitches.Count; i++)
+            {
+                allSwitches[currentCard.option3ObtainedSwitches[i]] = true;
+            }
+        }
+    }
+    //Adds switches from that opinion to allswitched[]
+    public void Add4Switches()
+    {
+        if (currentCard.option4ObtainedSwitches.Count > 0)
+        {
+            for (int i = 0; i < currentCard.option4ObtainedSwitches.Count; i++)
+            {
+                allSwitches[currentCard.option4ObtainedSwitches[i]] = true;
+            }
+        }
+    }
+    //Removes switches from allswitched[]
+    public void Remove1Switches()
+    {
+        if (currentCard.option1RemovedSwitches.Count > 0)
+        {
+            for (int i = 0; i < currentCard.option1RemovedSwitches.Count; i++)
+            {
+                allSwitches[currentCard.option1RemovedSwitches[i]] = false;
+            }
+        }
+    }
+    //Removes switches from allswitched[]
+    public void Remove2Switches()
+    {
+        if (currentCard.option2RemovedSwitches.Count > 0)
+        {
+            for (int i = 0; i < currentCard.option2RemovedSwitches.Count; i++)
+            {
+                allSwitches[currentCard.option2RemovedSwitches[i]] = false;
+            }
+        }
+    }
+    //Removes switches from allswitched[]
+    public void Remove3Switches()
+    {
+        if (currentCard.option3RemovedSwitches.Count > 0)
+        {
+            for (int i = 0; i < currentCard.option3RemovedSwitches.Count; i++)
+            {
+                allSwitches[currentCard.option3RemovedSwitches[i]] = false;
+            }
+        }
+    }
+    //Removes switches from allswitched[]
+    public void Remove4Switches()
+    {
+        if (currentCard.option4RemovedSwitches.Count > 0)
+        {
+            for (int i = 0; i < currentCard.option4RemovedSwitches.Count; i++)
+            {
+                allSwitches[currentCard.option4RemovedSwitches[i]] = false;
+            }
         }
     }
 
