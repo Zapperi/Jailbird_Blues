@@ -560,11 +560,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 82732119072834322, guid: a5ca0da45ae9cf94f8ba95b70b239f82,
-        type: 2}
-      propertyPath: spreadCustomCurve.m_RotationOrder
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a5ca0da45ae9cf94f8ba95b70b239f82, type: 2}
   m_IsPrefabParent: 0
@@ -734,11 +729,11 @@ Prefab:
     - target: {fileID: 224819880244600206, guid: 86716c302e616714281481b1f42b3e51,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 396
       objectReference: {fileID: 0}
     - target: {fileID: 1859448372566048, guid: 86716c302e616714281481b1f42b3e51, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114511238453803294, guid: 86716c302e616714281481b1f42b3e51,
         type: 2}

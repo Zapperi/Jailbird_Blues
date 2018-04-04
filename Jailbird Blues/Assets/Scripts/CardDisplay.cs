@@ -7,6 +7,7 @@ public class CardDisplay : MonoBehaviour
 {
     // --CARD VARIABLES--
     public CardValues card;
+    private CardValues previousCard;
     public Text cardText;
     public Text button1text;
     public Text button2text;
@@ -27,7 +28,10 @@ public class CardDisplay : MonoBehaviour
     public Image fadeImage;
     public float fadeSpeed = 0.25f;         // set how fast the overlaying image fades in and out.
     public GameObject noteBook;
-    public float textScrollSpeed;
+    public float textScrollSpeed;           // Used to control the speed of TypeText coroutine (text speed)
+    //private bool coroutineRunning;
+    private IEnumerator typeTextCoroutine;  // create coroutine variable, for stopping and starting.
+
 
     void Start()
     {
@@ -35,13 +39,12 @@ public class CardDisplay : MonoBehaviour
         buttonNoteBook.onClick.RemoveAllListeners();                // Make sure all buttons have default values
         buttonNoteBooktext.text = "NoteBook";
         buttonNoteBook.onClick.AddListener(buttonNotebookPressed);  // Connect notebook to it's button
-        StopAllCoroutines();
-        StartCoroutine(TypeText(card.cardText));
+        typeTextCoroutine = TypeText(card.cardText);                // Make sure the text scroll coroutine has something in it
+        StartCoroutine(typeTextCoroutine);                          // Start TypeText coroutine as game opens
 
     }
     void Update()
     {
-
         card = GameController.gameController.currentCard;           // Update the current to a new one
         
         // Update the card images from the current card
@@ -122,14 +125,15 @@ public class CardDisplay : MonoBehaviour
     void button1pressed()
     {
         if (card.option1FollowCard)                                                // If card is not a result card, do this..
-        {     
+        {
+            StopCoroutine(typeTextCoroutine);                                   // Stop ongoing coroutine, so they won't mix up
             StartCoroutine(FadeImage(fadeSpeed));                               // Fade in and out a overlay image and update card values under it.
             //Update the reputation values in gameController with current card values.
             GameController.gameController.UpdateReputations(card.option1IrsReputation, card.option1PunkReputation, card.option1ShakeReputation, card.option1GuardReputation);
             GameController.gameController.currentCard = card.option1FollowCard; // Update the next card into given card in gameController.
             card = card.option1FollowCard;                                      // Update the next card into given in cardDisplay.                                                         
-            StopCoroutine(TypeText(card.cardText));
-            StartCoroutine(TypeText(card.cardText));
+            typeTextCoroutine = TypeText(card.cardText);                        // Update the text from new card
+            StartCoroutine(typeTextCoroutine);                                  // Start printing the new text
         }
         else
         {                                                                       //If card is a result card, do this..
@@ -141,12 +145,13 @@ public class CardDisplay : MonoBehaviour
     {
         if (card.option2FollowCard)
         {
+            StopCoroutine(typeTextCoroutine);
             StartCoroutine(FadeImage(fadeSpeed));
             GameController.gameController.UpdateReputations(card.option2IrsReputation, card.option2PunkReputation, card.option2ShakeReputation, card.option2GuardReputation);
-            GameController.gameController.currentCard = card.option2FollowCard;         
+            GameController.gameController.currentCard = card.option2FollowCard;
             card = card.option2FollowCard;
-            StopCoroutine(TypeText(card.cardText));
-            StartCoroutine(TypeText(card.cardText));
+            typeTextCoroutine = TypeText(card.cardText);
+            StartCoroutine(typeTextCoroutine);
         }
         else {
             GameController.gameController.UpdateReputations(card.option2IrsReputation, card.option2PunkReputation, card.option2ShakeReputation, card.option2GuardReputation);
@@ -156,12 +161,13 @@ public class CardDisplay : MonoBehaviour
     {
         if (card.option3FollowCard)
         {
+            StopCoroutine(typeTextCoroutine);
             StartCoroutine(FadeImage(fadeSpeed));
             GameController.gameController.UpdateReputations(card.option3IrsReputation, card.option3PunkReputation, card.option3ShakeReputation, card.option3GuardReputation);
             GameController.gameController.currentCard = card.option3FollowCard;
             card = card.option3FollowCard;
-            StopCoroutine(TypeText(card.cardText));
-            StartCoroutine(TypeText(card.cardText));
+            typeTextCoroutine = TypeText(card.cardText);
+            StartCoroutine(typeTextCoroutine);
         }
         else {
             GameController.gameController.UpdateReputations(card.option3IrsReputation, card.option3PunkReputation, card.option3ShakeReputation, card.option3GuardReputation);
@@ -169,14 +175,17 @@ public class CardDisplay : MonoBehaviour
     }
     void button4pressed()
     {
+        
+        //StopAllCoroutines();
         if (card.option4FollowCard)
         {
+            StopCoroutine(typeTextCoroutine);            
             StartCoroutine(FadeImage(fadeSpeed));
             GameController.gameController.UpdateReputations(card.option4IrsReputation, card.option4PunkReputation, card.option4ShakeReputation, card.option4GuardReputation);
-            GameController.gameController.currentCard = card.option4FollowCard; 
+            GameController.gameController.currentCard = card.option4FollowCard;
             card = card.option4FollowCard;
-            StopCoroutine(TypeText(card.cardText));
-            StartCoroutine(TypeText(card.cardText));
+            typeTextCoroutine = TypeText(card.cardText);
+            StartCoroutine(typeTextCoroutine);
         }
         
         else if (card.endCard == true)                              // If the card is an end card (ends the event), do this..
@@ -218,13 +227,19 @@ public class CardDisplay : MonoBehaviour
             fadeImage.gameObject.SetActive(false);                      // Disable the overlaying image when fade in & out is completed.
     }
 
+    // Coroutine for printing the card text letter by letter. Takes a text to print as parameter.
     IEnumerator TypeText(string textToType)
     {
-        cardText.text = "";
-        foreach (char letter in textToType.ToCharArray())
+        cardText.text = "";                                     // Start with empty text
+        foreach (char letter in textToType.ToCharArray())       // Go through the given text and print it letter by letter 
         {
+            if (Input.GetMouseButtonDown(0))                    // If left mouse button is pressed while the text is printing...
+            {
+                cardText.text = card.cardText;                  // Instantly print all of the text
+                break;                                          // Break out of the foreach loop, ending the coroutine
+            }
             cardText.text += letter;
-            yield return textScrollSpeed;
+            yield return new WaitForSeconds(textScrollSpeed);   // Control the speed, 0 = by framerate                   
         }
     }
 }

@@ -11,9 +11,9 @@ using UnityEditor;
 public class CustomCardValuesInspector : Editor                 //We are using Editor, not MonoBehaviour
 {
     private bool temp;
-    private bool customInspector = true;
-    private bool showInformation = false;
-    private bool showRequirements = false;
+    private bool customInspector = false;
+    private bool showInformation = true;
+    private bool showRequirements = true;
     private int addedInt;
     CardValues cd;                                              //Short reference to CardValues
     private string saveOption4String;                           //Used to save option 4 textstring for later use
@@ -42,8 +42,8 @@ public class CustomCardValuesInspector : Editor                 //We are using E
         cd.OptionsOn = GUILayout.Toggle(cd.OptionsOn, "Toggle all options");
         if (cd.OptionsOn)                                       //If options are toggled on...
         {
-            if (cd.option4text.Contains("Continue..."))             //Replaces the option 4 text with previously saved string
-                cd.option4text = saveOption4String;
+            //if (cd.option4text.Contains("Continue..."))             //Replaces the option 4 text with previously saved string
+            //    cd.option4text = saveOption4String;
         }
         else                                                    //If Options are toggled off..
         {
