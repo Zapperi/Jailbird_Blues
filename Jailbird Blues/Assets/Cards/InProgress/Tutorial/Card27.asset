@@ -18,8 +18,11 @@ MonoBehaviour:
   RepGuard: 0
   timeOfDay: 0
   storyPhase: 0
-  backgroundImage: {fileID: 0}
+  backgroundImage: {fileID: 21300000, guid: 131dee0c67f126347b72cba445163453, type: 3}
   foregroundImage: {fileID: 0}
+  foregroundImage2: {fileID: 21300000, guid: 7fcdd60484f739f4f8c652e08315d91f, type: 3}
+  foregroundImage3: {fileID: 0}
+  foregroundImage4: {fileID: 0}
   cardText: "You interrupt a rowdy and noisy conversation about the merits of cottage
     cheese and protein quark. Before you can even sit down at the table one Protein
     shaker goon lifts you up and throws you away on the ground. It\u2019s hilarious
@@ -28,30 +31,38 @@ MonoBehaviour:
   repeatable: 0
   OptionsOn: 0
   Option1On: 0
-  option1: 
+  option1ReqSwitches: 
+  option1text: 
   option1IrsReputation: 0
   option1PunkReputation: 0
   option1ShakeReputation: 0
   option1GuardReputation: 0
+  option1ObtainedSwitches: 
   option1FollowCard: {fileID: 0}
   Option2On: 0
-  option2: 
+  option2ReqSwitches: 
+  option2text: 
   option2IrsReputation: 0
   option2PunkReputation: 0
   option2ShakeReputation: 0
   option2GuardReputation: 0
+  option2ObtainedSwitches: 
   option2FollowCard: {fileID: 0}
   Option3On: 0
-  option3: 
+  option3ReqSwitches: 
+  option3text: 
   option3IrsReputation: 0
   option3PunkReputation: 0
   option3ShakeReputation: 0
   option3GuardReputation: 0
+  option3ObtainedSwitches: 
   option3FollowCard: {fileID: 0}
   Option4On: 1
-  option4: 
+  option4ReqSwitches: 
+  option4text: 
   option4IrsReputation: 0
   option4PunkReputation: 0
   option4ShakeReputation: 0
   option4GuardReputation: 0
+  option4ObtainedSwitches: 
   option4FollowCard: {fileID: 11400000, guid: 49b7d614925f4f645ac5e164a6a75217, type: 2}

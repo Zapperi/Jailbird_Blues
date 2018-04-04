@@ -5,66 +5,89 @@ using UnityEngine.UI;
 
 public class CardDisplay : MonoBehaviour
 {
-
+    // --CARD VARIABLES--
     public CardValues card;
-
     public Text cardText;
     public Text button1text;
     public Text button2text;
     public Text button3text;
     public Text button4text;
     public Text buttonNoteBooktext;
-    public Text location;
+    public Text location;               // name of the location where the event is, for example "Yard"
     public Button button1;
     public Button button2;
     public Button button3;
     public Button button4;
     public Button buttonNoteBook;
-    public Sprite background;
-    public Sprite npc;
+    public Image background;
+    public Image foregroundImage1;
+    public Image foregroundImage2;
+    public Image foregroundImage3;
+    public Image foregroundImage4;
     public Image fadeImage;
-    public float fadeSpeed = 0.25f;
+    public float fadeSpeed = 0.25f;         // set how fast the overlaying image fades in and out.
     public GameObject noteBook;
+
 
     void Start()
     {
-        fadeImage.gameObject.SetActive(false);
-        buttonNoteBook.onClick.RemoveAllListeners();
+        fadeImage.gameObject.SetActive(false);                      // At start, set the overlaiyng fade image to disabled
+        buttonNoteBook.onClick.RemoveAllListeners();                // Make sure all buttons have default values
         buttonNoteBooktext.text = "NoteBook";
-        buttonNoteBook.onClick.AddListener(buttonNotebookPressed);
+        buttonNoteBook.onClick.AddListener(buttonNotebookPressed);  // Connect notebook to it's button
 
 
     }
     void Update()
     {
 
-        card = GameController.gameController.currentCard;
-
+        card = GameController.gameController.currentCard;           // Update the current to a new one
         
+        // Update the card images from the current card
+        background.sprite = card.backgroundImage;                   
+        foregroundImage1.sprite = card.foregroundImage;
+        foregroundImage2.sprite = card.foregroundImage2;
+        foregroundImage3.sprite = card.foregroundImage3;
+        foregroundImage4.sprite = card.foregroundImage4;
         
-
+        // IF there is no image, hide the field. Otherwise show the new image
+        if (!foregroundImage1.sprite)
+            foregroundImage1.gameObject.SetActive(false);
+        else
+            foregroundImage1.gameObject.SetActive(true);
+        if (!foregroundImage2.sprite)
+            foregroundImage2.gameObject.SetActive(false);
+        else
+            foregroundImage2.gameObject.SetActive(true);
+        if (!foregroundImage3.sprite)
+            foregroundImage3.gameObject.SetActive(false);
+        else
+            foregroundImage3.gameObject.SetActive(true);
+        if (!foregroundImage4.sprite)
+            foregroundImage4.gameObject.SetActive(false);
+        else
+            foregroundImage4.gameObject.SetActive(true);
+        
         //Replace any \n in card's text string with line break
         cardText.text = card.cardText.Replace("\\n", "\n");
 
         //Update options's texts to current ones
-        button1text.text = card.option1;
-        button2text.text = card.option2;
-        button3text.text = card.option3;
-        button4text.text = card.option4;
+        button1text.text = card.option1text;
+        button2text.text = card.option2text;
+        button3text.text = card.option3text;
+        button4text.text = card.option4text;
         
-
         //Update current button functions
-        button1.onClick.RemoveAllListeners();
+        button1.onClick.RemoveAllListeners();           // Make sure to remove old functions before adding new ones..
         button2.onClick.RemoveAllListeners();
         button3.onClick.RemoveAllListeners();
         button4.onClick.RemoveAllListeners();
-        button1.onClick.AddListener(button1pressed);
+        button1.onClick.AddListener(button1pressed);    // ..Add new button functions with updated parameters
         button2.onClick.AddListener(button2pressed);
         button3.onClick.AddListener(button3pressed);
         button4.onClick.AddListener(button4pressed);
         
-
-        //Check if card is result card, if so, leave last button active and set the text.
+        //Check if card is a result card, if so, leave last button active and set the text.
         if (card.OptionsOn == false)
         {
             card.Option1On = false;
@@ -73,67 +96,45 @@ public class CardDisplay : MonoBehaviour
             card.Option4On = true;
             button4text.text = "Continue...";
         }
+
         //Activate the button gameobjects when needed, hide otherwise.
         if (card.Option1On == true)
-        {
             button1.gameObject.SetActive(true);
-        }
         else
-        {
             button1.gameObject.SetActive(false);
-        }
-
         if (card.Option2On == true)
-        {
             button2.gameObject.SetActive(true);
-        }
         else
-        {
             button2.gameObject.SetActive(false);
-        }
-
         if (card.Option3On == true)
-        {
             button3.gameObject.SetActive(true);
-        }
         else
-        {
             button3.gameObject.SetActive(false);
-        }
-
         if (card.Option4On == true)
-        {
             button4.gameObject.SetActive(true);
-        }
         else
-        {
             button4.gameObject.SetActive(false);
-        }
     }
 
-
-    //--Button functions--
-    //All the magic happens here~
+    //--BUTTON FUNCTIONS--
     void button1pressed()
     {
-        //If card is not a result card, do this..
-        if (card.option1FollowCard)
+        if (card.option1FollowCard)                                                // If card is not a result card, do this..
         {     
-            StartCoroutine(FadeImage(fadeSpeed));
+            StartCoroutine(FadeImage(fadeSpeed));                               // Fade in and out a overlay image and update card values under it.
             //Update the reputation values in gameController with current card values.
             GameController.gameController.UpdateReputations(card.option1IrsReputation, card.option1PunkReputation, card.option1ShakeReputation, card.option1GuardReputation);
-            //Setup the result card.
-            GameController.gameController.currentCard = card.option1FollowCard;
-            card = card.option1FollowCard;            
+            GameController.gameController.currentCard = card.option1FollowCard; // Update the next card into given card in gameController.
+            card = card.option1FollowCard;                                      // Update the next card into given in cardDisplay.                                                         
         }
-        else {
+        else
+        {                                                                       //If card is a result card, do this..
+            //Update the reputation values in gameController with current card values.
             GameController.gameController.UpdateReputations(card.option1IrsReputation, card.option1PunkReputation, card.option1ShakeReputation, card.option1GuardReputation);
         }
-        //If card is a result card, do this..
     }
     void button2pressed()
     {
-        //If card is not a result card, do this..
         if (card.option2FollowCard)
         {
             StartCoroutine(FadeImage(fadeSpeed));
@@ -144,11 +145,9 @@ public class CardDisplay : MonoBehaviour
         else {
             GameController.gameController.UpdateReputations(card.option2IrsReputation, card.option2PunkReputation, card.option2ShakeReputation, card.option2GuardReputation);
         }
-        //If card is a result card, do this..
     }
     void button3pressed()
     {
-        //If card is not a result card, do this..
         if (card.option3FollowCard)
         {
             StartCoroutine(FadeImage(fadeSpeed));
@@ -159,12 +158,9 @@ public class CardDisplay : MonoBehaviour
         else {
             GameController.gameController.UpdateReputations(card.option3IrsReputation, card.option3PunkReputation, card.option3ShakeReputation, card.option3GuardReputation);
         }
-        //If card is a result card, do this..
     }
     void button4pressed()
     {
-
-        //If card is not a result card, do this..
         if (card.option4FollowCard)
         {
             StartCoroutine(FadeImage(fadeSpeed));
@@ -173,47 +169,43 @@ public class CardDisplay : MonoBehaviour
             card = card.option4FollowCard;
         }
         
-        else if (card.endCard == true)
+        else if (card.endCard == true)                              // If the card is an end card (ends the event), do this..
         {
             GameController.gameController.UpdateReputations(card.option4IrsReputation, card.option4PunkReputation, card.option4ShakeReputation, card.option4GuardReputation);
-            GameController.gameController.endcardOn = true;
+            GameController.gameController.endcardOn = true;         // Update the boolean, ending the event. 
            
         }
-        
-        //If card is a result card, do this..
-    }
-    void buttonNotebookPressed()
-    {
-        if (noteBook.gameObject.activeSelf == false)
-        {
-            noteBook.gameObject.SetActive(true);
-            
-        }
-        else
-        {
-            noteBook.gameObject.SetActive(false);
-            
-        }
-         
     }
 
-    //Coroutine for image fade between cards, takes in time (float) as parameter
+    // Notebook button
+    void buttonNotebookPressed()
+    {
+        if (noteBook.gameObject.activeSelf == false)                // If notebook is not active, set it to enabled.
+        {
+            noteBook.gameObject.SetActive(true);
+            noteBook.GetComponent<NoteBook>().UpdateNotebook();
+        }
+        else
+            noteBook.gameObject.SetActive(false);                   // If notebook is active, set it to disabled.
+    }
+
+    // Coroutine for image fade between cards, takes in time (float) as parameter.
     IEnumerator FadeImage(float time)                                       
     {
-        fadeImage.gameObject.SetActive(true);                           //Activate the overlaying image
+        fadeImage.gameObject.SetActive(true);                           // Enable the overlaying image.
         // fade from transparent to opaque
-        for (float i = 0; i <= time; i += Time.deltaTime)               // loop over time second
+        for (float i = 0; i <= time; i += Time.deltaTime)               // Loop over "time" seconds.
         {
-            fadeImage.color = new Color(0.25f, 0.25f, 0.25f, i);        // set color with i as alpha
-            yield return null;                                          // Continue coroutine
+            fadeImage.color = new Color(0.25f, 0.25f, 0.25f, i);        // Set color with "i" as the alpha value.
+            yield return null;                                          // Continue coroutine.
         }
         // fade from opaque to transparent
-        for (float i = time; i >= 0; i -= Time.deltaTime)               // loop over time second backwards
+        for (float i = time; i >= 0; i -= Time.deltaTime)               // Loop over "time" seconds backwards.
         {
-                fadeImage.color = new Color(0.25f, 0.25f, 0.25f, i);    // set color with i as alpha
-            yield return null;                                          // Continue coroutine
+                fadeImage.color = new Color(0.25f, 0.25f, 0.25f, i);    // Set color with "i" as the alpha value.
+            yield return null;                                          // Continue coroutine.
         }
-            fadeImage.gameObject.SetActive(false);                      //Deactivate the overlaying image
+            fadeImage.gameObject.SetActive(false);                      // Disable the overlaying image when fade in & out is completed.
     }
 }
 

@@ -18,8 +18,11 @@ MonoBehaviour:
   RepGuard: 0
   timeOfDay: 0
   storyPhase: 0
-  backgroundImage: {fileID: 0}
-  foregroundImage: {fileID: 0}
+  backgroundImage: {fileID: 21300000, guid: 131dee0c67f126347b72cba445163453, type: 3}
+  foregroundImage: {fileID: 21300000, guid: 99808a1fc3777a24ba3fe07077fdbc7e, type: 3}
+  foregroundImage2: {fileID: 0}
+  foregroundImage3: {fileID: 0}
+  foregroundImage4: {fileID: 0}
   cardText: "\u201DSometimes they have nice sounding ideas, but desperate and disturbed
     people also gravitate towards them. To stand out you have undermine the authority
     of this place. Don\u2019t worry about the food. I have plenty to share. I\u2019m
@@ -28,30 +31,38 @@ MonoBehaviour:
   repeatable: 0
   OptionsOn: 0
   Option1On: 0
-  option1: 
+  option1ReqSwitches: 
+  option1text: 
   option1IrsReputation: 0
   option1PunkReputation: 0
   option1ShakeReputation: 0
   option1GuardReputation: 0
+  option1ObtainedSwitches: 
   option1FollowCard: {fileID: 0}
   Option2On: 0
-  option2: 
+  option2ReqSwitches: 
+  option2text: 
   option2IrsReputation: 0
   option2PunkReputation: 0
   option2ShakeReputation: 0
   option2GuardReputation: 0
+  option2ObtainedSwitches: 
   option2FollowCard: {fileID: 0}
   Option3On: 0
-  option3: 
+  option3ReqSwitches: 
+  option3text: 
   option3IrsReputation: 0
   option3PunkReputation: 0
   option3ShakeReputation: 0
   option3GuardReputation: 0
+  option3ObtainedSwitches: 
   option3FollowCard: {fileID: 0}
   Option4On: 1
-  option4: 
+  option4ReqSwitches: 
+  option4text: 
   option4IrsReputation: 0
   option4PunkReputation: 0
   option4ShakeReputation: 0
   option4GuardReputation: 0
+  option4ObtainedSwitches: 
   option4FollowCard: {fileID: 11400000, guid: b6cefcc4e82dc1f4ba97cd31c8581168, type: 2}

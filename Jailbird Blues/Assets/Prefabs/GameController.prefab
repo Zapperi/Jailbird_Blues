@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4985295824015644}
   - component: {fileID: 114743166947194950}
+  - component: {fileID: 82732119072834322}
   m_Layer: 0
   m_Name: GameController
   m_TagString: GameController
@@ -40,6 +41,86 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &82732119072834322
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1741034904424950}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 7eea11dbcecd56a43ade0ca1a2990976, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.502
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!114 &114743166947194950
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -51,3 +132,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae57894b462750541b777f140cd81dc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  punksRep: 0
+  irsRep: 0
+  shakersRep: 0
+  guardsRep: 0
+  day: 0
+  schedule: 0
+  allSwitches: 010001
+  allCards:
+  - {fileID: 11400000, guid: df8b44972028d46488f142889f271dd9, type: 2}
+  - {fileID: 11400000, guid: 531d898ff3ada9d48a891bc947b764d7, type: 2}
+  - {fileID: 11400000, guid: e28bfd2cefaf6454c9b3af80dd235cda, type: 2}
+  - {fileID: 11400000, guid: 2c4b19502e30c804a8662649b4b5c8eb, type: 2}
+  yardCards: []
+  messCards: []
+  workshopCards: []
+  cellCards: []
+  currentCard: {fileID: 11400000, guid: 2c4b19502e30c804a8662649b4b5c8eb, type: 2}
+  endcardOn: 0

@@ -20,36 +20,47 @@ MonoBehaviour:
   storyPhase: 0
   backgroundImage: {fileID: 0}
   foregroundImage: {fileID: 0}
+  foregroundImage2: {fileID: 0}
+  foregroundImage3: {fileID: 0}
+  foregroundImage4: {fileID: 0}
   cardText: A member of the IRS taps your shoulder. "You don't happen to have any
     cigarettes on you? I could really use some right now"
   endCard: 0
   repeatable: 1
   OptionsOn: 1
   Option1On: 0
-  option1: 
+  option1ReqSwitches: 
+  option1text: 
   option1IrsReputation: 0
   option1PunkReputation: 0
   option1ShakeReputation: 0
   option1GuardReputation: 0
+  option1ObtainedSwitches: 
   option1FollowCard: {fileID: 0}
   Option2On: 1
-  option2: give the cigarettes
+  option2ReqSwitches: 
+  option2text: give the cigarettes
   option2IrsReputation: 3
   option2PunkReputation: 0
   option2ShakeReputation: 0
   option2GuardReputation: -2
+  option2ObtainedSwitches: 
   option2FollowCard: {fileID: 11400000, guid: 05f986096e55ee44394cb3ed353d1a74, type: 2}
   Option3On: 1
-  option3: '"Sorry I got nothing"'
+  option3ReqSwitches: 
+  option3text: '"Sorry I got nothing"'
   option3IrsReputation: -1
   option3PunkReputation: 0
   option3ShakeReputation: 0
   option3GuardReputation: 1
+  option3ObtainedSwitches: 
   option3FollowCard: {fileID: 11400000, guid: 7cc263015318169428fe5d9d9dba3b05, type: 2}
   Option4On: 0
-  option4: 
+  option4ReqSwitches: 
+  option4text: 
   option4IrsReputation: 0
   option4PunkReputation: 0
   option4ShakeReputation: 0
   option4GuardReputation: 0
+  option4ObtainedSwitches: 
   option4FollowCard: {fileID: 0}

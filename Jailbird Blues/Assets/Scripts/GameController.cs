@@ -26,17 +26,21 @@ public class GameController : MonoBehaviour {
     public bool endcardOn;
 	void Awake()																	//when the game starts
 	{
-        //Debug testing starts
-        allSwitches[0] = true;
-        allSwitches[1] = false;
-        allSwitches[2] = true;
-        BuildDeck(cellCards);
-        BuildDeck(yardCards);
-        //Debuggin ends
+        //// --FOR DEBUGGIN, REMOVE BEFORE BUILD!--
+        ////Debug testing starts
+        //allSwitches[0] = true;
+        //allSwitches[1] = false;
+        //allSwitches[2] = true;
+        //BuildDeck(cellCards);
+        //BuildDeck(yardCards);
+        ////Debuggin ends
 
 
         if (gameController == null)													//if there is no gamecontroller
 		{
+            //// !! DISABLED FOR DEBUGGIN !!
+            //for (int i = 0; i < allSwitches.Count; i++)                             // At the start of the game, make sure all switches are set to false.
+            //    allSwitches[i] = false;               
 			DontDestroyOnLoad(gameObject);											//the gamecontroller won't reset when switching scenes
 			gameController = this;													//this gamecontroller will be the gamecontroller
 			punksRep = 0;															//player's reputation among factions starts at zero
@@ -125,10 +129,10 @@ public class GameController : MonoBehaviour {
                 if (allCards[i].timeOfDay == 0 && ((allCards[i].RepGuard == 0 && allCards[i].RepIrs == 0 && allCards[i].RepPunks == 0 && allCards[i].RepShake == 0) || (guardsRep > 0 && guardsRep > allCards[i].RepGuard) || (irsRep > 0 && irsRep > allCards[i].RepIrs) || (punksRep > 0 && punksRep > allCards[i].RepPunks) || (shakersRep > 0 && shakersRep > allCards[i].RepShake)))
                 {
                     //Cycles through gameController's switchlist and compares it to the current card's switch requirments..
-                    for (int j = 0; j < allCards[i].Switches.Count; j++)
+                    for (int j = 0; j < allCards[i].requiredSwitches.Count; j++)
                     {
                         //if current card's switch requirment is not found, discard the current card.
-                        if (!allSwitches[allCards[i].Switches[j]])
+                        if (!allSwitches[allCards[i].requiredSwitches[j]])
                         {
                             addToDeck = false;
                             break;
@@ -141,10 +145,10 @@ public class GameController : MonoBehaviour {
                 //Checks the time and negative reputation values, if true..
                 else if (allCards[i].timeOfDay == 0 && ((guardsRep > 0 && guardsRep > allCards[i].RepGuard) || (irsRep > 0 && irsRep > allCards[i].RepIrs) || (punksRep > 0 && punksRep > allCards[i].RepPunks) || (shakersRep > 0 && shakersRep > allCards[i].RepShake)))
                 {
-                    for (int j = 0; j < allCards[i].Switches.Count; j++)
+                    for (int j = 0; j < allCards[i].requiredSwitches.Count; j++)
                     {
                         //if current card's switch requirment is not found, discard the current card.
-                        if (!allSwitches[allCards[i].Switches[j]])
+                        if (!allSwitches[allCards[i].requiredSwitches[j]])
                         {
                             addToDeck = false;
                             break;
@@ -166,10 +170,10 @@ public class GameController : MonoBehaviour {
                 if (allCards[i].timeOfDay == 1 && ((allCards[i].RepGuard == 0 && allCards[i].RepIrs == 0 && allCards[i].RepPunks == 0 && allCards[i].RepShake == 0) || (guardsRep > 0 && guardsRep > allCards[i].RepGuard) || (irsRep > 0 && irsRep > allCards[i].RepIrs) || (punksRep > 0 && punksRep > allCards[i].RepPunks) || (shakersRep > 0 && shakersRep > allCards[i].RepShake)))
                 {
                     //Cycles through gameController's switchlist and compares it to the current card's switch requirments..
-                    for (int j = 0; j < allCards[i].Switches.Count; j++)
+                    for (int j = 0; j < allCards[i].requiredSwitches.Count; j++)
                     {
                         //if current card's switch requirment is not found, discard the current card.
-                        if (!allSwitches[allCards[i].Switches[j]])
+                        if (!allSwitches[allCards[i].requiredSwitches[j]])
                         {
                             addToDeck = false;
                             break;
@@ -182,10 +186,10 @@ public class GameController : MonoBehaviour {
                 //Checks the time and negative reputation values, if true..
                 else if (allCards[i].timeOfDay == 1 && ((guardsRep > 0 && guardsRep > allCards[i].RepGuard) || (irsRep > 0 && irsRep > allCards[i].RepIrs) || (punksRep > 0 && punksRep > allCards[i].RepPunks) || (shakersRep > 0 && shakersRep > allCards[i].RepShake)))
                 {
-                    for (int j = 0; j < allCards[i].Switches.Count; j++)
+                    for (int j = 0; j < allCards[i].requiredSwitches.Count; j++)
                     {
                         //if current card's switch requirment is not found, discard the current card.
-                        if (!allSwitches[allCards[i].Switches[j]])
+                        if (!allSwitches[allCards[i].requiredSwitches[j]])
                         {
                             addToDeck = false;
                             break;
@@ -207,10 +211,10 @@ public class GameController : MonoBehaviour {
                 if (allCards[i].timeOfDay == 2 && ((allCards[i].RepGuard == 0 && allCards[i].RepIrs == 0 && allCards[i].RepPunks == 0 && allCards[i].RepShake == 0) || (guardsRep > 0 && guardsRep > allCards[i].RepGuard) || (irsRep > 0 && irsRep > allCards[i].RepIrs) || (punksRep > 0 && punksRep > allCards[i].RepPunks) || (shakersRep > 0 && shakersRep > allCards[i].RepShake)))
                 {
                     //Cycles through gameController's switchlist and compares it to the current card's switch requirments..
-                    for (int j = 0; j < allCards[i].Switches.Count; j++)
+                    for (int j = 0; j < allCards[i].requiredSwitches.Count; j++)
                     {
                         //if current card's switch requirment is not found, discard the current card.
-                        if (!allSwitches[allCards[i].Switches[j]])
+                        if (!allSwitches[allCards[i].requiredSwitches[j]])
                         {
                             addToDeck = false;
                             break;
@@ -223,10 +227,10 @@ public class GameController : MonoBehaviour {
                 //Checks the time and negative reputation values, if true..
                 else if (allCards[i].timeOfDay == 2 && ((guardsRep > 0 && guardsRep > allCards[i].RepGuard) || (irsRep > 0 && irsRep > allCards[i].RepIrs) || (punksRep > 0 && punksRep > allCards[i].RepPunks) || (shakersRep > 0 && shakersRep > allCards[i].RepShake)))
                 {
-                    for (int j = 0; j < allCards[i].Switches.Count; j++)
+                    for (int j = 0; j < allCards[i].requiredSwitches.Count; j++)
                     {
                         //if current card's switch requirment is not found, discard the current card.
-                        if (!allSwitches[allCards[i].Switches[j]])
+                        if (!allSwitches[allCards[i].requiredSwitches[j]])
                         {
                             addToDeck = false;
                             break;
@@ -246,10 +250,10 @@ public class GameController : MonoBehaviour {
                 if (allCards[i].timeOfDay == 3 && ((allCards[i].RepGuard == 0 && allCards[i].RepIrs == 0 && allCards[i].RepPunks == 0 && allCards[i].RepShake == 0) || (guardsRep > 0 && guardsRep > allCards[i].RepGuard) || (irsRep > 0 && irsRep > allCards[i].RepIrs) || (punksRep > 0 && punksRep > allCards[i].RepPunks) || (shakersRep > 0 && shakersRep > allCards[i].RepShake)))
                 {
                     //Cycles through gameController's switchlist and compares it to the current card's switch requirments..
-                    for (int j = 0; j < allCards[i].Switches.Count; j++)
+                    for (int j = 0; j < allCards[i].requiredSwitches.Count; j++)
                     {
                         //if current card's switch requirment is not found, discard the current card.
-                        if (!allSwitches[allCards[i].Switches[j]])
+                        if (!allSwitches[allCards[i].requiredSwitches[j]])
                         {
                             addToDeck = false;
                             break;
@@ -262,10 +266,10 @@ public class GameController : MonoBehaviour {
                 //Checks the time and negative reputation values, if true..
                 else if (allCards[i].timeOfDay == 3 && ((guardsRep > 0 && guardsRep > allCards[i].RepGuard) || (irsRep > 0 && irsRep > allCards[i].RepIrs) || (punksRep > 0 && punksRep > allCards[i].RepPunks) || (shakersRep > 0 && shakersRep > allCards[i].RepShake)))
                 {
-                    for (int j = 0; j < allCards[i].Switches.Count; j++)
+                    for (int j = 0; j < allCards[i].requiredSwitches.Count; j++)
                     {
                         //if current card's switch requirment is not found, discard the current card.
-                        if (!allSwitches[allCards[i].Switches[j]])
+                        if (!allSwitches[allCards[i].requiredSwitches[j]])
                         {
                             addToDeck = false;
                             break;

@@ -18,8 +18,11 @@ MonoBehaviour:
   RepGuard: 0
   timeOfDay: 0
   storyPhase: 0
-  backgroundImage: {fileID: 0}
+  backgroundImage: {fileID: 21300000, guid: 00dc7612037dcee48b94275dab828f7d, type: 3}
   foregroundImage: {fileID: 0}
+  foregroundImage2: {fileID: 0}
+  foregroundImage3: {fileID: 21300000, guid: 3d812a240ca8123408008bcf29c4d803, type: 3}
+  foregroundImage4: {fileID: 0}
   cardText: "The guard leaves you in your cell and locks the doors. The figure of
     Cyril Kowalski rises from your bunk and measures you with his gaze. He stares
     right in your eyes.\r\n\u201DHi, I\u2019ll be your cellmate. Nice to meet you.
@@ -28,30 +31,38 @@ MonoBehaviour:
   repeatable: 0
   OptionsOn: 1
   Option1On: 1
-  option1: Give him your shoes.
+  option1ReqSwitches: 
+  option1text: Give him your shoes.
   option1IrsReputation: 0
   option1PunkReputation: 0
   option1ShakeReputation: 0
   option1GuardReputation: 0
+  option1ObtainedSwitches: 
   option1FollowCard: {fileID: 11400000, guid: 93a1b16071b71844a96d94a86352439f, type: 2}
   Option2On: 1
-  option2: Decline.
+  option2ReqSwitches: 
+  option2text: 'Decline. '
   option2IrsReputation: 0
   option2PunkReputation: 0
   option2ShakeReputation: 0
   option2GuardReputation: 0
+  option2ObtainedSwitches: 
   option2FollowCard: {fileID: 11400000, guid: a9d71082fc549c24eb4c9da49b4daa13, type: 2}
   Option3On: 1
-  option3: Call the guard.
+  option3ReqSwitches: 
+  option3text: 'Call the guard. '
   option3IrsReputation: 0
   option3PunkReputation: 0
   option3ShakeReputation: 0
   option3GuardReputation: 0
+  option3ObtainedSwitches: 
   option3FollowCard: {fileID: 11400000, guid: b75e54a8029415844bcc8c244fd2c588, type: 2}
   Option4On: 1
-  option4: "Ask: \u201DFor how much?"
+  option4ReqSwitches: 
+  option4text: "Ask: \u201DFor how much?\u201D "
   option4IrsReputation: 0
   option4PunkReputation: 0
   option4ShakeReputation: 0
   option4GuardReputation: 0
+  option4ObtainedSwitches: 
   option4FollowCard: {fileID: 11400000, guid: 0ebe4b8c3ccd7a44283f79581e99378b, type: 2}
