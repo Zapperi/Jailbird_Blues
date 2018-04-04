@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
+  m_Name: Testickle
+  m_EditorClassIdentifier: 
+  Switches: 
+  RepIrs: 0
+  RepPunks: 10
+  RepShake: 0
+  RepGuard: 0
+  timeOfDay: 0
+  storyPhase: 8
+  backgroundImage: {fileID: 0}
+  foregroundImage: {fileID: 0}
+  cardText: asasasasa
+  endCard: 0
+  repeatable: 0
+  OptionsOn: 1
+  Option1On: 1
+  option1: kick
+  option1IrsReputation: 3
+  option1PunkReputation: 0
+  option1ShakeReputation: 0
+  option1GuardReputation: -5
+  option1FollowCard: {fileID: 0}
+  Option2On: 1
+  option2: 
+  option2IrsReputation: 0
+  option2PunkReputation: 0
+  option2ShakeReputation: 0
+  option2GuardReputation: 0
+  option2FollowCard: {fileID: 0}
+  Option3On: 1
+  option3: 
+  option3IrsReputation: 0
+  option3PunkReputation: 0
+  option3ShakeReputation: 0
+  option3GuardReputation: 0
+  option3FollowCard: {fileID: 0}
+  Option4On: 1
+  option4: 
+  option4IrsReputation: 0
+  option4PunkReputation: 0
+  option4ShakeReputation: 0
+  option4GuardReputation: 0
+  option4FollowCard: {fileID: 0}

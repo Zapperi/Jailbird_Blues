@@ -51,7 +51,7 @@ MonoBehaviour:
   Option4On: 1
   option4: 
   option4IrsReputation: 0
-  option4PunkReputation: -1
+  option4PunkReputation: -10
   option4ShakeReputation: 0
-  option4GuardReputation: 1
+  option4GuardReputation: 10
   option4FollowCard: {fileID: 0}
