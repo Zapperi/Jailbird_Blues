@@ -28,7 +28,7 @@ public class CardDisplay : MonoBehaviour
     public Image fadeImage;
     public float fadeSpeed = 0.25f;         // set how fast the overlaying image fades in and out.
     public GameObject noteBook;
-    public float textScrollSpeed;           // Used to control the speed of TypeText coroutine (text speed)
+	public static float textScrollSpeed;           // Used to control the speed of TypeText coroutine (text speed)
     //private bool coroutineRunning;
     private IEnumerator typeTextCoroutine;  // create coroutine variable, for stopping and starting.
 

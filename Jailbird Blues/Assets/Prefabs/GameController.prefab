@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4985295824015644}
   - component: {fileID: 114743166947194950}
   - component: {fileID: 82732119072834322}
+  - component: {fileID: 114852098042609194}
   m_Layer: 0
   m_Name: GameController
   m_TagString: GameController
@@ -151,3 +152,16 @@ MonoBehaviour:
   cellCards: []
   currentCard: {fileID: 11400000, guid: 2c4b19502e30c804a8662649b4b5c8eb, type: 2}
   endcardOn: 0
+--- !u!114 &114852098042609194
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1741034904424950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edc09f75913544f4bac6c99093a7bf65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volume: 0
+  textSpeed: 0
