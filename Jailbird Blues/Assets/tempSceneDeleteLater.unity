@@ -560,22 +560,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114743166947194950, guid: a5ca0da45ae9cf94f8ba95b70b239f82,
-        type: 2}
-      propertyPath: allSwitches.Array.data[0]
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114743166947194950, guid: a5ca0da45ae9cf94f8ba95b70b239f82,
-        type: 2}
-      propertyPath: allSwitches.Array.data[2]
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114743166947194950, guid: a5ca0da45ae9cf94f8ba95b70b239f82,
-        type: 2}
-      propertyPath: currentCard
-      value: 
-      objectReference: {fileID: 11400000, guid: 0e8f516cf45a41c41abf604fb52d72f1,
-        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a5ca0da45ae9cf94f8ba95b70b239f82, type: 2}
   m_IsPrefabParent: 0
@@ -686,11 +670,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 424373023}
     m_Modifications:
-    - target: {fileID: 114511238453803294, guid: 86716c302e616714281481b1f42b3e51,
-        type: 2}
-      propertyPath: logEvents.Array.size
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 4571438724285166, guid: 86716c302e616714281481b1f42b3e51, type: 2}
       propertyPath: m_LocalPosition.x
       value: -347.32
@@ -723,6 +702,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114511238453803294, guid: 86716c302e616714281481b1f42b3e51,
+        type: 2}
+      propertyPath: eventAdder
+      value: 
+      objectReference: {fileID: 1480609032}
     - target: {fileID: 1859448372566048, guid: 86716c302e616714281481b1f42b3e51, type: 2}
       propertyPath: m_Name
       value: Notebook
@@ -751,36 +735,6 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114511238453803294, guid: 86716c302e616714281481b1f42b3e51,
-        type: 2}
-      propertyPath: logEvents.Array.data[0]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114511238453803294, guid: 86716c302e616714281481b1f42b3e51,
-        type: 2}
-      propertyPath: logEvents.Array.data[1]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114511238453803294, guid: 86716c302e616714281481b1f42b3e51,
-        type: 2}
-      propertyPath: logEvents.Array.data[2]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114511238453803294, guid: 86716c302e616714281481b1f42b3e51,
-        type: 2}
-      propertyPath: logEvents.Array.data[3]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114863565282896914, guid: 86716c302e616714281481b1f42b3e51,
-        type: 2}
-      propertyPath: m_ScrollSensitivity
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 114511238453803294, guid: 86716c302e616714281481b1f42b3e51,
-        type: 2}
-      propertyPath: eventAdder
-      value: 
-      objectReference: {fileID: 1480609032}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 86716c302e616714281481b1f42b3e51, type: 2}
   m_IsPrefabParent: 0

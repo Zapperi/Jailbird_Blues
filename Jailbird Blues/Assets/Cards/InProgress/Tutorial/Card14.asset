@@ -33,6 +33,7 @@ MonoBehaviour:
   Option1On: 0
   option1ReqSwitches: 
   option1text: 
+  option1LogText: 
   option1IrsReputation: 0
   option1PunkReputation: 0
   option1ShakeReputation: 0
@@ -43,6 +44,7 @@ MonoBehaviour:
   Option2On: 0
   option2ReqSwitches: 
   option2text: 
+  option2LogText: 
   option2IrsReputation: 0
   option2PunkReputation: 0
   option2ShakeReputation: 0
@@ -53,6 +55,7 @@ MonoBehaviour:
   Option3On: 0
   option3ReqSwitches: 
   option3text: 
+  option3LogText: 
   option3IrsReputation: 0
   option3PunkReputation: 0
   option3ShakeReputation: 0
@@ -63,10 +66,11 @@ MonoBehaviour:
   Option4On: 1
   option4ReqSwitches: 
   option4text: 
+  option4LogText: 
   option4IrsReputation: 0
   option4PunkReputation: 0
   option4ShakeReputation: 0
   option4GuardReputation: 0
   option4ObtainedSwitches: 
   option4RemovedSwitches: 
-  option4FollowCard: {fileID: 11400000, guid: f03b963efa8e12d4c8f48e2e4b739f31, type: 2}
+  option4FollowCard: {fileID: 11400000, guid: 4c024c5fb01ea0a4d8512b3c696f01b8, type: 2}
