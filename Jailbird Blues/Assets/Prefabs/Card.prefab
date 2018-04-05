@@ -998,7 +998,6 @@ MonoBehaviour:
   fadeImage: {fileID: 0}
   fadeSpeed: 0.25
   noteBook: {fileID: 0}
-  textScrollSpeed: 0
 --- !u!114 &114418707910392720
 MonoBehaviour:
   m_ObjectHideFlags: 1
