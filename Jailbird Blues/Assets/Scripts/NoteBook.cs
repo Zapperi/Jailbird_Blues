@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class NoteBook : MonoBehaviour {
 
     public Text noteBookText;
+	public Text inventoryTextBrownie;
+	public Text inventoryTextCigs;
     public Button buttonQuit;
     public Button logButton;
     public Button inventoryButton;
@@ -30,9 +32,14 @@ public class NoteBook : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
-        
-        
+		if (GameController.gameController.allSwitches[1])
+			inventoryTextBrownie.text = "brownie";
+		else
+			inventoryTextBrownie.text = " ";
+		if (GameController.gameController.allSwitches[2])
+			inventoryTextCigs.text = "tobacco";
+		else
+			inventoryTextCigs.text = " ";
 
         noteBookText.text = "IRS rep: " + GameController.gameController.irsRep + "\n" + "Punks rep: " + GameController.gameController.punksRep + "\n" +
             "Shakers rep: " + GameController.gameController.shakersRep + "\n" + "Guards rep: " + GameController.gameController.guardsRep;
