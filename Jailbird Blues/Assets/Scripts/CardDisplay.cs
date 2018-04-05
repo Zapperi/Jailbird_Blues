@@ -19,6 +19,7 @@ public class CardDisplay : MonoBehaviour
     public Button button2;
     public Button button3;
     public Button button4;
+    public Button button5;
     public Button buttonNoteBook;
     public Image background;
     public Image foregroundImage1;
@@ -29,8 +30,11 @@ public class CardDisplay : MonoBehaviour
     public float fadeSpeed = 0.25f;         // set how fast the overlaying image fades in and out.
     public GameObject noteBook;
     public float textScrollSpeed;           // Used to control the speed of TypeText coroutine (text speed)
-    //private bool coroutineRunning;
+    private bool coroutineRunning;
     private IEnumerator typeTextCoroutine;  // create coroutine variable, for stopping and starting.
+    private bool continuebutton;
+
+ 
 
 
     void Start()
@@ -87,19 +91,21 @@ public class CardDisplay : MonoBehaviour
         button2.onClick.RemoveAllListeners();
         button3.onClick.RemoveAllListeners();
         button4.onClick.RemoveAllListeners();
+        button5.onClick.RemoveAllListeners();
         button1.onClick.AddListener(button1pressed);    // ..Add new button functions with updated parameters
         button2.onClick.AddListener(button2pressed);
         button3.onClick.AddListener(button3pressed);
         button4.onClick.AddListener(button4pressed);
-        
+        button5.onClick.AddListener(button4pressed);
+
         //Check if card is a result card, if so, leave last button active and set the text.
         if (card.OptionsOn == false)
         {
             card.Option1On = false;
             card.Option2On = false;
             card.Option3On = false;
-            card.Option4On = true;
-            button4text.text = "Continue...";
+            card.Option4On = false;
+            continuebutton = true;
         }
 
         //Activate the button gameobjects when needed, hide otherwise.
@@ -119,6 +125,14 @@ public class CardDisplay : MonoBehaviour
             button4.gameObject.SetActive(true);
         else
             button4.gameObject.SetActive(false);
+        if (continuebutton == true)
+            button5.gameObject.SetActive(true);
+        else
+            button5.gameObject.SetActive(false);
+        if(coroutineRunning == true)
+            button5.gameObject.SetActive(false);
+        else if(coroutineRunning == false && card.OptionsOn == false)
+            button5.gameObject.SetActive(true);
     }
 
     //--BUTTON FUNCTIONS--
@@ -201,7 +215,30 @@ public class CardDisplay : MonoBehaviour
            
         }
     }
+    void button5pressed()
+    {
 
+        GameController.gameController.Add4Switches();
+        GameController.gameController.Remove4Switches();
+        if (card.option4FollowCard)
+        {
+            StopCoroutine(typeTextCoroutine);
+            StartCoroutine(FadeImage(fadeSpeed));
+            GameController.gameController.UpdateReputations(card.option4IrsReputation, card.option4PunkReputation, card.option4ShakeReputation, card.option4GuardReputation);
+            GameController.gameController.currentCard = card.option4FollowCard;
+            card = card.option4FollowCard;
+            typeTextCoroutine = TypeText(card.cardText);
+            StartCoroutine(typeTextCoroutine);
+        }
+
+        else if (card.endCard == true)                              // If the card is an end card (ends the event), do this..
+        {
+            GameController.gameController.UpdateReputations(card.option4IrsReputation, card.option4PunkReputation, card.option4ShakeReputation, card.option4GuardReputation);
+            GameController.gameController.endcardOn = true;         // Update the boolean, ending the event. 
+
+        }
+
+    }
     // Notebook button
     void buttonNotebookPressed()
     {
@@ -238,6 +275,8 @@ public class CardDisplay : MonoBehaviour
     // Coroutine for printing the card text letter by letter. Takes a text to print as parameter.
     IEnumerator TypeText(string textToType)
     {
+        coroutineRunning = true;
+        
         cardText.text = "";                                     // Start with empty text
         foreach (char letter in textToType.ToCharArray())       // Go through the given text and print it letter by letter 
         {
@@ -249,6 +288,8 @@ public class CardDisplay : MonoBehaviour
             cardText.text += letter;
             yield return new WaitForSeconds(textScrollSpeed);   // Control the speed, 0 = by framerate                   
         }
+        coroutineRunning = false;
+        
     }
 }
 

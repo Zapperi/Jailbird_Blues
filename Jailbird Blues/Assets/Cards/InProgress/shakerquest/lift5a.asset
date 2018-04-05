@@ -27,12 +27,13 @@ MonoBehaviour:
     up on the floor, muscles burning with pain.\r\n\"Whoah bro, you totally blacked
     out bro.\"\r\nYou sit up a bit confused.\r\n\"Yeah I think you're done for today
     little bro, you better get out of here and rest bro.\""
-  endCard: 0
+  endCard: 1
   repeatable: 0
   OptionsOn: 0
   Option1On: 0
   option1ReqSwitches: 
   option1text: 
+  option1LogText: 
   option1IrsReputation: 0
   option1PunkReputation: 0
   option1ShakeReputation: 0
@@ -43,6 +44,7 @@ MonoBehaviour:
   Option2On: 0
   option2ReqSwitches: 
   option2text: 
+  option2LogText: 
   option2IrsReputation: 0
   option2PunkReputation: 0
   option2ShakeReputation: 0
@@ -53,6 +55,7 @@ MonoBehaviour:
   Option3On: 0
   option3ReqSwitches: 
   option3text: 
+  option3LogText: 
   option3IrsReputation: 0
   option3PunkReputation: 0
   option3ShakeReputation: 0
@@ -63,6 +66,7 @@ MonoBehaviour:
   Option4On: 1
   option4ReqSwitches: 
   option4text: 
+  option4LogText: 
   option4IrsReputation: 0
   option4PunkReputation: 0
   option4ShakeReputation: 0
