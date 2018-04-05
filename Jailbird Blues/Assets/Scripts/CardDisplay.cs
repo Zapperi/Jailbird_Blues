@@ -241,7 +241,7 @@ public class CardDisplay : MonoBehaviour
         cardText.text = "";                                     // Start with empty text
         foreach (char letter in textToType.ToCharArray())       // Go through the given text and print it letter by letter 
         {
-            if (Input.GetMouseButtonDown(0))                    // If left mouse button is pressed while the text is printing...
+			if (Input.GetMouseButtonDown(0) || OptionsSliders.instatext)                    // If left mouse button is pressed while the text is printing...
             {
                 cardText.text = card.cardText;                  // Instantly print all of the text
                 break;                                          // Break out of the foreach loop, ending the coroutine

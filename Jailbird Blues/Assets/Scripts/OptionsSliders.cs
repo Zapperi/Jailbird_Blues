@@ -5,6 +5,7 @@ using UnityEngine;
 public class OptionsSliders : MonoBehaviour {
 	public float volume;
 	public float textSpeed;
+	public static bool instatext;
 	AudioSource audioSource;
 
 	void Start()
@@ -23,6 +24,10 @@ public class OptionsSliders : MonoBehaviour {
 
 	public void ScrollSpeedChanged(float value){
 		this.textSpeed = value;
+		if (value == 0.0f)
+			instatext = true;
+		else
+			instatext = false;
 		CardDisplay.textScrollSpeed = textSpeed/20.0f;
 	}
 
