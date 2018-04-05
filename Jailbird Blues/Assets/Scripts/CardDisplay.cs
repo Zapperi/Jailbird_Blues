@@ -7,7 +7,6 @@ public class CardDisplay : MonoBehaviour
 {
     // --CARD VARIABLES--
     public CardValues card;
-    private CardValues previousCard;
     public Text cardText;
     public Text button1text;
     public Text button2text;
@@ -36,6 +35,10 @@ public class CardDisplay : MonoBehaviour
 
  
 
+    public GameObject popUp;
+    public bool popUpMouseOver;
+    public Text popUpText;
+    
 
     void Start()
     {
@@ -49,8 +52,11 @@ public class CardDisplay : MonoBehaviour
     }
     void Update()
     {
-        card = GameController.gameController.currentCard;           // Update the current to a new one
         
+        ShowPopUp();
+        if (GameController.gameController.previousCard)
+            popUpText.text = GameController.gameController.previousCard.cardText;
+        card = GameController.gameController.currentCard;           // Update the current to a new one
         // Update the card images from the current card
         background.sprite = card.backgroundImage;                   
         foregroundImage1.sprite = card.foregroundImage;
@@ -142,6 +148,7 @@ public class CardDisplay : MonoBehaviour
         GameController.gameController.Remove1Switches();
         if (card.option1FollowCard)                                                // If card is not a result card, do this..
         {
+            GameController.gameController.previousCard = card;
             StopCoroutine(typeTextCoroutine);                                   // Stop ongoing coroutine, so they won't mix up
             StartCoroutine(FadeImage(fadeSpeed));                               // Fade in and out a overlay image and update card values under it.
             //Update the reputation values in gameController with current card values.
@@ -163,6 +170,7 @@ public class CardDisplay : MonoBehaviour
         GameController.gameController.Remove2Switches();
         if (card.option2FollowCard)
         {
+            GameController.gameController.previousCard = card;
             StopCoroutine(typeTextCoroutine);
             StartCoroutine(FadeImage(fadeSpeed));
             GameController.gameController.UpdateReputations(card.option2IrsReputation, card.option2PunkReputation, card.option2ShakeReputation, card.option2GuardReputation);
@@ -181,6 +189,7 @@ public class CardDisplay : MonoBehaviour
         GameController.gameController.Remove3Switches();
         if (card.option3FollowCard)
         {
+            GameController.gameController.previousCard = card;
             StopCoroutine(typeTextCoroutine);
             StartCoroutine(FadeImage(fadeSpeed));
             GameController.gameController.UpdateReputations(card.option3IrsReputation, card.option3PunkReputation, card.option3ShakeReputation, card.option3GuardReputation);
@@ -199,6 +208,7 @@ public class CardDisplay : MonoBehaviour
         GameController.gameController.Remove4Switches();
         if (card.option4FollowCard)
         {
+            GameController.gameController.previousCard = card;
             StopCoroutine(typeTextCoroutine);            
             StartCoroutine(FadeImage(fadeSpeed));
             GameController.gameController.UpdateReputations(card.option4IrsReputation, card.option4PunkReputation, card.option4ShakeReputation, card.option4GuardReputation);
@@ -291,5 +301,18 @@ public class CardDisplay : MonoBehaviour
         coroutineRunning = false;
         
     }
+
+    private void ShowPopUp()
+    {
+        if (popUpMouseOver)
+        {
+            popUp.SetActive(true);
+        }else
+         popUp.SetActive(false);
+    }
+
+    
+
+
 }
 

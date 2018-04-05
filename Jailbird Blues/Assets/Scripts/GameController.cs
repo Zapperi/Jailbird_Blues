@@ -23,7 +23,8 @@ public class GameController : MonoBehaviour {
 	public List<CardValues> messCards;												//list of cards in the lunchtime deck
 	public List<CardValues> workshopCards;											//list of cards in the workshop time deck
 	public List<CardValues> cellCards;												//list of cards in the cell time deck
-	public CardValues currentCard;													//the card that is currently active in the scene
+	public CardValues currentCard;                                                  //the card that is currently active in the scene
+    public CardValues previousCard;
     public bool endcardOn;
 	void Awake()																	//when the game starts
 	{
