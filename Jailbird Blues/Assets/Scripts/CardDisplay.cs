@@ -55,7 +55,17 @@ public class CardDisplay : MonoBehaviour
         
         ShowPopUp();
         if (GameController.gameController.previousCard)
+        {
+            popUpText.fontSize = 15;
             popUpText.text = GameController.gameController.previousCard.cardText;
+        }
+            
+        else
+        {
+            popUpText.fontSize = 30;
+            popUpText.text = "Mmmm... Donuts.";
+        }
+            
         card = GameController.gameController.currentCard;           // Update the current to a new one
         // Update the card images from the current card
         background.sprite = card.backgroundImage;                   
@@ -148,7 +158,7 @@ public class CardDisplay : MonoBehaviour
         GameController.gameController.Remove1Switches();
         if (card.option1FollowCard)                                                // If card is not a result card, do this..
         {
-            GameController.gameController.previousCard = card;
+            GameController.gameController.previousCard = card;                  // Updates gamecontroller's previous card to current card
             StopCoroutine(typeTextCoroutine);                                   // Stop ongoing coroutine, so they won't mix up
             StartCoroutine(FadeImage(fadeSpeed));                               // Fade in and out a overlay image and update card values under it.
             //Update the reputation values in gameController with current card values.
@@ -218,7 +228,7 @@ public class CardDisplay : MonoBehaviour
             StartCoroutine(typeTextCoroutine);
         }
         
-        else if (card.endCard == true)                              // If the card is an end card (ends the event), do this..
+        else if (card.endCard == true || card.option4FollowCard == null)        // If the card is an end card (ends the event), do this..
         {
             GameController.gameController.UpdateReputations(card.option4IrsReputation, card.option4PunkReputation, card.option4ShakeReputation, card.option4GuardReputation);
             GameController.gameController.endcardOn = true;         // Update the boolean, ending the event. 
