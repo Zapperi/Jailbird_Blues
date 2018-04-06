@@ -125,21 +125,37 @@ public class CardDisplay : MonoBehaviour
         }
 
         //Activate the button gameobjects when needed, hide otherwise.
-        if (card.Option1On == true && GameController.gameController.Check1Switches() == true)
-            button1.gameObject.SetActive(true);
-        else
+        if (card.Option1On == true && GameController.gameController.Check1Switches() == true){
+			button1.gameObject.SetActive (true);
+			button1.interactable = true;
+		}else if (card.Option1On == true && GameController.gameController.Check1Switches() == false){
+			button1.gameObject.SetActive(true);
+			button1.interactable = false;
+		}else
             button1.gameObject.SetActive(false);
-        if (card.Option2On == true && GameController.gameController.Check2Switches() == true)
-            button2.gameObject.SetActive(true);
-        else
+		if (card.Option2On == true && GameController.gameController.Check2Switches () == true) {
+			button2.gameObject.SetActive (true);
+			button2.interactable = true;
+		}else if (card.Option2On == true && GameController.gameController.Check2Switches() == false){
+			button2.gameObject.SetActive(true);
+			button2.interactable = false;
+		}else
             button2.gameObject.SetActive(false);
-        if (card.Option3On == true && GameController.gameController.Check3Switches() == true)
-            button3.gameObject.SetActive(true);
-        else
+		if (card.Option3On == true && GameController.gameController.Check3Switches() == true){
+			button3.gameObject.SetActive (true);
+			button3.interactable = true;
+		}else if (card.Option3On == true && GameController.gameController.Check3Switches() == false){
+			button3.gameObject.SetActive(true);
+			button3.interactable = false;
+		}else
             button3.gameObject.SetActive(false);
-        if (card.Option4On == true && GameController.gameController.Check4Switches() == true)
-            button4.gameObject.SetActive(true);
-        else
+		if (card.Option4On == true && GameController.gameController.Check4Switches() == true){
+			button4.gameObject.SetActive (true);
+			button4.interactable = true;
+		}else if (card.Option4On == true && GameController.gameController.Check4Switches() == false){
+			button4.gameObject.SetActive(true);
+			button4.interactable = false;
+		}else
             button4.gameObject.SetActive(false);
         if (continuebutton == true)
             button5.gameObject.SetActive(true);
