@@ -151,6 +151,7 @@ MonoBehaviour:
   workshopCards: []
   cellCards: []
   currentCard: {fileID: 11400000, guid: 2c4b19502e30c804a8662649b4b5c8eb, type: 2}
+  previousCard: {fileID: 0}
   endcardOn: 0
 --- !u!114 &114852098042609194
 MonoBehaviour:

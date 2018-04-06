@@ -244,16 +244,14 @@ public class CardDisplay : MonoBehaviour
             StartCoroutine(typeTextCoroutine);
         }
         
-        else if (card.endCard == true || card.option4FollowCard == null)        // If the card is an end card (ends the event), do this..
+        else if (card.endCard == true)        // If the card is an end card (ends the event), do this..
         {
             GameController.gameController.UpdateReputations(card.option4IrsReputation, card.option4PunkReputation, card.option4ShakeReputation, card.option4GuardReputation);
-            GameController.gameController.endcardOn = true;         // Update the boolean, ending the event. 
-           
+            GameController.gameController.endcardOn = true;         // Update the boolean, ending the event.   
         }
     }
     void button5pressed()
     {
-
         GameController.gameController.Add4Switches();
         GameController.gameController.Remove4Switches();
         if (card.option4FollowCard)
@@ -271,9 +269,7 @@ public class CardDisplay : MonoBehaviour
         {
             GameController.gameController.UpdateReputations(card.option4IrsReputation, card.option4PunkReputation, card.option4ShakeReputation, card.option4GuardReputation);
             GameController.gameController.endcardOn = true;         // Update the boolean, ending the event. 
-
         }
-
     }
     // Notebook button
     void buttonNotebookPressed()

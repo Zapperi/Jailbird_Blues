@@ -131,7 +131,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1241286024497994
 GameObject:
   m_ObjectHideFlags: 1
@@ -203,7 +203,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1435387056037592
 GameObject:
   m_ObjectHideFlags: 0
@@ -322,7 +322,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1559122574024270
 GameObject:
   m_ObjectHideFlags: 0
@@ -374,7 +374,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1755723897652950
 GameObject:
   m_ObjectHideFlags: 1
@@ -461,7 +461,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1871869656386540
 GameObject:
   m_ObjectHideFlags: 1
@@ -647,7 +647,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: b61dd8398c47e8e448443dddb58594e9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -761,11 +761,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u201DI ain\u2019t gonna beat you up is what I\u2019m willing to pay. Hand
-    it over\u201D\r\nKowalski grabs the brownie.\r\n\u201DI\u2019ll make it clear
-    to you that this is my cell and you\u2019re the tourist. I expect payment everyday,
-    or else you\u2019re gonna feel real bad. Good night.\u201D\r\nYou can hear Kowalski
-    munching the brownie in bed. You both go to sleep.\r"
+  m_Text: "A guard leads you through the prison hallways while the barred doors close
+    behind you. The echoes fade like your hopes getting out this hellhole.  The guard
+    speaks:\n\u201DFreddie Cooks here mentors you in how we do things here. Play nice
+    and you\u2019ll go a long way.\u201D\r\n"
 --- !u!114 &114281583563082066
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -959,7 +958,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19499a928573f4f4db7f1269a318bc62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  card: {fileID: 11400000, guid: da24977372e545a42a48bea2becd4b92, type: 2}
+  card: {fileID: 11400000, guid: 2c4b19502e30c804a8662649b4b5c8eb, type: 2}
   cardText: {fileID: 114257783183177504}
   button1text: {fileID: 114704711107309360}
   button2text: {fileID: 114377901099804506}

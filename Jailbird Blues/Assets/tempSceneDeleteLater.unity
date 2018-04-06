@@ -514,22 +514,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114743166947194950, guid: a5ca0da45ae9cf94f8ba95b70b239f82,
-        type: 2}
-      propertyPath: allSwitches.Array.data[0]
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114743166947194950, guid: a5ca0da45ae9cf94f8ba95b70b239f82,
-        type: 2}
-      propertyPath: allSwitches.Array.data[2]
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114743166947194950, guid: a5ca0da45ae9cf94f8ba95b70b239f82,
-        type: 2}
-      propertyPath: currentCard
-      value: 
-      objectReference: {fileID: 11400000, guid: 2c4b19502e30c804a8662649b4b5c8eb,
-        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a5ca0da45ae9cf94f8ba95b70b239f82, type: 2}
   m_IsPrefabParent: 0
