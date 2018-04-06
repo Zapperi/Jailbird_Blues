@@ -30,7 +30,7 @@ MonoBehaviour:
     the tourist. I expect payment everyday, or else you\u2019re gonna feel much worse
     than right now. Good night.\u201D\r\nYour last image of the day is Kowalski gobbling
     down the brownie and you pass out from the pain.\r"
-  endCard: 0
+  endCard: 1
   repeatable: 0
   OptionsOn: 0
   Option1On: 1
