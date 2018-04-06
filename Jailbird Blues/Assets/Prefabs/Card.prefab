@@ -27,7 +27,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1027133244037344
 GameObject:
   m_ObjectHideFlags: 1
@@ -113,7 +113,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1206574178403004
 GameObject:
   m_ObjectHideFlags: 0
@@ -150,7 +150,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1269948695162524
 GameObject:
   m_ObjectHideFlags: 1
@@ -220,7 +220,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1440280344376574
 GameObject:
   m_ObjectHideFlags: 1
@@ -322,7 +322,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1559122574024270
 GameObject:
   m_ObjectHideFlags: 0
@@ -495,7 +495,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1993448599474184
 GameObject:
   m_ObjectHideFlags: 1
@@ -687,7 +687,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Option 3
+  m_Text: 
 --- !u!114 &114240550987602980
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -761,7 +761,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: What happened?
+  m_Text: "\u201DI ain\u2019t gonna beat you up is what I\u2019m willing to pay. Hand
+    it over\u201D\r\nKowalski grabs the brownie.\r\n\u201DI\u2019ll make it clear
+    to you that this is my cell and you\u2019re the tourist. I expect payment everyday,
+    or else you\u2019re gonna feel real bad. Good night.\u201D\r\nYou can hear Kowalski
+    munching the brownie in bed. You both go to sleep.\r"
 --- !u!114 &114281583563082066
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -902,7 +906,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Option 2
+  m_Text: 
 --- !u!114 &114394836383507526
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -955,7 +959,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19499a928573f4f4db7f1269a318bc62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  card: {fileID: 11400000, guid: 2c4b19502e30c804a8662649b4b5c8eb, type: 2}
+  card: {fileID: 11400000, guid: da24977372e545a42a48bea2becd4b92, type: 2}
   cardText: {fileID: 114257783183177504}
   button1text: {fileID: 114704711107309360}
   button2text: {fileID: 114377901099804506}
@@ -1427,7 +1431,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Option 4
+  m_Text: Continue...
 --- !u!114 &114704711107309360
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1460,7 +1464,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Option 1
+  m_Text: 
 --- !u!114 &114716653438802012
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1930,10 +1934,10 @@ RectTransform:
   m_Father: {fileID: 224304705434245326}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 135, y: -60}
+  m_SizeDelta: {x: 250, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224160466009051816
 RectTransform:
@@ -2102,7 +2106,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -9, y: 9}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 270, y: 120}
   m_Pivot: {x: 1, y: 0}
 --- !u!224 &224321096868630362
 RectTransform:

@@ -311,20 +311,26 @@ public class CardDisplay : MonoBehaviour
     // Coroutine for printing the card text letter by letter. Takes a text to print as parameter.
     IEnumerator TypeText(string textToType)
     {
-        coroutineRunning = true;
-        
-        cardText.text = "";                                     // Start with empty text
-        foreach (char letter in textToType.ToCharArray())       // Go through the given text and print it letter by letter 
+        if (OptionsSliders.instatext)
+            cardText.text = card.cardText;
+        else
         {
-			if (Input.GetMouseButtonDown(0) || OptionsSliders.instatext)                    // If left mouse button is pressed while the text is printing...
+            coroutineRunning = true;
+
+            cardText.text = "";                                     // Start with empty text
+            foreach (char letter in textToType.ToCharArray())       // Go through the given text and print it letter by letter 
             {
-                cardText.text = card.cardText;                  // Instantly print all of the text
-                break;                                          // Break out of the foreach loop, ending the coroutine
+                if (Input.GetMouseButtonDown(0)) // If left mouse button is pressed while the text is printing...
+                {
+                    cardText.text = card.cardText;                  // Instantly print all of the text
+                    break;                                          // Break out of the foreach loop, ending the coroutine
+                }
+                cardText.text += letter;
+                yield return new WaitForSeconds(textScrollSpeed);   // Control the speed, 0 = by framerate                   
             }
-            cardText.text += letter;
-            yield return new WaitForSeconds(textScrollSpeed);   // Control the speed, 0 = by framerate                   
+            coroutineRunning = false;
         }
-        coroutineRunning = false;
+        
         
     }
 
