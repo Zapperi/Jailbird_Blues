@@ -30,7 +30,8 @@ public class CardDisplay : MonoBehaviour
     public GameObject noteBook;
     private bool coroutineRunning;
 	public static float textScrollSpeed;           // Used to control the speed of TypeText coroutine (text speed)
-    private IEnumerator typeTextCoroutine;  // create coroutine variable, for stopping and starting.
+    [HideInInspector]
+    public IEnumerator typeTextCoroutine;  // create coroutine variable, for stopping and starting.
     private bool continuebutton;
 
  

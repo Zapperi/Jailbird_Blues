@@ -5,8 +5,8 @@ using UnityEngine;
 public class GameController : MonoBehaviour {
 
 	public static GameController gameController;									//a reference to the gamecontroller
-    public CardValues cardValues;
-
+    public CardValues cv;
+    public CardDisplay cd;
     private bool addToDeck;                                                         //Used to track if card can be added
     public int punksRep;															//the players reputation among the Punks
 	public int irsRep;																//the players reputation among the I.R.S
@@ -87,8 +87,10 @@ public class GameController : MonoBehaviour {
 		{
         case (0):
                 BuildDeck(cellCards);                                               //builds a new card deck from scratch
-                int index = Random.Range(0, cellCards.Count);						//picks a random number using the amount of cards in the deck as the range
-                currentCard = cellCards[index];										//activates the card with the index matching the random number
+                int index = Random.Range(0, cellCards.Count);                       //picks a random number using the amount of cards in the deck as the range
+
+                currentCard = cellCards[index];                                     //activates the card with the index matching the random number
+                
                 break;
          case (1):
                 BuildDeck(yardCards);
