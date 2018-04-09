@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour {
 
@@ -16,6 +17,8 @@ public class GameController : MonoBehaviour {
 
     private int scheduleSize = 4;                                                   //integer for schedule size, incase we need to expand it
     public int schedule;                                                            //integer switch for the daily activities
+	public Text timeOfDayText;
+	private string scheduleName;
 
     public List<bool> allSwitches;
     public List<CardValues> allCards;
@@ -58,6 +61,7 @@ public class GameController : MonoBehaviour {
 		{
 			Destroy(gameObject);													//delete them
 		}
+		scheduleName = "tutorial";
 
 
 	}
@@ -70,6 +74,7 @@ public class GameController : MonoBehaviour {
             GetNextCard();
             endcardOn = false;
         }
+		timeOfDayText.text = "Day " + day + " : " + scheduleName +" time";
     }
 
 	public void UpdateReputations(int irs, int punks, int shakers, int guards)		//updates the reputations among factions. function used by CardDisplay
@@ -89,21 +94,25 @@ public class GameController : MonoBehaviour {
                 BuildDeck(cellCards);                                               //builds a new card deck from scratch
                 int index = Random.Range(0, cellCards.Count);						//picks a random number using the amount of cards in the deck as the range
                 currentCard = cellCards[index];										//activates the card with the index matching the random number
+				scheduleName = "cell";
                 break;
          case (1):
                 BuildDeck(yardCards);
                 index = Random.Range(0, yardCards.Count);
 			    currentCard = yardCards[index];
+				scheduleName = "yard";
 			    break;
 		case (2):
                 BuildDeck(messCards);
                 index = Random.Range(0, messCards.Count);
 			    currentCard = messCards[index];
+				scheduleName = "lunch";
 			    break;
 		case (3):
                 BuildDeck(workshopCards);
                 index = Random.Range(0, workshopCards.Count);
 			    currentCard = workshopCards[index];
+				scheduleName = "workshop";
 			    break;
 		//case (4):
   //              BuildDeck(cellCards);

@@ -210,6 +210,12 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 388644055}
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &296462138 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114009359827239272, guid: 86716c302e616714281481b1f42b3e51,
+    type: 2}
+  m_PrefabInternal: {fileID: 1058767294}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &388644055
 Prefab:
   m_ObjectHideFlags: 0
@@ -514,6 +520,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114743166947194950, guid: a5ca0da45ae9cf94f8ba95b70b239f82,
+        type: 2}
+      propertyPath: timeOfDayText
+      value: 
+      objectReference: {fileID: 296462138}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a5ca0da45ae9cf94f8ba95b70b239f82, type: 2}
   m_IsPrefabParent: 0
@@ -656,24 +667,44 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 114731235709013308, guid: 86716c302e616714281481b1f42b3e51,
-        type: 2}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 737213948}
-    - target: {fileID: 114006262783658340, guid: 86716c302e616714281481b1f42b3e51,
-        type: 2}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 737213948}
     - target: {fileID: 114511238453803294, guid: 86716c302e616714281481b1f42b3e51,
         type: 2}
       propertyPath: eventAdder
       value: 
       objectReference: {fileID: 1480609032}
+    - target: {fileID: 114006262783658340, guid: 86716c302e616714281481b1f42b3e51,
+        type: 2}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 737213948}
+    - target: {fileID: 114731235709013308, guid: 86716c302e616714281481b1f42b3e51,
+        type: 2}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 737213948}
     - target: {fileID: 1859448372566048, guid: 86716c302e616714281481b1f42b3e51, type: 2}
       propertyPath: m_Name
       value: Notebook
+      objectReference: {fileID: 0}
+    - target: {fileID: 224992741905329112, guid: 86716c302e616714281481b1f42b3e51,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 0.23352888
+      objectReference: {fileID: 0}
+    - target: {fileID: 224992741905329112, guid: 86716c302e616714281481b1f42b3e51,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224992741905329112, guid: 86716c302e616714281481b1f42b3e51,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0.7664709
+      objectReference: {fileID: 0}
+    - target: {fileID: 224819880244600206, guid: 86716c302e616714281481b1f42b3e51,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 86716c302e616714281481b1f42b3e51, type: 2}

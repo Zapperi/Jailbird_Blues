@@ -140,12 +140,13 @@ MonoBehaviour:
   guardsRep: 0
   day: 0
   schedule: 0
+  timeOfDayText: {fileID: 0}
   allSwitches: 000000
   allCards:
-  - {fileID: 11400000, guid: df8b44972028d46488f142889f271dd9, type: 2}
-  - {fileID: 11400000, guid: 531d898ff3ada9d48a891bc947b764d7, type: 2}
-  - {fileID: 11400000, guid: e28bfd2cefaf6454c9b3af80dd235cda, type: 2}
-  - {fileID: 11400000, guid: 2c4b19502e30c804a8662649b4b5c8eb, type: 2}
+  - {fileID: 11400000, guid: 299d181e0ce5c1746a9e462dd6bb9786, type: 2}
+  - {fileID: 11400000, guid: dc00b4999bf695a468017450197d9967, type: 2}
+  - {fileID: 11400000, guid: b0d485d20bc264341aa4f18714e7e7ac, type: 2}
+  - {fileID: 11400000, guid: 0e8f516cf45a41c41abf604fb52d72f1, type: 2}
   yardCards: []
   messCards: []
   workshopCards: []
