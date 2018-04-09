@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
+  m_Name: tutorialCard17a
+  m_EditorClassIdentifier: 
+  requiredSwitches: 
+  RepIrs: 0
+  RepPunks: 0
+  RepShake: 0
+  RepGuard: 0
+  timeOfDay: 0
+  storyPhase: 0
+  backgroundImage: {fileID: 21300000, guid: 131dee0c67f126347b72cba445163453, type: 3}
+  foregroundImage: {fileID: 0}
+  foregroundImage2: {fileID: 21300000, guid: a28e6d0fa77204b459a3ce6479e39467, type: 3}
+  foregroundImage3: {fileID: 0}
+  foregroundImage4: {fileID: 0}
+  cardText: "As you sit down the members of the I.R.S. look you over and whisper inaudibly
+    something. Then they all turn to you and smilingly nod.\r\n\u201DYou\u2019re new
+    here it seems. If you play your cards right we might be interested in new recruits,
+    but right now we are in the middle of a meeting. So if you could kindly go somewhere
+    else. We\u2019ll be in contact whenever we need you.\u201D\r\n"
+  endCard: 0
+  repeatable: 0
+  OptionsOn: 0
+  Option1On: 0
+  option1ReqSwitches: 
+  option1text: 
+  option1LogText: 
+  option1IrsReputation: 0
+  option1PunkReputation: 0
+  option1ShakeReputation: 0
+  option1GuardReputation: 0
+  option1ObtainedSwitches: 
+  option1RemovedSwitches: 
+  option1FollowCard: {fileID: 11400000, guid: e8a8c2ee21dd82440a83646542b04d58, type: 2}
+  Option2On: 0
+  option2ReqSwitches: 
+  option2text: 
+  option2LogText: 
+  option2IrsReputation: 0
+  option2PunkReputation: 0
+  option2ShakeReputation: 0
+  option2GuardReputation: 0
+  option2ObtainedSwitches: 
+  option2RemovedSwitches: 
+  option2FollowCard: {fileID: 11400000, guid: 49b7d614925f4f645ac5e164a6a75217, type: 2}
+  Option3On: 0
+  option3ReqSwitches: 
+  option3text: 
+  option3LogText: 
+  option3IrsReputation: 0
+  option3PunkReputation: 0
+  option3ShakeReputation: 0
+  option3GuardReputation: 0
+  option3ObtainedSwitches: 
+  option3RemovedSwitches: 
+  option3FollowCard: {fileID: 0}
+  Option4On: 1
+  option4ReqSwitches: 
+  option4text: 
+  option4LogText: 
+  option4IrsReputation: 0
+  option4PunkReputation: 0
+  option4ShakeReputation: 0
+  option4GuardReputation: 0
+  option4ObtainedSwitches: 
+  option4RemovedSwitches: 
+  option4FollowCard: {fileID: 11400000, guid: e8a8c2ee21dd82440a83646542b04d58, type: 2}

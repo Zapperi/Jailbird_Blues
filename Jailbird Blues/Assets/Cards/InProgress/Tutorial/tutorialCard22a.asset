@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
+  m_Name: tutorialCard22a
+  m_EditorClassIdentifier: 
+  requiredSwitches: 
+  RepIrs: 0
+  RepPunks: 0
+  RepShake: 0
+  RepGuard: 0
+  timeOfDay: 0
+  storyPhase: 0
+  backgroundImage: {fileID: 21300000, guid: 00dc7612037dcee48b94275dab828f7d, type: 3}
+  foregroundImage: {fileID: 21300000, guid: 3d812a240ca8123408008bcf29c4d803, type: 3}
+  foregroundImage2: {fileID: 0}
+  foregroundImage3: {fileID: 0}
+  foregroundImage4: {fileID: 0}
+  cardText: "Kowalski tries your shoes on himself and seems to take liking in them.\r\n\u201DPretty
+    nice. What else do you have?\u201D\r\nHow do you respond?\r"
+  endCard: 0
+  repeatable: 0
+  OptionsOn: 1
+  Option1On: 1
+  option1ReqSwitches: 
+  option1text: "\u201DAin\u2019t got anything else.\u201D "
+  option1LogText: 
+  option1IrsReputation: 0
+  option1PunkReputation: 0
+  option1ShakeReputation: 0
+  option1GuardReputation: 0
+  option1ObtainedSwitches: 
+  option1RemovedSwitches: 
+  option1FollowCard: {fileID: 11400000, guid: 0a7effb4d7b746045b3018b17af603a9, type: 2}
+  Option2On: 1
+  option2ReqSwitches: 01000000
+  option2text: Give him your brownie
+  option2LogText: 
+  option2IrsReputation: 0
+  option2PunkReputation: 0
+  option2ShakeReputation: 0
+  option2GuardReputation: 0
+  option2ObtainedSwitches: 
+  option2RemovedSwitches: 
+  option2FollowCard: {fileID: 11400000, guid: 2422600f90ee16343b4ab5b8b86ccc1e, type: 2}
+  Option3On: 1
+  option3ReqSwitches: 
+  option3text: "\u201DDepends how much you\u2019re willing to pay?\u201D"
+  option3LogText: 
+  option3IrsReputation: 0
+  option3PunkReputation: 0
+  option3ShakeReputation: 0
+  option3GuardReputation: 0
+  option3ObtainedSwitches: 
+  option3RemovedSwitches: 
+  option3FollowCard: {fileID: 11400000, guid: ac1a2f03dbf9cfb47bcddcc4aa2af080, type: 2}
+  Option4On: 1
+  option4ReqSwitches: 
+  option4text: "\u201DDepends how much you\u2019re willing to pay?\u201D"
+  option4LogText: 
+  option4IrsReputation: 0
+  option4PunkReputation: 0
+  option4ShakeReputation: 0
+  option4GuardReputation: 0
+  option4ObtainedSwitches: 
+  option4RemovedSwitches: 
+  option4FollowCard: {fileID: 11400000, guid: da24977372e545a42a48bea2becd4b92, type: 2}
