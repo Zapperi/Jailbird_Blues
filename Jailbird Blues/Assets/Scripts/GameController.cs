@@ -19,6 +19,7 @@ public class GameController : MonoBehaviour {
     public int schedule;                                                            //integer switch for the daily activities
 	public Text timeOfDayText;
 	private string scheduleName;
+    public Text locationText;
 
     public List<bool> allSwitches;
     public List<CardValues> allCards;
@@ -75,6 +76,8 @@ public class GameController : MonoBehaviour {
             endcardOn = false;
         }
 		timeOfDayText.text = "Day " + day + " : " + scheduleName +" time";
+        locationText.text = scheduleName;
+
     }
 
 	public void UpdateReputations(int irs, int punks, int shakers, int guards)		//updates the reputations among factions. function used by CardDisplay

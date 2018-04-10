@@ -11,45 +11,63 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
   m_Name: New Card
   m_EditorClassIdentifier: 
-  BackgroundImage: {fileID: 0}
-  Npc: {fileID: 0}
-  Switches: 
+  requiredSwitches: 
   RepIrs: 0
   RepPunks: 0
   RepShake: 0
   RepGuard: 0
-  timeOfDay: 1
+  timeOfDay: 2
   storyPhase: 1
+  backgroundImage: {fileID: 0}
+  foregroundImage: {fileID: 0}
+  foregroundImage2: {fileID: 0}
+  foregroundImage3: {fileID: 0}
+  foregroundImage4: {fileID: 0}
   cardText: Gimme shoes plz
   endCard: 0
+  repeatable: 0
   OptionsOn: 1
   Option1On: 1
-  option1: Give
+  option1ReqSwitches: 
+  option1text: 
+  option1LogText: 
   option1IrsReputation: -1
   option1PunkReputation: 0
   option1ShakeReputation: 0
   option1GuardReputation: 2
+  option1ObtainedSwitches: 
+  option1RemovedSwitches: 
   option1FollowCard: {fileID: 11400000, guid: c86a54b01b47e3b47806a632338dbe30, type: 2}
   Option2On: 1
-  option2: nope lol
+  option2ReqSwitches: 
+  option2text: 
+  option2LogText: 
   option2IrsReputation: 0
   option2PunkReputation: -2
   option2ShakeReputation: 3
   option2GuardReputation: 0
+  option2ObtainedSwitches: 
+  option2RemovedSwitches: 
   option2FollowCard: {fileID: 11400000, guid: 7911c6cf7a7d0284ea7139d8ff846831, type: 2}
   Option3On: 1
-  option3: gimme urs
+  option3ReqSwitches: 
+  option3text: 
+  option3LogText: 
   option3IrsReputation: 0
   option3PunkReputation: 0
   option3ShakeReputation: 0
   option3GuardReputation: 0
+  option3ObtainedSwitches: 
+  option3RemovedSwitches: 
   option3FollowCard: {fileID: 11400000, guid: 8226b5ede50d9214dba45d62caab4185, type: 2}
   Option4On: 1
-  option4: i give you 1 you give me 1 of urs
+  option4ReqSwitches: 
+  option4text: 
+  option4LogText: 
   option4IrsReputation: 0
   option4PunkReputation: 0
   option4ShakeReputation: 0
   option4GuardReputation: 0
+  option4ObtainedSwitches: 
+  option4RemovedSwitches: 
   option4FollowCard: {fileID: 11400000, guid: 748dbc28e0d23044ea834716251df166, type: 2}
-  repeatable: 0
-  used: 0
