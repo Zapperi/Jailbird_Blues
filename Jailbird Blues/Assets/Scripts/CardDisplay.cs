@@ -26,25 +26,28 @@ public class CardDisplay : MonoBehaviour
     public Image foregroundImage3;
     public Image foregroundImage4;
     public Image fadeImage;
-    public float fadeSpeed = 0.25f;         // set how fast the overlaying image fades in and out.
+    public float fadeSpeed = 0.25f;         // Set how fast the overlaying image fades in and out.
     public GameObject noteBook;
-    private bool coroutineRunning;
-	public static float textScrollSpeed;           // Used to control the speed of TypeText coroutine (text speed)
-    private IEnumerator typeTextCoroutine;  // create coroutine variable, for stopping and starting.
+    private bool typeTextRunning;           // Used to track if typeTextCoroutine is still running.
+	public static float textScrollSpeed;    // Used to control the speed of TypeText coroutine (text speed)
+    [HideInInspector]
+    public IEnumerator typeTextCoroutine;   // Create coroutine variable, for stopping and starting.
     private bool continuebutton;
 
- 
+    public GameObject logPage;              // Reference to the notebook's log page, set in inspector
+    private bool logPageAdded;              // Track if recent event has been added to the logbook
 
-    public GameObject popUp;
-    public bool popUpMouseOver;
-    public Text popUpText;
+
+    public GameObject popUp;                // Reference to the popup element, set in inspector
+    public bool popUpMouseOver;             // Track if mouse is over the popup element
+    public Text popUpText;                  // Reference to the popup text, set in inspector
     
 
     void Start()
     {
         fadeImage.gameObject.SetActive(false);                      // At start, set the overlaiyng fade image to disabled
         buttonNoteBook.onClick.RemoveAllListeners();                // Make sure all buttons have default values
-        buttonNoteBooktext.text = "NoteBook";
+        buttonNoteBooktext.text = "NoteBook";                       // Set the notebook button text
         buttonNoteBook.onClick.AddListener(buttonNotebookPressed);  // Connect notebook to it's button
         typeTextCoroutine = TypeText(card.cardText);                // Make sure the text scroll coroutine has something in it
         StartCoroutine(typeTextCoroutine);                          // Start TypeText coroutine as game opens
@@ -53,19 +56,32 @@ public class CardDisplay : MonoBehaviour
     void Update()
     {
         
+        //Call popUp function
         ShowPopUp();
+        //If there was text in the previous card, add text to popup element.
         if (GameController.gameController.previousCard)
         {
             popUpText.fontSize = 15;
             popUpText.text = GameController.gameController.previousCard.cardText;
         }
-            
+        // If there was no text on previous card, type donuts instead.    
         else
         {
             popUpText.fontSize = 30;
             popUpText.text = "Mmmm... Donuts.";
         }
-            
+
+        // Add new log event to the notebook
+        if (!logPageAdded)              // Make sure the event is added only once.
+        {
+            if (card.logText != "")     // If there IS log event, add it. Otherwise do nothing.
+            {
+                logPage.GetComponent<LogScript>().AddLogEvent(card.logText);
+                logPageAdded = true;    // Trigger the boolean so the event won't be added again.
+            }         
+        }
+
+
         card = GameController.gameController.currentCard;           // Update the current to a new one
         // Update the card images from the current card
         background.sprite = card.backgroundImage;                   
@@ -161,9 +177,9 @@ public class CardDisplay : MonoBehaviour
             button5.gameObject.SetActive(true);
         else
             button5.gameObject.SetActive(false);
-        if(coroutineRunning == true)
+        if(typeTextRunning == true)
             button5.gameObject.SetActive(false);
-        else if(coroutineRunning == false && card.OptionsOn == false)
+        else if(typeTextRunning == false && card.OptionsOn == false)
             button5.gameObject.SetActive(true);
     }
 
@@ -181,6 +197,7 @@ public class CardDisplay : MonoBehaviour
             GameController.gameController.UpdateReputations(card.option1IrsReputation, card.option1PunkReputation, card.option1ShakeReputation, card.option1GuardReputation);
             GameController.gameController.currentCard = card.option1FollowCard; // Update the next card into given card in gameController.
             card = card.option1FollowCard;                                      // Update the next card into given in cardDisplay.                                                         
+            logPageAdded = false;                                               // Reset the log event tracker to false.
             typeTextCoroutine = TypeText(card.cardText);                        // Update the text from new card
             StartCoroutine(typeTextCoroutine);                                  // Start printing the new text
         }
@@ -202,6 +219,7 @@ public class CardDisplay : MonoBehaviour
             GameController.gameController.UpdateReputations(card.option2IrsReputation, card.option2PunkReputation, card.option2ShakeReputation, card.option2GuardReputation);
             GameController.gameController.currentCard = card.option2FollowCard;
             card = card.option2FollowCard;
+            logPageAdded = false;
             typeTextCoroutine = TypeText(card.cardText);
             StartCoroutine(typeTextCoroutine);
         }
@@ -221,6 +239,7 @@ public class CardDisplay : MonoBehaviour
             GameController.gameController.UpdateReputations(card.option3IrsReputation, card.option3PunkReputation, card.option3ShakeReputation, card.option3GuardReputation);
             GameController.gameController.currentCard = card.option3FollowCard;
             card = card.option3FollowCard;
+            logPageAdded = false;
             typeTextCoroutine = TypeText(card.cardText);
             StartCoroutine(typeTextCoroutine);
         }
@@ -240,14 +259,14 @@ public class CardDisplay : MonoBehaviour
             GameController.gameController.UpdateReputations(card.option4IrsReputation, card.option4PunkReputation, card.option4ShakeReputation, card.option4GuardReputation);
             GameController.gameController.currentCard = card.option4FollowCard;
             card = card.option4FollowCard;
+            logPageAdded = false;
             typeTextCoroutine = TypeText(card.cardText);
             StartCoroutine(typeTextCoroutine);
         }
         
-        else if (card.endCard == true)        // If the card is an end card (ends the event), do this..
+        else       
         {
-            GameController.gameController.UpdateReputations(card.option4IrsReputation, card.option4PunkReputation, card.option4ShakeReputation, card.option4GuardReputation);
-            GameController.gameController.endcardOn = true;         // Update the boolean, ending the event.   
+            GameController.gameController.UpdateReputations(card.option4IrsReputation, card.option4PunkReputation, card.option4ShakeReputation, card.option4GuardReputation);   
         }
     }
     void button5pressed()
@@ -261,6 +280,7 @@ public class CardDisplay : MonoBehaviour
             GameController.gameController.UpdateReputations(card.option4IrsReputation, card.option4PunkReputation, card.option4ShakeReputation, card.option4GuardReputation);
             GameController.gameController.currentCard = card.option4FollowCard;
             card = card.option4FollowCard;
+            logPageAdded = false;
             typeTextCoroutine = TypeText(card.cardText);
             StartCoroutine(typeTextCoroutine);
         }
@@ -269,6 +289,7 @@ public class CardDisplay : MonoBehaviour
         {
             GameController.gameController.UpdateReputations(card.option4IrsReputation, card.option4PunkReputation, card.option4ShakeReputation, card.option4GuardReputation);
             GameController.gameController.endcardOn = true;         // Update the boolean, ending the event. 
+            logPageAdded = false;                                   // Reset the log event tracker
         }
     }
     // Notebook button
@@ -307,11 +328,11 @@ public class CardDisplay : MonoBehaviour
     // Coroutine for printing the card text letter by letter. Takes a text to print as parameter.
     IEnumerator TypeText(string textToType)
     {
-        if (OptionsSliders.instatext)
-            cardText.text = card.cardText;
+        if (OptionsSliders.instatext)                               // If text is set to instant in options..
+            cardText.text = card.cardText;                          // Just replace old text with new and skip the rest.
         else
         {
-            coroutineRunning = true;
+            typeTextRunning = true;                                 // Trigger tracker at the start of the type text..
 
             cardText.text = "";                                     // Start with empty text
             foreach (char letter in textToType.ToCharArray())       // Go through the given text and print it letter by letter 
@@ -324,19 +345,19 @@ public class CardDisplay : MonoBehaviour
                 cardText.text += letter;
                 yield return new WaitForSeconds(textScrollSpeed);   // Control the speed, 0 = by framerate                   
             }
-            coroutineRunning = false;
+            typeTextRunning = false;                                // ...Reset the tracker at the end
         }
         
         
     }
 
+    // Function for pop up element
     private void ShowPopUp()
     {
-        if (popUpMouseOver)
-        {
-            popUp.SetActive(true);
-        }else
-         popUp.SetActive(false);
+        if (popUpMouseOver)             // If mouse is over the element...
+            popUp.SetActive(true);      // .. set the element to active.
+        else
+         popUp.SetActive(false);        // Otherwise disable the element.      
     }
 
     

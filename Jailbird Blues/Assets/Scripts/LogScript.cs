@@ -7,24 +7,24 @@ public class LogScript : MonoBehaviour {
 
     private string output;
     public Text logText;
-    public string[] logEvents;
+    public List<string> logEvents;
     //just for testing***
     public Button eventAdder;
 
 	// Use this for initialization
 	void Start () {
-        output = "ssdssds\nertyuio\nwertyui\nertyui\nertyuio\nrtyui\ndghjg\ngfhjk\nfhkj\nfhkj\nfjh\nfj\nfjvf\ndhgk\nfjh\nfgj\nfhj\nfh\nfhj\nfjh\ng\nfh\ngj\ndgj\nfhj\ngfg\nfg\nfg\nf\nfgh\nfh\nty\nfghjk\njkj\nloppu!";
+        output = "";
         logText.text = output;
 
         //initialization of the list of log events
 
-        logEvents[0] = "I enetered the prison.";
-        logEvents[1]= "I met Kowalski. Nice fellow.";
-        logEvents[2] = "Kowalski took my shoes.";
-        logEvents[3] = "Kowalski tried to take my shoes.";
-        logEvents[4] = "I joined the punks.";
-        //just for testing***
-        eventAdder.onClick.AddListener(AddRandEvent);
+        //logEvents[0] = "I enetered the prison.";
+        //logEvents[1]= "I met Kowalski. Nice fellow.";
+        //logEvents[2] = "Kowalski took my shoes.";
+        //logEvents[3] = "Kowalski tried to take my shoes.";
+        //logEvents[4] = "I joined the punks.";
+        ////just for testing***
+        //eventAdder.onClick.AddListener(AddRandEvent);
 
     }
 
@@ -35,24 +35,38 @@ public class LogScript : MonoBehaviour {
         GetComponent<ScrollRect>().content = logText.GetComponent<RectTransform>();
     }
 
-    public void AddLogEvent(int logEvent)
+    // Add new event to the notebook with given string.
+    public void AddLogEvent(string logEvent)
     {
-        string tempOutput = "DAY ";
-        tempOutput += GameController.gameController.day;
-        tempOutput += "\n";
-        tempOutput += logEvents[logEvent];
-        tempOutput += "\n";
-        tempOutput += output;
-        output = tempOutput;
-        UpdateLogText();
+        logEvents.Add(logEvent);                            // Add the given string to the logEvent list.
+        string tempOutput = "DAY ";                         // Start with "DAY..
+        tempOutput += GameController.gameController.day;    // Add current day from gamecontroller
+        tempOutput += "\n";                                 // linebreak
+        tempOutput += logEvent;                             // Add given event
+        tempOutput += "\n";                                 // linebreak
+        tempOutput += output;                               // Include the previous events 
+        output = tempOutput;                                // Update the old output with new
+        UpdateLogText();                                    // Send it to the notebook
     }
 
+    //public void AddLogEvent(int index)
+    //{
+    //    string tempOutput = "DAY ";
+    //    tempOutput += GameController.gameController.day;
+    //    tempOutput += "\n";
+    //    tempOutput += logEvents[index];
+    //    tempOutput += "\n";
+    //    tempOutput += output;
+    //    output = tempOutput;
+    //    UpdateLogText();
+    //}
+
     //just for testing***
-    void AddRandEvent()
-    {
-        int a = Random.Range(0, logEvents.Length);
-        AddLogEvent(a);
-    }
-	
+    //void AddRandEvent()
+    //{
+    //    int a = Random.Range(0, logEvents.Length);
+    //    AddLogEvent(a);
+    //}
+
 
 }

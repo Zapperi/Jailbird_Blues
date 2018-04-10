@@ -98,8 +98,8 @@ public class NoteBook : MonoBehaviour {
 #endif
     }
     //this function exists just so we don't need to declare logpage gameobject in other scripts
-    public void AddEventToLog(int index)
-    {
-        logPage.GetComponent<LogScript>().AddLogEvent(index);
-    }
+    //public void AddEventToLog(int index)
+    //{
+    //    logPage.GetComponent<LogScript>().AddLogEvent(index);
+    //}
 }

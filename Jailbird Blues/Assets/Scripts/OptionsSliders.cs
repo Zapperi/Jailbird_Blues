@@ -24,8 +24,8 @@ public class OptionsSliders : MonoBehaviour {
 
 	public void ScrollSpeedChanged(float value){
 		this.textSpeed = value;
-		if (value == 0.0f)
-			instatext = true;
+        if (value == 0.0f)
+            instatext = true;
 		else
 			instatext = false;
 		CardDisplay.textScrollSpeed = textSpeed/20.0f;
