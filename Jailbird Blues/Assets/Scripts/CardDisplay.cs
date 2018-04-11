@@ -13,7 +13,7 @@ public class CardDisplay : MonoBehaviour
     public Text button3text;
     public Text button4text;
     public Text buttonNoteBooktext;
-    public Text location;               // name of the location where the event is, for example "Yard"
+    public Text location;                   // name of the location where the event is, for example "Yard"
     public Button button1;
     public Button button2;
     public Button button3;
@@ -128,7 +128,7 @@ public class CardDisplay : MonoBehaviour
         button2.onClick.AddListener(button2pressed);
         button3.onClick.AddListener(button3pressed);
         button4.onClick.AddListener(button4pressed);
-        button5.onClick.AddListener(button4pressed);
+        button5.onClick.AddListener(button5pressed);
 
         //Check if card is a result card, if so, leave last button active and set the text.
         if (card.OptionsOn == false)

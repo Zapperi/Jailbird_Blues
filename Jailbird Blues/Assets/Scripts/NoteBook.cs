@@ -42,9 +42,7 @@ public class NoteBook : MonoBehaviour {
 			inventoryTextCigs.text = " ";
 
         noteBookText.text = "IRS rep: " + GameController.gameController.irsRep + "\n" + "Punks rep: " + GameController.gameController.punksRep + "\n" +
-            "Shakers rep: " + GameController.gameController.shakersRep + "\n" + "Guards rep: " + GameController.gameController.guardsRep;
-
-        
+            "Shakers rep: " + GameController.gameController.shakersRep + "\n" + "Guards rep: " + GameController.gameController.guardsRep;      
     }
 
     public void UpdateNotebook()

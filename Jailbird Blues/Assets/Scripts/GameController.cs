@@ -31,7 +31,7 @@ public class GameController : MonoBehaviour {
     public CardValues previousCard;
     public bool endcardOn;
 
-    public GameObject sfxSource;
+    public GameObject sfxSource;                                                    // Reference to the sfXSource audiosource
 
 	void Awake()																	//when the game starts
 	{
@@ -92,7 +92,6 @@ public class GameController : MonoBehaviour {
 		guardsRep += guards;
 		if(currentCard.timeCard)
 			AddTime();
-        Debug.Log("Update works");
 	}
 
 	public void GetNextCard()														//activates the next card from a new deck after the previous card has been resolved
