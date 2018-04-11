@@ -54,6 +54,7 @@ public class NoteBook : MonoBehaviour {
 
     void LogButtonpressed()
     {
+        GameController.gameController.ButtonClickPLay();
         logPage.gameObject.SetActive(true);
         inventoryPage.gameObject.SetActive(false);
         statsPage.gameObject.SetActive(false);
@@ -63,6 +64,7 @@ public class NoteBook : MonoBehaviour {
 
     void InventoryButtonpressed()
     {
+        GameController.gameController.ButtonClickPLay();
         logPage.gameObject.SetActive(false);
         inventoryPage.gameObject.SetActive(true);
         statsPage.gameObject.SetActive(false);
@@ -71,6 +73,7 @@ public class NoteBook : MonoBehaviour {
 
     void StatsButtonpressed()
     {
+        GameController.gameController.ButtonClickPLay();
         logPage.gameObject.SetActive(false);
         inventoryPage.gameObject.SetActive(false);
         statsPage.gameObject.SetActive(true);
@@ -79,6 +82,7 @@ public class NoteBook : MonoBehaviour {
 
     void OptionsButtonpressed()
     {
+        GameController.gameController.ButtonClickPLay();
         logPage.gameObject.SetActive(false);
         inventoryPage.gameObject.SetActive(false);
         statsPage.gameObject.SetActive(false);

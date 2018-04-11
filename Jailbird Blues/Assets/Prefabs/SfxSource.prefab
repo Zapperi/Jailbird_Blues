@@ -9,53 +9,52 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1741034904424950}
+  m_RootGameObject: {fileID: 1549258373992530}
   m_IsPrefabParent: 1
---- !u!1 &1741034904424950
+--- !u!1 &1549258373992530
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4985295824015644}
-  - component: {fileID: 114743166947194950}
-  - component: {fileID: 82732119072834322}
-  - component: {fileID: 114852098042609194}
+  - component: {fileID: 4753413504743802}
+  - component: {fileID: 82495979004628640}
+  - component: {fileID: 114040815672101644}
   m_Layer: 0
-  m_Name: GameController
-  m_TagString: GameController
+  m_Name: SfxSource
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4985295824015644
+--- !u!4 &4753413504743802
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1741034904424950}
+  m_GameObject: {fileID: 1549258373992530}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &82732119072834322
+--- !u!82 &82495979004628640
 AudioSource:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1741034904424950}
+  m_GameObject: {fileID: 1549258373992530}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 7eea11dbcecd56a43ade0ca1a2990976, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 0.502
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -122,50 +121,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!114 &114743166947194950
+--- !u!114 &114040815672101644
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1741034904424950}
+  m_GameObject: {fileID: 1549258373992530}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae57894b462750541b777f140cd81dc3, type: 3}
+  m_Script: {fileID: 11500000, guid: 0c494de68c38bf148893cfecbe4d263b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardValues: {fileID: 0}
-  punksRep: 0
-  irsRep: 0
-  shakersRep: 0
-  guardsRep: 0
-  day: 0
-  schedule: 0
-  timeOfDayText: {fileID: 0}
-  locationText: {fileID: 0}
-  allSwitches: 000000
-  allCards:
-  - {fileID: 11400000, guid: 299d181e0ce5c1746a9e462dd6bb9786, type: 2}
-  - {fileID: 11400000, guid: dc00b4999bf695a468017450197d9967, type: 2}
-  - {fileID: 11400000, guid: b0d485d20bc264341aa4f18714e7e7ac, type: 2}
-  - {fileID: 11400000, guid: 0e8f516cf45a41c41abf604fb52d72f1, type: 2}
-  yardCards: []
-  messCards: []
-  workshopCards: []
-  cellCards: []
-  currentCard: {fileID: 11400000, guid: 2c4b19502e30c804a8662649b4b5c8eb, type: 2}
-  previousCard: {fileID: 0}
-  endcardOn: 0
-  sfxSource: {fileID: 0}
---- !u!114 &114852098042609194
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1741034904424950}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: edc09f75913544f4bac6c99093a7bf65, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  volume: 0
-  textSpeed: 0
+  sfxSource: {fileID: 82495979004628640}
+  buttonSounds:
+  - {fileID: 8300000, guid: d79e0fc540301d749abf4bcbd056d6c3, type: 3}
+  - {fileID: 8300000, guid: 02b9f92abdee6bd4d8b15e15a54d3212, type: 3}
+  - {fileID: 8300000, guid: 646319e2ea9d1a94696a4fd22b6da83f, type: 3}
+  - {fileID: 8300000, guid: 7904b9a4a5906da4cb5bc407aacbcbbc, type: 3}
+  - {fileID: 8300000, guid: 3bf7fa199591b33408d6a7561edd04a4, type: 3}
+  - {fileID: 8300000, guid: 5b0684c2744c8a24fb9d0505538391d3, type: 3}

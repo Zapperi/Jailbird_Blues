@@ -30,6 +30,9 @@ public class GameController : MonoBehaviour {
 	public CardValues currentCard;                                                  //the card that is currently active in the scene
     public CardValues previousCard;
     public bool endcardOn;
+
+    public GameObject sfxSource;
+
 	void Awake()																	//when the game starts
 	{
         //// --FOR DEBUGGIN, REMOVE BEFORE BUILD!--
@@ -484,6 +487,13 @@ public class GameController : MonoBehaviour {
 			scheduleName = "workshop";
 			break;
 		}
+    }
+
+    //Calls a button click sfx
+
+    public void ButtonClickPLay()
+    {
+        sfxSource.GetComponent<SfxPlayer>().ButtonAudioPlay();
     }
 		 
 }
