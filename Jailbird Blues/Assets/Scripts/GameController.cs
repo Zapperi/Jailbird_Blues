@@ -35,14 +35,14 @@ public class GameController : MonoBehaviour {
 
 	void Awake()																	//when the game starts
 	{
-        //// --FOR DEBUGGIN, REMOVE BEFORE BUILD!--
-        ////Debug testing starts
-        //allSwitches[0] = true;
-        //allSwitches[1] = false;
-        //allSwitches[2] = true;
+        // --FOR DEBUGGIN, REMOVE BEFORE BUILD!--
+        //Debug testing starts
+        allSwitches[0] = true;
+        allSwitches[1] = false;
+        allSwitches[2] = true;
         //BuildDeck(cellCards);
         //BuildDeck(yardCards);
-        ////Debuggin ends
+        //Debuggin ends
 
 
         if (gameController == null)													//if there is no gamecontroller
