@@ -26,7 +26,7 @@ public class CardValues : ScriptableObject									//switched the surface from M
     [Tooltip("What image shows on the background.")]
     public Sprite backgroundImage;                                          //reference to the image that will be set as the background
     [Tooltip("What image shows on the foreground, slot 1.")]
-    public Sprite foregroundImage;                                                      //reference to the image that will be set as the non playable character
+    public Sprite foregroundImage;                                          //reference to the image that will be set as the non playable character
     [Tooltip("What image shows on the foreground, slot 2.")]
     public Sprite foregroundImage2;
     [Tooltip("What image shows on the foreground, slot 3.")]
@@ -40,6 +40,8 @@ public class CardValues : ScriptableObject									//switched the surface from M
     public string logText;                                                  // log text for notebook events
     [Tooltip("Does this card trigger a game ending?")]
     public bool endCard = false;                                            //is the card one of the final cards in the game
+	[Tooltip("Does this card advance schedule?")]
+	public bool timeCard = false;											//if true, triggers gameController's AddTime function
     [Tooltip("Can this card appear multiple times?")]
     public bool repeatable;                                                 //can this card happen multiple times during one playthrough
     private bool used;														//has the card been played already?

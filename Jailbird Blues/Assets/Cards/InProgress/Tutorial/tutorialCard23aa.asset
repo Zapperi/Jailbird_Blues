@@ -28,13 +28,14 @@ MonoBehaviour:
     guess you were right. I\u2019ll just make it clear to you that this is my cell
     and you\u2019re the tourist. I expect payment everyday, or else you\u2019re gonna
     feel much worse than right now. Good night.\u201D\r\nYou pass out from the pain.\r\n"
+  logText: 
   endCard: 1
+  timeCard: 1
   repeatable: 0
   OptionsOn: 0
   Option1On: 0
   option1ReqSwitches: 
   option1text: 
-  option1LogText: 
   option1IrsReputation: 0
   option1PunkReputation: 0
   option1ShakeReputation: 0
@@ -45,7 +46,6 @@ MonoBehaviour:
   Option2On: 0
   option2ReqSwitches: 
   option2text: 
-  option2LogText: 
   option2IrsReputation: 0
   option2PunkReputation: 0
   option2ShakeReputation: 0
@@ -56,7 +56,6 @@ MonoBehaviour:
   Option3On: 0
   option3ReqSwitches: 
   option3text: 
-  option3LogText: 
   option3IrsReputation: 0
   option3PunkReputation: 0
   option3ShakeReputation: 0
@@ -67,7 +66,6 @@ MonoBehaviour:
   Option4On: 0
   option4ReqSwitches: 
   option4text: Continue..
-  option4LogText: 
   option4IrsReputation: 0
   option4PunkReputation: 0
   option4ShakeReputation: 0

@@ -27,13 +27,14 @@ MonoBehaviour:
     themselves. I appreciate you helping me, but sometimes it\u2019s better to stay
     out of the way. Especially if it doesn\u2019t concern things related to you. But
     we better get going if we wanna eat.\u201D"
+  logText: 
   endCard: 0
+  timeCard: 1
   repeatable: 0
   OptionsOn: 0
   Option1On: 0
   option1ReqSwitches: 
   option1text: 
-  option1LogText: 
   option1IrsReputation: 0
   option1PunkReputation: 0
   option1ShakeReputation: 0
@@ -44,7 +45,6 @@ MonoBehaviour:
   Option2On: 0
   option2ReqSwitches: 
   option2text: 
-  option2LogText: 
   option2IrsReputation: 0
   option2PunkReputation: 0
   option2ShakeReputation: 0
@@ -55,7 +55,6 @@ MonoBehaviour:
   Option3On: 0
   option3ReqSwitches: 
   option3text: 
-  option3LogText: 
   option3IrsReputation: 0
   option3PunkReputation: 0
   option3ShakeReputation: 0
@@ -66,7 +65,6 @@ MonoBehaviour:
   Option4On: 1
   option4ReqSwitches: 
   option4text: 
-  option4LogText: 
   option4IrsReputation: 0
   option4PunkReputation: 0
   option4ShakeReputation: 0

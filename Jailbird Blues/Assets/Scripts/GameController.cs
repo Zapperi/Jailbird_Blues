@@ -62,7 +62,7 @@ public class GameController : MonoBehaviour {
 		{
 			Destroy(gameObject);													//delete them
 		}
-		scheduleName = "tutorial";
+		scheduleName = "cell";
 
 
 	}
@@ -78,6 +78,7 @@ public class GameController : MonoBehaviour {
 		timeOfDayText.text = "Day " + day + " : " + scheduleName +" time";
         locationText.text = scheduleName;
 
+		
     }
 
 	public void UpdateReputations(int irs, int punks, int shakers, int guards)		//updates the reputations among factions. function used by CardDisplay
@@ -86,6 +87,8 @@ public class GameController : MonoBehaviour {
 		punksRep += punks;
 		shakersRep += shakers;
 		guardsRep += guards;
+		if(currentCard.timeCard)
+			AddTime();
         Debug.Log("Update works");
 	}
 
@@ -96,26 +99,22 @@ public class GameController : MonoBehaviour {
         case (0):
                 BuildDeck(cellCards);                                               //builds a new card deck from scratch
                 int index = Random.Range(0, cellCards.Count);						//picks a random number using the amount of cards in the deck as the range
-                currentCard = cellCards[index];										//activates the card with the index matching the random number
-				scheduleName = "cell";
+                currentCard = cellCards[index];	
                 break;
          case (1):
                 BuildDeck(yardCards);
                 index = Random.Range(0, yardCards.Count);
 			    currentCard = yardCards[index];
-				scheduleName = "yard";
 			    break;
 		case (2):
                 BuildDeck(messCards);
                 index = Random.Range(0, messCards.Count);
 			    currentCard = messCards[index];
-				scheduleName = "lunch";
 			    break;
 		case (3):
                 BuildDeck(workshopCards);
                 index = Random.Range(0, workshopCards.Count);
 			    currentCard = workshopCards[index];
-				scheduleName = "workshop";
 			    break;
 		//case (4):
   //              BuildDeck(cellCards);
@@ -471,10 +470,20 @@ public class GameController : MonoBehaviour {
             schedule = 0;
             day++;
         }
+		switch (schedule) {															//chooses the deck based on schedule
+		case (0):
+			scheduleName = "cell";
+			break;
+		case (1):
+			scheduleName = "yard";
+			break;
+		case (2):
+			scheduleName = "lunch";
+			break;
+		case (3):
+			scheduleName = "workshop";
+			break;
+		}
     }
-
-
-    
+		 
 }
-
-

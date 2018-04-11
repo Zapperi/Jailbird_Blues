@@ -32,13 +32,14 @@ MonoBehaviour:
     is my cell you fool. You ain\u2019t nothing but a tourist here!\u201D\r\nThe guards
     finally apprehend Kowalski and you\u2019re moved to the infirmary. The sweet bliss
     of unconsciousness takes hold and you black out.\r"
+  logText: 
   endCard: 1
+  timeCard: 1
   repeatable: 0
   OptionsOn: 1
   Option1On: 1
   option1ReqSwitches: 
   option1text: 
-  option1LogText: 
   option1IrsReputation: 0
   option1PunkReputation: 0
   option1ShakeReputation: 0
@@ -49,7 +50,6 @@ MonoBehaviour:
   Option2On: 0
   option2ReqSwitches: 
   option2text: 
-  option2LogText: 
   option2IrsReputation: 0
   option2PunkReputation: 0
   option2ShakeReputation: 0
@@ -60,7 +60,6 @@ MonoBehaviour:
   Option3On: 1
   option3ReqSwitches: 
   option3text: 
-  option3LogText: 
   option3IrsReputation: 0
   option3PunkReputation: 0
   option3ShakeReputation: 0
@@ -71,7 +70,6 @@ MonoBehaviour:
   Option4On: 1
   option4ReqSwitches: 
   option4text: 
-  option4LogText: 
   option4IrsReputation: 0
   option4PunkReputation: 0
   option4ShakeReputation: 0
