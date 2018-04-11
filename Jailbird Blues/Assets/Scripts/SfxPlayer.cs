@@ -7,6 +7,7 @@ public class SfxPlayer : MonoBehaviour {
     public AudioSource sfxSource;
 
     public AudioClip[] buttonSounds;
+    public AudioClip itemReceived;
 
     public void ButtonAudioPlay()
     {
@@ -15,8 +16,11 @@ public class SfxPlayer : MonoBehaviour {
         sfxSource.Play();
     }
 
-
-	
+    public void ItemAudioPlay()
+    {
+        sfxSource.clip = itemReceived;
+        sfxSource.Play();
+    }	
 
 }
 

@@ -31,7 +31,7 @@ public class GameController : MonoBehaviour {
     public CardValues previousCard;
     public bool endcardOn;
 
-    public GameObject sfxSource;
+    public GameObject sfxSource;                                                    //this gameobject manages sfxs
 
 	void Awake()																	//when the game starts
 	{
@@ -489,11 +489,17 @@ public class GameController : MonoBehaviour {
 		}
     }
 
-    //Calls a button click sfx
+    //Calls a button click-sfx
 
     public void ButtonClickPLay()
     {
         sfxSource.GetComponent<SfxPlayer>().ButtonAudioPlay();
+    }
+
+    //Calls a item received-sfx 
+    public void ItemReceivedAudioPlay()
+    {
+        sfxSource.GetComponent<SfxPlayer>().ItemAudioPlay();
     }
 		 
 }
