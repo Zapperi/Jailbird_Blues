@@ -33,16 +33,19 @@ public class GameController : MonoBehaviour {
 
     public GameObject sfxSource;                                                    //this gameobject manages sfxs
 
+    //public GameObject sfxSource;                                                    // Reference to the sfXSource audiosource
+
+
 	void Awake()																	//when the game starts
 	{
-        //// --FOR DEBUGGIN, REMOVE BEFORE BUILD!--
-        ////Debug testing starts
-        //allSwitches[0] = true;
-        //allSwitches[1] = false;
-        //allSwitches[2] = true;
+        // --FOR DEBUGGIN, REMOVE BEFORE BUILD!--
+        //Debug testing starts
+        allSwitches[0] = true;
+        allSwitches[1] = false;
+        allSwitches[2] = true;
         //BuildDeck(cellCards);
         //BuildDeck(yardCards);
-        ////Debuggin ends
+        //Debuggin ends
 
 
         if (gameController == null)													//if there is no gamecontroller
@@ -92,7 +95,6 @@ public class GameController : MonoBehaviour {
 		guardsRep += guards;
 		if(currentCard.timeCard)
 			AddTime();
-        Debug.Log("Update works");
 	}
 
 	public void GetNextCard()														//activates the next card from a new deck after the previous card has been resolved
