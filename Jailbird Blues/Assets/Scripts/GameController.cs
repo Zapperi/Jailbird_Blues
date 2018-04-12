@@ -31,12 +31,11 @@ public class GameController : MonoBehaviour {
     public CardValues previousCard;
     public bool endcardOn;
 
-    public GameObject sfxSource;                                                    //this gameobject manages sfxs
-
-    //public GameObject sfxSource;                                                    // Reference to the sfXSource audiosource
+    public GameObject sfxSource;                                                    //gameobject of sfx audio source
 
 
-	void Awake()																	//when the game starts
+
+    void Awake()																	//when the game starts
 	{
         // --FOR DEBUGGIN, REMOVE BEFORE BUILD!--
         //Debug testing starts
@@ -60,10 +59,11 @@ public class GameController : MonoBehaviour {
 			shakersRep = 0;
 			guardsRep = 0;
 			day = 1;																//the game starts at day 1
-			schedule = 0;															//the day begins with the first activity in the schedule 
-			//GetNextCard();
+			schedule = 0;                                                           //the day begins with the first activity in the schedule 
+            SetBackgroundAudio();
+            //GetNextCard();
 
-		}
+        }
 		else if (gameController != this)											//in case of unwanted extra gamecontrollers
 		{
 			Destroy(gameObject);													//delete them
@@ -503,5 +503,33 @@ public class GameController : MonoBehaviour {
     {
         sfxSource.GetComponent<SfxPlayer>().ItemAudioPlay();
     }
-		 
+
+    public void SetBackgroundAudio()
+    {
+
+        float mVol = 1f - currentCard.musicDecrease;
+        float aVol = 1f - currentCard.ambientDecrease;
+        //Both bgMusic and bgAmbient are defined.
+        if (currentCard.bgMusic && currentCard.bgAmbientAudio)
+        {
+            sfxSource.GetComponent<SfxPlayer>().SetActiveAudios(currentCard.bgMusic, currentCard.bgAmbientAudio, mVol, aVol);
+        }
+        //if only bgMusic is defined
+        else if (currentCard.bgMusic && !currentCard.bgAmbientAudio)
+        {
+            sfxSource.GetComponent<SfxPlayer>().SetActiveAudios(currentCard.bgMusic, currentCard.ambientOff, mVol, aVol);
+        }
+        //if only ambient is defined
+        else if (!currentCard.bgMusic && currentCard.bgAmbientAudio)
+        {
+            sfxSource.GetComponent<SfxPlayer>().SetActiveAudios(currentCard.musicOff, currentCard.bgAmbientAudio, mVol, aVol);
+        }
+        //if neither are defined
+        else
+        {
+            sfxSource.GetComponent<SfxPlayer>().SetActiveAudios(currentCard.musicOff, currentCard.ambientOff, mVol, aVol);
+        }
+
+    }
+
 }
