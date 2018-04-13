@@ -23,12 +23,18 @@ MonoBehaviour:
   foregroundImage2: {fileID: 0}
   foregroundImage3: {fileID: 0}
   foregroundImage4: {fileID: 0}
+  bgMusic: {fileID: 0}
+  bgAmbientAudio: {fileID: 0}
+  musicDecrease: 0
+  ambientDecrease: 0
+  musicOff: 0
+  ambientOff: 0
   cardText: "You wait in line as tired inmates on the kitchen side slop gray gruel
     on your tray. At least the fruits look fresh and the brownie for dessert edible.
     Freddie talks while you look for places to sit down.\r\n\u201DSometimes the prison
     management informs about changes or news during lunch. Also important is the division
     of the tables by gangs. High-school truly never ends.\u201D\r\n"
-  logText: 
+  logText: 20
   endCard: 0
   timeCard: 0
   repeatable: 0

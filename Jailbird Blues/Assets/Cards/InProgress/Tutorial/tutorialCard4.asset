@@ -32,7 +32,7 @@ MonoBehaviour:
   cardText: "\u201DAh, good old judge Vernon. I heard his wife left with his dog and
     poor old Vernon took to drinking even more than usual. Luck hasn\u2019t been your
     best friend, but if you listen to my guidance you may change that around.\u201D"
-  logText: 
+  logText: d4
   endCard: 0
   timeCard: 0
   repeatable: 0

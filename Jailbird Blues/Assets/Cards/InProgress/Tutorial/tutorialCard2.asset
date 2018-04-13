@@ -31,7 +31,7 @@ MonoBehaviour:
   ambientOff: 0
   cardText: "The guard leaves you with Freddie Cooks. Cooks speaks.\r\n\u201DYou don\u2019t
     look like you belong here. What did you do?\u201D\r\n"
-  logText: 
+  logText: dapadii
   endCard: 0
   timeCard: 0
   repeatable: 0

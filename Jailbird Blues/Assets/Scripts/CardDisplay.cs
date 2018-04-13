@@ -35,7 +35,6 @@ public class CardDisplay : MonoBehaviour
     private bool continuebutton;
 
     public GameObject logPage;              // Reference to the notebook's log page, set in inspector
-    private bool logPageAdded;              // Track if recent event has been added to the logbook
 
 
     public GameObject popUp;                // Reference to the popup element, set in inspector
@@ -72,15 +71,6 @@ public class CardDisplay : MonoBehaviour
             popUpText.text = "Mmmm... Donuts.";
         }
 
-        // Add new log event to the notebook
-        if (!logPageAdded)              // Make sure the event is added only once.
-        {
-            if (card.logText != "")     // If there IS log event, add it. Otherwise do nothing.
-            {
-                logPage.GetComponent<LogScript>().AddLogEvent(card.logText);
-                logPageAdded = true;    // Trigger the boolean so the event won't be added again.
-            }         
-        }
 
 
         card = GameController.gameController.currentCard;           // Update the current to a new one
@@ -199,7 +189,6 @@ public class CardDisplay : MonoBehaviour
             StartCoroutine(FadeImage(fadeSpeed));                               // Fade in and out a overlay image and update card values under it.
             GameController.gameController.SetCurrentCard(1);
             card = card.option1FollowCard;                                      // Update the next card into given in cardDisplay.                                                         
-            logPageAdded = false;                                               // Reset the log event tracker to false.
             typeTextCoroutine = TypeText(card.cardText);                        // Update the text from new card
             StartCoroutine(typeTextCoroutine);                                  // Start printing the new text
         }
@@ -217,7 +206,6 @@ public class CardDisplay : MonoBehaviour
             StartCoroutine(FadeImage(fadeSpeed));
             GameController.gameController.SetCurrentCard(2);
             card = card.option2FollowCard;
-            logPageAdded = false;
             typeTextCoroutine = TypeText(card.cardText);
             StartCoroutine(typeTextCoroutine);
         }
@@ -234,7 +222,6 @@ public class CardDisplay : MonoBehaviour
             StartCoroutine(FadeImage(fadeSpeed));
             GameController.gameController.SetCurrentCard(3);
             card = card.option3FollowCard;
-            logPageAdded = false;
             typeTextCoroutine = TypeText(card.cardText);
             StartCoroutine(typeTextCoroutine);
         }
@@ -251,7 +238,6 @@ public class CardDisplay : MonoBehaviour
             StartCoroutine(FadeImage(fadeSpeed));
             GameController.gameController.SetCurrentCard(4);
             card = card.option4FollowCard;
-            logPageAdded = false;
             typeTextCoroutine = TypeText(card.cardText);
             StartCoroutine(typeTextCoroutine);
         }
@@ -267,7 +253,6 @@ public class CardDisplay : MonoBehaviour
             StartCoroutine(FadeImage(fadeSpeed));
             GameController.gameController.SetCurrentCard(4);
             card = card.option4FollowCard;
-            logPageAdded = false;
             typeTextCoroutine = TypeText(card.cardText);
             StartCoroutine(typeTextCoroutine);
         }
@@ -275,7 +260,6 @@ public class CardDisplay : MonoBehaviour
         else if (card.endCard == true)                              // If the card is an end card (ends the event), do this..
         {
             GameController.gameController.endcardOn = true;         // Update the boolean, ending the event. 
-            logPageAdded = false;                                   // Reset the log event tracker
         }
     }
     // Notebook button

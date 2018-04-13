@@ -32,7 +32,7 @@ MonoBehaviour:
   cardText: "You arrive at a cell. Cooks speaks.\r\n\u201DThis is where you sleep
     and wait for the morning count. You probably have share it sometime with other
     people. But right now you are free to choose your bunk.\u201D\r"
-  logText: 
+  logText: d5
   endCard: 0
   timeCard: 0
   repeatable: 0

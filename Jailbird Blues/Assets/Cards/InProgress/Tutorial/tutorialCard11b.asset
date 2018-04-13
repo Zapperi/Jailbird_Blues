@@ -23,11 +23,17 @@ MonoBehaviour:
   foregroundImage2: {fileID: 0}
   foregroundImage3: {fileID: 0}
   foregroundImage4: {fileID: 0}
+  bgMusic: {fileID: 0}
+  bgAmbientAudio: {fileID: 0}
+  musicDecrease: 0
+  ambientDecrease: 0
+  musicOff: 0
+  ambientOff: 0
   cardText: "\u201DSometimes it\u2019s better to just give \u2019em what they want,
     but there\u2019s a risk of them taking advantage of you. Nobody here wants to
     be seen as weak as they get eaten. Sometimes literally. Thankfully I retire today,
     because that money was fake. But now, let\u2019s go eat!\u201D"
-  logText: 
+  logText: 18
   endCard: 0
   timeCard: 1
   repeatable: 0

@@ -199,6 +199,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &71706186 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1460330098485904, guid: a3ab09f29257ea244a9cd7c582d06ca3,
+    type: 2}
+  m_PrefabInternal: {fileID: 1091739904}
 --- !u!224 &129903391 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224836132798596808, guid: 7c21b6724221439469733de4ff380a59,
@@ -599,6 +604,16 @@ Prefab:
       propertyPath: sfxSource
       value: 
       objectReference: {fileID: 581128780}
+    - target: {fileID: 114743166947194950, guid: a5ca0da45ae9cf94f8ba95b70b239f82,
+        type: 2}
+      propertyPath: logPage
+      value: 
+      objectReference: {fileID: 1744789904}
+    - target: {fileID: 114743166947194950, guid: a5ca0da45ae9cf94f8ba95b70b239f82,
+        type: 2}
+      propertyPath: cardDisplay
+      value: 
+      objectReference: {fileID: 71706186}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a5ca0da45ae9cf94f8ba95b70b239f82, type: 2}
   m_IsPrefabParent: 0
@@ -788,7 +803,7 @@ Prefab:
     - target: {fileID: 224819880244600206, guid: 86716c302e616714281481b1f42b3e51,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 396
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 86716c302e616714281481b1f42b3e51, type: 2}

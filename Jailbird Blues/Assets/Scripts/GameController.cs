@@ -32,6 +32,9 @@ public class GameController : MonoBehaviour {
     public bool endcardOn;
 
     public GameObject sfxSource;                                                    //gameobject of sfx audio source
+    public GameObject logPage;                                                      //game log
+    public string logText;
+    public List<string> logEvents;
 
 
 
@@ -61,6 +64,8 @@ public class GameController : MonoBehaviour {
 			day = 1;																//the game starts at day 1
 			schedule = 0;                                                           //the day begins with the first activity in the schedule 
             SetBackgroundAudio();
+            AddLogEvent();
+            
             //GetNextCard();
 
         }
@@ -72,6 +77,8 @@ public class GameController : MonoBehaviour {
 
 
 	}
+
+
     void Update()
     {
 
@@ -179,6 +186,7 @@ public class GameController : MonoBehaviour {
                 break;
         }
         GameController.gameController.SetBackgroundAudio();         // Update audio.
+        AddLogEvent();
     }
     
 
@@ -515,6 +523,22 @@ public class GameController : MonoBehaviour {
             {
                 allSwitches[currentCard.option4RemovedSwitches[i]] = false;
             }
+        }
+    }
+
+    //Add an event to the log.
+    public void AddLogEvent()
+    {
+        if (currentCard.logText != "")
+        {
+            logEvents.Add(currentCard.logText);                            // Add the given string to the logEvent list.
+            string tempOutput = "DAY ";                         // Start with "DAY..
+            tempOutput += day;                                  // Add current day from gamecontroller
+            tempOutput += "\n";                                 // linebreak
+            tempOutput += currentCard.logText;                             // Add given event
+            tempOutput += "\n";                                 // linebreak
+            tempOutput += logText;                               // Include the previous events 
+            logText = tempOutput;                                // Update the old output with new
         }
     }
 

@@ -30,7 +30,7 @@ MonoBehaviour:
   musicOff: 0
   ambientOff: 1
   cardText: Good choise! I like that one aswell
-  logText: 
+  logText: d6
   endCard: 0
   timeCard: 0
   repeatable: 0
