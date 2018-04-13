@@ -138,7 +138,6 @@ public class CardDisplay : MonoBehaviour
             card.Option3On = false;
             card.Option4On = false;
             continuebutton = true;
-            button5.interactable = true; // option 4 disablee, tämä fixaa sen
         }
 
         //Activate the button gameobjects when needed, hide otherwise.
@@ -169,13 +168,10 @@ public class CardDisplay : MonoBehaviour
 		if (card.Option4On == true && GameController.gameController.Check4Switches() == true){
 			button4.gameObject.SetActive (true);
 			button4.interactable = true;
-            button5.interactable = false;
 		}else if (card.Option4On == true && GameController.gameController.Check4Switches() == false){
 			button4.gameObject.SetActive(true);
 			button4.interactable = false;
-            
-        }
-        else
+		}else
             button4.gameObject.SetActive(false);
         if (continuebutton == true)
             button5.gameObject.SetActive(true);
