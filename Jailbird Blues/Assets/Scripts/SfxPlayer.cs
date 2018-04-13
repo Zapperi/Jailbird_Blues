@@ -197,7 +197,7 @@ public class SfxPlayer : MonoBehaviour {
     {
         musicVolume = mVol;
         //set the next music
-        //if the 1st audio isn't playing
+        //check if the 1st audio isn't playing
         if (!musicSource1.isPlaying)
         {
             //if the 2nd source is already playing the same music, just adjust the volume if needed

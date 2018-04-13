@@ -49,7 +49,7 @@ public class CardDisplay : MonoBehaviour
         fadeImage.gameObject.SetActive(false);                      // At start, set the overlaiyng fade image to disabled
         buttonNoteBook.onClick.RemoveAllListeners();                // Make sure all buttons have default values
         buttonNoteBooktext.text = "NoteBook";                       // Set the notebook button text
-        buttonNoteBook.onClick.AddListener(buttonNotebookPressed);  // Connect notebook to it's button
+        buttonNoteBook.onClick.AddListener(ButtonNotebookPressed);  // Connect notebook to it's button
         typeTextCoroutine = TypeText(card.cardText);                // Make sure the text scroll coroutine has something in it
         StartCoroutine(typeTextCoroutine);                          // Start TypeText coroutine as game opens
 
@@ -125,11 +125,11 @@ public class CardDisplay : MonoBehaviour
         button3.onClick.RemoveAllListeners();
         button4.onClick.RemoveAllListeners();
         button5.onClick.RemoveAllListeners();
-        button1.onClick.AddListener(button1pressed);    // ..Add new button functions with updated parameters
-        button2.onClick.AddListener(button2pressed);
-        button3.onClick.AddListener(button3pressed);
-        button4.onClick.AddListener(button4pressed);
-        button5.onClick.AddListener(button5pressed);
+        button1.onClick.AddListener(Button1pressed);    // ..Add new button functions with updated parameters
+        button2.onClick.AddListener(Button2pressed);
+        button3.onClick.AddListener(Button3pressed);
+        button4.onClick.AddListener(Button4pressed);
+        button5.onClick.AddListener(Button5pressed);
 
         //Check if card is a result card, if so, leave last button active and set the text.
         if (card.OptionsOn == false)
@@ -139,6 +139,7 @@ public class CardDisplay : MonoBehaviour
             card.Option3On = false;
             card.Option4On = false;
             continuebutton = true;
+            button5.interactable = true; //option 4 disablee, tämä fixaa sen
         }
 
         //Activate the button gameobjects when needed, hide otherwise.
@@ -169,6 +170,7 @@ public class CardDisplay : MonoBehaviour
 		if (card.Option4On == true && GameController.gameController.Check4Switches() == true){
 			button4.gameObject.SetActive (true);
 			button4.interactable = true;
+            button5.interactable = false;
 		}else if (card.Option4On == true && GameController.gameController.Check4Switches() == false){
 			button4.gameObject.SetActive(true);
 			button4.interactable = false;
@@ -185,106 +187,85 @@ public class CardDisplay : MonoBehaviour
     }
 
     //--BUTTON FUNCTIONS--
-    void button1pressed()
+    void Button1pressed()
     {
         GameController.gameController.Add1Switches();
         GameController.gameController.Remove1Switches();
+        GameController.gameController.UpdateReputations(1);                     //Update reputations
         if (card.option1FollowCard)                                                // If card is not a result card, do this..
         {
             GameController.gameController.previousCard = card;                  // Updates gamecontroller's previous card to current card
             StopCoroutine(typeTextCoroutine);                                   // Stop ongoing coroutine, so they won't mix up
             StartCoroutine(FadeImage(fadeSpeed));                               // Fade in and out a overlay image and update card values under it.
-            //Update the reputation values in gameController with current card values.
-            GameController.gameController.UpdateReputations(card.option1IrsReputation, card.option1PunkReputation, card.option1ShakeReputation, card.option1GuardReputation);
-            GameController.gameController.currentCard = card.option1FollowCard; // Update the next card into given card in gameController.
-            GameController.gameController.SetBackgroundAudio();                 // Update audio.
+            GameController.gameController.SetCurrentCard(1);
             card = card.option1FollowCard;                                      // Update the next card into given in cardDisplay.                                                         
             logPageAdded = false;                                               // Reset the log event tracker to false.
             typeTextCoroutine = TypeText(card.cardText);                        // Update the text from new card
             StartCoroutine(typeTextCoroutine);                                  // Start printing the new text
         }
-        else
-        {                                                                       //If card is a result card, do this..
-            //Update the reputation values in gameController with current card values.
-            GameController.gameController.UpdateReputations(card.option1IrsReputation, card.option1PunkReputation, card.option1ShakeReputation, card.option1GuardReputation);
-        }
+
     }
-    void button2pressed()
+    void Button2pressed()
     {
         GameController.gameController.Add2Switches();
         GameController.gameController.Remove2Switches();
+        GameController.gameController.UpdateReputations(2);
         if (card.option2FollowCard)
         {
             GameController.gameController.previousCard = card;
             StopCoroutine(typeTextCoroutine);
             StartCoroutine(FadeImage(fadeSpeed));
-            GameController.gameController.UpdateReputations(card.option2IrsReputation, card.option2PunkReputation, card.option2ShakeReputation, card.option2GuardReputation);
-            GameController.gameController.currentCard = card.option2FollowCard;
-            GameController.gameController.SetBackgroundAudio();                 // Update audio.
+            GameController.gameController.SetCurrentCard(2);
             card = card.option2FollowCard;
             logPageAdded = false;
             typeTextCoroutine = TypeText(card.cardText);
             StartCoroutine(typeTextCoroutine);
         }
-        else {
-            GameController.gameController.UpdateReputations(card.option2IrsReputation, card.option2PunkReputation, card.option2ShakeReputation, card.option2GuardReputation);
-        }
     }
-    void button3pressed()
+    void Button3pressed()
     {
         GameController.gameController.Add3Switches();
         GameController.gameController.Remove3Switches();
+        GameController.gameController.UpdateReputations(3);
         if (card.option3FollowCard)
         {
             GameController.gameController.previousCard = card;
             StopCoroutine(typeTextCoroutine);
             StartCoroutine(FadeImage(fadeSpeed));
-            GameController.gameController.UpdateReputations(card.option3IrsReputation, card.option3PunkReputation, card.option3ShakeReputation, card.option3GuardReputation);
-            GameController.gameController.currentCard = card.option3FollowCard;
-            GameController.gameController.SetBackgroundAudio();                 // Update audio.
+            GameController.gameController.SetCurrentCard(3);
             card = card.option3FollowCard;
             logPageAdded = false;
             typeTextCoroutine = TypeText(card.cardText);
             StartCoroutine(typeTextCoroutine);
         }
-        else {
-            GameController.gameController.UpdateReputations(card.option3IrsReputation, card.option3PunkReputation, card.option3ShakeReputation, card.option3GuardReputation);
-        }
     }
-    void button4pressed()
+    void Button4pressed()
     {
         GameController.gameController.Add4Switches();
         GameController.gameController.Remove4Switches();
+        GameController.gameController.UpdateReputations(4);
         if (card.option4FollowCard)
         {
             GameController.gameController.previousCard = card;
             StopCoroutine(typeTextCoroutine);            
             StartCoroutine(FadeImage(fadeSpeed));
-            GameController.gameController.UpdateReputations(card.option4IrsReputation, card.option4PunkReputation, card.option4ShakeReputation, card.option4GuardReputation);
-            GameController.gameController.currentCard = card.option4FollowCard;
-            GameController.gameController.SetBackgroundAudio();                 // Update audio.
+            GameController.gameController.SetCurrentCard(4);
             card = card.option4FollowCard;
             logPageAdded = false;
             typeTextCoroutine = TypeText(card.cardText);
             StartCoroutine(typeTextCoroutine);
         }
-        
-        else       
-        {
-            GameController.gameController.UpdateReputations(card.option4IrsReputation, card.option4PunkReputation, card.option4ShakeReputation, card.option4GuardReputation);   
-        }
     }
-    void button5pressed()
+    void Button5pressed()
     {
         GameController.gameController.Add4Switches();
         GameController.gameController.Remove4Switches();
+        GameController.gameController.UpdateReputations(4);
         if (card.option4FollowCard)
         {
             StopCoroutine(typeTextCoroutine);
             StartCoroutine(FadeImage(fadeSpeed));
-            GameController.gameController.UpdateReputations(card.option4IrsReputation, card.option4PunkReputation, card.option4ShakeReputation, card.option4GuardReputation);
-            GameController.gameController.currentCard = card.option4FollowCard;
-            GameController.gameController.SetBackgroundAudio();                 // Update audio.
+            GameController.gameController.SetCurrentCard(4);
             card = card.option4FollowCard;
             logPageAdded = false;
             typeTextCoroutine = TypeText(card.cardText);
@@ -293,13 +274,12 @@ public class CardDisplay : MonoBehaviour
 
         else if (card.endCard == true)                              // If the card is an end card (ends the event), do this..
         {
-            GameController.gameController.UpdateReputations(card.option4IrsReputation, card.option4PunkReputation, card.option4ShakeReputation, card.option4GuardReputation);
             GameController.gameController.endcardOn = true;         // Update the boolean, ending the event. 
             logPageAdded = false;                                   // Reset the log event tracker
         }
     }
     // Notebook button
-    void buttonNotebookPressed()
+    void ButtonNotebookPressed()
     {
         if (noteBook.gameObject.activeSelf == false)                // If notebook is not active, set it to enabled.
         {
