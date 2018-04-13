@@ -31,12 +31,11 @@ public class GameController : MonoBehaviour {
     public CardValues previousCard;
     public bool endcardOn;
 
-    public GameObject sfxSource;                                                    //this gameobject manages sfxs
-
-    //public GameObject sfxSource;                                                    // Reference to the sfXSource audiosource
+    public GameObject sfxSource;                                                    //gameobject of sfx audio source
 
 
-	void Awake()																	//when the game starts
+
+    void Awake()																	//when the game starts
 	{
         // --FOR DEBUGGIN, REMOVE BEFORE BUILD!--
         //Debug testing starts
@@ -60,10 +59,11 @@ public class GameController : MonoBehaviour {
 			shakersRep = 0;
 			guardsRep = 0;
 			day = 1;																//the game starts at day 1
-			schedule = 0;															//the day begins with the first activity in the schedule 
-			//GetNextCard();
+			schedule = 0;                                                           //the day begins with the first activity in the schedule 
+            SetBackgroundAudio();
+            //GetNextCard();
 
-		}
+        }
 		else if (gameController != this)											//in case of unwanted extra gamecontrollers
 		{
 			Destroy(gameObject);													//delete them
@@ -87,8 +87,40 @@ public class GameController : MonoBehaviour {
 		
     }
 
+    public void UpdateReputations(int slot)
+    {
+        switch (slot)
+        {
+            case 1:
+                irsRep += currentCard.option1IrsReputation;
+                punksRep += currentCard.option1PunkReputation;
+                shakersRep += currentCard.option1ShakeReputation;
+                guardsRep += currentCard.option1GuardReputation;
+                break;
+            case 2:
+                irsRep += currentCard.option2IrsReputation;
+                punksRep += currentCard.option2PunkReputation;
+                shakersRep += currentCard.option2ShakeReputation;
+                guardsRep += currentCard.option2GuardReputation;
+                break;
+            case 3:
+                irsRep += currentCard.option3IrsReputation;
+                punksRep += currentCard.option3PunkReputation;
+                shakersRep += currentCard.option3ShakeReputation;
+                guardsRep += currentCard.option3GuardReputation;
+                break;
+            case 4:
+                irsRep += currentCard.option4IrsReputation;
+                punksRep += currentCard.option4PunkReputation;
+                shakersRep += currentCard.option4ShakeReputation;
+                guardsRep += currentCard.option4GuardReputation;
+                break;
+        }
+    }
+
 	public void UpdateReputations(int irs, int punks, int shakers, int guards)		//updates the reputations among factions. function used by CardDisplay
 	{
+        
 		irsRep += irs;																//new reputation = old reputation + changes to reputation
 		punksRep += punks;
 		shakersRep += shakers;
@@ -128,6 +160,26 @@ public class GameController : MonoBehaviour {
 		//	    break;
 		}
 	}
+
+    public void SetCurrentCard(int slot)
+    {
+        switch (slot)
+        {
+            case 1:
+                currentCard = currentCard.option1FollowCard;                // Update the next card into given card.
+                break;
+            case 2:
+                currentCard = currentCard.option2FollowCard;                // Update the next card into given card.
+                break;
+            case 3:
+                currentCard = currentCard.option3FollowCard;                // Update the next card into given card.
+                break;
+            case 4:
+                currentCard = currentCard.option4FollowCard;                // Update the next card into given card.
+                break;
+        }
+        GameController.gameController.SetBackgroundAudio();         // Update audio.
+    }
     
 
     //Cycles through all the cards in the game and adds the possible cards to given parameter deck..
@@ -503,5 +555,33 @@ public class GameController : MonoBehaviour {
     {
         sfxSource.GetComponent<SfxPlayer>().ItemAudioPlay();
     }
-		 
+
+    public void SetBackgroundAudio()
+    {
+
+        float mVol = 1f - currentCard.musicDecrease;
+        float aVol = 1f - currentCard.ambientDecrease;
+        //Both bgMusic and bgAmbient are defined.
+        if (currentCard.bgMusic && currentCard.bgAmbientAudio)
+        {
+            sfxSource.GetComponent<SfxPlayer>().SetActiveAudios(currentCard.bgMusic, currentCard.bgAmbientAudio, mVol, aVol);
+        }
+        //if only bgMusic is defined
+        else if (currentCard.bgMusic && !currentCard.bgAmbientAudio)
+        {
+            sfxSource.GetComponent<SfxPlayer>().SetActiveAudios(currentCard.bgMusic, currentCard.ambientOff, mVol, aVol);
+        }
+        //if only ambient is defined
+        else if (!currentCard.bgMusic && currentCard.bgAmbientAudio)
+        {
+            sfxSource.GetComponent<SfxPlayer>().SetActiveAudios(currentCard.musicOff, currentCard.bgAmbientAudio, mVol, aVol);
+        }
+        //if neither are defined
+        else
+        {
+            sfxSource.GetComponent<SfxPlayer>().SetActiveAudios(currentCard.musicOff, currentCard.ambientOff, mVol, aVol);
+        }
+
+    }
+
 }

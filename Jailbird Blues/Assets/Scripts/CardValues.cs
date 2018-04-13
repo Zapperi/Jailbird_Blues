@@ -33,6 +33,20 @@ public class CardValues : ScriptableObject									//switched the surface from M
     public Sprite foregroundImage3;
     [Tooltip("What image shows on the foreground, slot 4.")]
     public Sprite foregroundImage4;
+    [Tooltip("Background music for this scene. If this slot is empty, the previous music continues to play.")]
+    public AudioClip bgMusic;
+    [Tooltip("Background ambient soundscape.")]
+    public AudioClip bgAmbientAudio;
+    [Tooltip("How much music volume is decreased (0.0f - 1.0f), the default value is 0f (full volume).")]
+    [Range(0.0f, 1.0f)]
+    public float musicDecrease;
+    [Tooltip("How much ambient audio volume is decreased (0.0f - 1.0f), the default value is 0f (full volume).")]
+    [Range(0.0f, 1.0f)]
+    public float ambientDecrease;
+    [Tooltip("If you want to turn off the background music.")]
+    public bool musicOff;
+    [Tooltip("If you want to turn off the ambient audio.")]
+    public bool ambientOff;
     [Tooltip("Text that shows on the card.")]
     [TextArea]
     public string cardText;													//Card's text
