@@ -436,6 +436,10 @@ public class CardDisplay : MonoBehaviour
                 if (item.itemSwitchIndex == card.option2ReqSwitches[0])         //find right item from all items
                 {
                     button2Img.sprite = item.itemIcon;                          //print switch image
+                    if (GameController.gameController.Check1Switches() == false)
+                    {
+                        button2Img.color = new Color32(90, 90, 90, 255);
+                    }
                     break;
                 }
             }
