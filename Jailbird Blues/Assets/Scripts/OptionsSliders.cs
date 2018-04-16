@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class OptionsSliders : MonoBehaviour {
 	public float volume;
 	public float textSpeed;
 	public static bool instatext;
 	AudioSource audioSource;
+	public Image gammaImage;
 
 	void Start()
 	{
@@ -29,6 +31,10 @@ public class OptionsSliders : MonoBehaviour {
 		else
 			instatext = false;
 		CardDisplay.textScrollSpeed = textSpeed/20.0f;
+	}
+
+	public void GammaChanged(float value){
+		gammaImage.color = new Color(0.25f, 0.25f, 0.25f, value);
 	}
 
 }
