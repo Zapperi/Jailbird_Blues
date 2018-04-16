@@ -156,6 +156,9 @@ MonoBehaviour:
   previousCard: {fileID: 0}
   endcardOn: 0
   sfxSource: {fileID: 0}
+  logPage: {fileID: 0}
+  logText: 
+  logEvents: []
 --- !u!114 &114852098042609194
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -169,3 +172,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   volume: 0
   textSpeed: 0
+  gammaImage: {fileID: 0}

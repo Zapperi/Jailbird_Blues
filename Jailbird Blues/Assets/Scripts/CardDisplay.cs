@@ -154,6 +154,8 @@ public class CardDisplay : MonoBehaviour
             continuebutton = true;
             button5.interactable = true; //option 4 disablee, tämä fixaa sen
         }
+        else
+            continuebutton = false;
 
         //Activate the button gameobjects when needed, hide otherwise.
         if (card.Option1On == true && GameController.gameController.Check1Switches() == true){
@@ -166,39 +168,38 @@ public class CardDisplay : MonoBehaviour
         }
         else
             button1.gameObject.SetActive(false);
-		if (card.Option2On == true && GameController.gameController.Check2Switches () == true) {
+
+        if (card.Option2On == true && GameController.gameController.Check2Switches () == true) {
 			button2.gameObject.SetActive (true);
 			button2.interactable = true;
 		}else if (card.Option2On == true && GameController.gameController.Check2Switches() == false){
 			button2.gameObject.SetActive(true);
 			button2.interactable = false;
-            
-
         }
         else
             button2.gameObject.SetActive(false);
-		if (card.Option3On == true && GameController.gameController.Check3Switches() == true){
+
+        if (card.Option3On == true && GameController.gameController.Check3Switches() == true){
 			button3.gameObject.SetActive (true);
 			button3.interactable = true;
 		}else if (card.Option3On == true && GameController.gameController.Check3Switches() == false){
 			button3.gameObject.SetActive(true);
 			button3.interactable = false;
-            
-
         }
         else
             button3.gameObject.SetActive(false);
-		if (card.Option4On == true && GameController.gameController.Check4Switches() == true){
+
+        if (card.Option4On == true && GameController.gameController.Check4Switches() == true){
 			button4.gameObject.SetActive (true);
 			button4.interactable = true;
             button5.interactable = false;
 		}else if (card.Option4On == true && GameController.gameController.Check4Switches() == false){
 			button4.gameObject.SetActive(true);
-			button4.interactable = false;
-            
+			button4.interactable = false;     
         }
         else
             button4.gameObject.SetActive(false);
+
         if (continuebutton == true)
             button5.gameObject.SetActive(true);
         else if (typeTextRunning == false && card.OptionsOn == false)
@@ -207,9 +208,6 @@ public class CardDisplay : MonoBehaviour
         {
             button5.gameObject.SetActive(false);
         }
-            
-        else if(typeTextRunning == true)
-            button5.gameObject.SetActive(false);
         else
         {
             button5.gameObject.SetActive(false);
@@ -297,8 +295,7 @@ public class CardDisplay : MonoBehaviour
             typeTextCoroutine = TypeText(card.cardText);
             StartCoroutine(typeTextCoroutine);
         }
-
-        else if (card.endCard == true || card.option4FollowCard == null)                              // If the card is an end card (ends the event), do this..
+        else if (card.endCard == true || card.option4FollowCard == null && card.Option4On)                              // If the card is an end card (ends the event), do this..
         {
             GameController.gameController.endcardOn = true;         // Update the boolean, ending the event. 
         }
@@ -422,7 +419,7 @@ public class CardDisplay : MonoBehaviour
         if (button3Hover == true && card.option3ReqSwitches.Count != 0)          //when hovering
         {
             buttonPopUp3Img.SetActive(true);
-            button3PopUpText.text = card.option1ReqSwitches[0].ToString();      //print switch number
+            button3PopUpText.text = card.option3ReqSwitches[0].ToString();      //print switch number
             for (int i = 0; i <= invPag.itemList.Count; i++)                    //loop whole inventory
             {
                 item = invPag.itemList[i];
@@ -442,7 +439,7 @@ public class CardDisplay : MonoBehaviour
         if (button4Hover == true && card.option4ReqSwitches.Count != 0)          //when hovering
         {
             buttonPopUp4Img.SetActive(true);
-            button4PopUpText.text = card.option1ReqSwitches[0].ToString();      //print switch number
+            button4PopUpText.text = card.option4ReqSwitches[0].ToString();      //print switch number
             for (int i = 0; i <= invPag.itemList.Count; i++)                    //loop whole inventory
             {
                 item = invPag.itemList[i];
