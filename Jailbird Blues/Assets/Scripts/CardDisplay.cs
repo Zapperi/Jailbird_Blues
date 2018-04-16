@@ -257,7 +257,7 @@ public class CardDisplay : MonoBehaviour
             StartCoroutine(typeTextCoroutine);
         }
 
-        else if (card.endCard == true)                              // If the card is an end card (ends the event), do this..
+        else if (card.endCard == true || card.option4FollowCard == null)                              // If the card is an end card (ends the event), do this..
         {
             GameController.gameController.endcardOn = true;         // Update the boolean, ending the event. 
         }

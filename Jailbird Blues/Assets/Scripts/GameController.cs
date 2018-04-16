@@ -138,28 +138,33 @@ public class GameController : MonoBehaviour {
 
 	public void GetNextCard()														//activates the next card from a new deck after the previous card has been resolved
 	{
+        CardValues next;
 		switch (schedule)															//chooses the deck based on schedule
 		{
         case (0):
                 BuildDeck(cellCards);                                               //builds a new card deck from scratch
                 int index = Random.Range(0, cellCards.Count);						//picks a random number using the amount of cards in the deck as the range
-                currentCard = cellCards[index];	
+                next = cellCards[index];
+                SetCurrentCard(next);
                 break;
          case (1):
                 BuildDeck(yardCards);
                 index = Random.Range(0, yardCards.Count);
-			    currentCard = yardCards[index];
-			    break;
+			    next = yardCards[index];
+                SetCurrentCard(next);
+                break;
 		case (2):
                 BuildDeck(messCards);
                 index = Random.Range(0, messCards.Count);
-			    currentCard = messCards[index];
-			    break;
+			    next = messCards[index];
+                SetCurrentCard(next);
+                break;
 		case (3):
                 BuildDeck(workshopCards);
                 index = Random.Range(0, workshopCards.Count);
-			    currentCard = workshopCards[index];
-			    break;
+			    next = workshopCards[index];
+                SetCurrentCard(next);
+                break;
 		//case (4):
   //              BuildDeck(cellCards);
   //              index = Random.Range(0, cellCards.Count);
@@ -170,6 +175,10 @@ public class GameController : MonoBehaviour {
 
     public void SetCurrentCard(int slot)
     {
+        if (currentCard.timeCard)
+        {
+            AddTime();
+        }
         switch (slot)
         {
             case 1:
@@ -185,10 +194,22 @@ public class GameController : MonoBehaviour {
                 currentCard = currentCard.option4FollowCard;                // Update the next card into given card.
                 break;
         }
-        GameController.gameController.SetBackgroundAudio();         // Update audio.
+        SetBackgroundAudio();         // Update audio.
         AddLogEvent();
     }
-    
+
+    public void SetCurrentCard(CardValues next)
+    {
+        if (currentCard.timeCard)
+        {
+            AddTime();
+        }
+        currentCard = next;
+        SetBackgroundAudio();
+        AddLogEvent();
+
+    }
+
 
     //Cycles through all the cards in the game and adds the possible cards to given parameter deck..
     public void BuildDeck(List<CardValues> targetDeck)
