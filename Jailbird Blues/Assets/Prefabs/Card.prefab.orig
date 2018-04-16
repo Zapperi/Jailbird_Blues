@@ -169,23 +169,7 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!1 &1343448800469726
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 224805920070494110}
-  - component: {fileID: 222208617990575424}
-  - component: {fileID: 114260851468937978}
-  m_Layer: 0
-  m_Name: BorderImage
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
+<<<<<<< HEAD
 --- !u!1 &1301404577942596
 GameObject:
   m_ObjectHideFlags: 1
@@ -213,6 +197,26 @@ GameObject:
   - component: {fileID: 114620598470782396}
   m_Layer: 5
   m_Name: ReqText1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1425828379081658
+=======
+--- !u!1 &1343448800469726
+>>>>>>> leppis
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 224805920070494110}
+  - component: {fileID: 222208617990575424}
+  - component: {fileID: 114260851468937978}
+  m_Layer: 0
+  m_Name: BorderImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -697,7 +701,8 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+<<<<<<< HEAD
+  m_IsActive: 0
 --- !u!1 &1936555438987632
 GameObject:
   m_ObjectHideFlags: 1
@@ -713,6 +718,9 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+=======
+  m_IsActive: 1
+>>>>>>> leppis
 --- !u!1 &1993448599474184
 GameObject:
   m_ObjectHideFlags: 1
@@ -2337,18 +2345,20 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1184590950921246}
---- !u!222 &222208617990575424
-CanvasRenderer:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1343448800469726}
+<<<<<<< HEAD
 --- !u!222 &222244005188282058
+=======
+--- !u!222 &222208617990575424
+>>>>>>> leppis
 CanvasRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1688504929809094}
+=======
+  m_GameObject: {fileID: 1343448800469726}
+>>>>>>> leppis
 --- !u!222 &222259120129453722
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -2526,7 +2536,8 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: [{fileID: 224591922203458956}]
+  m_Children:
+  - {fileID: 224591922203458956}
   m_Father: {fileID: 4781016894204954}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3125,7 +3136,9 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: [{fileID: 224174323249829924}, {fileID: 224845474512010340}]
+  m_Children:
+  - {fileID: 224174323249829924}
+  - {fileID: 224845474512010340}
   m_Father: {fileID: 4781016894204954}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
