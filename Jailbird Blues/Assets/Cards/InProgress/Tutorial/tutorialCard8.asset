@@ -25,13 +25,14 @@ MonoBehaviour:
   foregroundImage4: {fileID: 0}
   cardText: "A random inmate strides close to Freddie.\r\n\u201DFreddie boy! Don\u2019t
     think that I forgot what you still owe me.\u201D\r"
+  logText: 
   endCard: 0
+  timeCard: 0
   repeatable: 0
   OptionsOn: 1
   Option1On: 1
-  option1ReqSwitches: 
+  option1ReqSwitches: 01000000
   option1text: 'Intervene '
-  option1LogText: 
   option1IrsReputation: 0
   option1PunkReputation: 0
   option1ShakeReputation: 0
@@ -40,20 +41,18 @@ MonoBehaviour:
   option1RemovedSwitches: 01000000
   option1FollowCard: {fileID: 11400000, guid: f9564b106dd31da40af5d0787d70c836, type: 2}
   Option2On: 1
-  option2ReqSwitches: 
+  option2ReqSwitches: 02000000
   option2text: Stay out of it
-  option2LogText: 
   option2IrsReputation: 0
   option2PunkReputation: 0
   option2ShakeReputation: 0
   option2GuardReputation: 0
   option2ObtainedSwitches: 
-  option2RemovedSwitches: 02000000
-  option2FollowCard: {fileID: 0}
+  option2RemovedSwitches: 
+  option2FollowCard: {fileID: 11400000, guid: 805beb8b9aa16df48a7c3f676ec1277f, type: 2}
   Option3On: 1
   option3ReqSwitches: 
   option3text: 'Call the guard '
-  option3LogText: 
   option3IrsReputation: 0
   option3PunkReputation: 0
   option3ShakeReputation: 0
@@ -64,7 +63,6 @@ MonoBehaviour:
   Option4On: 0
   option4ReqSwitches: 
   option4text: 
-  option4LogText: 
   option4IrsReputation: 0
   option4PunkReputation: 0
   option4ShakeReputation: 0
