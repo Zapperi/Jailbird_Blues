@@ -42,9 +42,9 @@ public class GameController : MonoBehaviour {
 	{
         // --FOR DEBUGGIN, REMOVE BEFORE BUILD!--
         //Debug testing starts
-        allSwitches[0] = true;
-        allSwitches[1] = false;
-        allSwitches[2] = true;
+        //allSwitches[0] = true;
+        //allSwitches[1] = false;
+        //allSwitches[2] = true;
         //BuildDeck(cellCards);
         //BuildDeck(yardCards);
         //Debuggin ends
