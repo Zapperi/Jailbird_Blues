@@ -78,3 +78,16 @@ MonoBehaviour:
   option4ObtainedSwitches: 
   option4RemovedSwitches: 
   option4FollowCard: {fileID: 11400000, guid: 9c739ba597ac8014ab15656d5476dc88, type: 2}
+  isTimeBasedCard: 0
+  sfxPrewait: 0
+  sfx: {fileID: 0}
+  sfxHasFadeOut: 0
+  sfxFadeOutAt: 0
+  sfxFadeOutSpeed: 0
+  sfxAfterWait: 0
+  ppsHasFadeIn: 0
+  ppsFadeMode: 0
+  blackScreenStart: 0
+  ppsFadeInSpeed: 0
+  ppsShowCard: 0
+  fadeOutSpeed: 0
