@@ -288,6 +288,7 @@ public class CardDisplay : MonoBehaviour
         GameController.gameController.UpdateReputations(4);
         if (card.option4FollowCard)
         {
+            GameController.gameController.previousCard = card;
             StopCoroutine(typeTextCoroutine);
             StartCoroutine(FadeImage(fadeSpeed));
             GameController.gameController.SetCurrentCard(4);
