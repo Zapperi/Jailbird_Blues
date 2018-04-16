@@ -159,4 +159,38 @@ public class CardValues : ScriptableObject									//switched the surface from M
     public List<int> option4RemovedSwitches;
     [Tooltip("What card comes after this option?")]
     public CardValues option4FollowCard;                                    // Does this card have a follow-up card and if yes, which card?
+
+
+    [Header("FX settings: ")]
+    [Tooltip("Does fx timings define changing to the following card after this.")]
+    public bool isTimeBasedCard;
+    [Header("SFX settings:")]
+    [Tooltip("Prewait before the sfx is played.")]
+    public float sfxPrewait;
+    [Tooltip("Played sound effect.")]
+    public AudioClip sfx;
+    [Tooltip("Is this sound effect faded out.")]
+    public bool sfxHasFadeOut;
+    [Tooltip("How long the sfx is played before it is faded out. The default is 1 second.")]
+    public float sfxFadeOutAt;
+    [Tooltip("How long does the fade-out at max take time.")]
+    public float sfxFadeOutSpeed;
+    [Tooltip("Time waited after the sfx is played.")]
+    public float sfxAfterWait;
+    [Header("PostProcessingEffect settings:")]
+    [Tooltip("Is there a fade-in.")]
+    public bool ppsHasFadeIn;
+    [Tooltip("Fade mode: 0 = normal (cetered), 1 = left to right")]
+    [Range(0, 1)]
+    public int ppsFadeMode;
+    [Tooltip("Is there a black screen before the fade-in. This is used to delay the fade-in.")]
+    public bool blackScreenStart;
+    [Tooltip("How long does the fade in take. The default value (if used) is 1 second.")]
+    public float ppsFadeInSpeed;
+    [Tooltip("How long is the card showed before fade-out or changing to the next card.")]
+    public float ppsShowCard;
+    [Tooltip("Is there a fade-out.")]
+    bool ppsHasFadeOut;
+    [Tooltip("How long does the fade-out take.")]
+    public float fadeOutSpeed;
 }
