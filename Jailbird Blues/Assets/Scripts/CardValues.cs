@@ -185,12 +185,14 @@ public class CardValues : ScriptableObject									//switched the surface from M
     public int ppsFadeMode;
     [Tooltip("Is there a black screen before the fade-in. This is used to delay the fade-in.")]
     public bool blackScreenStart;
+    [Tooltip("For how long the screen is black.")]
+    public float blackScreenTime;
     [Tooltip("How long does the fade in take. The default value (if used) is 1 second.")]
     public float ppsFadeInSpeed;
     [Tooltip("How long is the card showed before fade-out or changing to the next card.")]
     public float ppsShowCard;
     [Tooltip("Is there a fade-out.")]
-    bool ppsHasFadeOut;
+    public bool ppsHasFadeOut;
     [Tooltip("How long does the fade-out take.")]
     public float fadeOutSpeed;
 }
