@@ -19,7 +19,7 @@ MonoBehaviour:
   timeOfDay: 0
   storyPhase: 0
   backgroundImage: {fileID: 21300000, guid: 6418a1561f9767d4f9ab671e48f42dde, type: 3}
-  foregroundImage: {fileID: 21300000, guid: 99808a1fc3777a24ba3fe07077fdbc7e, type: 3}
+  foregroundImage: {fileID: 21300000, guid: 35aefacc3f074a4478e9117aec8c5539, type: 3}
   foregroundImage2: {fileID: 0}
   foregroundImage3: {fileID: 0}
   foregroundImage4: {fileID: 0}
@@ -34,7 +34,7 @@ MonoBehaviour:
     death situation. Even then there are no guarantees. Also other inmates generally
     don\u2019t like the guards and get paranoid about snitches. Well, talking about
     pigs makes me hungry. Let\u2019s go eat!\u201D\r\n"
-  logText: 19
+  logText: 
   endCard: 0
   timeCard: 1
   repeatable: 0
@@ -79,3 +79,18 @@ MonoBehaviour:
   option4ObtainedSwitches: 
   option4RemovedSwitches: 
   option4FollowCard: {fileID: 11400000, guid: f58d31edf61b70642a2c3eb340f141b2, type: 2}
+  isTimeBasedCard: 0
+  sfxPrewait: 0
+  sfx: {fileID: 0}
+  sfxHasFadeOut: 0
+  sfxFadeOutAt: 0
+  sfxFadeOutSpeed: 0
+  sfxAfterWait: 0
+  ppsHasFadeIn: 0
+  ppsFadeMode: 0
+  blackScreenStart: 0
+  blackScreenTime: 0
+  ppsFadeInSpeed: 0
+  ppsShowCard: 0
+  ppsHasFadeOut: 0
+  fadeOutSpeed: 0

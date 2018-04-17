@@ -23,17 +23,24 @@ MonoBehaviour:
   foregroundImage2: {fileID: 0}
   foregroundImage3: {fileID: 0}
   foregroundImage4: {fileID: 0}
+  bgMusic: {fileID: 0}
+  bgAmbientAudio: {fileID: 0}
+  musicDecrease: 0
+  ambientDecrease: 0
+  musicOff: 0
+  ambientOff: 0
   cardText: "The Punks table is overcrowded and noisy. You hear fragments of conversations
     pertaining to absolute freedom, libertarianism, anarcho-capitalism and others.
     Two punks at the end of the table snatch your tray away laughing.\r\n\u201DSharing
     is everything don\u2019t you think so too?\u201D\r"
+  logText: 
   endCard: 0
+  timeCard: 0
   repeatable: 0
   OptionsOn: 0
   Option1On: 0
   option1ReqSwitches: 
   option1text: 
-  option1LogText: 
   option1IrsReputation: 0
   option1PunkReputation: 0
   option1ShakeReputation: 0
@@ -44,7 +51,6 @@ MonoBehaviour:
   Option2On: 0
   option2ReqSwitches: 
   option2text: 
-  option2LogText: 
   option2IrsReputation: 0
   option2PunkReputation: 0
   option2ShakeReputation: 0
@@ -55,7 +61,6 @@ MonoBehaviour:
   Option3On: 0
   option3ReqSwitches: 
   option3text: 
-  option3LogText: 
   option3IrsReputation: 0
   option3PunkReputation: 0
   option3ShakeReputation: 0
@@ -66,7 +71,6 @@ MonoBehaviour:
   Option4On: 1
   option4ReqSwitches: 
   option4text: 
-  option4LogText: 
   option4IrsReputation: 0
   option4PunkReputation: 0
   option4ShakeReputation: 0
@@ -74,3 +78,18 @@ MonoBehaviour:
   option4ObtainedSwitches: 
   option4RemovedSwitches: 
   option4FollowCard: {fileID: 11400000, guid: c5ea70ee1d77d344aa960765482da970, type: 2}
+  isTimeBasedCard: 0
+  sfxPrewait: 0
+  sfx: {fileID: 0}
+  sfxHasFadeOut: 0
+  sfxFadeOutAt: 0
+  sfxFadeOutSpeed: 0
+  sfxAfterWait: 0
+  ppsHasFadeIn: 0
+  ppsFadeMode: 0
+  blackScreenStart: 0
+  blackScreenTime: 0
+  ppsFadeInSpeed: 0
+  ppsShowCard: 0
+  ppsHasFadeOut: 0
+  fadeOutSpeed: 0

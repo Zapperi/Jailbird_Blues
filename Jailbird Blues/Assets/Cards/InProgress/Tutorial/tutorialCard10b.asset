@@ -31,7 +31,7 @@ MonoBehaviour:
   ambientOff: 0
   cardText: "The inmate counts his money as the bell rings for dinner. The inmate
     turns and scampers away.\r\n\u201DBe seeing you around newbie!\u201D\r"
-  logText: 15
+  logText: 
   endCard: 0
   timeCard: 0
   repeatable: 0
@@ -76,3 +76,18 @@ MonoBehaviour:
   option4ObtainedSwitches: 
   option4RemovedSwitches: 
   option4FollowCard: {fileID: 11400000, guid: 3da7f8e5b1875f14b89742c0f33582a6, type: 2}
+  isTimeBasedCard: 0
+  sfxPrewait: 0
+  sfx: {fileID: 0}
+  sfxHasFadeOut: 0
+  sfxFadeOutAt: 0
+  sfxFadeOutSpeed: 0
+  sfxAfterWait: 0
+  ppsHasFadeIn: 0
+  ppsFadeMode: 0
+  blackScreenStart: 0
+  blackScreenTime: 0
+  ppsFadeInSpeed: 0
+  ppsShowCard: 0
+  ppsHasFadeOut: 0
+  fadeOutSpeed: 0

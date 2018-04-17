@@ -32,7 +32,7 @@ MonoBehaviour:
   cardText: "The inmate peeks around nervously and sees a guard approaching and scurries
     away.\r\n\u201DWhat\u2019s wrong with you? I just wanted to have a conversation,
     man!\u201D\r"
-  logText: 13
+  logText: 
   endCard: 0
   timeCard: 0
   repeatable: 0
@@ -77,3 +77,18 @@ MonoBehaviour:
   option4ObtainedSwitches: 
   option4RemovedSwitches: 
   option4FollowCard: {fileID: 11400000, guid: 341b250beaad98c4db59db903203399c, type: 2}
+  isTimeBasedCard: 0
+  sfxPrewait: 0
+  sfx: {fileID: 0}
+  sfxHasFadeOut: 0
+  sfxFadeOutAt: 0
+  sfxFadeOutSpeed: 0
+  sfxAfterWait: 0
+  ppsHasFadeIn: 0
+  ppsFadeMode: 0
+  blackScreenStart: 0
+  blackScreenTime: 0
+  ppsFadeInSpeed: 0
+  ppsShowCard: 0
+  ppsHasFadeOut: 0
+  fadeOutSpeed: 0

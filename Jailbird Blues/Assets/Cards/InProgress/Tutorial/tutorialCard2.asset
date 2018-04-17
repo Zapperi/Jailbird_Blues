@@ -31,7 +31,7 @@ MonoBehaviour:
   ambientOff: 0
   cardText: "The guard leaves you with Freddie Cooks. Cooks speaks.\r\n\u201DYou don\u2019t
     look like you belong here. What did you do?\u201D\r\n"
-  logText: dapadii
+  logText: 
   endCard: 0
   timeCard: 0
   repeatable: 0
@@ -76,3 +76,18 @@ MonoBehaviour:
   option4ObtainedSwitches: 
   option4RemovedSwitches: 
   option4FollowCard: {fileID: 11400000, guid: 0aa2e51e50f741f4da0a34f203566cef, type: 2}
+  isTimeBasedCard: 0
+  sfxPrewait: 0
+  sfx: {fileID: 0}
+  sfxHasFadeOut: 0
+  sfxFadeOutAt: 0
+  sfxFadeOutSpeed: 0
+  sfxAfterWait: 0
+  ppsHasFadeIn: 0
+  ppsFadeMode: 0
+  blackScreenStart: 0
+  blackScreenTime: 0
+  ppsFadeInSpeed: 0
+  ppsShowCard: 0
+  ppsHasFadeOut: 0
+  fadeOutSpeed: 0
