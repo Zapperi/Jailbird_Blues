@@ -23,6 +23,9 @@ public class OptionsSliders : MonoBehaviour {
 		this.volume = value;
 		audioSource.volume = volume;
 	}
+	public void SfxChanged(float value){
+		//value on slideristä saatava float välillä 0-1. valuen rangen voi tarvittaessa vaihtaa
+	}
 
 	public void ScrollSpeedChanged(float value){
 		this.textSpeed = value;
@@ -36,5 +39,4 @@ public class OptionsSliders : MonoBehaviour {
 	public void GammaChanged(float value){
 		gammaImage.color = new Color(0.25f, 0.25f, 0.25f, value);
 	}
-
 }
