@@ -870,6 +870,22 @@ Prefab:
       propertyPath: invPag
       value: 
       objectReference: {fileID: 1268745000}
+    - target: {fileID: 114660340165294724, guid: a3ab09f29257ea244a9cd7c582d06ca3,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 0b3495af3b9c9e347b0292eae5baf7d1,
+        type: 3}
+    - target: {fileID: 224274300938819260, guid: a3ab09f29257ea244a9cd7c582d06ca3,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 224274300938819260, guid: a3ab09f29257ea244a9cd7c582d06ca3,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -430
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a3ab09f29257ea244a9cd7c582d06ca3, type: 2}
   m_IsPrefabParent: 0
