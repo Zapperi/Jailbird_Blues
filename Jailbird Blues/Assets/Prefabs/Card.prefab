@@ -1087,7 +1087,7 @@ MonoBehaviour:
   m_Text: "A guard leads you through the prison hallways while the barred doors close
     behind you. The echoes fade like your hopes getting out this hellhole.  The guard
     speaks:\n\u201DFreddie Cooks here mentors you in how we do things here. Play nice
-    and you\u2019ll go a long way.\u201D\r\n"
+    and you\u2019ll go a long way.\u201D\r \n"
 --- !u!114 &114260851468937978
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2191,7 +2191,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 5424cf82e4a177a4d8bc128bcba293bb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0b3495af3b9c9e347b0292eae5baf7d1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3094,8 +3094,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -429, y: 260}
-  m_SizeDelta: {x: 80, y: 150}
+  m_AnchoredPosition: {x: -430, y: 260}
+  m_SizeDelta: {x: 80, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224275146582945062
 RectTransform:
