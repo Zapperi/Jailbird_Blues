@@ -32,7 +32,7 @@ MonoBehaviour:
   cardText: You step outside to a yard closed off with high fences topped with barb
     wire. Guards in watchtowers monitor the area. Other inmates are prowling around,
     playing dice or pumping iron.
-  logText: 88
+  logText: 
   endCard: 0
   timeCard: 0
   repeatable: 0
@@ -77,3 +77,18 @@ MonoBehaviour:
   option4ObtainedSwitches: 
   option4RemovedSwitches: 
   option4FollowCard: {fileID: 11400000, guid: 40efb8fe641186a45a566343b32c410e, type: 2}
+  isTimeBasedCard: 0
+  sfxPrewait: 0
+  sfx: {fileID: 0}
+  sfxHasFadeOut: 0
+  sfxFadeOutAt: 0
+  sfxFadeOutSpeed: 0
+  sfxAfterWait: 0
+  ppsHasFadeIn: 0
+  ppsFadeMode: 0
+  blackScreenStart: 0
+  blackScreenTime: 0
+  ppsFadeInSpeed: 0
+  ppsShowCard: 0
+  ppsHasFadeOut: 0
+  fadeOutSpeed: 0

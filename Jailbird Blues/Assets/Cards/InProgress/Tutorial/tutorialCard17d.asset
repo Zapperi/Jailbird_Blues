@@ -19,21 +19,28 @@ MonoBehaviour:
   timeOfDay: 0
   storyPhase: 0
   backgroundImage: {fileID: 21300000, guid: 131dee0c67f126347b72cba445163453, type: 3}
-  foregroundImage: {fileID: 21300000, guid: 99808a1fc3777a24ba3fe07077fdbc7e, type: 3}
+  foregroundImage: {fileID: 21300000, guid: 35aefacc3f074a4478e9117aec8c5539, type: 3}
   foregroundImage2: {fileID: 0}
   foregroundImage3: {fileID: 0}
   foregroundImage4: {fileID: 0}
+  bgMusic: {fileID: 0}
+  bgAmbientAudio: {fileID: 0}
+  musicDecrease: 0
+  ambientDecrease: 0
+  musicOff: 0
+  ambientOff: 0
   cardText: "Inmate from the kitchen walks up to Freddie with something wrapped in
     a napkin.\r\n\u201DI heard you\u2019ll be flying away soon Freddie, so here\u2019s
     a little parting gift to thank you.\u201D\r\nThe inmate gives Freddie an extra
     brownie wrapped in a napkin and leaves.\r"
+  logText: 
   endCard: 0
+  timeCard: 0
   repeatable: 0
   OptionsOn: 0
   Option1On: 0
   option1ReqSwitches: 
   option1text: 
-  option1LogText: 
   option1IrsReputation: 0
   option1PunkReputation: 0
   option1ShakeReputation: 0
@@ -44,7 +51,6 @@ MonoBehaviour:
   Option2On: 0
   option2ReqSwitches: 
   option2text: 
-  option2LogText: 
   option2IrsReputation: 0
   option2PunkReputation: 0
   option2ShakeReputation: 0
@@ -55,7 +61,6 @@ MonoBehaviour:
   Option3On: 0
   option3ReqSwitches: 
   option3text: 
-  option3LogText: 
   option3IrsReputation: 0
   option3PunkReputation: 0
   option3ShakeReputation: 0
@@ -63,10 +68,9 @@ MonoBehaviour:
   option3ObtainedSwitches: 
   option3RemovedSwitches: 
   option3FollowCard: {fileID: 0}
-  Option4On: 1
+  Option4On: 0
   option4ReqSwitches: 
   option4text: 
-  option4LogText: 
   option4IrsReputation: 0
   option4PunkReputation: 0
   option4ShakeReputation: 0
@@ -74,3 +78,18 @@ MonoBehaviour:
   option4ObtainedSwitches: 
   option4RemovedSwitches: 
   option4FollowCard: {fileID: 11400000, guid: ac3b3fec43ad8a04e84f092c9a198147, type: 2}
+  isTimeBasedCard: 0
+  sfxPrewait: 0
+  sfx: {fileID: 0}
+  sfxHasFadeOut: 0
+  sfxFadeOutAt: 0
+  sfxFadeOutSpeed: 0
+  sfxAfterWait: 0
+  ppsHasFadeIn: 0
+  ppsFadeMode: 0
+  blackScreenStart: 0
+  blackScreenTime: 0
+  ppsFadeInSpeed: 0
+  ppsShowCard: 0
+  ppsHasFadeOut: 0
+  fadeOutSpeed: 0

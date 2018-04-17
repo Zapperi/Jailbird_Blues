@@ -23,18 +23,25 @@ MonoBehaviour:
   foregroundImage2: {fileID: 21300000, guid: a28e6d0fa77204b459a3ce6479e39467, type: 3}
   foregroundImage3: {fileID: 0}
   foregroundImage4: {fileID: 0}
+  bgMusic: {fileID: 0}
+  bgAmbientAudio: {fileID: 0}
+  musicDecrease: 0
+  ambientDecrease: 0
+  musicOff: 0
+  ambientOff: 0
   cardText: "As you sit down the members of the I.R.S. look you over and whisper inaudibly
     something. Then they all turn to you and smilingly nod.\r\n\u201DYou\u2019re new
     here it seems. If you play your cards right we might be interested in new recruits,
     but right now we are in the middle of a meeting. So if you could kindly go somewhere
     else. We\u2019ll be in contact whenever we need you.\u201D\r\n"
+  logText: 
   endCard: 0
+  timeCard: 0
   repeatable: 0
   OptionsOn: 0
   Option1On: 0
   option1ReqSwitches: 
   option1text: 
-  option1LogText: 
   option1IrsReputation: 0
   option1PunkReputation: 0
   option1ShakeReputation: 0
@@ -45,7 +52,6 @@ MonoBehaviour:
   Option2On: 0
   option2ReqSwitches: 
   option2text: 
-  option2LogText: 
   option2IrsReputation: 0
   option2PunkReputation: 0
   option2ShakeReputation: 0
@@ -56,7 +62,6 @@ MonoBehaviour:
   Option3On: 0
   option3ReqSwitches: 
   option3text: 
-  option3LogText: 
   option3IrsReputation: 0
   option3PunkReputation: 0
   option3ShakeReputation: 0
@@ -67,7 +72,6 @@ MonoBehaviour:
   Option4On: 1
   option4ReqSwitches: 
   option4text: 
-  option4LogText: 
   option4IrsReputation: 0
   option4PunkReputation: 0
   option4ShakeReputation: 0
@@ -75,3 +79,18 @@ MonoBehaviour:
   option4ObtainedSwitches: 
   option4RemovedSwitches: 
   option4FollowCard: {fileID: 11400000, guid: e8a8c2ee21dd82440a83646542b04d58, type: 2}
+  isTimeBasedCard: 0
+  sfxPrewait: 0
+  sfx: {fileID: 0}
+  sfxHasFadeOut: 0
+  sfxFadeOutAt: 0
+  sfxFadeOutSpeed: 0
+  sfxAfterWait: 0
+  ppsHasFadeIn: 0
+  ppsFadeMode: 0
+  blackScreenStart: 0
+  blackScreenTime: 0
+  ppsFadeInSpeed: 0
+  ppsShowCard: 0
+  ppsHasFadeOut: 0
+  fadeOutSpeed: 0

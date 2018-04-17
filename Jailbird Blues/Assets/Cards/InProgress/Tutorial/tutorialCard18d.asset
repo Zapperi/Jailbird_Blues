@@ -19,10 +19,16 @@ MonoBehaviour:
   timeOfDay: 0
   storyPhase: 0
   backgroundImage: {fileID: 21300000, guid: 131dee0c67f126347b72cba445163453, type: 3}
-  foregroundImage: {fileID: 21300000, guid: 99808a1fc3777a24ba3fe07077fdbc7e, type: 3}
+  foregroundImage: {fileID: 21300000, guid: 11ab3ea7438de9447bcee13d95d79b00, type: 3}
   foregroundImage2: {fileID: 0}
   foregroundImage3: {fileID: 0}
   foregroundImage4: {fileID: 0}
+  bgMusic: {fileID: 0}
+  bgAmbientAudio: {fileID: 0}
+  musicDecrease: 0
+  ambientDecrease: 0
+  musicOff: 0
+  ambientOff: 0
   cardText: "\u201DSo, you wanted to give an old man some company. Wise choice maybe?
     Don\u2019t worry, this place will give you lots of opportunities to behave like
     an animal. Why not to enjoy civilized manners while you still can? I\u2019m trying
@@ -63,7 +69,7 @@ MonoBehaviour:
   option3ObtainedSwitches: 
   option3RemovedSwitches: 
   option3FollowCard: {fileID: 0}
-  Option4On: 1
+  Option4On: 0
   option4ReqSwitches: 
   option4text: 
   option4IrsReputation: 0
@@ -73,3 +79,18 @@ MonoBehaviour:
   option4ObtainedSwitches: 01000000
   option4RemovedSwitches: 
   option4FollowCard: {fileID: 11400000, guid: b6cefcc4e82dc1f4ba97cd31c8581168, type: 2}
+  isTimeBasedCard: 0
+  sfxPrewait: 0
+  sfx: {fileID: 0}
+  sfxHasFadeOut: 0
+  sfxFadeOutAt: 0
+  sfxFadeOutSpeed: 0
+  sfxAfterWait: 0
+  ppsHasFadeIn: 0
+  ppsFadeMode: 0
+  blackScreenStart: 0
+  blackScreenTime: 0
+  ppsFadeInSpeed: 0
+  ppsShowCard: 0
+  ppsHasFadeOut: 0
+  fadeOutSpeed: 0

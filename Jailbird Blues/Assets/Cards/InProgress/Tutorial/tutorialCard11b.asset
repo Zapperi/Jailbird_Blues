@@ -33,7 +33,7 @@ MonoBehaviour:
     but there\u2019s a risk of them taking advantage of you. Nobody here wants to
     be seen as weak as they get eaten. Sometimes literally. Thankfully I retire today,
     because that money was fake. But now, let\u2019s go eat!\u201D"
-  logText: 18
+  logText: 
   endCard: 0
   timeCard: 1
   repeatable: 0
@@ -78,3 +78,18 @@ MonoBehaviour:
   option4ObtainedSwitches: 
   option4RemovedSwitches: 
   option4FollowCard: {fileID: 11400000, guid: f58d31edf61b70642a2c3eb340f141b2, type: 2}
+  isTimeBasedCard: 0
+  sfxPrewait: 0
+  sfx: {fileID: 0}
+  sfxHasFadeOut: 0
+  sfxFadeOutAt: 0
+  sfxFadeOutSpeed: 0
+  sfxAfterWait: 0
+  ppsHasFadeIn: 0
+  ppsFadeMode: 0
+  blackScreenStart: 0
+  blackScreenTime: 0
+  ppsFadeInSpeed: 0
+  ppsShowCard: 0
+  ppsHasFadeOut: 0
+  fadeOutSpeed: 0
