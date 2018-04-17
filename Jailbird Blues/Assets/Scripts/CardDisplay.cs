@@ -8,6 +8,7 @@ public class CardDisplay : MonoBehaviour
     // --CARD VARIABLES--
     public CardValues card;
     public Text cardText;
+    public Text cardPerson;
     public Text button1text;
     public Text button2text;
     public Text button3text;
@@ -131,6 +132,8 @@ public class CardDisplay : MonoBehaviour
         button2text.text = card.option2text;
         button3text.text = card.option3text;
         button4text.text = card.option4text;
+
+        cardPerson.text = card.cardTextPerson;          // Inserts speakers name
         
         //Update current button functions
         button1.onClick.RemoveAllListeners();           // Make sure to remove old functions before adding new ones..

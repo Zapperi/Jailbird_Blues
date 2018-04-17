@@ -47,6 +47,8 @@ public class CardValues : ScriptableObject									//switched the surface from M
     public bool musicOff;
     [Tooltip("If you want to turn off the ambient audio.")]
     public bool ambientOff;
+    [Tooltip("Text that shows who speaks.")]
+    public string cardTextPerson;
     [Tooltip("Text that shows on the card.")]
     [TextArea]
     public string cardText;													//Card's text

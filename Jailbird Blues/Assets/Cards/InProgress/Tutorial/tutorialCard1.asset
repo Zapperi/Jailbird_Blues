@@ -29,6 +29,7 @@ MonoBehaviour:
   ambientDecrease: 0
   musicOff: 0
   ambientOff: 0
+  cardTextPerson: Intro
   cardText: "A guard leads you through the prison hallways while the barred doors
     close behind you. The echoes fade like your hopes getting out this hellhole.  The
     guard speaks:\n\u201DFreddie Cooks here mentors you in how we do things here.
@@ -88,6 +89,8 @@ MonoBehaviour:
   ppsHasFadeIn: 0
   ppsFadeMode: 0
   blackScreenStart: 0
+  blackScreenTime: 0
   ppsFadeInSpeed: 0
   ppsShowCard: 0
+  ppsHasFadeOut: 0
   fadeOutSpeed: 0
