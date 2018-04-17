@@ -133,7 +133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae57894b462750541b777f140cd81dc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardValues: {fileID: 0}
+  cardDisplay: {fileID: 0}
   punksRep: 0
   irsRep: 0
   shakersRep: 0

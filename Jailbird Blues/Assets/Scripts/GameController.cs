@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class GameController : MonoBehaviour {
 
 	public static GameController gameController;									//a reference to the gamecontroller
-    public CardValues cardValues;
+    public CardDisplay cardDisplay;                                                 // Reference to the cardDisplay, set in inspector.
 
     private bool addToDeck;                                                         //Used to track if card can be added
     public int punksRep;															//the players reputation among the Punks
@@ -81,17 +81,13 @@ public class GameController : MonoBehaviour {
 
     void Update()
     {
-
         if (endcardOn == true)                                                       //Get next card if end card option is enabled and button 4 is pressed
         {
-            Debug.Log("arvo uusi kortti");
             GetNextCard();
             endcardOn = false;
         }
 		timeOfDayText.text = "Day " + day + " : " + scheduleName +" time";
-        locationText.text = scheduleName;
-
-		
+        locationText.text = scheduleName;	
     }
 
     public void UpdateReputations(int slot)

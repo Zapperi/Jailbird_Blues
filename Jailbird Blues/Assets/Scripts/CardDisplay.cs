@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class CardDisplay : MonoBehaviour
 {
     // --CARD VARIABLES--
+    [HideInInspector]
+    public Image overLayingImage;           // Transparent image that can be placed on top of everything, preventing player's interaction.
     public CardValues card;
     public Text cardText;
     public Text cardPerson;
@@ -63,14 +65,20 @@ public class CardDisplay : MonoBehaviour
     public InventoryPage invPag;
 
 
-    void Start()
+    void Awake()
     {
-        fadeImage.gameObject.SetActive(false);                      // At start, set the overlaiyng fade image to disabled
-        buttonNoteBook.onClick.RemoveAllListeners();                // Make sure all buttons have default values
-        buttonNoteBooktext.text = "NoteBook";                       // Set the notebook button text
-        buttonNoteBook.onClick.AddListener(ButtonNotebookPressed);  // Connect notebook to it's button
-        typeTextCoroutine = TypeText(card.cardText);                // Make sure the text scroll coroutine has something in it
-        StartCoroutine(typeTextCoroutine);                          // Start TypeText coroutine as game opens
+        overLayingImage = GameObject.Find("PlayerBlocker").GetComponent<Image>();   // At start, get reference to the overLayingImage from scene. 
+        overLayingImage.gameObject.SetActive(false);                               // Deactivate the gameobject, because it had to be active in order to find it.
+    }
+
+    void Start()
+    {     
+        fadeImage.gameObject.SetActive(false);                                      // At start, set the overlaiyng fade image to disabled
+        buttonNoteBook.onClick.RemoveAllListeners();                                // Make sure all buttons have default values
+        buttonNoteBooktext.text = "NoteBook";                                       // Set the notebook button text
+        buttonNoteBook.onClick.AddListener(ButtonNotebookPressed);                  // Connect notebook to it's button
+        typeTextCoroutine = TypeText(card.cardText);                                // Make sure the text scroll coroutine has something in it
+        StartCoroutine(typeTextCoroutine);                                          // Start TypeText coroutine as game opens
 
     }
     void Update()
@@ -166,8 +174,7 @@ public class CardDisplay : MonoBehaviour
 			button1.interactable = true;
 		}else if (card.Option1On == true && GameController.gameController.Check1Switches() == false){
 			button1.gameObject.SetActive(true);
-			button1.interactable = false;
-            
+			button1.interactable = false;   
         }
         else
             button1.gameObject.SetActive(false);
@@ -203,19 +210,12 @@ public class CardDisplay : MonoBehaviour
         else
             button4.gameObject.SetActive(false);
 
-        if (continuebutton == true)
-            button5.gameObject.SetActive(true);
-        else if (typeTextRunning == false && card.OptionsOn == false)
-            button5.gameObject.SetActive(true);
-        else if (typeTextRunning == true)
-        {
+        if (typeTextRunning)
             button5.gameObject.SetActive(false);
-        }
+        else if (continuebutton == true)
+            button5.gameObject.SetActive(true);
         else
-        {
             button5.gameObject.SetActive(false);
-        }
-       
     }
 
     //--BUTTON FUNCTIONS--
@@ -458,5 +458,16 @@ public class CardDisplay : MonoBehaviour
             buttonPopUp4Img.SetActive(false);
     }
     
+
+    public void disableButtons()                                    // Function that disables all player interaction by using overlayingimage
+    {
+        overLayingImage.color = new Color(0.25f, 0.25f, 0.25f, 0);  // Failsafe, make sure it is transparent
+        overLayingImage.gameObject.SetActive(true);                 // Disable interaction by enabling the transparent image
+    }
+    public void enableButtons()                                     // Function that re-enables player interaction
+    {
+        overLayingImage.color = new Color(0.25f, 0.25f, 0.25f, 0);  // Failsafe, keep making sure it is transparent.
+        overLayingImage.gameObject.SetActive(false);                // Disable the transparent image.
+    }
 }
 
