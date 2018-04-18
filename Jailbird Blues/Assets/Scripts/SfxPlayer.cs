@@ -7,6 +7,7 @@ public class SfxPlayer : MonoBehaviour {
     public AudioSource sfxSource;
     public AudioClip[] buttonSounds;
     public AudioClip itemReceived;
+    public AudioSource timedSfxSource;
 
     public AudioSource musicSource1;                                                 //2 sources for cross-fade transitions
     public AudioSource musicSource2;
@@ -18,12 +19,27 @@ public class SfxPlayer : MonoBehaviour {
     private bool music1FadingIn;
     private bool music2FadingIn;
 
+    private bool timedIsWaiting;
+    private bool timedSfxPlaying;
+    private bool timedSfxIsFadingOut;
+    private bool timedIsAfterWaiting;
+    private bool timedSfxHasFadeOut;
+    private bool timedHasAfterWait;
+    private float timeUntilStart;
+    private float timeUntilFadeOut;
+    private float afterWaitTime;
+    private float fadeOutAmount;
+
+
     private void Awake()
     {
         music1FadingOut = false;
         music2FadingOut = false;
         music1FadingIn = false;
         music2FadingIn = false;
+        timedSfxPlaying = false;
+        timedIsWaiting = false;
+        timedIsAfterWaiting = false;
     }
 
     private void Update()
@@ -62,6 +78,67 @@ public class SfxPlayer : MonoBehaviour {
             {
                 musicSource2.Stop();
                 music2FadingOut = false;
+            }
+        }
+        //**************
+        if (timedIsWaiting)
+        {
+            timeUntilStart -= Time.deltaTime;
+            if (timeUntilStart <= 0)
+            {
+                timedIsWaiting = false;
+                timedSfxPlaying = true;
+                timedSfxSource.Play();
+                
+            }
+        }
+        if (timedSfxHasFadeOut)
+        {
+            timeUntilFadeOut -= Time.deltaTime;
+        }
+
+        if (timedSfxPlaying)
+        {
+            if(!timedSfxSource.isPlaying)
+            {
+                timedSfxPlaying = false;
+
+                if (timedHasAfterWait)
+                {
+                    timedIsAfterWaiting = true;
+                } else
+                {
+                    GameController.gameController.SFXFadesDone();
+                }
+            } else if (timeUntilFadeOut < 0f)
+            {
+                timedSfxPlaying = false;
+                timedSfxIsFadingOut = true;
+            }
+        }
+        if (timedSfxIsFadingOut)
+        {
+            timedSfxSource.volume -= fadeOutAmount;
+            if (timedSfxSource.volume <= 0f)
+            {
+                timedSfxIsFadingOut = false;
+                if (timedHasAfterWait)
+                {
+                    timedIsAfterWaiting = true;
+                } else
+                {
+                    GameController.gameController.SFXFadesDone();
+                }
+            }
+        }
+
+        if (timedIsAfterWaiting)
+        {
+            afterWaitTime -= Time.deltaTime;
+            if (afterWaitTime <= 0)
+            {
+                timedIsAfterWaiting = false;
+                GameController.gameController.SFXFadesDone();
             }
         }
     }
@@ -324,8 +401,62 @@ public class SfxPlayer : MonoBehaviour {
                 ambientSource.volume = aVol;
             }
         }
+    }
 
+    public void PlayTimedSfx(CardValues currentCard)
+    {
+        if (currentCard.sfx == null)
+        {
+            GameController.gameController.SFXFadesDone();
+        } else
+        {
+            timedSfxSource.clip = currentCard.sfx;
+            timedSfxSource.volume = 1f;
 
+            if (currentCard.sfxPrewait == 0)
+            {
+                timedIsWaiting = false;
+                timedSfxPlaying = true;
+                timedSfxSource.Play();
+            } else
+            {
+                timedIsWaiting = true;
+                timeUntilStart = currentCard.sfxPrewait;
+
+                if (currentCard.sfxFadeOutAt == 0)
+                {
+                    timedSfxHasFadeOut = false;
+                }
+                else
+                {
+                    timedSfxHasFadeOut = true;
+                    timeUntilFadeOut = currentCard.sfxFadeOutAt;
+                    if (timeUntilFadeOut < timeUntilStart)
+                    {
+                        timeUntilFadeOut += timeUntilStart;
+                    }
+                    if (currentCard.fadeOutSpeed == 0)
+                    {
+                        fadeOutAmount = 1f / 30f;
+                    } else
+                    {
+                        fadeOutAmount = currentCard.fadeOutSpeed / 60f;
+                    }
+
+                    if (currentCard.sfxAfterWait == 0)
+                    {
+                        timedHasAfterWait = false;
+                    } else
+                    {
+                        timedHasAfterWait = true;
+                        afterWaitTime = currentCard.sfxAfterWait;
+
+                    }
+
+                }
+            }
+            
+        }
     }
 }
 

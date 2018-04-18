@@ -219,8 +219,60 @@ public class CardDisplay : MonoBehaviour
     }
 
     //--BUTTON FUNCTIONS--
+
+    void ButtonPressed(int button)
+    {
+        GameController.gameController.AddSwitches(button);
+        GameController.gameController.RemoveSwitches(button);
+        GameController.gameController.UpdateReputations(button);
+        bool followUp = false;
+        if (button == 1 && card.option1FollowCard)
+        {
+            followUp = true;
+        }
+        if (button == 2 && card.option2FollowCard)
+        {
+            followUp = true;
+        }
+        if (button == 3 && card.option3FollowCard)
+        {
+            followUp = true;
+        }
+        if (button == 4 && card.option4FollowCard)
+        {
+            followUp = true;
+        }
+        if (followUp)
+        {
+            GameController.gameController.previousCard = card;                  // Updates gamecontroller's previous card to current card
+            StopCoroutine(typeTextCoroutine);                                   // Stop ongoing coroutine, so they won't mix up
+            StartCoroutine(FadeImage(fadeSpeed));                               // Fade in and out a overlay image and update card values under it.
+            GameController.gameController.SetCurrentCard(button);
+            if (button == 1)                                                    // Update the next card into given in cardDisplay.
+            {
+                card = card.option1FollowCard;
+            }
+            else if (button == 2)
+            {
+                card = card.option2FollowCard;
+            }
+            else if (button == 3)
+            {
+                card = card.option3FollowCard;
+            }
+            else if (button == 4)
+            {
+                card = card.option4FollowCard;
+            }
+            typeTextCoroutine = TypeText(card.cardText);                        // Update the text from new card
+            StartCoroutine(typeTextCoroutine);                                  // Start printing the new text
+        }
+    }
+
     void Button1pressed()
     {
+        ButtonPressed(1);
+        /*
         GameController.gameController.Add1Switches();
         GameController.gameController.Remove1Switches();
         GameController.gameController.UpdateReputations(1);                     //Update reputations
@@ -233,11 +285,13 @@ public class CardDisplay : MonoBehaviour
             card = card.option1FollowCard;                                      // Update the next card into given in cardDisplay.                                                         
             typeTextCoroutine = TypeText(card.cardText);                        // Update the text from new card
             StartCoroutine(typeTextCoroutine);                                  // Start printing the new text
-        }
+        }*/
 
     }
     void Button2pressed()
     {
+        ButtonPressed(2);
+        /*
         GameController.gameController.Add2Switches();
         GameController.gameController.Remove2Switches();
         GameController.gameController.UpdateReputations(2);
@@ -250,10 +304,12 @@ public class CardDisplay : MonoBehaviour
             card = card.option2FollowCard;
             typeTextCoroutine = TypeText(card.cardText);
             StartCoroutine(typeTextCoroutine);
-        }
+        }*/
     }
     void Button3pressed()
     {
+        ButtonPressed(3);
+        /*
         GameController.gameController.Add3Switches();
         GameController.gameController.Remove3Switches();
         GameController.gameController.UpdateReputations(3);
@@ -266,10 +322,12 @@ public class CardDisplay : MonoBehaviour
             card = card.option3FollowCard;
             typeTextCoroutine = TypeText(card.cardText);
             StartCoroutine(typeTextCoroutine);
-        }
+        }*/
     }
     void Button4pressed()
     {
+        ButtonPressed(4);
+        /*
         GameController.gameController.Add4Switches();
         GameController.gameController.Remove4Switches();
         GameController.gameController.UpdateReputations(4);
@@ -283,14 +341,17 @@ public class CardDisplay : MonoBehaviour
             typeTextCoroutine = TypeText(card.cardText);
             StartCoroutine(typeTextCoroutine);
         }
+        */
     }
     void Button5pressed()
     {
-        GameController.gameController.Add4Switches();
-        GameController.gameController.Remove4Switches();
-        GameController.gameController.UpdateReputations(4);
+        //GameController.gameController.Add4Switches();
+        //GameController.gameController.Remove4Switches();
+        //GameController.gameController.UpdateReputations(4);
         if (card.option4FollowCard)
         {
+            ButtonPressed(4);
+            /*
             GameController.gameController.previousCard = card;
             StopCoroutine(typeTextCoroutine);
             StartCoroutine(FadeImage(fadeSpeed));
@@ -298,9 +359,13 @@ public class CardDisplay : MonoBehaviour
             card = card.option4FollowCard;
             typeTextCoroutine = TypeText(card.cardText);
             StartCoroutine(typeTextCoroutine);
+            */
         }
         else if (card.endCard == true || card.option4FollowCard == null && card.Option4On)                              // If the card is an end card (ends the event), do this..
         {
+            GameController.gameController.AddSwitches(4);
+            GameController.gameController.RemoveSwitches(4);
+            GameController.gameController.UpdateReputations(4);
             GameController.gameController.endcardOn = true;         // Update the boolean, ending the event. 
         }
     }

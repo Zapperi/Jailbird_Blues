@@ -36,6 +36,13 @@ public class GameController : MonoBehaviour {
     public string logText;
     public List<string> logEvents;
 
+    public GameObject mainCamera;
+    public CardValues nextCardWaiting;
+    public bool waitingForPPS;
+    public bool waitingForSFX;
+    public bool cleaningUpFades;
+    public CardValues cardWaiting;
+
 
 
     void Awake()																	//when the game starts
@@ -65,7 +72,11 @@ public class GameController : MonoBehaviour {
 			schedule = 0;                                                           //the day begins with the first activity in the schedule 
             SetBackgroundAudio();
             AddLogEvent();
-            
+
+            waitingForPPS = false;
+            waitingForSFX = false;
+            cleaningUpFades = false;
+
             //GetNextCard();
 
         }
@@ -128,14 +139,21 @@ public class GameController : MonoBehaviour {
 		punksRep += punks;
 		shakersRep += shakers;
 		guardsRep += guards;
-		if(currentCard.timeCard)
-			AddTime();
 	}
 
 	public void GetNextCard()														//activates the next card from a new deck after the previous card has been resolved
 	{
+        int nextScheludeTime;
+        if (schedule < scheduleSize - 1)
+        {
+            nextScheludeTime = schedule + 1;
+        }
+        else
+        {
+            nextScheludeTime = 0;
+        }
         CardValues next;
-		switch (schedule)															//chooses the deck based on schedule
+		switch (nextScheludeTime)															//chooses the deck based on schedule
 		{
         case (0):
                 BuildDeck(cellCards);                                               //builds a new card deck from scratch
@@ -169,41 +187,128 @@ public class GameController : MonoBehaviour {
 		}
 	}
 
-    public void SetCurrentCard(int slot)
+    public void SetCurrentCard(int slot)                            //This is where changing begins.
     {
-        if (currentCard.timeCard)
+
+        if (currentCard.ppsHasFadeOut || currentCard.sfxHasFadeOut)
         {
-            AddTime();
+            cardDisplay.disableButtons();
+            switch (slot)
+            {
+                case 1:
+                    cardWaiting = currentCard.option1FollowCard;                // Put the next card on hold.
+                    break;
+                case 2:
+                    cardWaiting = currentCard.option2FollowCard;                // Put the next card on hold.
+                    break;
+                case 3:
+                    cardWaiting = currentCard.option3FollowCard;                // Put the next card on hold.
+                    break;
+                case 4:
+                    cardWaiting = currentCard.option4FollowCard;                // Put the next card on hold.
+                    break;
+            }
+            if (currentCard.ppsHasFadeOut)
+            {
+                waitingForPPS = true;
+                mainCamera.GetComponent<PPSManager>().DoFadeOut(currentCard);
+            }
         }
-        switch (slot)
+        else
         {
-            case 1:
-                currentCard = currentCard.option1FollowCard;                // Update the next card into given card.
-                break;
-            case 2:
-                currentCard = currentCard.option2FollowCard;                // Update the next card into given card.
-                break;
-            case 3:
-                currentCard = currentCard.option3FollowCard;                // Update the next card into given card.
-                break;
-            case 4:
-                currentCard = currentCard.option4FollowCard;                // Update the next card into given card.
-                break;
+            AddSwitches(slot);
+            RemoveSwitches(slot);
+            UpdateReputations(slot);
+            switch (slot)
+            {
+                case 1:
+                    ActuallyChangeCard(currentCard.option1FollowCard);          // Update the next card into given card.
+                    break;
+                case 2:
+                    ActuallyChangeCard(currentCard.option2FollowCard);          // Update the next card into given card.
+                    break;
+                case 3:
+                    ActuallyChangeCard(currentCard.option3FollowCard);          // Update the next card into given card.
+                    break;
+                case 4:
+                    ActuallyChangeCard(currentCard.option4FollowCard);          // Update the next card into given card.
+                    break;
+            }
         }
-        SetBackgroundAudio();         // Update audio.
-        AddLogEvent();
     }
 
     public void SetCurrentCard(CardValues next)
     {
+        ActuallyChangeCard(next);
+    }               //This is where changing begins.
+
+    public void ActuallyChangeCard(CardValues next)             //This is where the card changes.
+    {
+        if (cleaningUpFades)
+        {
+            cleaningUpFades = false;
+            return;
+        }
         if (currentCard.timeCard)
         {
             AddTime();
         }
         currentCard = next;
-        SetBackgroundAudio();
+        SetBackgroundAudio();         // Update audio.
         AddLogEvent();
+        if (currentCard.sfxPrewait > 0f || currentCard.sfxFadeOutAt > 0f)
+        {
+            Debug.Log("gc kutsuu sfx:ää");
+            waitingForSFX = true;
+            sfxSource.GetComponent<SfxPlayer>().PlayTimedSfx(currentCard);
+        }
 
+        if (currentCard.isTimeBasedCard)
+        {
+            if (currentCard.ppsHasFadeIn || currentCard.blackScreenStart || currentCard.ppsHasFadeOut || currentCard.ppsShowCard != 0)
+            {
+                waitingForPPS = true;
+                cardDisplay.disableButtons();
+                mainCamera.GetComponent<PPSManager>().SetFades(currentCard);
+                cardWaiting = currentCard.option4FollowCard;
+            }
+        }
+        else if (currentCard.ppsHasFadeIn||currentCard.blackScreenStart)                               //If the next card has a fade-in
+        {
+            waitingForPPS = true;
+            cleaningUpFades = true;
+            mainCamera.GetComponent<PPSManager>().SetFades(currentCard);
+        } else
+        {
+            if (mainCamera.GetComponent<PPSManager>().FadesAreOn())     //This checks if fades are on and fades out if necessary.
+            {
+                waitingForPPS = true;
+                cleaningUpFades = true;
+                mainCamera.GetComponent<PPSManager>().DoFadeIn();
+            }
+        }
+    }
+
+    public void PPSFadesDone()
+    {
+        waitingForPPS = false;
+        if (!waitingForSFX)
+        {
+            cardDisplay.enableButtons();
+            ActuallyChangeCard(cardWaiting);
+            cardWaiting = null;
+        }
+    }
+
+    public void SFXFadesDone()
+    {
+        waitingForSFX = false;
+        if (!waitingForPPS)
+        {
+            cardDisplay.enableButtons();
+            ActuallyChangeCard(cardWaiting);
+            cardWaiting = null;
+        }
     }
 
 
@@ -455,7 +560,50 @@ public class GameController : MonoBehaviour {
         return true;
     }
     //Adds switches from that opinion to allswitched[]
-    public void Add1Switches()
+
+    public void AddSwitches(int switches)
+    {
+        switch (switches)
+        {
+            case 1:
+                if (currentCard.option1ObtainedSwitches.Count > 0)
+                {
+                    for (int i = 0; i < currentCard.option1ObtainedSwitches.Count; i++)
+                    {
+                        allSwitches[currentCard.option1ObtainedSwitches[i]] = true;
+                    }
+                }
+                break;
+            case 2:
+                if (currentCard.option2ObtainedSwitches.Count > 0)
+                {
+                    for (int i = 0; i < currentCard.option2ObtainedSwitches.Count; i++)
+                    {
+                        allSwitches[currentCard.option2ObtainedSwitches[i]] = true;
+                    }
+                }
+                break;
+            case 3:
+                if (currentCard.option2ObtainedSwitches.Count > 0)
+                {
+                    for (int i = 0; i < currentCard.option3ObtainedSwitches.Count; i++)
+                    {
+                        allSwitches[currentCard.option3ObtainedSwitches[i]] = true;
+                    }
+                }
+                break;
+            case 4:
+                if (currentCard.option4ObtainedSwitches.Count > 0)
+                {
+                    for (int i = 0; i < currentCard.option4ObtainedSwitches.Count; i++)
+                    {
+                        allSwitches[currentCard.option4ObtainedSwitches[i]] = true;
+                    }
+                }
+                break;
+        }
+    }
+    /*public void Add1Switches()
     {
         if (currentCard.option1ObtainedSwitches.Count > 0)
         {
@@ -497,8 +645,54 @@ public class GameController : MonoBehaviour {
                 allSwitches[currentCard.option4ObtainedSwitches[i]] = true;
             }
         }
-    }
+    }*/
     //Removes switches from allswitched[]
+
+    public void RemoveSwitches(int switches)
+    {
+        switch (switches)
+        {
+            case 1:
+                if (currentCard.option1RemovedSwitches.Count > 0)
+                {
+                    for (int i = 0; i < currentCard.option1RemovedSwitches.Count; i++)
+                    {
+                        allSwitches[currentCard.option1RemovedSwitches[i]] = false;
+                    }
+                }
+                break;
+            case 2:
+                if (currentCard.option2RemovedSwitches.Count > 0)
+                {
+                    for (int i = 0; i < currentCard.option2RemovedSwitches.Count; i++)
+                    {
+                        allSwitches[currentCard.option2RemovedSwitches[i]] = false;
+                    }
+                }
+                break;
+            case 3:
+                if (currentCard.option3RemovedSwitches.Count > 0)
+                {
+                    for (int i = 0; i < currentCard.option3RemovedSwitches.Count; i++)
+                    {
+                        allSwitches[currentCard.option3RemovedSwitches[i]] = false;
+                    }
+                }
+                break;
+            case 4:
+                if (currentCard.option4RemovedSwitches.Count > 0)
+                {
+                    for (int i = 0; i < currentCard.option4RemovedSwitches.Count; i++)
+                    {
+                        allSwitches[currentCard.option4RemovedSwitches[i]] = false;
+                    }
+                }
+                break;
+
+        }
+    }
+
+    /*
     public void Remove1Switches()
     {
         if (currentCard.option1RemovedSwitches.Count > 0)
@@ -541,7 +735,7 @@ public class GameController : MonoBehaviour {
                 allSwitches[currentCard.option4RemovedSwitches[i]] = false;
             }
         }
-    }
+    }*/
 
     //Add an event to the log.
     public void AddLogEvent()
@@ -563,7 +757,7 @@ public class GameController : MonoBehaviour {
     public void AddTime()
     {
         schedule++;
-        if (schedule > scheduleSize)
+        if (schedule > scheduleSize-1)
         {
             schedule = 0;
             day++;

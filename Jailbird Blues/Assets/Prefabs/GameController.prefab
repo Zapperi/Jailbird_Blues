@@ -159,6 +159,12 @@ MonoBehaviour:
   logPage: {fileID: 0}
   logText: 
   logEvents: []
+  mainCamera: {fileID: 0}
+  nextCardWaiting: {fileID: 0}
+  waitingForPPS: 0
+  waitingForSFX: 0
+  cleaningUpFades: 0
+  cardWaiting: {fileID: 0}
 --- !u!114 &114852098042609194
 MonoBehaviour:
   m_ObjectHideFlags: 1

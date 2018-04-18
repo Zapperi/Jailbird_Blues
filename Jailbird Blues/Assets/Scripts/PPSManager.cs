@@ -3,54 +3,64 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
 
-public class PPSManager : MonoBehaviour {
+public class PPSManager : MonoBehaviour
+{
 
-    PostProcessVolume m_Volume;
-    Vignette m_Vignette;
+    public PostProcessVolume m_Volume;
+    public Vignette m_Vignette;
 
-    bool fadingIn;
-    bool fadingOut;
-    bool showingCard;
-    bool leftToRight;
-    bool endFadeAfterPan;
-    float timer;
-    float fadeInAmount;
-    float showTime;
-    float fadeOutAmount;
-    bool blackScreenOn;
-    float blackScreenTime;
-    float vignetteX;
+    public bool fadingIn;
+    public bool fadingOut;
+    public bool showingCard;
+    public bool leftToRight;
+    public bool fadeInAfterMoving;
+    public bool endFadeAfterPan;
+    public float fadeInAmount;
+    public float showTime;
+    public float fadeOutAmount;
+    public bool blackScreenOn;
+    public float blackScreenTime;
+    public float vignetteX;
+    public bool timedCard;
 
-	// Use this for initialization
-	void Awake () {
+    // Use this for initialization
+    void Awake()
+    {
         fadingIn = false;
         fadingOut = false;
         showingCard = false;
         leftToRight = false;
+        fadeInAfterMoving = false;
         endFadeAfterPan = false;
-        timer = 0f;
         fadeInAmount = 0;
         fadeOutAmount = 0;
         blackScreenOn = false;
         blackScreenTime = 0f;
         vignetteX = 0.5f;
+        timedCard = false;
+        
 
         m_Vignette = ScriptableObject.CreateInstance<Vignette>();
         m_Vignette.enabled.Override(true);
         m_Vignette.center.Override(new Vector2(0.5f, 0.5f));
+        m_Vignette.intensity.Override(0f);
         m_Vignette.smoothness.Override(0f);
 
         m_Volume = PostProcessManager.instance.QuickVolume(gameObject.layer, 100f, m_Vignette);
-	}
-	
-	void Update () {
-		if (blackScreenOn)
+        m_Volume.isGlobal = true;
+    }
+
+    void Update()
+    {
+        if (blackScreenOn)
         {
-            if (Time.deltaTime - timer >= blackScreenTime)
+
+            blackScreenTime -= Time.deltaTime;
+            if (blackScreenTime<=0f)
             {
+                Debug.Log("black screen off");
                 blackScreenTime = 0f;
                 blackScreenOn = false;
-                timer = Time.deltaTime;
             }
             if (fadeInAmount != 0f)
             {
@@ -58,12 +68,14 @@ public class PPSManager : MonoBehaviour {
                 if (leftToRight)
                 {
                     SetLeftVignette();
-                } else
+                }
+                else
                 {
                     SetMiddleVignette();
                 }
 
-            } else
+            }
+            else
             {
                 showingCard = true;
             }
@@ -77,40 +89,46 @@ public class PPSManager : MonoBehaviour {
                 vignetteX = 0.5f;
                 m_Vignette.center.Override(new Vector2(vignetteX, 0.5f));
                 fadingIn = false;
-                timer = Time.deltaTime;
-                showingCard = true;
-                fadeInAmount = 0f;
+                fadeInAfterMoving = true;
             }
 
         }
-        if (fadingIn && !leftToRight)
+        if ((fadingIn && !leftToRight) || (fadeInAfterMoving))
         {
             m_Vignette.intensity.value -= fadeInAmount;
-            m_Vignette.smoothness.value -= fadeInAmount*0.6f;
+            m_Vignette.smoothness.value -= fadeInAmount;
             if (m_Vignette.intensity.value <= 0.1f)
             {
                 m_Vignette.intensity.value = 0f;
                 m_Vignette.smoothness.value = 0f;
                 fadingIn = false;
-                timer = Time.deltaTime;
-                showingCard = true;
+                fadeInAfterMoving = false;
                 fadeInAmount = 0f;
+                if (timedCard)
+                {
+                    showingCard = true;
+                }
+                else
+                {
+                    FadesDone();
+                }
 
             }
         }
         if (showingCard)
         {
-            if (Time.deltaTime-timer >= showTime)
+            showTime -= Time.deltaTime;
+            if (showTime<=0f)
             {
+                showTime = 0f;
                 if (fadeOutAmount != 0f)
                 {
                     showingCard = false;
                     fadingOut = true;
-                    timer = 0f;
-                } else
+                }
+                else
                 {
                     showingCard = false;
-                    timer = 0f;
                     ZeroVignette();
                     FadesDone();
                 }
@@ -118,27 +136,27 @@ public class PPSManager : MonoBehaviour {
         }
         if (fadingOut && leftToRight)
         {
-            vignetteX += fadeInAmount;
+            vignetteX += fadeOutAmount;
             m_Vignette.center.Override(new Vector2(vignetteX, 0.5f));
             if (vignetteX >= 1f)
             {
                 vignetteX = 1f;
                 m_Vignette.center.Override(new Vector2(vignetteX, 0.5f));
                 fadingOut = false;
-                timer = 0f;
+                leftToRight = false;
                 endFadeAfterPan = true;
             }
         }
         if (fadingOut && !leftToRight)
         {
-            m_Vignette.intensity.value += fadeInAmount;
-            m_Vignette.smoothness.value += fadeInAmount * 0.6f;
-            if (m_Vignette.intensity.value >= 0.99f)
+            m_Vignette.intensity.value += fadeOutAmount;
+            Debug.Log(m_Vignette.intensity.value);
+            m_Vignette.smoothness.value += fadeOutAmount;
+            if (m_Vignette.smoothness.value >= 0.99f)
             {
                 m_Vignette.intensity.value = 1f;
                 m_Vignette.smoothness.value = 1f;
                 fadingOut = false;
-                timer = 0;
                 fadeOutAmount = 0f;
                 FadesDone();
 
@@ -147,29 +165,29 @@ public class PPSManager : MonoBehaviour {
 
         if (endFadeAfterPan)
         {
-            m_Vignette.intensity.value += 2f*fadeInAmount;
-            m_Vignette.smoothness.value += fadeInAmount * 1.2f;
+            m_Vignette.intensity.value += 2f * fadeOutAmount;
+            m_Vignette.smoothness.value += 2f*fadeOutAmount;
             if (m_Vignette.intensity.value >= 0.99f)
             {
                 m_Vignette.intensity.value = 1f;
                 m_Vignette.smoothness.value = 1f;
                 endFadeAfterPan = false;
-                timer = 0;
                 fadeOutAmount = 0f;
                 FadesDone();
 
             }
         }
-	}
+    }
 
     public void SetFades(CardValues card)
     {
         ResetVignette();
-        timer = Time.deltaTime;
+        timedCard = card.isTimeBasedCard;
         if (card.ppsFadeMode == 0)
         {
             leftToRight = false;
-        } else
+        }
+        else
         {
             leftToRight = true;
         }
@@ -186,9 +204,10 @@ public class PPSManager : MonoBehaviour {
             if (card.ppsFadeInSpeed == 0)
             {
                 fadeInAmount = 1f / (60f);
-            } else
+            }
+            else
             {
-                fadeInAmount = 1f/(60f*card.ppsFadeInSpeed);
+                fadeInAmount = 1f / (60f * card.ppsFadeInSpeed);
             }
             if (!card.blackScreenStart)
             {
@@ -196,31 +215,37 @@ public class PPSManager : MonoBehaviour {
                 if (leftToRight)
                 {
                     SetLeftVignette();
-                } else
+                }
+                else
                 {
                     SetMiddleVignette();
                 }
             }
         }
-        if (card.ppsShowCard == 0)
+        if (timedCard)
         {
-            showTime = 5f;
-        } else
-        {
-            showTime = card.ppsShowCard;
-        }
-        if (!card.blackScreenStart && !card.ppsHasFadeIn)
-        {
-            showingCard = true;
-        }
-        if (card.ppsHasFadeOut)
-        {
-            if (card.fadeOutSpeed == 0)
+            if (card.ppsShowCard == 0)
             {
-                fadeOutAmount = 1f/60f;
-            } else
+                showTime = 5f;
+            }
+            else
             {
-                fadeOutAmount = 1f/(60f*card.fadeOutSpeed);
+                showTime = card.ppsShowCard;
+            }
+            if (!card.blackScreenStart || !card.ppsHasFadeIn)
+            {
+                showingCard = true;
+            }
+            if (card.ppsHasFadeOut)
+            {
+                if (card.fadeOutSpeed == 0)
+                {
+                    fadeOutAmount = 1f / 60f;
+                }
+                else
+                {
+                    fadeOutAmount = 1f / (60f * card.fadeOutSpeed);
+                }
             }
         }
     }
@@ -231,22 +256,29 @@ public class PPSManager : MonoBehaviour {
         m_Vignette.center.Override(new Vector2(vignetteX, 0.5f));
         m_Vignette.intensity.value = 0f;
         m_Vignette.smoothness.value = 0f;
+        fadingIn = false;
+        fadingOut = false;
+        leftToRight = false;
+        showingCard = false;
+        fadeInAfterMoving = false;
+        endFadeAfterPan = false;
+
     }
 
     public void SetLeftVignette()
     {
-        vignetteX = 0.5f;
-        m_Vignette.center.Override(new Vector2(0.0f, 0.5f));
-        m_Vignette.intensity.Override(1f);
-        m_Vignette.smoothness.Override(0.6f);
+        vignetteX = 0.0f;
+        m_Vignette.center.Override(new Vector2(vignetteX, 0.5f));
+        m_Vignette.intensity.value=1f;
+        m_Vignette.smoothness.value = 1f;
     }
 
     public void SetMiddleVignette()
     {
         vignetteX = 0.5f;
         m_Vignette.center.Override(new Vector2(0.5f, 0.5f));
-        m_Vignette.intensity.Override(1f);
-        m_Vignette.smoothness.Override(0.6f);
+        m_Vignette.intensity.value = 1f;
+        m_Vignette.smoothness.value = 1f;
     }
 
     public void ZeroVignette()
@@ -256,10 +288,50 @@ public class PPSManager : MonoBehaviour {
         m_Vignette.smoothness.value = 0f;
     }
 
+    public void DoFadeOut(CardValues card)
+    {
+        fadingOut = true;
+        if (card.ppsFadeMode == 1)
+        {
+            leftToRight = true;
+        }
+        else
+        {
+            leftToRight = false;
+        }
+
+        if (card.fadeOutSpeed == 0)
+        {
+            fadeOutAmount = 1f / 60f;
+        }
+        else
+        {
+            fadeOutAmount = 1f / (60f * card.fadeOutSpeed);
+        }
+    }
+
+
+    public void DoFadeIn()
+    {
+        leftToRight = false;
+        SetMiddleVignette();
+        fadingIn = true;
+        fadeInAmount = 1f / 60f;
+    }
+
     public void FadesDone()
     {
-        //lähettää viestin game controllerille että valmis. Kun game controller vaihtaa kortin se tarkistaa uuden
-        //kortin feidi asetukset ja tsekkaa ja tarvittaessa resetoi feidit asemiin
+        Debug.Log("FadesDone");
+        GameController.gameController.PPSFadesDone();
+    }
+
+    public bool FadesAreOn()
+    {
+        if (m_Vignette.intensity.value != 0)
+        {
+            return true;
+        }
+        return false;
     }
 
 }
