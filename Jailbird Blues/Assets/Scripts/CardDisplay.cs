@@ -265,6 +265,7 @@ public class CardDisplay : MonoBehaviour
             StopCoroutine(typeTextCoroutine);                                   // Stop ongoing coroutine, so they won't mix up
             StartCoroutine(FadeImage(fadeSpeed));                               // Fade in and out a overlay image and update card values under it.
             GameController.gameController.SetCurrentCard(button);
+            
             if (button == 1)                                                    // Update the next card into given in cardDisplay.
             {
                 card = card.option1FollowCard;
@@ -285,6 +286,7 @@ public class CardDisplay : MonoBehaviour
             {
                 card = card.option5FollowCard;
             }
+            
             typeTextCoroutine = TypeText(card.cardText);                        // Update the text from new card
             StartCoroutine(typeTextCoroutine);                                  // Start printing the new text
         }
@@ -293,103 +295,36 @@ public class CardDisplay : MonoBehaviour
     void Button1pressed()
     {
         ButtonPressed(1);
-        /*
-        GameController.gameController.Add1Switches();
-        GameController.gameController.Remove1Switches();
-        GameController.gameController.UpdateReputations(1);                     //Update reputations
-        if (card.option1FollowCard)                                                // If card is not a result card, do this..
-        {
-            GameController.gameController.previousCard = card;                  // Updates gamecontroller's previous card to current card
-            StopCoroutine(typeTextCoroutine);                                   // Stop ongoing coroutine, so they won't mix up
-            StartCoroutine(FadeImage(fadeSpeed));                               // Fade in and out a overlay image and update card values under it.
-            GameController.gameController.SetCurrentCard(1);
-            card = card.option1FollowCard;                                      // Update the next card into given in cardDisplay.                                                         
-            typeTextCoroutine = TypeText(card.cardText);                        // Update the text from new card
-            StartCoroutine(typeTextCoroutine);                                  // Start printing the new text
-        }*/
-
     }
+
     void Button2pressed()
     {
         ButtonPressed(2);
-        /*
-        GameController.gameController.Add2Switches();
-        GameController.gameController.Remove2Switches();
-        GameController.gameController.UpdateReputations(2);
-        if (card.option2FollowCard)
-        {
-            GameController.gameController.previousCard = card;
-            StopCoroutine(typeTextCoroutine);
-            StartCoroutine(FadeImage(fadeSpeed));
-            GameController.gameController.SetCurrentCard(2);
-            card = card.option2FollowCard;
-            typeTextCoroutine = TypeText(card.cardText);
-            StartCoroutine(typeTextCoroutine);
-        }*/
     }
+
     void Button3pressed()
     {
         ButtonPressed(3);
-        /*
-        GameController.gameController.Add3Switches();
-        GameController.gameController.Remove3Switches();
-        GameController.gameController.UpdateReputations(3);
-        if (card.option3FollowCard)
-        {
-            GameController.gameController.previousCard = card;
-            StopCoroutine(typeTextCoroutine);
-            StartCoroutine(FadeImage(fadeSpeed));
-            GameController.gameController.SetCurrentCard(3);
-            card = card.option3FollowCard;
-            typeTextCoroutine = TypeText(card.cardText);
-            StartCoroutine(typeTextCoroutine);
-        }*/
     }
+
     void Button4pressed()
     {
         ButtonPressed(4);
-        /*
-        GameController.gameController.Add4Switches();
-        GameController.gameController.Remove4Switches();
-        GameController.gameController.UpdateReputations(4);
-        if (card.option4FollowCard)
-        {
-            GameController.gameController.previousCard = card;
-            StopCoroutine(typeTextCoroutine);            
-            StartCoroutine(FadeImage(fadeSpeed));
-            GameController.gameController.SetCurrentCard(4);
-            card = card.option4FollowCard;
-            typeTextCoroutine = TypeText(card.cardText);
-            StartCoroutine(typeTextCoroutine);
-        }
-        */
     }
+
     void Button5pressed()
     {
-        //GameController.gameController.Add4Switches();
-        //GameController.gameController.Remove4Switches();
-        //GameController.gameController.UpdateReputations(4);
-        if (card.option5FollowCard)
+        if (card.endCard == true || card.option5FollowCard == null && card.Option5On)
+        {
+            GameController.gameController.endcardOn = true;         // Update the boolean, ending the event.
+        }
+
+            if (card.option5FollowCard)
         {
             ButtonPressed(5);
-            /*
-            GameController.gameController.previousCard = card;
-            StopCoroutine(typeTextCoroutine);
-            StartCoroutine(FadeImage(fadeSpeed));
-            GameController.gameController.SetCurrentCard(4);
-            card = card.option4FollowCard;
-            typeTextCoroutine = TypeText(card.cardText);
-            StartCoroutine(typeTextCoroutine);
-            */
+
         }
-        else if (card.endCard == true || card.option5FollowCard == null && card.Option5On)                              // If the card is an end card (ends the event), do this..
-        {
-            GameController.gameController.AddSwitches(5);
-            GameController.gameController.RemoveSwitches(5);
-            GameController.gameController.UpdateReputations(5);
-            GameController.gameController.endcardOn = true;         // Update the boolean, ending the event. 
-            ButtonPressed(5);
-        }
+
     }
     // Notebook button
     void ButtonNotebookPressed()

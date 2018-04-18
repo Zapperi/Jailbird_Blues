@@ -19,16 +19,16 @@ public class SfxPlayer : MonoBehaviour {
     private bool music1FadingIn;
     private bool music2FadingIn;
 
-    private bool timedIsWaiting;
-    private bool timedSfxPlaying;
-    private bool timedSfxIsFadingOut;
-    private bool timedIsAfterWaiting;
-    private bool timedSfxHasFadeOut;
-    private bool timedHasAfterWait;
-    private float timeUntilStart;
-    private float timeUntilFadeOut;
-    private float afterWaitTime;
-    private float fadeOutAmount;
+    public bool timedIsWaiting;
+    public bool timedSfxPlaying;
+    public bool timedSfxIsFadingOut;
+    public bool timedIsAfterWaiting;
+    public bool timedSfxHasFadeOut;
+    public bool timedHasAfterWait;
+    public float timeUntilStart;
+    public float timeUntilFadeOut;
+    public float afterWaitTime;
+    public float fadeOutAmount;
 
 
     private void Awake()
@@ -460,6 +460,14 @@ public class SfxPlayer : MonoBehaviour {
                 }
             }
             
+        }
+    }
+
+    public void SetFadingOutTrue()
+    {
+        if (!timedIsWaiting && !timedSfxPlaying && !timedIsAfterWaiting)
+        {
+            timedSfxIsFadingOut = true;
         }
     }
 }

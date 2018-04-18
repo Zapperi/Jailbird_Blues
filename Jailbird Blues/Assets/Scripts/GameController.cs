@@ -234,13 +234,18 @@ public class GameController : MonoBehaviour {
                 waitingForPPS = true;
                 mainCamera.GetComponent<PPSManager>().DoFadeOut(currentCard);
             }
+            if (currentCard.sfxHasFadeOut)
+            {
+                waitingForSFX = true;
+                sfxSource.GetComponent<SfxPlayer>().SetFadingOutTrue();
+            }
         }
         else
         {
             Debug.Log("log11");
-            AddSwitches(slot);
-            RemoveSwitches(slot);
-            UpdateReputations(slot);
+            //AddSwitches(slot);
+            //RemoveSwitches(slot);
+            //UpdateReputations(slot);
             switch (slot)
             {
                 case 1:

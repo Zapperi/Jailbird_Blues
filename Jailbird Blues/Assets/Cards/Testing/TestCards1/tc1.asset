@@ -78,17 +78,17 @@ MonoBehaviour:
   option4FollowCard: {fileID: 0}
   Option5On: 1
   option5IrsReputation: 0
-  option5PunkReputation: 0
+  option5PunkReputation: 1
   option5ShakeReputation: 0
   option5GuardReputation: 0
   option5ObtainedSwitches: 
   option5RemovedSwitches: 
   option5FollowCard: {fileID: 11400000, guid: 468e63fb882118c4c99b2443e41ff7f8, type: 2}
-  isTimeBasedCard: 1
+  isTimeBasedCard: 0
   sfxPrewait: 1
   sfx: {fileID: 8300000, guid: f0d6035390912134b9dbbeafb2087d99, type: 3}
   sfxHasFadeOut: 1
-  sfxFadeOutAt: 2
+  sfxFadeOutAt: 3
   sfxFadeOutSpeed: 1
   sfxAfterWait: 1
   ppsHasFadeIn: 1
@@ -97,5 +97,5 @@ MonoBehaviour:
   blackScreenTime: 1
   ppsFadeInSpeed: 1
   ppsShowCard: 2
-  ppsHasFadeOut: 1
+  ppsHasFadeOut: 0
   fadeOutSpeed: 1
