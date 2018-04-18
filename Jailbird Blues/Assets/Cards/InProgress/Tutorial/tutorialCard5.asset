@@ -29,6 +29,7 @@ MonoBehaviour:
   ambientDecrease: 0.491
   musicOff: 1
   ambientOff: 0
+  cardTextPerson: 
   cardText: "You arrive at a cell. Cooks speaks.\r\n\u201DThis is where you sleep
     and wait for the morning count. You probably have share it sometime with other
     people. But right now you are free to choose your bunk.\u201D\r"
@@ -48,7 +49,7 @@ MonoBehaviour:
   option1RemovedSwitches: 
   option1FollowCard: {fileID: 0}
   Option2On: 1
-  option2ReqSwitches: 
+  option2ReqSwitches: 01000000
   option2text: 'Top bunk '
   option2IrsReputation: 0
   option2PunkReputation: 0

@@ -44,6 +44,7 @@ public class CardDisplay : MonoBehaviour
     public bool popUpMouseOver;             // Track if mouse is over the popup element
     public Text popUpText;                  // Reference to the popup text, set in inspector
 
+    //Optionbutton required switches
     public GameObject buttonPopUp1Img;
     public GameObject buttonPopUp2Img;
     public GameObject buttonPopUp3Img;
@@ -60,6 +61,10 @@ public class CardDisplay : MonoBehaviour
     public Image button2Img;
     public Image button3Img;
     public Image button4Img;
+    public Image cross1;
+    public Image cross2;
+    public Image cross3;
+    public Image cross4;
 
     public Item item;
     public InventoryPage invPag;
@@ -446,14 +451,22 @@ public class CardDisplay : MonoBehaviour
             button1PopUpText.text = card.option1ReqSwitches[0].ToString();      //print switch number
             for (int i = 0; i <= invPag.itemList.Count; i++)                    //loop whole inventory
             {
-                item = invPag.itemList[i];                          
+                item = invPag.itemList[i];
                 if (item.itemSwitchIndex == card.option1ReqSwitches[0])         //find right item from all items
                 {
                     button1Img.sprite = item.itemIcon;                          //print switch image
+                    if (GameController.gameController.Check1Switches() == false)       // checks if you have required switches
+                    {
+                        cross1.enabled = true;                                      //if you dont have them activate red cross
+                    }
+                    else
+                    {
+                        cross1.enabled = false;                                     // else deactivate
+                    }
                     break;
                 }
             }
-            
+
         }
         else
             buttonPopUp1Img.SetActive(false);
@@ -471,9 +484,13 @@ public class CardDisplay : MonoBehaviour
                 if (item.itemSwitchIndex == card.option2ReqSwitches[0])         //find right item from all items
                 {
                     button2Img.sprite = item.itemIcon;                          //print switch image
-                    if (GameController.gameController.Check1Switches() == false)
+                    if (GameController.gameController.Check2Switches() == false)       // checks if you have required switches
                     {
-                        button2Img.color = new Color32(90, 90, 90, 255);
+                        cross2.enabled = true;                                      //if you dont have them activate red cross
+                    }
+                    else
+                    {
+                        cross2.enabled = false;                                     // else deactivate
                     }
                     break;
                 }
@@ -495,6 +512,16 @@ public class CardDisplay : MonoBehaviour
                 if (item.itemSwitchIndex == card.option3ReqSwitches[0])         //find right item from all items
                 {
                     button3Img.sprite = item.itemIcon;                          //print switch image
+                    if (GameController.gameController.Check3Switches() == false)       // checks if you have required switches
+                    {
+                        Debug.Log("option3cross enabled");
+                        cross3.enabled = true;                                      //if you dont have them activate red cross
+                    }
+                    else
+                    {
+                        Debug.Log("option3cross disabled");
+                        cross3.enabled = false;                                     // else deactivate
+                    }
                     break;
                 }
             }
@@ -515,6 +542,14 @@ public class CardDisplay : MonoBehaviour
                 if (item.itemSwitchIndex == card.option4ReqSwitches[0])         //find right item from all items
                 {
                     button4Img.sprite = item.itemIcon;                          //print switch image
+                    if (GameController.gameController.Check4Switches() == false)       // checks if you have required switches
+                    {
+                        cross4.enabled = true;                                      //if you dont have them activate red cross
+                    }
+                    else
+                    {
+                        cross4.enabled = false;                                     // else deactivate
+                    }
                     break;
                 }
             }
@@ -522,7 +557,6 @@ public class CardDisplay : MonoBehaviour
         else
             buttonPopUp4Img.SetActive(false);
     }
-    
 
     public void disableButtons()                                    // Function that disables all player interaction by using overlayingimage
     {
