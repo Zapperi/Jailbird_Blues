@@ -103,6 +103,7 @@ public class GameController : MonoBehaviour {
 
     public void UpdateReputations(int slot)
     {
+        Debug.Log("log1");
         switch (slot)
         {
             case 1:
@@ -140,8 +141,8 @@ public class GameController : MonoBehaviour {
 
 	public void UpdateReputations(int irs, int punks, int shakers, int guards)		//updates the reputations among factions. function used by CardDisplay
 	{
-        
-		irsRep += irs;																//new reputation = old reputation + changes to reputation
+        Debug.Log("log2");
+        irsRep += irs;																//new reputation = old reputation + changes to reputation
 		punksRep += punks;
 		shakersRep += shakers;
 		guardsRep += guards;
@@ -149,6 +150,7 @@ public class GameController : MonoBehaviour {
 
 	public void GetNextCard()														//activates the next card from a new deck after the previous card has been resolved
 	{
+        Debug.Log("log3");
         int nextScheludeTime;
         if (schedule < scheduleSize - 1)
         {
@@ -199,54 +201,66 @@ public class GameController : MonoBehaviour {
 
     public void SetCurrentCard(int slot)                            //This is where changing begins.
     {
-
+        Debug.Log("log4 slot: " + slot);
         if (currentCard.ppsHasFadeOut || currentCard.sfxHasFadeOut)
         {
             cardDisplay.disableButtons();
             switch (slot)
             {
                 case 1:
+                    Debug.Log("log5");
                     cardWaiting = currentCard.option1FollowCard;                // Put the next card on hold.
                     break;
                 case 2:
+                    Debug.Log("log6");
                     cardWaiting = currentCard.option2FollowCard;                // Put the next card on hold.
                     break;
                 case 3:
+                    Debug.Log("log7");
                     cardWaiting = currentCard.option3FollowCard;                // Put the next card on hold.
                     break;
                 case 4:
+                    Debug.Log("log8");
                     cardWaiting = currentCard.option4FollowCard;                // Put the next card on hold.
                     break;
                 case 5:
+                    Debug.Log("log9");
                     cardWaiting = currentCard.option5FollowCard;                // Put the next card on hold.
                     break;
             }
             if (currentCard.ppsHasFadeOut)
             {
+                Debug.Log("log10");
                 waitingForPPS = true;
                 mainCamera.GetComponent<PPSManager>().DoFadeOut(currentCard);
             }
         }
         else
         {
+            Debug.Log("log11");
             AddSwitches(slot);
             RemoveSwitches(slot);
             UpdateReputations(slot);
             switch (slot)
             {
                 case 1:
+                    Debug.Log("log12");
                     ActuallyChangeCard(currentCard.option1FollowCard);          // Update the next card into given card.
                     break;
                 case 2:
+                    Debug.Log("log13");
                     ActuallyChangeCard(currentCard.option2FollowCard);          // Update the next card into given card.
                     break;
                 case 3:
+                    Debug.Log("log14");
                     ActuallyChangeCard(currentCard.option3FollowCard);          // Update the next card into given card.
                     break;
                 case 4:
+                    Debug.Log("log15");
                     ActuallyChangeCard(currentCard.option4FollowCard);          // Update the next card into given card.
                     break;
                 case 5:
+                    Debug.Log("log16");
                     ActuallyChangeCard(currentCard.option5FollowCard);          // Update the next card into given card.
                     break;
             }
@@ -255,25 +269,32 @@ public class GameController : MonoBehaviour {
 
     public void SetCurrentCard(CardValues next)
     {
+        Debug.Log("log17");
         ActuallyChangeCard(next);
     }               //This is where changing begins.
 
     public void ActuallyChangeCard(CardValues next)             //This is where the card changes.
     {
+        Debug.Log("log18");
         if (cleaningUpFades)
         {
+            Debug.Log("log19");
             cleaningUpFades = false;
             return;
         }
         if (currentCard.timeCard)
         {
+            Debug.Log("log20");
             AddTime();
         }
         currentCard = next;
+        Debug.Log("log21 next: " + next);
+        cardWaiting=null;
         SetBackgroundAudio();         // Update audio.
         AddLogEvent();
         if (currentCard.sfxPrewait > 0f || currentCard.sfxFadeOutAt > 0f)
         {
+            Debug.Log("log22");
             Debug.Log("gc kutsuu sfx:ää");
             waitingForSFX = true;
             sfxSource.GetComponent<SfxPlayer>().PlayTimedSfx(currentCard);
@@ -281,25 +302,31 @@ public class GameController : MonoBehaviour {
 
         if (currentCard.isTimeBasedCard)
         {
+            Debug.Log("log23");
             if (currentCard.ppsHasFadeIn || currentCard.blackScreenStart || currentCard.ppsHasFadeOut || currentCard.ppsShowCard != 0)
             {
+                Debug.Log("log24");
                 waitingForPPS = true;
                 cardDisplay.disableButtons();
                 mainCamera.GetComponent<PPSManager>().SetFades(currentCard);
-                cardWaiting = currentCard.option4FollowCard;
+                cardWaiting = currentCard.option5FollowCard;
             }
         }
         else if (currentCard.ppsHasFadeIn||currentCard.blackScreenStart)                               //If the next card has a fade-in
         {
+            Debug.Log("log25");
             waitingForPPS = true;
             cleaningUpFades = true;
+            cardDisplay.disableButtons();
             mainCamera.GetComponent<PPSManager>().SetFades(currentCard);
         } else
         {
             if (mainCamera.GetComponent<PPSManager>().FadesAreOn())     //This checks if fades are on and fades out if necessary.
             {
+                Debug.Log("log26");
                 waitingForPPS = true;
                 cleaningUpFades = true;
+                cardDisplay.disableButtons();
                 mainCamera.GetComponent<PPSManager>().DoFadeIn();
             }
         }
@@ -307,23 +334,25 @@ public class GameController : MonoBehaviour {
 
     public void PPSFadesDone()
     {
+        Debug.Log("log27");
         waitingForPPS = false;
         if (!waitingForSFX)
         {
+            Debug.Log("log28");
             cardDisplay.enableButtons();
             ActuallyChangeCard(cardWaiting);
-            cardWaiting = null;
         }
     }
 
     public void SFXFadesDone()
     {
+        Debug.Log("log29");
         waitingForSFX = false;
         if (!waitingForPPS)
         {
+            Debug.Log("log30");
             cardDisplay.enableButtons();
             ActuallyChangeCard(cardWaiting);
-            cardWaiting = null;
         }
     }
 

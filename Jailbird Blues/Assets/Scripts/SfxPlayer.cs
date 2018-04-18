@@ -81,6 +81,54 @@ public class SfxPlayer : MonoBehaviour {
             }
         }
         //**************
+        if (timedIsAfterWaiting)
+        {
+            afterWaitTime -= Time.deltaTime;
+            if (afterWaitTime <= 0)
+            {
+                timedIsAfterWaiting = false;
+                GameController.gameController.SFXFadesDone();
+            }
+        }
+        if (timedSfxIsFadingOut)
+        {
+            timedSfxSource.volume -= fadeOutAmount;
+            if (timedSfxSource.volume <= 0f)
+            {
+                timedSfxIsFadingOut = false;
+                if (timedHasAfterWait)
+                {
+                    timedIsAfterWaiting = true;
+                }
+                else
+                {
+                    GameController.gameController.SFXFadesDone();
+                }
+            }
+        }
+
+        if (timedSfxPlaying)
+        {
+            if (!timedSfxSource.isPlaying)
+            {
+                timedSfxPlaying = false;
+
+                if (timedHasAfterWait)
+                {
+                    timedIsAfterWaiting = true;
+                }
+                else
+                {
+                    GameController.gameController.SFXFadesDone();
+                }
+            }
+            else if (timeUntilFadeOut < 0f)
+            {
+                timedSfxPlaying = false;
+                timedSfxIsFadingOut = true;
+            }
+        }
+
         if (timedIsWaiting)
         {
             timeUntilStart -= Time.deltaTime;
@@ -97,50 +145,6 @@ public class SfxPlayer : MonoBehaviour {
             timeUntilFadeOut -= Time.deltaTime;
         }
 
-        if (timedSfxPlaying)
-        {
-            if(!timedSfxSource.isPlaying)
-            {
-                timedSfxPlaying = false;
-
-                if (timedHasAfterWait)
-                {
-                    timedIsAfterWaiting = true;
-                } else
-                {
-                    GameController.gameController.SFXFadesDone();
-                }
-            } else if (timeUntilFadeOut < 0f)
-            {
-                timedSfxPlaying = false;
-                timedSfxIsFadingOut = true;
-            }
-        }
-        if (timedSfxIsFadingOut)
-        {
-            timedSfxSource.volume -= fadeOutAmount;
-            if (timedSfxSource.volume <= 0f)
-            {
-                timedSfxIsFadingOut = false;
-                if (timedHasAfterWait)
-                {
-                    timedIsAfterWaiting = true;
-                } else
-                {
-                    GameController.gameController.SFXFadesDone();
-                }
-            }
-        }
-
-        if (timedIsAfterWaiting)
-        {
-            afterWaitTime -= Time.deltaTime;
-            if (afterWaitTime <= 0)
-            {
-                timedIsAfterWaiting = false;
-                GameController.gameController.SFXFadesDone();
-            }
-        }
     }
 
     public void ButtonAudioPlay()

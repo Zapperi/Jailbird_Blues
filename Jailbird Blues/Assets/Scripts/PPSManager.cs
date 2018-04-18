@@ -52,34 +52,6 @@ public class PPSManager : MonoBehaviour
 
     void Update()
     {
-        if (blackScreenOn)
-        {
-
-            blackScreenTime -= Time.deltaTime;
-            if (blackScreenTime<=0f)
-            {
-                Debug.Log("black screen off");
-                blackScreenTime = 0f;
-                blackScreenOn = false;
-            }
-            if (fadeInAmount != 0f)
-            {
-                fadingIn = true;
-                if (leftToRight)
-                {
-                    SetLeftVignette();
-                }
-                else
-                {
-                    SetMiddleVignette();
-                }
-
-            }
-            else
-            {
-                showingCard = true;
-            }
-        }
         if (fadingIn && leftToRight)
         {
             vignetteX += fadeInAmount / 2f;
@@ -118,7 +90,7 @@ public class PPSManager : MonoBehaviour
         if (showingCard)
         {
             showTime -= Time.deltaTime;
-            if (showTime<=0f)
+            if (showTime <= 0f)
             {
                 showTime = 0f;
                 if (fadeOutAmount != 0f)
@@ -134,6 +106,7 @@ public class PPSManager : MonoBehaviour
                 }
             }
         }
+
         if (fadingOut && leftToRight)
         {
             vignetteX += fadeOutAmount;
@@ -162,11 +135,10 @@ public class PPSManager : MonoBehaviour
 
             }
         }
-
         if (endFadeAfterPan)
         {
             m_Vignette.intensity.value += 2f * fadeOutAmount;
-            m_Vignette.smoothness.value += 2f*fadeOutAmount;
+            m_Vignette.smoothness.value += 2f * fadeOutAmount;
             if (m_Vignette.intensity.value >= 0.99f)
             {
                 m_Vignette.intensity.value = 1f;
@@ -177,6 +149,36 @@ public class PPSManager : MonoBehaviour
 
             }
         }
+
+        if (blackScreenOn)
+        {
+
+            blackScreenTime -= Time.deltaTime;
+            if (blackScreenTime<=0f)
+            {
+                Debug.Log("black screen off");
+                blackScreenTime = 0f;
+                blackScreenOn = false;
+            }
+            if (fadeInAmount != 0f)
+            {
+                fadingIn = true;
+                if (leftToRight)
+                {
+                    SetLeftVignette();
+                }
+                else
+                {
+                    SetMiddleVignette();
+                }
+
+            }
+            else
+            {
+                showingCard = true;
+            }
+        }
+
     }
 
     public void SetFades(CardValues card)

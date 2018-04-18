@@ -9,54 +9,54 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: New Card
+  m_Name: tc1
   m_EditorClassIdentifier: 
   requiredSwitches: 
   RepIrs: 0
   RepPunks: 0
   RepShake: 0
   RepGuard: 0
-  timeOfDay: 2
-  storyPhase: 1
-  backgroundImage: {fileID: 0}
+  timeOfDay: 0
+  storyPhase: 0
+  backgroundImage: {fileID: 21300000, guid: 013584fb9b3867548a06364b64007f2a, type: 3}
   foregroundImage: {fileID: 0}
   foregroundImage2: {fileID: 0}
   foregroundImage3: {fileID: 0}
   foregroundImage4: {fileID: 0}
-  bgMusic: {fileID: 0}
+  bgMusic: {fileID: 8300000, guid: 267a97e21f8e84142bed948aad38eae8, type: 3}
   bgAmbientAudio: {fileID: 0}
   musicDecrease: 0
   ambientDecrease: 0
   musicOff: 0
-  ambientOff: 0
-  cardTextPerson: 
-  cardText: Gimme shoes plz
+  ambientOff: 1
+  cardTextPerson: tc1
+  cardText: This is the second card (tc1).
   logText: 
   endCard: 0
   timeCard: 0
   repeatable: 0
-  OptionsOn: 1
-  Option1On: 1
+  OptionsOn: 0
+  Option1On: 0
   option1ReqSwitches: 
   option1text: 
-  option1IrsReputation: -1
+  option1IrsReputation: 0
   option1PunkReputation: 0
   option1ShakeReputation: 0
-  option1GuardReputation: 2
+  option1GuardReputation: 0
   option1ObtainedSwitches: 
   option1RemovedSwitches: 
-  option1FollowCard: {fileID: 11400000, guid: c86a54b01b47e3b47806a632338dbe30, type: 2}
-  Option2On: 1
+  option1FollowCard: {fileID: 0}
+  Option2On: 0
   option2ReqSwitches: 
   option2text: 
   option2IrsReputation: 0
-  option2PunkReputation: -2
-  option2ShakeReputation: 3
+  option2PunkReputation: 0
+  option2ShakeReputation: 0
   option2GuardReputation: 0
   option2ObtainedSwitches: 
   option2RemovedSwitches: 
-  option2FollowCard: {fileID: 11400000, guid: 7911c6cf7a7d0284ea7139d8ff846831, type: 2}
-  Option3On: 1
+  option2FollowCard: {fileID: 0}
+  Option3On: 0
   option3ReqSwitches: 
   option3text: 
   option3IrsReputation: 0
@@ -65,8 +65,8 @@ MonoBehaviour:
   option3GuardReputation: 0
   option3ObtainedSwitches: 
   option3RemovedSwitches: 
-  option3FollowCard: {fileID: 11400000, guid: 8226b5ede50d9214dba45d62caab4185, type: 2}
-  Option4On: 1
+  option3FollowCard: {fileID: 0}
+  Option4On: 0
   option4ReqSwitches: 
   option4text: 
   option4IrsReputation: 0
@@ -75,7 +75,7 @@ MonoBehaviour:
   option4GuardReputation: 0
   option4ObtainedSwitches: 
   option4RemovedSwitches: 
-  option4FollowCard: {fileID: 11400000, guid: 748dbc28e0d23044ea834716251df166, type: 2}
+  option4FollowCard: {fileID: 0}
   Option5On: 1
   option5IrsReputation: 0
   option5PunkReputation: 0
@@ -83,19 +83,19 @@ MonoBehaviour:
   option5GuardReputation: 0
   option5ObtainedSwitches: 
   option5RemovedSwitches: 
-  option5FollowCard: {fileID: 0}
-  isTimeBasedCard: 0
-  sfxPrewait: 0
-  sfx: {fileID: 0}
-  sfxHasFadeOut: 0
-  sfxFadeOutAt: 0
-  sfxFadeOutSpeed: 0
-  sfxAfterWait: 0
-  ppsHasFadeIn: 0
-  ppsFadeMode: 0
-  blackScreenStart: 0
-  blackScreenTime: 0
-  ppsFadeInSpeed: 0
-  ppsShowCard: 0
-  ppsHasFadeOut: 0
-  fadeOutSpeed: 0
+  option5FollowCard: {fileID: 11400000, guid: 468e63fb882118c4c99b2443e41ff7f8, type: 2}
+  isTimeBasedCard: 1
+  sfxPrewait: 1
+  sfx: {fileID: 8300000, guid: f0d6035390912134b9dbbeafb2087d99, type: 3}
+  sfxHasFadeOut: 1
+  sfxFadeOutAt: 2
+  sfxFadeOutSpeed: 1
+  sfxAfterWait: 1
+  ppsHasFadeIn: 1
+  ppsFadeMode: 1
+  blackScreenStart: 1
+  blackScreenTime: 1
+  ppsFadeInSpeed: 1
+  ppsShowCard: 2
+  ppsHasFadeOut: 1
+  fadeOutSpeed: 1
