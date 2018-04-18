@@ -76,7 +76,15 @@ MonoBehaviour:
   option4GuardReputation: 0
   option4ObtainedSwitches: 
   option4RemovedSwitches: 
-  option4FollowCard: {fileID: 11400000, guid: 0aa2e51e50f741f4da0a34f203566cef, type: 2}
+  option4FollowCard: {fileID: 0}
+  Option5On: 1
+  option5IrsReputation: 0
+  option5PunkReputation: 0
+  option5ShakeReputation: 0
+  option5GuardReputation: 0
+  option5ObtainedSwitches: 
+  option5RemovedSwitches: 
+  option5FollowCard: {fileID: 11400000, guid: 0aa2e51e50f741f4da0a34f203566cef, type: 2}
   isTimeBasedCard: 1
   sfxPrewait: 1
   sfx: {fileID: 8300000, guid: 83fa0b23be8600d41b0cc07ed7f48d21, type: 3}

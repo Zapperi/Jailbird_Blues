@@ -129,6 +129,12 @@ public class GameController : MonoBehaviour {
                 shakersRep += currentCard.option4ShakeReputation;
                 guardsRep += currentCard.option4GuardReputation;
                 break;
+            case 5:
+                irsRep += currentCard.option5IrsReputation;
+                punksRep += currentCard.option5PunkReputation;
+                shakersRep += currentCard.option5ShakeReputation;
+                guardsRep += currentCard.option5GuardReputation;
+                break;
         }
     }
 
@@ -207,6 +213,9 @@ public class GameController : MonoBehaviour {
                 case 4:
                     cardWaiting = currentCard.option4FollowCard;                // Put the next card on hold.
                     break;
+                case 5:
+                    cardWaiting = currentCard.option5FollowCard;                // Put the next card on hold.
+                    break;
             }
             if (currentCard.ppsHasFadeOut)
             {
@@ -232,6 +241,9 @@ public class GameController : MonoBehaviour {
                     break;
                 case 4:
                     ActuallyChangeCard(currentCard.option4FollowCard);          // Update the next card into given card.
+                    break;
+                case 5:
+                    ActuallyChangeCard(currentCard.option5FollowCard);          // Update the next card into given card.
                     break;
             }
         }

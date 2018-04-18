@@ -162,11 +162,11 @@ public class CardDisplay : MonoBehaviour
             card.Option2On = false;
             card.Option3On = false;
             card.Option4On = false;
-            continuebutton = true;
+            card.Option5On = true;
             button5.interactable = true; //option 4 disablee, tämä fixaa sen
         }
         else
-            continuebutton = false;
+            card.Option5On = false;
 
         //Activate the button gameobjects when needed, hide otherwise.
         if (card.Option1On == true && GameController.gameController.Check1Switches() == true){
@@ -212,7 +212,7 @@ public class CardDisplay : MonoBehaviour
 
         if (typeTextRunning)
             button5.gameObject.SetActive(false);
-        else if (continuebutton == true)
+        else if (card.Option5On == true)
             button5.gameObject.SetActive(true);
         else
             button5.gameObject.SetActive(false);
@@ -242,6 +242,10 @@ public class CardDisplay : MonoBehaviour
         {
             followUp = true;
         }
+        if (button == 5 && card.option5FollowCard)
+        {
+            followUp = true;
+        }
         if (followUp)
         {
             GameController.gameController.previousCard = card;                  // Updates gamecontroller's previous card to current card
@@ -263,6 +267,10 @@ public class CardDisplay : MonoBehaviour
             else if (button == 4)
             {
                 card = card.option4FollowCard;
+            }
+            else if (button == 5)
+            {
+                card = card.option5FollowCard;
             }
             typeTextCoroutine = TypeText(card.cardText);                        // Update the text from new card
             StartCoroutine(typeTextCoroutine);                                  // Start printing the new text
@@ -348,9 +356,9 @@ public class CardDisplay : MonoBehaviour
         //GameController.gameController.Add4Switches();
         //GameController.gameController.Remove4Switches();
         //GameController.gameController.UpdateReputations(4);
-        if (card.option4FollowCard)
+        if (card.option5FollowCard)
         {
-            ButtonPressed(4);
+            ButtonPressed(5);
             /*
             GameController.gameController.previousCard = card;
             StopCoroutine(typeTextCoroutine);
@@ -361,11 +369,11 @@ public class CardDisplay : MonoBehaviour
             StartCoroutine(typeTextCoroutine);
             */
         }
-        else if (card.endCard == true || card.option4FollowCard == null && card.Option4On)                              // If the card is an end card (ends the event), do this..
+        else if (card.endCard == true || card.option5FollowCard == null && card.Option5On)                              // If the card is an end card (ends the event), do this..
         {
-            GameController.gameController.AddSwitches(4);
-            GameController.gameController.RemoveSwitches(4);
-            GameController.gameController.UpdateReputations(4);
+            GameController.gameController.AddSwitches(5);
+            GameController.gameController.RemoveSwitches(5);
+            GameController.gameController.UpdateReputations(5);
             GameController.gameController.endcardOn = true;         // Update the boolean, ending the event. 
         }
     }

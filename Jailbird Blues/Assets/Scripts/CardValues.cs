@@ -61,7 +61,7 @@ public class CardValues : ScriptableObject									//switched the surface from M
     [Tooltip("Can this card appear multiple times?")]
     public bool repeatable;                                                 //can this card happen multiple times during one playthrough
     private bool used;														//has the card been played already?
-    [Header("If options are off, use 4th option to add your follow card.")]  //inspector directions
+    [Header("If options are off, use Option 5 button to add your follow card.")]  //inspector directions
     public bool OptionsOn = true;                                           //does the card have options?
 
 
@@ -161,6 +161,28 @@ public class CardValues : ScriptableObject									//switched the surface from M
     public List<int> option4RemovedSwitches;
     [Tooltip("What card comes after this option?")]
     public CardValues option4FollowCard;                                    // Does this card have a follow-up card and if yes, which card?
+
+
+    //Option 5 values
+    [Space(3)]
+    [Header("Option 5 settings:")]
+
+    [Tooltip("Set if this option is enabled or not.")]
+    public bool Option5On = true;
+    [Tooltip("How much I.R.S reputation changes.")]
+    public int option5IrsReputation;                                        // How does the reputation change from this option
+    [Tooltip("How much Punks reputation changes.")]
+    public int option5PunkReputation;
+    [Tooltip("How much Protein Shakers reputation changes.")]
+    public int option5ShakeReputation;
+    [Tooltip("How much Guard reputation changes.")]
+    public int option5GuardReputation;
+    [Tooltip("Which triggers are triggered by this option.")]
+    public List<int> option5ObtainedSwitches;                               // Which switches are triggered by this option
+    [Tooltip("Which triggers are removed by this option.")]
+    public List<int> option5RemovedSwitches;
+    [Tooltip("What card comes after this option?")]
+    public CardValues option5FollowCard;                                    // Does this card have a follow-up card and if yes, which card?
 
 
     [Header("FX settings: ")]
