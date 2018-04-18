@@ -85,18 +85,18 @@ MonoBehaviour:
   option5ObtainedSwitches: 
   option5RemovedSwitches: 
   option5FollowCard: {fileID: 11400000, guid: 0aa2e51e50f741f4da0a34f203566cef, type: 2}
-  isTimeBasedCard: 1
-  sfxPrewait: 1
-  sfx: {fileID: 8300000, guid: 83fa0b23be8600d41b0cc07ed7f48d21, type: 3}
-  sfxHasFadeOut: 1
-  sfxFadeOutAt: 4
-  sfxFadeOutSpeed: 3
-  sfxAfterWait: 2
-  ppsHasFadeIn: 1
-  ppsFadeMode: 1
-  blackScreenStart: 1
-  blackScreenTime: 1
-  ppsFadeInSpeed: 1
-  ppsShowCard: 1
-  ppsHasFadeOut: 1
-  fadeOutSpeed: 2
+  isTimeBasedCard: 0
+  sfxPrewait: 0
+  sfx: {fileID: 0}
+  sfxHasFadeOut: 0
+  sfxFadeOutAt: 0
+  sfxFadeOutSpeed: 0
+  sfxAfterWait: 0
+  ppsHasFadeIn: 0
+  ppsFadeMode: 0
+  blackScreenStart: 0
+  blackScreenTime: 0
+  ppsFadeInSpeed: 0
+  ppsShowCard: 0
+  ppsHasFadeOut: 0
+  fadeOutSpeed: 0
