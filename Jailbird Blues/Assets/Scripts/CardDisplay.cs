@@ -35,7 +35,8 @@ public class CardDisplay : MonoBehaviour
 	public static float textScrollSpeed;    // Used to control the speed of TypeText coroutine (text speed)
     [HideInInspector]
     public IEnumerator typeTextCoroutine;   // Create coroutine variable, for stopping and starting.
-    private bool continuebutton;
+    [HideInInspector]
+    public bool typeTextNewTextDone;
 
     public GameObject logPage;              // Reference to the notebook's log page, set in inspector
 
@@ -111,6 +112,13 @@ public class CardDisplay : MonoBehaviour
 
 
         card = GameController.gameController.currentCard;           // Update the current to a new one
+
+        if (!typeTextNewTextDone && !typeTextRunning)
+        {
+            typeTextCoroutine = TypeText(card.cardText);                        // Update the text from new card
+            StartCoroutine(typeTextCoroutine);                                  // Start printing the new text
+        }
+
         // Update the card images from the current card
         background.sprite = card.backgroundImage;                   
         foregroundImage1.sprite = card.foregroundImage;
@@ -380,6 +388,7 @@ public class CardDisplay : MonoBehaviour
             GameController.gameController.RemoveSwitches(5);
             GameController.gameController.UpdateReputations(5);
             GameController.gameController.endcardOn = true;         // Update the boolean, ending the event. 
+            ButtonPressed(5);
         }
     }
     // Notebook button
@@ -437,8 +446,8 @@ public class CardDisplay : MonoBehaviour
             }
             typeTextRunning = false;                                // ...Reset the tracker at the end
         }
-        
-        
+
+        typeTextNewTextDone = true;
     }
 
     // Function for pop up element

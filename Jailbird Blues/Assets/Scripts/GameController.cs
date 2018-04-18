@@ -166,24 +166,28 @@ public class GameController : MonoBehaviour {
                 int index = Random.Range(0, cellCards.Count);						//picks a random number using the amount of cards in the deck as the range
                 next = cellCards[index];
                 SetCurrentCard(next);
+                cardDisplay.typeTextNewTextDone = false;
                 break;
          case (1):
                 BuildDeck(yardCards);
                 index = Random.Range(0, yardCards.Count);
 			    next = yardCards[index];
                 SetCurrentCard(next);
+                cardDisplay.typeTextNewTextDone = false;
                 break;
 		case (2):
                 BuildDeck(messCards);
                 index = Random.Range(0, messCards.Count);
 			    next = messCards[index];
                 SetCurrentCard(next);
+                cardDisplay.typeTextNewTextDone = false;
                 break;
 		case (3):
                 BuildDeck(workshopCards);
                 index = Random.Range(0, workshopCards.Count);
 			    next = workshopCards[index];
                 SetCurrentCard(next);
+                cardDisplay.typeTextNewTextDone = false;
                 break;
 		//case (4):
   //              BuildDeck(cellCards);
