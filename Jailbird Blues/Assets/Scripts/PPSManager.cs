@@ -15,6 +15,7 @@ public class PPSManager : MonoBehaviour
     public bool leftToRight;
     public bool fadeInAfterMoving;
     public bool endFadeAfterPan;
+
     public float fadeInAmount;
     public float showTime;
     public float fadeOutAmount;
@@ -38,7 +39,7 @@ public class PPSManager : MonoBehaviour
         blackScreenTime = 0f;
         vignetteX = 0.5f;
         timedCard = false;
-        
+
 
         m_Vignette = ScriptableObject.CreateInstance<Vignette>();
         m_Vignette.enabled.Override(true);
@@ -153,7 +154,7 @@ public class PPSManager : MonoBehaviour
         {
 
             blackScreenTime -= Time.deltaTime;
-            if (blackScreenTime<=0f)
+            if (blackScreenTime <= 0f)
             {
                 blackScreenTime = 0f;
                 blackScreenOn = false;
@@ -199,6 +200,10 @@ public class PPSManager : MonoBehaviour
             m_Vignette.intensity.value = 1f;
             m_Vignette.smoothness.value = 0.6f;
         }
+        else
+        {
+            blackScreenOn = false;
+        }
         if (card.ppsHasFadeIn)
         {
             if (card.ppsFadeInSpeed == 0)
@@ -221,6 +226,10 @@ public class PPSManager : MonoBehaviour
                     SetMiddleVignette();
                 }
             }
+            else
+            {
+                fadingIn = false;
+            }
         }
         if (timedCard)
         {
@@ -232,10 +241,17 @@ public class PPSManager : MonoBehaviour
             {
                 showTime = card.ppsShowCard;
             }
-            if (!card.blackScreenStart || !card.ppsHasFadeIn)
+            if (!card.blackScreenStart && !card.ppsHasFadeIn)
             {
                 showingCard = true;
             }
+            else
+            {
+                showingCard = false;
+            }
+            fadingOut = false;
+            endFadeAfterPan = false;
+            fadeInAfterMoving = false;
             if (card.ppsHasFadeOut)
             {
                 if (card.fadeOutSpeed == 0)
@@ -269,7 +285,7 @@ public class PPSManager : MonoBehaviour
     {
         vignetteX = 0.0f;
         m_Vignette.center.Override(new Vector2(vignetteX, 0.5f));
-        m_Vignette.intensity.value=1f;
+        m_Vignette.intensity.value = 1f;
         m_Vignette.smoothness.value = 1f;
     }
 
@@ -332,5 +348,4 @@ public class PPSManager : MonoBehaviour
         }
         return false;
     }
-
 }

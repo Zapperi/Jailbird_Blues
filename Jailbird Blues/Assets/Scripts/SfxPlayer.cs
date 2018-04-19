@@ -465,6 +465,10 @@ public class SfxPlayer : MonoBehaviour
         }
         else
         {
+            if (timedSfxSource.isPlaying)
+            {
+                timedSfxSource.Stop();
+            }
             timedSfxSource.clip = currentCard.sfx;
             timedSfxSource.volume = 1f;
             currentTimedVolume = 1f;
@@ -479,39 +483,36 @@ public class SfxPlayer : MonoBehaviour
             {
                 timedIsWaiting = true;
                 timeUntilStart = currentCard.sfxPrewait;
+            }
 
-                if (currentCard.sfxFadeOutAt == 0)
+            if (currentCard.sfxFadeOutAt == 0)
+            {
+                timedSfxHasFadeOut = false;
+            }
+            else
+            {
+                timedSfxHasFadeOut = true;
+                timeUntilFadeOut = currentCard.sfxFadeOutAt;
+                if (timeUntilFadeOut < timeUntilStart)
                 {
-                    timedSfxHasFadeOut = false;
+                    timeUntilFadeOut += timeUntilStart;
+                }
+                if (currentCard.fadeOutSpeed == 0)
+                {
+                    fadeOutAmount = 1f / 30f;
                 }
                 else
                 {
-                    timedSfxHasFadeOut = true;
-                    timeUntilFadeOut = currentCard.sfxFadeOutAt;
-                    if (timeUntilFadeOut < timeUntilStart)
-                    {
-                        timeUntilFadeOut += timeUntilStart;
-                    }
-                    if (currentCard.fadeOutSpeed == 0)
-                    {
-                        fadeOutAmount = 1f / 30f;
-                    }
-                    else
-                    {
-                        fadeOutAmount = currentCard.fadeOutSpeed / 60f;
-                    }
-
-                    if (currentCard.sfxAfterWait == 0)
-                    {
-                        timedHasAfterWait = false;
-                    }
-                    else
-                    {
-                        timedHasAfterWait = true;
-                        afterWaitTime = currentCard.sfxAfterWait;
-
-                    }
-
+                    fadeOutAmount = currentCard.fadeOutSpeed / 60f;
+                }
+                if (currentCard.sfxAfterWait == 0)
+                {
+                    timedHasAfterWait = false;
+                }
+                else
+                {
+                    timedHasAfterWait = true;
+                    afterWaitTime = currentCard.sfxAfterWait;
                 }
             }
 
@@ -523,6 +524,9 @@ public class SfxPlayer : MonoBehaviour
         if (timedIsWaiting)
         {
             timedIsWaiting = false;
+            timeUntilStart = 0f;
+            timeUntilFadeOut = 0f;
+            afterWaitTime = 0f;
             GameController.gameController.SFXFadesDone();
             return;
         }

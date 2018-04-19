@@ -269,35 +269,19 @@ public class CardDisplay : MonoBehaviour
         }
         if (followUp)
         {
-            GameController.gameController.previousCard = card;                  // Updates gamecontroller's previous card to current card
-            StopCoroutine(typeTextCoroutine);                                   // Stop ongoing coroutine, so they won't mix up
-            //StartCoroutine(FadeImage(fadeSpeed));                               // Fade in and out a overlay image and update card values under it.
             GameController.gameController.SetCurrentCard(button);
-            
-            if (button == 1)                                                    // Update the next card into given in cardDisplay.
-            {
-                card = card.option1FollowCard;
-            }
-            else if (button == 2)
-            {
-                card = card.option2FollowCard;
-            }
-            else if (button == 3)
-            {
-                card = card.option3FollowCard;
-            }
-            else if (button == 4)
-            {
-                card = card.option4FollowCard;
-            }
-            else if (button == 5)
-            {
-                card = card.option5FollowCard;
-            }
-            
-            typeTextCoroutine = TypeText(card.cardText);                        // Update the text from new card
-            StartCoroutine(typeTextCoroutine);                                  // Start printing the new text
+        } else
+        {
+            GameController.gameController.endcardOn = true;                 //Just a precaution to avoid null pointer
         }
+    }
+
+    public void StartTextCoroutine()
+    {
+        card = GameController.gameController.currentCard;
+        typeTextNewTextDone = false;
+        typeTextCoroutine = TypeText(card.cardText);                        // Update the text from new card
+        StartCoroutine(typeTextCoroutine);                                  // Start printing the new text
     }
 
     void Button1pressed()
