@@ -238,6 +238,7 @@ public class CardDisplay : MonoBehaviour
         GameController.gameController.AddSwitches(button);
         GameController.gameController.RemoveSwitches(button);
         GameController.gameController.UpdateReputations(button);
+        GameController.gameController.PrintReputations(button);        
         bool followUp = false;
         if (button == 1 && card.option1FollowCard)
         {
