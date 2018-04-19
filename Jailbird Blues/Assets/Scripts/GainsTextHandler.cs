@@ -17,6 +17,11 @@ public class GainsTextHandler : MonoBehaviour {
 
     public static void CreateGainsText(int[] repAmount, Transform location)                     // Creates floating text object
     {
+        for(int i = 0; i< repAmount.Length; i++)            
+        {
+            if (repAmount[i] == 0)
+                return;
+        }
         GainTextGeneration instance = Instantiate(floatingText);                            // Create object from the information gotten from initialize.   
         string textToSend ="";
         instance.transform.SetParent(canvas.transform, false);                              // Set the new location to be placed in canvas, disable scaling from canvas.
