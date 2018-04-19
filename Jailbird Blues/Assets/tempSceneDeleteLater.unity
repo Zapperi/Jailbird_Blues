@@ -302,11 +302,31 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114423395494832416, guid: df67972d0e99a6d428df8e1f930ac1a0,
+    - target: {fileID: 114134384709761664, guid: df67972d0e99a6d428df8e1f930ac1a0,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 586371977}
+    - target: {fileID: 114997305299448778, guid: df67972d0e99a6d428df8e1f930ac1a0,
+        type: 2}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 737213948}
+    - target: {fileID: 114712138668611858, guid: df67972d0e99a6d428df8e1f930ac1a0,
+        type: 2}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 737213948}
+    - target: {fileID: 114895876490274518, guid: df67972d0e99a6d428df8e1f930ac1a0,
         type: 2}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 581128781}
+    - target: {fileID: 223348527675373308, guid: df67972d0e99a6d428df8e1f930ac1a0,
+        type: 2}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 57536594}
     - target: {fileID: 114670070610597870, guid: df67972d0e99a6d428df8e1f930ac1a0,
         type: 2}
       propertyPath: gameController
@@ -317,31 +337,21 @@ Prefab:
       propertyPath: itemPool
       value: 
       objectReference: {fileID: 183255477}
-    - target: {fileID: 223348527675373308, guid: df67972d0e99a6d428df8e1f930ac1a0,
-        type: 2}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 57536594}
-    - target: {fileID: 114895876490274518, guid: df67972d0e99a6d428df8e1f930ac1a0,
+    - target: {fileID: 114423395494832416, guid: df67972d0e99a6d428df8e1f930ac1a0,
         type: 2}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 581128781}
-    - target: {fileID: 114712138668611858, guid: df67972d0e99a6d428df8e1f930ac1a0,
+    - target: {fileID: 114423395494832416, guid: df67972d0e99a6d428df8e1f930ac1a0,
         type: 2}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 737213948}
-    - target: {fileID: 114997305299448778, guid: df67972d0e99a6d428df8e1f930ac1a0,
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetMusicModifier
+      objectReference: {fileID: 0}
+    - target: {fileID: 114895876490274518, guid: df67972d0e99a6d428df8e1f930ac1a0,
         type: 2}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 737213948}
-    - target: {fileID: 114134384709761664, guid: df67972d0e99a6d428df8e1f930ac1a0,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 586371977}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetSfxModifier
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: df67972d0e99a6d428df8e1f930ac1a0, type: 2}
   m_IsPrefabParent: 0

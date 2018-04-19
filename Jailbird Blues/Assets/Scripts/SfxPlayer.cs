@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SfxPlayer : MonoBehaviour {
+public class SfxPlayer : MonoBehaviour
+{
 
     public AudioSource sfxSource;
     public AudioClip[] buttonSounds;
@@ -92,9 +93,8 @@ public class SfxPlayer : MonoBehaviour {
                 musicSource2.Stop();
                 music2FadingOut = false;
             }
-
         }
-        //**************
+        //********LINEBREAK***********
         if (timedIsAfterWaiting)
         {
             afterWaitTime -= Time.deltaTime;

@@ -70,6 +70,9 @@ public class CardDisplay : MonoBehaviour
     public Item item;
     public InventoryPage invPag;
 
+	int siblingIndexOne;
+	int siblingIndexTwo;
+
 
     void Awake()
     {
@@ -85,8 +88,11 @@ public class CardDisplay : MonoBehaviour
         buttonNoteBook.onClick.AddListener(ButtonNotebookPressed);                  // Connect notebook to it's button
         typeTextCoroutine = TypeText(card.cardText);                                // Make sure the text scroll coroutine has something in it
         StartCoroutine(typeTextCoroutine);                                          // Start TypeText coroutine as game opens
+		siblingIndexOne = foregroundImage1.transform.GetSiblingIndex();
+		siblingIndexTwo = foregroundImage2.transform.GetSiblingIndex();
 
     }
+		
     void Update()
     {
        
@@ -155,6 +161,7 @@ public class CardDisplay : MonoBehaviour
         button4text.text = card.option4text;
 
         cardPerson.text = card.cardTextPerson;          // Inserts speakers name
+		siblingIndexSwitch();							//switches foreground images if needed
         
         //Update current button functions
         button1.onClick.RemoveAllListeners();           // Make sure to remove old functions before adding new ones..
@@ -520,5 +527,15 @@ public class CardDisplay : MonoBehaviour
         overLayingImage.color = new Color(0.25f, 0.25f, 0.25f, 0);  // Failsafe, keep making sure it is transparent.
         overLayingImage.gameObject.SetActive(false);                // Disable the transparent image.
     }
+
+	public void siblingIndexSwitch(){								//switches the layer order of foreground images 1 and 2
+		if (!card.onTop) {
+			foregroundImage1.transform.SetSiblingIndex (siblingIndexOne);
+			foregroundImage2.transform.SetSiblingIndex (siblingIndexTwo);
+		} else {
+			foregroundImage1.transform.SetSiblingIndex (siblingIndexTwo);
+			foregroundImage2.transform.SetSiblingIndex (siblingIndexOne);
+		}
+	}
 }
 
