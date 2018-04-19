@@ -29,6 +29,7 @@ MonoBehaviour:
   ambientDecrease: 0
   musicOff: 0
   ambientOff: 0
+  cardTextPerson: 
   cardText: "You are escorting Freddie in the hallway towards freedom. A guard is
     walking ahead.\r\n\u201DKinda funny that my last act in this prison is to welcome
     a newbie in it. Like life and death are both needed to make the world go around,
@@ -79,7 +80,15 @@ MonoBehaviour:
   option4GuardReputation: 0
   option4ObtainedSwitches: 
   option4RemovedSwitches: 
-  option4FollowCard: {fileID: 11400000, guid: 0319f90b4aa80fa4f8ea462ed9c8fc93, type: 2}
+  option4FollowCard: {fileID: 0}
+  Option5On: 1
+  option5IrsReputation: 0
+  option5PunkReputation: 0
+  option5ShakeReputation: 0
+  option5GuardReputation: 0
+  option5ObtainedSwitches: 
+  option5RemovedSwitches: 
+  option5FollowCard: {fileID: 11400000, guid: 0319f90b4aa80fa4f8ea462ed9c8fc93, type: 2}
   isTimeBasedCard: 0
   sfxPrewait: 0
   sfx: {fileID: 0}

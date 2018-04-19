@@ -29,6 +29,7 @@ MonoBehaviour:
   ambientDecrease: 0
   musicOff: 0
   ambientOff: 0
+  cardTextPerson: 
   cardText: "The guard escorts you back towards your cell. The Freddie\u2019s footsteps
     grow fainter. The guard speaks.\r\n\u201DAlmost twenty years and now he\u2019s
     finally out. Too bad Freddie ain\u2019t going to survive in the outside world.
@@ -78,7 +79,15 @@ MonoBehaviour:
   option4GuardReputation: 0
   option4ObtainedSwitches: 
   option4RemovedSwitches: 
-  option4FollowCard: {fileID: 11400000, guid: 7e5b833f2143912418eb4fa0d214f13d, type: 2}
+  option4FollowCard: {fileID: 0}
+  Option5On: 1
+  option5IrsReputation: 0
+  option5PunkReputation: 0
+  option5ShakeReputation: 0
+  option5GuardReputation: 0
+  option5ObtainedSwitches: 
+  option5RemovedSwitches: 
+  option5FollowCard: {fileID: 11400000, guid: 7e5b833f2143912418eb4fa0d214f13d, type: 2}
   isTimeBasedCard: 0
   sfxPrewait: 0
   sfx: {fileID: 0}

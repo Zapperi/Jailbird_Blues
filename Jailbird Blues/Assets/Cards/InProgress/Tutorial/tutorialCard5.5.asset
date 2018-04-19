@@ -29,6 +29,7 @@ MonoBehaviour:
   ambientDecrease: 0
   musicOff: 0
   ambientOff: 1
+  cardTextPerson: 
   cardText: Good choise! I like that one aswell
   logText: 
   endCard: 0
@@ -65,7 +66,7 @@ MonoBehaviour:
   option3ObtainedSwitches: 
   option3RemovedSwitches: 
   option3FollowCard: {fileID: 0}
-  Option4On: 1
+  Option4On: 0
   option4ReqSwitches: 
   option4text: 
   option4IrsReputation: 0
@@ -74,7 +75,15 @@ MonoBehaviour:
   option4GuardReputation: 0
   option4ObtainedSwitches: 
   option4RemovedSwitches: 
-  option4FollowCard: {fileID: 11400000, guid: ddf507c0260b7c3419fb64f524047956, type: 2}
+  option4FollowCard: {fileID: 0}
+  Option5On: 1
+  option5IrsReputation: 0
+  option5PunkReputation: 0
+  option5ShakeReputation: 0
+  option5GuardReputation: 0
+  option5ObtainedSwitches: 
+  option5RemovedSwitches: 
+  option5FollowCard: {fileID: 11400000, guid: ddf507c0260b7c3419fb64f524047956, type: 2}
   isTimeBasedCard: 0
   sfxPrewait: 0
   sfx: {fileID: 0}

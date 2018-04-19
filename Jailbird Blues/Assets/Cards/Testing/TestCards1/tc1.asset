@@ -31,7 +31,7 @@ MonoBehaviour:
   ambientOff: 1
   cardTextPerson: tc1
   cardText: This is the second card (tc1).
-  logText: 
+  logText: ttyy
   endCard: 0
   timeCard: 0
   repeatable: 0
@@ -88,14 +88,14 @@ MonoBehaviour:
   sfxPrewait: 1
   sfx: {fileID: 8300000, guid: f0d6035390912134b9dbbeafb2087d99, type: 3}
   sfxHasFadeOut: 1
-  sfxFadeOutAt: 3
+  sfxFadeOutAt: 5
   sfxFadeOutSpeed: 1
   sfxAfterWait: 1
-  ppsHasFadeIn: 1
+  ppsHasFadeIn: 0
   ppsFadeMode: 1
-  blackScreenStart: 1
-  blackScreenTime: 1
-  ppsFadeInSpeed: 1
-  ppsShowCard: 2
+  blackScreenStart: 0
+  blackScreenTime: 0
+  ppsFadeInSpeed: 0
+  ppsShowCard: 0
   ppsHasFadeOut: 0
-  fadeOutSpeed: 1
+  fadeOutSpeed: 0

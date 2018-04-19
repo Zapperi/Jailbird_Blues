@@ -29,6 +29,7 @@ MonoBehaviour:
   ambientDecrease: 0
   musicOff: 0
   ambientOff: 0
+  cardTextPerson: 
   cardText: "\u201DTo gain the respect of a Shaker you should have punched someone.
     But I guess you\u2019re still learning. Other gangs aren\u2019t too keen on physical
     altercations among their own, but Protein shakers consider it an honour and as
@@ -69,7 +70,7 @@ MonoBehaviour:
   option3ObtainedSwitches: 
   option3RemovedSwitches: 
   option3FollowCard: {fileID: 0}
-  Option4On: 1
+  Option4On: 0
   option4ReqSwitches: 
   option4text: 
   option4IrsReputation: 0
@@ -78,7 +79,15 @@ MonoBehaviour:
   option4GuardReputation: 0
   option4ObtainedSwitches: 
   option4RemovedSwitches: 
-  option4FollowCard: {fileID: 11400000, guid: b6cefcc4e82dc1f4ba97cd31c8581168, type: 2}
+  option4FollowCard: {fileID: 0}
+  Option5On: 1
+  option5IrsReputation: 0
+  option5PunkReputation: 0
+  option5ShakeReputation: 0
+  option5GuardReputation: 0
+  option5ObtainedSwitches: 
+  option5RemovedSwitches: 
+  option5FollowCard: {fileID: 11400000, guid: b6cefcc4e82dc1f4ba97cd31c8581168, type: 2}
   isTimeBasedCard: 0
   sfxPrewait: 0
   sfx: {fileID: 0}

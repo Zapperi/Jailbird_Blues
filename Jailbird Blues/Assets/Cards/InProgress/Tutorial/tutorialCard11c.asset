@@ -29,6 +29,7 @@ MonoBehaviour:
   ambientDecrease: 0
   musicOff: 0
   ambientOff: 0
+  cardTextPerson: 
   cardText: "The guard slouches away. Freddie turns to you.\r\n\u201DI appreciate
     you wanting to help, but don\u2019t call the guards unless it\u2019s a life or
     death situation. Even then there are no guarantees. Also other inmates generally
@@ -78,7 +79,15 @@ MonoBehaviour:
   option4GuardReputation: 0
   option4ObtainedSwitches: 
   option4RemovedSwitches: 
-  option4FollowCard: {fileID: 11400000, guid: f58d31edf61b70642a2c3eb340f141b2, type: 2}
+  option4FollowCard: {fileID: 0}
+  Option5On: 1
+  option5IrsReputation: 0
+  option5PunkReputation: 0
+  option5ShakeReputation: 0
+  option5GuardReputation: 0
+  option5ObtainedSwitches: 
+  option5RemovedSwitches: 
+  option5FollowCard: {fileID: 11400000, guid: f58d31edf61b70642a2c3eb340f141b2, type: 2}
   isTimeBasedCard: 0
   sfxPrewait: 0
   sfx: {fileID: 0}

@@ -29,6 +29,7 @@ MonoBehaviour:
   ambientDecrease: 0.509
   musicOff: 0
   ambientOff: 0
+  cardTextPerson: 
   cardText: "\u201DAh, good old judge Vernon. I heard his wife left with his dog and
     poor old Vernon took to drinking even more than usual. Luck hasn\u2019t been your
     best friend, but if you listen to my guidance you may change that around.\u201D"
@@ -76,7 +77,15 @@ MonoBehaviour:
   option4GuardReputation: 0
   option4ObtainedSwitches: 
   option4RemovedSwitches: 
-  option4FollowCard: {fileID: 11400000, guid: 67cc737c2828a3243a5ecb540681ca20, type: 2}
+  option4FollowCard: {fileID: 0}
+  Option5On: 1
+  option5IrsReputation: 0
+  option5PunkReputation: 0
+  option5ShakeReputation: 0
+  option5GuardReputation: 0
+  option5ObtainedSwitches: 
+  option5RemovedSwitches: 
+  option5FollowCard: {fileID: 11400000, guid: 67cc737c2828a3243a5ecb540681ca20, type: 2}
   isTimeBasedCard: 0
   sfxPrewait: 0
   sfx: {fileID: 0}

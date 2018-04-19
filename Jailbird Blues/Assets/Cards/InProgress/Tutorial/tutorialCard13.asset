@@ -29,6 +29,7 @@ MonoBehaviour:
   ambientDecrease: 0
   musicOff: 0
   ambientOff: 0
+  cardTextPerson: 
   cardText: "Freddie sits down and starts eating and at the same time voicing his
     knowledge.\r\n\u201DThe I.R.S. are tax evaders and other white collar criminals.
     They have a good foothold on the prison contraband business and they respect the
@@ -77,7 +78,15 @@ MonoBehaviour:
   option4GuardReputation: 0
   option4ObtainedSwitches: 
   option4RemovedSwitches: 
-  option4FollowCard: {fileID: 11400000, guid: 4eba9a3ab7f3cc44e922d4ca70bdd98c, type: 2}
+  option4FollowCard: {fileID: 0}
+  Option5On: 1
+  option5IrsReputation: 0
+  option5PunkReputation: 0
+  option5ShakeReputation: 0
+  option5GuardReputation: 0
+  option5ObtainedSwitches: 
+  option5RemovedSwitches: 
+  option5FollowCard: {fileID: 11400000, guid: 4eba9a3ab7f3cc44e922d4ca70bdd98c, type: 2}
   isTimeBasedCard: 0
   sfxPrewait: 0
   sfx: {fileID: 0}

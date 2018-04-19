@@ -29,6 +29,7 @@ MonoBehaviour:
   ambientDecrease: 0
   musicOff: 0
   ambientOff: 0
+  cardTextPerson: 
   cardText: "\u201DSo, you wanted to give an old man some company. Wise choice maybe?
     Don\u2019t worry, this place will give you lots of opportunities to behave like
     an animal. Why not to enjoy civilized manners while you still can? I\u2019m trying
@@ -78,7 +79,15 @@ MonoBehaviour:
   option4GuardReputation: 0
   option4ObtainedSwitches: 01000000
   option4RemovedSwitches: 
-  option4FollowCard: {fileID: 11400000, guid: b6cefcc4e82dc1f4ba97cd31c8581168, type: 2}
+  option4FollowCard: {fileID: 0}
+  Option5On: 1
+  option5IrsReputation: 0
+  option5PunkReputation: 0
+  option5ShakeReputation: 0
+  option5GuardReputation: 0
+  option5ObtainedSwitches: 
+  option5RemovedSwitches: 
+  option5FollowCard: {fileID: 11400000, guid: b6cefcc4e82dc1f4ba97cd31c8581168, type: 2}
   isTimeBasedCard: 0
   sfxPrewait: 0
   sfx: {fileID: 0}

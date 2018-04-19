@@ -29,6 +29,7 @@ MonoBehaviour:
   ambientDecrease: 0
   musicOff: 0
   ambientOff: 0
+  cardTextPerson: 
   cardText: "Inmate from the kitchen walks up to Freddie with something wrapped in
     a napkin.\r\n\u201DI heard you\u2019ll be flying away soon Freddie, so here\u2019s
     a little parting gift to thank you.\u201D\r\nThe inmate gives Freddie an extra
@@ -77,7 +78,15 @@ MonoBehaviour:
   option4GuardReputation: 0
   option4ObtainedSwitches: 
   option4RemovedSwitches: 
-  option4FollowCard: {fileID: 11400000, guid: ac3b3fec43ad8a04e84f092c9a198147, type: 2}
+  option4FollowCard: {fileID: 0}
+  Option5On: 1
+  option5IrsReputation: 0
+  option5PunkReputation: 0
+  option5ShakeReputation: 0
+  option5GuardReputation: 0
+  option5ObtainedSwitches: 
+  option5RemovedSwitches: 
+  option5FollowCard: {fileID: 11400000, guid: ac3b3fec43ad8a04e84f092c9a198147, type: 2}
   isTimeBasedCard: 0
   sfxPrewait: 0
   sfx: {fileID: 0}

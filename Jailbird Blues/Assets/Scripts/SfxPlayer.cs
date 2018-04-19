@@ -465,10 +465,26 @@ public class SfxPlayer : MonoBehaviour {
 
     public void SetFadingOutTrue()
     {
-        if (!timedIsWaiting && !timedSfxPlaying && !timedIsAfterWaiting)
+        if (timedIsWaiting)
         {
-            timedSfxIsFadingOut = true;
+            timedIsWaiting = false;
+            GameController.gameController.SFXFadesDone();
+            return;
         }
+        if (timedSfxPlaying)
+        {
+            timedSfxPlaying = false;
+            timedSfxIsFadingOut = true;
+            fadeOutAmount = 1f / 30f;
+            timedHasAfterWait = false;
+            afterWaitTime = 0f;
+        }
+        if (timedIsAfterWaiting)
+        {
+            afterWaitTime = 0f;
+
+        }
+
     }
 }
 

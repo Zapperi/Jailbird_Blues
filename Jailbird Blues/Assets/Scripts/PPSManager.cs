@@ -123,7 +123,6 @@ public class PPSManager : MonoBehaviour
         if (fadingOut && !leftToRight)
         {
             m_Vignette.intensity.value += fadeOutAmount;
-            Debug.Log(m_Vignette.intensity.value);
             m_Vignette.smoothness.value += fadeOutAmount;
             if (m_Vignette.smoothness.value >= 0.99f)
             {
@@ -156,7 +155,6 @@ public class PPSManager : MonoBehaviour
             blackScreenTime -= Time.deltaTime;
             if (blackScreenTime<=0f)
             {
-                Debug.Log("black screen off");
                 blackScreenTime = 0f;
                 blackScreenOn = false;
             }
@@ -323,7 +321,6 @@ public class PPSManager : MonoBehaviour
 
     public void FadesDone()
     {
-        Debug.Log("FadesDone");
         GameController.gameController.PPSFadesDone();
     }
 
