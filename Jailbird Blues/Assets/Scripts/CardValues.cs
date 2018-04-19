@@ -58,6 +58,8 @@ public class CardValues : ScriptableObject									//switched the surface from M
     public bool endCard = false;                                            //is the card one of the final cards in the game
 	[Tooltip("Does this card advance schedule?")]
 	public bool timeCard = false;											//if true, triggers gameController's AddTime function
+	[Tooltip("Does this card have foreground image 1 on top of foreground image 2?")]
+	public bool onTop = false;
     [Tooltip("Can this card appear multiple times?")]
     public bool repeatable;                                                 //can this card happen multiple times during one playthrough
     private bool used;														//has the card been played already?
