@@ -56,9 +56,7 @@ public class GameController : MonoBehaviour {
         //BuildDeck(yardCards);
         //Debuggin ends
 
-        
-
-
+        GainsTextHandler.Initialize();                                              // Activates the floating reputation gain element
         if (gameController == null)													//if there is no gamecontroller
 		{
             //// !! DISABLED FOR DEBUGGIN !!
@@ -140,6 +138,27 @@ public class GameController : MonoBehaviour {
         }
     }
 
+    public void PrintReputations(int optionIndex)       // Create's a floating reputation gain text from given option.
+    {
+        switch (optionIndex)
+        {
+            case 1:
+                GainsTextHandler.CreateGainsText(new int[] { currentCard.option1IrsReputation, currentCard.option1PunkReputation, currentCard.option1ShakeReputation, currentCard.option1GuardReputation }, cardDisplay.popUp.transform);
+                break;
+            case 2:
+                GainsTextHandler.CreateGainsText(new int[] { currentCard.option2IrsReputation, currentCard.option2PunkReputation, currentCard.option2ShakeReputation, currentCard.option2GuardReputation }, cardDisplay.popUp.transform);
+                break;
+            case 3:
+                GainsTextHandler.CreateGainsText(new int[] { currentCard.option3IrsReputation, currentCard.option3PunkReputation, currentCard.option3ShakeReputation, currentCard.option3GuardReputation }, cardDisplay.popUp.transform);
+                break;
+            case 4:
+                GainsTextHandler.CreateGainsText(new int[] { currentCard.option4IrsReputation, currentCard.option4PunkReputation, currentCard.option4ShakeReputation, currentCard.option4GuardReputation }, cardDisplay.popUp.transform);
+                break;
+            case 5:
+                GainsTextHandler.CreateGainsText(new int[] { currentCard.option5IrsReputation, currentCard.option5PunkReputation, currentCard.option5ShakeReputation, currentCard.option5GuardReputation }, cardDisplay.popUp.transform);
+                break;
+        }
+    }
 	public void UpdateReputations(int irs, int punks, int shakers, int guards)		//updates the reputations among factions. function used by CardDisplay
 	{
         irsRep += irs;																//new reputation = old reputation + changes to reputation

@@ -29,7 +29,7 @@ MonoBehaviour:
   ambientDecrease: 0
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: 
+  cardTextPerson: Tester
   cardText: Gimme shoes plz
   logText: 
   endCard: 0
@@ -38,7 +38,7 @@ MonoBehaviour:
   OptionsOn: 1
   Option1On: 1
   option1ReqSwitches: 
-  option1text: 
+  option1text: Button
   option1IrsReputation: -1
   option1PunkReputation: 0
   option1ShakeReputation: 0
@@ -76,7 +76,7 @@ MonoBehaviour:
   option4ObtainedSwitches: 
   option4RemovedSwitches: 
   option4FollowCard: {fileID: 11400000, guid: 748dbc28e0d23044ea834716251df166, type: 2}
-  Option5On: 1
+  Option5On: 0
   option5IrsReputation: 0
   option5PunkReputation: 0
   option5ShakeReputation: 0
