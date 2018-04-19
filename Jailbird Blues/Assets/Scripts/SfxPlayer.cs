@@ -30,6 +30,14 @@ public class SfxPlayer : MonoBehaviour {
     public float afterWaitTime;
     public float fadeOutAmount;
 
+    public float sfxModifier;
+    public float musicModifier;
+    public float currentMusicVolume1;
+    public float currentMusicVolume2;
+    public float currentSfxVolume;
+    public float currentAmbientVolume;
+    public float currentTimedVolume;
+
 
     private void Awake()
     {
@@ -40,45 +48,51 @@ public class SfxPlayer : MonoBehaviour {
         timedSfxPlaying = false;
         timedIsWaiting = false;
         timedIsAfterWaiting = false;
+
+        sfxModifier = 0.5f;
+        musicModifier = 0.5f;
     }
 
     private void Update()
     {
         if (music1FadingIn)
         {
-            musicSource1.volume += Time.deltaTime * musicFadeSpeed;
-            if (musicSource1.volume >= musicVolume)
+            currentMusicVolume1 += Time.deltaTime * musicFadeSpeed;
+            if (currentMusicVolume1 >= musicVolume)
             {
-                musicSource1.volume = musicVolume;
+                currentMusicVolume1 = musicVolume;
                 music1FadingIn = false;
             }
         }
         if (music2FadingIn)
         {
-            musicSource2.volume += Time.deltaTime * musicFadeSpeed;
-            if (musicSource2.volume >= musicVolume)
+            currentMusicVolume2 += Time.deltaTime * musicFadeSpeed;
+            if (currentMusicVolume2 >= musicVolume)
             {
-                musicSource2.volume = musicVolume;
+                currentMusicVolume2 = musicVolume;
                 music2FadingIn = false;
             }
         }
         if (music1FadingOut)
         {
-            musicSource1.volume -= Time.deltaTime * musicFadeSpeed;
-            if (musicSource1.volume <= 0f)
+            currentMusicVolume1 -= Time.deltaTime * musicFadeSpeed;
+            if (currentMusicVolume1 <= 0f)
             {
+                currentMusicVolume1 = 0f;
                 musicSource1.Stop();
                 music1FadingOut = false;
             }
         }
         if (music2FadingOut)
         {
-            musicSource2.volume -= Time.deltaTime * musicFadeSpeed;
-            if (musicSource2.volume <= 0f)
+            currentMusicVolume2 -= Time.deltaTime * musicFadeSpeed;
+            if (currentMusicVolume2 <= 0f)
             {
+                currentMusicVolume2 = 0f;
                 musicSource2.Stop();
                 music2FadingOut = false;
             }
+
         }
         //**************
         if (timedIsAfterWaiting)
@@ -86,15 +100,17 @@ public class SfxPlayer : MonoBehaviour {
             afterWaitTime -= Time.deltaTime;
             if (afterWaitTime <= 0)
             {
+                afterWaitTime = 0f;
                 timedIsAfterWaiting = false;
                 GameController.gameController.SFXFadesDone();
             }
         }
         if (timedSfxIsFadingOut)
         {
-            timedSfxSource.volume -= fadeOutAmount;
-            if (timedSfxSource.volume <= 0f)
+            currentTimedVolume -= fadeOutAmount;
+            if (currentTimedVolume <= 0f)
             {
+                currentTimedVolume = 0f;
                 timedSfxIsFadingOut = false;
                 if (timedHasAfterWait)
                 {
@@ -134,16 +150,34 @@ public class SfxPlayer : MonoBehaviour {
             timeUntilStart -= Time.deltaTime;
             if (timeUntilStart <= 0)
             {
+                timeUntilStart = 0f;
                 timedIsWaiting = false;
                 timedSfxPlaying = true;
                 timedSfxSource.Play();
-                
+
             }
         }
         if (timedSfxHasFadeOut)
         {
-            timeUntilFadeOut -= Time.deltaTime;
+            if (!timedSfxIsFadingOut && !timedIsAfterWaiting)
+            {
+                timeUntilFadeOut -= Time.deltaTime;
+                if (timeUntilFadeOut <= 0f)
+                {
+                    timedSfxIsFadingOut = true;
+                    timedSfxPlaying = false;
+                    timedIsWaiting = false;
+                    timedIsAfterWaiting = false;
+                    timeUntilFadeOut = 0f;
+                }
+            }
         }
+
+        sfxSource.volume = currentSfxVolume * sfxModifier;
+        timedSfxSource.volume = currentTimedVolume * sfxModifier;
+        ambientSource.volume = currentAmbientVolume * sfxModifier;
+        musicSource1.volume = currentMusicVolume1 * musicModifier;
+        musicSource2.volume = currentMusicVolume2 * musicModifier;
 
     }
 
@@ -171,14 +205,14 @@ public class SfxPlayer : MonoBehaviour {
 
             if (musicSource2.GetComponent<AudioClip>() == nextMusic)
             {
-                musicSource2.volume = mVol;
+                currentMusicVolume2 = mVol;
 
             }
             else //set the next music to the 1st slot and set the 2nd slot to fade out
             {
                 musicSource1.clip = nextMusic;
                 musicSource1.Play();
-                musicSource1.volume = 0f;
+                currentMusicVolume1 = 0f;
                 music1FadingIn = true;
                 if (musicSource2.isPlaying)
                 {
@@ -193,7 +227,8 @@ public class SfxPlayer : MonoBehaviour {
             if (musicSource1.GetComponent<AudioClip>() == nextMusic)
             {
                 musicSource1.volume = mVol;
-            } else
+            }
+            else
             {   //set the next music to the 2nd slot and set the 1nd slot to fade out
                 musicSource2.clip = nextMusic;
                 musicSource2.Play();
@@ -209,21 +244,23 @@ public class SfxPlayer : MonoBehaviour {
         {
             if (musicSource1.GetComponent<AudioClip>() == nextMusic)
             {
-                musicSource1.volume = mVol;
+                currentMusicVolume1 = mVol;
                 music2FadingOut = true;
                 music1FadingIn = false;
                 music1FadingOut = false;
 
-            } else if (musicSource2.GetComponent<AudioClip>() == nextMusic)
+            }
+            else if (musicSource2.GetComponent<AudioClip>() == nextMusic)
             {
-                musicSource2.volume = mVol;
+                currentMusicVolume2 = mVol;
                 music1FadingOut = true;
                 music2FadingIn = false;
                 music1FadingOut = false;
-            } else
+            }
+            else
             {
                 musicSource1.clip = nextMusic;
-                musicSource1.volume = 0;
+                currentMusicVolume1 = 0;
                 music1FadingOut = false;
                 music1FadingIn = true;
                 music2FadingOut = true;
@@ -235,7 +272,7 @@ public class SfxPlayer : MonoBehaviour {
             ambientSource.clip = nextAmbient;
             ambientSource.Play();
         }
-        ambientSource.volume = aVol;
+        currentAmbientVolume = aVol;
 
     }
 
@@ -251,19 +288,21 @@ public class SfxPlayer : MonoBehaviour {
             {
                 music2FadingOut = true;
             }
-        } else
+        }
+        else
         {
             musicVolume = mVol;
             if (musicSource1.isPlaying && !music1FadingOut)
             {
-                musicSource1.volume = mVol;
+                currentMusicVolume1 = mVol;
                 if (musicSource2.isPlaying)
                 {
                     music2FadingOut = true;
                 }
-            } else if (musicSource2.isPlaying && !music2FadingOut)
+            }
+            else if (musicSource2.isPlaying && !music2FadingOut)
             {
-                musicSource2.volume = mVol;
+                currentMusicVolume2 = mVol;
             }
         }
         if (ambientSource.clip == null || ambientSource.clip != nextAmbient)
@@ -271,7 +310,7 @@ public class SfxPlayer : MonoBehaviour {
             ambientSource.clip = nextAmbient;
             ambientSource.Play();
         }
-        ambientSource.volume = aVol;
+        currentAmbientVolume = aVol;
     }
 
     public void SetActiveAudios(AudioClip nextMusic, bool ambientOff, float mVol, float aVol)
@@ -285,14 +324,14 @@ public class SfxPlayer : MonoBehaviour {
 
             if (musicSource2.GetComponent<AudioClip>() == nextMusic)
             {
-                musicSource2.volume = mVol;
+                currentMusicVolume2 = mVol;
 
             }
             else //set the next music to the 1st slot and set the 2nd slot to fade out
             {
                 musicSource1.clip = nextMusic;
                 musicSource1.Play();
-                musicSource1.volume = 0f;
+                currentMusicVolume1 = 0f;
                 music1FadingIn = true;
                 if (musicSource2.isPlaying)
                 {
@@ -306,13 +345,13 @@ public class SfxPlayer : MonoBehaviour {
             //if the next clip is already playing
             if (musicSource1.GetComponent<AudioClip>() == nextMusic)
             {
-                musicSource1.volume = mVol;
+                currentMusicVolume1 = mVol;
             }
             else
             {   //set the next music to the 2nd slot and set the 1nd slot to fade out
                 musicSource2.clip = nextMusic;
                 musicSource2.Play();
-                musicSource2.volume = 0f;
+                currentMusicVolume2 = 0f;
                 music2FadingIn = true;
                 if (musicSource1.isPlaying)
                 {
@@ -324,7 +363,7 @@ public class SfxPlayer : MonoBehaviour {
         {
             if (musicSource1.GetComponent<AudioClip>() == nextMusic)
             {
-                musicSource1.volume = mVol;
+                currentMusicVolume1 = mVol;
                 music2FadingOut = true;
                 music1FadingIn = false;
                 music1FadingOut = false;
@@ -332,7 +371,7 @@ public class SfxPlayer : MonoBehaviour {
             }
             else if (musicSource2.GetComponent<AudioClip>() == nextMusic)
             {
-                musicSource2.volume = mVol;
+                currentMusicVolume2 = mVol;
                 music1FadingOut = true;
                 music2FadingIn = false;
                 music1FadingOut = false;
@@ -340,7 +379,7 @@ public class SfxPlayer : MonoBehaviour {
             else
             {
                 musicSource1.clip = nextMusic;
-                musicSource1.volume = 0;
+                currentMusicVolume1 = 0;
                 music1FadingOut = false;
                 music1FadingIn = true;
                 music2FadingOut = true;
@@ -349,15 +388,16 @@ public class SfxPlayer : MonoBehaviour {
 
         if (ambientOff)
         {
-            if (ambientSource.clip !=null && ambientSource.isPlaying)
+            if (ambientSource.clip != null && ambientSource.isPlaying)
             {
                 ambientSource.Stop();
             }
-        } else
+        }
+        else
         {
             if (ambientSource.clip != null)
             {
-                ambientSource.volume = aVol;
+                currentAmbientVolume = aVol;
             }
         }
     }
@@ -380,7 +420,7 @@ public class SfxPlayer : MonoBehaviour {
             musicVolume = mVol;
             if (musicSource1.isPlaying && !music1FadingOut)
             {
-                musicSource1.volume = mVol;
+                currentMusicVolume1 = mVol;
                 if (musicSource2.isPlaying)
                 {
                     music2FadingOut = true;
@@ -388,7 +428,7 @@ public class SfxPlayer : MonoBehaviour {
             }
             else if (musicSource2.isPlaying && !music2FadingOut)
             {
-                musicSource2.volume = mVol;
+                currentMusicVolume2 = mVol;
             }
         }
         if (ambientOff)
@@ -402,9 +442,19 @@ public class SfxPlayer : MonoBehaviour {
         {
             if (ambientSource.clip != null)
             {
-                ambientSource.volume = aVol;
+                currentAmbientVolume = aVol;
             }
         }
+    }
+
+    public void SetMusicModifier(float value)
+    {
+        musicModifier = value;
+    }
+
+    public void SetSfxModifier(float value)
+    {
+        sfxModifier = value;
     }
 
     public void PlayTimedSfx(CardValues currentCard)
@@ -412,17 +462,20 @@ public class SfxPlayer : MonoBehaviour {
         if (currentCard.sfx == null)
         {
             GameController.gameController.SFXFadesDone();
-        } else
+        }
+        else
         {
             timedSfxSource.clip = currentCard.sfx;
             timedSfxSource.volume = 1f;
+            currentTimedVolume = 1f;
 
             if (currentCard.sfxPrewait == 0)
             {
                 timedIsWaiting = false;
                 timedSfxPlaying = true;
                 timedSfxSource.Play();
-            } else
+            }
+            else
             {
                 timedIsWaiting = true;
                 timeUntilStart = currentCard.sfxPrewait;
@@ -442,7 +495,8 @@ public class SfxPlayer : MonoBehaviour {
                     if (currentCard.fadeOutSpeed == 0)
                     {
                         fadeOutAmount = 1f / 30f;
-                    } else
+                    }
+                    else
                     {
                         fadeOutAmount = currentCard.fadeOutSpeed / 60f;
                     }
@@ -450,7 +504,8 @@ public class SfxPlayer : MonoBehaviour {
                     if (currentCard.sfxAfterWait == 0)
                     {
                         timedHasAfterWait = false;
-                    } else
+                    }
+                    else
                     {
                         timedHasAfterWait = true;
                         afterWaitTime = currentCard.sfxAfterWait;
@@ -459,7 +514,7 @@ public class SfxPlayer : MonoBehaviour {
 
                 }
             }
-            
+
         }
     }
 

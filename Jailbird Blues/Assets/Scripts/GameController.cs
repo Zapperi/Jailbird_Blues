@@ -56,6 +56,8 @@ public class GameController : MonoBehaviour {
         //BuildDeck(yardCards);
         //Debuggin ends
 
+        
+
 
         if (gameController == null)													//if there is no gamecontroller
 		{
@@ -69,7 +71,7 @@ public class GameController : MonoBehaviour {
 			shakersRep = 0;
 			guardsRep = 0;
 			day = 1;																//the game starts at day 1
-			schedule = 0;                                                           //the day begins with the first activity in the schedule 
+			schedule = -1;     //Sets intro time                                                      //the day begins with the first activity in the schedule 
             SetBackgroundAudio();
             AddLogEvent();
 
@@ -84,7 +86,7 @@ public class GameController : MonoBehaviour {
 		{
 			Destroy(gameObject);													//delete them
 		}
-		scheduleName = "cell";
+		scheduleName = "";
 
 
 	}
@@ -273,14 +275,21 @@ public class GameController : MonoBehaviour {
             AddTime();
         }
         currentCard = next;
-        cardWaiting=null;
+        cardWaiting = null;
         SetBackgroundAudio();         // Update audio.
         AddLogEvent();
-        if ((currentCard.sfxPrewait > 0f || currentCard.sfxFadeOutAt > 0f) && !currentCard.isTimeBasedCard)
+        if ((currentCard.sfxPrewait > 0f || currentCard.sfxFadeOutAt > 0f) && !currentCard.isTimeBasedCard)//
         {
             waitingForSFX = true;
             sfxSource.GetComponent<SfxPlayer>().PlayTimedSfx(currentCard);
             cardWaiting = currentCard;
+        }
+        else
+        {
+            if (!currentCard.isTimeBasedCard)
+            {
+                sfxSource.GetComponent<SfxPlayer>().PlayTimedSfx(currentCard);
+            }
         }
 
         if (currentCard.isTimeBasedCard)
@@ -301,13 +310,14 @@ public class GameController : MonoBehaviour {
                 cardWaiting = currentCard.option5FollowCard;
             }
         }
-        else if (currentCard.ppsHasFadeIn||currentCard.blackScreenStart)                               //If the next card has a fade-in
+        else if (currentCard.ppsHasFadeIn || currentCard.blackScreenStart)                               //If the next card has a fade-in
         {
             waitingForPPS = true;
             cleaningUpFades = true;
             cardDisplay.disableButtons();
             mainCamera.GetComponent<PPSManager>().SetFades(currentCard);
-        } else
+        }
+        else
         {
             if (mainCamera.GetComponent<PPSManager>().FadesAreOn())     //This checks if fades are on and fades out if necessary.
             {
@@ -335,13 +345,16 @@ public class GameController : MonoBehaviour {
 
     public void SFXFadesDone()
     {
-        waitingForSFX = false;
-        if (!waitingForPPS)
+        if (waitingForSFX)
         {
-            cardDisplay.enableButtons();
-            if (cardWaiting != currentCard)
+            waitingForSFX = false;
+            if (!waitingForPPS)
             {
-                ActuallyChangeCard(cardWaiting);
+                cardDisplay.enableButtons();
+                if (cardWaiting != currentCard)
+                {
+                    ActuallyChangeCard(cardWaiting);
+                }
             }
         }
     }
@@ -356,9 +369,9 @@ public class GameController : MonoBehaviour {
         {
             //reset addToDeck to true
             addToDeck = true;
-            
+
             //--Create cellDeck--
-            if(targetDeck == cellCards)
+            if (targetDeck == cellCards)
             {
                 //Checks the time of day and positive reputation values, if true..
                 if (allCards[i].timeOfDay == 0 && ((allCards[i].RepGuard == 0 && allCards[i].RepIrs == 0 && allCards[i].RepPunks == 0 && allCards[i].RepShake == 0) || (guardsRep > 0 && guardsRep > allCards[i].RepGuard) || (irsRep > 0 && irsRep > allCards[i].RepIrs) || (punksRep > 0 && punksRep > allCards[i].RepPunks) || (shakersRep > 0 && shakersRep > allCards[i].RepShake)))
@@ -393,8 +406,8 @@ public class GameController : MonoBehaviour {
                     if (addToDeck)
                         targetDeck.Add(allCards[i]);
                 }
-            
-                
+
+
 
             }
 
@@ -434,8 +447,8 @@ public class GameController : MonoBehaviour {
                     if (addToDeck)
                         targetDeck.Add(allCards[i]);
                 }
-            
-                
+
+
 
             }
 
@@ -473,7 +486,7 @@ public class GameController : MonoBehaviour {
                     }
                     //if all required switches were true, add card to the deck.
                     if (addToDeck)
-                       targetDeck.Add(allCards[i]);
+                        targetDeck.Add(allCards[i]);
                 }
 
             }
@@ -515,7 +528,7 @@ public class GameController : MonoBehaviour {
                         targetDeck.Add(allCards[i]);
                 }
             }
-            
+
         }
     }
     //checks if player has required switches for that option
@@ -792,25 +805,26 @@ public class GameController : MonoBehaviour {
     public void AddTime()
     {
         schedule++;
-        if (schedule > scheduleSize-1)
+        if (schedule > scheduleSize - 1)
         {
             schedule = 0;
             day++;
         }
-		switch (schedule) {															//chooses the deck based on schedule
-		case (0):
-			scheduleName = "cell";
-			break;
-		case (1):
-			scheduleName = "yard";
-			break;
-		case (2):
-			scheduleName = "lunch";
-			break;
-		case (3):
-			scheduleName = "workshop";
-			break;
-		}
+        switch (schedule)
+        {                                                           //chooses the deck based on schedule
+            case (0):
+                scheduleName = "cell";
+                break;
+            case (1):
+                scheduleName = "yard";
+                break;
+            case (2):
+                scheduleName = "lunch";
+                break;
+            case (3):
+                scheduleName = "workshop";
+                break;
+        }
     }
 
     //Calls a button click-sfx

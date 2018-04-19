@@ -615,3 +615,20 @@ MonoBehaviour:
   musicSource2: {fileID: 82211921022706628}
   ambientSource: {fileID: 82171428930610742}
   musicFadeSpeed: 1
+  timedIsWaiting: 0
+  timedSfxPlaying: 0
+  timedSfxIsFadingOut: 0
+  timedIsAfterWaiting: 0
+  timedSfxHasFadeOut: 0
+  timedHasAfterWait: 0
+  timeUntilStart: 0
+  timeUntilFadeOut: 0
+  afterWaitTime: 0
+  fadeOutAmount: 0
+  sfxModifier: 0
+  musicModifier: 0
+  currentMusicVolume1: 0
+  currentMusicVolume2: 0
+  currentSfxVolume: 0
+  currentAmbientVolume: 0
+  currentTimedVolume: 0

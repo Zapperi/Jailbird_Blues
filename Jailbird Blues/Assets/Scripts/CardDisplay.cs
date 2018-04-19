@@ -263,7 +263,7 @@ public class CardDisplay : MonoBehaviour
         {
             GameController.gameController.previousCard = card;                  // Updates gamecontroller's previous card to current card
             StopCoroutine(typeTextCoroutine);                                   // Stop ongoing coroutine, so they won't mix up
-            StartCoroutine(FadeImage(fadeSpeed));                               // Fade in and out a overlay image and update card values under it.
+            //StartCoroutine(FadeImage(fadeSpeed));                               // Fade in and out a overlay image and update card values under it.
             GameController.gameController.SetCurrentCard(button);
             
             if (button == 1)                                                    // Update the next card into given in cardDisplay.
