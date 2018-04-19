@@ -265,6 +265,12 @@ GameObject:
   m_PrefabParentObject: {fileID: 1801402322357350, guid: 134fefba177737048b49e03ebfbe1485,
     type: 2}
   m_PrefabInternal: {fileID: 320235282}
+--- !u!114 &581128781 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114433471620639334, guid: 134fefba177737048b49e03ebfbe1485,
+    type: 2}
+  m_PrefabInternal: {fileID: 320235282}
+  m_Script: {fileID: 11500000, guid: 0c494de68c38bf148893cfecbe4d263b, type: 3}
 --- !u!114 &586371977 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114743166947194950, guid: a5ca0da45ae9cf94f8ba95b70b239f82,
@@ -387,7 +393,7 @@ Prefab:
         type: 2}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 737213948}
+      objectReference: {fileID: 581128781}
     - target: {fileID: 223348527675373308, guid: df67972d0e99a6d428df8e1f930ac1a0,
         type: 2}
       propertyPath: m_Camera
@@ -412,6 +418,21 @@ Prefab:
         type: 2}
       propertyPath: m_AnchoredPosition.y
       value: -300
+      objectReference: {fileID: 0}
+    - target: {fileID: 114423395494832416, guid: df67972d0e99a6d428df8e1f930ac1a0,
+        type: 2}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 581128781}
+    - target: {fileID: 114423395494832416, guid: df67972d0e99a6d428df8e1f930ac1a0,
+        type: 2}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetMusicModifier
+      objectReference: {fileID: 0}
+    - target: {fileID: 114895876490274518, guid: df67972d0e99a6d428df8e1f930ac1a0,
+        type: 2}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetSfxModifier
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: df67972d0e99a6d428df8e1f930ac1a0, type: 2}
