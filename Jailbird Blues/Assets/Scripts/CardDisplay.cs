@@ -401,10 +401,12 @@ public class CardDisplay : MonoBehaviour
                     button1Img.sprite = item.itemIcon;                          //print switch image
                     if (GameController.gameController.Check1Switches() == false)       // checks if you have required switches
                     {
+                        Debug.Log("option 1 cross enabled");
                         cross1.enabled = true;                                      //if you dont have them activate red cross
                     }
                     else
                     {
+                        Debug.Log("option 1 cross disabled");
                         cross1.enabled = false;                                     // else deactivate
                     }
                     break;
