@@ -14,7 +14,7 @@ public class CustomCardDisplay : Editor {
         
         cd = (CardDisplay)target;
 
-        if (cd.card)
+        if (cd.currentCard)
         {
             cd.background.gameObject.SetActive(true);
             cd.foregroundImage2.gameObject.SetActive(true);
@@ -26,17 +26,17 @@ public class CustomCardDisplay : Editor {
             cd.button3.gameObject.SetActive(true);
             cd.button4.gameObject.SetActive(true);
 
-                cd.background.sprite = cd.card.backgroundImage;
-                cd.foregroundImage1.sprite = cd.card.foregroundImage;
-                cd.foregroundImage2.sprite = cd.card.foregroundImage2;
-                cd.foregroundImage3.sprite = cd.card.foregroundImage3;
-                cd.foregroundImage4.sprite = cd.card.foregroundImage4;
+                cd.background.sprite = cd.currentCard.backgroundImage;
+                cd.foregroundImage1.sprite = cd.currentCard.foregroundImage;
+                cd.foregroundImage2.sprite = cd.currentCard.foregroundImage2;
+                cd.foregroundImage3.sprite = cd.currentCard.foregroundImage3;
+                cd.foregroundImage4.sprite = cd.currentCard.foregroundImage4;
 
-            cd.cardText.text = cd.card.cardText;
-            cd.button1text.text = cd.card.option1text;
-            cd.button2text.text = cd.card.option2text;
-            cd.button3text.text = cd.card.option3text;
-            cd.button4text.text = cd.card.option4text;
+            cd.cardText.text = cd.currentCard.cardText;
+            cd.button1text.text = cd.currentCard.option1text;
+            cd.button2text.text = cd.currentCard.option2text;
+            cd.button3text.text = cd.currentCard.option3text;
+            cd.button4text.text = cd.currentCard.option4text;
 
             if (!cd.background.sprite)
                 cd.background.gameObject.SetActive(false);
@@ -49,15 +49,15 @@ public class CustomCardDisplay : Editor {
             if (!cd.foregroundImage4.sprite)
                 cd.foregroundImage4.gameObject.SetActive(false);
 
-            if (!cd.card.Option1On)
+            if (!cd.currentCard.Option1On)
                 cd.button1.gameObject.SetActive(false);
-            if (!cd.card.Option2On)
+            if (!cd.currentCard.Option2On)
                 cd.button2.gameObject.SetActive(false);
-            if (!cd.card.Option3On)
+            if (!cd.currentCard.Option3On)
                 cd.button3.gameObject.SetActive(false);
-            if (!cd.card.Option4On)
+            if (!cd.currentCard.Option4On)
                 cd.button4.gameObject.SetActive(false);
-            if (!cd.card.OptionsOn)
+            if (!cd.currentCard.OptionsOn)
                 cd.button4text.text = "Continue...";
         }
 

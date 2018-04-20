@@ -221,7 +221,7 @@ public class GameController : MonoBehaviour {
     {
         if (currentCard.ppsHasFadeOut || currentCard.sfxHasFadeOut)
         {
-            cardDisplay.disableButtons();
+            cardDisplay.BlockButtons();
             switch (selectedOption)
             {
                 case 1:
@@ -281,7 +281,7 @@ public class GameController : MonoBehaviour {
     {
         if (currentCard.ppsHasFadeOut || currentCard.sfxHasFadeOut)
         {
-            cardDisplay.disableButtons();
+            cardDisplay.BlockButtons();
             cardWaiting = next;
 
             if (currentCard.ppsHasFadeOut)
@@ -339,7 +339,7 @@ public class GameController : MonoBehaviour {
                 {
                     waitingForPPS = true;
                     cleaningUpFades = true;
-                    cardDisplay.disableButtons();
+                    cardDisplay.BlockButtons();
                     mainCamera.GetComponent<PPSManager>().DoFadeIn();
                 }
             }
@@ -351,7 +351,7 @@ public class GameController : MonoBehaviour {
             if (currentCard.sfx != null)
             {
                 waitingForSFX = true;
-                cardDisplay.disableButtons();
+                cardDisplay.BlockButtons();
                 sfxSource.GetComponent<SfxPlayer>().PlayTimedSfx(currentCard);
                 cardWaiting = currentCard.option5FollowCard;
             }
@@ -359,7 +359,7 @@ public class GameController : MonoBehaviour {
             if (currentCard.ppsHasFadeIn || currentCard.blackScreenStart || currentCard.ppsHasFadeOut || currentCard.ppsShowCard != 0)
             {
                 waitingForPPS = true;
-                cardDisplay.disableButtons();
+                cardDisplay.BlockButtons();
                 mainCamera.GetComponent<PPSManager>().SetFades(currentCard);
                 cardWaiting = currentCard.option5FollowCard;
             }
@@ -372,10 +372,17 @@ public class GameController : MonoBehaviour {
         waitingForPPS = false;
         if (!waitingForSFX)
         {
-            cardDisplay.enableButtons();
+            cardDisplay.UnblockButtons();
             if (cardWaiting != currentCard)
             {
                 ActuallyChangeCard(cardWaiting);
+            }
+            else
+            {
+                if (cleaningUpFades)
+                {
+                    cleaningUpFades = false;
+                }
             }
         }
     }
@@ -387,18 +394,25 @@ public class GameController : MonoBehaviour {
             waitingForSFX = false;
             if (!waitingForPPS)
             {
-                cardDisplay.enableButtons();
+                cardDisplay.UnblockButtons();
                 if (cardWaiting != currentCard)
                 {
                     ActuallyChangeCard(cardWaiting);
+                }
+                else
+                {
+                    if (cleaningUpFades)
+                    {
+                        cleaningUpFades = false;
+                    }
                 }
             }
         }
     }
 
 
-    //Cycles through all the cards in the game and adds the possible cards to given parameter deck..
-    public void BuildDeck(List<CardValues> targetDeck)
+        //Cycles through all the cards in the game and adds the possible cards to given parameter deck..
+        public void BuildDeck(List<CardValues> targetDeck)
     {
         targetDeck.Clear();
         //TimeofDay 0 = Cell, 1 = Yard, 2 = Mess, 3 = Workshop

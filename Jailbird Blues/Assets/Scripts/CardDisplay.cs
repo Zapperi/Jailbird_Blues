@@ -8,7 +8,7 @@ public class CardDisplay : MonoBehaviour
     // --CARD VARIABLES--
     [HideInInspector]
     public Image overLayingImage;           // Transparent image that can be placed on top of everything, preventing player's interaction.
-    public CardValues card;
+    public CardValues currentCard;
     public Text cardText;
     public Text cardPerson;
     public Text button1text;
@@ -76,194 +76,68 @@ public class CardDisplay : MonoBehaviour
 
     void Awake()
     {
-        overLayingImage = GameObject.Find("PlayerBlocker").GetComponent<Image>();   // At start, get reference to the overLayingImage from scene. 
-        overLayingImage.gameObject.SetActive(false);                               // Deactivate the gameobject, because it had to be active in order to find it.
+        overLayingImage = GameObject.Find("PlayerBlocker").GetComponent<Image>();   // At scene launch, get reference to the overLayingImage from scene. 
+        overLayingImage.gameObject.SetActive(false);                                // Deactivate the gameobject, because it had to be active in order to find it.
     }
 
     void Start()
     {     
-        fadeImage.gameObject.SetActive(false);                                      // At start, set the overlaiyng fade image to disabled
-        buttonNoteBook.onClick.RemoveAllListeners();                                // Make sure all buttons have default values
-        buttonNoteBooktext.text = "NoteBook";                                       // Set the notebook button text
-        buttonNoteBook.onClick.AddListener(ButtonNotebookPressed);                  // Connect notebook to it's button
-        typeTextCoroutine = TypeText(card.cardText);                                // Make sure the text scroll coroutine has something in it
-        StartCoroutine(typeTextCoroutine);                                          // Start TypeText coroutine as game opens
-		siblingIndexOne = foregroundImage1.transform.GetSiblingIndex();
-		siblingIndexTwo = foregroundImage2.transform.GetSiblingIndex();
+        fadeImage.gameObject.SetActive(false);                                      // At start, set the overlaiyng fade image to disabled.
+        buttonNoteBook.onClick.RemoveAllListeners();                                // Make sure all buttons have default values.
+        buttonNoteBooktext.text = "NoteBook";                                       // Set the notebook button text.
+        buttonNoteBook.onClick.AddListener(ButtonNotebookPressed);                  // Connect notebook to it's button.
+		siblingIndexOne = foregroundImage1.transform.GetSiblingIndex();             // Set the reference to foregroundimage1 order.
+		siblingIndexTwo = foregroundImage2.transform.GetSiblingIndex();             // Set the reference to foregroundimage2 order.
 
     }
 		
     void Update()
     {
        
-        //Call popUp function
+        //Call popUp functions, if mouse is over the element, activate the popUp.
         ShowPopUp();
         Button1PopUp();
         Button2PopUp();
         Button3PopUp();
         Button4PopUp();
-        //If there was text in the previous card, add text to popup element.
-        if (GameController.gameController.previousCard)
-        {
-            popUpText.fontSize = 15;
-            popUpText.text = GameController.gameController.previousCard.cardText;
-        }
-        // If there was no text on previous card, type donuts instead.    
-        else
-        {
-            popUpText.fontSize = 30;
-            popUpText.text = "Mmmm... Donuts.";
-        }
 
-
-
-        card = GameController.gameController.currentCard;           // Update the current to a new one
-
-        if (!typeTextNewTextDone && !typeTextRunning)
-        {
-            typeTextCoroutine = TypeText(card.cardText);                        // Update the text from new card
-            StartCoroutine(typeTextCoroutine);                                  // Start printing the new text
-        }
-
-        // Update the card images from the current card
-        background.sprite = card.backgroundImage;                   
-        foregroundImage1.sprite = card.foregroundImage;
-        foregroundImage2.sprite = card.foregroundImage2;
-        foregroundImage3.sprite = card.foregroundImage3;
-        foregroundImage4.sprite = card.foregroundImage4;
-        
-        // IF there is no image, hide the field. Otherwise show the new image
-        if (!foregroundImage1.sprite)
-            foregroundImage1.gameObject.SetActive(false);
-        else
-            foregroundImage1.gameObject.SetActive(true);
-        if (!foregroundImage2.sprite)
-            foregroundImage2.gameObject.SetActive(false);
-        else
-            foregroundImage2.gameObject.SetActive(true);
-        if (!foregroundImage3.sprite)
-            foregroundImage3.gameObject.SetActive(false);
-        else
-            foregroundImage3.gameObject.SetActive(true);
-        if (!foregroundImage4.sprite)
-            foregroundImage4.gameObject.SetActive(false);
-        else
-            foregroundImage4.gameObject.SetActive(true);
-
-        //Replace any \n in card's text string with line break
-        //cardText.text = card.cardText.Replace("\\n", "\n");
-        
-
-        //Update options's texts to current ones
-        button1text.text = card.option1text;
-        button2text.text = card.option2text;
-        button3text.text = card.option3text;
-        button4text.text = card.option4text;
-
-        cardPerson.text = card.cardTextPerson;          // Inserts speakers name
-		siblingIndexSwitch();							//switches foreground images if needed
-        
-        //Update current button functions
-        button1.onClick.RemoveAllListeners();           // Make sure to remove old functions before adding new ones..
-        button2.onClick.RemoveAllListeners();
-        button3.onClick.RemoveAllListeners();
-        button4.onClick.RemoveAllListeners();
-        button5.onClick.RemoveAllListeners();
-        button1.onClick.AddListener(Button1pressed);    // ..Add new button functions with updated parameters
-        button2.onClick.AddListener(Button2pressed);
-        button3.onClick.AddListener(Button3pressed);
-        button4.onClick.AddListener(Button4pressed);
-        button5.onClick.AddListener(Button5pressed);
-
-        //Check if card is a result card, if so, leave last button active and set the text.
-        if (card.OptionsOn == false)
-        {
-            card.Option1On = false;
-            card.Option2On = false;
-            card.Option3On = false;
-            card.Option4On = false;
-            card.Option5On = true;
-            button5.interactable = true; //option 4 disablee, tämä fixaa sen
-        }
-        else
-            card.Option5On = false;
-
-        //Activate the button gameobjects when needed, hide otherwise.
-        if (card.Option1On == true && GameController.gameController.Check1Switches() == true){
-			button1.gameObject.SetActive (true);
-			button1.interactable = true;
-		}else if (card.Option1On == true && GameController.gameController.Check1Switches() == false){
-			button1.gameObject.SetActive(true);
-			button1.interactable = false;   
-        }
-        else
-            button1.gameObject.SetActive(false);
-
-        if (card.Option2On == true && GameController.gameController.Check2Switches () == true) {
-			button2.gameObject.SetActive (true);
-			button2.interactable = true;
-		}else if (card.Option2On == true && GameController.gameController.Check2Switches() == false){
-			button2.gameObject.SetActive(true);
-			button2.interactable = false;
-        }
-        else
-            button2.gameObject.SetActive(false);
-
-        if (card.Option3On == true && GameController.gameController.Check3Switches() == true){
-			button3.gameObject.SetActive (true);
-			button3.interactable = true;
-		}else if (card.Option3On == true && GameController.gameController.Check3Switches() == false){
-			button3.gameObject.SetActive(true);
-			button3.interactable = false;
-        }
-        else
-            button3.gameObject.SetActive(false);
-
-        if (card.Option4On == true && GameController.gameController.Check4Switches() == true){
-			button4.gameObject.SetActive (true);
-			button4.interactable = true;
-            button5.interactable = false;
-		}else if (card.Option4On == true && GameController.gameController.Check4Switches() == false){
-			button4.gameObject.SetActive(true);
-			button4.interactable = false;     
-        }
-        else
-            button4.gameObject.SetActive(false);
-
-        if (typeTextRunning)
-            button5.gameObject.SetActive(false);
-        else if (card.Option5On == true)
-            button5.gameObject.SetActive(true);
-        else
-            button5.gameObject.SetActive(false);
+        UpdatePopUpField();                                         // Update the previouscard text pop up field.
+        currentCard = GameController.gameController.currentCard;    // Update the current to a new one
+        UpdateTypeText();                                           // Check if there's something new to type and type it.
+        SiblingIndexSwitch();							            // Switches foreground images if needed.
+        UpdateImages();                                             // Update to new images, hide the field if there is no image.
+        RefreshTextFields();                                        // Update the textfield to current ones, does NOT affect cardText.
+        UpdateButtonFunctions();                                    // Update the CardDisplay button listeners.
+        RefreshOptions();                                           // Refresh options, if options are off, enable option 5.
+        EnableButtons();                                            // Enables and Disables button according to options.
     }
 
     //--BUTTON FUNCTIONS--
 
-    void ButtonPressed(int button)
+    public void ButtonPressed(int button)
     {
         GameController.gameController.AddSwitches(button);
         GameController.gameController.RemoveSwitches(button);
         GameController.gameController.UpdateReputations(button);
         GameController.gameController.PrintReputations(button);        
         bool followUp = false;
-        if (button == 1 && card.option1FollowCard)
+        if (button == 1 && currentCard.option1FollowCard)
         {
             followUp = true;
         }
-        if (button == 2 && card.option2FollowCard)
+        if (button == 2 && currentCard.option2FollowCard)
         {
             followUp = true;
         }
-        if (button == 3 && card.option3FollowCard)
+        if (button == 3 && currentCard.option3FollowCard)
         {
             followUp = true;
         }
-        if (button == 4 && card.option4FollowCard)
+        if (button == 4 && currentCard.option4FollowCard)
         {
             followUp = true;
         }
-        if (button == 5 && card.option5FollowCard)
+        if (button == 5 && currentCard.option5FollowCard)
         {
             followUp = true;
         }
@@ -278,46 +152,59 @@ public class CardDisplay : MonoBehaviour
 
     public void StartTextCoroutine()
     {
-        card = GameController.gameController.currentCard;
-        typeTextNewTextDone = false;
-        typeTextCoroutine = TypeText(card.cardText);                        // Update the text from new card
-        StartCoroutine(typeTextCoroutine);                                  // Start printing the new text
+        if (typeTextRunning)                                        // Failsafe, incase two typetexts were called at the sametime.
+        {
+            StopCoroutine(typeTextCoroutine);                       // Stop currently running typetext..
+            cardText.text = "";                                     // ..replace the text with blank   
+            typeTextRunning = false;
+        }
+        currentCard = GameController.gameController.currentCard;    // Get reference to the new card from gamecontroller
+        typeTextNewTextDone = false;                                // trigger the donetyping boolean to false
+        typeTextCoroutine = TypeText(currentCard.cardText);         // Update the text from new card
+        StartCoroutine(typeTextCoroutine);                          // Start printing the new text
     }
 
-    void Button1pressed()
+    // This is a variant of the typetext that can be used in the Update()
+    private void UpdateTypeText()                           // Starts a new TypeTextCoroutine as long as there is something new to type AND there are no current texts running
+    {
+        if (!typeTextNewTextDone && !typeTextRunning)
+        {
+            cardText.text = "";
+            typeTextCoroutine = TypeText(currentCard.cardText);                        // Update the text from new card
+            StartCoroutine(typeTextCoroutine);                                  // Start printing the new text
+        }
+    }
+
+    // Button pressed calls, must go through here in order for the switch case to work.
+    private void Button1pressed()
     {
         ButtonPressed(1);
     }
-
-    void Button2pressed()
+    private void Button2pressed()
     {
         ButtonPressed(2);
     }
-
-    void Button3pressed()
+    private void Button3pressed()
     {
         ButtonPressed(3);
     }
-
-    void Button4pressed()
+    private void Button4pressed()
     {
         ButtonPressed(4);
     }
-
-    void Button5pressed()
+    private void Button5pressed()
     {
-        if (card.endCard == true || card.option5FollowCard == null && card.Option5On)
+        if (currentCard.endCard == true || currentCard.option5FollowCard == null && currentCard.Option5On)
         {
             GameController.gameController.endcardOn = true;         // Update the boolean, ending the event.
         }
-
-            if (card.option5FollowCard)
+            if (currentCard.option5FollowCard)
         {
             ButtonPressed(5);
-
         }
 
     }
+    
     // Notebook button
     void ButtonNotebookPressed()
     {
@@ -330,51 +217,28 @@ public class CardDisplay : MonoBehaviour
             noteBook.gameObject.SetActive(false);                   // If notebook is active, set it to disabled.
     }
 
-    
-
-    // Coroutine for image fade between cards, takes in time (float) as parameter.
-    IEnumerator FadeImage(float time)                                       
-    {
-        fadeImage.gameObject.SetActive(true);                           // Enable the overlaying image.
-        // fade from transparent to opaque
-        for (float i = 0; i <= time; i += Time.deltaTime)               // Loop over "time" seconds.
-        {
-            fadeImage.color = new Color(0.25f, 0.25f, 0.25f, i);        // Set color with "i" as the alpha value.
-            yield return null;                                          // Continue coroutine.
-        }
-        // fade from opaque to transparent
-        for (float i = time; i >= 0; i -= Time.deltaTime)               // Loop over "time" seconds backwards.
-        {
-                fadeImage.color = new Color(0.25f, 0.25f, 0.25f, i);    // Set color with "i" as the alpha value.
-            yield return null;                                          // Continue coroutine.
-        }
-            fadeImage.gameObject.SetActive(false);                      // Disable the overlaying image when fade in & out is completed.
-    }
-
     // Coroutine for printing the card text letter by letter. Takes a text to print as parameter.
     IEnumerator TypeText(string textToType)
     {
         if (OptionsSliders.instatext)                               // If text is set to instant in options..
-            cardText.text = card.cardText;                          // Just replace old text with new and skip the rest.
+            cardText.text = currentCard.cardText;                   // Just replace old text with new and skip the rest.
         else
         {
-            typeTextRunning = true;                                 // Trigger tracker at the start of the type text..
-
-            cardText.text = "";                                     // Start with empty text
-            foreach (char letter in textToType.ToCharArray())       // Go through the given text and print it letter by letter 
+            typeTextRunning = true;                                 // Trigger runnign boolean at the start of the type text..
+            cardText.text = "";                                     // Start with empty text.
+            foreach (char letter in textToType.ToCharArray())       // Go through the given text and print it letter by letter .
             {
-                if (Input.GetMouseButtonDown(0)) // If left mouse button is pressed while the text is printing...
+                if (Input.GetMouseButtonDown(0) && typeTextRunning)                    // If left mouse button is pressed while the text is printing...
                 {
-                    cardText.text = card.cardText;                  // Instantly print all of the text
-                    break;                                          // Break out of the foreach loop, ending the coroutine
+                    cardText.text = currentCard.cardText;           // Instantly print all of the text.
+                    break;                                          // Break out of the foreach loop, ending the coroutine.
                 }
                 cardText.text += letter;
-                yield return new WaitForSeconds(textScrollSpeed);   // Control the speed, 0 = by framerate                   
+                yield return new WaitForSeconds(textScrollSpeed);   // Control the speed, 0 = by framerate.                   
             }
-            typeTextRunning = false;                                // ...Reset the tracker at the end
+            typeTextRunning = false;                                // ...Reset the running boolean.
         }
-
-        typeTextNewTextDone = true;
+        typeTextNewTextDone = true;                                 // When done typing, trigger the boolean.
     }
 
     // Function for pop up element
@@ -389,14 +253,14 @@ public class CardDisplay : MonoBehaviour
     //optionbutton required items popup
     public void Button1PopUp()
     {
-        if (button1Hover == true && card.option1ReqSwitches.Count != 0)         //when hovering
+        if (button1Hover == true && currentCard.option1ReqSwitches.Count != 0)         //when hovering
         {
             buttonPopUp1Img.SetActive(true);
-            button1PopUpText.text = card.option1ReqSwitches[0].ToString();      //print switch number
+            button1PopUpText.text = currentCard.option1ReqSwitches[0].ToString();      //print switch number
             for (int i = 0; i <= invPag.itemList.Count; i++)                    //loop whole inventory
             {
                 item = invPag.itemList[i];
-                if (item.itemSwitchIndex == card.option1ReqSwitches[0])         //find right item from all items
+                if (item.itemSwitchIndex == currentCard.option1ReqSwitches[0])         //find right item from all items
                 {
                     button1Img.sprite = item.itemIcon;                          //print switch image
                     if (GameController.gameController.Check1Switches() == false)       // checks if you have required switches
@@ -418,14 +282,14 @@ public class CardDisplay : MonoBehaviour
     //optionbutton required items popup
     public void Button2PopUp()
     {
-        if (button2Hover == true && card.option2ReqSwitches.Count != 0)          //when hovering
+        if (button2Hover == true && currentCard.option2ReqSwitches.Count != 0)          //when hovering
         {
             buttonPopUp2Img.SetActive(true);
-            button2PopUpText.text = card.option2ReqSwitches[0].ToString();      //print switch number
+            button2PopUpText.text = currentCard.option2ReqSwitches[0].ToString();      //print switch number
             for (int i = 0; i <= invPag.itemList.Count; i++)                    //loop whole inventory
             {
                 item = invPag.itemList[i];
-                if (item.itemSwitchIndex == card.option2ReqSwitches[0])         //find right item from all items
+                if (item.itemSwitchIndex == currentCard.option2ReqSwitches[0])         //find right item from all items
                 {
                     button2Img.sprite = item.itemIcon;                          //print switch image
                     if (GameController.gameController.Check2Switches() == false)       // checks if you have required switches
@@ -446,14 +310,14 @@ public class CardDisplay : MonoBehaviour
     //optionbutton required items popup
     public void Button3PopUp()
     {
-        if (button3Hover == true && card.option3ReqSwitches.Count != 0)          //when hovering
+        if (button3Hover == true && currentCard.option3ReqSwitches.Count != 0)          //when hovering
         {
             buttonPopUp3Img.SetActive(true);
-            button3PopUpText.text = card.option3ReqSwitches[0].ToString();      //print switch number
+            button3PopUpText.text = currentCard.option3ReqSwitches[0].ToString();      //print switch number
             for (int i = 0; i <= invPag.itemList.Count; i++)                    //loop whole inventory
             {
                 item = invPag.itemList[i];
-                if (item.itemSwitchIndex == card.option3ReqSwitches[0])         //find right item from all items
+                if (item.itemSwitchIndex == currentCard.option3ReqSwitches[0])         //find right item from all items
                 {
                     button3Img.sprite = item.itemIcon;                          //print switch image
                     if (GameController.gameController.Check3Switches() == false)       // checks if you have required switches
@@ -476,14 +340,14 @@ public class CardDisplay : MonoBehaviour
     //optionbutton required items popup
     public void Button4PopUp()
     {
-        if (button4Hover == true && card.option4ReqSwitches.Count != 0)          //when hovering
+        if (button4Hover == true && currentCard.option4ReqSwitches.Count != 0)          //when hovering
         {
             buttonPopUp4Img.SetActive(true);
-            button4PopUpText.text = card.option4ReqSwitches[0].ToString();      //print switch number
+            button4PopUpText.text = currentCard.option4ReqSwitches[0].ToString();      //print switch number
             for (int i = 0; i <= invPag.itemList.Count; i++)                    //loop whole inventory
             {
                 item = invPag.itemList[i];
-                if (item.itemSwitchIndex == card.option4ReqSwitches[0])         //find right item from all items
+                if (item.itemSwitchIndex == currentCard.option4ReqSwitches[0])         //find right item from all items
                 {
                     button4Img.sprite = item.itemIcon;                          //print switch image
                     if (GameController.gameController.Check4Switches() == false)       // checks if you have required switches
@@ -502,19 +366,19 @@ public class CardDisplay : MonoBehaviour
             buttonPopUp4Img.SetActive(false);
     }
 
-    public void disableButtons()                                    // Function that disables all player interaction by using overlayingimage
+    public void BlockButtons()                                    // Function that disables all player interaction by using overlayingimage
     {
         overLayingImage.color = new Color(0.25f, 0.25f, 0.25f, 0);  // Failsafe, make sure it is transparent
         overLayingImage.gameObject.SetActive(true);                 // Disable interaction by enabling the transparent image
     }
-    public void enableButtons()                                     // Function that re-enables player interaction
+    public void UnblockButtons()                                     // Function that re-enables player interaction
     {
         overLayingImage.color = new Color(0.25f, 0.25f, 0.25f, 0);  // Failsafe, keep making sure it is transparent.
         overLayingImage.gameObject.SetActive(false);                // Disable the transparent image.
     }
 
-	public void siblingIndexSwitch(){								//switches the layer order of foreground images 1 and 2
-		if (!card.onTop) {
+	public void SiblingIndexSwitch(){								//switches the layer order of foreground images 1 and 2
+		if (!currentCard.onTop) {
 			foregroundImage1.transform.SetSiblingIndex (siblingIndexOne);
 			foregroundImage2.transform.SetSiblingIndex (siblingIndexTwo);
 		} else {
@@ -522,5 +386,152 @@ public class CardDisplay : MonoBehaviour
 			foregroundImage2.transform.SetSiblingIndex (siblingIndexOne);
 		}
 	}
+
+    public void UpdateImages()   // Function that updates the card images, hides if there is nothing to show.
+    {
+        background.sprite = currentCard.backgroundImage;
+        foregroundImage1.sprite = currentCard.foregroundImage;
+        foregroundImage2.sprite = currentCard.foregroundImage2;
+        foregroundImage3.sprite = currentCard.foregroundImage3;
+        foregroundImage4.sprite = currentCard.foregroundImage4;
+
+        if (!foregroundImage1.sprite)
+            foregroundImage1.gameObject.SetActive(false);
+        else
+            foregroundImage1.gameObject.SetActive(true);
+        if (!foregroundImage2.sprite)
+            foregroundImage2.gameObject.SetActive(false);
+        else
+            foregroundImage2.gameObject.SetActive(true);
+        if (!foregroundImage3.sprite)
+            foregroundImage3.gameObject.SetActive(false);
+        else
+            foregroundImage3.gameObject.SetActive(true);
+        if (!foregroundImage4.sprite)
+            foregroundImage4.gameObject.SetActive(false);
+        else
+            foregroundImage4.gameObject.SetActive(true);
+    }
+
+    public void RefreshTextFields()                     // Function that refreshes the CardDisplay's text fields.
+    {
+        button1text.text = currentCard.option1text;
+        button2text.text = currentCard.option2text;
+        button3text.text = currentCard.option3text;
+        button4text.text = currentCard.option4text;
+        cardPerson.text = currentCard.cardTextPerson;
+    }
+
+    private void UpdatePopUpField()                  // Function that updates the previous card text pop up field.
+    {
+        //If there was text in the previous card, add text to popup element.
+        if (GameController.gameController.previousCard)
+        {
+            popUpText.fontSize = 15;
+            popUpText.text = GameController.gameController.previousCard.cardText;
+        }
+        // If there was no text on previous card, type donuts instead.    
+        else
+        {
+            popUpText.fontSize = 30;
+            popUpText.text = "Mmmm... Donuts.";
+        }
+    }
+
+    public void UpdateButtonFunctions()
+    {
+        //Update current button functions
+        button1.onClick.RemoveAllListeners();           // Make sure to remove old functions before adding new ones..
+        button2.onClick.RemoveAllListeners();
+        button3.onClick.RemoveAllListeners();
+        button4.onClick.RemoveAllListeners();
+        button5.onClick.RemoveAllListeners();
+        button1.onClick.AddListener(Button1pressed);    // ..Add new button functions with updated parameters
+        button2.onClick.AddListener(Button2pressed);
+        button3.onClick.AddListener(Button3pressed);
+        button4.onClick.AddListener(Button4pressed);
+        button5.onClick.AddListener(Button5pressed);
+    }
+
+    public void RefreshOptions()
+    {
+        //Check if card is a result card, if so, leave last button active and set the text.
+        if (currentCard.OptionsOn == false)
+        {
+            currentCard.Option1On = false;
+            currentCard.Option2On = false;
+            currentCard.Option3On = false;
+            currentCard.Option4On = false;
+            currentCard.Option5On = true;
+            button5.interactable = true; //option 4 disablee, tämä fixaa sen
+        }
+        else
+            currentCard.Option5On = false;
+    }
+
+    public void EnableButtons()
+    {
+        //Activate the button gameobjects when needed, hide otherwise.
+        if (currentCard.Option1On == true && GameController.gameController.Check1Switches() == true)
+        {
+            button1.gameObject.SetActive(true);
+            button1.interactable = true;
+        }
+        else if (currentCard.Option1On == true && GameController.gameController.Check1Switches() == false)
+        {
+            button1.gameObject.SetActive(true);
+            button1.interactable = false;
+        }
+        else
+            button1.gameObject.SetActive(false);
+
+        if (currentCard.Option2On == true && GameController.gameController.Check2Switches() == true)
+        {
+            button2.gameObject.SetActive(true);
+            button2.interactable = true;
+        }
+        else if (currentCard.Option2On == true && GameController.gameController.Check2Switches() == false)
+        {
+            button2.gameObject.SetActive(true);
+            button2.interactable = false;
+        }
+        else
+            button2.gameObject.SetActive(false);
+
+        if (currentCard.Option3On == true && GameController.gameController.Check3Switches() == true)
+        {
+            button3.gameObject.SetActive(true);
+            button3.interactable = true;
+        }
+        else if (currentCard.Option3On == true && GameController.gameController.Check3Switches() == false)
+        {
+            button3.gameObject.SetActive(true);
+            button3.interactable = false;
+        }
+        else
+            button3.gameObject.SetActive(false);
+
+        if (currentCard.Option4On == true && GameController.gameController.Check4Switches() == true)
+        {
+            button4.gameObject.SetActive(true);
+            button4.interactable = true;
+            button5.interactable = false;
+        }
+        else if (currentCard.Option4On == true && GameController.gameController.Check4Switches() == false)
+        {
+            button4.gameObject.SetActive(true);
+            button4.interactable = false;
+        }
+        else
+            button4.gameObject.SetActive(false);
+
+        if (typeTextRunning)
+            button5.gameObject.SetActive(false);
+        else if (currentCard.Option5On == true)
+            button5.gameObject.SetActive(true);
+        else
+            button5.gameObject.SetActive(false);
+    }
+
 }
 
