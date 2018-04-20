@@ -25,7 +25,7 @@ public class GainsTextHandler : MonoBehaviour {
         GainTextGeneration instance = Instantiate(floatingText);                            // Create object from the information gotten from initialize.   
         string textToSend ="";
         instance.transform.SetParent(canvas.transform, false);                              // Set the new location to be placed in canvas, disable scaling from canvas.
-        ResetLocation(instance.transform);                                                  // Reset the new location values to correspond their real values (skewed due to camera).
+        Tools.ResetLocation(instance.transform);                                            // Reset the new location values to correspond their real values (skewed due to camera).
 
         // Go throught all the reputation amounts given, if it's positive, paint it screen. Otherwise red. Do nothing if no reputation change.
         if (repAmount[0] > 0)
