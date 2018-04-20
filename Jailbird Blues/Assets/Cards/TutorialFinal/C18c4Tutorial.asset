@@ -36,7 +36,8 @@ MonoBehaviour:
     snitches. Well, talking about pigs makes me hungry. Let\u2019s go eat!\u201D\r"
   logText: 
   endCard: 0
-  timeCard: 0
+  timeCard: 1
+  onTop: 0
   repeatable: 0
   OptionsOn: 0
   Option1On: 0
