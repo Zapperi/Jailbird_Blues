@@ -139,10 +139,11 @@ MonoBehaviour:
   shakersRep: 0
   guardsRep: 0
   day: 0
+  cigaretteCount: 0
   schedule: 0
   timeOfDayText: {fileID: 0}
   locationText: {fileID: 0}
-  allSwitches: 000000
+  allSwitches: 00010100000100000000
   allCards:
   - {fileID: 11400000, guid: 299d181e0ce5c1746a9e462dd6bb9786, type: 2}
   - {fileID: 11400000, guid: dc00b4999bf695a468017450197d9967, type: 2}
@@ -152,7 +153,7 @@ MonoBehaviour:
   messCards: []
   workshopCards: []
   cellCards: []
-  currentCard: {fileID: 11400000, guid: 2c4b19502e30c804a8662649b4b5c8eb, type: 2}
+  currentCard: {fileID: 11400000, guid: cb2651b7189735b4b81de470bbcc6e19, type: 2}
   previousCard: {fileID: 0}
   endcardOn: 0
   sfxSource: {fileID: 0}
@@ -179,3 +180,4 @@ MonoBehaviour:
   volume: 0
   textSpeed: 0
   gammaImage: {fileID: 0}
+  canvas: {fileID: 0}
