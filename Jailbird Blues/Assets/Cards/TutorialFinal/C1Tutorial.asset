@@ -37,6 +37,7 @@ MonoBehaviour:
   logText: 
   endCard: 0
   timeCard: 0
+  onTop: 0
   repeatable: 0
   OptionsOn: 0
   Option1On: 0

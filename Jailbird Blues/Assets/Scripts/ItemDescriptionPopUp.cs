@@ -39,9 +39,19 @@ public class ItemDescriptionPopUp : MonoBehaviour, IPointerEnterHandler, IPointe
     // Setup the item's information from the list (only gets the items that are TRUE on gamecontroller's switch list)
     public void Setup(Item currentItem, InventoryPage currentInventory)
     {
-        _item = currentItem;
-        ItemDescText.text = _item.itemDescText;
-        itemIndex = _item.itemSwitchIndex;
-        itemIcon.sprite = _item.itemIcon;     
+        if (currentItem.itemSwitchIndex == 1)
+        {
+            _item = currentItem;
+            ItemDescText.text = "Cigarette count: " + GameController.gameController.cigaretteCount;
+            itemIndex = _item.itemSwitchIndex;
+            itemIcon.sprite = _item.itemIcon;
+        }
+        else
+        {
+            _item = currentItem;
+            ItemDescText.text = _item.itemDescText;
+            itemIndex = _item.itemSwitchIndex;
+            itemIcon.sprite = _item.itemIcon;
+        }
     }
 }

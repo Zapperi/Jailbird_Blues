@@ -19,6 +19,7 @@ public class InventoryPage : MonoBehaviour {
     public Transform parentObject;          // Which gameobject is the parent of the items to show
     public ItemObjectpool itemPool;         // Reference to the itempool, set in inspector
                                             // Itempool is a workaround for instantiating/destroying gameobjects (which can cause excess memory usage)
+    
 
     void Start()
     {
@@ -48,6 +49,7 @@ public class InventoryPage : MonoBehaviour {
             {
                 GameObject newItem = itemPool.GetObject();                                          // Place the item into an object from itempool
                 newItem.transform.SetParent(parentObject);                                          // Set the location of the item 
+                ResetLocation(newItem.transform);
                 newItem.GetComponent<ItemDescriptionPopUp>().Setup(item, this);                     // Call the setup function of the item, send current item and invetory as reference
             }          
         }
@@ -61,5 +63,12 @@ public class InventoryPage : MonoBehaviour {
             GameObject toRemove = transform.GetChild(0).gameObject;     // assing the first child in hierarchy..
             itemPool.ReturnObject(toRemove);                            // ..and remove it by sending it back to the itempool by calling itempool's return function.
         }
+    }
+
+    static void ResetLocation(Transform transform)
+    {
+        transform.localPosition = Vector3.zero;
+        transform.localRotation = Quaternion.identity;
+        transform.localScale = Vector3.one;
     }
 }
