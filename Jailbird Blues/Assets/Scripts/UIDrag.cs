@@ -7,12 +7,27 @@ public class UIDrag : MonoBehaviour
 	//mahdollistaa pelin aikana dragattavan UIn
 	//Liitä haluttuun UIhin tämä scripti ja Event Trigger componentti
 	//lisää Event Triggeriin alla olevat functiot inspectorista
+	/*
+
+
+	public void BeginDrag()
+	{
+		offsetX = transform.position.x - Input.mousePosition.x;
+		offsetY = transform.position.y - Input.mousePosition.y;
+	}
+
+	public void OnDrag()
+	{
+		transform.position = new Vector3(offsetX + Input.mousePosition.x, offsetY + Input.mousePosition.y);
+	}
+*/
 
 	Vector3 screenPoint;
 
 	//Event Trigger -> Begin Drag(base event data)
 	public void BeginDrag()
 	{
+		
 	}
 	//Event Trigger -> Drag(base event data)
 	public void OnDrag()
