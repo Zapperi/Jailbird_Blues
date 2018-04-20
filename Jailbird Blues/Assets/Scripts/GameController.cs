@@ -14,6 +14,7 @@ public class GameController : MonoBehaviour {
 	public int shakersRep;															//the players reputation among the Protein Shakers
 	public int guardsRep;															//the players reputation among the prison guards
 	public int day;                                                                 //counter for days passed in game
+    public int cigaretteCount;
 
     private int scheduleSize = 4;                                                   //integer for schedule size, incase we need to expand it
     public int schedule;                                                            //integer switch for the daily activities
@@ -69,6 +70,7 @@ public class GameController : MonoBehaviour {
 			shakersRep = 0;
 			guardsRep = 0;
 			day = 1;																//the game starts at day 1
+            cigaretteCount = 0;
 			schedule = -1;     //Sets intro time                                                      //the day begins with the first activity in the schedule 
             SetBackgroundAudio();
             AddLogEvent();
@@ -656,6 +658,10 @@ public class GameController : MonoBehaviour {
                     for (int i = 0; i < currentCard.option1ObtainedSwitches.Count; i++)
                     {
                         allSwitches[currentCard.option1ObtainedSwitches[i]] = true;
+                        if (allSwitches[3] == true)
+                        {
+                            AddCig();
+                        }
                     }
                 }
                 break;
@@ -665,6 +671,10 @@ public class GameController : MonoBehaviour {
                     for (int i = 0; i < currentCard.option2ObtainedSwitches.Count; i++)
                     {
                         allSwitches[currentCard.option2ObtainedSwitches[i]] = true;
+                        if (allSwitches[3] == true)
+                        {
+                            AddCig();
+                        }
                     }
                 }
                 break;
@@ -674,6 +684,10 @@ public class GameController : MonoBehaviour {
                     for (int i = 0; i < currentCard.option3ObtainedSwitches.Count; i++)
                     {
                         allSwitches[currentCard.option3ObtainedSwitches[i]] = true;
+                        if (allSwitches[3] == true)
+                        {
+                            AddCig();
+                        }
                     }
                 }
                 break;
@@ -683,6 +697,10 @@ public class GameController : MonoBehaviour {
                     for (int i = 0; i < currentCard.option4ObtainedSwitches.Count; i++)
                     {
                         allSwitches[currentCard.option4ObtainedSwitches[i]] = true;
+                        if (allSwitches[3] == true)
+                        {
+                            AddCig();
+                        }
                     }
                 }
                 break;
@@ -701,6 +719,10 @@ public class GameController : MonoBehaviour {
                     for (int i = 0; i < currentCard.option1RemovedSwitches.Count; i++)
                     {
                         allSwitches[currentCard.option1RemovedSwitches[i]] = false;
+                        if (allSwitches[3] == false)
+                        {
+                            RemoveCig();
+                        }
                     }
                 }
                 break;
@@ -710,6 +732,10 @@ public class GameController : MonoBehaviour {
                     for (int i = 0; i < currentCard.option2RemovedSwitches.Count; i++)
                     {
                         allSwitches[currentCard.option2RemovedSwitches[i]] = false;
+                        if (allSwitches[3] == false)
+                        {
+                            RemoveCig();
+                        }
                     }
                 }
                 break;
@@ -719,6 +745,10 @@ public class GameController : MonoBehaviour {
                     for (int i = 0; i < currentCard.option3RemovedSwitches.Count; i++)
                     {
                         allSwitches[currentCard.option3RemovedSwitches[i]] = false;
+                        if (allSwitches[3] == false)
+                        {
+                            RemoveCig();
+                        }
                     }
                 }
                 break;
@@ -728,6 +758,10 @@ public class GameController : MonoBehaviour {
                     for (int i = 0; i < currentCard.option4RemovedSwitches.Count; i++)
                     {
                         allSwitches[currentCard.option4RemovedSwitches[i]] = false;
+                        if (allSwitches[3] == false)
+                        {
+                            RemoveCig();
+                        }
                     }
                 }
                 break;
@@ -774,6 +808,23 @@ public class GameController : MonoBehaviour {
             case (3):
                 scheduleName = "workshop";
                 break;
+        }
+    }
+    public void AddCig()
+    {
+        cigaretteCount += 1;
+        if (cigaretteCount >= 1)
+        {
+            allSwitches[4] = true;
+        }
+    }
+
+    public void RemoveCig()
+    {
+        cigaretteCount -= 1;
+        if (cigaretteCount <= 0)
+        {
+            allSwitches[4] = false;
         }
     }
 
