@@ -9,6 +9,7 @@ public class OptionsSliders : MonoBehaviour {
 	public static bool instatext;
 	AudioSource audioSource;
 	public Image gammaImage;
+	public Canvas canvas;
 
 	void Start()
 	{
@@ -18,7 +19,9 @@ public class OptionsSliders : MonoBehaviour {
 		audioSource = GetComponent<AudioSource>();
 
 	}
-
+	public void ScaleChanged(float value){
+		canvas.GetComponent<CanvasScaler> ().scaleFactor = value;
+	}
 	public void VolumeChanged(float value){
 		this.volume = value;
 		audioSource.volume = volume;
