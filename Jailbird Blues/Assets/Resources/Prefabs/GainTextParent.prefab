@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 114736603215519406}
   m_Layer: 0
   m_Name: GainTextParent
-  m_TagString: Untagged
+  m_TagString: FloatingText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

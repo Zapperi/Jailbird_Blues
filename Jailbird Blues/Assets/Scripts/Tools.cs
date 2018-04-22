@@ -11,4 +11,10 @@ public class Tools : MonoBehaviour {
         transform.localRotation = Quaternion.identity;
         transform.localScale = Vector3.one;
     }
+
+    public static void HideFloatingText()
+    {
+        if(GameObject.FindGameObjectWithTag("FloatingText"))
+            GameObject.FindGameObjectWithTag("FloatingText").gameObject.SetActive(false);
+    }
 }
