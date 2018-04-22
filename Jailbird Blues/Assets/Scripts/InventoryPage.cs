@@ -15,6 +15,7 @@ public class Item
 public class InventoryPage : MonoBehaviour {
 
     public GameObject gameController;       // Reference to the GameController, set in code
+    [HideInInspector]
     public List<Item> itemList;             // List of all the aivable items in the game, set in inspector
     public Transform parentObject;          // Which gameobject is the parent of the items to show
     public ItemObjectpool itemPool;         // Reference to the itempool, set in inspector
@@ -24,7 +25,8 @@ public class InventoryPage : MonoBehaviour {
     void Start()
     {
         RefreshInventory();                                     // Call RefreshInventory function when invetory is opened
-        gameController = GameObject.Find("GameController");     // Set the reference to the GameController    
+        gameController = GameObject.Find("GameController");     // Set the reference to the GameController
+        itemList = gameController.GetComponent<GameController>().allItemList;
     }
 
     void Update()
@@ -49,7 +51,7 @@ public class InventoryPage : MonoBehaviour {
             {
                 GameObject newItem = itemPool.GetObject();                                          // Place the item into an object from itempool
                 newItem.transform.SetParent(parentObject);                                          // Set the location of the item 
-                ResetLocation(newItem.transform);
+                Tools.ResetLocation(newItem.transform);
                 newItem.GetComponent<ItemDescriptionPopUp>().Setup(item, this);                     // Call the setup function of the item, send current item and invetory as reference
             }          
         }
@@ -63,12 +65,5 @@ public class InventoryPage : MonoBehaviour {
             GameObject toRemove = transform.GetChild(0).gameObject;     // assing the first child in hierarchy..
             itemPool.ReturnObject(toRemove);                            // ..and remove it by sending it back to the itempool by calling itempool's return function.
         }
-    }
-
-    static void ResetLocation(Transform transform)
-    {
-        transform.localPosition = Vector3.zero;
-        transform.localRotation = Quaternion.identity;
-        transform.localScale = Vector3.one;
     }
 }

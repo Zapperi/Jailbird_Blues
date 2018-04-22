@@ -16,7 +16,7 @@ public class ItemDescriptionPopUp : MonoBehaviour, IPointerEnterHandler, IPointe
     private Item _item;                         // Current item
 
     // At the start, get the references from the objects.
-    void Start()
+    void OnEnable()
     {
         ItemDescBackground = gameObject.transform.Find("ItemImageBackground").GetComponent<Image>();
         ItemDescText = gameObject.transform.Find("ItemImageBackground").transform.Find("ItemImageText").GetComponent<Text>();

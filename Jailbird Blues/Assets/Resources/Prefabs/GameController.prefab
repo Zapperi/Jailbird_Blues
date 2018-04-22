@@ -153,13 +153,26 @@ MonoBehaviour:
   messCards: []
   workshopCards: []
   cellCards: []
-  currentCard: {fileID: 11400000, guid: cb2651b7189735b4b81de470bbcc6e19, type: 2}
+  currentCard: {fileID: 11400000, guid: 2c4b19502e30c804a8662649b4b5c8eb, type: 2}
   previousCard: {fileID: 0}
   endcardOn: 0
   sfxSource: {fileID: 0}
   logPage: {fileID: 0}
   logText: 
   logEvents: []
+  allItemList:
+  - itemIcon: {fileID: 21300000, guid: 661fd10eb8f151140885780c39989d3c, type: 3}
+    itemDescText: Cigarette Box
+    itemSwitchIndex: 1
+  - itemIcon: {fileID: 21300000, guid: 708aa421a9f1b7c4cb6a6a02bdc5fbe7, type: 3}
+    itemDescText: Brownie
+    itemSwitchIndex: 2
+  - itemIcon: {fileID: 21300000, guid: e2e08c1822547fc4f96f4dd7e524dd4a, type: 3}
+    itemDescText: Cig
+    itemSwitchIndex: 4
+  - itemIcon: {fileID: 21300000, guid: aa7bb47daa6419e4ab653a62355d4e5d, type: 3}
+    itemDescText: Shiv
+    itemSwitchIndex: 5
   mainCamera: {fileID: 0}
   nextCardWaiting: {fileID: 0}
   waitingForPPS: 0
