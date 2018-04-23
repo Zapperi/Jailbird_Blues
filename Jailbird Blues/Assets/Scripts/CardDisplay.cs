@@ -37,6 +37,10 @@ public class CardDisplay : MonoBehaviour
     public IEnumerator typeTextCoroutine;   // Create coroutine variable, for stopping and starting.
     [HideInInspector]
     public bool typeTextNewTextDone;
+    private string coloredText;
+    private bool coloringTextDone;
+    public Color highlightColor;            // Color for the highlighted tips. 
+    private string highlightColorHex;       // Save the color's hex into string, used later
 
     public GameObject logPage;              // Reference to the notebook's log page, set in inspector
     public GameObject inventoryPage;
@@ -78,6 +82,7 @@ public class CardDisplay : MonoBehaviour
     {
         overLayingImage = GameObject.Find("PlayerBlocker").GetComponent<Image>();   // At scene launch, get reference to the overLayingImage from scene. 
         overLayingImage.gameObject.SetActive(false);                                // Deactivate the gameobject, because it had to be active in order to find it.
+        highlightColorHex = ColorUtility.ToHtmlStringRGB(highlightColor);
     }
 
     void Start()
@@ -221,8 +226,15 @@ public class CardDisplay : MonoBehaviour
     // Coroutine for printing the card text letter by letter. Takes a text to print as parameter.
     IEnumerator TypeText(string textToType)
     {
-        if (OptionsSliders.instatext)                               // If text is set to instant in options..
-            cardText.text = currentCard.cardText;                   // Just replace old text with new and skip the rest.
+        coloringTextDone = true;
+        if (OptionsSliders.instatext)
+        {                               // If text is set to instant in options..
+            cardText.text = currentCard.cardText;                   // Find new text
+            coloredText = cardText.text.Replace("Ä", "<color=#"+highlightColorHex+">"); // Make sure the highlighted text gets the color
+            coloredText = coloredText.Replace("Ö", "</color>");                         // End the coloring area
+            cardText.text = coloredText;                                                // Update the text
+
+        }
         else
         {
             typeTextRunning = true;                                 // Trigger runnign boolean at the start of the type text..
@@ -231,10 +243,21 @@ public class CardDisplay : MonoBehaviour
             {
                 if (Input.GetMouseButtonDown(0) && typeTextRunning)                    // If left mouse button is pressed while the text is printing...
                 {
-                    cardText.text = currentCard.cardText;           // Instantly print all of the text.
+                    cardText.text = currentCard.cardText;                                           // Instantly print all of the text.                
+                    coloredText = cardText.text.Replace("Ä", "<color=#" + highlightColorHex + ">"); // Make sure the highlighted text gets the color
+                    cardText.text = cardText.text.Replace("Ö", "</color>");                         // End the coloring area
+                    cardText.text = coloredText;                                                    // Update the text
+
                     break;                                          // Break out of the foreach loop, ending the coroutine.
                 }
-                cardText.text += letter;
+                if (letter == 'Ä')                                  // If the keyletter "Ä" appears..
+                    coloringTextDone = false;                       // Start the coloring sequence by setting boolean to false
+                else if (letter == 'Ö')                             // If the keyletter "Ö" appears..
+                    coloringTextDone = true;                        // End the coloring sequence.
+                else if (!coloringTextDone)                         // As long as coloring sequence is running..
+                    cardText.text += "<color=#" + highlightColorHex + ">" + letter + "</color>"; // Color each letter one by one.
+                else
+                    cardText.text += letter;                        // If no coloring sequence, continue writing in default color.
                 yield return new WaitForSeconds(textScrollSpeed);   // Control the speed, 0 = by framerate.                   
             }
             typeTextRunning = false;                                // ...Reset the running boolean.
