@@ -537,7 +537,7 @@ Prefab:
         type: 2}
       propertyPath: currentCard
       value: 
-      objectReference: {fileID: 11400000, guid: cf9c91e78cbbd7446a83540fb8d76164,
+      objectReference: {fileID: 11400000, guid: ad6e9ca9b09ec474e9056d41543e439c,
         type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a5ca0da45ae9cf94f8ba95b70b239f82, type: 2}

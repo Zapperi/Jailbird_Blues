@@ -14,9 +14,9 @@ MonoBehaviour:
   requiredSwitches: 
   RepIrs: 0
   RepPunks: 0
-  RepShake: 0
+  RepShake: 20
   RepGuard: 0
-  timeOfDay: 0
+  timeOfDay: 1
   storyPhase: 0
   backgroundImage: {fileID: 21300000, guid: e34e2dc729b5acd42b383971c725e4f1, type: 3}
   foregroundImage: {fileID: 0}
