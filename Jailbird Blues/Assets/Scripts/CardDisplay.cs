@@ -39,7 +39,7 @@ public class CardDisplay : MonoBehaviour
     public bool typeTextNewTextDone;
 
     public GameObject logPage;              // Reference to the notebook's log page, set in inspector
-
+    public GameObject inventoryPage;
 
     public GameObject popUp;                // Reference to the popup element, set in inspector
     public bool popUpMouseOver;             // Track if mouse is over the popup element
@@ -119,7 +119,8 @@ public class CardDisplay : MonoBehaviour
         GameController.gameController.AddSwitches(button);
         GameController.gameController.RemoveSwitches(button);
         GameController.gameController.UpdateReputations(button);
-        GameController.gameController.PrintReputations(button);        
+        GameController.gameController.PrintReputations(button);
+        inventoryPage.GetComponent<InventoryPage>().RefreshInventory();     // Refresh the inventory by removing everything and adding them back with updated values.
         bool followUp = false;
         if (button == 1 && currentCard.option1FollowCard)
         {

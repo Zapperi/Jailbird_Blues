@@ -29,11 +29,6 @@ public class InventoryPage : MonoBehaviour {
         itemList = gameController.GetComponent<GameController>().allItemList;
     }
 
-    void Update()
-    {
-        RefreshInventory();
-    }
-
     // Refresh inventory by removing all items and calling AddItems function..
     public void RefreshInventory()
     {
