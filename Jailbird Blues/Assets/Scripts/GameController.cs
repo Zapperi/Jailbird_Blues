@@ -353,6 +353,14 @@ public class GameController : MonoBehaviour {
         previousCard = currentCard;                         //HERE WE...
         currentCard = next;                                 //FINALLY CHANGE THE CARD
         cardWaiting = null;
+        for (int i =0; i<allCards.Count; i++)
+        {
+            if (allCards[i]==currentCard && !currentCard.repeatable)
+            {
+                allCards.RemoveAt(i);
+                break;
+            }
+        }
         SetBackgroundAudio();         // Update audio.
         AddLogEvent();
         cardDisplay.StartTextCoroutine(); //****************
