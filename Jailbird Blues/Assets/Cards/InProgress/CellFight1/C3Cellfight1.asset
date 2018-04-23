@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: C5Tutorial
+  m_Name: C3Cellfight1
   m_EditorClassIdentifier: 
   requiredSwitches: 
   RepIrs: 0
@@ -18,27 +18,27 @@ MonoBehaviour:
   RepGuard: 0
   timeOfDay: 0
   storyPhase: 0
-  backgroundImage: {fileID: 21300000, guid: c45b1a34d08602d40947e22154ef31eb, type: 3}
+  backgroundImage: {fileID: 0}
   foregroundImage: {fileID: 0}
   foregroundImage2: {fileID: 0}
   foregroundImage3: {fileID: 0}
   foregroundImage4: {fileID: 0}
   bgMusic: {fileID: 0}
   bgAmbientAudio: {fileID: 0}
-  musicDecrease: 0.6
+  musicDecrease: 0
   ambientDecrease: 0
   musicOff: 0
   ambientOff: 0
   cardTextPerson: 
-  cardText: "The bang of the hammer echoes in the courtroom and the judge hungover
-    and pissed reads his verdict.\r"
+  cardText: You hear a fight starting out, metal bars are clashing as everyone chants
+    "Fight! Fight! Fight!"
   logText: 
   endCard: 0
   timeCard: 0
   onTop: 0
   repeatable: 0
   OptionsOn: 0
-  Option1On: 0
+  Option1On: 1
   option1ReqSwitches: 
   option1text: 
   option1IrsReputation: 0
@@ -48,7 +48,7 @@ MonoBehaviour:
   option1ObtainedSwitches: 
   option1RemovedSwitches: 
   option1FollowCard: {fileID: 0}
-  Option2On: 0
+  Option2On: 1
   option2ReqSwitches: 
   option2text: 
   option2IrsReputation: 0
@@ -58,7 +58,7 @@ MonoBehaviour:
   option2ObtainedSwitches: 
   option2RemovedSwitches: 
   option2FollowCard: {fileID: 0}
-  Option3On: 0
+  Option3On: 1
   option3ReqSwitches: 
   option3text: 
   option3IrsReputation: 0
@@ -68,7 +68,7 @@ MonoBehaviour:
   option3ObtainedSwitches: 
   option3RemovedSwitches: 
   option3FollowCard: {fileID: 0}
-  Option4On: 0
+  Option4On: 1
   option4ReqSwitches: 
   option4text: 
   option4IrsReputation: 0
@@ -85,10 +85,10 @@ MonoBehaviour:
   option5GuardReputation: 0
   option5ObtainedSwitches: 
   option5RemovedSwitches: 
-  option5FollowCard: {fileID: 11400000, guid: 776336a2ad10f534caf1e1fa6c00c558, type: 2}
+  option5FollowCard: {fileID: 11400000, guid: f8f51e32e843d414ca5e9e39b9d20405, type: 2}
   isTimeBasedCard: 0
   sfxPrewait: 0
-  sfx: {fileID: 8300000, guid: b25ad3e892fdb2d4d91eb875f725d544, type: 3}
+  sfx: {fileID: 0}
   sfxHasFadeOut: 0
   sfxFadeOutAt: 0
   sfxFadeOutSpeed: 0
