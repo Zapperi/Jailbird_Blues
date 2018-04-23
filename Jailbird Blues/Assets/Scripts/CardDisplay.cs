@@ -202,13 +202,11 @@ public class CardDisplay : MonoBehaviour
     {
         if (currentCard.endCard == true || currentCard.option5FollowCard == null && currentCard.Option5On)
         {
+            ButtonPressed(5);
             GameController.gameController.endcardOn = true;         // Update the boolean, ending the event.
         }
-            if (currentCard.option5FollowCard)
-        {
+        if (currentCard.option5FollowCard)
             ButtonPressed(5);
-        }
-
     }
     
     // Notebook button
@@ -218,6 +216,7 @@ public class CardDisplay : MonoBehaviour
         {
             noteBook.gameObject.SetActive(true);
             noteBook.GetComponent<NoteBook>().UpdateNotebook();
+            inventoryPage.GetComponent<InventoryPage>().RefreshInventory();
         }
         else
             noteBook.gameObject.SetActive(false);                   // If notebook is active, set it to disabled.
@@ -245,7 +244,7 @@ public class CardDisplay : MonoBehaviour
                 {
                     cardText.text = currentCard.cardText;                                           // Instantly print all of the text.                
                     coloredText = cardText.text.Replace("Ä", "<color=#" + highlightColorHex + ">"); // Make sure the highlighted text gets the color
-                    cardText.text = cardText.text.Replace("Ö", "</color>");                         // End the coloring area
+                    coloredText = coloredText.Replace("Ö", "</color>");                         // End the coloring area
                     cardText.text = coloredText;                                                    // Update the text
 
                     break;                                          // Break out of the foreach loop, ending the coroutine.

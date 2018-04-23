@@ -63,10 +63,11 @@ public class GameController : MonoBehaviour {
         if (gameController == null)													//if there is no gamecontroller
 		{
             //// !! DISABLED FOR DEBUGGIN !!
-            //for (int i = 0; i < allSwitches.Count; i++)                             // At the start of the game, make sure all switches are set to false.
-            //    allSwitches[i] = false;               
-			//DontDestroyOnLoad(gameObject);											//the gamecontroller won't reset when switching scenes
-			gameController = this;													//this gamecontroller will be the gamecontroller
+            for (int i = 0; i < allSwitches.Count; i++)                             // At the start of the game, make sure all switches are set to false.
+                allSwitches[i] = false;
+            allSwitches[1] = true;                                                  // Enable for cigarrete box
+            //DontDestroyOnLoad(gameObject);									    //the gamecontroller won't reset when switching scenes
+            gameController = this;													//this gamecontroller will be the gamecontroller
 			punksRep = 0;															//player's reputation among factions starts at zero
 			irsRep = 0;
 			shakersRep = 0;
@@ -762,6 +763,19 @@ public class GameController : MonoBehaviour {
                     }
                 }
                 break;
+            case 5:
+                if (currentCard.option5ObtainedSwitches.Count > 0)
+                {
+                    for (int i = 0; i < currentCard.option5ObtainedSwitches.Count; i++)
+                    {
+                        allSwitches[currentCard.option5ObtainedSwitches[i]] = true;
+                        if (allSwitches[3] == true)
+                        {
+                            AddCig();
+                        }
+                    }
+                }
+                break;
         }
     }
     
@@ -816,6 +830,19 @@ public class GameController : MonoBehaviour {
                     for (int i = 0; i < currentCard.option4RemovedSwitches.Count; i++)
                     {
                         allSwitches[currentCard.option4RemovedSwitches[i]] = false;
+                        if (allSwitches[3] == false)
+                        {
+                            RemoveCig();
+                        }
+                    }
+                }
+                break;
+            case 5:
+                if (currentCard.option5RemovedSwitches.Count > 0)
+                {
+                    for (int i = 0; i < currentCard.option5RemovedSwitches.Count; i++)
+                    {
+                        allSwitches[currentCard.option5RemovedSwitches[i]] = false;
                         if (allSwitches[3] == false)
                         {
                             RemoveCig();

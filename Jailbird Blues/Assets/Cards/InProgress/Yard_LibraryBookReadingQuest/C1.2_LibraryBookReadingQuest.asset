@@ -44,7 +44,7 @@ MonoBehaviour:
   option1IrsReputation: 0
   option1PunkReputation: 0
   option1ShakeReputation: 0
-  option1GuardReputation: 0
+  option1GuardReputation: 3
   option1ObtainedSwitches: 
   option1RemovedSwitches: 
   option1FollowCard: {fileID: 11400000, guid: c37c65e1b8aedb641840303e6724390a, type: 2}
@@ -54,7 +54,7 @@ MonoBehaviour:
   option2IrsReputation: 0
   option2PunkReputation: 0
   option2ShakeReputation: 0
-  option2GuardReputation: 0
+  option2GuardReputation: -3
   option2ObtainedSwitches: 
   option2RemovedSwitches: 
   option2FollowCard: {fileID: 11400000, guid: 61039ca9ebfd4514ba60aac4c67dd25b, type: 2}
