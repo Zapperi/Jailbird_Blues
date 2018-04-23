@@ -533,6 +533,12 @@ Prefab:
       propertyPath: canvas
       value: 
       objectReference: {fileID: 1269733503}
+    - target: {fileID: 114743166947194950, guid: a5ca0da45ae9cf94f8ba95b70b239f82,
+        type: 2}
+      propertyPath: currentCard
+      value: 
+      objectReference: {fileID: 11400000, guid: cf9c91e78cbbd7446a83540fb8d76164,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a5ca0da45ae9cf94f8ba95b70b239f82, type: 2}
   m_IsPrefabParent: 0

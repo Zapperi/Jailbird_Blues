@@ -358,6 +358,7 @@ public class GameController : MonoBehaviour {
         {
             if (allCards[i]==currentCard && !currentCard.repeatable)
             {
+                Debug.Log("Poistetaan");
                 allCards.RemoveAt(i);
                 break;
             }
