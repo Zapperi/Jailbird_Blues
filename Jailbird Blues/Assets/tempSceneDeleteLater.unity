@@ -381,8 +381,22 @@ Prefab:
         type: 2}
       propertyPath: currentCard
       value: 
-      objectReference: {fileID: 11400000, guid: 2c4b19502e30c804a8662649b4b5c8eb,
+      objectReference: {fileID: 11400000, guid: fa0a9a36a64aece4881b7a1f4077eef0,
         type: 2}
+    - target: {fileID: 1014170443296230, guid: df67972d0e99a6d428df8e1f930ac1a0, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224484137817806416, guid: df67972d0e99a6d428df8e1f930ac1a0,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114909954404101698, guid: df67972d0e99a6d428df8e1f930ac1a0,
+        type: 2}
+      propertyPath: m_Size
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: df67972d0e99a6d428df8e1f930ac1a0, type: 2}
   m_IsPrefabParent: 0
@@ -537,7 +551,7 @@ Prefab:
         type: 2}
       propertyPath: currentCard
       value: 
-      objectReference: {fileID: 11400000, guid: ad6e9ca9b09ec474e9056d41543e439c,
+      objectReference: {fileID: 11400000, guid: fa0a9a36a64aece4881b7a1f4077eef0,
         type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a5ca0da45ae9cf94f8ba95b70b239f82, type: 2}
