@@ -64,7 +64,7 @@ public class GameController : MonoBehaviour {
             //// !! DISABLED FOR DEBUGGIN !!
             //for (int i = 0; i < allSwitches.Count; i++)                             // At the start of the game, make sure all switches are set to false.
             //    allSwitches[i] = false;               
-			DontDestroyOnLoad(gameObject);											//the gamecontroller won't reset when switching scenes
+			//DontDestroyOnLoad(gameObject);											//the gamecontroller won't reset when switching scenes
 			gameController = this;													//this gamecontroller will be the gamecontroller
 			punksRep = 0;															//player's reputation among factions starts at zero
 			irsRep = 0;

@@ -10,6 +10,14 @@ public class Menu : MonoBehaviour {
 	public GameObject start;
 	public GameObject quit;
 	public GameObject back;
+	public GameObject options;
+	public GameObject Sliders;
+
+	public static float scale = 1.0f;
+	public static float musicVolume = 0.5f;
+	public static float sfxVolume = 0.5f;
+	public static float textSpeed = 0.25f;
+	public static float gamma = 0.0f;
 
 
 	// Use this for initialization
@@ -38,8 +46,19 @@ public class Menu : MonoBehaviour {
 		start.SetActive(false);
 		quit.SetActive(false);
 		back.SetActive(true);
-
+		options.SetActive(false);
 	}
+	public void OnOptions(){
+
+		Debug.Log ("options");
+		Sliders.SetActive(true);
+		credits.SetActive(false);
+		start.SetActive(false);
+		quit.SetActive(false);
+		back.SetActive(true);
+		options.SetActive(false);
+	}
+
 	public void OnReturn(){
 		Debug.Log ("back press");
 		textCredits.SetActive(false);
@@ -47,5 +66,7 @@ public class Menu : MonoBehaviour {
 		start.SetActive(true);
 		quit.SetActive(true);
 		back.SetActive(false);
+		Sliders.SetActive(false);
+		options.SetActive(true);
 	}
 }

@@ -81,7 +81,8 @@ public class NoteBook : MonoBehaviour {
 
     void ButtonQuitpressed()
     {
-		//SceneManager.LoadScene("Menu");
+		SceneManager.LoadScene("Menu");
+		/*
 
 #if UNITY_EDITOR
 
@@ -92,7 +93,7 @@ public class NoteBook : MonoBehaviour {
           Application.Quit();
         
 #endif
-
+*/
     }
     //this function exists just so we don't need to declare logpage gameobject in other scripts
     //public void AddEventToLog(int index)

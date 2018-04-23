@@ -18,16 +18,22 @@ public class OptionsSliders : MonoBehaviour {
 		//Fetch the AudioSource from the GameObject
 		audioSource = GetComponent<AudioSource>();
 
+		canvas.GetComponent<CanvasScaler> ().scaleFactor = Menu.scale;
+		CardDisplay.textScrollSpeed = Menu.textSpeed/20.0f;
+		gammaImage.color = new Color(0.25f, 0.25f, 0.25f, Menu.gamma);
 	}
 	public void ScaleChanged(float value){
 		canvas.GetComponent<CanvasScaler> ().scaleFactor = value;
+		Menu.scale = value;
 	}
 	public void VolumeChanged(float value){
 		this.volume = value;
 		audioSource.volume = volume;
+		Menu.musicVolume = value;
 	}
 	public void SfxChanged(float value){
 		//value on slideristä saatava float välillä 0-1. valuen rangen voi tarvittaessa vaihtaa
+		Menu.sfxVolume = value;
 	}
 
 	public void ScrollSpeedChanged(float value){
@@ -37,9 +43,11 @@ public class OptionsSliders : MonoBehaviour {
 		else
 			instatext = false;
 		CardDisplay.textScrollSpeed = textSpeed/20.0f;
+		Menu.textSpeed = value;
 	}
 
 	public void GammaChanged(float value){
 		gammaImage.color = new Color(0.25f, 0.25f, 0.25f, value);
+		Menu.gamma = value;
 	}
 }
