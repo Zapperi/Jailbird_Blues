@@ -377,6 +377,12 @@ Prefab:
       propertyPath: m_SizeDelta.x
       value: -17
       objectReference: {fileID: 0}
+    - target: {fileID: 114399365377797168, guid: df67972d0e99a6d428df8e1f930ac1a0,
+        type: 2}
+      propertyPath: currentCard
+      value: 
+      objectReference: {fileID: 11400000, guid: 2c4b19502e30c804a8662649b4b5c8eb,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: df67972d0e99a6d428df8e1f930ac1a0, type: 2}
   m_IsPrefabParent: 0
