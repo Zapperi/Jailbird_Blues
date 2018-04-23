@@ -35,6 +35,7 @@ MonoBehaviour:
   logText: 
   endCard: 0
   timeCard: 1
+  onTop: 0
   repeatable: 0
   OptionsOn: 0
   Option1On: 0
@@ -99,4 +100,4 @@ MonoBehaviour:
   ppsFadeInSpeed: 0
   ppsShowCard: 0
   ppsHasFadeOut: 1
-  fadeOutSpeed: 3
+  fadeOutSpeed: 0.5
