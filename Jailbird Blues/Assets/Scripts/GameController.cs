@@ -31,6 +31,7 @@ public class GameController : MonoBehaviour {
 	public CardValues currentCard;                                                  //the card that is currently active in the scene
     public CardValues previousCard;
     public bool endcardOn;
+    public CardValues endOfGameCard;
 
     public GameObject sfxSource;                                                    //gameobject of sfx audio source
     public GameObject logPage;                                                      //game log
@@ -186,29 +187,55 @@ public class GameController : MonoBehaviour {
 		{
         case (0):
                 BuildDeck(cellCards);                                               //builds a new card deck from scratch
-                int index = Random.Range(0, cellCards.Count);						//picks a random number using the amount of cards in the deck as the range
-                next = cellCards[index];
+                int index = Random.Range(0, cellCards.Count);                       //picks a random number using the amount of cards in the deck as the range
+                if (cellCards.Count == 0)
+                {
+                    next = endOfGameCard;
+                } else
+                {
+                    next = cellCards[index];
+                }
                 SetCurrentCard(next);
                 cardDisplay.typeTextNewTextDone = false;
                 break;
          case (1):
                 BuildDeck(yardCards);
                 index = Random.Range(0, yardCards.Count);
-			    next = yardCards[index];
+                if (yardCards.Count == 0)
+                {
+                    next = endOfGameCard;
+                }
+                else
+                {
+                    next = yardCards[index];
+                }
                 SetCurrentCard(next);
                 cardDisplay.typeTextNewTextDone = false;
                 break;
 		case (2):
                 BuildDeck(messCards);
                 index = Random.Range(0, messCards.Count);
-			    next = messCards[index];
+                if (messCards.Count == 0)
+                {
+                    next = endOfGameCard;
+                }
+                else
+                {
+                    next = messCards[index];
+                }
                 SetCurrentCard(next);
                 cardDisplay.typeTextNewTextDone = false;
                 break;
 		case (3):
                 BuildDeck(workshopCards);
                 index = Random.Range(0, workshopCards.Count);
-			    next = workshopCards[index];
+                if (workshopCards.Count == 0)
+                {
+                    next = endOfGameCard;
+                } else
+                {
+                    next = workshopCards[index];
+                }
                 SetCurrentCard(next);
                 cardDisplay.typeTextNewTextDone = false;
                 break;
@@ -306,6 +333,14 @@ public class GameController : MonoBehaviour {
 
     public void ActuallyChangeCard(CardValues next)             //This is where the card changes.
     {
+        if (next == null)
+        {
+            next = endOfGameCard;
+        }
+        if (currentCard.endOfGame)
+        {
+            UnityEditor.EditorApplication.isPlaying = false;
+        }
         if (cleaningUpFades)                                    //This is used to prevent changing cards after cleaning up fades (it uses same function as normal fade-out which would also end up here and change card)
         {
             cleaningUpFades = false;

@@ -61,7 +61,9 @@ public class CardValues : ScriptableObject									//switched the surface from M
 	[Tooltip("Does this card have foreground image 1 on top of foreground image 2?")]
 	public bool onTop = false;
     [Tooltip("Can this card appear multiple times?")]
-    public bool repeatable;                                                 //can this card happen multiple times during one playthrough
+    public bool repeatable;
+    [Tooltip("Is this an end of game card?")]
+    public bool endOfGame;
     private bool used;														//has the card been played already?
     [Header("If options are off, use Option 5 button to add your follow card.")]  //inspector directions
     public bool OptionsOn = true;                                           //does the card have options?
