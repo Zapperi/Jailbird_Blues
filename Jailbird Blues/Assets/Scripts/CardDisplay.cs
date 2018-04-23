@@ -93,7 +93,7 @@ public class CardDisplay : MonoBehaviour
         buttonNoteBook.onClick.AddListener(ButtonNotebookPressed);                  // Connect notebook to it's button.
 		siblingIndexOne = foregroundImage1.transform.GetSiblingIndex();             // Set the reference to foregroundimage1 order.
 		siblingIndexTwo = foregroundImage2.transform.GetSiblingIndex();             // Set the reference to foregroundimage2 order.
-
+        UpdateTypeText();                                                           //Set text scrolling
     }
 		
     void Update()
@@ -108,7 +108,6 @@ public class CardDisplay : MonoBehaviour
 
         UpdatePopUpField();                                         // Update the previouscard text pop up field.
         currentCard = GameController.gameController.currentCard;    // Update the current to a new one
-        UpdateTypeText();                                           // Check if there's something new to type and type it.
         SiblingIndexSwitch();							            // Switches foreground images if needed.
         UpdateImages();                                             // Update to new images, hide the field if there is no image.
         RefreshTextFields();                                        // Update the textfield to current ones, does NOT affect cardText.
