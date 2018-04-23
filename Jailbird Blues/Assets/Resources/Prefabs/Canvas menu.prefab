@@ -1339,7 +1339,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Gamma
+  m_Text: Brightness
 --- !u!114 &114591046478111238
 MonoBehaviour:
   m_ObjectHideFlags: 1

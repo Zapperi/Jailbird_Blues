@@ -440,11 +440,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114743166947194950, guid: a5ca0da45ae9cf94f8ba95b70b239f82,
-        type: 2}
-      propertyPath: allSwitches.Array.size
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 4985295824015644, guid: a5ca0da45ae9cf94f8ba95b70b239f82, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -512,68 +507,11 @@ Prefab:
       propertyPath: gammaImage
       value: 
       objectReference: {fileID: 145588245}
-    - target: {fileID: 114743166947194950, guid: a5ca0da45ae9cf94f8ba95b70b239f82,
-        type: 2}
-      propertyPath: currentCard
-      value: 
-      objectReference: {fileID: 11400000, guid: cb2651b7189735b4b81de470bbcc6e19,
-        type: 2}
     - target: {fileID: 114852098042609194, guid: a5ca0da45ae9cf94f8ba95b70b239f82,
         type: 2}
       propertyPath: canvas
       value: 
       objectReference: {fileID: 1269733503}
-    - target: {fileID: 114743166947194950, guid: a5ca0da45ae9cf94f8ba95b70b239f82,
-        type: 2}
-      propertyPath: allSwitches.Array.data[1]
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114743166947194950, guid: a5ca0da45ae9cf94f8ba95b70b239f82,
-        type: 2}
-      propertyPath: allSwitches.Array.data[2]
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114743166947194950, guid: a5ca0da45ae9cf94f8ba95b70b239f82,
-        type: 2}
-      propertyPath: allSwitches.Array.data[3]
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114743166947194950, guid: a5ca0da45ae9cf94f8ba95b70b239f82,
-        type: 2}
-      propertyPath: allSwitches.Array.data[4]
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114743166947194950, guid: a5ca0da45ae9cf94f8ba95b70b239f82,
-        type: 2}
-      propertyPath: allSwitches.Array.data[5]
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114743166947194950, guid: a5ca0da45ae9cf94f8ba95b70b239f82,
-        type: 2}
-      propertyPath: allSwitches.Array.data[6]
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114743166947194950, guid: a5ca0da45ae9cf94f8ba95b70b239f82,
-        type: 2}
-      propertyPath: allSwitches.Array.data[7]
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114743166947194950, guid: a5ca0da45ae9cf94f8ba95b70b239f82,
-        type: 2}
-      propertyPath: allSwitches.Array.data[8]
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114743166947194950, guid: a5ca0da45ae9cf94f8ba95b70b239f82,
-        type: 2}
-      propertyPath: allSwitches.Array.data[9]
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114743166947194950, guid: a5ca0da45ae9cf94f8ba95b70b239f82,
-        type: 2}
-      propertyPath: endOfGameCard
-      value: 
-      objectReference: {fileID: 11400000, guid: 43bb7910b6a6a504b8d06b69b50e6cfa,
-        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a5ca0da45ae9cf94f8ba95b70b239f82, type: 2}
   m_IsPrefabParent: 0

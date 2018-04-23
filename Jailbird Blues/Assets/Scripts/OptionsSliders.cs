@@ -20,7 +20,7 @@ public class OptionsSliders : MonoBehaviour {
 
 		canvas.GetComponent<CanvasScaler> ().scaleFactor = Menu.scale;
 		CardDisplay.textScrollSpeed = Menu.textSpeed/20.0f;
-		gammaImage.color = new Color(0.25f, 0.25f, 0.25f, Menu.gamma);
+		gammaImage.color = new Color(0.1f, 0.1f, 0.1f, Menu.gamma);
 	}
 	public void ScaleChanged(float value){
 		canvas.GetComponent<CanvasScaler> ().scaleFactor = value;
@@ -47,7 +47,7 @@ public class OptionsSliders : MonoBehaviour {
 	}
 
 	public void GammaChanged(float value){
-		gammaImage.color = new Color(0.25f, 0.25f, 0.25f, value);
+		gammaImage.color = new Color(0.1f, 0.1f, 0.1f, value);
 		Menu.gamma = value;
 	}
 }
