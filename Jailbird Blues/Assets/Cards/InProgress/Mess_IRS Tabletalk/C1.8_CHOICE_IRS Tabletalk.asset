@@ -9,14 +9,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: C1.1_START_Lunchtime Staredown
+  m_Name: C1.8_CHOICE_IRS Tabletalk
   m_EditorClassIdentifier: 
   requiredSwitches: 
   RepIrs: 0
   RepPunks: 0
   RepShake: 0
   RepGuard: 0
-  timeOfDay: 2
+  timeOfDay: 0
   storyPhase: 0
   backgroundImage: {fileID: 21300000, guid: 8378fa802b5596e4fbe764c349e9d44c, type: 3}
   foregroundImage: {fileID: 0}
@@ -29,46 +29,45 @@ MonoBehaviour:
   ambientDecrease: 0
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: 
-  cardText: "You sit down at the table and put your spork to your.. \xC4Porridge?\xD6
-    \nIt\u2019s not looking very appetizing. \nYou raise your head with a sigh."
+  cardTextPerson: Your answer is..
+  cardText: 
   logText: 
   endCard: 0
   timeCard: 0
   onTop: 0
   repeatable: 0
   endOfGame: 0
-  OptionsOn: 0
-  Option1On: 0
+  OptionsOn: 1
+  Option1On: 1
   option1ReqSwitches: 
-  option1text: 
-  option1IrsReputation: 0
+  option1text: '"One"'
+  option1IrsReputation: 1
   option1PunkReputation: 0
   option1ShakeReputation: 0
   option1GuardReputation: 0
   option1ObtainedSwitches: 
   option1RemovedSwitches: 
-  option1FollowCard: {fileID: 0}
-  Option2On: 0
+  option1FollowCard: {fileID: 11400000, guid: 4b65bae4b05fb33478077a716d0c9983, type: 2}
+  Option2On: 1
   option2ReqSwitches: 
-  option2text: 
-  option2IrsReputation: 0
+  option2text: '"Two"'
+  option2IrsReputation: 2
   option2PunkReputation: 0
   option2ShakeReputation: 0
   option2GuardReputation: 0
   option2ObtainedSwitches: 
   option2RemovedSwitches: 
-  option2FollowCard: {fileID: 0}
-  Option3On: 0
+  option2FollowCard: {fileID: 11400000, guid: b7b1bb182ca1c9a4fb9716e64b4297db, type: 2}
+  Option3On: 1
   option3ReqSwitches: 
-  option3text: 
-  option3IrsReputation: 0
+  option3text: "\u201CI really don't know..\u201D"
+  option3IrsReputation: -1
   option3PunkReputation: 0
   option3ShakeReputation: 0
   option3GuardReputation: 0
   option3ObtainedSwitches: 
   option3RemovedSwitches: 
-  option3FollowCard: {fileID: 0}
+  option3FollowCard: {fileID: 11400000, guid: 9ca3e88184e0ea048ba9257fd6ed9945, type: 2}
   Option4On: 0
   option4ReqSwitches: 
   option4text: 
@@ -79,14 +78,14 @@ MonoBehaviour:
   option4ObtainedSwitches: 
   option4RemovedSwitches: 
   option4FollowCard: {fileID: 0}
-  Option5On: 1
+  Option5On: 0
   option5IrsReputation: 0
   option5PunkReputation: 0
   option5ShakeReputation: 0
   option5GuardReputation: 0
   option5ObtainedSwitches: 
   option5RemovedSwitches: 
-  option5FollowCard: {fileID: 11400000, guid: 6eaf4676effbb5e4d8e962c0333c65a2, type: 2}
+  option5FollowCard: {fileID: 0}
   isTimeBasedCard: 0
   sfxPrewait: 0
   sfx: {fileID: 0}
