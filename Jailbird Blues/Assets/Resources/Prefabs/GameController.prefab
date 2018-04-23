@@ -156,7 +156,7 @@ MonoBehaviour:
   workshopCards: []
   cellCards:
   - {fileID: 11400000, guid: 3ff04b9a82bf5a4459c9f5ed2bfa1afe, type: 2}
-  currentCard: {fileID: 11400000, guid: cb2651b7189735b4b81de470bbcc6e19, type: 2}
+  currentCard: {fileID: 11400000, guid: b67e254ddc892874d95cc4a33120c571, type: 2}
   previousCard: {fileID: 0}
   endcardOn: 0
   endOfGameCard: {fileID: 11400000, guid: 43bb7910b6a6a504b8d06b69b50e6cfa, type: 2}
@@ -177,6 +177,9 @@ MonoBehaviour:
   - itemIcon: {fileID: 21300000, guid: aa7bb47daa6419e4ab653a62355d4e5d, type: 3}
     itemDescText: Shiv
     itemSwitchIndex: 5
+  - itemIcon: {fileID: 21300000, guid: 0b3495af3b9c9e347b0292eae5baf7d1, type: 3}
+    itemDescText: '"The eternal cage by Pablo Manell."'
+    itemSwitchIndex: 6
   mainCamera: {fileID: 0}
   nextCardWaiting: {fileID: 0}
   waitingForPPS: 0
