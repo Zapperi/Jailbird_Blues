@@ -9,19 +9,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: C1.1_START_Lunchtime Staredown
+  m_Name: C2b.1_IRS Tabletalk
   m_EditorClassIdentifier: 
   requiredSwitches: 
   RepIrs: 0
   RepPunks: 0
   RepShake: 0
   RepGuard: 0
-  timeOfDay: 2
+  timeOfDay: 0
   storyPhase: 0
   backgroundImage: {fileID: 21300000, guid: 8378fa802b5596e4fbe764c349e9d44c, type: 3}
   foregroundImage: {fileID: 0}
   foregroundImage2: {fileID: 0}
-  foregroundImage3: {fileID: 0}
+  foregroundImage3: {fileID: 21300000, guid: a28e6d0fa77204b459a3ce6479e39467, type: 3}
   foregroundImage4: {fileID: 0}
   bgMusic: {fileID: 0}
   bgAmbientAudio: {fileID: 0}
@@ -29,9 +29,9 @@ MonoBehaviour:
   ambientDecrease: 0
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: 
-  cardText: "You sit down at the table and put your spork to your.. \xC4Porridge?\xD6
-    \nIt\u2019s not looking very appetizing. \nYou raise your head with a sigh."
+  cardTextPerson: 'IRS member #1'
+  cardText: "\"Ha, proved you wrong \xC4Simon!\xD6 This gentleman here understands
+    the beauty of a dual management.\""
   logText: 
   endCard: 0
   timeCard: 0
@@ -86,7 +86,7 @@ MonoBehaviour:
   option5GuardReputation: 0
   option5ObtainedSwitches: 
   option5RemovedSwitches: 
-  option5FollowCard: {fileID: 11400000, guid: 6eaf4676effbb5e4d8e962c0333c65a2, type: 2}
+  option5FollowCard: {fileID: 11400000, guid: 22fead5903bdf4d458230269f4cd4a1c, type: 2}
   isTimeBasedCard: 0
   sfxPrewait: 0
   sfx: {fileID: 0}
