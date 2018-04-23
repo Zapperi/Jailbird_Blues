@@ -13,7 +13,6 @@ public class PPSManager : MonoBehaviour
     public bool fadingOut;
     public bool showingCard;
     public bool leftToRight;
-    public bool fadeInAfterMoving;
     public bool endFadeAfterPan;
 
     public float fadeInAmount;
@@ -31,7 +30,6 @@ public class PPSManager : MonoBehaviour
         fadingOut = false;
         showingCard = false;
         leftToRight = false;
-        fadeInAfterMoving = false;
         endFadeAfterPan = false;
         fadeInAmount = 0;
         fadeOutAmount = 0;
@@ -43,6 +41,7 @@ public class PPSManager : MonoBehaviour
 
         m_Vignette = ScriptableObject.CreateInstance<Vignette>();
         m_Vignette.enabled.Override(true);
+        m_Vignette.roundness.Override(1f);
         m_Vignette.center.Override(new Vector2(0.5f, 0.5f));
         m_Vignette.intensity.Override(0f);
         m_Vignette.smoothness.Override(0f);
@@ -61,12 +60,38 @@ public class PPSManager : MonoBehaviour
             {
                 vignetteX = 0.5f;
                 m_Vignette.center.Override(new Vector2(vignetteX, 0.5f));
+            }
+            if (m_Vignette.smoothness > 0f)
+            {
+                m_Vignette.smoothness.value -= fadeInAmount;
+                if (m_Vignette.smoothness.value < 0f)
+                {
+                    m_Vignette.smoothness.value = 0f;
+                }
+            }
+            if (m_Vignette.intensity.value > 0f)
+            {
+                m_Vignette.intensity.value -= fadeInAmount;
+                if (m_Vignette.intensity.value < 0f)
+                {
+                    m_Vignette.intensity.value = 0f;
+                }
+            }
+            if (vignetteX==0.5f && m_Vignette.smoothness.value == 0f && m_Vignette.intensity.value == 0f)
+            {
                 fadingIn = false;
-                fadeInAfterMoving = true;
+                if (timedCard)
+                {
+                    showingCard = true;
+                }
+                else
+                {
+                    FadesDone();
+                }
             }
 
         }
-        if ((fadingIn && !leftToRight) || (fadeInAfterMoving))
+        if (fadingIn && !leftToRight)
         {
             m_Vignette.intensity.value -= fadeInAmount;
             m_Vignette.smoothness.value -= fadeInAmount;
@@ -75,7 +100,6 @@ public class PPSManager : MonoBehaviour
                 m_Vignette.intensity.value = 0f;
                 m_Vignette.smoothness.value = 0f;
                 fadingIn = false;
-                fadeInAfterMoving = false;
                 fadeInAmount = 0f;
                 if (timedCard)
                 {
@@ -158,23 +182,23 @@ public class PPSManager : MonoBehaviour
             {
                 blackScreenTime = 0f;
                 blackScreenOn = false;
-            }
-            if (fadeInAmount != 0f)
-            {
-                fadingIn = true;
-                if (leftToRight)
+                if (fadeInAmount != 0f)
                 {
-                    SetLeftVignette();
+                    fadingIn = true;
+                    if (leftToRight)
+                    {
+                        SetLeftVignette();
+                    }
+                    else
+                    {
+                        SetMiddleVignette();
+                    }
+
                 }
                 else
                 {
-                    SetMiddleVignette();
+                    showingCard = true;
                 }
-
-            }
-            else
-            {
-                showingCard = true;
             }
         }
 
@@ -197,8 +221,9 @@ public class PPSManager : MonoBehaviour
         {
             blackScreenOn = true;
             blackScreenTime = card.blackScreenTime;
-            m_Vignette.intensity.value = 1f;
-            m_Vignette.smoothness.value = 0.6f;
+            BlackScreenVignette();
+            //m_Vignette.intensity.value = 1f;
+            //m_Vignette.smoothness.value = 0.6f;
         }
         else
         {
@@ -251,7 +276,6 @@ public class PPSManager : MonoBehaviour
             }
             fadingOut = false;
             endFadeAfterPan = false;
-            fadeInAfterMoving = false;
             if (card.ppsHasFadeOut)
             {
                 if (card.fadeOutSpeed == 0)
@@ -276,7 +300,6 @@ public class PPSManager : MonoBehaviour
         fadingOut = false;
         leftToRight = false;
         showingCard = false;
-        fadeInAfterMoving = false;
         endFadeAfterPan = false;
 
     }
@@ -302,6 +325,13 @@ public class PPSManager : MonoBehaviour
         m_Vignette.center.Override(new Vector2(0.5f, 0.5f));
         m_Vignette.intensity.value = 0f;
         m_Vignette.smoothness.value = 0f;
+    }
+
+    public void BlackScreenVignette()
+    {
+        SetLeftVignette();
+        vignetteX = -1f;
+        m_Vignette.center.Override(new Vector2(vignetteX, 0.5f));
     }
 
     public void DoFadeOut(CardValues card)

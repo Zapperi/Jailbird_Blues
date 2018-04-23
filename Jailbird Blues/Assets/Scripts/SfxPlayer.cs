@@ -52,6 +52,8 @@ public class SfxPlayer : MonoBehaviour
 
         sfxModifier = 0.5f;
         musicModifier = 0.5f;
+        currentSfxVolume = 1f;
+        currentTimedVolume = 1f;
     }
 
     private void Update()
