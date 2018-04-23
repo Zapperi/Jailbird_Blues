@@ -32,7 +32,7 @@ MonoBehaviour:
   cardTextPerson: 
   cardText: "There is someone\u2019s stash hidden in here. \xC4A shiv!\xD6 Finders
     keepers!\r\nHopefully it\u2019s former owner doesn\u2019t find out...\r\n"
-  logText: 
+  logText: I found a shiv hidden in a cleaning cart.
   endCard: 0
   timeCard: 0
   onTop: 0
@@ -86,7 +86,7 @@ MonoBehaviour:
   option5GuardReputation: 0
   option5ObtainedSwitches: 
   option5RemovedSwitches: 
-  option5FollowCard: {fileID: 0}
+  option5FollowCard: {fileID: 11400000, guid: 79b37b6b8a991d0488ca544c278aa8e9, type: 2}
   isTimeBasedCard: 0
   sfxPrewait: 0
   sfx: {fileID: 0}

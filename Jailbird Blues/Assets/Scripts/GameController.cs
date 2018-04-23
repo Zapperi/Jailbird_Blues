@@ -739,7 +739,7 @@ public class GameController : MonoBehaviour {
                 }
                 break;
             case 3:
-                if (currentCard.option2ObtainedSwitches.Count > 0)
+                if (currentCard.option3ObtainedSwitches.Count > 0)
                 {
                     for (int i = 0; i < currentCard.option3ObtainedSwitches.Count; i++)
                     {
