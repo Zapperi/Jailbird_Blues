@@ -36,6 +36,7 @@ MonoBehaviour:
   timeCard: 0
   onTop: 0
   repeatable: 0
+  endOfGame: 0
   OptionsOn: 0
   Option1On: 1
   option1ReqSwitches: 
@@ -87,7 +88,7 @@ MonoBehaviour:
   option5FollowCard: {fileID: 11400000, guid: 2493cfd61d5f6884aab9040eac5d6e47, type: 2}
   isTimeBasedCard: 0
   sfxPrewait: 0
-  sfx: {fileID: 0}
+  sfx: {fileID: 8300000, guid: d77afd3229493144d88b1115f166af44, type: 3}
   sfxHasFadeOut: 0
   sfxFadeOutAt: 0
   sfxFadeOutSpeed: 0
