@@ -25,17 +25,19 @@ MonoBehaviour:
   foregroundImage4: {fileID: 0}
   bgMusic: {fileID: 0}
   bgAmbientAudio: {fileID: 0}
-  musicDecrease: 0
+  musicDecrease: 1
   ambientDecrease: 0
   musicOff: 0
   ambientOff: 0
   cardTextPerson: Stephan
-  cardText: "\"Oh, a new delivery boy. \nGood job delivering this. \nNow go back to
-    tell the delivery was a success\""
+  cardText: '"Oh, a new delivery boy. Good job. Now go back to tell the delivery was
+    a success."'
   logText: 
   endCard: 0
   timeCard: 0
+  onTop: 0
   repeatable: 0
+  endOfGame: 0
   OptionsOn: 0
   Option1On: 0
   option1ReqSwitches: 
@@ -98,5 +100,5 @@ MonoBehaviour:
   blackScreenTime: 0
   ppsFadeInSpeed: 0
   ppsShowCard: 0
-  ppsHasFadeOut: 0
+  ppsHasFadeOut: 1
   fadeOutSpeed: 0

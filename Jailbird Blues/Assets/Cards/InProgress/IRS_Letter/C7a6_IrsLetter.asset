@@ -25,7 +25,7 @@ MonoBehaviour:
   foregroundImage4: {fileID: 0}
   bgMusic: {fileID: 0}
   bgAmbientAudio: {fileID: 0}
-  musicDecrease: 0
+  musicDecrease: 1
   ambientDecrease: 0
   musicOff: 0
   ambientOff: 0
@@ -88,7 +88,7 @@ MonoBehaviour:
   option5FollowCard: {fileID: 11400000, guid: 0a8b466e1243c974c958e9a850dbdcb1, type: 2}
   isTimeBasedCard: 0
   sfxPrewait: 0
-  sfx: {fileID: 0}
+  sfx: {fileID: 8300000, guid: 0bdfd3ec5f8599440abf2a2b93efd9c6, type: 3}
   sfxHasFadeOut: 0
   sfxFadeOutAt: 0
   sfxFadeOutSpeed: 0

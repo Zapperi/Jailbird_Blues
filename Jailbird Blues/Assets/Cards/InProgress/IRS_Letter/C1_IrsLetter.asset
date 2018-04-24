@@ -23,18 +23,20 @@ MonoBehaviour:
   foregroundImage2: {fileID: 21300000, guid: a05c51235ae1d44448e5a5027c6e9df6, type: 3}
   foregroundImage3: {fileID: 0}
   foregroundImage4: {fileID: 0}
-  bgMusic: {fileID: 0}
+  bgMusic: {fileID: 8300000, guid: 267a97e21f8e84142bed948aad38eae8, type: 3}
   bgAmbientAudio: {fileID: 0}
-  musicDecrease: 0
+  musicDecrease: 0.7
   ambientDecrease: 0
   musicOff: 0
-  ambientOff: 0
+  ambientOff: 1
   cardTextPerson: I.R.S. member
   cardText: '"Oh hello. You must be the new guy everyone is talking about"'
   logText: 
   endCard: 0
   timeCard: 0
+  onTop: 0
   repeatable: 0
+  endOfGame: 0
   OptionsOn: 0
   Option1On: 0
   option1ReqSwitches: 
@@ -86,12 +88,12 @@ MonoBehaviour:
   option5FollowCard: {fileID: 11400000, guid: 1074084183ec9eb48928b5387da0baf0, type: 2}
   isTimeBasedCard: 0
   sfxPrewait: 0
-  sfx: {fileID: 8300000, guid: 267a97e21f8e84142bed948aad38eae8, type: 3}
+  sfx: {fileID: 0}
   sfxHasFadeOut: 0
   sfxFadeOutAt: 0
   sfxFadeOutSpeed: 0
   sfxAfterWait: 0
-  ppsHasFadeIn: 0
+  ppsHasFadeIn: 1
   ppsFadeMode: 0
   blackScreenStart: 0
   blackScreenTime: 0
