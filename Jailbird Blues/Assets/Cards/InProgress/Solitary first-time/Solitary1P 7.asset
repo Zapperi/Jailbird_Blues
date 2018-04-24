@@ -53,11 +53,11 @@ MonoBehaviour:
   option2text: Do push ups.
   option2IrsReputation: 0
   option2PunkReputation: 0
-  option2ShakeReputation: 0
+  option2ShakeReputation: -2
   option2GuardReputation: 0
   option2ObtainedSwitches: 
   option2RemovedSwitches: 
-  option2FollowCard: {fileID: 0}
+  option2FollowCard: {fileID: 11400000, guid: 86adf45116155b0439794d6e5e347d9d, type: 2}
   Option3On: 1
   option3ReqSwitches: 
   option3text: Yell.

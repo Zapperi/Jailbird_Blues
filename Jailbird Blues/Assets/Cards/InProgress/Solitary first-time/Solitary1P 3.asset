@@ -53,7 +53,7 @@ MonoBehaviour:
   option2text: Do push ups.
   option2IrsReputation: 0
   option2PunkReputation: 0
-  option2ShakeReputation: 0
+  option2ShakeReputation: 2
   option2GuardReputation: 0
   option2ObtainedSwitches: 
   option2RemovedSwitches: 

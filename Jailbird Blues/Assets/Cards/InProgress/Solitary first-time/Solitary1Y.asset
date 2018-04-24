@@ -68,7 +68,7 @@ MonoBehaviour:
   option3GuardReputation: 0
   option3ObtainedSwitches: 
   option3RemovedSwitches: 
-  option3FollowCard: {fileID: 0}
+  option3FollowCard: {fileID: 11400000, guid: 48eb849d4dc7f1a419d6ba4d0cd8ecc7, type: 2}
   Option4On: 0
   option4ReqSwitches: 
   option4text: Do something.

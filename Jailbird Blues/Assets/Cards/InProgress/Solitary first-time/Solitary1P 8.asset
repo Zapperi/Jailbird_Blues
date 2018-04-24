@@ -30,11 +30,11 @@ MonoBehaviour:
   musicOff: 0
   ambientOff: 0
   cardTextPerson: 
-  cardText: "Remember the saying about lemons? When life gives you endless\r\ntedium,
-    might as well use that time to get fit."
+  cardText: "You're in no shape to move anymore, but you try anyway.\r\nYou only make
+    matters worse without gaining anything."
   logText: 
   endCard: 0
-  timeCard: 0
+  timeCard: 1
   onTop: 0
   repeatable: 0
   endOfGame: 0

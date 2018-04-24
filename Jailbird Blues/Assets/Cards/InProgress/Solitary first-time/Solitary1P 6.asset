@@ -30,8 +30,9 @@ MonoBehaviour:
   musicOff: 0
   ambientOff: 0
   cardTextPerson: 
-  cardText: "Remember the saying about lemons? When life gives you endless\r\ntedium,
-    might as well use that time to get fit."
+  cardText: '...you, think ... you broke something...
+
+    feel the burn...'
   logText: 
   endCard: 0
   timeCard: 0
@@ -58,7 +59,7 @@ MonoBehaviour:
   option2GuardReputation: 0
   option2ObtainedSwitches: 
   option2RemovedSwitches: 
-  option2FollowCard: {fileID: 0}
+  option2FollowCard: {fileID: 11400000, guid: 86adf45116155b0439794d6e5e347d9d, type: 2}
   Option3On: 0
   option3ReqSwitches: 
   option3text: Yell.

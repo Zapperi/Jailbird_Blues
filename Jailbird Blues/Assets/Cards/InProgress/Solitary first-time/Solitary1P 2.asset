@@ -30,8 +30,7 @@ MonoBehaviour:
   musicOff: 0
   ambientOff: 0
   cardTextPerson: 
-  cardText: "Remember the saying about lemons? When life gives you endless\r\ntedium,
-    might as well use that time to get fit."
+  cardText: The Protein shakers are going to be so proud of you.
   logText: 
   endCard: 0
   timeCard: 0
@@ -54,11 +53,11 @@ MonoBehaviour:
   option2text: Do push ups.
   option2IrsReputation: 0
   option2PunkReputation: 0
-  option2ShakeReputation: 0
+  option2ShakeReputation: 2
   option2GuardReputation: 0
   option2ObtainedSwitches: 
   option2RemovedSwitches: 
-  option2FollowCard: {fileID: 0}
+  option2FollowCard: {fileID: 11400000, guid: 1e56c2d15ea587347ba38e998110a218, type: 2}
   Option3On: 0
   option3ReqSwitches: 
   option3text: Yell.
