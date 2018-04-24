@@ -381,7 +381,7 @@ Prefab:
         type: 2}
       propertyPath: currentCard
       value: 
-      objectReference: {fileID: 11400000, guid: f7512b9fd0f4eee4c950e51bb710ac8e,
+      objectReference: {fileID: 11400000, guid: fa0a9a36a64aece4881b7a1f4077eef0,
         type: 2}
     - target: {fileID: 1014170443296230, guid: df67972d0e99a6d428df8e1f930ac1a0, type: 2}
       propertyPath: m_IsActive
@@ -399,11 +399,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1242475129581146, guid: df67972d0e99a6d428df8e1f930ac1a0, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1161015057581296, guid: df67972d0e99a6d428df8e1f930ac1a0, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1216926068993842, guid: df67972d0e99a6d428df8e1f930ac1a0, type: 2}
       propertyPath: m_IsActive
@@ -576,7 +576,7 @@ Prefab:
         type: 2}
       propertyPath: currentCard
       value: 
-      objectReference: {fileID: 11400000, guid: f7512b9fd0f4eee4c950e51bb710ac8e,
+      objectReference: {fileID: 11400000, guid: fa0a9a36a64aece4881b7a1f4077eef0,
         type: 2}
     - target: {fileID: 114743166947194950, guid: a5ca0da45ae9cf94f8ba95b70b239f82,
         type: 2}
