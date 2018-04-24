@@ -30,8 +30,8 @@ MonoBehaviour:
   musicOff: 0
   ambientOff: 0
   cardTextPerson: I.R.S. member
-  cardText: "\"Here's a letter we need to deliver to a guard in the library. \nHis
-    name is Stephan. Why don't you do that for us\""
+  cardText: "\"Here's \xC4a letter\xD6 we need to deliver to a guard in the library.
+    \nHis name is \xC4Stephan\xD6. Why don't you do that for us\""
   logText: 
   endCard: 0
   timeCard: 0

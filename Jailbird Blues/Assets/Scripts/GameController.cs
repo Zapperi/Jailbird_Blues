@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour {
 
@@ -340,7 +341,7 @@ public class GameController : MonoBehaviour {
         }
         if (currentCard.endOfGame)
         {
-            UnityEditor.EditorApplication.isPlaying = false;
+            SceneManager.LoadScene("Menu");
         }
         if (cleaningUpFades)                                    //This is used to prevent changing cards after cleaning up fades (it uses same function as normal fade-out which would also end up here and change card)
         {
