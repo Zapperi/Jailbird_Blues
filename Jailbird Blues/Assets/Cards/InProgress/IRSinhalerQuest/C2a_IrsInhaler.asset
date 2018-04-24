@@ -29,7 +29,7 @@ MonoBehaviour:
   ambientDecrease: 0.5
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: 'Simon:'
+  cardTextPerson: Simon
   cardText: '"Uhm.. Yes you. My name is Simon, nice to meet you. I''m in quite a trouble
     as those punks just stole my inhaler"'
   logText: 

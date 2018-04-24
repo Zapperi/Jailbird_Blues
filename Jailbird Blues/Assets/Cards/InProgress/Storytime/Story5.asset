@@ -29,7 +29,7 @@ MonoBehaviour:
   ambientDecrease: 0
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: 
+  cardTextPerson: You
   cardText: 
   logText: 
   endCard: 0
@@ -50,14 +50,14 @@ MonoBehaviour:
   option1FollowCard: {fileID: 11400000, guid: f536e411ae7b5c44dad3b2f157565a25, type: 2}
   Option2On: 1
   option2ReqSwitches: 
-  option2text: Not in a mood for stories
+  option2text: '"Not in a mood for stories"'
   option2IrsReputation: 0
   option2PunkReputation: 0
   option2ShakeReputation: 0
   option2GuardReputation: 0
   option2ObtainedSwitches: 
   option2RemovedSwitches: 
-  option2FollowCard: {fileID: 0}
+  option2FollowCard: {fileID: 11400000, guid: 7516f9ad3cf3dc242992c896592bcc13, type: 2}
   Option3On: 0
   option3ReqSwitches: 
   option3text: 

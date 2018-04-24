@@ -23,10 +23,21 @@ MonoBehaviour:
   foregroundImage2: {fileID: 0}
   foregroundImage3: {fileID: 0}
   foregroundImage4: {fileID: 0}
+  bgMusic: {fileID: 0}
+  bgAmbientAudio: {fileID: 0}
+  musicDecrease: 0
+  ambientDecrease: 0
+  musicOff: 0
+  ambientOff: 0
+  cardTextPerson: Shaker brah
   cardText: "You keep lifting more and get sweaty.\r\n\"Good good, you can do it bro!
     I'll add some weights now."
+  logText: 
   endCard: 0
+  timeCard: 0
+  onTop: 0
   repeatable: 0
+  endOfGame: 0
   OptionsOn: 1
   Option1On: 0
   option1ReqSwitches: 
@@ -68,3 +79,26 @@ MonoBehaviour:
   option4ObtainedSwitches: 
   option4RemovedSwitches: 
   option4FollowCard: {fileID: 0}
+  Option5On: 1
+  option5IrsReputation: 0
+  option5PunkReputation: 0
+  option5ShakeReputation: 0
+  option5GuardReputation: 0
+  option5ObtainedSwitches: 
+  option5RemovedSwitches: 
+  option5FollowCard: {fileID: 0}
+  isTimeBasedCard: 0
+  sfxPrewait: 0
+  sfx: {fileID: 0}
+  sfxHasFadeOut: 0
+  sfxFadeOutAt: 0
+  sfxFadeOutSpeed: 0
+  sfxAfterWait: 0
+  ppsHasFadeIn: 0
+  ppsFadeMode: 0
+  blackScreenStart: 0
+  blackScreenTime: 0
+  ppsFadeInSpeed: 0
+  ppsShowCard: 0
+  ppsHasFadeOut: 0
+  fadeOutSpeed: 0

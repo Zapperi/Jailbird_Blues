@@ -29,7 +29,7 @@ MonoBehaviour:
   ambientDecrease: 0.7
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: 
+  cardTextPerson: Inmate
   cardText: "After a little while you hear someone whisper\r\n\"Yo dude you gotta
     sharpen that shiv more silently, someone may hear you\"\r"
   logText: 

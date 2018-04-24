@@ -30,8 +30,8 @@ MonoBehaviour:
   musicOff: 0
   ambientOff: 0
   cardTextPerson: Simon
-  cardText: The guards don't care, they don't want any trouble for themselves. And
-    those punk fellows can be very mean. *sniffs*
+  cardText: '"The guards don''t care, they don''t want any trouble for themselves.
+    And those punk fellows can be very mean. *sniffs*"'
   logText: 
   endCard: 0
   timeCard: 0

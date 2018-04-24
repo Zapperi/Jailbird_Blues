@@ -29,9 +29,9 @@ MonoBehaviour:
   ambientDecrease: 0.5
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: 
-  cardText: Simon sobs "Oh... It's okay I guess, you must have tried your best." Simon
-    walks away.
+  cardTextPerson: Simon
+  cardText: "Simon sobs \"Oh... It's okay I guess, you must have tried your best.\"
+    \nSimon walks away."
   logText: 
   endCard: 1
   timeCard: 1

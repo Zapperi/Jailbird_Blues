@@ -29,7 +29,7 @@ MonoBehaviour:
   ambientDecrease: 1
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: 
+  cardTextPerson: Crowd
   cardText: "\"Who called the guards?\"\r\n\"Do we have a rat in here?\"\r\n\"Not
     cool calling the pigs.\""
   logText: 

@@ -30,7 +30,7 @@ MonoBehaviour:
   musicOff: 0
   ambientOff: 0
   cardTextPerson: 
-  cardText: continue...
+  cardText: You turn on to your other side and slowly drift back into sleep..
   logText: 
   endCard: 1
   timeCard: 1

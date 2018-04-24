@@ -23,17 +23,27 @@ MonoBehaviour:
   foregroundImage2: {fileID: 0}
   foregroundImage3: {fileID: 0}
   foregroundImage4: {fileID: 0}
+  bgMusic: {fileID: 0}
+  bgAmbientAudio: {fileID: 0}
+  musicDecrease: 0
+  ambientDecrease: 0
+  musicOff: 0
+  ambientOff: 0
+  cardTextPerson: Shaker brah
   cardText: "\"Bro, bro, you gotta wake up bro...\"\r\nYou open your eyes and wake
     up on the floor, muscles burning with pain.\r\n\"Whoah bro, you totally blacked
     out bro.\"\r\nYou sit up a bit confused.\r\n\"Yeah I think you're done for today
     little bro, you better get out of here and rest bro.\""
+  logText: 
   endCard: 1
+  timeCard: 0
+  onTop: 0
   repeatable: 0
+  endOfGame: 0
   OptionsOn: 0
   Option1On: 0
   option1ReqSwitches: 
   option1text: 
-  option1LogText: 
   option1IrsReputation: 0
   option1PunkReputation: 0
   option1ShakeReputation: 0
@@ -44,7 +54,6 @@ MonoBehaviour:
   Option2On: 0
   option2ReqSwitches: 
   option2text: 
-  option2LogText: 
   option2IrsReputation: 0
   option2PunkReputation: 0
   option2ShakeReputation: 0
@@ -55,7 +64,6 @@ MonoBehaviour:
   Option3On: 0
   option3ReqSwitches: 
   option3text: 
-  option3LogText: 
   option3IrsReputation: 0
   option3PunkReputation: 0
   option3ShakeReputation: 0
@@ -66,7 +74,6 @@ MonoBehaviour:
   Option4On: 1
   option4ReqSwitches: 
   option4text: 
-  option4LogText: 
   option4IrsReputation: 0
   option4PunkReputation: 0
   option4ShakeReputation: 0
@@ -74,3 +81,26 @@ MonoBehaviour:
   option4ObtainedSwitches: 
   option4RemovedSwitches: 
   option4FollowCard: {fileID: 0}
+  Option5On: 1
+  option5IrsReputation: 0
+  option5PunkReputation: 0
+  option5ShakeReputation: 0
+  option5GuardReputation: 0
+  option5ObtainedSwitches: 
+  option5RemovedSwitches: 
+  option5FollowCard: {fileID: 0}
+  isTimeBasedCard: 0
+  sfxPrewait: 0
+  sfx: {fileID: 0}
+  sfxHasFadeOut: 0
+  sfxFadeOutAt: 0
+  sfxFadeOutSpeed: 0
+  sfxAfterWait: 0
+  ppsHasFadeIn: 0
+  ppsFadeMode: 0
+  blackScreenStart: 0
+  blackScreenTime: 0
+  ppsFadeInSpeed: 0
+  ppsShowCard: 0
+  ppsHasFadeOut: 0
+  fadeOutSpeed: 0

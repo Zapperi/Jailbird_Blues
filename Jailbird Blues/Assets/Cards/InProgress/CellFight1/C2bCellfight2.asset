@@ -29,7 +29,7 @@ MonoBehaviour:
   ambientDecrease: 0.7
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: 
+  cardTextPerson: Larry
   cardText: '"Haha, not your bed anymore Bill!"'
   logText: 
   endCard: 0

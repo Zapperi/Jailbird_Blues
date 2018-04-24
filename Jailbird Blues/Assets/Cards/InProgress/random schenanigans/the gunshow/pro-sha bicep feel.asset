@@ -29,9 +29,9 @@ MonoBehaviour:
   ambientDecrease: 0
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: 
-  cardText: 'A big shirtless shaker stands infront of you: "Hey newbie check how hard
-    my biceps are"'
+  cardTextPerson: Huge Shaker
+  cardText: 'A huge shirtless shaker stands infront of you: "Hey newbie check how
+    hard my biceps are"'
   logText: 
   endCard: 0
   timeCard: 0

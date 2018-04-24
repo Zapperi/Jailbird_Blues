@@ -29,7 +29,7 @@ MonoBehaviour:
   ambientDecrease: 0.5
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: 
+  cardTextPerson: Simon
   cardText: "You throw it to Simon, who catches it and runs away. \"Thank you mister!
     I really appreciate it!\"\r\nPunks jump up rapidly \"WHAT THE HELL MAN?!\""
   logText: 

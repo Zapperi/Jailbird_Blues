@@ -29,7 +29,7 @@ MonoBehaviour:
   ambientDecrease: 0.5
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: 
+  cardTextPerson: You
   cardText: You go back to simon and apologize "Sorry Simon, I don't want to get in
     too much trouble, good luck with the inhaler."
   logText: 

@@ -30,7 +30,7 @@ MonoBehaviour:
   musicOff: 0
   ambientOff: 0
   cardTextPerson: You
-  cardText: Here's a letter from I.R.S.
+  cardText: '"Here''s a letter from I.R.S."'
   logText: 
   endCard: 0
   timeCard: 0

@@ -29,7 +29,7 @@ MonoBehaviour:
   ambientDecrease: 0.5
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: 
+  cardTextPerson: Punk
   cardText: He lets go "Yeah, you would make a rad punk, that's for sure. We'll keep
     an eye on you"
   logText: 

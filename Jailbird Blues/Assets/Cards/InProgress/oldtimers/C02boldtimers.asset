@@ -30,9 +30,7 @@ MonoBehaviour:
   musicOff: 0
   ambientOff: 0
   cardTextPerson: 
-  cardText: 'You go back inside.
-
-    continue...'
+  cardText: You go back inside.
   logText: 
   endCard: 1
   timeCard: 1

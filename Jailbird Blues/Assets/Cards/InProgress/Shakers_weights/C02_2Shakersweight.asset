@@ -29,8 +29,9 @@ MonoBehaviour:
   ambientDecrease: 0
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: Shaker goon
-  cardText: continue...
+  cardTextPerson: 
+  cardText: "You keep walking, not looking back. \nRest of the recreational activity
+    time passes by in a breeze."
   logText: 
   endCard: 1
   timeCard: 1

@@ -30,8 +30,8 @@ MonoBehaviour:
   musicOff: 0
   ambientOff: 0
   cardTextPerson: Simon
-  cardText: That was very brave of you and I'll never forget it. I'll be sure to tell
-    the boss about your bravery.
+  cardText: '"That was very brave of you and I''ll never forget it. I''ll be sure
+    to tell the boss about your bravery."'
   logText: 
   endCard: 1
   timeCard: 1

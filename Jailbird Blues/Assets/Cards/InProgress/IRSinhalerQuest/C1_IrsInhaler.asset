@@ -29,7 +29,7 @@ MonoBehaviour:
   ambientDecrease: 0.5
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: 
+  cardTextPerson: Inmate
   cardText: "You see an I.R.S. inmate approaching you.\r\n\"Umm... Excuse me sir...
     umm...\""
   logText: 

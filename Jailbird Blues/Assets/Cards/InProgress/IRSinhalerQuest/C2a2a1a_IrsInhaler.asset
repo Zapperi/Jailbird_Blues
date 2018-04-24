@@ -29,7 +29,7 @@ MonoBehaviour:
   ambientDecrease: 0.5
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: 
+  cardTextPerson: Punks
   cardText: All the punks laugh. "Did you assume we would just give it to you? You
     are killing me". Laughter continues.
   logText: 

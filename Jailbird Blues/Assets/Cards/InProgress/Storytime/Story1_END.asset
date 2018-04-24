@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: Story1
+  m_Name: Story1_END
   m_EditorClassIdentifier: 
   requiredSwitches: 
   RepIrs: 0
@@ -18,9 +18,9 @@ MonoBehaviour:
   RepGuard: 0
   timeOfDay: 0
   storyPhase: 0
-  backgroundImage: {fileID: 21300000, guid: 7c5e619a5c03cc943a4b68321a14beb1, type: 3}
-  foregroundImage: {fileID: 21300000, guid: 60c5302a1c8acf24fa976f1e8da49a6a, type: 3}
-  foregroundImage2: {fileID: 21300000, guid: 3242392f481b5424893e956bd29406a1, type: 3}
+  backgroundImage: {fileID: 0}
+  foregroundImage: {fileID: 0}
+  foregroundImage2: {fileID: 0}
   foregroundImage3: {fileID: 0}
   foregroundImage4: {fileID: 0}
   bgMusic: {fileID: 0}
@@ -29,16 +29,17 @@ MonoBehaviour:
   ambientDecrease: 0
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: Jacob
-  cardText: '"Well who do we have here then. Please, sit"'
+  cardTextPerson: 
+  cardText: You walk away from the old timers and find a nice quiet place to pass
+    your time..
   logText: 
-  endCard: 0
+  endCard: 1
   timeCard: 0
   onTop: 0
   repeatable: 0
   endOfGame: 0
-  OptionsOn: 1
-  Option1On: 0
+  OptionsOn: 0
+  Option1On: 1
   option1ReqSwitches: 
   option1text: 
   option1IrsReputation: 0
@@ -50,17 +51,17 @@ MonoBehaviour:
   option1FollowCard: {fileID: 0}
   Option2On: 1
   option2ReqSwitches: 
-  option2text: Sit down
+  option2text: 
   option2IrsReputation: 0
   option2PunkReputation: 0
   option2ShakeReputation: 0
   option2GuardReputation: 0
   option2ObtainedSwitches: 
   option2RemovedSwitches: 
-  option2FollowCard: {fileID: 11400000, guid: 6ed10b60b8d05e945954c848cf959e31, type: 2}
+  option2FollowCard: {fileID: 0}
   Option3On: 1
   option3ReqSwitches: 
-  option3text: '"Maybe some other time..."'
+  option3text: 
   option3IrsReputation: 0
   option3PunkReputation: 0
   option3ShakeReputation: 0
@@ -68,7 +69,7 @@ MonoBehaviour:
   option3ObtainedSwitches: 
   option3RemovedSwitches: 
   option3FollowCard: {fileID: 0}
-  Option4On: 0
+  Option4On: 1
   option4ReqSwitches: 
   option4text: 
   option4IrsReputation: 0
@@ -78,7 +79,7 @@ MonoBehaviour:
   option4ObtainedSwitches: 
   option4RemovedSwitches: 
   option4FollowCard: {fileID: 0}
-  Option5On: 0
+  Option5On: 1
   option5IrsReputation: 0
   option5PunkReputation: 0
   option5ShakeReputation: 0

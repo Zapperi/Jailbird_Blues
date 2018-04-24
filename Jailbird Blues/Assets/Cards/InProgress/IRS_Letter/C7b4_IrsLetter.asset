@@ -30,7 +30,7 @@ MonoBehaviour:
   musicOff: 0
   ambientOff: 0
   cardTextPerson: Stephan
-  cardText: Yes, what is it?
+  cardText: '"Yes, what is it?"'
   logText: 
   endCard: 0
   timeCard: 0

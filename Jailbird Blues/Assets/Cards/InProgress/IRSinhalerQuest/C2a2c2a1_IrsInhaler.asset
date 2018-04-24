@@ -29,7 +29,7 @@ MonoBehaviour:
   ambientDecrease: 0.5
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: 
+  cardTextPerson: Punk
   cardText: "Punk guy grabs your shoulder: \"Damn dude, that... was... brutal!\"\r\nHe
     grabs your hair and mumbles \"Yeah that would make a nice mohawk...\""
   logText: 

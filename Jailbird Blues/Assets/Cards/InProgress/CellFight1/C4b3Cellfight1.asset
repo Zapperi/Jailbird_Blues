@@ -29,7 +29,7 @@ MonoBehaviour:
   ambientDecrease: 0
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: 
+  cardTextPerson: Propably a guard
   cardText: '"Okay, okay, break it off you two!"'
   logText: 
   endCard: 0
