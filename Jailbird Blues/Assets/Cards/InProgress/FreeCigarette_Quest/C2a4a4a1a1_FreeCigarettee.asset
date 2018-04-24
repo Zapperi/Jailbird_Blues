@@ -28,7 +28,7 @@ MonoBehaviour:
   musicDecrease: 0
   ambientDecrease: 0
   musicOff: 1
-  ambientOff: 1
+  ambientOff: 0
   cardTextPerson: 
   cardText: "\"Your taxman isn't the smartest one, but he sure has spirit.\"\r\nThe
     protein shakers walk away."
@@ -100,5 +100,5 @@ MonoBehaviour:
   blackScreenTime: 0
   ppsFadeInSpeed: 0
   ppsShowCard: 0
-  ppsHasFadeOut: 0
+  ppsHasFadeOut: 1
   fadeOutSpeed: 0

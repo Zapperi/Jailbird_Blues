@@ -20,15 +20,15 @@ MonoBehaviour:
   storyPhase: 0
   backgroundImage: {fileID: 21300000, guid: e34e2dc729b5acd42b383971c725e4f1, type: 3}
   foregroundImage: {fileID: 0}
-  foregroundImage2: {fileID: 0}
+  foregroundImage2: {fileID: 21300000, guid: ec7f3a9152691a345b794c0a29ce19b9, type: 3}
   foregroundImage3: {fileID: 0}
   foregroundImage4: {fileID: 0}
-  bgMusic: {fileID: 8300000, guid: 45726ce628770f44cba823f4c1bdbbb0, type: 3}
+  bgMusic: {fileID: 0}
   bgAmbientAudio: {fileID: 0}
-  musicDecrease: 0
-  ambientDecrease: 0
-  musicOff: 1
-  ambientOff: 1
+  musicDecrease: 0.5
+  ambientDecrease: 0.8
+  musicOff: 0
+  ambientOff: 0
   cardTextPerson: 
   cardText: "\"Oh, no no no. In prison nothing is free.\" he chuckles.\r\nHe points
     to the workout station\r\n\"You see those protein shaker guys? Well, they owe
