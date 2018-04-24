@@ -29,7 +29,7 @@ MonoBehaviour:
   ambientDecrease: 0.7
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: 
+  cardTextPerson: Mr.Shady
   cardText: '"Is that so? There will be consequences if you decline from a favour,
     everyone in the prison knows that."'
   logText: 

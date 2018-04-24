@@ -29,7 +29,7 @@ MonoBehaviour:
   ambientDecrease: 0.8
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: 
+  cardTextPerson: You
   cardText: "You walk to the workout station.\r\n\"Cough, excuse me.\""
   logText: 
   endCard: 0

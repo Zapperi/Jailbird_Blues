@@ -29,7 +29,7 @@ MonoBehaviour:
   ambientDecrease: 0.8
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: 
+  cardTextPerson: Mr.Shady
   cardText: "\"Well, you're as ugly as you are stupid, but what could I have expected
     from you? Nice try though. I guess that's enough of a favour, you're free to go.\"\r"
   logText: 

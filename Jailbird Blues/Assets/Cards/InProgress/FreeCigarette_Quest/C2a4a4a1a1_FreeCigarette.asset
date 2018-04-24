@@ -29,7 +29,7 @@ MonoBehaviour:
   ambientDecrease: 0.5
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: 
+  cardTextPerson: Shaker bro
   cardText: '"You got wax in your ears bro? We said we don''t owe him anything."'
   logText: 
   endCard: 0

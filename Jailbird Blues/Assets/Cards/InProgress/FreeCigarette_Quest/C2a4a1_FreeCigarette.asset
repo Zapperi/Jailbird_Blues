@@ -29,7 +29,7 @@ MonoBehaviour:
   ambientDecrease: 0.5
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: 
+  cardTextPerson: Shaker bro
   cardText: "Three huge guys turn your direction.\r\n\"Sup bro.\""
   logText: 
   endCard: 0

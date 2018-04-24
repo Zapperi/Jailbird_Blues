@@ -29,7 +29,7 @@ MonoBehaviour:
   ambientDecrease: 0.5
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: 
+  cardTextPerson: You
   cardText: "You point to the shady guy.\r\n\"Well, I'm here to collect the money
     you owe him.\""
   logText: 

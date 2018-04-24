@@ -29,7 +29,7 @@ MonoBehaviour:
   ambientDecrease: 0.7
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: 
+  cardTextPerson: Mr.Shady
   cardText: "\"If you can't get the money, you gotta pay up yourself.\"\r\nHe walks
     away chuckling.\r\n\"Be sure to have the money next time, or else!\""
   logText: 

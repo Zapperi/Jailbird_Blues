@@ -29,7 +29,7 @@ MonoBehaviour:
   ambientDecrease: 0.7
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: 
+  cardTextPerson: Shaker bro
   cardText: "\"Bob, Tommy\"\r\nYou see two huge guys appearing behind him cracking
     their knuckles.\r\n\"So what was that you said again?\""
   logText: 

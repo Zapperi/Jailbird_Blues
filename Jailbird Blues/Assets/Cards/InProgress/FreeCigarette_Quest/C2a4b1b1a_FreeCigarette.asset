@@ -29,7 +29,7 @@ MonoBehaviour:
   ambientDecrease: 0.8
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: 
+  cardTextPerson: Shaker bro
   cardText: '"That''s what I thought."'
   logText: 
   endCard: 0
