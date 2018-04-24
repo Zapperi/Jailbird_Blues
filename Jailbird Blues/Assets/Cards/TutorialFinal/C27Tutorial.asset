@@ -20,7 +20,7 @@ MonoBehaviour:
   storyPhase: 0
   backgroundImage: {fileID: 21300000, guid: 8378fa802b5596e4fbe764c349e9d44c, type: 3}
   foregroundImage: {fileID: 0}
-  foregroundImage2: {fileID: 21300000, guid: 35aefacc3f074a4478e9117aec8c5539, type: 3}
+  foregroundImage2: {fileID: 21300000, guid: 90641bf210c2a084dabf61316d1c9428, type: 3}
   foregroundImage3: {fileID: 0}
   foregroundImage4: {fileID: 0}
   bgMusic: {fileID: 0}
@@ -36,6 +36,7 @@ MonoBehaviour:
   timeCard: 0
   onTop: 0
   repeatable: 0
+  endOfGame: 0
   OptionsOn: 1
   Option1On: 1
   option1ReqSwitches: 
@@ -46,7 +47,7 @@ MonoBehaviour:
   option1GuardReputation: 0
   option1ObtainedSwitches: 
   option1RemovedSwitches: 
-  option1FollowCard: {fileID: 0}
+  option1FollowCard: {fileID: 11400000, guid: e74996c7617fb244f8681d079c572951, type: 2}
   Option2On: 1
   option2ReqSwitches: 
   option2text: 'Sit next to the Protein shakers '
@@ -56,7 +57,7 @@ MonoBehaviour:
   option2GuardReputation: 0
   option2ObtainedSwitches: 
   option2RemovedSwitches: 
-  option2FollowCard: {fileID: 0}
+  option2FollowCard: {fileID: 11400000, guid: 9e7773919426905468a5c542416e07d0, type: 2}
   Option3On: 1
   option3ReqSwitches: 
   option3text: 'Sit next to the Punks '
@@ -66,7 +67,7 @@ MonoBehaviour:
   option3GuardReputation: 0
   option3ObtainedSwitches: 
   option3RemovedSwitches: 
-  option3FollowCard: {fileID: 0}
+  option3FollowCard: {fileID: 11400000, guid: adbe2e32ffddd9440b5bbb95e17cbc67, type: 2}
   Option4On: 1
   option4ReqSwitches: 
   option4text: Sit with Freddie
@@ -76,7 +77,7 @@ MonoBehaviour:
   option4GuardReputation: 0
   option4ObtainedSwitches: 
   option4RemovedSwitches: 
-  option4FollowCard: {fileID: 0}
+  option4FollowCard: {fileID: 11400000, guid: 0b27b5bb6127eb2439587c6e4c5afb63, type: 2}
   Option5On: 0
   option5IrsReputation: 0
   option5PunkReputation: 0

@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: C23Tutorial
+  m_Name: C33Tutorial
   m_EditorClassIdentifier: 
   requiredSwitches: 
   RepIrs: 0
@@ -18,21 +18,22 @@ MonoBehaviour:
   RepGuard: 0
   timeOfDay: 0
   storyPhase: 0
-  backgroundImage: {fileID: 21300000, guid: 0664bbc4f2d5bda44b00461d394916dd, type: 3}
+  backgroundImage: {fileID: 21300000, guid: 214f46d9c96dad347aa99d8654cd4a4e, type: 3}
   foregroundImage: {fileID: 0}
-  foregroundImage2: {fileID: 0}
+  foregroundImage2: {fileID: 21300000, guid: fa972cdd51eb9d941bff3d886bc28bb7, type: 3}
   foregroundImage3: {fileID: 0}
   foregroundImage4: {fileID: 0}
-  bgMusic: {fileID: 8300000, guid: 267a97e21f8e84142bed948aad38eae8, type: 3}
+  bgMusic: {fileID: 0}
   bgAmbientAudio: {fileID: 0}
   musicDecrease: 0
   ambientDecrease: 0
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: Freddie Cooks
-  cardText: "\u201DThe I.R.S. are tax evaders and other white collar criminals. They
-    have a good foothold on the prison contraband business and they respect the invisible
-    hand of free-market the most.\u201D"
+  cardTextPerson: Guard
+  cardText: "\u201DAlmost twenty years and now he\u2019s finally out. Too bad Freddie
+    ain\u2019t going to survive in the outside world. It ain\u2019t like he remembers
+    it anymore. I\u2019m willing to bet twenty bucks that after four weeks he\u2019ll
+    be back here like nothing\u2019s changed.\u201D\r"
   logText: 
   endCard: 0
   timeCard: 0
@@ -87,7 +88,7 @@ MonoBehaviour:
   option5GuardReputation: 0
   option5ObtainedSwitches: 
   option5RemovedSwitches: 
-  option5FollowCard: {fileID: 11400000, guid: 0a57633bccdccb5448d5d781a19fc1a3, type: 2}
+  option5FollowCard: {fileID: 11400000, guid: f452baa65e9044f47b312fc086c4fe7a, type: 2}
   isTimeBasedCard: 0
   sfxPrewait: 0
   sfx: {fileID: 0}
