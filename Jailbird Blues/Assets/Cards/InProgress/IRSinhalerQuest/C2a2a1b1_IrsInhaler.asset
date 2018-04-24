@@ -25,13 +25,14 @@ MonoBehaviour:
   foregroundImage4: {fileID: 0}
   bgMusic: {fileID: 0}
   bgAmbientAudio: {fileID: 0}
-  musicDecrease: 0
-  ambientDecrease: 0
+  musicDecrease: 0.5
+  ambientDecrease: 0.5
   musicOff: 0
   ambientOff: 0
   cardTextPerson: 
-  cardText: "A punk guy gets you in an armlock and other guy punches you in the stomach.\r\n\"You
-    think that's funny? Helping some lousy I.R.S. guy and spoiling our funtime?\""
+  cardText: "A punk guy gets you in an armlock and other guy punches you in the stomach.\r\n\"Threatening
+    us punks? Who do you think you are?!\"\r\nThey throw you on the floor and kick
+    you."
   logText: 
   endCard: 0
   timeCard: 0

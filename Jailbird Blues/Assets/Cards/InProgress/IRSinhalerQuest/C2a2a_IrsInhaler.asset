@@ -25,8 +25,8 @@ MonoBehaviour:
   foregroundImage4: {fileID: 0}
   bgMusic: {fileID: 8300000, guid: 75a6ead9f3b0c244ab4f4bd518a4f668, type: 3}
   bgAmbientAudio: {fileID: 0}
-  musicDecrease: 0
-  ambientDecrease: 0
+  musicDecrease: 0.5
+  ambientDecrease: 0.5
   musicOff: 0
   ambientOff: 0
   cardTextPerson: 
@@ -93,7 +93,7 @@ MonoBehaviour:
   sfxFadeOutAt: 0
   sfxFadeOutSpeed: 0
   sfxAfterWait: 0
-  ppsHasFadeIn: 0
+  ppsHasFadeIn: 1
   ppsFadeMode: 0
   blackScreenStart: 0
   blackScreenTime: 0
