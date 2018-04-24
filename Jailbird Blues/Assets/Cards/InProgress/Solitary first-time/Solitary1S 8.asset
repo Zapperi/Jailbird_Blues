@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: Solitary1Y 6
+  m_Name: Solitary1S 8
   m_EditorClassIdentifier: 
   requiredSwitches: 
   RepIrs: 0
@@ -30,12 +30,11 @@ MonoBehaviour:
   musicOff: 0
   ambientOff: 0
   cardTextPerson: 
-  cardText: "You hear the angry stomps of iron reinforced boots against\r\nconcrete
-    floor followed by furious insults directed towards the inmates.\r\nSo solitary
-    isn't 100% soundproof after all."
+  cardText: "You're not flexible enough to chew your toenails,\r\nand it's probably
+    for the best."
   logText: 
   endCard: 0
-  timeCard: 0
+  timeCard: 1
   onTop: 0
   repeatable: 0
   endOfGame: 0
@@ -69,7 +68,7 @@ MonoBehaviour:
   option3GuardReputation: 0
   option3ObtainedSwitches: 
   option3RemovedSwitches: 
-  option3FollowCard: {fileID: 11400000, guid: 971756cb6f38d0f41aaff7767a255d3d, type: 2}
+  option3FollowCard: {fileID: 11400000, guid: e19ef0b794da0964d98d34536c0f0c99, type: 2}
   Option4On: 0
   option4ReqSwitches: 
   option4text: Do something.
@@ -79,7 +78,7 @@ MonoBehaviour:
   option4GuardReputation: 0
   option4ObtainedSwitches: 
   option4RemovedSwitches: 
-  option4FollowCard: {fileID: 11400000, guid: d9c7431a608f9814fbbdbe771153958c, type: 2}
+  option4FollowCard: {fileID: 0}
   Option5On: 1
   option5IrsReputation: 0
   option5PunkReputation: 0
@@ -87,10 +86,10 @@ MonoBehaviour:
   option5GuardReputation: 0
   option5ObtainedSwitches: 
   option5RemovedSwitches: 
-  option5FollowCard: {fileID: 11400000, guid: 971756cb6f38d0f41aaff7767a255d3d, type: 2}
+  option5FollowCard: {fileID: 11400000, guid: b59bb7c16b0a91a47910d814930400cc, type: 2}
   isTimeBasedCard: 0
   sfxPrewait: 0
-  sfx: {fileID: 8300000, guid: cd0d6cd2d4deed344af83a8378cc00ad, type: 3}
+  sfx: {fileID: 0}
   sfxHasFadeOut: 0
   sfxFadeOutAt: 0
   sfxFadeOutSpeed: 0

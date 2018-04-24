@@ -64,7 +64,7 @@ MonoBehaviour:
   option3IrsReputation: 0
   option3PunkReputation: 0
   option3ShakeReputation: 0
-  option3GuardReputation: 0
+  option3GuardReputation: -1
   option3ObtainedSwitches: 
   option3RemovedSwitches: 
   option3FollowCard: {fileID: 11400000, guid: 59e5bbc66a3fab447898a08058344827, type: 2}

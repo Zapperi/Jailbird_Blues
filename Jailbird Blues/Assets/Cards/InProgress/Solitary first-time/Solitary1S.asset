@@ -30,7 +30,7 @@ MonoBehaviour:
   musicOff: 0
   ambientOff: 0
   cardTextPerson: 
-  cardText: "You consider the classic prison joke of painting the walls\r\nwith your
+  cardText: "You consider the classic prison joke of painting the walls\r with your
     feces, but you're not really there yet."
   logText: 
   endCard: 0
@@ -78,7 +78,7 @@ MonoBehaviour:
   option4GuardReputation: 0
   option4ObtainedSwitches: 
   option4RemovedSwitches: 
-  option4FollowCard: {fileID: 0}
+  option4FollowCard: {fileID: 11400000, guid: 37f9890f6a36290499b0080c109d7a8d, type: 2}
   Option5On: 1
   option5IrsReputation: 0
   option5PunkReputation: 0

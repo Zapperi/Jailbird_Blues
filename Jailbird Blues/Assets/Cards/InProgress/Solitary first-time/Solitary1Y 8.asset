@@ -30,11 +30,11 @@ MonoBehaviour:
   musicOff: 0
   ambientOff: 0
   cardTextPerson: 
-  cardText: "In solitary no one can hear you scream.\r\nAnd even if they did, what
-    could they do?"
+  cardText: "You moron, now the guards figured out who it was. They definitely\r\naren't
+    going to let you out of here anytime soon."
   logText: 
   endCard: 0
-  timeCard: 0
+  timeCard: 1
   onTop: 0
   repeatable: 0
   endOfGame: 0
