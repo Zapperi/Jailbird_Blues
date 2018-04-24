@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: C2a2_FreeCigarette
+  m_Name: C2a3.2_FreeCigarette
   m_EditorClassIdentifier: 
   requiredSwitches: 
   RepIrs: 0
@@ -18,9 +18,9 @@ MonoBehaviour:
   RepGuard: 0
   timeOfDay: 0
   storyPhase: 0
-  backgroundImage: {fileID: 21300000, guid: 013584fb9b3867548a06364b64007f2a, type: 3}
+  backgroundImage: {fileID: 21300000, guid: e34e2dc729b5acd42b383971c725e4f1, type: 3}
   foregroundImage: {fileID: 0}
-  foregroundImage2: {fileID: 21300000, guid: ec7f3a9152691a345b794c0a29ce19b9, type: 3}
+  foregroundImage2: {fileID: 0}
   foregroundImage3: {fileID: 0}
   foregroundImage4: {fileID: 0}
   bgMusic: {fileID: 0}
@@ -29,8 +29,9 @@ MonoBehaviour:
   ambientDecrease: 0.8
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: You
-  cardText: '"Wait, what?! I thought the cigarette was free."'
+  cardTextPerson: Mr.Shady
+  cardText: '"You see those protein shaker guys? Well, they owe me money and I need
+    you to go deal with it."'
   logText: 
   endCard: 0
   timeCard: 0
@@ -85,7 +86,7 @@ MonoBehaviour:
   option5GuardReputation: 0
   option5ObtainedSwitches: 
   option5RemovedSwitches: 
-  option5FollowCard: {fileID: 11400000, guid: 67c87ee52ca34d54f83d4371a804d06e, type: 2}
+  option5FollowCard: {fileID: 11400000, guid: b81d39e0cf6ab67418d423c2ff6ea2da, type: 2}
   isTimeBasedCard: 0
   sfxPrewait: 0
   sfx: {fileID: 0}
