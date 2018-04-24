@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: CellShivF
+  m_Name: CellShiv04a
   m_EditorClassIdentifier: 
   requiredSwitches: 
   RepIrs: 0
@@ -24,20 +24,16 @@ MonoBehaviour:
   foregroundImage3: {fileID: 0}
   foregroundImage4: {fileID: 0}
   bgMusic: {fileID: 0}
-  bgAmbientAudio: {fileID: 0}
-  musicDecrease: 0
-  ambientDecrease: 0
+  bgAmbientAudio: {fileID: 8300000, guid: 13d38308477f3ee4f81aaf468c6b972a, type: 3}
+  musicDecrease: 0.5
+  ambientDecrease: 0.7
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: Punk
-  cardText: '"Screw you pigs, don''t you have better things to do, like rolling in
-    mud? Oink oink oink..."
-
-
-    The guards walk away'
+  cardTextPerson: 
+  cardText: continue...
   logText: 
-  endCard: 0
-  timeCard: 0
+  endCard: 1
+  timeCard: 1
   onTop: 0
   repeatable: 0
   endOfGame: 0
@@ -89,10 +85,10 @@ MonoBehaviour:
   option5GuardReputation: 0
   option5ObtainedSwitches: 
   option5RemovedSwitches: 
-  option5FollowCard: {fileID: 11400000, guid: ef6905e78805c0948ba0f56fcb96aa0a, type: 2}
+  option5FollowCard: {fileID: 0}
   isTimeBasedCard: 0
   sfxPrewait: 0
-  sfx: {fileID: 8300000, guid: e09ebb996e54e50438706d513510c9da, type: 3}
+  sfx: {fileID: 0}
   sfxHasFadeOut: 0
   sfxFadeOutAt: 0
   sfxFadeOutSpeed: 0
@@ -103,5 +99,5 @@ MonoBehaviour:
   blackScreenTime: 0
   ppsFadeInSpeed: 0
   ppsShowCard: 0
-  ppsHasFadeOut: 0
+  ppsHasFadeOut: 1
   fadeOutSpeed: 0

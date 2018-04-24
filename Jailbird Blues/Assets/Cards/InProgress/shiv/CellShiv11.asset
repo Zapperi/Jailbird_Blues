@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: CellShiv 1
+  m_Name: CellShiv11
   m_EditorClassIdentifier: 
   requiredSwitches: 
   RepIrs: 0
@@ -23,15 +23,15 @@ MonoBehaviour:
   foregroundImage2: {fileID: 0}
   foregroundImage3: {fileID: 0}
   foregroundImage4: {fileID: 0}
-  bgMusic: {fileID: 8300000, guid: 7eea11dbcecd56a43ade0ca1a2990976, type: 3}
+  bgMusic: {fileID: 0}
   bgAmbientAudio: {fileID: 0}
-  musicDecrease: 0
-  ambientDecrease: 0
+  musicDecrease: 0.5
+  ambientDecrease: 0.7
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: 
-  cardText: "After a little while you hear someone whisper\r\n\"Yo dude you gotta
-    sharpen that shiv more silently, someone may hear you\"\r"
+  cardTextPerson: Guard
+  cardText: '"Just what i thought, a shiv under the matress. We''ll continue this
+    in the morning but you fellows are in big trouble"'
   logText: 
   endCard: 0
   timeCard: 0
@@ -51,17 +51,17 @@ MonoBehaviour:
   option1FollowCard: {fileID: 0}
   Option2On: 0
   option2ReqSwitches: 
-  option2text: Call the guard
+  option2text: 
   option2IrsReputation: 0
   option2PunkReputation: 0
   option2ShakeReputation: 0
   option2GuardReputation: 0
   option2ObtainedSwitches: 
   option2RemovedSwitches: 
-  option2FollowCard: {fileID: 11400000, guid: 4c33bdc1b92eebd4dbd374ce2889ee2a, type: 2}
+  option2FollowCard: {fileID: 0}
   Option3On: 0
   option3ReqSwitches: 
-  option3text: Ignore it
+  option3text: 
   option3IrsReputation: 0
   option3PunkReputation: 0
   option3ShakeReputation: 0
@@ -86,7 +86,7 @@ MonoBehaviour:
   option5GuardReputation: 0
   option5ObtainedSwitches: 
   option5RemovedSwitches: 
-  option5FollowCard: {fileID: 11400000, guid: 1b328c627054b8b4bac1701b17d57bbc, type: 2}
+  option5FollowCard: {fileID: 11400000, guid: de85ee039539ee147a08f3ab01450ccc, type: 2}
   isTimeBasedCard: 0
   sfxPrewait: 0
   sfx: {fileID: 0}
