@@ -26,8 +26,8 @@ MonoBehaviour:
   bgMusic: {fileID: 0}
   bgAmbientAudio: {fileID: 0}
   musicDecrease: 0
-  ambientDecrease: 0
-  musicOff: 0
+  ambientDecrease: 0.5
+  musicOff: 1
   ambientOff: 0
   cardTextPerson: 
   cardText: He walks away.

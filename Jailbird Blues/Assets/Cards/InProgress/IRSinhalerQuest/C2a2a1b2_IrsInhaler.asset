@@ -25,8 +25,8 @@ MonoBehaviour:
   foregroundImage4: {fileID: 0}
   bgMusic: {fileID: 0}
   bgAmbientAudio: {fileID: 0}
-  musicDecrease: 0
-  ambientDecrease: 0
+  musicDecrease: 0.5
+  ambientDecrease: 0.5
   musicOff: 0
   ambientOff: 0
   cardTextPerson: 
@@ -80,8 +80,8 @@ MonoBehaviour:
   option4RemovedSwitches: 
   option4FollowCard: {fileID: 0}
   Option5On: 1
-  option5IrsReputation: -25
-  option5PunkReputation: 0
+  option5IrsReputation: 0
+  option5PunkReputation: -25
   option5ShakeReputation: 0
   option5GuardReputation: -5
   option5ObtainedSwitches: 

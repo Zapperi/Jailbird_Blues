@@ -27,11 +27,11 @@ MonoBehaviour:
   bgAmbientAudio: {fileID: 0}
   musicDecrease: 0
   ambientDecrease: 0
-  musicOff: 0
-  ambientOff: 0
+  musicOff: 1
+  ambientOff: 1
   cardTextPerson: 
-  cardText: "You spend your morning sitting in the library alone, except for the one
-    \xC4guard\xD6 who is standing by the door."
+  cardText: "You sit in the library alone, except for the one \xC4guard\xD6 who is
+    standing by the door."
   logText: 
   endCard: 0
   timeCard: 0
@@ -94,7 +94,7 @@ MonoBehaviour:
   sfxFadeOutAt: 0
   sfxFadeOutSpeed: 0
   sfxAfterWait: 0
-  ppsHasFadeIn: 0
+  ppsHasFadeIn: 1
   ppsFadeMode: 0
   blackScreenStart: 0
   blackScreenTime: 0
