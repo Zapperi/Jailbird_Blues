@@ -30,8 +30,8 @@ MonoBehaviour:
   musicOff: 0
   ambientOff: 0
   cardTextPerson: 
-  cardText: The other inmates move towards their next scheduled activity, while a
-    guard stops you and hands over a mop and a bucket to you.
+  cardText: "You are moving with the inmates towards your next scheduled \xC4recreational
+    activity\xD6, as a guard stops you and hands over a mop and a bucket to you."
   logText: 
   endCard: 0
   timeCard: 0
