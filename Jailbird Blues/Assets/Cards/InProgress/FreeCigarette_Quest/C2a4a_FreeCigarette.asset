@@ -23,10 +23,10 @@ MonoBehaviour:
   foregroundImage2: {fileID: 0}
   foregroundImage3: {fileID: 0}
   foregroundImage4: {fileID: 0}
-  bgMusic: {fileID: 0}
+  bgMusic: {fileID: 8300000, guid: 45726ce628770f44cba823f4c1bdbbb0, type: 3}
   bgAmbientAudio: {fileID: 0}
-  musicDecrease: 0
-  ambientDecrease: 0
+  musicDecrease: 0.2
+  ambientDecrease: 0.8
   musicOff: 0
   ambientOff: 0
   cardTextPerson: 
@@ -93,7 +93,7 @@ MonoBehaviour:
   sfxFadeOutAt: 0
   sfxFadeOutSpeed: 0
   sfxAfterWait: 0
-  ppsHasFadeIn: 0
+  ppsHasFadeIn: 1
   ppsFadeMode: 0
   blackScreenStart: 0
   blackScreenTime: 0
