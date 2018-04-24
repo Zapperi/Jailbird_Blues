@@ -25,7 +25,7 @@ MonoBehaviour:
   foregroundImage4: {fileID: 0}
   bgMusic: {fileID: 0}
   bgAmbientAudio: {fileID: 0}
-  musicDecrease: 0
+  musicDecrease: 1
   ambientDecrease: 0
   musicOff: 0
   ambientOff: 0
@@ -34,7 +34,9 @@ MonoBehaviour:
   logText: 
   endCard: 0
   timeCard: 0
+  onTop: 0
   repeatable: 0
+  endOfGame: 0
   OptionsOn: 0
   Option1On: 0
   option1ReqSwitches: 
@@ -86,7 +88,7 @@ MonoBehaviour:
   option5FollowCard: {fileID: 11400000, guid: 87d845638f0dc044daa9e814c5121efc, type: 2}
   isTimeBasedCard: 0
   sfxPrewait: 0
-  sfx: {fileID: 0}
+  sfx: {fileID: 8300000, guid: 8b4f0705f4e7c224ead66b7d43d12132, type: 3}
   sfxHasFadeOut: 0
   sfxFadeOutAt: 0
   sfxFadeOutSpeed: 0

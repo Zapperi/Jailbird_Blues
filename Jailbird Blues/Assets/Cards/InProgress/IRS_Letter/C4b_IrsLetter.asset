@@ -25,17 +25,19 @@ MonoBehaviour:
   foregroundImage4: {fileID: 0}
   bgMusic: {fileID: 0}
   bgAmbientAudio: {fileID: 0}
-  musicDecrease: 0
+  musicDecrease: 0.7
   ambientDecrease: 0
   musicOff: 0
   ambientOff: 0
   cardTextPerson: I.R.S. member
-  cardText: '"I like your spirit but everyone starts from the bottom, unless you are
-    Donald Trump or something"'
+  cardText: '"I like your spirit but everyone starts from the bottom, unless you have
+    a rich dad or something."'
   logText: 
   endCard: 0
   timeCard: 0
+  onTop: 0
   repeatable: 0
+  endOfGame: 0
   OptionsOn: 0
   Option1On: 0
   option1ReqSwitches: 

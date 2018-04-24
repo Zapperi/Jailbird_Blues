@@ -24,13 +24,13 @@ MonoBehaviour:
   foregroundImage3: {fileID: 0}
   foregroundImage4: {fileID: 0}
   bgMusic: {fileID: 0}
-  bgAmbientAudio: {fileID: 0}
+  bgAmbientAudio: {fileID: 8300000, guid: 13d38308477f3ee4f81aaf468c6b972a, type: 3}
   musicDecrease: 0
-  ambientDecrease: 0
-  musicOff: 0
+  ambientDecrease: 0.5
+  musicOff: 1
   ambientOff: 0
   cardTextPerson: 
-  cardText: "You are moving with the inmates towards your next scheduled \xC4recreational
+  cardText: "You are moving along with the inmates towards your next scheduled \xC4recreational
     activity\xD6, as a guard stops you and hands over a mop and a bucket to you."
   logText: 
   endCard: 0
@@ -94,8 +94,8 @@ MonoBehaviour:
   sfxFadeOutAt: 0
   sfxFadeOutSpeed: 0
   sfxAfterWait: 0
-  ppsHasFadeIn: 0
-  ppsFadeMode: 0
+  ppsHasFadeIn: 1
+  ppsFadeMode: 1
   blackScreenStart: 0
   blackScreenTime: 0
   ppsFadeInSpeed: 0

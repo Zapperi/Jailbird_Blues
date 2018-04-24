@@ -26,14 +26,14 @@ MonoBehaviour:
   bgMusic: {fileID: 0}
   bgAmbientAudio: {fileID: 0}
   musicDecrease: 0
-  ambientDecrease: 0
+  ambientDecrease: 0.5
   musicOff: 0
   ambientOff: 0
   cardTextPerson: 
   cardText: You hand over the mop and the bucket and scurry away.
   logText: 
   endCard: 1
-  timeCard: 0
+  timeCard: 1
   onTop: 0
   repeatable: 0
   endOfGame: 0
@@ -99,5 +99,5 @@ MonoBehaviour:
   blackScreenTime: 0
   ppsFadeInSpeed: 0
   ppsShowCard: 0
-  ppsHasFadeOut: 0
+  ppsHasFadeOut: 1
   fadeOutSpeed: 0
