@@ -376,7 +376,7 @@ Prefab:
         type: 2}
       propertyPath: currentCard
       value: 
-      objectReference: {fileID: 11400000, guid: 3ff04b9a82bf5a4459c9f5ed2bfa1afe,
+      objectReference: {fileID: 11400000, guid: 6e959b5c89a96b04fa84f0c14dad0359,
         type: 2}
     - target: {fileID: 1014170443296230, guid: df67972d0e99a6d428df8e1f930ac1a0, type: 2}
       propertyPath: m_IsActive
@@ -587,7 +587,7 @@ Prefab:
         type: 2}
       propertyPath: currentCard
       value: 
-      objectReference: {fileID: 11400000, guid: 3ff04b9a82bf5a4459c9f5ed2bfa1afe,
+      objectReference: {fileID: 11400000, guid: 6e959b5c89a96b04fa84f0c14dad0359,
         type: 2}
     - target: {fileID: 114743166947194950, guid: a5ca0da45ae9cf94f8ba95b70b239f82,
         type: 2}

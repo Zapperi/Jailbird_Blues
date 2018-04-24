@@ -24,9 +24,9 @@ MonoBehaviour:
   foregroundImage3: {fileID: 0}
   foregroundImage4: {fileID: 0}
   bgMusic: {fileID: 0}
-  bgAmbientAudio: {fileID: 0}
+  bgAmbientAudio: {fileID: 8300000, guid: 83fa0b23be8600d41b0cc07ed7f48d21, type: 3}
   musicDecrease: 0
-  ambientDecrease: 0
+  ambientDecrease: 0.5
   musicOff: 0
   ambientOff: 0
   cardTextPerson: 

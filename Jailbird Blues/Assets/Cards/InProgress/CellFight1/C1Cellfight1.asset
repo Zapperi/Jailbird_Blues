@@ -24,10 +24,10 @@ MonoBehaviour:
   foregroundImage3: {fileID: 0}
   foregroundImage4: {fileID: 0}
   bgMusic: {fileID: 0}
-  bgAmbientAudio: {fileID: 0}
+  bgAmbientAudio: {fileID: 8300000, guid: 13d38308477f3ee4f81aaf468c6b972a, type: 3}
   musicDecrease: 0
-  ambientDecrease: 0
-  musicOff: 0
+  ambientDecrease: 0.7
+  musicOff: 1
   ambientOff: 0
   cardTextPerson: 
   cardText: You are laying in bed as you hear loud arguing in the next cell.
@@ -93,7 +93,7 @@ MonoBehaviour:
   sfxFadeOutAt: 0
   sfxFadeOutSpeed: 0
   sfxAfterWait: 0
-  ppsHasFadeIn: 0
+  ppsHasFadeIn: 1
   ppsFadeMode: 0
   blackScreenStart: 0
   blackScreenTime: 0

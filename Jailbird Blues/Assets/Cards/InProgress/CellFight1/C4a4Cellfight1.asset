@@ -28,7 +28,7 @@ MonoBehaviour:
   musicDecrease: 0
   ambientDecrease: 0
   musicOff: 0
-  ambientOff: 0
+  ambientOff: 1
   cardTextPerson: Guard
   cardText: '"You guys get to spend the night in solitary."'
   logText: 
