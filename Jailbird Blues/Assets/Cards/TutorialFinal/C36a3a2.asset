@@ -30,8 +30,7 @@ MonoBehaviour:
   musicOff: 0
   ambientOff: 0
   cardTextPerson: Kowalski
-  cardText: "\u201DIf you didn\u2019t have anything else with you, then I guess this
-    is just mine. I\u2019ll make it clear to you that this is my cell and you\u2019re
+  cardText: "\u201DI\u2019ll make it clear to you that this is my cell and you\u2019re
     the tourist. I expect payment everyday, or else you\u2019re gonna feel much worse
     than right now. Good night.\u201D\r"
   logText: 
@@ -88,7 +87,7 @@ MonoBehaviour:
   option5GuardReputation: 0
   option5ObtainedSwitches: 
   option5RemovedSwitches: 
-  option5FollowCard: {fileID: 11400000, guid: 8f75cfa4e54955f4a9ea8891e9dda260, type: 2}
+  option5FollowCard: {fileID: 11400000, guid: a9342c9cd73286b469d79b81bf42fff1, type: 2}
   isTimeBasedCard: 0
   sfxPrewait: 0
   sfx: {fileID: 0}

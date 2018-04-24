@@ -20,8 +20,8 @@ MonoBehaviour:
   storyPhase: 0
   backgroundImage: {fileID: 21300000, guid: 45101871e12fb8544924d61ab153420b, type: 3}
   foregroundImage: {fileID: 0}
-  foregroundImage2: {fileID: 0}
-  foregroundImage3: {fileID: 21300000, guid: c710ce950766f9d49b289d95c1942b95, type: 3}
+  foregroundImage2: {fileID: 21300000, guid: c710ce950766f9d49b289d95c1942b95, type: 3}
+  foregroundImage3: {fileID: 0}
   foregroundImage4: {fileID: 0}
   bgMusic: {fileID: 0}
   bgAmbientAudio: {fileID: 0}
@@ -30,8 +30,8 @@ MonoBehaviour:
   musicOff: 0
   ambientOff: 0
   cardTextPerson: 
-  cardText: "Your last image of the day is Kowalski gobbling down the brownie and
-    you pass out from the pain.\r"
+  cardText: "Your last image of the day is Kowalski marveling his new shoes and you
+    pass out from the pain.\r"
   logText: 
   endCard: 1
   timeCard: 1
