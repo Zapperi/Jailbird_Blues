@@ -34,8 +34,8 @@ MonoBehaviour:
     saved up a few packs for a rainy day.\"\nYou pick up the chess board. \r\nRest
     of the yard time passes peacefully."
   logText: 
-  endCard: 0
-  timeCard: 0
+  endCard: 1
+  timeCard: 1
   onTop: 0
   repeatable: 0
   endOfGame: 0
@@ -101,5 +101,5 @@ MonoBehaviour:
   blackScreenTime: 0
   ppsFadeInSpeed: 0
   ppsShowCard: 0
-  ppsHasFadeOut: 0
+  ppsHasFadeOut: 1
   fadeOutSpeed: 0
