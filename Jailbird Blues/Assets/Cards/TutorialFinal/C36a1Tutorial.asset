@@ -31,7 +31,7 @@ MonoBehaviour:
   ambientOff: 0
   cardTextPerson: 
   cardText: "Kowalski tries your shoes on himself and seems to take liking in them.\r"
-  logText: 
+  logText: Kowalski took my shoes..
   endCard: 0
   timeCard: 0
   onTop: 0

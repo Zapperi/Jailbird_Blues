@@ -96,7 +96,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1017277343441152
 GameObject:
   m_ObjectHideFlags: 1
@@ -529,7 +529,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1221701851078170
 GameObject:
   m_ObjectHideFlags: 1
@@ -2220,7 +2220,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Go to him
+  m_Text: 
 --- !u!114 &114125421100425116
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2294,7 +2294,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 07b92b6a3c3e1f94a8a34c9ffc9ac547, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2923,7 +2923,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 1893ac2562840144f95617afa0eb2ff1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 214f46d9c96dad347aa99d8654cd4a4e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3252,7 +3252,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Ignore him
+  m_Text: 
 --- !u!114 &114336811850845302
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3567,7 +3567,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   overLayingImage: {fileID: 0}
-  currentCard: {fileID: 11400000, guid: dc00b4999bf695a468017450197d9967, type: 2}
+  currentCard: {fileID: 11400000, guid: cb2651b7189735b4b81de470bbcc6e19, type: 2}
   cardText: {fileID: 114480357465699000}
   cardPerson: {fileID: 114191142861193218}
   button1text: {fileID: 114139510603780042}
@@ -4037,11 +4037,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '"Psst"
+  m_Text: 'A guard leads you through the prison hallways while the barred doors close
+    behind you.
 
-    You look around and you see a punk guy waving at you.
-
-    "Hey you, come here"'
+    The echoes fade like your hopes getting out this hellhole.'
 --- !u!114 &114494369917948756
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4542,7 +4541,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: e89585d9fa2bf93499ccc133d58a0f4c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

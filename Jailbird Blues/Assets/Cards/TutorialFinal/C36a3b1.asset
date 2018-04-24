@@ -29,13 +29,13 @@ MonoBehaviour:
   ambientDecrease: 0
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: Kowalski
-  cardText: "\u201DSmart move boy. I\u2019ll just make it clear to you that this is
-    my cell and you\u2019re the tourist. I expect payment everyday so you better not
-    make me angry. Good night.\u201D"
+  cardTextPerson: 
+  cardText: "Kowalski punches you hard in the liver. The pain hits you like thousand
+    supernovas and you\u2019re out of breath. Kowalski searches you and finds the
+    brownie.\r"
   logText: 
-  endCard: 1
-  timeCard: 1
+  endCard: 0
+  timeCard: 0
   onTop: 0
   repeatable: 0
   endOfGame: 0
@@ -86,8 +86,8 @@ MonoBehaviour:
   option5ShakeReputation: 0
   option5GuardReputation: 0
   option5ObtainedSwitches: 
-  option5RemovedSwitches: 
-  option5FollowCard: {fileID: 0}
+  option5RemovedSwitches: 02000000
+  option5FollowCard: {fileID: 11400000, guid: 10f547596d296784ab525ca99b59cc55, type: 2}
   isTimeBasedCard: 0
   sfxPrewait: 0
   sfx: {fileID: 0}
@@ -95,11 +95,11 @@ MonoBehaviour:
   sfxFadeOutAt: 0
   sfxFadeOutSpeed: 0
   sfxAfterWait: 0
-  ppsHasFadeIn: 0
+  ppsHasFadeIn: 1
   ppsFadeMode: 0
   blackScreenStart: 0
   blackScreenTime: 0
   ppsFadeInSpeed: 0
   ppsShowCard: 0
-  ppsHasFadeOut: 1
+  ppsHasFadeOut: 0
   fadeOutSpeed: 0

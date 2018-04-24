@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: C34Tutorial
+  m_Name: C36a3b2
   m_EditorClassIdentifier: 
   requiredSwitches: 
   RepIrs: 0
@@ -19,9 +19,9 @@ MonoBehaviour:
   timeOfDay: 0
   storyPhase: 0
   backgroundImage: {fileID: 21300000, guid: 45101871e12fb8544924d61ab153420b, type: 3}
-  foregroundImage: {fileID: 21300000, guid: c710ce950766f9d49b289d95c1942b95, type: 3}
+  foregroundImage: {fileID: 0}
   foregroundImage2: {fileID: 0}
-  foregroundImage3: {fileID: 0}
+  foregroundImage3: {fileID: 21300000, guid: c710ce950766f9d49b289d95c1942b95, type: 3}
   foregroundImage4: {fileID: 0}
   bgMusic: {fileID: 0}
   bgAmbientAudio: {fileID: 0}
@@ -29,10 +29,11 @@ MonoBehaviour:
   ambientDecrease: 0
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: 
-  cardText: "The guard leaves you in your cell and locks the door. The figure of Cyril
-    Kowalski rises from your bunk and measures you with his gaze. He stares right
-    in your eyes.\r"
+  cardTextPerson: Kowalski
+  cardText: "\u201DIf you didn\u2019t have anything else with you, then I guess this
+    is just mine. I\u2019ll make it clear to you that this is my cell and you\u2019re
+    the tourist. I expect payment everyday, or else you\u2019re gonna feel much worse
+    than right now. Good night.\u201D\r"
   logText: 
   endCard: 0
   timeCard: 0
@@ -87,10 +88,10 @@ MonoBehaviour:
   option5GuardReputation: 0
   option5ObtainedSwitches: 
   option5RemovedSwitches: 
-  option5FollowCard: {fileID: 11400000, guid: ab8206c84aa11d94389cd19e95e80707, type: 2}
+  option5FollowCard: {fileID: 11400000, guid: 8f75cfa4e54955f4a9ea8891e9dda260, type: 2}
   isTimeBasedCard: 0
   sfxPrewait: 0
-  sfx: {fileID: 8300000, guid: cb90a6940756f8c44aeabd70aed4a2d0, type: 3}
+  sfx: {fileID: 0}
   sfxHasFadeOut: 0
   sfxFadeOutAt: 0
   sfxFadeOutSpeed: 0
