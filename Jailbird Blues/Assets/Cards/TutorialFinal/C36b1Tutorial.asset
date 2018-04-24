@@ -32,7 +32,7 @@ MonoBehaviour:
   cardTextPerson: 
   cardText: "Kowalski punches you hard in the liver. The pain hits you like thousand
     supernovas and you\u2019re out of breath.\nHe takes your shoes."
-  logText: 
+  logText: Kowalski punched me and took my shoes.
   endCard: 0
   timeCard: 0
   onTop: 0

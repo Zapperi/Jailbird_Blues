@@ -14,7 +14,7 @@ MonoBehaviour:
   requiredSwitches: 
   RepIrs: 0
   RepPunks: 0
-  RepShake: 20
+  RepShake: 0
   RepGuard: 0
   timeOfDay: 1
   storyPhase: 0
@@ -87,7 +87,7 @@ MonoBehaviour:
   option5GuardReputation: 0
   option5ObtainedSwitches: 
   option5RemovedSwitches: 
-  option5FollowCard: {fileID: 11400000, guid: 38d766bf217924447a055438a831e293, type: 2}
+  option5FollowCard: {fileID: 11400000, guid: 1d4c95e2e8c6fa344835e1f1755025c8, type: 2}
   isTimeBasedCard: 0
   sfxPrewait: 0
   sfx: {fileID: 0}

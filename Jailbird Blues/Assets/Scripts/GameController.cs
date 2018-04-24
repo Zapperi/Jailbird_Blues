@@ -17,7 +17,7 @@ public class GameController : MonoBehaviour {
 	public int day;                                                                 //counter for days passed in game
     public int cigaretteCount;
 
-    private int scheduleSize = 4;                                                   //integer for schedule size, incase we need to expand it
+    private int scheduleSize = 3;                                                   //integer for schedule size, incase we need to expand it
     public int schedule;                                                            //integer switch for the daily activities
 	public Text timeOfDayText;
 	private string scheduleName;

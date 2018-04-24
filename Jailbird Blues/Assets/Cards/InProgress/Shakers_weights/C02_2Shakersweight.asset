@@ -30,7 +30,7 @@ MonoBehaviour:
   musicOff: 0
   ambientOff: 0
   cardTextPerson: Shaker goon
-  cardText: '"Hey little bro, how''s it going?"'
+  cardText: continue...
   logText: 
   endCard: 1
   timeCard: 1

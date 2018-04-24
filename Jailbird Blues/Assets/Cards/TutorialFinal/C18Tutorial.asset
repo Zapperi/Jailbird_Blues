@@ -36,14 +36,15 @@ MonoBehaviour:
   timeCard: 0
   onTop: 0
   repeatable: 0
+  endOfGame: 0
   OptionsOn: 1
   Option1On: 1
   option1ReqSwitches: 
   option1text: Intervene
-  option1IrsReputation: 0
-  option1PunkReputation: 0
-  option1ShakeReputation: 0
-  option1GuardReputation: 0
+  option1IrsReputation: 1
+  option1PunkReputation: 1
+  option1ShakeReputation: 1
+  option1GuardReputation: -1
   option1ObtainedSwitches: 
   option1RemovedSwitches: 
   option1FollowCard: {fileID: 11400000, guid: d37ec3d9849bd534d87da0c81e437c7a, type: 2}
@@ -53,7 +54,7 @@ MonoBehaviour:
   option2IrsReputation: 0
   option2PunkReputation: 0
   option2ShakeReputation: 0
-  option2GuardReputation: 0
+  option2GuardReputation: 1
   option2ObtainedSwitches: 
   option2RemovedSwitches: 
   option2FollowCard: {fileID: 11400000, guid: b9e5ec16c1abfa646b92549df90cf737, type: 2}
@@ -61,9 +62,9 @@ MonoBehaviour:
   option3ReqSwitches: 
   option3text: Call the guard
   option3IrsReputation: 0
-  option3PunkReputation: 0
+  option3PunkReputation: -1
   option3ShakeReputation: 0
-  option3GuardReputation: 0
+  option3GuardReputation: 1
   option3ObtainedSwitches: 
   option3RemovedSwitches: 
   option3FollowCard: {fileID: 11400000, guid: 5e21a6a087470064e9051e7538edad87, type: 2}
