@@ -21,7 +21,7 @@ MonoBehaviour:
   backgroundImage: {fileID: 21300000, guid: 7c5e619a5c03cc943a4b68321a14beb1, type: 3}
   foregroundImage: {fileID: 0}
   foregroundImage2: {fileID: 0}
-  foregroundImage3: {fileID: 0}
+  foregroundImage3: {fileID: 21300000, guid: 3242392f481b5424893e956bd29406a1, type: 3}
   foregroundImage4: {fileID: 0}
   bgMusic: {fileID: 0}
   bgAmbientAudio: {fileID: 0}
@@ -30,10 +30,10 @@ MonoBehaviour:
   musicOff: 0
   ambientOff: 0
   cardTextPerson: William
-  cardText: "I used to be a pianist in a small jazz club in New Orleans. One evening
-    after the show, as i was closing up the club, someone came runing past me\r\nand
-    pushed me over. Two policeman came runing after him and stopped where I was laying.
-    \"Got ya punk\" they said while they were puting me on handcuffs.\r"
+  cardText: "\"I used to be a pianist in a small jazz club in New Orleans.\r One evening
+    after the show, as I was closing up the club,\r someone came rushing past me and
+    pushed me over. Two policemen\r came running after him and stopped where I was
+    laying.\""
   logText: 
   endCard: 0
   timeCard: 0

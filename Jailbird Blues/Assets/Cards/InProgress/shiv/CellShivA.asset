@@ -29,9 +29,9 @@ MonoBehaviour:
   ambientDecrease: 0
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: Guard to phone
-  cardText: "\"Can i get some backup, there is a shiv checkup\"\r\nFew more guards
-    come by and they go where you pointed."
+  cardTextPerson: Guard
+  cardText: "The guard communicates with a walkie-talkie: \"Can I get some backup,
+    someone's making a shiv.\"\r Few more guards come by and they go where you pointed."
   logText: 
   endCard: 0
   timeCard: 0

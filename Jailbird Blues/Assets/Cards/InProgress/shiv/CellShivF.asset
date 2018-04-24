@@ -34,7 +34,7 @@ MonoBehaviour:
     mud? Oink oink oink..."
 
 
-    Guards walk away'
+    The guards walk away'
   logText: 
   endCard: 0
   timeCard: 0
@@ -42,7 +42,7 @@ MonoBehaviour:
   repeatable: 0
   endOfGame: 0
   OptionsOn: 0
-  Option1On: 1
+  Option1On: 0
   option1ReqSwitches: 
   option1text: 
   option1IrsReputation: 0
@@ -52,7 +52,7 @@ MonoBehaviour:
   option1ObtainedSwitches: 
   option1RemovedSwitches: 
   option1FollowCard: {fileID: 0}
-  Option2On: 1
+  Option2On: 0
   option2ReqSwitches: 
   option2text: 
   option2IrsReputation: 0
@@ -62,7 +62,7 @@ MonoBehaviour:
   option2ObtainedSwitches: 
   option2RemovedSwitches: 
   option2FollowCard: {fileID: 0}
-  Option3On: 1
+  Option3On: 0
   option3ReqSwitches: 
   option3text: 
   option3IrsReputation: 0
@@ -72,7 +72,7 @@ MonoBehaviour:
   option3ObtainedSwitches: 
   option3RemovedSwitches: 
   option3FollowCard: {fileID: 0}
-  Option4On: 1
+  Option4On: 0
   option4ReqSwitches: 
   option4text: 
   option4IrsReputation: 0

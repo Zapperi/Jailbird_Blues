@@ -21,7 +21,7 @@ MonoBehaviour:
   backgroundImage: {fileID: 21300000, guid: 7c5e619a5c03cc943a4b68321a14beb1, type: 3}
   foregroundImage: {fileID: 0}
   foregroundImage2: {fileID: 0}
-  foregroundImage3: {fileID: 0}
+  foregroundImage3: {fileID: 21300000, guid: 60c5302a1c8acf24fa976f1e8da49a6a, type: 3}
   foregroundImage4: {fileID: 0}
   bgMusic: {fileID: 0}
   bgAmbientAudio: {fileID: 0}
@@ -30,8 +30,9 @@ MonoBehaviour:
   musicOff: 0
   ambientOff: 0
   cardTextPerson: Jacob
-  cardText: "After a while we started talking for hours late at night, and he made
-    me realize how blacks really are. \rWe have been best friends ever since."
+  cardText: "\"When I arrived in the prison, William here was my cellmate. As you
+    can imagine we\r didn't get along well at first. After a while we started talking
+    for hours late at night,\r and he made me realize how wrong I was.\""
   logText: 
   endCard: 0
   timeCard: 0

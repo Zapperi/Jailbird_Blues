@@ -19,8 +19,8 @@ MonoBehaviour:
   timeOfDay: 0
   storyPhase: 0
   backgroundImage: {fileID: 21300000, guid: 7c5e619a5c03cc943a4b68321a14beb1, type: 3}
-  foregroundImage: {fileID: 0}
-  foregroundImage2: {fileID: 0}
+  foregroundImage: {fileID: 21300000, guid: 3242392f481b5424893e956bd29406a1, type: 3}
+  foregroundImage2: {fileID: 21300000, guid: e070058260cd92042956d89bc8bc3bf3, type: 3}
   foregroundImage3: {fileID: 0}
   foregroundImage4: {fileID: 0}
   bgMusic: {fileID: 0}
@@ -30,9 +30,11 @@ MonoBehaviour:
   musicOff: 0
   ambientOff: 0
   cardTextPerson: William
-  cardText: "The gang was doing little dirtyworks,\r\npickpocketing, stealing from
-    stores, peoples houses, you name it. One evening they made a robbery in the wrong\r
-    house."
+  cardText: "\"One evening they made a robbery in the wrong house. It belonged to
+    some thugs\r who were out in the back while they were being robbed by Papa. The
+    thugs \rheard Papa's gang inside and came in, catching them all besides Papa.
+    He ran\r as fast as he could while two thugs were chasing him to a dark alley,
+    it was a dead end.\""
   logText: 
   endCard: 0
   timeCard: 0

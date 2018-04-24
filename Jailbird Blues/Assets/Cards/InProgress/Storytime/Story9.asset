@@ -21,7 +21,7 @@ MonoBehaviour:
   backgroundImage: {fileID: 21300000, guid: 7c5e619a5c03cc943a4b68321a14beb1, type: 3}
   foregroundImage: {fileID: 0}
   foregroundImage2: {fileID: 0}
-  foregroundImage3: {fileID: 0}
+  foregroundImage3: {fileID: 21300000, guid: 3242392f481b5424893e956bd29406a1, type: 3}
   foregroundImage4: {fileID: 0}
   bgMusic: {fileID: 0}
   bgAmbientAudio: {fileID: 0}
@@ -30,9 +30,9 @@ MonoBehaviour:
   musicOff: 0
   ambientOff: 0
   cardTextPerson: William
-  cardText: "I have been framed by guards numerous times of carrying shivs, causing
-    trouble or trying to escape.\r\nAfter a while I got used to the thought of being
-    here for the rest of my life, and it's fine."
+  cardText: "\"Every time I have been close to getting out of here, the warden thinks
+    of some\r excuse why I should stay longer. I have been framed by the guards numerous
+    times\r of carrying shivs, causing trouble or trying to escape.\"\r"
   logText: 
   endCard: 0
   timeCard: 0
