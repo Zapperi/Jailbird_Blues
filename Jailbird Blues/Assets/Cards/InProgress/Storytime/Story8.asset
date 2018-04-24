@@ -21,7 +21,7 @@ MonoBehaviour:
   backgroundImage: {fileID: 21300000, guid: 7c5e619a5c03cc943a4b68321a14beb1, type: 3}
   foregroundImage: {fileID: 0}
   foregroundImage2: {fileID: 0}
-  foregroundImage3: {fileID: 0}
+  foregroundImage3: {fileID: 21300000, guid: 3242392f481b5424893e956bd29406a1, type: 3}
   foregroundImage4: {fileID: 0}
   bgMusic: {fileID: 0}
   bgAmbientAudio: {fileID: 0}
@@ -30,9 +30,10 @@ MonoBehaviour:
   musicOff: 0
   ambientOff: 0
   cardTextPerson: William
-  cardText: "I tried to get out sooner with good behaviour but appearently warden
-    thinks blacks belong behind bars instead of the streets.\r Every time I have been
-    close to geting out of here, warden thinks of some excuse why I should stay longer."
+  cardText: "\"They gave me 5 years in prison for theft and resisting arrest,\r for
+    just being in the wrong place at the wrong time.\r I tried to get out sooner with
+    good behaviour but appearently the warden\r thinks blacks belong behind bars instead
+    on the streets.\""
   logText: 
   endCard: 0
   timeCard: 0

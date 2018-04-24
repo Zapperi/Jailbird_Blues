@@ -9,17 +9,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: Story19
+  m_Name: day4Kowalski 1
   m_EditorClassIdentifier: 
   requiredSwitches: 
   RepIrs: 0
   RepPunks: 0
   RepShake: 0
   RepGuard: 0
-  timeOfDay: 0
-  storyPhase: 0
-  backgroundImage: {fileID: 21300000, guid: 7c5e619a5c03cc943a4b68321a14beb1, type: 3}
-  foregroundImage: {fileID: 0}
+  timeOfDay: 1
+  storyPhase: 4
+  backgroundImage: {fileID: 21300000, guid: 45101871e12fb8544924d61ab153420b, type: 3}
+  foregroundImage: {fileID: 21300000, guid: c710ce950766f9d49b289d95c1942b95, type: 3}
   foregroundImage2: {fileID: 0}
   foregroundImage3: {fileID: 0}
   foregroundImage4: {fileID: 0}
@@ -29,18 +29,15 @@ MonoBehaviour:
   ambientDecrease: 0
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: William
-  cardText: "Papa went to juvy and hasn't been out of jail ever since. He never heard
-    of his gang ever again, thinking the worst happened.\r Papa made prison his home
-    and had the bigest market in here untill he decided to retire. Now we take care
-    of him."
+  cardTextPerson: Kowalski
+  cardText: '"Listen up genious. The rents going up."'
   logText: 
   endCard: 0
   timeCard: 0
   onTop: 0
   repeatable: 0
   endOfGame: 0
-  OptionsOn: 0
+  OptionsOn: 1
   Option1On: 0
   option1ReqSwitches: 
   option1text: 
@@ -51,16 +48,16 @@ MonoBehaviour:
   option1ObtainedSwitches: 
   option1RemovedSwitches: 
   option1FollowCard: {fileID: 0}
-  Option2On: 0
+  Option2On: 1
   option2ReqSwitches: 
-  option2text: 
+  option2text: '"The rents going up? Why?"'
   option2IrsReputation: 0
   option2PunkReputation: 0
   option2ShakeReputation: 0
   option2GuardReputation: 0
   option2ObtainedSwitches: 
   option2RemovedSwitches: 
-  option2FollowCard: {fileID: 0}
+  option2FollowCard: {fileID: 11400000, guid: fad431e05b651ca44bab0198973f5f6c, type: 2}
   Option3On: 0
   option3ReqSwitches: 
   option3text: 
@@ -81,14 +78,14 @@ MonoBehaviour:
   option4ObtainedSwitches: 
   option4RemovedSwitches: 
   option4FollowCard: {fileID: 0}
-  Option5On: 1
+  Option5On: 0
   option5IrsReputation: 0
   option5PunkReputation: 0
   option5ShakeReputation: 0
   option5GuardReputation: 0
   option5ObtainedSwitches: 
   option5RemovedSwitches: 
-  option5FollowCard: {fileID: 11400000, guid: d326b819910f3c14f9c99941c2216bfd, type: 2}
+  option5FollowCard: {fileID: 11400000, guid: fad431e05b651ca44bab0198973f5f6c, type: 2}
   isTimeBasedCard: 0
   sfxPrewait: 0
   sfx: {fileID: 0}

@@ -9,32 +9,32 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: CellShiv
+  m_Name: day4NoKowalski
   m_EditorClassIdentifier: 
-  requiredSwitches: 
+  requiredSwitches: 07000000
   RepIrs: 0
   RepPunks: 0
   RepShake: 0
   RepGuard: 0
-  timeOfDay: 0
-  storyPhase: 0
+  timeOfDay: 1
+  storyPhase: 4
   backgroundImage: {fileID: 21300000, guid: 45101871e12fb8544924d61ab153420b, type: 3}
   foregroundImage: {fileID: 0}
   foregroundImage2: {fileID: 0}
   foregroundImage3: {fileID: 0}
   foregroundImage4: {fileID: 0}
-  bgMusic: {fileID: 0}
-  bgAmbientAudio: {fileID: 8300000, guid: 788870fe9977c784a981f51bb5ed6f36, type: 3}
+  bgMusic: {fileID: 8300000, guid: 7eea11dbcecd56a43ade0ca1a2990976, type: 3}
+  bgAmbientAudio: {fileID: 0}
   musicDecrease: 0
   ambientDecrease: 0
   musicOff: 0
   ambientOff: 0
   cardTextPerson: 
-  cardText: "It's late in the evening, moonlight glows through the window into the
-    silent hall.\r\nYou hear a faint schreeching coming from a few cells over.\r"
+  cardText: "After getting rid of Kowalski you wake up feeling great.\r\nNothing could
+    ruin this glorious day!"
   logText: 
-  endCard: 0
-  timeCard: 0
+  endCard: 1
+  timeCard: 1
   onTop: 0
   repeatable: 0
   endOfGame: 0
@@ -51,17 +51,17 @@ MonoBehaviour:
   option1FollowCard: {fileID: 0}
   Option2On: 0
   option2ReqSwitches: 
-  option2text: Call the guard
+  option2text: 
   option2IrsReputation: 0
   option2PunkReputation: 0
   option2ShakeReputation: 0
   option2GuardReputation: 0
   option2ObtainedSwitches: 
   option2RemovedSwitches: 
-  option2FollowCard: {fileID: 11400000, guid: 4c33bdc1b92eebd4dbd374ce2889ee2a, type: 2}
+  option2FollowCard: {fileID: 0}
   Option3On: 0
   option3ReqSwitches: 
-  option3text: Ignore it
+  option3text: 
   option3IrsReputation: 0
   option3PunkReputation: 0
   option3ShakeReputation: 0
@@ -86,7 +86,7 @@ MonoBehaviour:
   option5GuardReputation: 0
   option5ObtainedSwitches: 
   option5RemovedSwitches: 
-  option5FollowCard: {fileID: 11400000, guid: 6bb82c6c85d756549b41235495c8f803, type: 2}
+  option5FollowCard: {fileID: 0}
   isTimeBasedCard: 0
   sfxPrewait: 0
   sfx: {fileID: 0}

@@ -21,7 +21,7 @@ MonoBehaviour:
   backgroundImage: {fileID: 21300000, guid: 7c5e619a5c03cc943a4b68321a14beb1, type: 3}
   foregroundImage: {fileID: 0}
   foregroundImage2: {fileID: 0}
-  foregroundImage3: {fileID: 0}
+  foregroundImage3: {fileID: 21300000, guid: 60c5302a1c8acf24fa976f1e8da49a6a, type: 3}
   foregroundImage4: {fileID: 0}
   bgMusic: {fileID: 0}
   bgAmbientAudio: {fileID: 0}
@@ -30,9 +30,8 @@ MonoBehaviour:
   musicOff: 0
   ambientOff: 0
   cardTextPerson: Jacob
-  cardText: "Well, I used to run a big cotton farm, many employees, mostly blacks
-    as they used to be cheap labour.\r Back then I was a big racist. I was shouting
-    to them, beating them up and hardly fed them."
+  cardText: "\"Well, I used to run a big cotton farm, many employees, mostly blacks
+    as they\r used to be cheap labour.\""
   logText: 
   endCard: 0
   timeCard: 0
