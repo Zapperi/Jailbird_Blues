@@ -14,7 +14,7 @@ MonoBehaviour:
   requiredSwitches: 
   RepIrs: 0
   RepPunks: 0
-  RepShake: 20
+  RepShake: 0
   RepGuard: 0
   timeOfDay: 1
   storyPhase: 0
