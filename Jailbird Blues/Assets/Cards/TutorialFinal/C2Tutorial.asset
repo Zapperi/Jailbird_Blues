@@ -20,7 +20,7 @@ MonoBehaviour:
   storyPhase: 0
   backgroundImage: {fileID: 21300000, guid: 214f46d9c96dad347aa99d8654cd4a4e, type: 3}
   foregroundImage: {fileID: 21300000, guid: 35aefacc3f074a4478e9117aec8c5539, type: 3}
-  foregroundImage2: {fileID: 21300000, guid: e89585d9fa2bf93499ccc133d58a0f4c, type: 3}
+  foregroundImage2: {fileID: 21300000, guid: fa972cdd51eb9d941bff3d886bc28bb7, type: 3}
   foregroundImage3: {fileID: 0}
   foregroundImage4: {fileID: 0}
   bgMusic: {fileID: 0}
@@ -37,6 +37,7 @@ MonoBehaviour:
   timeCard: 0
   onTop: 0
   repeatable: 0
+  endOfGame: 0
   OptionsOn: 0
   Option1On: 0
   option1ReqSwitches: 

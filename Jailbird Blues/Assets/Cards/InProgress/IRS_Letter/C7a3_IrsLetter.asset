@@ -30,11 +30,13 @@ MonoBehaviour:
   musicOff: 0
   ambientOff: 0
   cardTextPerson: Random guard
-  cardText: "\"Conspiracy going between I.R.S. and Stephan? \nThis is huge!\""
+  cardText: '"Stephan conspiring with the I.R.S.? This is huge!"'
   logText: 
   endCard: 0
   timeCard: 0
+  onTop: 0
   repeatable: 0
+  endOfGame: 0
   OptionsOn: 0
   Option1On: 0
   option1ReqSwitches: 

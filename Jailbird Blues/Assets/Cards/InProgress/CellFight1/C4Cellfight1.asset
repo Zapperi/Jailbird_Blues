@@ -18,7 +18,7 @@ MonoBehaviour:
   RepGuard: 0
   timeOfDay: 0
   storyPhase: 0
-  backgroundImage: {fileID: 0}
+  backgroundImage: {fileID: 21300000, guid: 1be209411c3441a45b447a959d362a33, type: 3}
   foregroundImage: {fileID: 0}
   foregroundImage2: {fileID: 0}
   foregroundImage3: {fileID: 0}
@@ -36,6 +36,7 @@ MonoBehaviour:
   timeCard: 0
   onTop: 0
   repeatable: 0
+  endOfGame: 0
   OptionsOn: 1
   Option1On: 1
   option1ReqSwitches: 
