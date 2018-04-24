@@ -12,7 +12,7 @@ public class LogScript : MonoBehaviour {
     public void UpdateLogText()
     {
         logText.text = GameController.gameController.logText;
-        GetComponent<ScrollRect>().content = logText.GetComponent<RectTransform>();
+        //GetComponent<ScrollRect>().content = logText.GetComponent<RectTransform>();
     }
 
 }
