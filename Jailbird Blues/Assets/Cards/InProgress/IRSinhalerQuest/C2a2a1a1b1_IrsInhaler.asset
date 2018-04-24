@@ -34,7 +34,7 @@ MonoBehaviour:
     walks away.
   logText: 
   endCard: 1
-  timeCard: 0
+  timeCard: 1
   onTop: 0
   repeatable: 0
   endOfGame: 0

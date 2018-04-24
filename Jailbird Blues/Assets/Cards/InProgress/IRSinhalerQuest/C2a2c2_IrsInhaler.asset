@@ -27,8 +27,8 @@ MonoBehaviour:
   bgAmbientAudio: {fileID: 0}
   musicDecrease: 0
   ambientDecrease: 0
-  musicOff: 1
-  ambientOff: 1
+  musicOff: 0
+  ambientOff: 0
   cardTextPerson: What do you do with it?
   cardText: 
   logText: 

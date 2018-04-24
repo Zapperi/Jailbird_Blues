@@ -23,7 +23,7 @@ MonoBehaviour:
   foregroundImage2: {fileID: 21300000, guid: 07b92b6a3c3e1f94a8a34c9ffc9ac547, type: 3}
   foregroundImage3: {fileID: 0}
   foregroundImage4: {fileID: 0}
-  bgMusic: {fileID: 0}
+  bgMusic: {fileID: 8300000, guid: 75a6ead9f3b0c244ab4f4bd518a4f668, type: 3}
   bgAmbientAudio: {fileID: 0}
   musicDecrease: 0
   ambientDecrease: 0
@@ -33,7 +33,7 @@ MonoBehaviour:
   cardText: You hear a punk cheer "Yeah nice punch dude! That nerd deserved that."
   logText: 
   endCard: 1
-  timeCard: 0
+  timeCard: 1
   onTop: 0
   repeatable: 0
   endOfGame: 0

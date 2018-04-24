@@ -33,7 +33,7 @@ MonoBehaviour:
   cardText: You thank and walk away.
   logText: 
   endCard: 1
-  timeCard: 0
+  timeCard: 1
   onTop: 0
   repeatable: 0
   endOfGame: 0
@@ -58,7 +58,7 @@ MonoBehaviour:
   option2ObtainedSwitches: 
   option2RemovedSwitches: 
   option2FollowCard: {fileID: 0}
-  Option3On: 1
+  Option3On: 0
   option3ReqSwitches: 
   option3text: 
   option3IrsReputation: 0
