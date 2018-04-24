@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: C1SmallPunkQuest
+  m_Name: C1SmallPunkQuest 1
   m_EditorClassIdentifier: 
   requiredSwitches: 
   RepIrs: 0
@@ -23,45 +23,41 @@ MonoBehaviour:
   foregroundImage2: {fileID: 0}
   foregroundImage3: {fileID: 0}
   foregroundImage4: {fileID: 0}
-  bgMusic: {fileID: 8300000, guid: 75a6ead9f3b0c244ab4f4bd518a4f668, type: 3}
+  bgMusic: {fileID: 0}
   bgAmbientAudio: {fileID: 0}
   musicDecrease: 0
   ambientDecrease: 0
   musicOff: 0
   ambientOff: 0
   cardTextPerson: 
-  cardText: '"Psst"
-
-    You look around and you see a punk guy waving at you.
-
-    "Hey you, come here"'
+  cardText: 
   logText: 
   endCard: 0
   timeCard: 0
   onTop: 0
   repeatable: 0
   endOfGame: 0
-  OptionsOn: 0
-  Option1On: 0
+  OptionsOn: 1
+  Option1On: 1
   option1ReqSwitches: 
-  option1text: 
+  option1text: Go to him
   option1IrsReputation: 0
-  option1PunkReputation: 0
+  option1PunkReputation: 1
   option1ShakeReputation: 0
   option1GuardReputation: 0
   option1ObtainedSwitches: 
   option1RemovedSwitches: 
-  option1FollowCard: {fileID: 0}
-  Option2On: 0
+  option1FollowCard: {fileID: 11400000, guid: 10ea96bbff95937489b0aadca9d2e3d2, type: 2}
+  Option2On: 1
   option2ReqSwitches: 
-  option2text: Go to him
+  option2text: Ignore him
   option2IrsReputation: 0
-  option2PunkReputation: 0
+  option2PunkReputation: -1
   option2ShakeReputation: 0
   option2GuardReputation: 0
   option2ObtainedSwitches: 
   option2RemovedSwitches: 
-  option2FollowCard: {fileID: 11400000, guid: 10ea96bbff95937489b0aadca9d2e3d2, type: 2}
+  option2FollowCard: {fileID: 11400000, guid: f869679608a18914bba3b0bc522fc73c, type: 2}
   Option3On: 0
   option3ReqSwitches: 
   option3text: Ignore him
@@ -82,14 +78,14 @@ MonoBehaviour:
   option4ObtainedSwitches: 
   option4RemovedSwitches: 
   option4FollowCard: {fileID: 0}
-  Option5On: 1
+  Option5On: 0
   option5IrsReputation: 0
   option5PunkReputation: 0
   option5ShakeReputation: 0
   option5GuardReputation: 0
   option5ObtainedSwitches: 
   option5RemovedSwitches: 
-  option5FollowCard: {fileID: 11400000, guid: f473eb7956fc35a4c9d84c5e21c6fd16, type: 2}
+  option5FollowCard: {fileID: 0}
   isTimeBasedCard: 0
   sfxPrewait: 0
   sfx: {fileID: 0}
