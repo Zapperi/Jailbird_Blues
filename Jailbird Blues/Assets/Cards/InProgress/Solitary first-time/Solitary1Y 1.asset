@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: Solitary0
+  m_Name: Solitary1Y 1
   m_EditorClassIdentifier: 
   requiredSwitches: 
   RepIrs: 0
@@ -67,7 +67,7 @@ MonoBehaviour:
   option3GuardReputation: 0
   option3ObtainedSwitches: 
   option3RemovedSwitches: 
-  option3FollowCard: {fileID: 11400000, guid: e19ef0b794da0964d98d34536c0f0c99, type: 2}
+  option3FollowCard: {fileID: 0}
   Option4On: 1
   option4ReqSwitches: 
   option4text: Do something.
