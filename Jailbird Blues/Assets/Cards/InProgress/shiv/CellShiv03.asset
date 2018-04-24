@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: CellShiv3b
+  m_Name: CellShiv03
   m_EditorClassIdentifier: 
   requiredSwitches: 
   RepIrs: 0
@@ -25,43 +25,42 @@ MonoBehaviour:
   foregroundImage4: {fileID: 0}
   bgMusic: {fileID: 0}
   bgAmbientAudio: {fileID: 0}
-  musicDecrease: 0
-  ambientDecrease: 0
+  musicDecrease: 0.5
+  ambientDecrease: 0.7
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: Punk
-  cardText: "\"Whoah, the nerve. You are in big trouble dude, you'll be sorry for
-    ratting us out.\"\r\n\r\nYou go to sleep while hearing faint cursing in the distance."
+  cardTextPerson: 
+  cardText: 
   logText: 
-  endCard: 1
+  endCard: 0
   timeCard: 0
   onTop: 0
   repeatable: 0
   endOfGame: 0
-  OptionsOn: 0
-  Option1On: 0
+  OptionsOn: 1
+  Option1On: 1
   option1ReqSwitches: 
-  option1text: 
+  option1text: Ignore it
   option1IrsReputation: 0
   option1PunkReputation: 0
   option1ShakeReputation: 0
   option1GuardReputation: 0
   option1ObtainedSwitches: 
   option1RemovedSwitches: 
-  option1FollowCard: {fileID: 0}
-  Option2On: 0
+  option1FollowCard: {fileID: 11400000, guid: 6a708d7b572672941885d01d6f0f2b40, type: 2}
+  Option2On: 1
   option2ReqSwitches: 
-  option2text: 
+  option2text: Call the guard
   option2IrsReputation: 0
   option2PunkReputation: 0
   option2ShakeReputation: 0
   option2GuardReputation: 0
   option2ObtainedSwitches: 
   option2RemovedSwitches: 
-  option2FollowCard: {fileID: 0}
+  option2FollowCard: {fileID: 11400000, guid: 4c33bdc1b92eebd4dbd374ce2889ee2a, type: 2}
   Option3On: 0
   option3ReqSwitches: 
-  option3text: 
+  option3text: Ignore it
   option3IrsReputation: 0
   option3PunkReputation: 0
   option3ShakeReputation: 0
@@ -79,7 +78,7 @@ MonoBehaviour:
   option4ObtainedSwitches: 
   option4RemovedSwitches: 
   option4FollowCard: {fileID: 0}
-  Option5On: 1
+  Option5On: 0
   option5IrsReputation: 0
   option5PunkReputation: 0
   option5ShakeReputation: 0

@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: CellShivA
+  m_Name: CellShiv07
   m_EditorClassIdentifier: 
   requiredSwitches: 
   RepIrs: 0
@@ -25,8 +25,8 @@ MonoBehaviour:
   foregroundImage4: {fileID: 0}
   bgMusic: {fileID: 0}
   bgAmbientAudio: {fileID: 0}
-  musicDecrease: 0
-  ambientDecrease: 0
+  musicDecrease: 0.5
+  ambientDecrease: 0.7
   musicOff: 0
   ambientOff: 0
   cardTextPerson: Guard
