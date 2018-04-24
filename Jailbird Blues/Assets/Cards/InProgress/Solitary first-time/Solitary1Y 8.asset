@@ -34,7 +34,7 @@ MonoBehaviour:
     going to let you out of here anytime soon."
   logText: 
   endCard: 0
-  timeCard: 1
+  timeCard: 0
   onTop: 0
   repeatable: 0
   endOfGame: 0
