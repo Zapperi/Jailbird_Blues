@@ -19,8 +19,8 @@ MonoBehaviour:
   timeOfDay: 0
   storyPhase: 0
   backgroundImage: {fileID: 21300000, guid: 013584fb9b3867548a06364b64007f2a, type: 3}
-  foregroundImage: {fileID: 0}
-  foregroundImage2: {fileID: 0}
+  foregroundImage: {fileID: 21300000, guid: 948c1d15d0284104bb850e3cee562fae, type: 3}
+  foregroundImage2: {fileID: 21300000, guid: 60c5302a1c8acf24fa976f1e8da49a6a, type: 3}
   foregroundImage3: {fileID: 0}
   foregroundImage4: {fileID: 0}
   bgMusic: {fileID: 8300000, guid: f9e966c1020ccab4bbde0eaabf038f9b, type: 3}
@@ -29,9 +29,9 @@ MonoBehaviour:
   ambientDecrease: 0.585
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: 
-  cardText: "After a while a punk guy comes to the table.\r\nPunk guy: \"You old farts
-    like playing chess huh?\"\r\nHe throws the chess board on the floor."
+  cardTextPerson: Punk guy
+  cardText: "After a while a punk guy comes to the table.\r \"You old farts like playing
+    chess huh?\"\r\nHe throws the chess board on the floor."
   logText: 
   endCard: 0
   timeCard: 0

@@ -19,8 +19,8 @@ MonoBehaviour:
   timeOfDay: 0
   storyPhase: 0
   backgroundImage: {fileID: 21300000, guid: 013584fb9b3867548a06364b64007f2a, type: 3}
-  foregroundImage: {fileID: 0}
-  foregroundImage2: {fileID: 0}
+  foregroundImage: {fileID: 21300000, guid: 3242392f481b5424893e956bd29406a1, type: 3}
+  foregroundImage2: {fileID: 21300000, guid: e070058260cd92042956d89bc8bc3bf3, type: 3}
   foregroundImage3: {fileID: 0}
   foregroundImage4: {fileID: 0}
   bgMusic: {fileID: 0}
