@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: C23Tutorial
+  m_Name: C27b3Tutorial
   m_EditorClassIdentifier: 
   requiredSwitches: 
   RepIrs: 0
@@ -18,21 +18,19 @@ MonoBehaviour:
   RepGuard: 0
   timeOfDay: 0
   storyPhase: 0
-  backgroundImage: {fileID: 21300000, guid: 0664bbc4f2d5bda44b00461d394916dd, type: 3}
+  backgroundImage: {fileID: 21300000, guid: 00668f7380859384787f4eda8e1b2107, type: 3}
   foregroundImage: {fileID: 0}
   foregroundImage2: {fileID: 0}
-  foregroundImage3: {fileID: 0}
+  foregroundImage3: {fileID: 21300000, guid: 8645f82f413c63b4bbead91bea01e49d, type: 3}
   foregroundImage4: {fileID: 0}
-  bgMusic: {fileID: 8300000, guid: 267a97e21f8e84142bed948aad38eae8, type: 3}
+  bgMusic: {fileID: 0}
   bgAmbientAudio: {fileID: 0}
   musicDecrease: 0
   ambientDecrease: 0
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: Freddie Cooks
-  cardText: "\u201DThe I.R.S. are tax evaders and other white collar criminals. They
-    have a good foothold on the prison contraband business and they respect the invisible
-    hand of free-market the most.\u201D"
+  cardTextPerson: Shaker goon
+  cardText: "\u201DSorry, but you don\u2019t even lift!\u201D\r"
   logText: 
   endCard: 0
   timeCard: 0
@@ -87,7 +85,7 @@ MonoBehaviour:
   option5GuardReputation: 0
   option5ObtainedSwitches: 
   option5RemovedSwitches: 
-  option5FollowCard: {fileID: 11400000, guid: 0a57633bccdccb5448d5d781a19fc1a3, type: 2}
+  option5FollowCard: {fileID: 11400000, guid: 55f2019f23878964d896ed72f8ee8a63, type: 2}
   isTimeBasedCard: 0
   sfxPrewait: 0
   sfx: {fileID: 0}
