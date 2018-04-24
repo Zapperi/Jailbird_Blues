@@ -893,7 +893,7 @@ public class GameController : MonoBehaviour {
                 scheduleName = "lunch";
                 break;
             case (3):
-                scheduleName = "workshop";
+                scheduleName = "cell"; //workshop
                 break;
         }
     }
