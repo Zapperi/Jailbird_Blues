@@ -96,7 +96,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1017277343441152
 GameObject:
   m_ObjectHideFlags: 1
@@ -2220,7 +2220,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Do push ups.
+  m_Text: 
 --- !u!114 &114125421100425116
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2386,7 +2386,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Do nothing.
+  m_Text: 
 --- !u!114 &114147286941934456
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2923,7 +2923,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 00693807a58b9814da806cc6323aed06, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 214f46d9c96dad347aa99d8654cd4a4e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3252,7 +3252,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Yell.
+  m_Text: 
 --- !u!114 &114336811850845302
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3567,7 +3567,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   overLayingImage: {fileID: 0}
-  currentCard: {fileID: 11400000, guid: 6e959b5c89a96b04fa84f0c14dad0359, type: 2}
+  currentCard: {fileID: 11400000, guid: cb2651b7189735b4b81de470bbcc6e19, type: 2}
   cardText: {fileID: 114480357465699000}
   cardPerson: {fileID: 114191142861193218}
   button1text: {fileID: 114139510603780042}
@@ -4037,9 +4037,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "You are in the solitary. A single light bulb illuminates the harsh\r\nconcrete-box
-    of a room. The toilet is a single rusted bucket in\r\nthe corner. Looks like someone
-    has forgotten to empty it."
+  m_Text: 'A guard leads you through the prison hallways while the barred doors close
+    behind you.
+
+    The echoes fade like your hopes getting out this hellhole.'
 --- !u!114 &114494369917948756
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4540,7 +4541,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: e89585d9fa2bf93499ccc133d58a0f4c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

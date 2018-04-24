@@ -27,7 +27,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1027133244037344
 GameObject:
   m_ObjectHideFlags: 1
@@ -1033,10 +1033,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "A guard leads you through the prison hallways while the barred doors close
-    behind you. The echoes fade like your hopes getting out this hellhole.  The guard
-    speaks:\n\u201DFreddie Cooks here mentors you in how we do things here. Play nice
-    and you\u2019ll go a long way.\u201D\r \n"
+  m_Text: 'A guard leads you through the prison hallways while the barred doors close
+    behind you.
+
+    The echoes fade like your hopes getting out this hellhole.'
 --- !u!114 &114260851468937978
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1289,7 +1289,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   overLayingImage: {fileID: 0}
-  card: {fileID: 11400000, guid: 2c4b19502e30c804a8662649b4b5c8eb, type: 2}
+  currentCard: {fileID: 11400000, guid: cb2651b7189735b4b81de470bbcc6e19, type: 2}
   cardText: {fileID: 114257783183177504}
   cardPerson: {fileID: 114471077758052014}
   button1text: {fileID: 114704711107309360}
@@ -1312,7 +1312,10 @@ MonoBehaviour:
   fadeImage: {fileID: 0}
   fadeSpeed: 0.25
   noteBook: {fileID: 0}
+  typeTextNewTextDone: 0
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
   logPage: {fileID: 0}
+  inventoryPage: {fileID: 0}
   popUp: {fileID: 1241286024497994}
   popUpMouseOver: 0
   popUpText: {fileID: 114612701125052040}
@@ -1332,6 +1335,10 @@ MonoBehaviour:
   button2Img: {fileID: 114477133064219282}
   button3Img: {fileID: 114158519897097138}
   button4Img: {fileID: 114394134010555104}
+  cross1: {fileID: 0}
+  cross2: {fileID: 0}
+  cross3: {fileID: 0}
+  cross4: {fileID: 0}
   item:
     itemIcon: {fileID: 0}
     itemDescText: 
@@ -1530,7 +1537,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: e89585d9fa2bf93499ccc133d58a0f4c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
