@@ -19,7 +19,7 @@ MonoBehaviour:
   timeOfDay: 0
   storyPhase: 0
   backgroundImage: {fileID: 21300000, guid: 45101871e12fb8544924d61ab153420b, type: 3}
-  foregroundImage: {fileID: 21300000, guid: 5f1bb9a0db9ca0f4091481ea3e6bb50a, type: 3}
+  foregroundImage: {fileID: 21300000, guid: c710ce950766f9d49b289d95c1942b95, type: 3}
   foregroundImage2: {fileID: 0}
   foregroundImage3: {fileID: 0}
   foregroundImage4: {fileID: 0}
@@ -87,7 +87,7 @@ MonoBehaviour:
   option5GuardReputation: 0
   option5ObtainedSwitches: 
   option5RemovedSwitches: 
-  option5FollowCard: {fileID: 0}
+  option5FollowCard: {fileID: 11400000, guid: ab8206c84aa11d94389cd19e95e80707, type: 2}
   isTimeBasedCard: 0
   sfxPrewait: 0
   sfx: {fileID: 8300000, guid: cb90a6940756f8c44aeabd70aed4a2d0, type: 3}

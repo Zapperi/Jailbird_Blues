@@ -30,10 +30,10 @@ MonoBehaviour:
   musicOff: 0
   ambientOff: 0
   cardTextPerson: Freddie Cooks
-  cardText: "\u201DAnd lastly the Punks. They are sort of a political cult, but what
-    their actual political beliefs are is a total mystery. They defy authority all
-    the time and so keep everyone on their toes. Are they wicked, mad or just plain
-    stupid is everyone\u2019s guess.\u201D"
+  cardText: "\u201DAnd lastly the \xC4Punks\xD6. They are sort of a political cult,
+    but what their actual political beliefs are is a total mystery. They defy authority
+    all the time and so keep everyone on their toes. Are they wicked, mad or just
+    plain stupid is everyone\u2019s guess.\u201D"
   logText: 
   endCard: 0
   timeCard: 0

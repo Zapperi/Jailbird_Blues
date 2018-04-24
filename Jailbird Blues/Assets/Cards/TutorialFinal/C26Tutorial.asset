@@ -25,7 +25,7 @@ MonoBehaviour:
   foregroundImage4: {fileID: 0}
   bgMusic: {fileID: 8300000, guid: 3a0e3ba173573874b8693e83512ac902, type: 3}
   bgAmbientAudio: {fileID: 0}
-  musicDecrease: 0
+  musicDecrease: 0.7
   ambientDecrease: 0
   musicOff: 0
   ambientOff: 0

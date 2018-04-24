@@ -30,9 +30,9 @@ MonoBehaviour:
   musicOff: 0
   ambientOff: 0
   cardTextPerson: Freddie Cooks
-  cardText: "\u201DThe I.R.S. are tax evaders and other white collar criminals. They
-    have a good foothold on the prison contraband business and they respect the invisible
-    hand of free-market the most.\u201D"
+  cardText: "\u201DThe \xC4I.R.S.\xD6 are tax evaders and other white collar criminals.
+    They have a good foothold on the prison contraband business and they respect the
+    invisible hand of free-market the most.\u201D"
   logText: 
   endCard: 0
   timeCard: 0

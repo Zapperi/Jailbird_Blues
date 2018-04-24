@@ -30,10 +30,10 @@ MonoBehaviour:
   musicOff: 0
   ambientOff: 0
   cardTextPerson: Freddie Cooks
-  cardText: "\u201DThe protein shakers value physical strength, power and muscle mass.
-    Mostly violent criminals who have sculpted themselves to be the pinnacle of human
-    athletic perfection. All the other inmates want to get out, but Protein shakers
-    seem to be quite happy in their gym.\u201D\r\n"
+  cardText: "\u201DThe \xC4protein shakers\xD6 value physical strength, power and
+    muscle mass. Mostly violent criminals who have sculpted themselves to be the pinnacle
+    of human athletic perfection. All the other inmates want to get out, but Protein
+    shakers seem to be quite happy in their gym.\u201D\r\n"
   logText: 
   endCard: 0
   timeCard: 0

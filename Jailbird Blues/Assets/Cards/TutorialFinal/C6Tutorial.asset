@@ -32,12 +32,14 @@ MonoBehaviour:
   cardTextPerson: Judge
   cardText: "\u201DFor incorrectly parking in the handicap spot, stealing a tv and
     damaging government property, under the three-strikes-rule I hereby judge the
-    defendant guilty to four years in the Ravenwood maximum security correctional
+    defendant \xC4guilty\xD6 to four years in the Ravenwood maximum security correctional
     facility.\u201D\r"
   logText: 
   endCard: 0
   timeCard: 0
+  onTop: 0
   repeatable: 0
+  endOfGame: 0
   OptionsOn: 0
   Option1On: 0
   option1ReqSwitches: 

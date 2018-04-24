@@ -18,10 +18,10 @@ MonoBehaviour:
   RepGuard: 0
   timeOfDay: 0
   storyPhase: 0
-  backgroundImage: {fileID: 0}
+  backgroundImage: {fileID: 21300000, guid: 45101871e12fb8544924d61ab153420b, type: 3}
   foregroundImage: {fileID: 0}
   foregroundImage2: {fileID: 0}
-  foregroundImage3: {fileID: 0}
+  foregroundImage3: {fileID: 21300000, guid: c710ce950766f9d49b289d95c1942b95, type: 3}
   foregroundImage4: {fileID: 0}
   bgMusic: {fileID: 0}
   bgAmbientAudio: {fileID: 0}
@@ -47,7 +47,7 @@ MonoBehaviour:
   option1GuardReputation: 0
   option1ObtainedSwitches: 
   option1RemovedSwitches: 
-  option1FollowCard: {fileID: 0}
+  option1FollowCard: {fileID: 11400000, guid: d28578a19be8f284e8622aeae02cc6e6, type: 2}
   Option2On: 1
   option2ReqSwitches: 
   option2text: 'Decline. '
@@ -57,7 +57,7 @@ MonoBehaviour:
   option2GuardReputation: 0
   option2ObtainedSwitches: 
   option2RemovedSwitches: 
-  option2FollowCard: {fileID: 0}
+  option2FollowCard: {fileID: 11400000, guid: 0715da05167bcac4080bff37ea796f1e, type: 2}
   Option3On: 1
   option3ReqSwitches: 
   option3text: 'Call the guard. '
@@ -67,7 +67,7 @@ MonoBehaviour:
   option3GuardReputation: 0
   option3ObtainedSwitches: 
   option3RemovedSwitches: 
-  option3FollowCard: {fileID: 0}
+  option3FollowCard: {fileID: 11400000, guid: fe62c45f3281eb64d884274e5f97211b, type: 2}
   Option4On: 1
   option4ReqSwitches: 
   option4text: "\u201DFor how much?\u201D"
@@ -77,8 +77,8 @@ MonoBehaviour:
   option4GuardReputation: 0
   option4ObtainedSwitches: 
   option4RemovedSwitches: 
-  option4FollowCard: {fileID: 0}
-  Option5On: 1
+  option4FollowCard: {fileID: 11400000, guid: b856f67c81ae14044852c3c0515cab9b, type: 2}
+  Option5On: 0
   option5IrsReputation: 0
   option5PunkReputation: 0
   option5ShakeReputation: 0
