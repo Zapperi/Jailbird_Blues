@@ -7,8 +7,7 @@ using UnityEngine.SceneManagement;
 public class NoteBook : MonoBehaviour {
 
     public Text noteBookText;
-	public Text inventoryTextBrownie;
-	public Text inventoryTextCigs;
+    private string statsText;
     public Button buttonQuit;
     public Button logButton;
     public Button inventoryButton;
@@ -27,18 +26,40 @@ public class NoteBook : MonoBehaviour {
         logButton.onClick.AddListener(LogButtonpressed);
         optionsButton.onClick.AddListener(OptionsButtonpressed);
         this.gameObject.SetActive(false);
+        UpdateStats();
 
 
     }
 	
 	// Update is called once per frame
 	void Update () {
-        noteBookText.text = "IRS rep: " + GameController.gameController.irsRep + "\n" + "Punks rep: " + GameController.gameController.punksRep + "\n" +
-            "Shakers rep: " + GameController.gameController.shakersRep + "\n" + "Guards rep: " + GameController.gameController.guardsRep;      
+        UpdateStats();    
+    }
+
+    private void UpdateStats()
+    {
+        if (GameController.gameController.irsRep >= 0)
+            statsText = "IRS rep: <color=green>" + GameController.gameController.irsRep + "</color>\n";
+        if (GameController.gameController.irsRep < 0)
+            statsText = "IRS rep: <color=red>" + GameController.gameController.irsRep + "</color>\n";
+        if (GameController.gameController.punksRep >= 0)
+            statsText += "Punks rep: <color=green>" + GameController.gameController.punksRep + "</color>\n";
+        if (GameController.gameController.punksRep < 0)
+            statsText += "Punks rep: <color=red>" + GameController.gameController.punksRep + "</color>\n";
+        if (GameController.gameController.shakersRep >= 0)
+            statsText += "Shakers rep: <color=green>" + GameController.gameController.shakersRep + "</color>\n";
+        if (GameController.gameController.shakersRep < 0)
+            statsText += "Shakers rep: <color=red>" + GameController.gameController.shakersRep + "</color>\n";
+        if (GameController.gameController.guardsRep >= 0)
+            statsText += "Guards rep: <color=green>" + GameController.gameController.guardsRep + "</color>\n";
+        if (GameController.gameController.guardsRep < 0)
+            statsText += "Guards rep: <color=red>" + GameController.gameController.guardsRep + "</color>\n";
+        noteBookText.text = statsText;
     }
 
     public void UpdateNotebook()
     {
+        UpdateStats();
         logPage.GetComponent<LogScript>().UpdateLogText();
     }
 
@@ -50,6 +71,7 @@ public class NoteBook : MonoBehaviour {
         statsPage.gameObject.SetActive(false);
         optionsPage.gameObject.SetActive(false);
         logPage.GetComponent<LogScript>().UpdateLogText();
+        UpdateStats();
     }
 
     void InventoryButtonpressed()
