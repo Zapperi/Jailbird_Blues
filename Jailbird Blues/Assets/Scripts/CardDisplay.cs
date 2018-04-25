@@ -453,6 +453,9 @@ public class CardDisplay : MonoBehaviour
         {
             popUpText.fontSize = 15;
             popUpText.text = GameController.gameController.previousCard.cardText;
+            coloredText = popUpText.text.Replace("Ä", "<color=#" + highlightColorHex + ">"); // Make sure the highlighted text gets the color
+            coloredText = coloredText.Replace("Ö", "</color>");                         // End the coloring area
+            popUpText.text = coloredText;                                                // Update the text
         }
         // If there was no text on previous card, type donuts instead.    
         else

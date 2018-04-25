@@ -57,7 +57,7 @@ MonoBehaviour:
   option2GuardReputation: 0
   option2ObtainedSwitches: 
   option2RemovedSwitches: 02000000
-  option2FollowCard: {fileID: 11400000, guid: 87a769e1eb2596847ab2eeb4563ae998, type: 2}
+  option2FollowCard: {fileID: 0}
   Option3On: 1
   option3ReqSwitches: 02000000
   option3text: Give him your brownie
@@ -67,7 +67,7 @@ MonoBehaviour:
   option3GuardReputation: 0
   option3ObtainedSwitches: 
   option3RemovedSwitches: 02000000
-  option3FollowCard: {fileID: 11400000, guid: 7c22cf19706acd547b4193da99f68354, type: 2}
+  option3FollowCard: {fileID: 11400000, guid: 08103ea7f90199d4a92f882574d57757, type: 2}
   Option4On: 0
   option4ReqSwitches: 
   option4text: 
