@@ -1524,7 +1524,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1783923091712544
 GameObject:
   m_ObjectHideFlags: 1
@@ -2707,8 +2707,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   noteBookText: {fileID: 114154031511853804}
-  inventoryTextBrownie: {fileID: 0}
-  inventoryTextCigs: {fileID: 0}
   buttonQuit: {fileID: 114807885374619958}
   logButton: {fileID: 114383714550817314}
   inventoryButton: {fileID: 114611107943664590}
@@ -3146,7 +3144,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -7966,8 +7964,8 @@ RectTransform:
   m_Father: {fileID: 224073071280257038}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.57802767}
-  m_AnchorMax: {x: 1, y: 0.9999364}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -8187,8 +8185,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -11.4, y: -6.8999996}
-  m_SizeDelta: {x: -179.8, y: -203}
+  m_AnchoredPosition: {x: -11.400002, y: -6.899994}
+  m_SizeDelta: {x: -179.79999, y: -203}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224860783692420092
 RectTransform:
