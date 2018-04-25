@@ -23,11 +23,11 @@ MonoBehaviour:
   foregroundImage2: {fileID: 21300000, guid: 3e2e9c18828a06f4990bd032f1e8a016, type: 3}
   foregroundImage3: {fileID: 0}
   foregroundImage4: {fileID: 0}
-  bgMusic: {fileID: 0}
+  bgMusic: {fileID: 8300000, guid: 512cacc6c243a654191dca465a66cdb2, type: 3}
   bgAmbientAudio: {fileID: 0}
   musicDecrease: 0
   ambientDecrease: 0
-  musicOff: 1
+  musicOff: 0
   ambientOff: 1
   cardTextPerson: 
   cardText: "You sit in the library alone, except for the one \xC4guard\xD6 who is

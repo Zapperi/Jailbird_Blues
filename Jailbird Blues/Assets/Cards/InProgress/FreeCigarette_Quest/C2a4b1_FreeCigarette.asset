@@ -41,7 +41,7 @@ MonoBehaviour:
   Option1On: 1
   option1ReqSwitches: 
   option1text: Ugh, fine I'll go deal with them.
-  option1IrsReputation: 0
+  option1IrsReputation: 1
   option1PunkReputation: 0
   option1ShakeReputation: 0
   option1GuardReputation: 0
@@ -51,20 +51,20 @@ MonoBehaviour:
   Option2On: 1
   option2ReqSwitches: 
   option2text: Threaten him.
-  option2IrsReputation: 0
+  option2IrsReputation: -1
   option2PunkReputation: 0
-  option2ShakeReputation: 0
-  option2GuardReputation: 0
+  option2ShakeReputation: 2
+  option2GuardReputation: -1
   option2ObtainedSwitches: 
   option2RemovedSwitches: 
   option2FollowCard: {fileID: 11400000, guid: 08d85a0b920a78f4a8e249a066ffb29a, type: 2}
   Option3On: 1
   option3ReqSwitches: 
   option3text: Run away as fast as you can.
-  option3IrsReputation: 0
+  option3IrsReputation: -3
   option3PunkReputation: 0
   option3ShakeReputation: 0
-  option3GuardReputation: 0
+  option3GuardReputation: 3
   option3ObtainedSwitches: 
   option3RemovedSwitches: 
   option3FollowCard: {fileID: 11400000, guid: ff82e2628670d264fb71b76813b29643, type: 2}

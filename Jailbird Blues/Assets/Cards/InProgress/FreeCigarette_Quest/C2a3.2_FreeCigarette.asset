@@ -30,8 +30,8 @@ MonoBehaviour:
   musicOff: 0
   ambientOff: 0
   cardTextPerson: Mr.Shady
-  cardText: '"You see those protein shaker guys? Well, they owe me money and I need
-    you to go deal with it."'
+  cardText: "\"You see those \xC4protein shaker guys\xD6? Well, they owe me money
+    and I need you to go deal with it.\""
   logText: 
   endCard: 0
   timeCard: 0

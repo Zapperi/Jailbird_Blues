@@ -30,7 +30,7 @@ MonoBehaviour:
   musicOff: 1
   ambientOff: 0
   cardTextPerson: Shaker bro
-  cardText: "\"Your taxman isn't the smartest one, but he sure has spirit.\"\r\nThe
+  cardText: "\"Your taxman isn't the smartest one, but he sure \xC4has spirit.\xD6\"\r\nThe
     protein shakers walk away."
   logText: 
   endCard: 0

@@ -30,8 +30,7 @@ MonoBehaviour:
   musicOff: 0
   ambientOff: 0
   cardTextPerson: You
-  cardText: "You point to the shady guy.\r\n\"Well, I'm here to collect the money
-    you owe him.\""
+  cardText: '"Well, I''m here to collect the money you owe him."'
   logText: 
   endCard: 0
   timeCard: 0

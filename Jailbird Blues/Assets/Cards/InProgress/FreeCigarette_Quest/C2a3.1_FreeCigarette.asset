@@ -30,8 +30,8 @@ MonoBehaviour:
   musicOff: 0
   ambientOff: 0
   cardTextPerson: Mr.Shady
-  cardText: "\"Oh, no no no. In prison nothing is free.\" he chuckles.\r\nHe points
-    to the workout station\r."
+  cardText: "\"Oh, no no no. In prison \xC4nothing is free.\xD6\" he chuckles.\r\nHe
+    points to the workout station\r."
   logText: 
   endCard: 0
   timeCard: 0

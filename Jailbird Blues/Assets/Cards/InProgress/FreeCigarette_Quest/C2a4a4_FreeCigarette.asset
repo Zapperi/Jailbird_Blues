@@ -41,9 +41,9 @@ MonoBehaviour:
   Option1On: 1
   option1ReqSwitches: 
   option1text: Insist they pay
-  option1IrsReputation: 0
+  option1IrsReputation: 2
   option1PunkReputation: 0
-  option1ShakeReputation: 0
+  option1ShakeReputation: -2
   option1GuardReputation: 0
   option1ObtainedSwitches: 
   option1RemovedSwitches: 
@@ -51,7 +51,7 @@ MonoBehaviour:
   Option2On: 1
   option2ReqSwitches: 
   option2text: Go back empty handed
-  option2IrsReputation: 0
+  option2IrsReputation: -2
   option2PunkReputation: 0
   option2ShakeReputation: 0
   option2GuardReputation: 0

@@ -82,7 +82,7 @@ MonoBehaviour:
   option5IrsReputation: 0
   option5PunkReputation: 0
   option5ShakeReputation: 0
-  option5GuardReputation: 0
+  option5GuardReputation: 5
   option5ObtainedSwitches: 
   option5RemovedSwitches: 
   option5FollowCard: {fileID: 11400000, guid: a1d7d997113aeab44aaf269a3a392354, type: 2}

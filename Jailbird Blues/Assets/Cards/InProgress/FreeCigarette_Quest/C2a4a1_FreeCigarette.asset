@@ -30,7 +30,8 @@ MonoBehaviour:
   musicOff: 0
   ambientOff: 0
   cardTextPerson: Shaker bro
-  cardText: "Three huge guys turn your direction.\r\n\"Sup bro.\""
+  cardText: "Three huge guys turn your direction.\r\n\"Sup bro.\"\nYou point at the
+    \xC4shady guy\xD6 at the IRS table."
   logText: 
   endCard: 0
   timeCard: 0
@@ -99,5 +100,5 @@ MonoBehaviour:
   blackScreenTime: 0
   ppsFadeInSpeed: 0
   ppsShowCard: 0
-  ppsHasFadeOut: 0
+  ppsHasFadeOut: 1
   fadeOutSpeed: 0

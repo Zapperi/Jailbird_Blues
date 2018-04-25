@@ -41,7 +41,7 @@ MonoBehaviour:
   Option1On: 1
   option1ReqSwitches: 
   option1text: '"How pleased I am to run your favours."'
-  option1IrsReputation: 0
+  option1IrsReputation: 1
   option1PunkReputation: 0
   option1ShakeReputation: 0
   option1GuardReputation: 0
@@ -51,8 +51,8 @@ MonoBehaviour:
   Option2On: 1
   option2ReqSwitches: 
   option2text: Spit on his face.
-  option2IrsReputation: 0
-  option2PunkReputation: 0
+  option2IrsReputation: -3
+  option2PunkReputation: 5
   option2ShakeReputation: 0
   option2GuardReputation: 0
   option2ObtainedSwitches: 

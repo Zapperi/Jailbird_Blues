@@ -80,10 +80,10 @@ MonoBehaviour:
   option4RemovedSwitches: 
   option4FollowCard: {fileID: 0}
   Option5On: 1
-  option5IrsReputation: 1
-  option5PunkReputation: 1
-  option5ShakeReputation: 1
-  option5GuardReputation: -2
+  option5IrsReputation: 0
+  option5PunkReputation: 0
+  option5ShakeReputation: 0
+  option5GuardReputation: 0
   option5ObtainedSwitches: 
   option5RemovedSwitches: 
   option5FollowCard: {fileID: 0}
