@@ -716,12 +716,14 @@ public class GameController : MonoBehaviour {
             case 1:
                 if (currentCard.option1ObtainedSwitches.Count > 0)
                 {
+                    allSwitches[3] = false;
                     for (int i = 0; i < currentCard.option1ObtainedSwitches.Count; i++)
                     {
                         allSwitches[currentCard.option1ObtainedSwitches[i]] = true;
                         if (allSwitches[3] == true)
                         {
                             AddCig();
+                            allSwitches[3] = false;
                         }
                     }
                 }
@@ -729,12 +731,14 @@ public class GameController : MonoBehaviour {
             case 2:
                 if (currentCard.option2ObtainedSwitches.Count > 0)
                 {
+                    allSwitches[3] = false;
                     for (int i = 0; i < currentCard.option2ObtainedSwitches.Count; i++)
                     {
                         allSwitches[currentCard.option2ObtainedSwitches[i]] = true;
                         if (allSwitches[3] == true)
                         {
                             AddCig();
+                            allSwitches[3] = false;
                         }
                     }
                 }
@@ -742,12 +746,14 @@ public class GameController : MonoBehaviour {
             case 3:
                 if (currentCard.option3ObtainedSwitches.Count > 0)
                 {
+                    allSwitches[3] = false;
                     for (int i = 0; i < currentCard.option3ObtainedSwitches.Count; i++)
                     {
                         allSwitches[currentCard.option3ObtainedSwitches[i]] = true;
                         if (allSwitches[3] == true)
                         {
                             AddCig();
+                            allSwitches[3] = false;
                         }
                     }
                 }
@@ -755,12 +761,14 @@ public class GameController : MonoBehaviour {
             case 4:
                 if (currentCard.option4ObtainedSwitches.Count > 0)
                 {
+                    allSwitches[3] = false;
                     for (int i = 0; i < currentCard.option4ObtainedSwitches.Count; i++)
                     {
                         allSwitches[currentCard.option4ObtainedSwitches[i]] = true;
                         if (allSwitches[3] == true)
                         {
                             AddCig();
+                            allSwitches[3] = false;
                         }
                     }
                 }
@@ -768,12 +776,14 @@ public class GameController : MonoBehaviour {
             case 5:
                 if (currentCard.option5ObtainedSwitches.Count > 0)
                 {
+                    allSwitches[3] = false;
                     for (int i = 0; i < currentCard.option5ObtainedSwitches.Count; i++)
                     {
                         allSwitches[currentCard.option5ObtainedSwitches[i]] = true;
                         if (allSwitches[3] == true)
                         {
                             AddCig();
+                            allSwitches[3] = false;
                         }
                     }
                 }
@@ -790,12 +800,14 @@ public class GameController : MonoBehaviour {
             case 1:
                 if (currentCard.option1RemovedSwitches.Count > 0)
                 {
+                    allSwitches[3] = true;
                     for (int i = 0; i < currentCard.option1RemovedSwitches.Count; i++)
                     {
                         allSwitches[currentCard.option1RemovedSwitches[i]] = false;
                         if (allSwitches[3] == false)
                         {
                             RemoveCig();
+                            allSwitches[3] = true;
                         }
                     }
                 }
@@ -803,12 +815,14 @@ public class GameController : MonoBehaviour {
             case 2:
                 if (currentCard.option2RemovedSwitches.Count > 0)
                 {
+                    allSwitches[3] = true;
                     for (int i = 0; i < currentCard.option2RemovedSwitches.Count; i++)
                     {
                         allSwitches[currentCard.option2RemovedSwitches[i]] = false;
                         if (allSwitches[3] == false)
                         {
                             RemoveCig();
+                            allSwitches[3] = true;
                         }
                     }
                 }
@@ -816,12 +830,14 @@ public class GameController : MonoBehaviour {
             case 3:
                 if (currentCard.option3RemovedSwitches.Count > 0)
                 {
+                    allSwitches[3] = true;
                     for (int i = 0; i < currentCard.option3RemovedSwitches.Count; i++)
                     {
                         allSwitches[currentCard.option3RemovedSwitches[i]] = false;
                         if (allSwitches[3] == false)
                         {
                             RemoveCig();
+                            allSwitches[3] = true;
                         }
                     }
                 }
@@ -829,12 +845,14 @@ public class GameController : MonoBehaviour {
             case 4:
                 if (currentCard.option4RemovedSwitches.Count > 0)
                 {
+                    allSwitches[3] = true;
                     for (int i = 0; i < currentCard.option4RemovedSwitches.Count; i++)
                     {
                         allSwitches[currentCard.option4RemovedSwitches[i]] = false;
                         if (allSwitches[3] == false)
                         {
                             RemoveCig();
+                            allSwitches[3] = true;
                         }
                     }
                 }
@@ -842,12 +860,14 @@ public class GameController : MonoBehaviour {
             case 5:
                 if (currentCard.option5RemovedSwitches.Count > 0)
                 {
+                    allSwitches[3] = true;
                     for (int i = 0; i < currentCard.option5RemovedSwitches.Count; i++)
                     {
                         allSwitches[currentCard.option5RemovedSwitches[i]] = false;
                         if (allSwitches[3] == false)
                         {
                             RemoveCig();
+                            allSwitches[3] = true;
                         }
                     }
                 }
@@ -899,6 +919,7 @@ public class GameController : MonoBehaviour {
     }
     public void AddCig()
     {
+        Debug.Log("added cig");
         cigaretteCount += 1;
         if (cigaretteCount >= 1)
         {
@@ -908,6 +929,7 @@ public class GameController : MonoBehaviour {
 
     public void RemoveCig()
     {
+        Debug.Log("removed cig");
         cigaretteCount -= 1;
         if (cigaretteCount <= 0)
         {
