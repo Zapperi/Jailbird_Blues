@@ -20,7 +20,7 @@ MonoBehaviour:
   storyPhase: 0
   backgroundImage: {fileID: 21300000, guid: 214f46d9c96dad347aa99d8654cd4a4e, type: 3}
   foregroundImage: {fileID: 0}
-  foregroundImage2: {fileID: 21300000, guid: a05c51235ae1d44448e5a5027c6e9df6, type: 3}
+  foregroundImage2: {fileID: 21300000, guid: d405c501f3c29154aadf75828ea405ab, type: 3}
   foregroundImage3: {fileID: 0}
   foregroundImage4: {fileID: 0}
   bgMusic: {fileID: 0}

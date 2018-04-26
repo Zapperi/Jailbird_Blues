@@ -19,7 +19,7 @@ MonoBehaviour:
   timeOfDay: 1
   storyPhase: 0
   backgroundImage: {fileID: 21300000, guid: 7c5e619a5c03cc943a4b68321a14beb1, type: 3}
-  foregroundImage: {fileID: 21300000, guid: 35aefacc3f074a4478e9117aec8c5539, type: 3}
+  foregroundImage: {fileID: 21300000, guid: 6a075baf7d81b704382ee2f31ff28893, type: 3}
   foregroundImage2: {fileID: 0}
   foregroundImage3: {fileID: 0}
   foregroundImage4: {fileID: 0}
@@ -36,7 +36,9 @@ MonoBehaviour:
   logText: 
   endCard: 0
   timeCard: 0
+  onTop: 0
   repeatable: 0
+  endOfGame: 0
   OptionsOn: 0
   Option1On: 0
   option1ReqSwitches: 

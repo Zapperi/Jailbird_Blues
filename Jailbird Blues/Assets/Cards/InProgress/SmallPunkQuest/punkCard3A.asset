@@ -21,7 +21,7 @@ MonoBehaviour:
   backgroundImage: {fileID: 21300000, guid: 1893ac2562840144f95617afa0eb2ff1, type: 3}
   foregroundImage: {fileID: 0}
   foregroundImage2: {fileID: 0}
-  foregroundImage3: {fileID: 21300000, guid: 07b92b6a3c3e1f94a8a34c9ffc9ac547, type: 3}
+  foregroundImage3: {fileID: 21300000, guid: 8db750d4a2057234ca792a911fce4c52, type: 3}
   foregroundImage4: {fileID: 0}
   bgMusic: {fileID: 0}
   bgAmbientAudio: {fileID: 0}
