@@ -30,7 +30,7 @@ MonoBehaviour:
   musicOff: 0
   ambientOff: 0
   cardTextPerson: 
-  cardText: "The guard escorts you back towards your cell. The Freddie\u2019s footsteps
+  cardText: "The guard escorts you back towards your cell. Freddie\u2019s footsteps
     grow fainter."
   logText: 
   endCard: 0

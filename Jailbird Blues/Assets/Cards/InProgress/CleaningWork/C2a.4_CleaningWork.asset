@@ -31,7 +31,7 @@ MonoBehaviour:
   ambientOff: 0
   cardTextPerson: Heavyset guard
   cardText: "\u201DI have no idea why it\u2019s there and I\u2019ve been working here\r
-    long enough that I don\u2019t even want to know. Good thing you called me,\r\nI\u2019ll
+    long enough that I don\u2019t even want to know. Good thing you called me,\r I\u2019ll
     report this immediately.\u201D\r"
   logText: 
   endCard: 0
