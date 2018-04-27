@@ -145,12 +145,19 @@ MonoBehaviour:
   locationText: {fileID: 0}
   allSwitches: 00000000000000000000
   allCards:
-  - {fileID: 11400000, guid: 299d181e0ce5c1746a9e462dd6bb9786, type: 2}
-  - {fileID: 11400000, guid: dc00b4999bf695a468017450197d9967, type: 2}
-  - {fileID: 11400000, guid: b0d485d20bc264341aa4f18714e7e7ac, type: 2}
-  - {fileID: 11400000, guid: 0e8f516cf45a41c41abf604fb52d72f1, type: 2}
+  - {fileID: 11400000, guid: 6e959b5c89a96b04fa84f0c14dad0359, type: 2}
+  - {fileID: 11400000, guid: 7a2f9a2d0de7bc64aa7428f3221075f5, type: 2}
+  - {fileID: 11400000, guid: 892fcd297ddb2cb47aa78016f63abb80, type: 2}
   - {fileID: 11400000, guid: 41becca41d51a4641a6d13d7c9f5d367, type: 2}
+  - {fileID: 11400000, guid: 2ad7e871bd45a224782459530a45384f, type: 2}
+  - {fileID: 11400000, guid: 7baafa149e0ce4f4792182394f55a5b0, type: 2}
+  - {fileID: 11400000, guid: 57a0c0761d842074fa9447b17a9f588f, type: 2}
+  - {fileID: 11400000, guid: fa0a9a36a64aece4881b7a1f4077eef0, type: 2}
+  - {fileID: 11400000, guid: ad6e9ca9b09ec474e9056d41543e439c, type: 2}
+  - {fileID: 11400000, guid: cf9c91e78cbbd7446a83540fb8d76164, type: 2}
   - {fileID: 11400000, guid: 3ff04b9a82bf5a4459c9f5ed2bfa1afe, type: 2}
+  - {fileID: 11400000, guid: 94a918c056845134e8b3a94b11dc3f0f, type: 2}
+  - {fileID: 11400000, guid: b67e254ddc892874d95cc4a33120c571, type: 2}
   yardCards: []
   messCards: []
   workshopCards: []
@@ -161,7 +168,7 @@ MonoBehaviour:
   currentCard: {fileID: 11400000, guid: cb2651b7189735b4b81de470bbcc6e19, type: 2}
   previousCard: {fileID: 0}
   endcardOn: 0
-  endOfGameCard: {fileID: 11400000, guid: 43bb7910b6a6a504b8d06b69b50e6cfa, type: 2}
+  endOfGameCard: {fileID: 11400000, guid: 763737726e8c0cf4a862225b3d96afe2, type: 2}
   sfxSource: {fileID: 0}
   logPage: {fileID: 0}
   logText: 
@@ -199,7 +206,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edc09f75913544f4bac6c99093a7bf65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volume: 0
   textSpeed: 0
   gammaImage: {fileID: 0}
-  canvas: {fileID: 0}
+  card: {fileID: 0}

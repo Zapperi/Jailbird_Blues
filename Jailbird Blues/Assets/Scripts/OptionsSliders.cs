@@ -4,31 +4,26 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class OptionsSliders : MonoBehaviour {
-	public float volume;
+
 	public float textSpeed;
 	public static bool instatext;
-	AudioSource audioSource;
 	public Image gammaImage;
-	public Canvas canvas;
+	//public Canvas canvas;
+	public GameObject card;
 
 	void Start()
 	{
-		//Initiate the Slider value to half way
-		volume = 0.5f;
-		//Fetch the AudioSource from the GameObject
-		audioSource = GetComponent<AudioSource>();
-
-		canvas.GetComponent<CanvasScaler> ().scaleFactor = Menu.scale;
+		//canvas.GetComponent<CanvasScaler> ().scaleFactor = Menu.scale;
+		card.transform.localScale = new Vector3(Menu.scale, Menu.scale, Menu.scale);
 		CardDisplay.textScrollSpeed = Menu.textSpeed/20.0f;
 		gammaImage.color = new Color(0.1f, 0.1f, 0.1f, Menu.gamma);
 	}
 	public void ScaleChanged(float value){
-		canvas.GetComponent<CanvasScaler> ().scaleFactor = value;
+		//canvas.GetComponent<CanvasScaler> ().scaleFactor = value;
+		card.transform.localScale = new Vector3(value, value, value);
 		Menu.scale = value;
 	}
 	public void VolumeChanged(float value){
-		this.volume = value;
-		audioSource.volume = volume;
 		Menu.musicVolume = value;
 	}
 	public void SfxChanged(float value){
