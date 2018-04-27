@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class OptionsSliders : MonoBehaviour {
 
-	public float textSpeed;
 	public static bool instatext;
 	public Image gammaImage;
 	//public Canvas canvas;
@@ -32,12 +31,11 @@ public class OptionsSliders : MonoBehaviour {
 	}
 
 	public void ScrollSpeedChanged(float value){
-		this.textSpeed = value;
         if (value == 0.0f)
             instatext = true;
 		else
 			instatext = false;
-		CardDisplay.textScrollSpeed = textSpeed/20.0f;
+		CardDisplay.textScrollSpeed = value/20.0f;
 		Menu.textSpeed = value;
 	}
 
