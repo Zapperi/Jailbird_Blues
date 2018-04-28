@@ -24,10 +24,11 @@ public class CardDisplay : MonoBehaviour
     public Button button5;
     public Button buttonNoteBook;
     public Image background;
-    public Image foregroundImage1;
-    public Image foregroundImage2;
-    public Image foregroundImage3;
-    public Image foregroundImage4;
+    public Image foregroundImage1;          // Right foreground image slot
+    public Image foregroundImage2;          // Left foreground image slot
+    public Image foregroundImage3;          // Center foreground image slot
+    public Image foregroundImage4;          // Item foreground image slot
+    public Image foregroundBigImage;        // Big center foreground image slot
     public Image fadeImage;
     public float fadeSpeed = 0.25f;         // Set how fast the overlaying image fades in and out.
     public GameObject noteBook;
@@ -417,7 +418,8 @@ public class CardDisplay : MonoBehaviour
         foregroundImage1.sprite = currentCard.foregroundImage;
         foregroundImage2.sprite = currentCard.foregroundImage2;
         foregroundImage3.sprite = currentCard.foregroundImage3;
-        foregroundImage4.sprite = currentCard.foregroundImage4;
+        foregroundImage4.sprite = currentCard.foregroundItemImage;
+        foregroundBigImage.sprite = currentCard.foregroundBigImage;
 
         if (!foregroundImage1.sprite)
             foregroundImage1.gameObject.SetActive(false);
@@ -435,6 +437,11 @@ public class CardDisplay : MonoBehaviour
             foregroundImage4.gameObject.SetActive(false);
         else
             foregroundImage4.gameObject.SetActive(true);
+        if (!foregroundBigImage.sprite)
+            foregroundBigImage.gameObject.SetActive(false);
+        else
+            foregroundBigImage.gameObject.SetActive(true);
+
     }
 
     public void RefreshTextFields()                     // Function that refreshes the CardDisplay's text fields.

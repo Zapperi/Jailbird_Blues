@@ -104,7 +104,7 @@ public class CustomCardValuesInspector : Editor                 //We are using E
             GUILayout.EndHorizontal();
             GUILayout.BeginHorizontal();
             cv.foregroundImage3 = (Sprite)EditorGUILayout.ObjectField("Foreground 3", cv.foregroundImage3, typeof(Sprite), false);
-            cv.foregroundImage4 = (Sprite)EditorGUILayout.ObjectField("Foreground 4", cv.foregroundImage4, typeof(Sprite), false);
+            cv.foregroundItemImage = (Sprite)EditorGUILayout.ObjectField("Foreground 4", cv.foregroundItemImage, typeof(Sprite), false);
             GUILayout.EndHorizontal();
 
             serializedObject.Update();

@@ -30,7 +30,7 @@ public class CustomCardDisplay : Editor {
                 cd.foregroundImage1.sprite = cd.currentCard.foregroundImage;
                 cd.foregroundImage2.sprite = cd.currentCard.foregroundImage2;
                 cd.foregroundImage3.sprite = cd.currentCard.foregroundImage3;
-                cd.foregroundImage4.sprite = cd.currentCard.foregroundImage4;
+                cd.foregroundImage4.sprite = cd.currentCard.foregroundItemImage;
 
             cd.cardText.text = cd.currentCard.cardText;
             cd.button1text.text = cd.currentCard.option1text;
