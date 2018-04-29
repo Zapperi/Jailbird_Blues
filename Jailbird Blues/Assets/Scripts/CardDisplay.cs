@@ -44,7 +44,10 @@ public class CardDisplay : MonoBehaviour
     private string highlightColorHex;       // Save the color's hex into string, used later
 
     public GameObject logPage;              // Reference to the notebook's log page, set in inspector
-    public GameObject inventoryPage;
+    public GameObject invPage;
+    public GameObject statsPage;
+    public GameObject optionsPage;
+    public GameObject inventoryContent;
 
     public GameObject popUp;                // Reference to the popup element, set in inspector
     public bool popUpMouseOver;             // Track if mouse is over the popup element
@@ -101,7 +104,7 @@ public class CardDisplay : MonoBehaviour
 		
     void Update()
     {
-       
+        CheckKeyPresses();
         //Call popUp functions, if mouse is over the element, activate the popUp.
         ShowPopUp();
         Button1PopUp();
@@ -152,7 +155,7 @@ public class CardDisplay : MonoBehaviour
         GameController.gameController.RemoveSwitches(button);
         GameController.gameController.UpdateReputations(button);
         GameController.gameController.PrintReputations(button);
-        inventoryPage.GetComponent<InventoryPage>().RefreshInventory();     // Refresh the inventory by removing everything and adding them back with updated values.
+        inventoryContent.GetComponent<InventoryPage>().RefreshInventory();     // Refresh the inventory by removing everything and adding them back with updated values.
         bool followUp = false;
         if (button == 1 && currentCard.option1FollowCard)
         {
@@ -243,7 +246,7 @@ public class CardDisplay : MonoBehaviour
         {
             noteBook.gameObject.SetActive(true);
             noteBook.GetComponent<NoteBook>().UpdateNotebook();
-            inventoryPage.GetComponent<InventoryPage>().RefreshInventory();
+            inventoryContent.GetComponent<InventoryPage>().RefreshInventory();
         }
         else
             noteBook.gameObject.SetActive(false);                   // If notebook is active, set it to disabled.
@@ -417,6 +420,106 @@ public class CardDisplay : MonoBehaviour
         else
             buttonPopUp4Img.SetActive(false);
     }
+
+    private void CheckKeyPresses()                              // Function that checks for notebook keyboard shortcuts. Also update notebook whenever a key is pressed.
+    {
+        if (Input.GetButtonDown("Notebook"))
+        {
+            noteBook.GetComponent<NoteBook>().UpdateNotebook();
+            if (noteBook.activeSelf == false)
+                noteBook.gameObject.SetActive(true);
+            else
+                noteBook.gameObject.SetActive(false);
+        }                // If escape is pressed, open notebook. If open, close it.
+        if (Input.GetButtonDown("Log"))
+        {
+            noteBook.GetComponent<NoteBook>().UpdateNotebook();
+            if (noteBook.activeSelf == false)
+            {
+                noteBook.gameObject.SetActive(true);
+                DisableNotebookPages();
+                logPage.gameObject.SetActive(true);
+            }
+            else
+            {
+                if (logPage.gameObject.activeSelf)
+                    noteBook.gameObject.SetActive(false);
+                else
+                {
+                    DisableNotebookPages();
+                    logPage.gameObject.SetActive(true);
+                }
+            }
+        }                     // if "l" key is pressed, open notebook and log page. Otherwise close if log page is open.
+        if (Input.GetButtonDown("Stats"))
+        {
+            noteBook.GetComponent<NoteBook>().UpdateNotebook();
+            if (noteBook.activeSelf == false)
+            {
+                noteBook.gameObject.SetActive(true);
+                DisableNotebookPages();
+                statsPage.gameObject.SetActive(true);
+            }
+            else
+            {
+                if (statsPage.gameObject.activeSelf)
+                    noteBook.gameObject.SetActive(false);
+                else
+                {
+                    DisableNotebookPages();
+                    statsPage.gameObject.SetActive(true);
+                }
+            }
+        }                   // if "s" or "p" key is pressed, open notebook and stats page. Otherwise close if stats page is open.
+        if (Input.GetButtonDown("Options"))
+        {
+            noteBook.GetComponent<NoteBook>().UpdateNotebook();
+            if (noteBook.activeSelf == false)
+            {
+                noteBook.gameObject.SetActive(true);
+                DisableNotebookPages();
+                optionsPage.gameObject.SetActive(true);
+            }
+            else
+            {
+                if (optionsPage.gameObject.activeSelf)
+                    noteBook.gameObject.SetActive(false);
+                else
+                {
+                    DisableNotebookPages();
+                    optionsPage.gameObject.SetActive(true);
+                }
+            }
+        }                 // if "o" key is pressed, open notebook and options page. Otherwise close if options page is open.
+        if (Input.GetButtonDown("Inventory"))
+        {
+            noteBook.GetComponent<NoteBook>().UpdateNotebook();
+            inventoryContent.GetComponent<InventoryPage>().RefreshInventory();
+            if (noteBook.activeSelf == false)
+            {
+                noteBook.gameObject.SetActive(true);
+                DisableNotebookPages();
+                invPage.gameObject.SetActive(true);
+            }
+            else
+            {
+                if (invPage.gameObject.activeSelf)
+                    noteBook.gameObject.SetActive(false);
+                else
+                {
+                    DisableNotebookPages();
+                    invPage.gameObject.SetActive(true);
+                }
+            }
+        }               // if "i" key is pressed, open notebook and inventory page. Otherwise close if inventory page is open.
+    }
+    private void DisableNotebookPages()
+    {
+        logPage.gameObject.SetActive(false);
+        statsPage.gameObject.SetActive(false);
+        invPage.gameObject.SetActive(false);
+        optionsPage.gameObject.SetActive(false);        
+    }                       // Function that deactivates every notebook page
 
     public void BlockButtons()                                    // Function that disables all player interaction by using overlayingimage
     {
