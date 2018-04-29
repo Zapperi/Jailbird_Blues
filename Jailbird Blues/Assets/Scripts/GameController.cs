@@ -251,9 +251,11 @@ public class GameController : MonoBehaviour {
 
     public void SetCurrentCard(int selectedOption)                            //This is where changing begins.
     {
+        cardDisplay.BlockButtons();
+        Debug.Log("Block2 " + selectedOption);
         if (currentCard.ppsHasFadeOut || currentCard.sfxHasFadeOut)
         {
-            cardDisplay.BlockButtons();
+            //cardDisplay.BlockButtons();
             switch (selectedOption)
             {
                 case 1:
@@ -311,9 +313,11 @@ public class GameController : MonoBehaviour {
 
     public void SetCurrentCard(CardValues next)
     {
+        Debug.Log("Block1");
+        cardDisplay.BlockButtons();
         if (currentCard.ppsHasFadeOut || currentCard.sfxHasFadeOut)
         {
-            cardDisplay.BlockButtons();
+            //cardDisplay.BlockButtons();
             cardWaiting = next;
 
             if (currentCard.ppsHasFadeOut)
@@ -346,6 +350,7 @@ public class GameController : MonoBehaviour {
         if (cleaningUpFades)                                    //This is used to prevent changing cards after cleaning up fades (it uses same function as normal fade-out which would also end up here and change card)
         {
             cleaningUpFades = false;
+            cardDisplay.UnblockButtons();
             return;
         }
         if (currentCard.timeCard)
@@ -367,6 +372,7 @@ public class GameController : MonoBehaviour {
         SetBackgroundAudio();         // Update audio.
         AddLogEvent();
         cardDisplay.StartTextCoroutine(); //****************
+        cardDisplay.UpdateCardDisplay();
         if (!currentCard.isTimeBasedCard)
         {
             if (currentCard.sfx != null)
@@ -377,10 +383,11 @@ public class GameController : MonoBehaviour {
             }
             if (currentCard.ppsHasFadeIn || currentCard.blackScreenStart)                               //If the next card has a fade-in
             {
-                //waitingForPPS = true;
+                waitingForPPS = true;
                 cleaningUpFades = true;
-                //cardDisplay.disableButtons();
+                cardDisplay.BlockButtons();
                 mainCamera.GetComponent<PPSManager>().SetFades(currentCard);
+                
             }
             else
             {
@@ -390,6 +397,9 @@ public class GameController : MonoBehaviour {
                     cleaningUpFades = true;
                     cardDisplay.BlockButtons();
                     mainCamera.GetComponent<PPSManager>().DoFadeIn();
+                } else
+                {
+                    cardDisplay.UnblockButtons();
                 }
             }
 

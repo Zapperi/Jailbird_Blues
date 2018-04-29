@@ -96,6 +96,7 @@ public class CardDisplay : MonoBehaviour
 		siblingIndexOne = foregroundImage1.transform.GetSiblingIndex();             // Set the reference to foregroundimage1 order.
 		siblingIndexTwo = foregroundImage2.transform.GetSiblingIndex();             // Set the reference to foregroundimage2 order.
         UpdateTypeText();                                                           //Set text scrolling
+        UpdateCardDisplay();
     }
 		
     void Update()
@@ -107,7 +108,7 @@ public class CardDisplay : MonoBehaviour
         Button2PopUp();
         Button3PopUp();
         Button4PopUp();
-
+        /*
         UpdatePopUpField();                                         // Update the previouscard text pop up field.
         
         if (currentCard != previousCard)
@@ -116,14 +117,31 @@ public class CardDisplay : MonoBehaviour
             currentCard = GameController.gameController.currentCard;    // Update the current to a new one
             UpdateImages();
         }
+        */
             
 
-        SiblingIndexSwitch();							            // Switches foreground images if needed.
+        //SiblingIndexSwitch();							            // Switches foreground images if needed.
                                                      // Update to new images, hide the field if there is no image.
-        RefreshTextFields();                                        // Update the textfield to current ones, does NOT affect cardText.
-        UpdateButtonFunctions();                                    // Update the CardDisplay button listeners.
-        RefreshOptions();                                           // Refresh options, if options are off, enable option 5.
+        //RefreshTextFields();                                        // Update the textfield to current ones, does NOT affect cardText.
+        //UpdateButtonFunctions();                                    // Update the CardDisplay button listeners.
+        //RefreshOptions();                                           // Refresh options, if options are off, enable option 5.
         EnableButtons();                                            // Enables and Disables button according to options.
+    }
+
+    public void UpdateCardDisplay()
+    {
+        UpdatePopUpField();                                         // Update the previouscard text pop up field.
+
+        if (currentCard != previousCard)
+        {
+            previousCard = currentCard;
+            currentCard = GameController.gameController.currentCard;    // Update the current to a new one
+            UpdateImages();
+        }
+        SiblingIndexSwitch();
+        RefreshTextFields();
+        UpdateButtonFunctions();
+        RefreshOptions();
     }
 
     //--BUTTON FUNCTIONS--
@@ -494,11 +512,18 @@ public class CardDisplay : MonoBehaviour
         //If there was text in the previous card, add text to popup element.
         if (GameController.gameController.previousCard)
         {
-            popUpText.fontSize = 15;
-            popUpText.text = GameController.gameController.previousCard.cardText;
-            coloredText = popUpText.text.Replace("Ä", "<color=#" + highlightColorHex + ">"); // Make sure the highlighted text gets the color
-            coloredText = coloredText.Replace("Ö", "</color>");                         // End the coloring area
-            popUpText.text = coloredText;                                                // Update the text
+            if (!GameController.gameController.previousCard.endCard)    //if previous card was not an endCard
+            {
+                popUpText.fontSize = 15;
+                popUpText.text = GameController.gameController.previousCard.cardText;
+                coloredText = popUpText.text.Replace("Ä", "<color=#" + highlightColorHex + ">"); // Make sure the highlighted text gets the color
+                coloredText = coloredText.Replace("Ö", "</color>");                         // End the coloring area
+                popUpText.text = coloredText;                                                // Update the text
+            } else
+            {
+                popUpText.text = "";
+            }
+
         }
         // If there was no text on previous card, type donuts instead.    
         else
