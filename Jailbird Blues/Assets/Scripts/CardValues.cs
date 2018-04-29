@@ -27,14 +27,23 @@ public class CardValues : ScriptableObject									//switched the surface from M
     public Sprite backgroundImage;                                          //reference to the image that will be set as the background
     [Tooltip("What image shows on the foreground right slot.")]
     public Sprite foregroundImage;                                          //reference to the image that will be set as the non playable character
+    [Tooltip("Flip the facing of the image to Right Facing.")]
+    public bool flipForegroundImageRight;
     [Tooltip("What image shows on the foreground left slot.")]
     public Sprite foregroundImage2;
+    [Tooltip("Flip the facing of the image to Right Facing.")]
+    public bool flipForegroundImageLeft;
     [Tooltip("What image shows on the center slot.")]
     public Sprite foregroundImage3;
-    [Tooltip("What image shows on the foreground item slot.")]
-    public Sprite foregroundItemImage;
+    [Tooltip("Flip the facing of the image to Right Facing.")]
+    public bool flipForegroundImageCenter;
     [Tooltip("What image shows on the foreground big center slot.")]
     public Sprite foregroundBigImage;
+    [Tooltip("Flip the facing of the image to Right Facing.")]
+    public bool flipForegroundImageBig;
+    [Tooltip("What image shows on the foreground item slot.")]
+    public Sprite foregroundItemImage;
+    [Space(6)]
     [Tooltip("Background music for this scene. If this slot is empty, the previous music continues to play.")]
     public AudioClip bgMusic;
     [Tooltip("Background ambient soundscape.")]

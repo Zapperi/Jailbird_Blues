@@ -78,6 +78,7 @@ public class CardDisplay : MonoBehaviour
 	int siblingIndexOne;
 	int siblingIndexTwo;
 
+    private CardValues previousCard;
 
     void Awake()
     {
@@ -108,9 +109,17 @@ public class CardDisplay : MonoBehaviour
         Button4PopUp();
 
         UpdatePopUpField();                                         // Update the previouscard text pop up field.
-        currentCard = GameController.gameController.currentCard;    // Update the current to a new one
+        
+        if (currentCard != previousCard)
+        {
+            previousCard = currentCard;
+            currentCard = GameController.gameController.currentCard;    // Update the current to a new one
+            UpdateImages();
+        }
+            
+
         SiblingIndexSwitch();							            // Switches foreground images if needed.
-        UpdateImages();                                             // Update to new images, hide the field if there is no image.
+                                                     // Update to new images, hide the field if there is no image.
         RefreshTextFields();                                        // Update the textfield to current ones, does NOT affect cardText.
         UpdateButtonFunctions();                                    // Update the CardDisplay button listeners.
         RefreshOptions();                                           // Refresh options, if options are off, enable option 5.
@@ -420,7 +429,15 @@ public class CardDisplay : MonoBehaviour
         foregroundImage3.sprite = currentCard.foregroundImage3;
         foregroundImage4.sprite = currentCard.foregroundItemImage;
         foregroundBigImage.sprite = currentCard.foregroundBigImage;
+        SetImageStatus();
+        FlipImages();
+        
 
+        
+    }
+
+    private void SetImageStatus()
+    {
         if (!foregroundImage1.sprite)
             foregroundImage1.gameObject.SetActive(false);
         else
@@ -441,7 +458,26 @@ public class CardDisplay : MonoBehaviour
             foregroundBigImage.gameObject.SetActive(false);
         else
             foregroundBigImage.gameObject.SetActive(true);
+    }
 
+    public void FlipImages()
+    {
+        if (currentCard.flipForegroundImageRight)
+            foregroundImage1.transform.Rotate(0f, 180f, 0f);
+        else
+            foregroundImage1.transform.Rotate(0f, 0f, 0f);
+        if (currentCard.flipForegroundImageLeft)
+            foregroundImage2.transform.Rotate(0f, 180f, 0f);
+        else
+            foregroundImage2.transform.Rotate(0f, 0f, 0f);
+        if (currentCard.flipForegroundImageCenter)
+            foregroundImage3.transform.Rotate(0f, 180f, 0f);
+        else
+            foregroundImage3.transform.Rotate(0f, 0f, 0f);
+        if (currentCard.flipForegroundImageBig)
+            foregroundBigImage.transform.Rotate(0f, 180f, 0f);
+        else
+            foregroundBigImage.transform.Rotate(0f, 0f, 0f);
     }
 
     public void RefreshTextFields()                     // Function that refreshes the CardDisplay's text fields.
