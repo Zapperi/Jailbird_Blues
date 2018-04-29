@@ -463,21 +463,21 @@ public class CardDisplay : MonoBehaviour
     public void FlipImages()
     {
         if (currentCard.flipForegroundImageRight)
-            foregroundImage1.transform.Rotate(0f, 180f, 0f);
+            foregroundImage1.transform.eulerAngles = new Vector3(0f, 180f, 0f);
         else
-            foregroundImage1.transform.Rotate(0f, 0f, 0f);
+            foregroundImage1.transform.eulerAngles = new Vector3(0f, 0f, 0f);
         if (currentCard.flipForegroundImageLeft)
-            foregroundImage2.transform.Rotate(0f, 180f, 0f);
+            foregroundImage2.transform.eulerAngles = new Vector3(0f, 180f, 0f);
         else
-            foregroundImage2.transform.Rotate(0f, 0f, 0f);
+            foregroundImage2.transform.eulerAngles = new Vector3(0f, 0f, 0f);
         if (currentCard.flipForegroundImageCenter)
-            foregroundImage3.transform.Rotate(0f, 180f, 0f);
+            foregroundImage3.transform.eulerAngles = new Vector3(0f, 180f, 0f);
         else
-            foregroundImage3.transform.Rotate(0f, 0f, 0f);
+            foregroundImage3.transform.eulerAngles = new Vector3(0f, 0f, 0f);
         if (currentCard.flipForegroundImageBig)
-            foregroundBigImage.transform.Rotate(0f, 180f, 0f);
+            foregroundBigImage.transform.eulerAngles = new Vector3(0f, 180f, 0f);
         else
-            foregroundBigImage.transform.Rotate(0f, 0f, 0f);
+            foregroundBigImage.transform.eulerAngles = new Vector3(0f, 0f, 0f);
     }
 
     public void RefreshTextFields()                     // Function that refreshes the CardDisplay's text fields.
