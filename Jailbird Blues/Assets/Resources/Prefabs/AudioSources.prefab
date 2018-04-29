@@ -625,8 +625,12 @@ MonoBehaviour:
   timeUntilFadeOut: 0
   afterWaitTime: 0
   fadeOutAmount: 0
+  masterVolume: 0
   sfxModifier: 0
   musicModifier: 0
+  masterSlider: {fileID: 0}
+  musicSlider: {fileID: 0}
+  sfxSlider: {fileID: 0}
   currentMusicVolume1: 0
   currentMusicVolume2: 0
   currentSfxVolume: 0

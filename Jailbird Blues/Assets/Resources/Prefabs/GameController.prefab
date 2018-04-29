@@ -208,3 +208,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gammaImage: {fileID: 0}
   card: {fileID: 0}
+  textSlider: {fileID: 0}
+  gammaSlider: {fileID: 0}
+  scaleSlider: {fileID: 0}
+  textSpeed: 0
+  gamma: 0
+  scale: 0

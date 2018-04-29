@@ -54,3 +54,6 @@ MonoBehaviour:
   masterVolume: 0
   musicVolume: 0
   sfxVolume: 0
+  gamma: 0
+  textSpeed: 0
+  scale: 0

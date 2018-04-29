@@ -56,8 +56,8 @@ public class SfxPlayer : MonoBehaviour
         timedIsWaiting = false;
         timedIsAfterWaiting = false;
 
-        currentSfxVolume = 1f;
-        currentTimedVolume = 1f;
+        currentSfxVolume = PersistentData.persistentValues.sfxVolume;
+        currentTimedVolume = PersistentData.persistentValues.sfxVolume;
     }
 
     private void Start()

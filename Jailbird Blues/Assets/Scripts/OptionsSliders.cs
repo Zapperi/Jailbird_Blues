@@ -3,44 +3,67 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class OptionsSliders : MonoBehaviour {
+public class OptionsSliders : MonoBehaviour
+{
 
-	public static bool instatext;
-	public Image gammaImage;
-	//public Canvas canvas;
-	public GameObject card;
+    public static bool instatext;
+    public Image gammaImage;
+    public GameObject card;
+    public Slider textSlider;
+    public Slider gammaSlider;
+    public Slider scaleSlider;
+    public float textSpeed;
+    public float gamma;
+    public float scale;
 
-	void Start()
-	{
-		//canvas.GetComponent<CanvasScaler> ().scaleFactor = Menu.scale;
-		card.transform.localScale = new Vector3(Menu.scale, Menu.scale, Menu.scale);
-		CardDisplay.textScrollSpeed = Menu.textSpeed/20.0f;
-		gammaImage.color = new Color(0.1f, 0.1f, 0.1f, Menu.gamma);
-	}
-	public void ScaleChanged(float value){
-		//canvas.GetComponent<CanvasScaler> ().scaleFactor = value;
-		card.transform.localScale = new Vector3(value, value, value);
-		Menu.scale = value;
-	}
-	//public void VolumeChanged(float value){
-	//	Menu.musicVolume = value;
-	//}
-	//public void SfxChanged(float value){
-		//value on slideristä saatava float välillä 0-1. valuen rangen voi tarvittaessa vaihtaa
-	//	Menu.sfxVolume = value;
-	//}
+    void Start()
+    {
+        LoadSettings();
+        scaleSlider.value = scale;
+        textSlider.value = textSpeed;
+        gammaSlider.value = gamma;
+    }
 
-	public void ScrollSpeedChanged(float value){
+
+    public void ScaleChanged(float value)
+    {
+        card.transform.localScale = new Vector3(value, value, value);
+        scale = value;
+
+    }
+
+
+    public void ScrollSpeedChanged(float value)
+    {
         if (value == 0.0f)
             instatext = true;
-		else
-			instatext = false;
-		CardDisplay.textScrollSpeed = value/20.0f;
-		Menu.textSpeed = value;
-	}
+        else
+            instatext = false;
+        CardDisplay.textScrollSpeed = value;
+        textSpeed = value;
+    }
 
-	public void GammaChanged(float value){
-		gammaImage.color = new Color(0.1f, 0.1f, 0.1f, value);
-		Menu.gamma = value;
-	}
+    public void GammaChanged(float value)
+    {
+        gammaImage.color = new Color(0.1f, 0.1f, 0.1f, value);
+        gamma = value;
+    }
+
+    public void LoadSettings()
+    {
+        scale = PersistentData.persistentValues.scale;
+        card.transform.localScale = new Vector3(scale, scale, scale);
+        textSpeed = PersistentData.persistentValues.textSpeed;
+        CardDisplay.textScrollSpeed = textSpeed;
+        gamma = PersistentData.persistentValues.gamma;
+        gammaImage.color = new Color(0.1f, 0.1f, 0.1f, gamma);
+    }
+
+    public void RememberSettings()
+    {
+        PersistentData.persistentValues.scale = scale;
+        PersistentData.persistentValues.textSpeed = textSpeed;
+        PersistentData.persistentValues.gamma = gamma;
+    }
+
 }

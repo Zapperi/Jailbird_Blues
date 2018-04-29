@@ -82,6 +82,7 @@ public class GameController : MonoBehaviour {
             waitingForPPS = false;
             waitingForSFX = false;
             cleaningUpFades = false;
+            GetComponent<OptionsSliders>().LoadSettings();
 
             //GetNextCard();
 
@@ -993,6 +994,7 @@ public class GameController : MonoBehaviour {
         PersistentData.persistentValues.masterVolume = sfxSource.GetComponent<SfxPlayer>().masterVolume;
         PersistentData.persistentValues.musicVolume = sfxSource.GetComponent<SfxPlayer>().musicModifier;
         PersistentData.persistentValues.sfxVolume = sfxSource.GetComponent<SfxPlayer>().sfxModifier;
+        GetComponent<OptionsSliders>().RememberSettings();
     }
 
     public void ReturnToMenu()

@@ -18,12 +18,9 @@ public class Menu : MonoBehaviour {
     public Slider sfxVolSlider;
     public AudioSource menuMusicSource;
 
-	public static float scale = 1.0f;
-    public static float masterVolume = 1.0f;
-	public static float musicVolume = 0.5f;
-	public static float sfxVolume = 0.5f;
-	public static float textSpeed = 0.25f;
-	public static float gamma = 0.0f;
+    public float masterVolume;
+    public float musicVolume;
+    public float sfxVolume;
 
 
 	// Use this for initialization
@@ -35,11 +32,13 @@ public class Menu : MonoBehaviour {
 	void Update () {
         masterVolume = masterVolSlider.value;
         musicVolume = musicVolSlider.value;
+        sfxVolume = sfxVolSlider.value;
         menuMusicSource.volume = masterVolume * musicVolume;
 	}
 
 	public void OnStartGame(){
 		Debug.Log ("start press");
+        GetComponent<OptionsSliders>().RememberSettings();
         RememberSettings();
 		SceneManager.LoadScene("tempSceneDeleteLater");
 	}
