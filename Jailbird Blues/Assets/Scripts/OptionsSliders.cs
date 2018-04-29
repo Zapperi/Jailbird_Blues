@@ -22,13 +22,13 @@ public class OptionsSliders : MonoBehaviour {
 		card.transform.localScale = new Vector3(value, value, value);
 		Menu.scale = value;
 	}
-	public void VolumeChanged(float value){
-		Menu.musicVolume = value;
-	}
-	public void SfxChanged(float value){
+	//public void VolumeChanged(float value){
+	//	Menu.musicVolume = value;
+	//}
+	//public void SfxChanged(float value){
 		//value on slideristä saatava float välillä 0-1. valuen rangen voi tarvittaessa vaihtaa
-		Menu.sfxVolume = value;
-	}
+	//	Menu.sfxVolume = value;
+	//}
 
 	public void ScrollSpeedChanged(float value){
         if (value == 0.0f)

@@ -103,7 +103,7 @@ public class NoteBook : MonoBehaviour {
 
     void ButtonQuitpressed()
     {
-		SceneManager.LoadScene("Menu");
+        GameController.gameController.ReturnToMenu();       //return to menu
 		/*
 
 #if UNITY_EDITOR

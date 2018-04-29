@@ -341,7 +341,7 @@ public class GameController : MonoBehaviour {
         }
         if (currentCard.endOfGame)
         {
-            SceneManager.LoadScene("Menu");
+            ReturnToMenu();                                     //at the end of game, start transition to menu
         }
         if (cleaningUpFades)                                    //This is used to prevent changing cards after cleaning up fades (it uses same function as normal fade-out which would also end up here and change card)
         {
@@ -976,6 +976,19 @@ public class GameController : MonoBehaviour {
             sfxSource.GetComponent<SfxPlayer>().SetActiveAudios(currentCard.musicOff, currentCard.ambientOff, mVol, aVol);
         }
 
+    }
+
+    public void RememberSettings()          //this function is called just before changing the scene to transfer the current values
+    {
+        PersistentData.persistentValues.masterVolume = sfxSource.GetComponent<SfxPlayer>().masterVolume;
+        PersistentData.persistentValues.musicVolume = sfxSource.GetComponent<SfxPlayer>().musicModifier;
+        PersistentData.persistentValues.sfxVolume = sfxSource.GetComponent<SfxPlayer>().sfxModifier;
+    }
+
+    public void ReturnToMenu()
+    {
+        RememberSettings();                 //"save" the current values
+        SceneManager.LoadScene("Menu");     //change the scene
     }
 
 }

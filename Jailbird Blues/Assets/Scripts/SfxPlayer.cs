@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SfxPlayer : MonoBehaviour
 {
@@ -31,8 +32,13 @@ public class SfxPlayer : MonoBehaviour
     public float afterWaitTime;
     public float fadeOutAmount;
 
+    public float masterVolume;
     public float sfxModifier;
     public float musicModifier;
+    public Slider masterSlider;
+    public Slider musicSlider;
+    public Slider sfxSlider;
+
     public float currentMusicVolume1;
     public float currentMusicVolume2;
     public float currentSfxVolume;
@@ -50,10 +56,13 @@ public class SfxPlayer : MonoBehaviour
         timedIsWaiting = false;
         timedIsAfterWaiting = false;
 
-        sfxModifier = 0.5f;
-        musicModifier = 0.5f;
         currentSfxVolume = 1f;
         currentTimedVolume = 1f;
+    }
+
+    private void Start()
+    {
+        SetVolumesAndSliders();
     }
 
     private void Update()
@@ -175,11 +184,11 @@ public class SfxPlayer : MonoBehaviour
             }
         }
 
-        sfxSource.volume = currentSfxVolume * sfxModifier;
-        timedSfxSource.volume = currentTimedVolume * sfxModifier;
-        ambientSource.volume = currentAmbientVolume * sfxModifier;
-        musicSource1.volume = currentMusicVolume1 * musicModifier;
-        musicSource2.volume = currentMusicVolume2 * musicModifier;
+        sfxSource.volume = currentSfxVolume * sfxModifier * masterVolume;
+        timedSfxSource.volume = currentTimedVolume * sfxModifier * masterVolume;
+        ambientSource.volume = currentAmbientVolume * sfxModifier * masterVolume;
+        musicSource1.volume = currentMusicVolume1 * musicModifier * masterVolume;
+        musicSource2.volume = currentMusicVolume2 * musicModifier * masterVolume;
 
     }
 
@@ -449,6 +458,11 @@ public class SfxPlayer : MonoBehaviour
         }
     }
 
+    public void SetMasterVolume(float value)
+    {
+        masterVolume = value;
+    }
+
     public void SetMusicModifier(float value)
     {
         musicModifier = value;
@@ -458,6 +472,19 @@ public class SfxPlayer : MonoBehaviour
     {
         sfxModifier = value;
     }
+
+    public void SetVolumesAndSliders()
+    {
+        masterVolume = PersistentData.persistentValues.masterVolume;
+        musicModifier = PersistentData.persistentValues.musicVolume;
+        sfxModifier = PersistentData.persistentValues.sfxVolume;
+        masterSlider.value = masterVolume;
+        musicSlider.value = musicModifier;
+        sfxSlider.value = sfxModifier;
+
+    }
+
+
 
     public void PlayTimedSfx(CardValues currentCard)
     {

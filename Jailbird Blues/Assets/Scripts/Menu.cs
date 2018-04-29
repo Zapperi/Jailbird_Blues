@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Menu : MonoBehaviour {
 
@@ -12,8 +13,13 @@ public class Menu : MonoBehaviour {
 	public GameObject back;
 	public GameObject options;
 	public GameObject Sliders;
+    public Slider masterVolSlider;
+    public Slider musicVolSlider;
+    public Slider sfxVolSlider;
+    public AudioSource menuMusicSource;
 
 	public static float scale = 1.0f;
+    public static float masterVolume = 1.0f;
 	public static float musicVolume = 0.5f;
 	public static float sfxVolume = 0.5f;
 	public static float textSpeed = 0.25f;
@@ -22,16 +28,19 @@ public class Menu : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+        LoadSettings();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+        masterVolume = masterVolSlider.value;
+        musicVolume = musicVolSlider.value;
+        menuMusicSource.volume = masterVolume * musicVolume;
 	}
 
 	public void OnStartGame(){
 		Debug.Log ("start press");
+        RememberSettings();
 		SceneManager.LoadScene("tempSceneDeleteLater");
 	}
 	public void OnQuit(){
@@ -69,4 +78,23 @@ public class Menu : MonoBehaviour {
 		Sliders.SetActive(false);
 		options.SetActive(true);
 	}
+
+    void LoadSettings()         //is called from start, loads settings from persistent object
+    {
+        masterVolume = PersistentData.persistentValues.masterVolume;
+        masterVolSlider.value = masterVolume;
+        musicVolume = PersistentData.persistentValues.musicVolume;
+        musicVolSlider.value = musicVolume;
+        sfxVolume = PersistentData.persistentValues.sfxVolume;
+        sfxVolSlider.value = sfxVolume;
+
+    }
+
+    void RememberSettings()     //at the end of the scene, records current settings to persistent object
+    {
+        PersistentData.persistentValues.masterVolume = masterVolume;
+        PersistentData.persistentValues.musicVolume = musicVolume;
+        PersistentData.persistentValues.sfxVolume = sfxVolume;
+    }
+
 }
