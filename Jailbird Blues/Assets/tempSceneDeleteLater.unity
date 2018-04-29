@@ -710,16 +710,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114743166947194950, guid: a5ca0da45ae9cf94f8ba95b70b239f82,
-        type: 2}
-      propertyPath: allCards.Array.size
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 114743166947194950, guid: a5ca0da45ae9cf94f8ba95b70b239f82,
-        type: 2}
-      propertyPath: cellCards.Array.size
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 4985295824015644, guid: a5ca0da45ae9cf94f8ba95b70b239f82, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -789,111 +779,9 @@ Prefab:
       objectReference: {fileID: 145588245}
     - target: {fileID: 114852098042609194, guid: a5ca0da45ae9cf94f8ba95b70b239f82,
         type: 2}
-      propertyPath: canvas
+      propertyPath: card
       value: 
-      objectReference: {fileID: 1269733503}
-    - target: {fileID: 114743166947194950, guid: a5ca0da45ae9cf94f8ba95b70b239f82,
-        type: 2}
-      propertyPath: currentCard
-      value: 
-      objectReference: {fileID: 11400000, guid: cb2651b7189735b4b81de470bbcc6e19,
-        type: 2}
-    - target: {fileID: 114743166947194950, guid: a5ca0da45ae9cf94f8ba95b70b239f82,
-        type: 2}
-      propertyPath: cellCards.Array.data[1]
-      value: 
-      objectReference: {fileID: 11400000, guid: 14871c1a9be9be3469e5845da70cddd7,
-        type: 2}
-    - target: {fileID: 114743166947194950, guid: a5ca0da45ae9cf94f8ba95b70b239f82,
-        type: 2}
-      propertyPath: cellCards.Array.data[2]
-      value: 
-      objectReference: {fileID: 11400000, guid: 4fca9182c48b5a746aa2b3b3e56fb896,
-        type: 2}
-    - target: {fileID: 114743166947194950, guid: a5ca0da45ae9cf94f8ba95b70b239f82,
-        type: 2}
-      propertyPath: endOfGameCard
-      value: 
-      objectReference: {fileID: 11400000, guid: 763737726e8c0cf4a862225b3d96afe2,
-        type: 2}
-    - target: {fileID: 114743166947194950, guid: a5ca0da45ae9cf94f8ba95b70b239f82,
-        type: 2}
-      propertyPath: allCards.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: 6e959b5c89a96b04fa84f0c14dad0359,
-        type: 2}
-    - target: {fileID: 114743166947194950, guid: a5ca0da45ae9cf94f8ba95b70b239f82,
-        type: 2}
-      propertyPath: allCards.Array.data[1]
-      value: 
-      objectReference: {fileID: 11400000, guid: 7a2f9a2d0de7bc64aa7428f3221075f5,
-        type: 2}
-    - target: {fileID: 114743166947194950, guid: a5ca0da45ae9cf94f8ba95b70b239f82,
-        type: 2}
-      propertyPath: allCards.Array.data[2]
-      value: 
-      objectReference: {fileID: 11400000, guid: 892fcd297ddb2cb47aa78016f63abb80,
-        type: 2}
-    - target: {fileID: 114743166947194950, guid: a5ca0da45ae9cf94f8ba95b70b239f82,
-        type: 2}
-      propertyPath: allCards.Array.data[3]
-      value: 
-      objectReference: {fileID: 11400000, guid: 41becca41d51a4641a6d13d7c9f5d367,
-        type: 2}
-    - target: {fileID: 114743166947194950, guid: a5ca0da45ae9cf94f8ba95b70b239f82,
-        type: 2}
-      propertyPath: allCards.Array.data[4]
-      value: 
-      objectReference: {fileID: 11400000, guid: 2ad7e871bd45a224782459530a45384f,
-        type: 2}
-    - target: {fileID: 114743166947194950, guid: a5ca0da45ae9cf94f8ba95b70b239f82,
-        type: 2}
-      propertyPath: allCards.Array.data[5]
-      value: 
-      objectReference: {fileID: 11400000, guid: 7baafa149e0ce4f4792182394f55a5b0,
-        type: 2}
-    - target: {fileID: 114743166947194950, guid: a5ca0da45ae9cf94f8ba95b70b239f82,
-        type: 2}
-      propertyPath: allCards.Array.data[6]
-      value: 
-      objectReference: {fileID: 11400000, guid: 57a0c0761d842074fa9447b17a9f588f,
-        type: 2}
-    - target: {fileID: 114743166947194950, guid: a5ca0da45ae9cf94f8ba95b70b239f82,
-        type: 2}
-      propertyPath: allCards.Array.data[7]
-      value: 
-      objectReference: {fileID: 11400000, guid: fa0a9a36a64aece4881b7a1f4077eef0,
-        type: 2}
-    - target: {fileID: 114743166947194950, guid: a5ca0da45ae9cf94f8ba95b70b239f82,
-        type: 2}
-      propertyPath: allCards.Array.data[8]
-      value: 
-      objectReference: {fileID: 11400000, guid: ad6e9ca9b09ec474e9056d41543e439c,
-        type: 2}
-    - target: {fileID: 114743166947194950, guid: a5ca0da45ae9cf94f8ba95b70b239f82,
-        type: 2}
-      propertyPath: allCards.Array.data[9]
-      value: 
-      objectReference: {fileID: 11400000, guid: cf9c91e78cbbd7446a83540fb8d76164,
-        type: 2}
-    - target: {fileID: 114743166947194950, guid: a5ca0da45ae9cf94f8ba95b70b239f82,
-        type: 2}
-      propertyPath: allCards.Array.data[10]
-      value: 
-      objectReference: {fileID: 11400000, guid: 3ff04b9a82bf5a4459c9f5ed2bfa1afe,
-        type: 2}
-    - target: {fileID: 114743166947194950, guid: a5ca0da45ae9cf94f8ba95b70b239f82,
-        type: 2}
-      propertyPath: allCards.Array.data[11]
-      value: 
-      objectReference: {fileID: 11400000, guid: 94a918c056845134e8b3a94b11dc3f0f,
-        type: 2}
-    - target: {fileID: 114743166947194950, guid: a5ca0da45ae9cf94f8ba95b70b239f82,
-        type: 2}
-      propertyPath: allCards.Array.data[12]
-      value: 
-      objectReference: {fileID: 11400000, guid: b67e254ddc892874d95cc4a33120c571,
-        type: 2}
+      objectReference: {fileID: 1792454320}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a5ca0da45ae9cf94f8ba95b70b239f82, type: 2}
   m_IsPrefabParent: 0
@@ -945,11 +833,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 53ca098e36bca914f93f77b66b09d92e, type: 2}
   m_IsPrefabParent: 0
---- !u!223 &1269733503 stripped
-Canvas:
-  m_PrefabParentObject: {fileID: 223348527675373308, guid: df67972d0e99a6d428df8e1f930ac1a0,
-    type: 2}
-  m_PrefabInternal: {fileID: 619536528}
 --- !u!114 &1297581160 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114360123044695436, guid: df67972d0e99a6d428df8e1f930ac1a0,
@@ -959,6 +842,11 @@ MonoBehaviour:
 --- !u!1 &1744789904 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1076108043617124, guid: df67972d0e99a6d428df8e1f930ac1a0,
+    type: 2}
+  m_PrefabInternal: {fileID: 619536528}
+--- !u!1 &1792454320 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1713099641910468, guid: df67972d0e99a6d428df8e1f930ac1a0,
     type: 2}
   m_PrefabInternal: {fileID: 619536528}
 --- !u!1001 &1794180553
