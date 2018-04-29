@@ -206,6 +206,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edc09f75913544f4bac6c99093a7bf65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textSpeed: 0
   gammaImage: {fileID: 0}
   card: {fileID: 0}

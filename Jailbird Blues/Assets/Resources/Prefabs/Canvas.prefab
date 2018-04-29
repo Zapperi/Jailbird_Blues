@@ -3748,6 +3748,7 @@ MonoBehaviour:
   foregroundImage2: {fileID: 114604823621802412}
   foregroundImage3: {fileID: 114601083980095150}
   foregroundImage4: {fileID: 114052836386177502}
+  foregroundBigImage: {fileID: 114573424701568200}
   fadeImage: {fileID: 114246348865638188}
   fadeSpeed: 0.25
   noteBook: {fileID: 1775076121153308}
@@ -3949,8 +3950,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_MethodName: 
-        m_Mode: 1
+        m_MethodName: SetMasterVolume
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4208,7 +4209,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 224729314312866458}
   m_Direction: 2
   m_Value: 0.951088
-  m_Size: 0.42190877
+  m_Size: 0.42190874
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
