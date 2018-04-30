@@ -56,6 +56,7 @@ GameObject:
   - component: {fileID: 222691845954121044}
   - component: {fileID: 114792544734491560}
   - component: {fileID: 114134384709761664}
+  - component: {fileID: 114716501801109500}
   m_Layer: 5
   m_Name: NotebookButton
   m_TagString: Untagged
@@ -2401,17 +2402,18 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 1, g: 0.5176471, b: 0, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: 21300000, guid: bc5d7883f1419014b99954e1c2899863,
+      type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: bc5d7883f1419014b99954e1c2899863, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -5073,6 +5075,19 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114716501801109500
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1010458930396640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f2aa1c0d72610046a49a09678834f5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouseOverSprite: {fileID: 21300000, guid: bc5d7883f1419014b99954e1c2899863, type: 3}
+  targetImage: {fileID: 114792544734491560}
 --- !u!114 &114733658637829598
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5230,14 +5245,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8161765, g: 0.8161765, b: 0.8161765, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 0b3495af3b9c9e347b0292eae5baf7d1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: afbc35121306a4642a37101ee49b523f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6702,8 +6717,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 102}
-  m_SizeDelta: {x: 400, y: 329}
+  m_AnchoredPosition: {x: 0, y: 102.5}
+  m_SizeDelta: {x: 400, y: 330}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224081149909971678
 RectTransform:
@@ -7574,8 +7589,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -340, y: 195}
-  m_SizeDelta: {x: 80, y: 100}
+  m_AnchoredPosition: {x: -358, y: 275}
+  m_SizeDelta: {x: 115, y: 115}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224467645545273252
 RectTransform:
@@ -8212,7 +8227,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -120, y: 97}
+  m_AnchoredPosition: {x: -120, y: 97.5}
   m_SizeDelta: {x: 280, y: 320}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224729314312866458
@@ -8576,7 +8591,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 97}
+  m_AnchoredPosition: {x: 0, y: 97.5}
   m_SizeDelta: {x: 280, y: 320}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224933227095434500
@@ -8707,7 +8722,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1216926068993842}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -9}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4071518016659678}
@@ -8715,7 +8730,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 120, y: 97}
+  m_AnchoredPosition: {x: 120, y: 97.5}
   m_SizeDelta: {x: 280, y: 320}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224998986167694870
