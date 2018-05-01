@@ -437,8 +437,7 @@ public class CardDisplay : MonoBehaviour
             if (noteBook.activeSelf == false)
             {
                 noteBook.gameObject.SetActive(true);
-                DisableNotebookPages();
-                logPage.gameObject.SetActive(true);
+                noteBook.GetComponent<NoteBook>().LogButtonpressed();
             }
             else
             {
@@ -446,8 +445,7 @@ public class CardDisplay : MonoBehaviour
                     noteBook.gameObject.SetActive(false);
                 else
                 {
-                    DisableNotebookPages();
-                    logPage.gameObject.SetActive(true);
+                    noteBook.GetComponent<NoteBook>().LogButtonpressed();
                 }
             }
         }                     // if "l" key is pressed, open notebook and log page. Otherwise close if log page is open.
@@ -457,8 +455,7 @@ public class CardDisplay : MonoBehaviour
             if (noteBook.activeSelf == false)
             {
                 noteBook.gameObject.SetActive(true);
-                DisableNotebookPages();
-                statsPage.gameObject.SetActive(true);
+                noteBook.GetComponent<NoteBook>().StatsButtonpressed();
             }
             else
             {
@@ -466,8 +463,7 @@ public class CardDisplay : MonoBehaviour
                     noteBook.gameObject.SetActive(false);
                 else
                 {
-                    DisableNotebookPages();
-                    statsPage.gameObject.SetActive(true);
+                    noteBook.GetComponent<NoteBook>().StatsButtonpressed();
                 }
             }
         }                   // if "s" or "p" key is pressed, open notebook and stats page. Otherwise close if stats page is open.
@@ -477,8 +473,7 @@ public class CardDisplay : MonoBehaviour
             if (noteBook.activeSelf == false)
             {
                 noteBook.gameObject.SetActive(true);
-                DisableNotebookPages();
-                optionsPage.gameObject.SetActive(true);
+                noteBook.GetComponent<NoteBook>().OptionsButtonpressed();
             }
             else
             {
@@ -486,8 +481,7 @@ public class CardDisplay : MonoBehaviour
                     noteBook.gameObject.SetActive(false);
                 else
                 {
-                    DisableNotebookPages();
-                    optionsPage.gameObject.SetActive(true);
+                    noteBook.GetComponent<NoteBook>().OptionsButtonpressed();
                 }
             }
         }                 // if "o" key is pressed, open notebook and options page. Otherwise close if options page is open.
@@ -498,8 +492,7 @@ public class CardDisplay : MonoBehaviour
             if (noteBook.activeSelf == false)
             {
                 noteBook.gameObject.SetActive(true);
-                DisableNotebookPages();
-                invPage.gameObject.SetActive(true);
+                noteBook.GetComponent<NoteBook>().InventoryButtonpressed();
             }
             else
             {
@@ -507,19 +500,12 @@ public class CardDisplay : MonoBehaviour
                     noteBook.gameObject.SetActive(false);
                 else
                 {
-                    DisableNotebookPages();
-                    invPage.gameObject.SetActive(true);
+                    noteBook.GetComponent<NoteBook>().InventoryButtonpressed();
                 }
             }
         }               // if "i" key is pressed, open notebook and inventory page. Otherwise close if inventory page is open.
     }
-    private void DisableNotebookPages()
-    {
-        logPage.gameObject.SetActive(false);
-        statsPage.gameObject.SetActive(false);
-        invPage.gameObject.SetActive(false);
-        optionsPage.gameObject.SetActive(false);        
-    }                       // Function that deactivates every notebook page
+ 
 
     public void BlockButtons()                                    // Function that disables all player interaction by using overlayingimage
     {
@@ -551,10 +537,7 @@ public class CardDisplay : MonoBehaviour
         foregroundImage4.sprite = currentCard.foregroundItemImage;
         foregroundBigImage.sprite = currentCard.foregroundBigImage;
         SetImageStatus();
-        FlipImages();
-        
-
-        
+        FlipImages();           
     }
 
     private void SetImageStatus()

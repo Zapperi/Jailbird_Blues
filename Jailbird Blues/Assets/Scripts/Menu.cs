@@ -44,10 +44,13 @@ public class Menu : MonoBehaviour {
 	}
 	public void OnQuit(){
 
-		Debug.Log ("quit");
-		Application.Quit();
-	}
-	public void OnCredits(){
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+        Application.Quit();         
+#endif
+    }
+    public void OnCredits(){
 		Debug.Log ("credits press");
 		textCredits.SetActive(true);
 		credits.SetActive(false);

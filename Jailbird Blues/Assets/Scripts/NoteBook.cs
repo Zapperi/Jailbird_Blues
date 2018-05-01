@@ -13,10 +13,13 @@ public class NoteBook : MonoBehaviour {
     public Button inventoryButton;
     public Button statsButton;
     public Button optionsButton;
+    public Button closeButton;
     public GameObject logPage;
     public GameObject inventoryPage;
     public GameObject statsPage;
     public GameObject optionsPage;
+    public GameObject quitConfirmation;
+
 	// Use this for initialization
 	void Start () {
 
@@ -25,6 +28,7 @@ public class NoteBook : MonoBehaviour {
         statsButton.onClick.AddListener(StatsButtonpressed);
         logButton.onClick.AddListener(LogButtonpressed);
         optionsButton.onClick.AddListener(OptionsButtonpressed);
+        closeButton.onClick.AddListener(CloseButtonpressed);
         this.gameObject.SetActive(false);
         UpdateStats();
 
@@ -63,7 +67,7 @@ public class NoteBook : MonoBehaviour {
         logPage.GetComponent<LogScript>().UpdateLogText();
     }
 
-    void LogButtonpressed()
+    public void LogButtonpressed()
     {
         GameController.gameController.ButtonClickPLay();
         logPage.gameObject.SetActive(true);
@@ -74,7 +78,7 @@ public class NoteBook : MonoBehaviour {
         UpdateStats();
     }
 
-    void InventoryButtonpressed()
+    public void InventoryButtonpressed()
     {
         GameController.gameController.ButtonClickPLay();
         logPage.gameObject.SetActive(false);
@@ -83,7 +87,7 @@ public class NoteBook : MonoBehaviour {
         optionsPage.gameObject.SetActive(false);
     }
 
-    void StatsButtonpressed()
+    public void StatsButtonpressed()
     {
         GameController.gameController.ButtonClickPLay();
         logPage.gameObject.SetActive(false);
@@ -92,7 +96,7 @@ public class NoteBook : MonoBehaviour {
         optionsPage.gameObject.SetActive(false);
     }
 
-    void OptionsButtonpressed()
+    public void OptionsButtonpressed()
     {
         GameController.gameController.ButtonClickPLay();
         logPage.gameObject.SetActive(false);
@@ -101,25 +105,16 @@ public class NoteBook : MonoBehaviour {
         optionsPage.gameObject.SetActive(true);
     }
 
-    void ButtonQuitpressed()
+    public void CloseButtonpressed()
     {
-        GameController.gameController.ReturnToMenu();       //return to menu
-		/*
-
-#if UNITY_EDITOR
-
-        UnityEditor.EditorApplication.isPlaying = false;
-
-#else
-       
-          Application.Quit();
-        
-#endif
-*/
+        GameController.gameController.ButtonClickPLay();
+        gameObject.SetActive(false);
     }
-    //this function exists just so we don't need to declare logpage gameobject in other scripts
-    //public void AddEventToLog(int index)
-    //{
-    //    logPage.GetComponent<LogScript>().AddLogEvent(index);
-    //}
+
+    public void ButtonQuitpressed()
+    {
+        if (!quitConfirmation.activeSelf)
+            gameObject.transform.parent.GetComponentInChildren<CardDisplay>().BlockButtons();
+        quitConfirmation.SetActive(true);
+    }
 }
