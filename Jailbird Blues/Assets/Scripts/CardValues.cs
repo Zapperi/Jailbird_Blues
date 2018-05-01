@@ -23,6 +23,8 @@ public class CardValues : ScriptableObject									//switched the surface from M
     [Tooltip("Required story phase.")]
     public int storyPhase;                                                  //progress
     [Header("Card information")]
+    [Tooltip("Location of the scene.")]
+    public string location;                                                 // Location of the scene in question.
     [Tooltip("What image shows on the background.")]
     public Sprite backgroundImage;                                          //reference to the image that will be set as the background
     [Tooltip("What image shows on the foreground right slot.")]

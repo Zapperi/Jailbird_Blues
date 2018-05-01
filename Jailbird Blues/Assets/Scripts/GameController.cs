@@ -19,9 +19,8 @@ public class GameController : MonoBehaviour {
 
     private int scheduleSize = 3;                                                   //integer for schedule size, incase we need to expand it
     public int schedule;                                                            //integer switch for the daily activities
-	public Text timeOfDayText;
-	private string scheduleName;
-    public Text locationText;
+	public Text logCurrentDayText;
+    public Text topBar;
 
     public List<bool> allSwitches;
     public List<CardValues> allCards;
@@ -51,15 +50,6 @@ public class GameController : MonoBehaviour {
 
     void Awake()																	//when the game starts
 	{
-        // --FOR DEBUGGIN, REMOVE BEFORE BUILD!--
-        //Debug testing starts
-        //allSwitches[0] = true;
-        //allSwitches[1] = false;
-        //allSwitches[2] = true;
-        //BuildDeck(cellCards);
-        //BuildDeck(yardCards);
-        //Debuggin ends
-
         GainsTextHandler.Initialize();                                              // Activates the floating reputation gain element
         if (gameController == null)													//if there is no gamecontroller
 		{
@@ -91,9 +81,6 @@ public class GameController : MonoBehaviour {
 		{
 			Destroy(gameObject);													//delete them
 		}
-		scheduleName = "";
-
-
 	}
 
 
@@ -104,8 +91,7 @@ public class GameController : MonoBehaviour {
             GetNextCard();
             endcardOn = false;
         }
-		timeOfDayText.text = "Day " + day + " : " + scheduleName +" time";
-        locationText.text = scheduleName;	
+		logCurrentDayText.text = topBar.text;	
     }
 
     public void UpdateReputations(int slot)
@@ -288,9 +274,6 @@ public class GameController : MonoBehaviour {
         }
         else
         {
-            //AddSwitches(slot);
-            //RemoveSwitches(slot);
-            //UpdateReputations(slot);
             switch (selectedOption)
             {
                 case 1:
@@ -318,7 +301,6 @@ public class GameController : MonoBehaviour {
         cardDisplay.BlockButtons();
         if (currentCard.ppsHasFadeOut || currentCard.sfxHasFadeOut)
         {
-            //cardDisplay.BlockButtons();
             cardWaiting = next;
 
             if (currentCard.ppsHasFadeOut)
@@ -365,7 +347,6 @@ public class GameController : MonoBehaviour {
         {
             if (allCards[i]==currentCard && !currentCard.repeatable)
             {
-                //Debug.Log("Poistetaan");
                 allCards.RemoveAt(i);
                 break;
             }
@@ -378,7 +359,6 @@ public class GameController : MonoBehaviour {
         {
             if (currentCard.sfx != null)
             {
-                //waitingForSFX = true;
                 sfxSource.GetComponent<SfxPlayer>().PlayTimedSfx(currentCard);
                 cardWaiting = currentCard;
             }
@@ -912,25 +892,9 @@ public class GameController : MonoBehaviour {
             schedule = 0;
             day++;
         }
-        switch (schedule)
-        {                                                           //chooses the deck based on schedule
-            case (0):
-                scheduleName = "cell";
-                break;
-            case (1):
-                scheduleName = "yard";
-                break;
-            case (2):
-                scheduleName = "lunch";
-                break;
-            case (3):
-                scheduleName = "cell"; //workshop
-                break;
-        }
     }
     public void AddCig()
     {
-        Debug.Log("added cig");
         cigaretteCount += 1;
         if (cigaretteCount >= 1)
         {
@@ -940,7 +904,6 @@ public class GameController : MonoBehaviour {
 
     public void RemoveCig()
     {
-        Debug.Log("removed cig");
         cigaretteCount -= 1;
         if (cigaretteCount <= 0)
         {

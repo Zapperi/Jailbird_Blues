@@ -15,8 +15,7 @@ public class CardDisplay : MonoBehaviour
     public Text button2text;
     public Text button3text;
     public Text button4text;
-    public Text buttonNoteBooktext;
-    public Text location;                   // name of the location where the event is, for example "Yard"
+    public Text topBar;                    // Topbar text field, use example "Day 1, Yard"
     public Button button1;
     public Button button2;
     public Button button3;
@@ -29,8 +28,6 @@ public class CardDisplay : MonoBehaviour
     public Image foregroundImage3;          // Center foreground image slot
     public Image foregroundImage4;          // Item foreground image slot
     public Image foregroundBigImage;        // Big center foreground image slot
-    public Image fadeImage;
-    public float fadeSpeed = 0.25f;         // Set how fast the overlaying image fades in and out.
     public GameObject noteBook;
     private bool typeTextRunning;           // Used to track if typeTextCoroutine is still running.
 	public static float textScrollSpeed;    // Used to control the speed of TypeText coroutine (text speed)
@@ -92,9 +89,7 @@ public class CardDisplay : MonoBehaviour
 
     void Start()
     {     
-        fadeImage.gameObject.SetActive(false);                                      // At start, set the overlaiyng fade image to disabled.
-        buttonNoteBook.onClick.RemoveAllListeners();                                // Make sure all buttons have default values.
-        buttonNoteBooktext.text = "NoteBook";                                       // Set the notebook button text.
+        buttonNoteBook.onClick.RemoveAllListeners();                                // Make sure all buttons have default values
         buttonNoteBook.onClick.AddListener(ButtonNotebookPressed);                  // Connect notebook to it's button.
 		siblingIndexOne = foregroundImage1.transform.GetSiblingIndex();             // Set the reference to foregroundimage1 order.
 		siblingIndexTwo = foregroundImage2.transform.GetSiblingIndex();             // Set the reference to foregroundimage2 order.
@@ -111,40 +106,23 @@ public class CardDisplay : MonoBehaviour
         Button2PopUp();
         Button3PopUp();
         Button4PopUp();
-        /*
-        UpdatePopUpField();                                         // Update the previouscard text pop up field.
-        
-        if (currentCard != previousCard)
-        {
-            previousCard = currentCard;
-            currentCard = GameController.gameController.currentCard;    // Update the current to a new one
-            UpdateImages();
-        }
-        */
-            
-
-        //SiblingIndexSwitch();							            // Switches foreground images if needed.
-                                                     // Update to new images, hide the field if there is no image.
-        //RefreshTextFields();                                        // Update the textfield to current ones, does NOT affect cardText.
-        //UpdateButtonFunctions();                                    // Update the CardDisplay button listeners.
-        //RefreshOptions();                                           // Refresh options, if options are off, enable option 5.
-        EnableButtons();                                            // Enables and Disables button according to options.
+        EnableButtons();                                              // Enables and Disables button according to options.
     }
 
     public void UpdateCardDisplay()
     {
-        UpdatePopUpField();                                         // Update the previouscard text pop up field.
+        UpdatePopUpField();                                             // Update the previouscard text pop up field.
 
         if (currentCard != previousCard)
         {
             previousCard = currentCard;
             currentCard = GameController.gameController.currentCard;    // Update the current to a new one
-            UpdateImages();
+            UpdateImages();                                             // Update to new images, hide the field if there is no image.
         }
-        SiblingIndexSwitch();
-        RefreshTextFields();
-        UpdateButtonFunctions();
-        RefreshOptions();
+        SiblingIndexSwitch();                                           // Switches foreground images if needed.
+        RefreshTextFields();                                            // Update the textfield to current ones, does NOT affect cardText.
+        UpdateButtonFunctions();                                        // Update the CardDisplay button listeners.
+        RefreshOptions();                                               // Refresh options, if options are off, enable option 5.
     }
 
     //--BUTTON FUNCTIONS--
@@ -530,6 +508,7 @@ public class CardDisplay : MonoBehaviour
 
     public void UpdateImages()   // Function that updates the card images, hides if there is nothing to show.
     {
+        topBar.text = "Day " + GameController.gameController.day + ", " +currentCard.location;
         background.sprite = currentCard.backgroundImage;
         foregroundImage1.sprite = currentCard.foregroundImage;
         foregroundImage2.sprite = currentCard.foregroundImage2;

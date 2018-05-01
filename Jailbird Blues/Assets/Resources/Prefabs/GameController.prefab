@@ -141,8 +141,8 @@ MonoBehaviour:
   day: 0
   cigaretteCount: 0
   schedule: 0
-  timeOfDayText: {fileID: 0}
-  locationText: {fileID: 0}
+  logCurrentDayText: {fileID: 0}
+  topBar: {fileID: 0}
   allSwitches: 00000000000000000000
   allCards:
   - {fileID: 11400000, guid: 6e959b5c89a96b04fa84f0c14dad0359, type: 2}
