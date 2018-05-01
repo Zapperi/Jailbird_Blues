@@ -1455,7 +1455,7 @@ GameObject:
   - component: {fileID: 222332876620129604}
   - component: {fileID: 114360123044695436}
   m_Layer: 5
-  m_Name: LocationText
+  m_Name: TopBarText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1962,7 +1962,7 @@ GameObject:
   - component: {fileID: 222816306485456440}
   - component: {fileID: 114352859951096618}
   m_Layer: 5
-  m_Name: LocationTextImage
+  m_Name: TopBarTextbackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4152,6 +4152,7 @@ MonoBehaviour:
   button3text: {fileID: 114332687892645984}
   button4text: {fileID: 114160784533798066}
   topBar: {fileID: 114360123044695436}
+  logPageDayText: {fileID: 114837488828515274}
   button1: {fileID: 114030662540949082}
   button2: {fileID: 114187246967284390}
   button3: {fileID: 114563964243719590}
@@ -9240,8 +9241,8 @@ RectTransform:
   m_Father: {fileID: 224073071280257038}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.57809126}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0.54981565}
+  m_AnchorMax: {x: 1, y: 0.9717244}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}

@@ -68,7 +68,8 @@ public class GameController : MonoBehaviour {
 			schedule = -1;     //Sets intro time                                                      //the day begins with the first activity in the schedule 
             SetBackgroundAudio();
             AddLogEvent();
-
+            topBar = cardDisplay.topBar;
+            logCurrentDayText = cardDisplay.logPageDayText;
             waitingForPPS = false;
             waitingForSFX = false;
             cleaningUpFades = false;

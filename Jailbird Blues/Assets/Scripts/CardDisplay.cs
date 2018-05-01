@@ -16,6 +16,8 @@ public class CardDisplay : MonoBehaviour
     public Text button3text;
     public Text button4text;
     public Text topBar;                    // Topbar text field, use example "Day 1, Yard"
+    public Text logPageDayText;
+
     public Button button1;
     public Button button2;
     public Button button3;
@@ -79,6 +81,8 @@ public class CardDisplay : MonoBehaviour
 	int siblingIndexTwo;
 
     private CardValues previousCard;
+
+  
 
     void Awake()
     {
