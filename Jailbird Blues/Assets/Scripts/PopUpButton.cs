@@ -7,11 +7,6 @@ public class PopUpButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 {
     public GameObject cardDisplay;
 
-    void Start()
-    {
-     //_mouseOver = GameObject.Find("Card").GetComponent<CardDisplay>().popUpMouseOver;
-    }
-
     public void OnPointerEnter(PointerEventData eventData)
     {
         cardDisplay.GetComponent<CardDisplay>().popUpMouseOver = true;
@@ -21,22 +16,4 @@ public class PopUpButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     {
         cardDisplay.GetComponent<CardDisplay>().popUpMouseOver = false;
     }
-
-    //void Update()
-    //{
-    //    OnMouseOver();
-    //    OnMouseExit();
-    //}
-
-     
-    //void OnMouseOver()
-    //{
-    //    cardDisplay.GetComponent<CardDisplay>().popUpMouseOver = true;
-    //    _mouseOver = true;
-    //}
-    //void OnMouseExit()
-    //{
-    //    cardDisplay.GetComponent<CardDisplay>().popUpMouseOver = false;
-    //    _mouseOver = false;
-    //}
 }

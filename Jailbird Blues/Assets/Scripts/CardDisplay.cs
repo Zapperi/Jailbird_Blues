@@ -583,7 +583,7 @@ public class CardDisplay : MonoBehaviour
         {
             if (!GameController.gameController.previousCard.endCard)    //if previous card was not an endCard
             {
-                popUpText.fontSize = 15;
+                popUpText.fontSize = 20;
                 popUpText.text = GameController.gameController.previousCard.cardText;
                 coloredText = popUpText.text.Replace("Ä", "<color=#" + highlightColorHex + ">"); // Make sure the highlighted text gets the color
                 coloredText = coloredText.Replace("Ö", "</color>");                         // End the coloring area
