@@ -51,6 +51,7 @@ public class CardDisplay : MonoBehaviour
     public GameObject popUp;                // Reference to the popup element, set in inspector
     public bool popUpMouseOver;             // Track if mouse is over the popup element
     public Text popUpText;                  // Reference to the popup text, set in inspector
+    private string previousChoice;          // Keeps track of the string of previous player choice
 
     //Optionbutton required switches
     public GameObject buttonPopUp1Img;
@@ -141,18 +142,22 @@ public class CardDisplay : MonoBehaviour
         bool followUp = false;
         if (button == 1 && currentCard.option1FollowCard)
         {
+            previousChoice = currentCard.option1text;
             followUp = true;
         }
         if (button == 2 && currentCard.option2FollowCard)
         {
+            previousChoice = currentCard.option2text;
             followUp = true;
         }
         if (button == 3 && currentCard.option3FollowCard)
         {
+            previousChoice = currentCard.option3text;
             followUp = true;
         }
         if (button == 4 && currentCard.option4FollowCard)
         {
+            previousChoice = currentCard.option4text;
             followUp = true;
         }
         if (button == 5 && currentCard.option5FollowCard)
@@ -584,10 +589,15 @@ public class CardDisplay : MonoBehaviour
             if (!GameController.gameController.previousCard.endCard)    //if previous card was not an endCard
             {
                 popUpText.fontSize = 20;
-                popUpText.text = GameController.gameController.previousCard.cardText;
-                coloredText = popUpText.text.Replace("Ä", "<color=#" + highlightColorHex + ">"); // Make sure the highlighted text gets the color
-                coloredText = coloredText.Replace("Ö", "</color>");                         // End the coloring area
-                popUpText.text = coloredText;                                                // Update the text
+                if (GameController.gameController.previousCard.cardText == "")
+                    popUpText.text = "You chose: <color=#" + highlightColorHex + ">" + previousChoice + " </color>";
+                else
+                {
+                    popUpText.text = GameController.gameController.previousCard.cardText;
+                    coloredText = popUpText.text.Replace("Ä", "<color=#" + highlightColorHex + ">"); // Make sure the highlighted text gets the color
+                    coloredText = coloredText.Replace("Ö", "</color>");                         // End the coloring area
+                    popUpText.text = coloredText;                                                // Update the text
+                }
             } else
             {
                 popUpText.text = "";
