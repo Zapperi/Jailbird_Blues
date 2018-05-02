@@ -25,8 +25,8 @@ public class GameController : MonoBehaviour {
     public List<bool> allSwitches;
     public List<CardValues> allCards;
     public List<CardValues> yardCards;												//list of cards in the yard time deck
-	public List<CardValues> messCards;												//list of cards in the lunchtime deck
-	public List<CardValues> workshopCards;											//list of cards in the workshop time deck
+	public List<CardValues> messCards;                                              //list of cards in the lunchtime deck
+    public List<CardValues> eveningCellCards;											//list of cards in the workshop time deck
 	public List<CardValues> cellCards;												//list of cards in the cell time deck
 	public CardValues currentCard;                                                  //the card that is currently active in the scene
     public CardValues previousCard;
@@ -188,21 +188,7 @@ public class GameController : MonoBehaviour {
                 SetCurrentCard(next);
                 cardDisplay.typeTextNewTextDone = false;
                 break;
-         case (1):
-                BuildDeck(yardCards);
-                index = Random.Range(0, yardCards.Count);
-                if (yardCards.Count == 0)
-                {
-                    next = endOfGameCard;
-                }
-                else
-                {
-                    next = yardCards[index];
-                }
-                SetCurrentCard(next);
-                cardDisplay.typeTextNewTextDone = false;
-                break;
-		case (2):
+            case (1):
                 BuildDeck(messCards);
                 index = Random.Range(0, messCards.Count);
                 if (messCards.Count == 0)
@@ -216,15 +202,30 @@ public class GameController : MonoBehaviour {
                 SetCurrentCard(next);
                 cardDisplay.typeTextNewTextDone = false;
                 break;
+            case (2):
+                BuildDeck(yardCards);
+                index = Random.Range(0, yardCards.Count);
+                if (yardCards.Count == 0)
+                {
+                    next = endOfGameCard;
+                }
+                else
+                {
+                    next = yardCards[index];
+                }
+                SetCurrentCard(next);
+                cardDisplay.typeTextNewTextDone = false;
+                break;
+		
 		case (3):
-                BuildDeck(workshopCards);
-                index = Random.Range(0, workshopCards.Count);
-                if (workshopCards.Count == 0)
+                BuildDeck(eveningCellCards);
+                index = Random.Range(0, eveningCellCards.Count);
+                if (eveningCellCards.Count == 0)
                 {
                     next = endOfGameCard;
                 } else
                 {
-                    next = workshopCards[index];
+                    next = eveningCellCards[index];
                 }
                 SetCurrentCard(next);
                 cardDisplay.typeTextNewTextDone = false;
@@ -456,7 +457,7 @@ public class GameController : MonoBehaviour {
         public void BuildDeck(List<CardValues> targetDeck)
     {
         targetDeck.Clear();
-        //TimeofDay 0 = Cell, 1 = Yard, 2 = Mess, 3 = Workshop
+        //TimeofDay 0 = Cell, 1 = Yard, 2 = Mess, 3 = Eveningcell
         for (int i = 0; i < allCards.Count; i++)
         {
             //reset addToDeck to true
@@ -583,8 +584,8 @@ public class GameController : MonoBehaviour {
 
             }
 
-            //--Create workshopDeck--
-            else if (targetDeck == workshopCards)
+            //--Create EveningcellDeck--
+            else if (targetDeck == eveningCellCards)
             {
                 //Checks the time of day and positive reputation values, if true..
                 if (allCards[i].timeOfDay == 3 && ((allCards[i].RepGuard == 0 && allCards[i].RepIrs == 0 && allCards[i].RepPunks == 0 && allCards[i].RepShake == 0) || (guardsRep > 0 && guardsRep > allCards[i].RepGuard) || (irsRep > 0 && irsRep > allCards[i].RepIrs) || (punksRep > 0 && punksRep > allCards[i].RepPunks) || (shakersRep > 0 && shakersRep > allCards[i].RepShake)))

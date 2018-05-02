@@ -18,7 +18,7 @@ public class CardValues : ScriptableObject									//switched the surface from M
     public int RepShake;                                                  //the required reputation among the Protein Shaker to activate this card
     [Tooltip("Required Guard reputation.")]
     public int RepGuard;                                                    //the required reputation among the guards to activate this card
-    [Tooltip("Required time/schedule: 0 = Cell, 1 = Yard, 2 = Mess, 3 = Workshop")]     //inspector directions	
+    [Tooltip("Required time/schedule: 0 = Cell, 1 = Mess, 2 = Yard, 3 = Eveningcell")]     //inspector directions	
     public int timeOfDay;                                                   //shcedule
     [Tooltip("Required story phase.")]
     public int storyPhase;                                                  //progress
