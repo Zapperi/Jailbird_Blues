@@ -47,6 +47,9 @@ public class CardDisplay : MonoBehaviour
     public GameObject statsPage;
     public GameObject optionsPage;
     public GameObject inventoryContent;
+    public GameObject skipQuestion;
+    public Button skipYes;
+    public Button skipNo;
 
     public GameObject popUp;                // Reference to the popup element, set in inspector
     public bool popUpMouseOver;             // Track if mouse is over the popup element
@@ -100,6 +103,7 @@ public class CardDisplay : MonoBehaviour
 		siblingIndexTwo = foregroundImage2.transform.GetSiblingIndex();             // Set the reference to foregroundimage2 order.
         UpdateTypeText();                                                           //Set text scrolling
         UpdateCardDisplay();
+       // skipScene();                                                                //Asks if you want to skip if there is skipcard
     }
 		
     void Update()
@@ -128,6 +132,7 @@ public class CardDisplay : MonoBehaviour
         RefreshTextFields();                                            // Update the textfield to current ones, does NOT affect cardText.
         UpdateButtonFunctions();                                        // Update the CardDisplay button listeners.
         RefreshOptions();                                               // Refresh options, if options are off, enable option 5.
+        skipScene();                                                    //Asks if you want to skip if there is skipcard
     }
 
     //--BUTTON FUNCTIONS--
@@ -164,7 +169,7 @@ public class CardDisplay : MonoBehaviour
         {
             followUp = true;
         }
-        if (followUp)
+        if (followUp || (currentCard.SkipCard && button == 6))
         {
             GameController.gameController.SetCurrentCard(button);
         } else
@@ -492,7 +497,40 @@ public class CardDisplay : MonoBehaviour
             }
         }               // if "i" key is pressed, open notebook and inventory page. Otherwise close if inventory page is open.
     }
- 
+    public void skipScene()                             //skip function
+    {
+       // Debug.Log("SkipScene functio");
+        if(currentCard.SkipCard != null)
+        {
+            Debug.Log("skip question activated");
+            skipQuestion.SetActive(true);               // sets question field active
+            skipYes.onClick.AddListener(SkipTutorial);  //adds listeners to buttons
+            skipNo.onClick.AddListener(ReturnToGame);
+            BlockButtons();                             //Blocks all other buttons
+        }
+        else
+        {
+            skipQuestion.SetActive(false);              // sets question field inactive
+        }
+    }
+    public void SkipTutorial()                          //skips tutorial
+    {
+        Debug.Log("Skip tutorial");
+        skipYes.onClick.RemoveAllListeners();           //Removes listeners from buttons
+        skipNo.onClick.RemoveAllListeners();
+        UnblockButtons();                               //unlocks all other buttons
+        skipQuestion.SetActive(false);
+        ButtonPressed(6);
+    }
+
+    public void ReturnToGame()                          // dont skip tutorial
+    {
+        Debug.Log("Return to game");
+        skipYes.onClick.RemoveAllListeners();           // Removes listeners from buttons
+        skipNo.onClick.RemoveAllListeners();
+        UnblockButtons();                               //Unlocks all other buttons
+        skipQuestion.SetActive(false);                  //sets question field inactive
+    }
 
     public void BlockButtons()                                    // Function that disables all player interaction by using overlayingimage
     {

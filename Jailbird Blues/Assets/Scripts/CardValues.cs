@@ -77,6 +77,8 @@ public class CardValues : ScriptableObject									//switched the surface from M
     public bool repeatable;
     [Tooltip("Is this an end of game card?")]
     public bool endOfGame;
+    [Tooltip("Skip to this card if pressed yes")]
+    public CardValues SkipCard;
     private bool used;														//has the card been played already?
     [Header("If options are off, use Option 5 button to add your follow card.")]  //inspector directions
     public bool OptionsOn = true;                                           //does the card have options?

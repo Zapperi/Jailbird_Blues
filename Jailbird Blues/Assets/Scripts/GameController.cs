@@ -262,6 +262,9 @@ public class GameController : MonoBehaviour {
                 case 5:
                     cardWaiting = currentCard.option5FollowCard;                // Put the next card on hold.
                     break;
+                case 6:
+                    cardWaiting  = currentCard.SkipCard;
+                    break;
             }
             if (currentCard.ppsHasFadeOut)
             {
@@ -292,6 +295,9 @@ public class GameController : MonoBehaviour {
                     break;
                 case 5:
                     ActuallyChangeCard(currentCard.option5FollowCard);          // Update the next card into given card.
+                    break;
+                case 6:
+                    ActuallyChangeCard(currentCard.SkipCard);
                     break;
             }
         }
