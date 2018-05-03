@@ -18,11 +18,17 @@ MonoBehaviour:
   RepGuard: 0
   timeOfDay: 0
   storyPhase: 0
+  location: 
   backgroundImage: {fileID: 21300000, guid: 013584fb9b3867548a06364b64007f2a, type: 3}
   foregroundImage: {fileID: 21300000, guid: 60c5302a1c8acf24fa976f1e8da49a6a, type: 3}
+  flipForegroundImageRight: 0
   foregroundImage2: {fileID: 21300000, guid: 3242392f481b5424893e956bd29406a1, type: 3}
+  flipForegroundImageLeft: 0
   foregroundImage3: {fileID: 0}
-  foregroundImage4: {fileID: 0}
+  flipForegroundImageCenter: 0
+  foregroundBigImage: {fileID: 0}
+  flipForegroundImageBig: 0
+  foregroundItemImage: {fileID: 0}
   bgMusic: {fileID: 0}
   bgAmbientAudio: {fileID: 0}
   musicDecrease: 0.7
@@ -31,14 +37,15 @@ MonoBehaviour:
   ambientOff: 0
   cardTextPerson: Jacob
   cardText: "\"Even if you don't smoke, it can be used as a currency in here. We have
-    saved up a few packs for a rainy day.\"\nYou pick up the chess board. \r\nRest
-    of the yard time passes peacefully."
+    saved up a few packs for a rainy day.\"\nYou put the chess board back on the table.
+    \rRest of the yard time passes peacefully."
   logText: 
   endCard: 1
   timeCard: 1
   onTop: 0
   repeatable: 0
   endOfGame: 0
+  SkipCard: {fileID: 0}
   OptionsOn: 0
   Option1On: 0
   option1ReqSwitches: 
