@@ -38,6 +38,7 @@ public class GameController : MonoBehaviour {
     public string logText;
     public List<string> logEvents;
     public List<Item> allItemList;                                                     // List of all the aivable items in the game, set in inspector
+    public GameObject foregroundItemImage;
 
     public GameObject mainCamera;
     public CardValues nextCardWaiting;
