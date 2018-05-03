@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -28,7 +27,6 @@ public class CardDisplay : MonoBehaviour
     public Image foregroundImage1;          // Right foreground image slot
     public Image foregroundImage2;          // Left foreground image slot
     public Image foregroundImage3;          // Center foreground image slot
-    public Image foregroundImage4;          // Item foreground image slot
     public Image foregroundBigImage;        // Big center foreground image slot
     public GameObject noteBook;
     private bool typeTextRunning;           // Used to track if typeTextCoroutine is still running.
@@ -560,7 +558,6 @@ public class CardDisplay : MonoBehaviour
         foregroundImage1.sprite = currentCard.foregroundImage;
         foregroundImage2.sprite = currentCard.foregroundImage2;
         foregroundImage3.sprite = currentCard.foregroundImage3;
-        foregroundImage4.sprite = currentCard.foregroundItemImage;
         foregroundBigImage.sprite = currentCard.foregroundBigImage;
         SetImageStatus();
         FlipImages();           
@@ -580,10 +577,6 @@ public class CardDisplay : MonoBehaviour
             foregroundImage3.gameObject.SetActive(false);
         else
             foregroundImage3.gameObject.SetActive(true);
-        if (!foregroundImage4.sprite)
-            foregroundImage4.gameObject.SetActive(false);
-        else
-            foregroundImage4.gameObject.SetActive(true);
         if (!foregroundBigImage.sprite)
             foregroundBigImage.gameObject.SetActive(false);
         else

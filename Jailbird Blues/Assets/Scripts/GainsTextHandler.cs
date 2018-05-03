@@ -50,12 +50,4 @@ public class GainsTextHandler : MonoBehaviour {
             textToSend = (textToSend + "<color=red>Guards " + repAmount[3] + "</color>\n");
         instance.SetText(textToSend);                                                             // Send compiled text to the gainsText.
     }
-
-    //Resets a transform's local transformation values
-    static void ResetLocation(Transform transform)
-    {
-        transform.localPosition = Vector3.zero;
-        transform.localRotation = Quaternion.identity;
-        transform.localScale = Vector3.one;
-    }
 }
