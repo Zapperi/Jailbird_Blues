@@ -137,11 +137,14 @@ public class CardDisplay : MonoBehaviour
 
     public void ButtonPressed(int button)
     {
-        GameController.gameController.AddSwitches(button);
-        GameController.gameController.RemoveSwitches(button);
-        GameController.gameController.UpdateReputations(button);
-        GameController.gameController.PrintReputations(button);
-        inventoryContent.GetComponent<InventoryPage>().RefreshInventory();     // Refresh the inventory by removing everything and adding them back with updated values.
+        if(button < 6)
+        {
+            GameController.gameController.AddSwitches(button);
+            GameController.gameController.RemoveSwitches(button);
+            GameController.gameController.UpdateReputations(button);
+            GameController.gameController.PrintReputations(button);
+            inventoryContent.GetComponent<InventoryPage>().RefreshInventory();     // Refresh the inventory by removing everything and adding them back with updated values.
+        }     
         bool followUp = false;
         if (button == 1 && currentCard.option1FollowCard)
         {
@@ -513,7 +516,6 @@ public class CardDisplay : MonoBehaviour
     }
     public void SkipTutorial()                          //skips tutorial
     {
-        Debug.Log("Skip tutorial");
         skipYes.onClick.RemoveAllListeners();           //Removes listeners from buttons
         skipNo.onClick.RemoveAllListeners();
         UnblockButtons();                               //unlocks all other buttons
