@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: New Card
+  m_Name: TestStartCard
   m_EditorClassIdentifier: 
   requiredSwitches: 
   RepIrs: 0
@@ -18,11 +18,17 @@ MonoBehaviour:
   RepGuard: 0
   timeOfDay: 2
   storyPhase: 1
+  location: 
   backgroundImage: {fileID: 0}
   foregroundImage: {fileID: 0}
+  flipForegroundImageRight: 0
   foregroundImage2: {fileID: 0}
+  flipForegroundImageLeft: 0
   foregroundImage3: {fileID: 0}
-  foregroundImage4: {fileID: 0}
+  flipForegroundImageCenter: 0
+  foregroundBigImage: {fileID: 0}
+  flipForegroundImageBig: 0
+  foregroundItemImage: {fileID: 0}
   bgMusic: {fileID: 0}
   bgAmbientAudio: {fileID: 0}
   musicDecrease: 0
@@ -30,20 +36,22 @@ MonoBehaviour:
   musicOff: 0
   ambientOff: 0
   cardTextPerson: Tester
-  cardText: Gimme shoes plz
+  cardText: 
   logText: 
   endCard: 0
   timeCard: 0
+  onTop: 0
   repeatable: 0
+  endOfGame: 0
   OptionsOn: 1
   Option1On: 1
   option1ReqSwitches: 
-  option1text: Button
+  option1text: Gain Cig
   option1IrsReputation: -1
   option1PunkReputation: 0
   option1ShakeReputation: 0
   option1GuardReputation: 2
-  option1ObtainedSwitches: 
+  option1ObtainedSwitches: 04000000
   option1RemovedSwitches: 
   option1FollowCard: {fileID: 11400000, guid: c86a54b01b47e3b47806a632338dbe30, type: 2}
   Option2On: 1

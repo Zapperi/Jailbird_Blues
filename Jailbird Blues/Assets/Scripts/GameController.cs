@@ -38,7 +38,9 @@ public class GameController : MonoBehaviour {
     public string logText;
     public List<string> logEvents;
     public List<Item> allItemList;                                                     // List of all the aivable items in the game, set in inspector
-    public GameObject foregroundItemImage;
+    public GameObject itemImage;
+    private Animator itemAnimator;
+    private GameObject canvasParent;
 
     public GameObject mainCamera;
     public CardValues nextCardWaiting;
@@ -51,6 +53,7 @@ public class GameController : MonoBehaviour {
 
     void Awake()																	//when the game starts
 	{
+        canvasParent = GameObject.Find("Canvas");
         GainsTextHandler.Initialize();                                              // Activates the floating reputation gain element
         if (gameController == null)													//if there is no gamecontroller
 		{
@@ -84,7 +87,7 @@ public class GameController : MonoBehaviour {
 			Destroy(gameObject);													//delete them
 		}
 	}
-
+    
 
     void Update()
     {
@@ -702,171 +705,247 @@ public class GameController : MonoBehaviour {
     }
     //Adds switches from that opinion to allswitched[]
 
+    private void PlayItemObtained(int switchIndex)
+    {
+        for (int i = 0; i < allItemList.Count; i++)
+        {
+            if (switchIndex == allItemList[i].itemSwitchIndex)
+            {
+                GameObject obtainedItem = Instantiate(itemImage, canvasParent.transform);
+                itemAnimator = obtainedItem.GetComponent<Animator>();
+                itemAnimator.SetBool("ItemGained", true);
+                obtainedItem.GetComponent<Image>().sprite = allItemList[i].itemIcon;               
+                Destroy(obtainedItem, 3f);
+            }
+        }
+    }
+
+    private void PlayItemLost(int switchIndex)
+    {
+        for (int i = 0; i < allItemList.Count; i++)
+        {
+            if (switchIndex == allItemList[i].itemSwitchIndex)
+            {
+                GameObject obtainedItem = Instantiate(itemImage, canvasParent.transform);
+                itemAnimator = obtainedItem.GetComponent<Animator>();
+                itemAnimator.SetBool("ItemLost", true);
+                obtainedItem.GetComponent<Image>().sprite = allItemList[i].itemIcon;
+                Destroy(obtainedItem, 3f);
+            }
+        }
+    }
+
     public void AddSwitches(int switches)
     {
-        switch (switches)
+        var dictionary = new Dictionary<string, List<int>>();
+        dictionary["option1"] = currentCard.option1ObtainedSwitches;
+        dictionary["option2"] = currentCard.option2ObtainedSwitches;
+        dictionary["option3"] = currentCard.option3ObtainedSwitches;
+        dictionary["option4"] = currentCard.option4ObtainedSwitches;
+        dictionary["option5"] = currentCard.option5ObtainedSwitches;
+        string optionIndex = "option" + switches;
+
+        if (dictionary[optionIndex].Count > 0)
         {
-            case 1:
-                if (currentCard.option1ObtainedSwitches.Count > 0)
+            allSwitches[3] = false;
+            for (int i = 0; i < dictionary[optionIndex].Count; i++)
+            {
+                PlayItemObtained(dictionary[optionIndex][i]);
+                allSwitches[dictionary[optionIndex][i]] = true;
+                if (allSwitches[3] == true)
                 {
+                    AddCig();
                     allSwitches[3] = false;
-                    for (int i = 0; i < currentCard.option1ObtainedSwitches.Count; i++)
-                    {
-                        allSwitches[currentCard.option1ObtainedSwitches[i]] = true;
-                        if (allSwitches[3] == true)
-                        {
-                            AddCig();
-                            allSwitches[3] = false;
-                        }
-                    }
                 }
-                break;
-            case 2:
-                if (currentCard.option2ObtainedSwitches.Count > 0)
-                {
-                    allSwitches[3] = false;
-                    for (int i = 0; i < currentCard.option2ObtainedSwitches.Count; i++)
-                    {
-                        allSwitches[currentCard.option2ObtainedSwitches[i]] = true;
-                        if (allSwitches[3] == true)
-                        {
-                            AddCig();
-                            allSwitches[3] = false;
-                        }
-                    }
-                }
-                break;
-            case 3:
-                if (currentCard.option3ObtainedSwitches.Count > 0)
-                {
-                    allSwitches[3] = false;
-                    for (int i = 0; i < currentCard.option3ObtainedSwitches.Count; i++)
-                    {
-                        allSwitches[currentCard.option3ObtainedSwitches[i]] = true;
-                        if (allSwitches[3] == true)
-                        {
-                            AddCig();
-                            allSwitches[3] = false;
-                        }
-                    }
-                }
-                break;
-            case 4:
-                if (currentCard.option4ObtainedSwitches.Count > 0)
-                {
-                    allSwitches[3] = false;
-                    for (int i = 0; i < currentCard.option4ObtainedSwitches.Count; i++)
-                    {
-                        allSwitches[currentCard.option4ObtainedSwitches[i]] = true;
-                        if (allSwitches[3] == true)
-                        {
-                            AddCig();
-                            allSwitches[3] = false;
-                        }
-                    }
-                }
-                break;
-            case 5:
-                if (currentCard.option5ObtainedSwitches.Count > 0)
-                {
-                    allSwitches[3] = false;
-                    for (int i = 0; i < currentCard.option5ObtainedSwitches.Count; i++)
-                    {
-                        allSwitches[currentCard.option5ObtainedSwitches[i]] = true;
-                        if (allSwitches[3] == true)
-                        {
-                            AddCig();
-                            allSwitches[3] = false;
-                        }
-                    }
-                }
-                break;
+            }
         }
+
+        //switch (switches)
+        //{
+        //    case 1:
+        //        if (currentCard.option1ObtainedSwitches.Count > 0)
+        //        {
+        //            allSwitches[3] = false;
+        //            for (int i = 0; i < currentCard.option1ObtainedSwitches.Count; i++)
+        //            {
+        //                allSwitches[currentCard.option1ObtainedSwitches[i]] = true;
+        //                if (allSwitches[3] == true)
+        //                {
+        //                    AddCig();
+        //                    allSwitches[3] = false;
+        //                }
+        //            }
+        //        }
+        //        break;
+        //    case 2:
+        //        if (currentCard.option2ObtainedSwitches.Count > 0)
+        //        {
+        //            allSwitches[3] = false;
+        //            for (int i = 0; i < currentCard.option2ObtainedSwitches.Count; i++)
+        //            {
+        //                allSwitches[currentCard.option2ObtainedSwitches[i]] = true;
+        //                if (allSwitches[3] == true)
+        //                {
+        //                    AddCig();
+        //                    allSwitches[3] = false;
+        //                }
+        //            }
+        //        }
+        //        break;
+        //    case 3:
+        //        if (currentCard.option3ObtainedSwitches.Count > 0)
+        //        {
+        //            allSwitches[3] = false;
+        //            for (int i = 0; i < currentCard.option3ObtainedSwitches.Count; i++)
+        //            {
+        //                allSwitches[currentCard.option3ObtainedSwitches[i]] = true;
+        //                if (allSwitches[3] == true)
+        //                {
+        //                    AddCig();
+        //                    allSwitches[3] = false;
+        //                }
+        //            }
+        //        }
+        //        break;
+        //    case 4:
+        //        if (currentCard.option4ObtainedSwitches.Count > 0)
+        //        {
+        //            allSwitches[3] = false;
+        //            for (int i = 0; i < currentCard.option4ObtainedSwitches.Count; i++)
+        //            {
+        //                allSwitches[currentCard.option4ObtainedSwitches[i]] = true;
+        //                if (allSwitches[3] == true)
+        //                {
+        //                    AddCig();
+        //                    allSwitches[3] = false;
+        //                }
+        //            }
+        //        }
+        //        break;
+        //    case 5:
+        //        if (currentCard.option5ObtainedSwitches.Count > 0)
+        //        {
+        //            allSwitches[3] = false;
+        //            for (int i = 0; i < currentCard.option5ObtainedSwitches.Count; i++)
+        //            {
+        //                allSwitches[currentCard.option5ObtainedSwitches[i]] = true;
+        //                if (allSwitches[3] == true)
+        //                {
+        //                    AddCig();
+        //                    allSwitches[3] = false;
+        //                }
+        //            }
+        //        }
+        //        break;
+        //}
     }
     
     //Removes switches from allswitched[]
 
     public void RemoveSwitches(int switches)
     {
-        switch (switches)
-        {
-            case 1:
-                if (currentCard.option1RemovedSwitches.Count > 0)
-                {
-                    allSwitches[3] = true;
-                    for (int i = 0; i < currentCard.option1RemovedSwitches.Count; i++)
-                    {
-                        allSwitches[currentCard.option1RemovedSwitches[i]] = false;
-                        if (allSwitches[3] == false)
-                        {
-                            RemoveCig();
-                            allSwitches[3] = true;
-                        }
-                    }
-                }
-                break;
-            case 2:
-                if (currentCard.option2RemovedSwitches.Count > 0)
-                {
-                    allSwitches[3] = true;
-                    for (int i = 0; i < currentCard.option2RemovedSwitches.Count; i++)
-                    {
-                        allSwitches[currentCard.option2RemovedSwitches[i]] = false;
-                        if (allSwitches[3] == false)
-                        {
-                            RemoveCig();
-                            allSwitches[3] = true;
-                        }
-                    }
-                }
-                break;
-            case 3:
-                if (currentCard.option3RemovedSwitches.Count > 0)
-                {
-                    allSwitches[3] = true;
-                    for (int i = 0; i < currentCard.option3RemovedSwitches.Count; i++)
-                    {
-                        allSwitches[currentCard.option3RemovedSwitches[i]] = false;
-                        if (allSwitches[3] == false)
-                        {
-                            RemoveCig();
-                            allSwitches[3] = true;
-                        }
-                    }
-                }
-                break;
-            case 4:
-                if (currentCard.option4RemovedSwitches.Count > 0)
-                {
-                    allSwitches[3] = true;
-                    for (int i = 0; i < currentCard.option4RemovedSwitches.Count; i++)
-                    {
-                        allSwitches[currentCard.option4RemovedSwitches[i]] = false;
-                        if (allSwitches[3] == false)
-                        {
-                            RemoveCig();
-                            allSwitches[3] = true;
-                        }
-                    }
-                }
-                break;
-            case 5:
-                if (currentCard.option5RemovedSwitches.Count > 0)
-                {
-                    allSwitches[3] = true;
-                    for (int i = 0; i < currentCard.option5RemovedSwitches.Count; i++)
-                    {
-                        allSwitches[currentCard.option5RemovedSwitches[i]] = false;
-                        if (allSwitches[3] == false)
-                        {
-                            RemoveCig();
-                            allSwitches[3] = true;
-                        }
-                    }
-                }
-                break;
+        var dictionary = new Dictionary<string, List<int>>();
+        dictionary["option1"] = currentCard.option1RemovedSwitches;
+        dictionary["option2"] = currentCard.option2RemovedSwitches;
+        dictionary["option3"] = currentCard.option3RemovedSwitches;
+        dictionary["option4"] = currentCard.option4RemovedSwitches;
+        dictionary["option5"] = currentCard.option5RemovedSwitches;
+        string optionIndex = "option" + switches;
 
+        if (dictionary[optionIndex].Count > 0)
+        {
+            allSwitches[3] = true;
+            for (int i = 0; i < dictionary[optionIndex].Count; i++)
+            {
+                PlayItemLost(dictionary[optionIndex][i]);
+                allSwitches[dictionary[optionIndex][i]] = false;
+                if (allSwitches[3] == false)
+                {
+                    RemoveCig();
+                    allSwitches[3] = true;
+                }
+            }
         }
+
+        //switch (switches)
+        //{
+        //    case 1:
+        //        if (currentCard.option1RemovedSwitches.Count > 0)
+        //        {
+        //            allSwitches[3] = true;
+        //            for (int i = 0; i < currentCard.option1RemovedSwitches.Count; i++)
+        //            {
+        //                allSwitches[currentCard.option1RemovedSwitches[i]] = false;
+        //                if (allSwitches[3] == false)
+        //                {
+        //                    RemoveCig();
+        //                    allSwitches[3] = true;
+        //                }
+        //            }
+        //        }
+        //        break;
+        //    case 2:
+        //        if (currentCard.option2RemovedSwitches.Count > 0)
+        //        {
+        //            allSwitches[3] = true;
+        //            for (int i = 0; i < currentCard.option2RemovedSwitches.Count; i++)
+        //            {
+        //                allSwitches[currentCard.option2RemovedSwitches[i]] = false;
+        //                if (allSwitches[3] == false)
+        //                {
+        //                    RemoveCig();
+        //                    allSwitches[3] = true;
+        //                }
+        //            }
+        //        }
+        //        break;
+        //    case 3:
+        //        if (currentCard.option3RemovedSwitches.Count > 0)
+        //        {
+        //            allSwitches[3] = true;
+        //            for (int i = 0; i < currentCard.option3RemovedSwitches.Count; i++)
+        //            {
+        //                allSwitches[currentCard.option3RemovedSwitches[i]] = false;
+        //                if (allSwitches[3] == false)
+        //                {
+        //                    RemoveCig();
+        //                    allSwitches[3] = true;
+        //                }
+        //            }
+        //        }
+        //        break;
+        //    case 4:
+        //        if (currentCard.option4RemovedSwitches.Count > 0)
+        //        {
+        //            allSwitches[3] = true;
+        //            for (int i = 0; i < currentCard.option4RemovedSwitches.Count; i++)
+        //            {
+        //                allSwitches[currentCard.option4RemovedSwitches[i]] = false;
+        //                if (allSwitches[3] == false)
+        //                {
+        //                    RemoveCig();
+        //                    allSwitches[3] = true;
+        //                }
+        //            }
+        //        }
+        //        break;
+        //    case 5:
+        //        if (currentCard.option5RemovedSwitches.Count > 0)
+        //        {
+        //            allSwitches[3] = true;
+        //            for (int i = 0; i < currentCard.option5RemovedSwitches.Count; i++)
+        //            {
+        //                allSwitches[currentCard.option5RemovedSwitches[i]] = false;
+        //                if (allSwitches[3] == false)
+        //                {
+        //                    RemoveCig();
+        //                    allSwitches[3] = true;
+        //                }
+        //            }
+        //        }
+        //        break;
+
+        //}
     }
 
     //Add an event to the log.

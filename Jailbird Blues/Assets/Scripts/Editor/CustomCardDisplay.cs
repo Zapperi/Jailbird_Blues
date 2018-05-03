@@ -20,7 +20,6 @@ public class CustomCardDisplay : Editor {
             cd.foregroundImage2.gameObject.SetActive(true);
             cd.foregroundImage1.gameObject.SetActive(true);
             cd.foregroundImage3.gameObject.SetActive(true);
-            cd.foregroundImage4.gameObject.SetActive(true);
             cd.button1.gameObject.SetActive(true);
             cd.button2.gameObject.SetActive(true);
             cd.button3.gameObject.SetActive(true);
@@ -30,7 +29,6 @@ public class CustomCardDisplay : Editor {
                 cd.foregroundImage1.sprite = cd.currentCard.foregroundImage;
                 cd.foregroundImage2.sprite = cd.currentCard.foregroundImage2;
                 cd.foregroundImage3.sprite = cd.currentCard.foregroundImage3;
-                cd.foregroundImage4.sprite = cd.currentCard.foregroundItemImage;
 
             cd.cardText.text = cd.currentCard.cardText;
             cd.button1text.text = cd.currentCard.option1text;
@@ -46,8 +44,6 @@ public class CustomCardDisplay : Editor {
                 cd.foregroundImage2.gameObject.SetActive(false);
             if (!cd.foregroundImage3.sprite)
                 cd.foregroundImage3.gameObject.SetActive(false);
-            if (!cd.foregroundImage4.sprite)
-                cd.foregroundImage4.gameObject.SetActive(false);
 
             if (!cd.currentCard.Option1On)
                 cd.button1.gameObject.SetActive(false);
