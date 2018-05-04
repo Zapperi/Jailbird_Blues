@@ -740,57 +740,57 @@ public class GameController : MonoBehaviour {
     }
     //Adds switches from that opinion to allswitched[]
 
-    private void PlayItemObtained(int switchIndex)
+    private void PlayItemObtained(int switchIndex)  // Check if given switch is an item, if so, play animation
     {
-        for (int i = 0; i < allItemList.Count; i++)
+        for (int i = 0; i < allItemList.Count; i++)                                         // Cycle through item list
         {
-            if (switchIndex == allItemList[i].itemSwitchIndex)
+            if (switchIndex == allItemList[i].itemSwitchIndex)                              // If the switch was an item..
             {
-                GameObject obtainedItem = Instantiate(itemImage, canvasParent.transform);
-                itemAnimator = obtainedItem.GetComponent<Animator>();
-                itemAnimator.SetBool("ItemGained", true);
-                obtainedItem.GetComponent<Image>().sprite = allItemList[i].itemIcon;               
-                Destroy(obtainedItem, 3f);
+                GameObject obtainedItem = Instantiate(itemImage, canvasParent.transform);   // Spawn an item object
+                itemAnimator = obtainedItem.GetComponent<Animator>();                       // Access the animator component
+                itemAnimator.SetBool("ItemGained", true);                                   // Play the animation
+                obtainedItem.GetComponent<Image>().sprite = allItemList[i].itemIcon;        // Set the item icon              
+                Destroy(obtainedItem, 3f);                                                  // Destroy object after 3 seconds
             }
         }
     }
 
-    private void PlayItemLost(int switchIndex)
+    private void PlayItemLost(int switchIndex)          // Check if given switch is an item, if so, play animation
     {
-        for (int i = 0; i < allItemList.Count; i++)
+        for (int i = 0; i < allItemList.Count; i++)     // Cycle through allitem list..            
         {
-            if (switchIndex == allItemList[i].itemSwitchIndex)
+            if (switchIndex == allItemList[i].itemSwitchIndex)                              // If the switch was an item..
             {
-                GameObject obtainedItem = Instantiate(itemImage, canvasParent.transform);
-                itemAnimator = obtainedItem.GetComponent<Animator>();
-                itemAnimator.SetBool("ItemLost", true);
-                obtainedItem.GetComponent<Image>().sprite = allItemList[i].itemIcon;
-                Destroy(obtainedItem, 3f);
+                GameObject obtainedItem = Instantiate(itemImage, canvasParent.transform);   // Spawn the object under canvas
+                itemAnimator = obtainedItem.GetComponent<Animator>();                       // Reference to animator
+                itemAnimator.SetBool("ItemLost", true);                                     // Play animation
+                obtainedItem.GetComponent<Image>().sprite = allItemList[i].itemIcon;        // Get the icon of the item
+                Destroy(obtainedItem, 3f);                                                  // Destroy the object in 3 seconds.
             }
         }
     }
 
-    public void AddSwitches(int switches)
+    public void AddSwitches(int buttonIndex)                            // Function that adds switches, button # as parameter
     {
-        var dictionary = new Dictionary<string, List<int>>();
-        dictionary["option1"] = currentCard.option1ObtainedSwitches;
+        var dictionary = new Dictionary<string, List<int>>();           // Create a dictionary with string as key and list<int> as data
+        dictionary["option1"] = currentCard.option1ObtainedSwitches;    // Add each button with their corresponding option
         dictionary["option2"] = currentCard.option2ObtainedSwitches;
         dictionary["option3"] = currentCard.option3ObtainedSwitches;
         dictionary["option4"] = currentCard.option4ObtainedSwitches;
         dictionary["option5"] = currentCard.option5ObtainedSwitches;
-        string optionIndex = "option" + switches;
+        string optionIndex = "option" + buttonIndex;                    // Create option variable with given button parameter
 
-        if (dictionary[optionIndex].Count > 0)
+        if (dictionary[optionIndex].Count > 0)                          // If there are any obtained switches..
         {
-            allSwitches[3] = false;
-            for (int i = 0; i < dictionary[optionIndex].Count; i++)
+            allSwitches[3] = false;                                     // Make sure obtain cig is set to false
+            for (int i = 0; i < dictionary[optionIndex].Count; i++)     // Cycle through all the added switches
             {
-                PlayItemObtained(dictionary[optionIndex][i]);
-                allSwitches[dictionary[optionIndex][i]] = true;
-                if (allSwitches[3] == true)
+                PlayItemObtained(dictionary[optionIndex][i]);           // IF the switch was an item, run obtained animation
+                allSwitches[dictionary[optionIndex][i]] = true;         // Change obtained switch to true
+                if (allSwitches[3] == true)                             // If obtained switch was obtain cig..
                 {
-                    AddCig();
-                    allSwitches[3] = false;
+                    AddCig();                                           // Add the cig to player inventory
+                    allSwitches[3] = false;                             // Set the cig obtained boolean back to false
                 }
             }
         }
@@ -874,30 +874,30 @@ public class GameController : MonoBehaviour {
         //        break;
         //}
     }
-    
+
     //Removes switches from allswitched[]
 
-    public void RemoveSwitches(int switches)
+    public void RemoveSwitches(int buttonIndex)                         // Function that removes switches, button # as parameter
     {
-        var dictionary = new Dictionary<string, List<int>>();
-        dictionary["option1"] = currentCard.option1RemovedSwitches;
+        var dictionary = new Dictionary<string, List<int>>();           // Create dictionary with string as key and List<int> as result
+        dictionary["option1"] = currentCard.option1RemovedSwitches;     // Setup all the buttons with their corresponding options
         dictionary["option2"] = currentCard.option2RemovedSwitches;
         dictionary["option3"] = currentCard.option3RemovedSwitches;
         dictionary["option4"] = currentCard.option4RemovedSwitches;
         dictionary["option5"] = currentCard.option5RemovedSwitches;
-        string optionIndex = "option" + switches;
+        string optionIndex = "option" + buttonIndex;                    // Create a variable from the parameter
 
-        if (dictionary[optionIndex].Count > 0)
+        if (dictionary[optionIndex].Count > 0)                          // If there are any removed switches..
         {
-            allSwitches[3] = true;
-            for (int i = 0; i < dictionary[optionIndex].Count; i++)
+            allSwitches[3] = true;                                      // Make sure obtainCig is set to true
+            for (int i = 0; i < dictionary[optionIndex].Count; i++)     // Cycle through all the switches
             {
-                PlayItemLost(dictionary[optionIndex][i]);
-                allSwitches[dictionary[optionIndex][i]] = false;
-                if (allSwitches[3] == false)
+                PlayItemLost(dictionary[optionIndex][i]);               // If switch is an item, play lost animation
+                allSwitches[dictionary[optionIndex][i]] = false;        // Set the switch to false to remove it
+                if (allSwitches[3] == false)                            // If obtain cig was set to false..
                 {
-                    RemoveCig();
-                    allSwitches[3] = true;
+                    RemoveCig();                                        // Remove cig from player
+                    allSwitches[3] = true;                              // Set obtained cig back to true.
                 }
             }
         }
