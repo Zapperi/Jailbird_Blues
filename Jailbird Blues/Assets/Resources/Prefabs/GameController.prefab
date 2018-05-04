@@ -158,6 +158,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3ff04b9a82bf5a4459c9f5ed2bfa1afe, type: 2}
   - {fileID: 11400000, guid: 94a918c056845134e8b3a94b11dc3f0f, type: 2}
   - {fileID: 11400000, guid: b67e254ddc892874d95cc4a33120c571, type: 2}
+  - {fileID: 11400000, guid: b0d485d20bc264341aa4f18714e7e7ac, type: 2}
+  - {fileID: 11400000, guid: dc00b4999bf695a468017450197d9967, type: 2}
   yardCards: []
   messCards: []
   eveningCellCards: []

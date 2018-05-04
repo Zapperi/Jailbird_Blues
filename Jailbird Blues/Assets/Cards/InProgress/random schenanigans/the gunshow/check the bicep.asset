@@ -18,11 +18,17 @@ MonoBehaviour:
   RepGuard: 0
   timeOfDay: 0
   storyPhase: 0
+  location: 
   backgroundImage: {fileID: 21300000, guid: e34e2dc729b5acd42b383971c725e4f1, type: 3}
   foregroundImage: {fileID: 0}
+  flipForegroundImageRight: 0
   foregroundImage2: {fileID: 0}
+  flipForegroundImageLeft: 0
   foregroundImage3: {fileID: 21300000, guid: 9080cd5bf9da0e648b88b2bb996b8a12, type: 3}
-  foregroundImage4: {fileID: 0}
+  flipForegroundImageCenter: 0
+  foregroundBigImage: {fileID: 0}
+  flipForegroundImageBig: 0
+  foregroundItemImage: {fileID: 0}
   bgMusic: {fileID: 0}
   bgAmbientAudio: {fileID: 0}
   musicDecrease: 0
@@ -38,7 +44,8 @@ MonoBehaviour:
   onTop: 0
   repeatable: 0
   endOfGame: 0
-  OptionsOn: 1
+  SkipCard: {fileID: 0}
+  OptionsOn: 0
   Option1On: 0
   option1ReqSwitches: 
   option1text: 
@@ -49,7 +56,7 @@ MonoBehaviour:
   option1ObtainedSwitches: 
   option1RemovedSwitches: 
   option1FollowCard: {fileID: 0}
-  Option2On: 1
+  Option2On: 0
   option2ReqSwitches: 
   option2text: feel the bicep
   option2IrsReputation: 0
@@ -59,7 +66,7 @@ MonoBehaviour:
   option2ObtainedSwitches: 
   option2RemovedSwitches: 
   option2FollowCard: {fileID: 11400000, guid: ea42f44be60850e4586a63cbe7840b46, type: 2}
-  Option3On: 1
+  Option3On: 0
   option3ReqSwitches: 
   option3text: nah I'm good
   option3IrsReputation: 0
@@ -86,7 +93,7 @@ MonoBehaviour:
   option5GuardReputation: 0
   option5ObtainedSwitches: 
   option5RemovedSwitches: 
-  option5FollowCard: {fileID: 0}
+  option5FollowCard: {fileID: 11400000, guid: a670edebe8b2516459ef279a25281a1d, type: 2}
   isTimeBasedCard: 0
   sfxPrewait: 0
   sfx: {fileID: 0}

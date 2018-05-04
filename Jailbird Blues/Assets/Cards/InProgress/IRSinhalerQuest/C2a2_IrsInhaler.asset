@@ -18,26 +18,33 @@ MonoBehaviour:
   RepGuard: 0
   timeOfDay: 0
   storyPhase: 0
+  location: 
   backgroundImage: {fileID: 21300000, guid: 8378fa802b5596e4fbe764c349e9d44c, type: 3}
   foregroundImage: {fileID: 0}
+  flipForegroundImageRight: 0
   foregroundImage2: {fileID: 21300000, guid: 2293ec62e334850488948ed1a7f49f00, type: 3}
+  flipForegroundImageLeft: 0
   foregroundImage3: {fileID: 0}
-  foregroundImage4: {fileID: 0}
+  flipForegroundImageCenter: 0
+  foregroundBigImage: {fileID: 0}
+  flipForegroundImageBig: 0
+  foregroundItemImage: {fileID: 0}
   bgMusic: {fileID: 0}
   bgAmbientAudio: {fileID: 0}
   musicDecrease: 0.5
   ambientDecrease: 0.5
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: '"Would you help me sir?"'
-  cardText: 
+  cardTextPerson: Simon
+  cardText: '"Would you help me sir?"'
   logText: 
   endCard: 0
   timeCard: 0
   onTop: 0
   repeatable: 0
   endOfGame: 0
-  OptionsOn: 1
+  SkipCard: {fileID: 0}
+  OptionsOn: 0
   Option1On: 1
   option1ReqSwitches: 
   option1text: '"Of course i''ll help you"'
@@ -85,7 +92,7 @@ MonoBehaviour:
   option5GuardReputation: 0
   option5ObtainedSwitches: 
   option5RemovedSwitches: 
-  option5FollowCard: {fileID: 0}
+  option5FollowCard: {fileID: 11400000, guid: b330dd058d8a1e4428265c6a70ad9e08, type: 2}
   isTimeBasedCard: 0
   sfxPrewait: 0
   sfx: {fileID: 0}

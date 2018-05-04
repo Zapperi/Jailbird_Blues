@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: lift4a
+  m_Name: C2a2_IrsInhaler 1
   m_EditorClassIdentifier: 
   requiredSwitches: 
   RepIrs: 0
@@ -18,68 +18,74 @@ MonoBehaviour:
   RepGuard: 0
   timeOfDay: 0
   storyPhase: 0
-  backgroundImage: {fileID: 0}
+  location: 
+  backgroundImage: {fileID: 21300000, guid: 8378fa802b5596e4fbe764c349e9d44c, type: 3}
   foregroundImage: {fileID: 0}
-  foregroundImage2: {fileID: 0}
+  flipForegroundImageRight: 0
+  foregroundImage2: {fileID: 21300000, guid: 2293ec62e334850488948ed1a7f49f00, type: 3}
+  flipForegroundImageLeft: 0
   foregroundImage3: {fileID: 0}
-  foregroundImage4: {fileID: 0}
+  flipForegroundImageCenter: 0
+  foregroundBigImage: {fileID: 0}
+  flipForegroundImageBig: 0
+  foregroundItemImage: {fileID: 0}
   bgMusic: {fileID: 0}
   bgAmbientAudio: {fileID: 0}
-  musicDecrease: 0
-  ambientDecrease: 0
+  musicDecrease: 0.5
+  ambientDecrease: 0.5
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: Shaker brah
-  cardText: You start feeling lightheaded while the sweat keeps on pouring. "Yeah
-    bro keep it up!"
+  cardTextPerson: What do you do?
+  cardText: 
   logText: 
   endCard: 0
   timeCard: 0
   onTop: 0
   repeatable: 0
   endOfGame: 0
+  SkipCard: {fileID: 0}
   OptionsOn: 1
-  Option1On: 0
+  Option1On: 1
   option1ReqSwitches: 
-  option1text: 
+  option1text: '"Of course i''ll help you"'
   option1IrsReputation: 0
   option1PunkReputation: 0
   option1ShakeReputation: 0
   option1GuardReputation: 0
   option1ObtainedSwitches: 
   option1RemovedSwitches: 
-  option1FollowCard: {fileID: 0}
+  option1FollowCard: {fileID: 11400000, guid: 64230ec996b966c4ea7fdf3b25bc5061, type: 2}
   Option2On: 1
   option2ReqSwitches: 
-  option2text: Push through the pain!
+  option2text: '"Why don''t you ask the guards?"'
   option2IrsReputation: 0
   option2PunkReputation: 0
-  option2ShakeReputation: 2
+  option2ShakeReputation: 0
   option2GuardReputation: 0
   option2ObtainedSwitches: 
   option2RemovedSwitches: 
-  option2FollowCard: {fileID: 11400000, guid: f2fd1409f8349a34aabe62fd6af7915e, type: 2}
+  option2FollowCard: {fileID: 11400000, guid: dbf997802ad83a149af78d03efceb0ca, type: 2}
   Option3On: 1
   option3ReqSwitches: 
-  option3text: Okay, I'm done.
+  option3text: Go play with punks
   option3IrsReputation: 0
   option3PunkReputation: 0
-  option3ShakeReputation: 1
+  option3ShakeReputation: 0
   option3GuardReputation: 0
   option3ObtainedSwitches: 
   option3RemovedSwitches: 
-  option3FollowCard: {fileID: 11400000, guid: 7b61d3283261aa646bdf4c5f26a229e4, type: 2}
-  Option4On: 0
+  option3FollowCard: {fileID: 11400000, guid: 84150b3cb01492e4189ec4fe67c782b5, type: 2}
+  Option4On: 1
   option4ReqSwitches: 
-  option4text: 
+  option4text: '"No"'
   option4IrsReputation: 0
   option4PunkReputation: 0
   option4ShakeReputation: 0
   option4GuardReputation: 0
   option4ObtainedSwitches: 
   option4RemovedSwitches: 
-  option4FollowCard: {fileID: 0}
-  Option5On: 1
+  option4FollowCard: {fileID: 11400000, guid: 2dcd6d99260e43c48b7736dbbf72379e, type: 2}
+  Option5On: 0
   option5IrsReputation: 0
   option5PunkReputation: 0
   option5ShakeReputation: 0
