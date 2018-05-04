@@ -133,7 +133,7 @@ public class CardDisplay : MonoBehaviour
         RefreshButtonTextFields();                                            // Update the textfield to current ones, does NOT affect cardText.
         UpdateButtonFunctions();                                        // Update the CardDisplay button listeners.
         RefreshOptions();                                               // Refresh options, if options are off, enable option 5.
-        skipScene();                                                    //Asks if you want to skip if there is skipcard
+        SkipScene();                                                    //Asks if you want to skip if there is skipcard
     }
 
     //--BUTTON FUNCTIONS--
@@ -504,7 +504,7 @@ public class CardDisplay : MonoBehaviour
             }
         }               // if "i" key is pressed, open notebook and inventory page. Otherwise close if inventory page is open.
     }
-    public void skipScene()                             //skip function
+    public void SkipScene()                             //skip function
     {
        // Debug.Log("SkipScene functio");
         if(currentCard.SkipCard != null)
@@ -586,37 +586,37 @@ public class CardDisplay : MonoBehaviour
         SetSpeaker();
     }
 
-    private void SetSpeaker()
+    private void SetSpeaker()   // Function that changes Speech bubble spike's position and rotation
     {
-        Vector3 newPosition = Vector3.zero;
-        Vector3 newAngle = Vector3.zero;
-        bool _active = false;
-        Tools.ResetLocation(speechBubbleSpike.transform);
-        if (currentCard.setLeftAsSpeaker)
+        Vector3 newPosition = Vector3.zero;                 // Create new temp vector3 for position, set it to zero.
+        Vector3 newAngle = Vector3.zero;                    // Create new temp vector3 for angle, set it to zero.
+        bool _active = false;                               // Track if the spike should be active
+        Tools.ResetLocation(speechBubbleSpike.transform);   // Make sure the object starts at 0
+        if (currentCard.setLeftAsSpeaker)                   // Check if the speaker is on the left..
         {
-            _active = true;
-            newPosition = speechBubbleSpike.transform.TransformPoint(-215f, 160f, 0f);
-            newAngle.y = 180f;
+            _active = true;                                 // Object should be active
+            newPosition = speechBubbleSpike.transform.TransformPoint(-215f, 160f, 0f);// Save the local coordinate inside bubblespike transform into world space. 
+            newAngle.y = 180f;                              // Rotate the object.
         }
-        if (currentCard.setRightAsSpeaker)
+        if (currentCard.setRightAsSpeaker)                  // Same as for before, but new coordinates and rotation
         {
             _active = true;
             newPosition = speechBubbleSpike.transform.TransformPoint(215f, 160f, 0f);
             newAngle.y = 0f;
         }
-        if (currentCard.setCenterAsSpeaker ||currentCard.setBigAsSpeaker)
+        if (currentCard.setCenterAsSpeaker ||currentCard.setBigAsSpeaker) // Same as for before, but new coordinates and rotation
         {
             _active = true;
             newPosition = speechBubbleSpike.transform.TransformPoint(-130f, 160f, 0f);
             newAngle.y = 180f;
         }
-        if (!_active)
-            speechBubbleSpike.gameObject.SetActive(false);
-        else
+        if (!_active)                                       // If object was not triggered--
+            speechBubbleSpike.gameObject.SetActive(false);  // Disable it.
+        else                                                // If object WAS triggered..
         {
-            speechBubbleSpike.gameObject.SetActive(true);
-            speechBubbleSpike.transform.position = newPosition;
-            speechBubbleSpike.transform.eulerAngles = newAngle;
+            speechBubbleSpike.gameObject.SetActive(true);   // Enable it
+            speechBubbleSpike.transform.position = newPosition;// Set new position
+            speechBubbleSpike.transform.eulerAngles = newAngle;// Set new rotation
         }
     }
 
