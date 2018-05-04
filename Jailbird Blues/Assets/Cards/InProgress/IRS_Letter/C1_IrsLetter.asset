@@ -16,13 +16,19 @@ MonoBehaviour:
   RepPunks: 0
   RepShake: 0
   RepGuard: 0
-  timeOfDay: 1
+  timeOfDay: 2
   storyPhase: 1
+  location: 
   backgroundImage: {fileID: 21300000, guid: 013584fb9b3867548a06364b64007f2a, type: 3}
   foregroundImage: {fileID: 21300000, guid: b9290ac4e53f8c24b9f2b35958b07913, type: 3}
+  flipForegroundImageRight: 0
   foregroundImage2: {fileID: 21300000, guid: a05c51235ae1d44448e5a5027c6e9df6, type: 3}
+  flipForegroundImageLeft: 0
   foregroundImage3: {fileID: 0}
-  foregroundImage4: {fileID: 0}
+  flipForegroundImageCenter: 0
+  foregroundBigImage: {fileID: 0}
+  flipForegroundImageBig: 0
+  foregroundItemImage: {fileID: 0}
   bgMusic: {fileID: 8300000, guid: 267a97e21f8e84142bed948aad38eae8, type: 3}
   bgAmbientAudio: {fileID: 0}
   musicDecrease: 0.7
@@ -37,6 +43,7 @@ MonoBehaviour:
   onTop: 0
   repeatable: 0
   endOfGame: 0
+  SkipCard: {fileID: 0}
   OptionsOn: 0
   Option1On: 0
   option1ReqSwitches: 
