@@ -17,7 +17,7 @@ public class GameController : MonoBehaviour {
 	public int day;                                                                 //counter for days passed in game
     public int cigaretteCount;
 
-    private int scheduleSize = 3;                                                   //integer for schedule size, incase we need to expand it
+    private int scheduleSize = 4;                                                   //integer for schedule size, incase we need to expand it
     public int schedule;                                                            //integer switch for the daily activities
 	public Text logCurrentDayText;
     public Text topBar;
@@ -49,6 +49,11 @@ public class GameController : MonoBehaviour {
     public bool cleaningUpFades;
     public CardValues cardWaiting;
 
+    public CardValues dayChangeCard;                                                //This card is shown at the day change
+    public GameObject dayChangeImage;                                               //Used to activate day change image
+    public Text dayChangeText;                                                      //direct access to day change text element
+    public bool dayChangeCardDisplayed;                                             //bool used to execute day change card
+
 
 
     void Awake()																	//when the game starts
@@ -78,6 +83,7 @@ public class GameController : MonoBehaviour {
             waitingForSFX = false;
             cleaningUpFades = false;
             GetComponent<OptionsSliders>().LoadSettings();
+            dayChangeCardDisplayed = false;
 
             //GetNextCard();
 
@@ -351,9 +357,31 @@ public class GameController : MonoBehaviour {
         if (currentCard.timeCard)
         {
             AddTime();
+            if (schedule == 0)
+            {
+                dayChangeCardDisplayed = false;
+            }
         }
         previousCard = currentCard;                         //HERE WE...
-        currentCard = next;                                 //FINALLY CHANGE THE CARD
+        if (schedule == 0)                                  //This if-branch is used to display dayChangeCard when schedule is 0
+        {
+            if (!dayChangeCardDisplayed)
+            {
+                dayChangeCardDisplayed = true;              //bool to avoid loop
+                dayChangeCard.option5FollowCard = next;     //set the next card to the dayChangeCard
+                currentCard = dayChangeCard;                //set day change card as current card
+                dayChangeImage.SetActive(true);             //set the day change image active
+                dayChangeText.text = "Day " + day;          //update day change text
+            } else
+            {                                               //Enters here when dayChangeCard is still current card but it has already been displayed.
+                dayChangeImage.SetActive(false);            //Set dayChangeImage inactive
+                currentCard = next;                         //Move to next card
+            }
+        } else
+        {
+            currentCard = next;                                 //FINALLY CHANGE THE CARD
+        }
+        //currentCard = next;                                 //FINALLY CHANGE THE CARD
         cardWaiting = null;
         for (int i =0; i<allCards.Count; i++)
         {
