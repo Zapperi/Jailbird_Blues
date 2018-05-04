@@ -5,13 +5,14 @@ using UnityEngine.UI;
 using System;
 using UnityEditor;
 
-[CustomEditor (typeof(CardDisplay))]
-public class CustomCardDisplay : Editor {
+[CustomEditor(typeof(CardDisplay))]
+public class CustomCardDisplay : Editor
+{
     CardDisplay cd;
 
     public override void OnInspectorGUI()
     {
-        
+
         cd = (CardDisplay)target;
 
         if (cd.currentCard)
@@ -25,10 +26,10 @@ public class CustomCardDisplay : Editor {
             cd.button3.gameObject.SetActive(true);
             cd.button4.gameObject.SetActive(true);
 
-                cd.background.sprite = cd.currentCard.backgroundImage;
-                cd.foregroundImage1.sprite = cd.currentCard.foregroundImage;
-                cd.foregroundImage2.sprite = cd.currentCard.foregroundImage2;
-                cd.foregroundImage3.sprite = cd.currentCard.foregroundImage3;
+            cd.background.sprite = cd.currentCard.backgroundImage;
+            cd.foregroundImage1.sprite = cd.currentCard.foregroundImage;
+            cd.foregroundImage2.sprite = cd.currentCard.foregroundImage2;
+            cd.foregroundImage3.sprite = cd.currentCard.foregroundImage3;
 
             cd.cardText.text = cd.currentCard.cardText;
             cd.button1text.text = cd.currentCard.option1text;

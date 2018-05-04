@@ -46,6 +46,7 @@ public class CardDisplay : MonoBehaviour
     public GameObject optionsPage;
     public GameObject inventoryContent;
     public GameObject skipQuestion;
+    public Button skipTutorial;
     public Button skipYes;
     public Button skipNo;
 
@@ -504,23 +505,24 @@ public class CardDisplay : MonoBehaviour
         if(currentCard.SkipCard != null)
         {
             Debug.Log("skip question activated");
-            skipQuestion.SetActive(true);               // sets question field active
-            skipYes.onClick.AddListener(SkipTutorial);  //adds listeners to buttons
-            skipNo.onClick.AddListener(ReturnToGame);
-            BlockButtons();                             //Blocks all other buttons
+            skipTutorial.gameObject.SetActive(true);               // sets question field active
+            skipTutorial.onClick.AddListener(SkipConfirmation);
+                                                                  
         }
         else
         {
-            skipQuestion.SetActive(false);              // sets question field inactive
+            skipTutorial.gameObject.SetActive(false);               // sets question field inactive
         }
     }
     public void SkipTutorial()                          //skips tutorial
     {
         skipYes.onClick.RemoveAllListeners();           //Removes listeners from buttons
         skipNo.onClick.RemoveAllListeners();
+        skipTutorial.onClick.RemoveAllListeners();
         UnblockButtons();                               //unlocks all other buttons
         skipQuestion.SetActive(false);
-        ButtonPressed(6);
+        skipTutorial.gameObject.SetActive(false);
+        ButtonPressed(6);                   
     }
 
     public void ReturnToGame()                          // dont skip tutorial
@@ -530,6 +532,14 @@ public class CardDisplay : MonoBehaviour
         skipNo.onClick.RemoveAllListeners();
         UnblockButtons();                               //Unlocks all other buttons
         skipQuestion.SetActive(false);                  //sets question field inactive
+    }
+
+    public void SkipConfirmation()
+    {
+        skipQuestion.SetActive(true);
+        skipYes.onClick.AddListener(SkipTutorial);  //adds listeners to buttons
+        skipNo.onClick.AddListener(ReturnToGame);
+        BlockButtons();                             //Blocks all other buttons
     }
 
     public void BlockButtons()                                    // Function that disables all player interaction by using overlayingimage
