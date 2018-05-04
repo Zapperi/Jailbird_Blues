@@ -31,18 +31,26 @@ public class CardValues : ScriptableObject									//switched the surface from M
     public Sprite foregroundImage;                                          //reference to the image that will be set as the non playable character
     [Tooltip("Flip the facing of the image to Right Facing.")]
     public bool flipForegroundImageRight;
+    [Tooltip("Is this person the speaker?")]
+    public bool setRightAsSpeaker;
     [Tooltip("What image shows on the foreground left slot.")]
     public Sprite foregroundImage2;
     [Tooltip("Flip the facing of the image to Right Facing.")]
     public bool flipForegroundImageLeft;
+    [Tooltip("Is this person the speaker?")]
+    public bool setLeftAsSpeaker;
     [Tooltip("What image shows on the center slot.")]
     public Sprite foregroundImage3;
     [Tooltip("Flip the facing of the image to Right Facing.")]
     public bool flipForegroundImageCenter;
+    [Tooltip("Is this person the speaker?")]
+    public bool setCenterAsSpeaker;
     [Tooltip("What image shows on the foreground big center slot.")]
     public Sprite foregroundBigImage;
     [Tooltip("Flip the facing of the image to Right Facing.")]
     public bool flipForegroundImageBig;
+    [Tooltip("Is this person the speaker?")]
+    public bool setBigAsSpeaker;
     [Tooltip("What image shows on the foreground item slot.")]
     public Sprite foregroundItemImage;
     [Space(6)]

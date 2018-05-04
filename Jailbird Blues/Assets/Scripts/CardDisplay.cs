@@ -28,6 +28,8 @@ public class CardDisplay : MonoBehaviour
     public Image foregroundImage2;          // Left foreground image slot
     public Image foregroundImage3;          // Center foreground image slot
     public Image foregroundBigImage;        // Big center foreground image slot
+    public Image speechBubbleSpike;         // Image that indicates who is speaking.
+    private Transform newBubbleTransform;
     public GameObject noteBook;
     private bool typeTextRunning;           // Used to track if typeTextCoroutine is still running.
 	public static float textScrollSpeed;    // Used to control the speed of TypeText coroutine (text speed)
@@ -128,7 +130,7 @@ public class CardDisplay : MonoBehaviour
             UpdateImages();                                             // Update to new images, hide the field if there is no image.
         }
         SiblingIndexSwitch();                                           // Switches foreground images if needed.
-        RefreshTextFields();                                            // Update the textfield to current ones, does NOT affect cardText.
+        RefreshButtonTextFields();                                            // Update the textfield to current ones, does NOT affect cardText.
         UpdateButtonFunctions();                                        // Update the CardDisplay button listeners.
         RefreshOptions();                                               // Refresh options, if options are off, enable option 5.
         skipScene();                                                    //Asks if you want to skip if there is skipcard
@@ -421,7 +423,10 @@ public class CardDisplay : MonoBehaviour
         {
             noteBook.GetComponent<NoteBook>().UpdateNotebook();
             if (noteBook.activeSelf == false)
+            {
                 noteBook.gameObject.SetActive(true);
+                noteBook.GetComponent<NoteBook>().OptionsButtonpressed();
+            }                
             else
                 noteBook.gameObject.SetActive(false);
         }                // If escape is pressed, open notebook. If open, close it.
@@ -504,7 +509,7 @@ public class CardDisplay : MonoBehaviour
        // Debug.Log("SkipScene functio");
         if(currentCard.SkipCard != null)
         {
-            Debug.Log("skip question activated");
+            //Debug.Log("skip question activated");
             skipTutorial.gameObject.SetActive(true);               // sets question field active
             skipTutorial.onClick.AddListener(SkipConfirmation);
                                                                   
@@ -528,7 +533,7 @@ public class CardDisplay : MonoBehaviour
 
     public void ReturnToGame()                          // dont skip tutorial
     {
-        Debug.Log("Return to game");
+        //Debug.Log("Return to game");
         skipYes.onClick.RemoveAllListeners();           // Removes listeners from buttons
         skipNo.onClick.RemoveAllListeners();
         UnblockButtons();                               //Unlocks all other buttons
@@ -537,7 +542,7 @@ public class CardDisplay : MonoBehaviour
 
     public void SkipConfirmation()
     {
-        Debug.Log("Skip button enabled");
+        //Debug.Log("Skip button enabled");
         skipQuestion.SetActive(true);
         skipYes.onClick.AddListener(SkipTutorial);  //adds listeners to buttons
         skipNo.onClick.AddListener(ReturnToGame);
@@ -567,14 +572,52 @@ public class CardDisplay : MonoBehaviour
 
     public void UpdateImages()   // Function that updates the card images, hides if there is nothing to show.
     {
-        topBar.text = "Day " + GameController.gameController.day + ", " +currentCard.location;
+        if (currentCard.location != "")
+            topBar.text = "Day " + GameController.gameController.day + ", " + currentCard.location;
+        else
+            topBar.text = "Day " + GameController.gameController.day;
         background.sprite = currentCard.backgroundImage;
         foregroundImage1.sprite = currentCard.foregroundImage;
         foregroundImage2.sprite = currentCard.foregroundImage2;
         foregroundImage3.sprite = currentCard.foregroundImage3;
         foregroundBigImage.sprite = currentCard.foregroundBigImage;
         SetImageStatus();
-        FlipImages();           
+        FlipImages();
+        SetSpeaker();
+    }
+
+    private void SetSpeaker()
+    {
+        Vector3 newPosition = Vector3.zero;
+        Vector3 newAngle = Vector3.zero;
+        bool _active = false;
+        Tools.ResetLocation(speechBubbleSpike.transform);
+        if (currentCard.setLeftAsSpeaker)
+        {
+            _active = true;
+            newPosition = speechBubbleSpike.transform.TransformPoint(-215f, 160f, 0f);
+            newAngle.y = 180f;
+        }
+        if (currentCard.setRightAsSpeaker)
+        {
+            _active = true;
+            newPosition = speechBubbleSpike.transform.TransformPoint(215f, 160f, 0f);
+            newAngle.y = 0f;
+        }
+        if (currentCard.setCenterAsSpeaker ||currentCard.setBigAsSpeaker)
+        {
+            _active = true;
+            newPosition = speechBubbleSpike.transform.TransformPoint(-130f, 160f, 0f);
+            newAngle.y = 180f;
+        }
+        if (!_active)
+            speechBubbleSpike.gameObject.SetActive(false);
+        else
+        {
+            speechBubbleSpike.gameObject.SetActive(true);
+            speechBubbleSpike.transform.position = newPosition;
+            speechBubbleSpike.transform.eulerAngles = newAngle;
+        }
     }
 
     private void SetImageStatus()
@@ -617,7 +660,7 @@ public class CardDisplay : MonoBehaviour
             foregroundBigImage.transform.eulerAngles = new Vector3(0f, 0f, 0f);
     }
 
-    public void RefreshTextFields()                     // Function that refreshes the CardDisplay's text fields.
+    public void RefreshButtonTextFields()                     // Function that refreshes the CardDisplay's button and speaker name text fields.
     {
         button1text.text = currentCard.option1text;
         button2text.text = currentCard.option2text;

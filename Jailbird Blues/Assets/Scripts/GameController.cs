@@ -251,7 +251,7 @@ public class GameController : MonoBehaviour {
     public void SetCurrentCard(int selectedOption)                            //This is where changing begins.
     {
         cardDisplay.BlockButtons();
-        Debug.Log("Block2 " + selectedOption);
+        //Debug.Log("Block2 " + selectedOption);
         if (currentCard.ppsHasFadeOut || currentCard.sfxHasFadeOut)
         {
             //cardDisplay.BlockButtons();
@@ -315,7 +315,7 @@ public class GameController : MonoBehaviour {
 
     public void SetCurrentCard(CardValues next)
     {
-        Debug.Log("Block1");
+        //Debug.Log("Block1");
         cardDisplay.BlockButtons();
         if (currentCard.ppsHasFadeOut || currentCard.sfxHasFadeOut)
         {
@@ -1020,7 +1020,8 @@ public class GameController : MonoBehaviour {
 
     public void RemoveCig()
     {
-        cigaretteCount -= 1;
+        if(cigaretteCount > 0)
+            cigaretteCount -= 1;
         if (cigaretteCount <= 0)
         {
             allSwitches[4] = false;
