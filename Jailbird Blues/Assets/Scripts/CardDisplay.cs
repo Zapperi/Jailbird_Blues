@@ -516,6 +516,7 @@ public class CardDisplay : MonoBehaviour
     }
     public void SkipTutorial()                          //skips tutorial
     {
+        Debug.Log("Skipped tutorial");
         skipYes.onClick.RemoveAllListeners();           //Removes listeners from buttons
         skipNo.onClick.RemoveAllListeners();
         skipTutorial.onClick.RemoveAllListeners();
@@ -536,6 +537,7 @@ public class CardDisplay : MonoBehaviour
 
     public void SkipConfirmation()
     {
+        Debug.Log("Skip button enabled");
         skipQuestion.SetActive(true);
         skipYes.onClick.AddListener(SkipTutorial);  //adds listeners to buttons
         skipNo.onClick.AddListener(ReturnToGame);
@@ -663,11 +665,13 @@ public class CardDisplay : MonoBehaviour
         button3.onClick.RemoveAllListeners();
         button4.onClick.RemoveAllListeners();
         button5.onClick.RemoveAllListeners();
+        skipTutorial.onClick.RemoveAllListeners();
         button1.onClick.AddListener(Button1pressed);    // ..Add new button functions with updated parameters
         button2.onClick.AddListener(Button2pressed);
         button3.onClick.AddListener(Button3pressed);
         button4.onClick.AddListener(Button4pressed);
         button5.onClick.AddListener(Button5pressed);
+        
     }
 
     public void RefreshOptions()
