@@ -760,6 +760,7 @@ public class GameController : MonoBehaviour {
                 itemAnimator = obtainedItem.GetComponent<Animator>();                       // Access the animator component
                 itemAnimator.SetBool("ItemGained", true);                                   // Play the animation
                 obtainedItem.GetComponent<Image>().sprite = allItemList[i].itemIcon;        // Set the item icon              
+                ItemReceivedAudioPlay();
                 Destroy(obtainedItem, 4f);                                                  // Destroy object after 3 seconds
             }
         }

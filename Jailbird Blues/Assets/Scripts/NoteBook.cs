@@ -42,22 +42,23 @@ public class NoteBook : MonoBehaviour {
 
     private void UpdateStats()
     {
+        statsText = "<size=40>REPUTATIONS</size>\n\n";
         if (GameController.gameController.irsRep >= 0)
-            statsText = "IRS rep: <color=green>" + GameController.gameController.irsRep + "</color>\n";
+            statsText += "I.R.S: <color=green>" + GameController.gameController.irsRep + "</color>\n";
         if (GameController.gameController.irsRep < 0)
-            statsText = "IRS rep: <color=red>" + GameController.gameController.irsRep + "</color>\n";
+            statsText += "I.R.S: <color=red>" + GameController.gameController.irsRep + "</color>\n";
         if (GameController.gameController.punksRep >= 0)
-            statsText += "Punks rep: <color=green>" + GameController.gameController.punksRep + "</color>\n";
+            statsText += "Punks: <color=green>" + GameController.gameController.punksRep + "</color>\n";
         if (GameController.gameController.punksRep < 0)
-            statsText += "Punks rep: <color=red>" + GameController.gameController.punksRep + "</color>\n";
+            statsText += "Punks: <color=red>" + GameController.gameController.punksRep + "</color>\n";
         if (GameController.gameController.shakersRep >= 0)
-            statsText += "Shakers rep: <color=green>" + GameController.gameController.shakersRep + "</color>\n";
+            statsText += "Protein Shakers: <color=green>" + GameController.gameController.shakersRep + "</color>\n";
         if (GameController.gameController.shakersRep < 0)
-            statsText += "Shakers rep: <color=red>" + GameController.gameController.shakersRep + "</color>\n";
+            statsText += "Protein Shakers: <color=red>" + GameController.gameController.shakersRep + "</color>\n";
         if (GameController.gameController.guardsRep >= 0)
-            statsText += "Guards rep: <color=green>" + GameController.gameController.guardsRep + "</color>\n";
+            statsText += "Guards: <color=green>" + GameController.gameController.guardsRep + "</color>\n";
         if (GameController.gameController.guardsRep < 0)
-            statsText += "Guards rep: <color=red>" + GameController.gameController.guardsRep + "</color>\n";
+            statsText += "Guards: <color=red>" + GameController.gameController.guardsRep + "</color>\n";
         noteBookText.text = statsText;
     }
 
