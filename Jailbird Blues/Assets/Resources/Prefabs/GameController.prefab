@@ -138,7 +138,7 @@ MonoBehaviour:
   irsRep: 0
   shakersRep: 0
   guardsRep: 0
-  day: 0
+  day: 1
   cigaretteCount: 0
   schedule: 0
   logCurrentDayText: {fileID: 0}
@@ -192,12 +192,18 @@ MonoBehaviour:
     itemDescText: '"The eternal cage by Pablo Manell."'
     itemSwitchIndex: 6
   itemImage: {fileID: 1027607786807654, guid: fac65f37c080b3b468985c5eb3b81e71, type: 2}
+  gainedAnimationSpawnpoint: {fileID: 0}
+  lostAnimationSpawnpoint: {fileID: 0}
   mainCamera: {fileID: 0}
   nextCardWaiting: {fileID: 0}
   waitingForPPS: 0
   waitingForSFX: 0
   cleaningUpFades: 0
   cardWaiting: {fileID: 0}
+  dayChangeCard: {fileID: 11400000, guid: 347db2b260ced67418cd77aa07aa462b, type: 2}
+  dayChangeImage: {fileID: 0}
+  dayChangeText: {fileID: 0}
+  dayChangeCardDisplayed: 0
 --- !u!114 &114852098042609194
 MonoBehaviour:
   m_ObjectHideFlags: 1
