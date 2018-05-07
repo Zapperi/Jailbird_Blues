@@ -40,7 +40,7 @@ public class GameController : MonoBehaviour {
     public List<Item> allItemList;                                                     // List of all the aivable items in the game, set in inspector
     public GameObject itemImage;
     private Animator itemAnimator;
-    private GameObject canvasParent;
+    //private GameObject canvasParent;
     public GameObject gainedAnimationSpawnpoint;
     public GameObject lostAnimationSpawnpoint;
 
@@ -61,7 +61,7 @@ public class GameController : MonoBehaviour {
 
     void Awake()																	//when the game starts
 	{
-        canvasParent = GameObject.Find("Canvas");
+        //canvasParent = GameObject.Find("Canvas");
         
         GainsTextHandler.Initialize();                                              // Activates the floating reputation gain element
         if (gameController == null)													//if there is no gamecontroller
