@@ -22,12 +22,16 @@ MonoBehaviour:
   backgroundImage: {fileID: 21300000, guid: 8378fa802b5596e4fbe764c349e9d44c, type: 3}
   foregroundImage: {fileID: 0}
   flipForegroundImageRight: 0
+  setRightAsSpeaker: 0
   foregroundImage2: {fileID: 0}
   flipForegroundImageLeft: 0
+  setLeftAsSpeaker: 0
   foregroundImage3: {fileID: 0}
   flipForegroundImageCenter: 0
+  setCenterAsSpeaker: 0
   foregroundBigImage: {fileID: 0}
   flipForegroundImageBig: 0
+  setBigAsSpeaker: 0
   foregroundItemImage: {fileID: 0}
   bgMusic: {fileID: 8300000, guid: 267a97e21f8e84142bed948aad38eae8, type: 3}
   bgAmbientAudio: {fileID: 8300000, guid: 5dfb97e1a794231408631318b95322c4, type: 3}
@@ -103,8 +107,8 @@ MonoBehaviour:
   sfxAfterWait: 0
   ppsHasFadeIn: 1
   ppsFadeMode: 0
-  blackScreenStart: 0
-  blackScreenTime: 0
+  blackScreenStart: 1
+  blackScreenTime: 0.2
   ppsFadeInSpeed: 0
   ppsShowCard: 0
   ppsHasFadeOut: 0

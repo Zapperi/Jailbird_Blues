@@ -18,11 +18,21 @@ MonoBehaviour:
   RepGuard: 0
   timeOfDay: 0
   storyPhase: 0
+  location: 
   backgroundImage: {fileID: 21300000, guid: 1893ac2562840144f95617afa0eb2ff1, type: 3}
   foregroundImage: {fileID: 0}
+  flipForegroundImageRight: 0
+  setRightAsSpeaker: 0
   foregroundImage2: {fileID: 21300000, guid: 3abad9b8a54f9084aa98005e16ffd4a3, type: 3}
+  flipForegroundImageLeft: 0
+  setLeftAsSpeaker: 0
   foregroundImage3: {fileID: 0}
-  foregroundImage4: {fileID: 0}
+  flipForegroundImageCenter: 0
+  setCenterAsSpeaker: 0
+  foregroundBigImage: {fileID: 0}
+  flipForegroundImageBig: 0
+  setBigAsSpeaker: 0
+  foregroundItemImage: {fileID: 0}
   bgMusic: {fileID: 0}
   bgAmbientAudio: {fileID: 0}
   musicDecrease: 0
@@ -39,6 +49,7 @@ MonoBehaviour:
   onTop: 0
   repeatable: 0
   endOfGame: 0
+  SkipCard: {fileID: 0}
   OptionsOn: 0
   Option1On: 0
   option1ReqSwitches: 
@@ -101,5 +112,5 @@ MonoBehaviour:
   blackScreenTime: 0
   ppsFadeInSpeed: 0
   ppsShowCard: 0
-  ppsHasFadeOut: 0
+  ppsHasFadeOut: 1
   fadeOutSpeed: 0

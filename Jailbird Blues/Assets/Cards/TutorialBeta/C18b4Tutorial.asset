@@ -18,11 +18,21 @@ MonoBehaviour:
   RepGuard: 0
   timeOfDay: 1
   storyPhase: 0
+  location: 
   backgroundImage: {fileID: 21300000, guid: 7c5e619a5c03cc943a4b68321a14beb1, type: 3}
   foregroundImage: {fileID: 21300000, guid: 620b51cd1d656184382e23faba513624, type: 3}
+  flipForegroundImageRight: 0
+  setRightAsSpeaker: 0
   foregroundImage2: {fileID: 0}
+  flipForegroundImageLeft: 0
+  setLeftAsSpeaker: 0
   foregroundImage3: {fileID: 0}
-  foregroundImage4: {fileID: 0}
+  flipForegroundImageCenter: 0
+  setCenterAsSpeaker: 0
+  foregroundBigImage: {fileID: 0}
+  flipForegroundImageBig: 0
+  setBigAsSpeaker: 0
+  foregroundItemImage: {fileID: 0}
   bgMusic: {fileID: 0}
   bgAmbientAudio: {fileID: 0}
   musicDecrease: 0.6
@@ -36,10 +46,11 @@ MonoBehaviour:
     because that money was fake. But now, let\u2019s go eat!\u201D"
   logText: 
   endCard: 0
-  timeCard: 1
+  timeCard: 0
   onTop: 0
   repeatable: 0
   endOfGame: 0
+  SkipCard: {fileID: 0}
   OptionsOn: 0
   Option1On: 0
   option1ReqSwitches: 

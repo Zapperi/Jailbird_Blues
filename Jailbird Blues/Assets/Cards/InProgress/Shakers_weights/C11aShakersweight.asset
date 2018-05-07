@@ -18,15 +18,25 @@ MonoBehaviour:
   RepGuard: 0
   timeOfDay: 0
   storyPhase: 0
+  location: 
   backgroundImage: {fileID: 21300000, guid: e34e2dc729b5acd42b383971c725e4f1, type: 3}
   foregroundImage: {fileID: 0}
+  flipForegroundImageRight: 0
+  setRightAsSpeaker: 0
   foregroundImage2: {fileID: 0}
+  flipForegroundImageLeft: 0
+  setLeftAsSpeaker: 0
   foregroundImage3: {fileID: 21300000, guid: d2a87112952ce9847918b64eebab23a5, type: 3}
-  foregroundImage4: {fileID: 0}
+  flipForegroundImageCenter: 0
+  setCenterAsSpeaker: 0
+  foregroundBigImage: {fileID: 0}
+  flipForegroundImageBig: 0
+  setBigAsSpeaker: 0
+  foregroundItemImage: {fileID: 0}
   bgMusic: {fileID: 0}
   bgAmbientAudio: {fileID: 0}
-  musicDecrease: 0
-  ambientDecrease: 0
+  musicDecrease: 0.5
+  ambientDecrease: 0.5
   musicOff: 1
   ambientOff: 0
   cardTextPerson: Shaker goon
@@ -38,6 +48,7 @@ MonoBehaviour:
   onTop: 0
   repeatable: 0
   endOfGame: 0
+  SkipCard: {fileID: 0}
   OptionsOn: 0
   Option1On: 0
   option1ReqSwitches: 
