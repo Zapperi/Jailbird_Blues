@@ -40,7 +40,7 @@ MonoBehaviour:
   musicOff: 0
   ambientOff: 0
   cardTextPerson: 
-  cardText: "The guard leaves you alone with a\r\nsmiling inmate.\r"
+  cardText: "The guard leaves you alone with a\r smiling inmate.\r"
   logText: 
   endCard: 0
   timeCard: 0

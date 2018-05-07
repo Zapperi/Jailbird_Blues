@@ -40,8 +40,8 @@ MonoBehaviour:
   musicOff: 0
   ambientOff: 0
   cardTextPerson: Guard
-  cardText: "\"He's gonna mentor you to our way of\r\ndoing things. Better play nice
-    or you'll\r\nget \xC4disciplined\xD6!\"\r"
+  cardText: "\"He's gonna mentor you to our way of\r doing things. Better play nice
+    or you'll\r get \xC4disciplined\xD6!\"\r"
   logText: 
   endCard: 0
   timeCard: 0

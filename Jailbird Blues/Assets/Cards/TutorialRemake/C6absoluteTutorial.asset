@@ -39,9 +39,9 @@ MonoBehaviour:
   ambientDecrease: 0
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: Cooks
-  cardText: "\"You got here right on time. I just\r\ngot through my packing and now
-    It's\r\n\xC4lunchtime\xD6 so we better get there!\"\r"
+  cardTextPerson: Freddie
+  cardText: "\"You got here right on time. I just\r got through my packing and now
+    It's\r \xC4lunchtime\xD6 so we better get there!\"\r"
   logText: 
   endCard: 0
   timeCard: 0

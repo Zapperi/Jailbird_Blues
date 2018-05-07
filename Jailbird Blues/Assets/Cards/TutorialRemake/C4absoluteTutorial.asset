@@ -36,10 +36,10 @@ MonoBehaviour:
   bgMusic: {fileID: 0}
   bgAmbientAudio: {fileID: 0}
   musicDecrease: 0
-  ambientDecrease: 0
+  ambientDecrease: 1
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: Cooks
+  cardTextPerson: Freddie
   cardText: "\"Welcome to prison buddy, I'm \xC4Freddie\r Cooks\xD6. I doubt you're
     gonna like it in\r this cell, but it's livable enough.\"\r\n"
   logText: 

@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: C7absoluteTutorial
+  m_Name: C16absoluteTutorial 1
   m_EditorClassIdentifier: 
   requiredSwitches: 
   RepIrs: 0
@@ -18,14 +18,14 @@ MonoBehaviour:
   RepGuard: 0
   timeOfDay: 0
   storyPhase: 0
-  location: Messhall
-  backgroundImage: {fileID: 21300000, guid: 86e5709f7c480c24da9b550ac6d54641, type: 3}
-  foregroundImage: {fileID: 0}
+  location: 
+  backgroundImage: {fileID: 21300000, guid: 8378fa802b5596e4fbe764c349e9d44c, type: 3}
+  foregroundImage: {fileID: 21300000, guid: 6a075baf7d81b704382ee2f31ff28893, type: 3}
   flipForegroundImageRight: 0
   setRightAsSpeaker: 0
-  foregroundImage2: {fileID: 0}
+  foregroundImage2: {fileID: 21300000, guid: 344bfbabec2d66443afe0b6edddf7ba9, type: 3}
   flipForegroundImageLeft: 0
-  setLeftAsSpeaker: 0
+  setLeftAsSpeaker: 1
   foregroundImage3: {fileID: 0}
   flipForegroundImageCenter: 0
   setCenterAsSpeaker: 0
@@ -34,13 +34,14 @@ MonoBehaviour:
   setBigAsSpeaker: 0
   foregroundItemImage: {fileID: 0}
   bgMusic: {fileID: 0}
-  bgAmbientAudio: {fileID: 8300000, guid: 5dfb97e1a794231408631318b95322c4, type: 3}
+  bgAmbientAudio: {fileID: 0}
   musicDecrease: 0
   ambientDecrease: 0
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: 
-  cardText: "Freddie leads you to the \xC4Messhall\xD6."
+  cardTextPerson: Guard
+  cardText: "\"I heard you were getting out today Cooks so\r I thought to give you
+    little extra something.\"\r"
   logText: 
   endCard: 0
   timeCard: 0
@@ -96,7 +97,7 @@ MonoBehaviour:
   option5GuardReputation: 0
   option5ObtainedSwitches: 
   option5RemovedSwitches: 
-  option5FollowCard: {fileID: 11400000, guid: c3125c107aaba3e4da8311c959b77b67, type: 2}
+  option5FollowCard: {fileID: 11400000, guid: d01604eab1f475c4499093bcd448fa23, type: 2}
   isTimeBasedCard: 0
   sfxPrewait: 0
   sfx: {fileID: 0}
