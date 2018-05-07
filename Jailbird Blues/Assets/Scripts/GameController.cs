@@ -78,7 +78,7 @@ public class GameController : MonoBehaviour {
 			guardsRep = 0;
 			day = 1;																//the game starts at day 1
             cigaretteCount = 0;
-			schedule = -1;     //Sets intro time                                                      //the day begins with the first activity in the schedule 
+			schedule = 3;     //Sets intro time                                                      //the day begins with the first activity in the schedule 
             SetBackgroundAudio();
             AddLogEvent();
             topBar = cardDisplay.topBar;
