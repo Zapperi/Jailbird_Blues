@@ -1,0 +1,114 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
+  m_Name: C3b.2_LibraryBookReadingQuest
+  m_EditorClassIdentifier: 
+  requiredSwitches: 
+  RepIrs: 0
+  RepPunks: 0
+  RepShake: 0
+  RepGuard: 0
+  timeOfDay: 0
+  storyPhase: 0
+  location: 
+  backgroundImage: {fileID: 21300000, guid: c88376aa8278bb64fa047de4a888a544, type: 3}
+  foregroundImage: {fileID: 0}
+  flipForegroundImageRight: 0
+  setRightAsSpeaker: 0
+  foregroundImage2: {fileID: 21300000, guid: 3e2e9c18828a06f4990bd032f1e8a016, type: 3}
+  flipForegroundImageLeft: 0
+  setLeftAsSpeaker: 0
+  foregroundImage3: {fileID: 0}
+  flipForegroundImageCenter: 0
+  setCenterAsSpeaker: 0
+  foregroundBigImage: {fileID: 0}
+  flipForegroundImageBig: 0
+  setBigAsSpeaker: 0
+  foregroundItemImage: {fileID: 0}
+  bgMusic: {fileID: 0}
+  bgAmbientAudio: {fileID: 0}
+  musicDecrease: 0
+  ambientDecrease: 0
+  musicOff: 0
+  ambientOff: 0
+  cardTextPerson: How do you respond?
+  cardText: 
+  logText: 
+  endCard: 0
+  timeCard: 0
+  onTop: 0
+  repeatable: 0
+  endOfGame: 0
+  SkipCard: {fileID: 0}
+  OptionsOn: 1
+  Option1On: 1
+  option1ReqSwitches: 
+  option1text: '"Yes."'
+  option1IrsReputation: 0
+  option1PunkReputation: 0
+  option1ShakeReputation: 0
+  option1GuardReputation: 10
+  option1ObtainedSwitches: 
+  option1RemovedSwitches: 
+  option1FollowCard: {fileID: 11400000, guid: 3687a04c9353c0740bcc65c12bb60e6c, type: 2}
+  Option2On: 1
+  option2ReqSwitches: 
+  option2text: '"I changed my mind."'
+  option2IrsReputation: 0
+  option2PunkReputation: 0
+  option2ShakeReputation: 0
+  option2GuardReputation: 0
+  option2ObtainedSwitches: 
+  option2RemovedSwitches: 
+  option2FollowCard: {fileID: 11400000, guid: 6abb65f753c734c438a772ad6ab0903a, type: 2}
+  Option3On: 0
+  option3ReqSwitches: 
+  option3text: 
+  option3IrsReputation: 0
+  option3PunkReputation: 0
+  option3ShakeReputation: 0
+  option3GuardReputation: 0
+  option3ObtainedSwitches: 
+  option3RemovedSwitches: 
+  option3FollowCard: {fileID: 0}
+  Option4On: 0
+  option4ReqSwitches: 
+  option4text: 
+  option4IrsReputation: 0
+  option4PunkReputation: 0
+  option4ShakeReputation: 0
+  option4GuardReputation: 0
+  option4ObtainedSwitches: 
+  option4RemovedSwitches: 
+  option4FollowCard: {fileID: 0}
+  Option5On: 0
+  option5IrsReputation: 0
+  option5PunkReputation: 0
+  option5ShakeReputation: 0
+  option5GuardReputation: 0
+  option5ObtainedSwitches: 
+  option5RemovedSwitches: 
+  option5FollowCard: {fileID: 0}
+  isTimeBasedCard: 0
+  sfxPrewait: 0
+  sfx: {fileID: 0}
+  sfxHasFadeOut: 0
+  sfxFadeOutAt: 0
+  sfxFadeOutSpeed: 0
+  sfxAfterWait: 0
+  ppsHasFadeIn: 0
+  ppsFadeMode: 0
+  blackScreenStart: 0
+  blackScreenTime: 0
+  ppsFadeInSpeed: 0
+  ppsShowCard: 0
+  ppsHasFadeOut: 0
+  fadeOutSpeed: 0
