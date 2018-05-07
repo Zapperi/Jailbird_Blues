@@ -62,6 +62,7 @@ public class GameController : MonoBehaviour {
     void Awake()																	//when the game starts
 	{
         canvasParent = GameObject.Find("Canvas");
+        
         GainsTextHandler.Initialize();                                              // Activates the floating reputation gain element
         if (gameController == null)													//if there is no gamecontroller
 		{
@@ -96,7 +97,13 @@ public class GameController : MonoBehaviour {
 			Destroy(gameObject);													//delete them
 		}
 	}
-    
+
+    private void Start()
+    {
+        gainedAnimationSpawnpoint = GameObject.Find("GainedAnimationSpawnpoint");
+        lostAnimationSpawnpoint = GameObject.Find("LostAnimationSpawnpoint");
+    }
+
 
     void Update()
     {
