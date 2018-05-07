@@ -41,6 +41,9 @@ public class GameController : MonoBehaviour {
     public GameObject itemImage;
     private Animator itemAnimator;
     private GameObject canvasParent;
+    public GameObject gainedAnimationSpawnpoint;
+    public GameObject lostAnimationSpawnpoint;
+
 
     public GameObject mainCamera;
     public CardValues nextCardWaiting;
@@ -746,11 +749,11 @@ public class GameController : MonoBehaviour {
         {
             if (switchIndex == allItemList[i].itemSwitchIndex)                              // If the switch was an item..
             {
-                GameObject obtainedItem = Instantiate(itemImage, canvasParent.transform);   // Spawn an item object
+                GameObject obtainedItem = Instantiate(itemImage, gainedAnimationSpawnpoint.transform);   // Spawn an item object
                 itemAnimator = obtainedItem.GetComponent<Animator>();                       // Access the animator component
                 itemAnimator.SetBool("ItemGained", true);                                   // Play the animation
                 obtainedItem.GetComponent<Image>().sprite = allItemList[i].itemIcon;        // Set the item icon              
-                Destroy(obtainedItem, 3f);                                                  // Destroy object after 3 seconds
+                Destroy(obtainedItem, 4f);                                                  // Destroy object after 3 seconds
             }
         }
     }
@@ -761,11 +764,11 @@ public class GameController : MonoBehaviour {
         {
             if (switchIndex == allItemList[i].itemSwitchIndex)                              // If the switch was an item..
             {
-                GameObject obtainedItem = Instantiate(itemImage, canvasParent.transform);   // Spawn the object under canvas
-                itemAnimator = obtainedItem.GetComponent<Animator>();                       // Reference to animator
+                GameObject lostItem = Instantiate(itemImage, lostAnimationSpawnpoint.transform);   // Spawn the object under canvas
+                itemAnimator = lostItem.GetComponent<Animator>();                       // Reference to animator
                 itemAnimator.SetBool("ItemLost", true);                                     // Play animation
-                obtainedItem.GetComponent<Image>().sprite = allItemList[i].itemIcon;        // Get the icon of the item
-                Destroy(obtainedItem, 3f);                                                  // Destroy the object in 3 seconds.
+                lostItem.GetComponent<Image>().sprite = allItemList[i].itemIcon;        // Get the icon of the item
+                Destroy(lostItem, 4f);                                                  // Destroy the object in 3 seconds.
             }
         }
     }
