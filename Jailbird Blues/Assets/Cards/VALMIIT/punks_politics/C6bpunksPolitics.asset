@@ -42,7 +42,7 @@ MonoBehaviour:
   cardTextPerson: Zack
   cardText: "\"You some kinda neo-liberal capitalist shmuck?!\"\r Zack violently stands
     up spitting into your food and leaves without his tray. Good thing he didn't touch
-    it and you get to eat uncontaminated food.\ncontinue..."
+    it and you get to eat uncontaminated food."
   logText: 
   endCard: 1
   timeCard: 1

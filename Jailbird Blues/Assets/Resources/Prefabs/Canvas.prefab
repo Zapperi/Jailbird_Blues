@@ -858,7 +858,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1303476056955610
 GameObject:
   m_ObjectHideFlags: 1
@@ -3049,7 +3049,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 323ac1ea6ff04144f9f5b613bfbc5597, type: 3}
-    m_FontSize: 35
+    m_FontSize: 33
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -3824,7 +3824,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 013584fb9b3867548a06364b64007f2a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8378fa802b5596e4fbe764c349e9d44c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4547,7 +4547,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   overLayingImage: {fileID: 0}
-  currentCard: {fileID: 11400000, guid: 892fcd297ddb2cb47aa78016f63abb80, type: 2}
+  currentCard: {fileID: 11400000, guid: ad6e9ca9b09ec474e9056d41543e439c, type: 2}
   cardText: {fileID: 114480357465699000}
   cardPerson: {fileID: 114191142861193218}
   button1text: {fileID: 114139510603780042}
@@ -5358,7 +5358,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: You see a shady looking I.R.S. guy coming up to you.
+  m_Text: 'A punk drops his full tray next to you while sitting down.
+
+    "Hey, new guy! I''m Zack. What do you think of Mikhail Bakunin?"'
 --- !u!114 &114521485187600664
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5992,7 +5994,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: ec7f3a9152691a345b794c0a29ce19b9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f79744b0fd1740d468ebc8044591e682, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
