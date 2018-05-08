@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: C22absoluteTutorial 2
+  m_Name: C27absoluteTutorial 4
   m_EditorClassIdentifier: 
   requiredSwitches: 
   RepIrs: 0
@@ -40,8 +40,7 @@ MonoBehaviour:
   musicOff: 0
   ambientOff: 0
   cardTextPerson: Freddie
-  cardText: "\"Whatever you do has a high probability of\r \xC4annoying\xD6 somebody
-    else. To keep track of\r things you'll need something like this.\"\r"
+  cardText: "\"After lunch it's good to have a nice\r\nafternoon walk. Let's go!\"\r"
   logText: 
   endCard: 0
   timeCard: 0
@@ -97,7 +96,7 @@ MonoBehaviour:
   option5GuardReputation: 0
   option5ObtainedSwitches: 
   option5RemovedSwitches: 
-  option5FollowCard: {fileID: 11400000, guid: ad18a0f594f047b4c9d87228caa9d449, type: 2}
+  option5FollowCard: {fileID: 11400000, guid: 6c614a7dc86f1c44f99d74627fd30d22, type: 2}
   isTimeBasedCard: 0
   sfxPrewait: 0
   sfx: {fileID: 0}
