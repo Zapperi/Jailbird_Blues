@@ -9,21 +9,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: C01oldtimers
+  m_Name: C2a2c_IrsInhaler
   m_EditorClassIdentifier: 
   requiredSwitches: 
   RepIrs: 0
   RepPunks: 0
   RepShake: 0
   RepGuard: 0
-  timeOfDay: 2
+  timeOfDay: 0
   storyPhase: 0
-  location: Yard
-  backgroundImage: {fileID: 21300000, guid: 013584fb9b3867548a06364b64007f2a, type: 3}
-  foregroundImage: {fileID: 0}
+  location: 
+  backgroundImage: {fileID: 21300000, guid: bfdaf1e5bc88444448615bb26ad6f43f, type: 3}
+  foregroundImage: {fileID: 21300000, guid: 76ceedcf8f6a93043a06e88645b83662, type: 3}
   flipForegroundImageRight: 0
   setRightAsSpeaker: 0
-  foregroundImage2: {fileID: 0}
+  foregroundImage2: {fileID: 21300000, guid: 8db750d4a2057234ca792a911fce4c52, type: 3}
   flipForegroundImageLeft: 0
   setLeftAsSpeaker: 0
   foregroundImage3: {fileID: 0}
@@ -33,14 +33,14 @@ MonoBehaviour:
   flipForegroundImageBig: 0
   setBigAsSpeaker: 0
   foregroundItemImage: {fileID: 0}
-  bgMusic: {fileID: 8300000, guid: aa5c3fed5dc129640a56e62ef9106936, type: 3}
-  bgAmbientAudio: {fileID: 8300000, guid: 788870fe9977c784a981f51bb5ed6f36, type: 3}
+  bgMusic: {fileID: 8300000, guid: 75a6ead9f3b0c244ab4f4bd518a4f668, type: 3}
+  bgAmbientAudio: {fileID: 0}
   musicDecrease: 0
   ambientDecrease: 0
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: 
-  cardText: You walk on the yard, you see a table full of old timers playing chess.
+  cardTextPerson: You
+  cardText: "\"Haha that nerd wanted me to get his inhaler.\" \r\nPunks laugh."
   logText: 
   endCard: 0
   timeCard: 0
@@ -96,7 +96,7 @@ MonoBehaviour:
   option5GuardReputation: 0
   option5ObtainedSwitches: 
   option5RemovedSwitches: 
-  option5FollowCard: {fileID: 11400000, guid: 11eb1633e98d3d14aab9e5c0625b763e, type: 2}
+  option5FollowCard: {fileID: 11400000, guid: f30b7d4790063394e963d25361f12267, type: 2}
   isTimeBasedCard: 0
   sfxPrewait: 0
   sfx: {fileID: 0}
@@ -106,8 +106,8 @@ MonoBehaviour:
   sfxAfterWait: 0
   ppsHasFadeIn: 0
   ppsFadeMode: 0
-  blackScreenStart: 1
-  blackScreenTime: 0.2
+  blackScreenStart: 0
+  blackScreenTime: 0
   ppsFadeInSpeed: 0
   ppsShowCard: 0
   ppsHasFadeOut: 0

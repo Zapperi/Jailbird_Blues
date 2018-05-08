@@ -9,21 +9,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: C01oldtimers
+  m_Name: C2a2b1_IrsInhaler
   m_EditorClassIdentifier: 
   requiredSwitches: 
   RepIrs: 0
   RepPunks: 0
   RepShake: 0
   RepGuard: 0
-  timeOfDay: 2
+  timeOfDay: 0
   storyPhase: 0
-  location: Yard
-  backgroundImage: {fileID: 21300000, guid: 013584fb9b3867548a06364b64007f2a, type: 3}
+  location: 
+  backgroundImage: {fileID: 21300000, guid: d0ca947ecc4d047469793ffc64a64c18, type: 3}
   foregroundImage: {fileID: 0}
   flipForegroundImageRight: 0
   setRightAsSpeaker: 0
-  foregroundImage2: {fileID: 0}
+  foregroundImage2: {fileID: 21300000, guid: d405c501f3c29154aadf75828ea405ab, type: 3}
   flipForegroundImageLeft: 0
   setLeftAsSpeaker: 0
   foregroundImage3: {fileID: 0}
@@ -33,14 +33,14 @@ MonoBehaviour:
   flipForegroundImageBig: 0
   setBigAsSpeaker: 0
   foregroundItemImage: {fileID: 0}
-  bgMusic: {fileID: 8300000, guid: aa5c3fed5dc129640a56e62ef9106936, type: 3}
-  bgAmbientAudio: {fileID: 8300000, guid: 788870fe9977c784a981f51bb5ed6f36, type: 3}
+  bgMusic: {fileID: 0}
+  bgAmbientAudio: {fileID: 0}
   musicDecrease: 0
   ambientDecrease: 0
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: 
-  cardText: You walk on the yard, you see a table full of old timers playing chess.
+  cardTextPerson: What do you do?
+  cardText: 
   logText: 
   endCard: 0
   timeCard: 0
@@ -48,27 +48,27 @@ MonoBehaviour:
   repeatable: 0
   endOfGame: 0
   SkipCard: {fileID: 0}
-  OptionsOn: 0
-  Option1On: 0
+  OptionsOn: 1
+  Option1On: 1
   option1ReqSwitches: 
-  option1text: 
+  option1text: Offer to help
   option1IrsReputation: 0
   option1PunkReputation: 0
   option1ShakeReputation: 0
   option1GuardReputation: 0
   option1ObtainedSwitches: 
   option1RemovedSwitches: 
-  option1FollowCard: {fileID: 0}
-  Option2On: 0
+  option1FollowCard: {fileID: 11400000, guid: 64230ec996b966c4ea7fdf3b25bc5061, type: 2}
+  Option2On: 1
   option2ReqSwitches: 
-  option2text: 
+  option2text: Refuse
   option2IrsReputation: 0
   option2PunkReputation: 0
   option2ShakeReputation: 0
   option2GuardReputation: 0
   option2ObtainedSwitches: 
   option2RemovedSwitches: 
-  option2FollowCard: {fileID: 0}
+  option2FollowCard: {fileID: 11400000, guid: 2dcd6d99260e43c48b7736dbbf72379e, type: 2}
   Option3On: 0
   option3ReqSwitches: 
   option3text: 
@@ -89,14 +89,14 @@ MonoBehaviour:
   option4ObtainedSwitches: 
   option4RemovedSwitches: 
   option4FollowCard: {fileID: 0}
-  Option5On: 1
+  Option5On: 0
   option5IrsReputation: 0
   option5PunkReputation: 0
   option5ShakeReputation: 0
   option5GuardReputation: 0
   option5ObtainedSwitches: 
   option5RemovedSwitches: 
-  option5FollowCard: {fileID: 11400000, guid: 11eb1633e98d3d14aab9e5c0625b763e, type: 2}
+  option5FollowCard: {fileID: 0}
   isTimeBasedCard: 0
   sfxPrewait: 0
   sfx: {fileID: 0}
@@ -106,8 +106,8 @@ MonoBehaviour:
   sfxAfterWait: 0
   ppsHasFadeIn: 0
   ppsFadeMode: 0
-  blackScreenStart: 1
-  blackScreenTime: 0.2
+  blackScreenStart: 0
+  blackScreenTime: 0
   ppsFadeInSpeed: 0
   ppsShowCard: 0
   ppsHasFadeOut: 0

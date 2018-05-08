@@ -9,38 +9,39 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: C01oldtimers
+  m_Name: C2c.2_Lunchtime Staredown
   m_EditorClassIdentifier: 
   requiredSwitches: 
   RepIrs: 0
   RepPunks: 0
   RepShake: 0
   RepGuard: 0
-  timeOfDay: 2
+  timeOfDay: 0
   storyPhase: 0
-  location: Yard
-  backgroundImage: {fileID: 21300000, guid: 013584fb9b3867548a06364b64007f2a, type: 3}
+  location: 
+  backgroundImage: {fileID: 21300000, guid: d0ca947ecc4d047469793ffc64a64c18, type: 3}
   foregroundImage: {fileID: 0}
   flipForegroundImageRight: 0
   setRightAsSpeaker: 0
   foregroundImage2: {fileID: 0}
   flipForegroundImageLeft: 0
   setLeftAsSpeaker: 0
-  foregroundImage3: {fileID: 0}
+  foregroundImage3: {fileID: 21300000, guid: 65a5a740d9d4d034c92edf19ae446a01, type: 3}
   flipForegroundImageCenter: 0
   setCenterAsSpeaker: 0
   foregroundBigImage: {fileID: 0}
   flipForegroundImageBig: 0
   setBigAsSpeaker: 0
   foregroundItemImage: {fileID: 0}
-  bgMusic: {fileID: 8300000, guid: aa5c3fed5dc129640a56e62ef9106936, type: 3}
-  bgAmbientAudio: {fileID: 8300000, guid: 788870fe9977c784a981f51bb5ed6f36, type: 3}
-  musicDecrease: 0
+  bgMusic: {fileID: 0}
+  bgAmbientAudio: {fileID: 0}
+  musicDecrease: 0.8
   ambientDecrease: 0
   musicOff: 0
   ambientOff: 0
   cardTextPerson: 
-  cardText: You walk on the yard, you see a table full of old timers playing chess.
+  cardText: "It worked when the high-school\u2019s edgelord used it\r on the bullies
+    back in the day, so you\u2019re betting\r your safety on it.\r\n"
   logText: 
   endCard: 0
   timeCard: 0
@@ -73,7 +74,7 @@ MonoBehaviour:
   option3ReqSwitches: 
   option3text: 
   option3IrsReputation: 0
-  option3PunkReputation: 0
+  option3PunkReputation: 5
   option3ShakeReputation: 0
   option3GuardReputation: 0
   option3ObtainedSwitches: 
@@ -96,7 +97,7 @@ MonoBehaviour:
   option5GuardReputation: 0
   option5ObtainedSwitches: 
   option5RemovedSwitches: 
-  option5FollowCard: {fileID: 11400000, guid: 11eb1633e98d3d14aab9e5c0625b763e, type: 2}
+  option5FollowCard: {fileID: 11400000, guid: b6822d898274d2941ab684d946b2bfa4, type: 2}
   isTimeBasedCard: 0
   sfxPrewait: 0
   sfx: {fileID: 0}
@@ -106,8 +107,8 @@ MonoBehaviour:
   sfxAfterWait: 0
   ppsHasFadeIn: 0
   ppsFadeMode: 0
-  blackScreenStart: 1
-  blackScreenTime: 0.2
+  blackScreenStart: 0
+  blackScreenTime: 0
   ppsFadeInSpeed: 0
   ppsShowCard: 0
   ppsHasFadeOut: 0
