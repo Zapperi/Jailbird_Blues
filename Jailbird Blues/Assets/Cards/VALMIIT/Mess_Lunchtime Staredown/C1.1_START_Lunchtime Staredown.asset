@@ -9,35 +9,46 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: C2b.3_Lunchtime Staredown
+  m_Name: C1.1_START_Lunchtime Staredown
   m_EditorClassIdentifier: 
   requiredSwitches: 
   RepIrs: 0
   RepPunks: 0
   RepShake: 0
   RepGuard: 0
-  timeOfDay: 0
+  timeOfDay: 1
   storyPhase: 0
-  backgroundImage: {fileID: 21300000, guid: 8378fa802b5596e4fbe764c349e9d44c, type: 3}
+  location: 
+  backgroundImage: {fileID: 21300000, guid: d0ca947ecc4d047469793ffc64a64c18, type: 3}
   foregroundImage: {fileID: 0}
+  flipForegroundImageRight: 0
+  setRightAsSpeaker: 0
   foregroundImage2: {fileID: 0}
+  flipForegroundImageLeft: 0
+  setLeftAsSpeaker: 0
   foregroundImage3: {fileID: 0}
-  foregroundImage4: {fileID: 0}
-  bgMusic: {fileID: 0}
-  bgAmbientAudio: {fileID: 0}
+  flipForegroundImageCenter: 0
+  setCenterAsSpeaker: 0
+  foregroundBigImage: {fileID: 0}
+  flipForegroundImageBig: 0
+  setBigAsSpeaker: 0
+  foregroundItemImage: {fileID: 0}
+  bgMusic: {fileID: 8300000, guid: aa5c3fed5dc129640a56e62ef9106936, type: 3}
+  bgAmbientAudio: {fileID: 8300000, guid: 5dfb97e1a794231408631318b95322c4, type: 3}
   musicDecrease: 0.8
   ambientDecrease: 0
   musicOff: 0
   ambientOff: 0
   cardTextPerson: 
-  cardText: "An all out brawl was barely avoided, \xC4this time\u2026\r\xD6\nYou get
-    back to your food, head still pounding.\r\n"
+  cardText: "You sit down at the table and put your spork to your.. \xC4Porridge?\xD6
+    It\u2019s not looking very appetizing. \nYou raise your head with a sigh."
   logText: 
   endCard: 0
   timeCard: 0
   onTop: 0
   repeatable: 0
   endOfGame: 0
+  SkipCard: {fileID: 0}
   OptionsOn: 0
   Option1On: 0
   option1ReqSwitches: 
@@ -86,7 +97,7 @@ MonoBehaviour:
   option5GuardReputation: 0
   option5ObtainedSwitches: 
   option5RemovedSwitches: 
-  option5FollowCard: {fileID: 11400000, guid: 99358c3353bac44449b912b237ce6419, type: 2}
+  option5FollowCard: {fileID: 11400000, guid: 6eaf4676effbb5e4d8e962c0333c65a2, type: 2}
   isTimeBasedCard: 0
   sfxPrewait: 0
   sfx: {fileID: 0}
@@ -94,10 +105,10 @@ MonoBehaviour:
   sfxFadeOutAt: 0
   sfxFadeOutSpeed: 0
   sfxAfterWait: 0
-  ppsHasFadeIn: 0
+  ppsHasFadeIn: 1
   ppsFadeMode: 0
-  blackScreenStart: 0
-  blackScreenTime: 0
+  blackScreenStart: 1
+  blackScreenTime: 0.2
   ppsFadeInSpeed: 0
   ppsShowCard: 0
   ppsHasFadeOut: 0

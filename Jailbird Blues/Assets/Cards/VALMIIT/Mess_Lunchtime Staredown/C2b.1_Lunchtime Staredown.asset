@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: C2c.1_Lunchtime Staredown
+  m_Name: C2b.1_Lunchtime Staredown
   m_EditorClassIdentifier: 
   requiredSwitches: 
   RepIrs: 0
@@ -18,11 +18,21 @@ MonoBehaviour:
   RepGuard: 0
   timeOfDay: 0
   storyPhase: 0
-  backgroundImage: {fileID: 21300000, guid: 8378fa802b5596e4fbe764c349e9d44c, type: 3}
+  location: 
+  backgroundImage: {fileID: 21300000, guid: d0ca947ecc4d047469793ffc64a64c18, type: 3}
   foregroundImage: {fileID: 0}
+  flipForegroundImageRight: 0
+  setRightAsSpeaker: 0
   foregroundImage2: {fileID: 0}
-  foregroundImage3: {fileID: 21300000, guid: 621b7b2d1476bf143917bf25c50f0d85, type: 3}
-  foregroundImage4: {fileID: 0}
+  flipForegroundImageLeft: 0
+  setLeftAsSpeaker: 0
+  foregroundImage3: {fileID: 21300000, guid: 65a5a740d9d4d034c92edf19ae446a01, type: 3}
+  flipForegroundImageCenter: 0
+  setCenterAsSpeaker: 0
+  foregroundBigImage: {fileID: 0}
+  flipForegroundImageBig: 0
+  setBigAsSpeaker: 0
+  foregroundItemImage: {fileID: 0}
   bgMusic: {fileID: 0}
   bgAmbientAudio: {fileID: 0}
   musicDecrease: 0.8
@@ -30,14 +40,14 @@ MonoBehaviour:
   musicOff: 0
   ambientOff: 0
   cardTextPerson: 
-  cardText: "You tilt your head slightly forward so your\r brows cast intimidating
-    shadows on your eyes\r that you keep locked on his.\r\n"
+  cardText: Veins bulge on Barry's reddening face.
   logText: 
   endCard: 0
   timeCard: 0
   onTop: 0
   repeatable: 0
   endOfGame: 0
+  SkipCard: {fileID: 0}
   OptionsOn: 0
   Option1On: 0
   option1ReqSwitches: 
@@ -86,7 +96,7 @@ MonoBehaviour:
   option5GuardReputation: 0
   option5ObtainedSwitches: 
   option5RemovedSwitches: 
-  option5FollowCard: {fileID: 11400000, guid: 5d5de5929442a3f4196da3c2f52822f9, type: 2}
+  option5FollowCard: {fileID: 11400000, guid: 77a079f927e4329468e54f5f17b04529, type: 2}
   isTimeBasedCard: 0
   sfxPrewait: 0
   sfx: {fileID: 0}
