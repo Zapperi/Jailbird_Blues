@@ -42,7 +42,7 @@ MonoBehaviour:
   cardTextPerson: Guard
   cardText: 'A guard comes next to your celldoor.
 
-    "What''s going on here, some inmates are trying to sleep?"'
+    "What''s going on here? Some inmates are trying to sleep!"'
   logText: 
   endCard: 0
   timeCard: 0

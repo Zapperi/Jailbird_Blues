@@ -18,18 +18,28 @@ MonoBehaviour:
   RepGuard: 0
   timeOfDay: 0
   storyPhase: 0
+  location: 
   backgroundImage: {fileID: 21300000, guid: 45101871e12fb8544924d61ab153420b, type: 3}
   foregroundImage: {fileID: 21300000, guid: 3e2e9c18828a06f4990bd032f1e8a016, type: 3}
+  flipForegroundImageRight: 0
+  setRightAsSpeaker: 0
   foregroundImage2: {fileID: 0}
+  flipForegroundImageLeft: 0
+  setLeftAsSpeaker: 0
   foregroundImage3: {fileID: 0}
-  foregroundImage4: {fileID: 0}
+  flipForegroundImageCenter: 0
+  setCenterAsSpeaker: 0
+  foregroundBigImage: {fileID: 0}
+  flipForegroundImageBig: 0
+  setBigAsSpeaker: 0
+  foregroundItemImage: {fileID: 0}
   bgMusic: {fileID: 0}
   bgAmbientAudio: {fileID: 0}
   musicDecrease: 0.5
   ambientDecrease: 0.7
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: 
+  cardTextPerson: You
   cardText: 
   logText: 
   endCard: 0
@@ -37,10 +47,11 @@ MonoBehaviour:
   onTop: 0
   repeatable: 0
   endOfGame: 0
+  SkipCard: {fileID: 0}
   OptionsOn: 1
   Option1On: 1
   option1ReqSwitches: 
-  option1text: You're a pig
+  option1text: '"You''re a pig!"'
   option1IrsReputation: 2
   option1PunkReputation: 2
   option1ShakeReputation: 2
@@ -50,7 +61,7 @@ MonoBehaviour:
   option1FollowCard: {fileID: 11400000, guid: 67020990c3d454a4e9b780ad4ee65e03, type: 2}
   Option2On: 1
   option2ReqSwitches: 
-  option2text: Someone is making a shiv
+  option2text: '"Someone is making a shiv."'
   option2IrsReputation: 0
   option2PunkReputation: 0
   option2ShakeReputation: 0

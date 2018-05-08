@@ -40,8 +40,8 @@ MonoBehaviour:
   musicOff: 0
   ambientOff: 0
   cardTextPerson: Guard
-  cardText: '"Just what i thought, a shiv under the matress. We''ll continue this
-    in the morning but you fellows are in big trouble"'
+  cardText: "\"Just what I thought, \xC4a shiv\xD6 under the matress. We'll continue
+    this in the morning but you fellows are in big trouble!\""
   logText: 
   endCard: 0
   timeCard: 0

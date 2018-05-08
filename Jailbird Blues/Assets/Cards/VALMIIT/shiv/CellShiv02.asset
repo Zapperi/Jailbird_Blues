@@ -41,7 +41,7 @@ MonoBehaviour:
   ambientOff: 0
   cardTextPerson: Inmate
   cardText: "After a little while you hear someone whisper\r \"Yo dude you gotta sharpen
-    that shiv more silently, someone may hear you\"\r"
+    that \xC4shiv\xD6 more silently, someone may hear you\"\r"
   logText: 
   endCard: 0
   timeCard: 0

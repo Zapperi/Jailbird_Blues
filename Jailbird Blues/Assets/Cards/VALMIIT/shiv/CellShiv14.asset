@@ -40,7 +40,8 @@ MonoBehaviour:
   musicOff: 0
   ambientOff: 0
   cardTextPerson: Punk
-  cardText: '"Okay what the hell, do we have a rat in here?!"'
+  cardText: "You hear shouting from few cells away:\n\"Okay what the hell, do we have
+    \xC4a rat\xD6 in here?!\""
   logText: 
   endCard: 0
   timeCard: 0
@@ -48,7 +49,7 @@ MonoBehaviour:
   repeatable: 0
   endOfGame: 0
   SkipCard: {fileID: 0}
-  OptionsOn: 1
+  OptionsOn: 0
   Option1On: 0
   option1ReqSwitches: 
   option1text: 
@@ -59,26 +60,26 @@ MonoBehaviour:
   option1ObtainedSwitches: 
   option1RemovedSwitches: 
   option1FollowCard: {fileID: 0}
-  Option2On: 1
+  Option2On: 0
   option2ReqSwitches: 
-  option2text: Say nothing
+  option2text: 
   option2IrsReputation: 0
   option2PunkReputation: 0
   option2ShakeReputation: 0
   option2GuardReputation: 0
   option2ObtainedSwitches: 
   option2RemovedSwitches: 
-  option2FollowCard: {fileID: 11400000, guid: 36753f13cd24c61458a7a6ce2c8a7ee5, type: 2}
-  Option3On: 1
+  option2FollowCard: {fileID: 0}
+  Option3On: 0
   option3ReqSwitches: 
-  option3text: '"Yeah, me"'
+  option3text: 
   option3IrsReputation: 0
-  option3PunkReputation: -10
+  option3PunkReputation: 0
   option3ShakeReputation: 0
   option3GuardReputation: 0
   option3ObtainedSwitches: 
   option3RemovedSwitches: 
-  option3FollowCard: {fileID: 11400000, guid: 88708b22fd7838644842c1aa01577772, type: 2}
+  option3FollowCard: {fileID: 0}
   Option4On: 0
   option4ReqSwitches: 
   option4text: 
@@ -89,14 +90,14 @@ MonoBehaviour:
   option4ObtainedSwitches: 
   option4RemovedSwitches: 
   option4FollowCard: {fileID: 0}
-  Option5On: 0
+  Option5On: 1
   option5IrsReputation: 0
   option5PunkReputation: 0
   option5ShakeReputation: 0
   option5GuardReputation: 0
   option5ObtainedSwitches: 
   option5RemovedSwitches: 
-  option5FollowCard: {fileID: 0}
+  option5FollowCard: {fileID: 11400000, guid: 93684d6be9d10a149b4dd4e8df2bef4b, type: 2}
   isTimeBasedCard: 0
   sfxPrewait: 0
   sfx: {fileID: 0}

@@ -41,7 +41,7 @@ MonoBehaviour:
   ambientOff: 0
   cardTextPerson: Guard
   cardText: "The guard communicates with a walkie-talkie: \"Can I get some backup,
-    someone's making a shiv.\"\r Few more guards come by and they go where you pointed."
+    someone's making a shiv.\"\nMore guards come by and they go where \xC4you pointed\xD6."
   logText: 
   endCard: 0
   timeCard: 0

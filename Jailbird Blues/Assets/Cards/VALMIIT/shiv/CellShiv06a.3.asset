@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: CellShiv15a
+  m_Name: CellShiv06a.3
   m_EditorClassIdentifier: 
   requiredSwitches: 
   RepIrs: 0
@@ -39,10 +39,12 @@ MonoBehaviour:
   ambientDecrease: 0.7
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: Punk
-  cardText: '"I know someone few cells over called the guard. We''ll find out who
-    you are"'
-  logText: 
+  cardTextPerson: 
+  cardText: 'As the guard walks away, you gather youself up and get back into the
+    bed.
+
+    You are unable to get a good sleep due to agonizing pain in your abdomen.'
+  logText: I got hit by a guard for calling him a pig.
   endCard: 1
   timeCard: 1
   onTop: 0
@@ -111,5 +113,5 @@ MonoBehaviour:
   blackScreenTime: 0
   ppsFadeInSpeed: 0
   ppsShowCard: 0
-  ppsHasFadeOut: 1
+  ppsHasFadeOut: 0
   fadeOutSpeed: 0

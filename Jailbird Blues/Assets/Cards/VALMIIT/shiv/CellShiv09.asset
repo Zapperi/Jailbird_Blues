@@ -40,7 +40,7 @@ MonoBehaviour:
   musicOff: 0
   ambientOff: 0
   cardTextPerson: Punk
-  cardText: '"What the hell pigs, we got nothing"'
+  cardText: '"What the hell pigs, we got nothing!"'
   logText: 
   endCard: 0
   timeCard: 0

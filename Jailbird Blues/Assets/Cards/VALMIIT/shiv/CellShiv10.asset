@@ -40,7 +40,7 @@ MonoBehaviour:
   musicOff: 0
   ambientOff: 0
   cardTextPerson: Guard
-  cardText: '"Yeah we''ll see about that"'
+  cardText: '"Yeah we''ll see about that."'
   logText: 
   endCard: 0
   timeCard: 0

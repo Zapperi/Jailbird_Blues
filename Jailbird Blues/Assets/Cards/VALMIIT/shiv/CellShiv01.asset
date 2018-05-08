@@ -41,7 +41,7 @@ MonoBehaviour:
   ambientOff: 0
   cardTextPerson: 
   cardText: "It's late in the evening, moonlight glows through the window into the
-    silent hall.\r\nYou hear a faint schreeching coming from a few cells over.\r"
+    silent hall.\r\nYou hear a \xC4faint schreeching\xD6 coming from a few cells over.\r"
   logText: 
   endCard: 0
   timeCard: 0

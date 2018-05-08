@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: CellShiv08
+  m_Name: CellShiv06a.1
   m_EditorClassIdentifier: 
   requiredSwitches: 
   RepIrs: 0
@@ -29,9 +29,9 @@ MonoBehaviour:
   foregroundImage3: {fileID: 0}
   flipForegroundImageCenter: 0
   setCenterAsSpeaker: 0
-  foregroundBigImage: {fileID: 0}
+  foregroundBigImage: {fileID: 21300000, guid: 3abad9b8a54f9084aa98005e16ffd4a3, type: 3}
   flipForegroundImageBig: 0
-  setBigAsSpeaker: 0
+  setBigAsSpeaker: 1
   foregroundItemImage: {fileID: 0}
   bgMusic: {fileID: 0}
   bgAmbientAudio: {fileID: 0}
@@ -39,8 +39,9 @@ MonoBehaviour:
   ambientDecrease: 0.7
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: Guard
-  cardText: "\"Allright fellows, time for a checkup!\"\r\n"
+  cardTextPerson: 
+  cardText: "The guard opens the door and \xC4hits you\xD6 in the stomach with a baton
+    causing you to vomit.\r\nYou fall down, unable to stay up."
   logText: 
   endCard: 0
   timeCard: 0
@@ -96,15 +97,15 @@ MonoBehaviour:
   option5GuardReputation: 0
   option5ObtainedSwitches: 
   option5RemovedSwitches: 
-  option5FollowCard: {fileID: 11400000, guid: c19d4f14458857843ac8daf0d0030ec0, type: 2}
+  option5FollowCard: {fileID: 11400000, guid: f853eb5bc77868d4da84c1901908c008, type: 2}
   isTimeBasedCard: 0
   sfxPrewait: 0
-  sfx: {fileID: 0}
+  sfx: {fileID: 8300000, guid: f397d54ed96fed1479844f64e7fc1754, type: 3}
   sfxHasFadeOut: 0
   sfxFadeOutAt: 0
   sfxFadeOutSpeed: 0
   sfxAfterWait: 0
-  ppsHasFadeIn: 0
+  ppsHasFadeIn: 1
   ppsFadeMode: 0
   blackScreenStart: 0
   blackScreenTime: 0

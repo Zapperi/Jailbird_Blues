@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: CellShiv15b
+  m_Name: CellShiv16a
   m_EditorClassIdentifier: 
   requiredSwitches: 
   RepIrs: 0
@@ -40,9 +40,9 @@ MonoBehaviour:
   musicOff: 0
   ambientOff: 0
   cardTextPerson: Punk
-  cardText: "\"Whoah, the nerve. You are in big trouble dude, you'll be sorry for
-    ratting us out.\"\r You go to sleep while hearing faint cursing in the distance."
-  logText: 
+  cardText: "\"I know someone few cells over called the guard. We'll \xC4find out\xD6
+    who you are!\""
+  logText: I ratted out some punks, but they didn't know it was me.
   endCard: 1
   timeCard: 1
   onTop: 0

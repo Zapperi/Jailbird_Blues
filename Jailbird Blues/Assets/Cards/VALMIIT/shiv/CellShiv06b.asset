@@ -40,8 +40,8 @@ MonoBehaviour:
   musicOff: 0
   ambientOff: 0
   cardTextPerson: Guard
-  cardText: "\"Oh that's bad. Where is it?\"\r\nYou point to the direction you heard
-    the schreeching sound coming from."
+  cardText: "\"Oh that's bad. Where is it?\"\r\n\xC4You point\xD6 to the direction
+    you heard the schreeching sound coming from."
   logText: 
   endCard: 0
   timeCard: 0
