@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: C20oldtimers
+  m_Name: C15b2oldtimers
   m_EditorClassIdentifier: 
   requiredSwitches: 
   RepIrs: 0
@@ -19,11 +19,11 @@ MonoBehaviour:
   timeOfDay: 0
   storyPhase: 0
   location: 
-  backgroundImage: {fileID: 21300000, guid: 7c5e619a5c03cc943a4b68321a14beb1, type: 3}
-  foregroundImage: {fileID: 21300000, guid: 60c5302a1c8acf24fa976f1e8da49a6a, type: 3}
+  backgroundImage: {fileID: 21300000, guid: 013584fb9b3867548a06364b64007f2a, type: 3}
+  foregroundImage: {fileID: 0}
   flipForegroundImageRight: 0
-  setRightAsSpeaker: 1
-  foregroundImage2: {fileID: 21300000, guid: 3242392f481b5424893e956bd29406a1, type: 3}
+  setRightAsSpeaker: 0
+  foregroundImage2: {fileID: 0}
   flipForegroundImageLeft: 0
   setLeftAsSpeaker: 0
   foregroundImage3: {fileID: 0}
@@ -39,18 +39,17 @@ MonoBehaviour:
   ambientDecrease: 0
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: Jacob
-  cardText: "\"Here's something for your troubles young man.\"\r\nJacob gives you
-    a \xC4cigarettes\xD6."
+  cardTextPerson: 
+  cardText: You walk away from the oldtimers
   logText: 
-  endCard: 0
-  timeCard: 0
+  endCard: 1
+  timeCard: 1
   onTop: 0
   repeatable: 0
   endOfGame: 0
   SkipCard: {fileID: 0}
   OptionsOn: 0
-  Option1On: 0
+  Option1On: 1
   option1ReqSwitches: 
   option1text: 
   option1IrsReputation: 0
@@ -60,7 +59,7 @@ MonoBehaviour:
   option1ObtainedSwitches: 
   option1RemovedSwitches: 
   option1FollowCard: {fileID: 0}
-  Option2On: 0
+  Option2On: 1
   option2ReqSwitches: 
   option2text: 
   option2IrsReputation: 0
@@ -70,7 +69,7 @@ MonoBehaviour:
   option2ObtainedSwitches: 
   option2RemovedSwitches: 
   option2FollowCard: {fileID: 0}
-  Option3On: 0
+  Option3On: 1
   option3ReqSwitches: 
   option3text: 
   option3IrsReputation: 0
@@ -80,7 +79,7 @@ MonoBehaviour:
   option3ObtainedSwitches: 
   option3RemovedSwitches: 
   option3FollowCard: {fileID: 0}
-  Option4On: 0
+  Option4On: 1
   option4ReqSwitches: 
   option4text: 
   option4IrsReputation: 0
@@ -95,9 +94,9 @@ MonoBehaviour:
   option5PunkReputation: 0
   option5ShakeReputation: 0
   option5GuardReputation: 0
-  option5ObtainedSwitches: 03000000
+  option5ObtainedSwitches: 
   option5RemovedSwitches: 
-  option5FollowCard: {fileID: 11400000, guid: 6ef45729861686a4eade1424fb4e099a, type: 2}
+  option5FollowCard: {fileID: 0}
   isTimeBasedCard: 0
   sfxPrewait: 0
   sfx: {fileID: 0}
