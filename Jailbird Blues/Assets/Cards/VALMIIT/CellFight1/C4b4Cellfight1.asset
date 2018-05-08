@@ -9,17 +9,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: C1Cellfight1
+  m_Name: C4b4Cellfight1
   m_EditorClassIdentifier: 
   requiredSwitches: 
   RepIrs: 0
   RepPunks: 0
   RepShake: 0
   RepGuard: 0
-  timeOfDay: 3
-  storyPhase: 1
+  timeOfDay: 0
+  storyPhase: 0
   location: 
-  backgroundImage: {fileID: 21300000, guid: 1be209411c3441a45b447a959d362a33, type: 3}
+  backgroundImage: {fileID: 21300000, guid: 214f46d9c96dad347aa99d8654cd4a4e, type: 3}
   foregroundImage: {fileID: 0}
   flipForegroundImageRight: 0
   setRightAsSpeaker: 0
@@ -34,13 +34,13 @@ MonoBehaviour:
   setBigAsSpeaker: 0
   foregroundItemImage: {fileID: 0}
   bgMusic: {fileID: 0}
-  bgAmbientAudio: {fileID: 8300000, guid: 13d38308477f3ee4f81aaf468c6b972a, type: 3}
+  bgAmbientAudio: {fileID: 0}
   musicDecrease: 0
-  ambientDecrease: 0.7
-  musicOff: 1
+  ambientDecrease: 0
+  musicOff: 0
   ambientOff: 0
   cardTextPerson: 
-  cardText: You are laying in bed as you hear loud arguing in the next cell.
+  cardText: Guards open the cell and pin them both down.
   logText: 
   endCard: 0
   timeCard: 0
@@ -96,7 +96,7 @@ MonoBehaviour:
   option5GuardReputation: 0
   option5ObtainedSwitches: 
   option5RemovedSwitches: 
-  option5FollowCard: {fileID: 11400000, guid: 6e0825ba63ac73b4baf9638b27d2df3b, type: 2}
+  option5FollowCard: {fileID: 11400000, guid: 02dad2a1d44eef84395392888356dde3, type: 2}
   isTimeBasedCard: 0
   sfxPrewait: 0
   sfx: {fileID: 0}
@@ -104,10 +104,10 @@ MonoBehaviour:
   sfxFadeOutAt: 0
   sfxFadeOutSpeed: 0
   sfxAfterWait: 0
-  ppsHasFadeIn: 1
+  ppsHasFadeIn: 0
   ppsFadeMode: 0
-  blackScreenStart: 1
-  blackScreenTime: 0.2
+  blackScreenStart: 0
+  blackScreenTime: 0
   ppsFadeInSpeed: 0
   ppsShowCard: 0
   ppsHasFadeOut: 0
