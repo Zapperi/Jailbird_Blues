@@ -18,9 +18,9 @@ MonoBehaviour:
   RepGuard: 0
   timeOfDay: 2
   storyPhase: 1
-  location: 
+  location: Yard
   backgroundImage: {fileID: 21300000, guid: 013584fb9b3867548a06364b64007f2a, type: 3}
-  foregroundImage: {fileID: 21300000, guid: b9290ac4e53f8c24b9f2b35958b07913, type: 3}
+  foregroundImage: {fileID: 21300000, guid: da639e981b7bca44184f28832a3cd400, type: 3}
   flipForegroundImageRight: 0
   setRightAsSpeaker: 1
   foregroundImage2: {fileID: 21300000, guid: d405c501f3c29154aadf75828ea405ab, type: 3}
@@ -39,8 +39,9 @@ MonoBehaviour:
   ambientDecrease: 0
   musicOff: 0
   ambientOff: 1
-  cardTextPerson: I.R.S. member
-  cardText: '"Oh hello. You must be the new guy everyone is talking about"'
+  cardTextPerson: John
+  cardText: '"Oh hello. You must be the new guy everyone is talking about. My name
+    is John and my friend here is Simon."'
   logText: 
   endCard: 0
   timeCard: 0

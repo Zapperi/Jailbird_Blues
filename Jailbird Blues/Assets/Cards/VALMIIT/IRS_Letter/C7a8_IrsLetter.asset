@@ -22,10 +22,10 @@ MonoBehaviour:
   backgroundImage: {fileID: 21300000, guid: 013584fb9b3867548a06364b64007f2a, type: 3}
   foregroundImage: {fileID: 21300000, guid: 3105789b3e2e78540bc71935b0f2dcc5, type: 3}
   flipForegroundImageRight: 0
-  setRightAsSpeaker: 1
+  setRightAsSpeaker: 0
   foregroundImage2: {fileID: 21300000, guid: 40d0f7b4f522ba144929cab14e1fa4d1, type: 3}
   flipForegroundImageLeft: 0
-  setLeftAsSpeaker: 0
+  setLeftAsSpeaker: 1
   foregroundImage3: {fileID: 0}
   flipForegroundImageCenter: 0
   setCenterAsSpeaker: 0
@@ -39,7 +39,7 @@ MonoBehaviour:
   ambientDecrease: 0
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: I.R.S. member
+  cardTextPerson: Simon
   cardText: '"You gave the letter to the wrong guard?!"'
   logText: 
   endCard: 0

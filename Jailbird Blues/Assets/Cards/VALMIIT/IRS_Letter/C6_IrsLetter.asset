@@ -18,7 +18,7 @@ MonoBehaviour:
   RepGuard: 0
   timeOfDay: 0
   storyPhase: 0
-  location: 
+  location: Library
   backgroundImage: {fileID: 21300000, guid: c88376aa8278bb64fa047de4a888a544, type: 3}
   foregroundImage: {fileID: 21300000, guid: 3e2e9c18828a06f4990bd032f1e8a016, type: 3}
   flipForegroundImageRight: 0

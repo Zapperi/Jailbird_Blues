@@ -18,7 +18,7 @@ MonoBehaviour:
   RepGuard: 0
   timeOfDay: 0
   storyPhase: 0
-  location: 
+  location: Yard
   backgroundImage: {fileID: 21300000, guid: 013584fb9b3867548a06364b64007f2a, type: 3}
   foregroundImage: {fileID: 21300000, guid: b9290ac4e53f8c24b9f2b35958b07913, type: 3}
   flipForegroundImageRight: 0
