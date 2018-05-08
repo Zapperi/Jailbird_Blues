@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: C20oldtimers
+  m_Name: C18.2oldtimers
   m_EditorClassIdentifier: 
   requiredSwitches: 
   RepIrs: 0
@@ -20,15 +20,15 @@ MonoBehaviour:
   storyPhase: 0
   location: 
   backgroundImage: {fileID: 21300000, guid: 7c5e619a5c03cc943a4b68321a14beb1, type: 3}
-  foregroundImage: {fileID: 21300000, guid: 60c5302a1c8acf24fa976f1e8da49a6a, type: 3}
+  foregroundImage: {fileID: 0}
   flipForegroundImageRight: 0
-  setRightAsSpeaker: 1
-  foregroundImage2: {fileID: 21300000, guid: 3242392f481b5424893e956bd29406a1, type: 3}
+  setRightAsSpeaker: 0
+  foregroundImage2: {fileID: 0}
   flipForegroundImageLeft: 0
   setLeftAsSpeaker: 0
-  foregroundImage3: {fileID: 0}
+  foregroundImage3: {fileID: 21300000, guid: c629bfc5bf4b2e5459e0108a3f8f1a83, type: 3}
   flipForegroundImageCenter: 0
-  setCenterAsSpeaker: 0
+  setCenterAsSpeaker: 1
   foregroundBigImage: {fileID: 0}
   flipForegroundImageBig: 0
   setBigAsSpeaker: 0
@@ -39,9 +39,8 @@ MonoBehaviour:
   ambientDecrease: 0
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: Jacob
-  cardText: "\"Here's something for your troubles young man.\"\r\nJacob gives you
-    a \xC4cigarettes\xD6."
+  cardTextPerson: Zack
+  cardText: '"Okay, okay chill man, I''m going."'
   logText: 
   endCard: 0
   timeCard: 0
@@ -95,9 +94,9 @@ MonoBehaviour:
   option5PunkReputation: 0
   option5ShakeReputation: 0
   option5GuardReputation: 0
-  option5ObtainedSwitches: 03000000
+  option5ObtainedSwitches: 
   option5RemovedSwitches: 
-  option5FollowCard: {fileID: 11400000, guid: 6ef45729861686a4eade1424fb4e099a, type: 2}
+  option5FollowCard: {fileID: 11400000, guid: 30da146045612394b989be41c1181bf9, type: 2}
   isTimeBasedCard: 0
   sfxPrewait: 0
   sfx: {fileID: 0}

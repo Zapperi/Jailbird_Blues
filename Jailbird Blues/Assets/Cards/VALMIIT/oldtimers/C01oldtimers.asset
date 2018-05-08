@@ -35,8 +35,8 @@ MonoBehaviour:
   foregroundItemImage: {fileID: 0}
   bgMusic: {fileID: 8300000, guid: aa5c3fed5dc129640a56e62ef9106936, type: 3}
   bgAmbientAudio: {fileID: 8300000, guid: 788870fe9977c784a981f51bb5ed6f36, type: 3}
-  musicDecrease: 0.7
-  ambientDecrease: 0.585
+  musicDecrease: 0
+  ambientDecrease: 0
   musicOff: 0
   ambientOff: 0
   cardTextPerson: 
@@ -48,7 +48,7 @@ MonoBehaviour:
   repeatable: 0
   endOfGame: 0
   SkipCard: {fileID: 0}
-  OptionsOn: 1
+  OptionsOn: 0
   Option1On: 0
   option1ReqSwitches: 
   option1text: 
@@ -59,26 +59,26 @@ MonoBehaviour:
   option1ObtainedSwitches: 
   option1RemovedSwitches: 
   option1FollowCard: {fileID: 0}
-  Option2On: 1
+  Option2On: 0
   option2ReqSwitches: 
-  option2text: Go to them.
+  option2text: 
   option2IrsReputation: 0
   option2PunkReputation: 0
   option2ShakeReputation: 0
   option2GuardReputation: 0
   option2ObtainedSwitches: 
   option2RemovedSwitches: 
-  option2FollowCard: {fileID: 11400000, guid: 6144796e7ceebd549961f23a0c683451, type: 2}
-  Option3On: 1
+  option2FollowCard: {fileID: 0}
+  Option3On: 0
   option3ReqSwitches: 
-  option3text: Go back inside.
+  option3text: 
   option3IrsReputation: 0
   option3PunkReputation: 0
   option3ShakeReputation: 0
   option3GuardReputation: 0
   option3ObtainedSwitches: 
   option3RemovedSwitches: 
-  option3FollowCard: {fileID: 11400000, guid: 72bcda2e2a611df40ac432e02c751a1f, type: 2}
+  option3FollowCard: {fileID: 0}
   Option4On: 0
   option4ReqSwitches: 
   option4text: 
@@ -89,14 +89,14 @@ MonoBehaviour:
   option4ObtainedSwitches: 
   option4RemovedSwitches: 
   option4FollowCard: {fileID: 0}
-  Option5On: 0
+  Option5On: 1
   option5IrsReputation: 0
   option5PunkReputation: 0
   option5ShakeReputation: 0
   option5GuardReputation: 0
   option5ObtainedSwitches: 
   option5RemovedSwitches: 
-  option5FollowCard: {fileID: 0}
+  option5FollowCard: {fileID: 11400000, guid: 11eb1633e98d3d14aab9e5c0625b763e, type: 2}
   isTimeBasedCard: 0
   sfxPrewait: 0
   sfx: {fileID: 0}

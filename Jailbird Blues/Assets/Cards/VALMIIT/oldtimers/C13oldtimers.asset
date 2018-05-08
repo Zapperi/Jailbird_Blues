@@ -19,11 +19,11 @@ MonoBehaviour:
   timeOfDay: 0
   storyPhase: 0
   location: 
-  backgroundImage: {fileID: 21300000, guid: 013584fb9b3867548a06364b64007f2a, type: 3}
+  backgroundImage: {fileID: 21300000, guid: 7c5e619a5c03cc943a4b68321a14beb1, type: 3}
   foregroundImage: {fileID: 21300000, guid: 60c5302a1c8acf24fa976f1e8da49a6a, type: 3}
   flipForegroundImageRight: 0
   setRightAsSpeaker: 0
-  foregroundImage2: {fileID: 21300000, guid: 3242392f481b5424893e956bd29406a1, type: 3}
+  foregroundImage2: {fileID: 21300000, guid: 8902d16992c3169418f1992fa10be41e, type: 3}
   flipForegroundImageLeft: 0
   setLeftAsSpeaker: 1
   foregroundImage3: {fileID: 0}
@@ -35,14 +35,14 @@ MonoBehaviour:
   foregroundItemImage: {fileID: 0}
   bgMusic: {fileID: 0}
   bgAmbientAudio: {fileID: 0}
-  musicDecrease: 0.7
-  ambientDecrease: 0.585
+  musicDecrease: 0
+  ambientDecrease: 0
   musicOff: 0
   ambientOff: 0
   cardTextPerson: William
-  cardText: '"Yeah time to time, they know we can''t fight back, so I think they just
-    enjoy causing chaos. It''s not like they want to play chess or anything. Maybe
-    with a young guy around they won''t bother coming over."'
+  cardText: "\"Yeah time to time, they know \xC4we can't fight back\xD6, so I think
+    they just enjoy causing chaos. It's not like they want to play chess or anything.
+    Maybe with a \xC4young guy around\xD6 they won't bother coming over.\""
   logText: 
   endCard: 0
   timeCard: 0
