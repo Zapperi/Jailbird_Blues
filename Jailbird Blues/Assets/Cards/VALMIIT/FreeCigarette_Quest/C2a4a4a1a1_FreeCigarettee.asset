@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: C2a4b1b1b1_FreeCigarette
+  m_Name: C2a4a4a1a1_FreeCigarettee
   m_EditorClassIdentifier: 
   requiredSwitches: 
   RepIrs: 0
@@ -20,12 +20,12 @@ MonoBehaviour:
   storyPhase: 0
   location: 
   backgroundImage: {fileID: 21300000, guid: 013584fb9b3867548a06364b64007f2a, type: 3}
-  foregroundImage: {fileID: 0}
+  foregroundImage: {fileID: 21300000, guid: 5270ba0371bf5654aa13c8eb4dbce842, type: 3}
   flipForegroundImageRight: 0
   setRightAsSpeaker: 0
-  foregroundImage2: {fileID: 21300000, guid: ec7f3a9152691a345b794c0a29ce19b9, type: 3}
+  foregroundImage2: {fileID: 0}
   flipForegroundImageLeft: 0
-  setLeftAsSpeaker: 1
+  setLeftAsSpeaker: 0
   foregroundImage3: {fileID: 0}
   flipForegroundImageCenter: 0
   setCenterAsSpeaker: 0
@@ -33,18 +33,18 @@ MonoBehaviour:
   flipForegroundImageBig: 0
   setBigAsSpeaker: 0
   foregroundItemImage: {fileID: 0}
-  bgMusic: {fileID: 8300000, guid: 267a97e21f8e84142bed948aad38eae8, type: 3}
+  bgMusic: {fileID: 0}
   bgAmbientAudio: {fileID: 0}
   musicDecrease: 0
   ambientDecrease: 0
-  musicOff: 0
+  musicOff: 1
   ambientOff: 0
-  cardTextPerson: Mr.Shady
-  cardText: '"You still owe me that favour you know, I''ll cash it in later." he says
-    as you lay on the ground.'
-  logText: 
-  endCard: 1
-  timeCard: 1
+  cardTextPerson: Shaker bro
+  cardText: "\"Your taxman isn't the smartest one, but he sure \xC4has spirit.\xD6\"\r\nThe
+    protein shakers walk away."
+  logText: I got beaten up by a bunch meatheads. They liked it.
+  endCard: 0
+  timeCard: 0
   onTop: 0
   repeatable: 0
   endOfGame: 0
@@ -91,13 +91,13 @@ MonoBehaviour:
   option4RemovedSwitches: 
   option4FollowCard: {fileID: 0}
   Option5On: 1
-  option5IrsReputation: -5
+  option5IrsReputation: 0
   option5PunkReputation: 0
   option5ShakeReputation: 0
   option5GuardReputation: 0
   option5ObtainedSwitches: 
   option5RemovedSwitches: 
-  option5FollowCard: {fileID: 0}
+  option5FollowCard: {fileID: 11400000, guid: c51560dd8b7f15f48ab2dafa69ecaad0, type: 2}
   isTimeBasedCard: 0
   sfxPrewait: 0
   sfx: {fileID: 0}

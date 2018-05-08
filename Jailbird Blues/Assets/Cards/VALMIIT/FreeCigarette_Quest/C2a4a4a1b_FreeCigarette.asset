@@ -42,7 +42,7 @@ MonoBehaviour:
   cardTextPerson: Mr.Shady
   cardText: "\"If you can't get the money, you gotta pay up yourself.\"\r He walks
     away chuckling.\r \"Be sure to have the money next time, or else!\""
-  logText: 
+  logText: I owe money to a shady I.R.S guy.
   endCard: 1
   timeCard: 1
   onTop: 0
