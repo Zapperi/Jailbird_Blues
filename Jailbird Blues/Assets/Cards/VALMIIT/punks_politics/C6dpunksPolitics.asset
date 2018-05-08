@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: C6cpunksPolitics
+  m_Name: C6dpunksPolitics
   m_EditorClassIdentifier: 
   requiredSwitches: 
   RepIrs: 0
@@ -19,13 +19,13 @@ MonoBehaviour:
   timeOfDay: 0
   storyPhase: 0
   location: 
-  backgroundImage: {fileID: 21300000, guid: 8378fa802b5596e4fbe764c349e9d44c, type: 3}
+  backgroundImage: {fileID: 21300000, guid: d0ca947ecc4d047469793ffc64a64c18, type: 3}
   foregroundImage: {fileID: 0}
   flipForegroundImageRight: 0
   setRightAsSpeaker: 0
-  foregroundImage2: {fileID: 21300000, guid: f79744b0fd1740d468ebc8044591e682, type: 3}
+  foregroundImage2: {fileID: 21300000, guid: 52e7abf680408794e8f8e9feb7d30fe0, type: 3}
   flipForegroundImageLeft: 0
-  setLeftAsSpeaker: 1
+  setLeftAsSpeaker: 0
   foregroundImage3: {fileID: 0}
   flipForegroundImageCenter: 0
   setCenterAsSpeaker: 0
@@ -35,16 +35,17 @@ MonoBehaviour:
   foregroundItemImage: {fileID: 0}
   bgMusic: {fileID: 0}
   bgAmbientAudio: {fileID: 0}
-  musicDecrease: 0.7
+  musicDecrease: 0
   ambientDecrease: 0
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: Zack
-  cardText: "\"You said that just to make me like you, didn't you?\"\r Zack and you
-    both eat silently without much incidences happening."
+  cardTextPerson: You
+  cardText: '"Maybe we shouldn''t think governmental systems as rigid and set in stone,
+    but as incomplete tapestries that we modify for greater efficiency, fix the broken
+    systems and erase the unworkable ideas."'
   logText: 
-  endCard: 1
-  timeCard: 1
+  endCard: 0
+  timeCard: 0
   onTop: 0
   repeatable: 0
   endOfGame: 0
@@ -97,7 +98,7 @@ MonoBehaviour:
   option5GuardReputation: 0
   option5ObtainedSwitches: 
   option5RemovedSwitches: 
-  option5FollowCard: {fileID: 0}
+  option5FollowCard: {fileID: 11400000, guid: a089b812febf74c4ca5908fd42192690, type: 2}
   isTimeBasedCard: 0
   sfxPrewait: 0
   sfx: {fileID: 0}
@@ -111,5 +112,5 @@ MonoBehaviour:
   blackScreenTime: 0
   ppsFadeInSpeed: 0
   ppsShowCard: 0
-  ppsHasFadeOut: 1
+  ppsHasFadeOut: 0
   fadeOutSpeed: 0

@@ -9,17 +9,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: C1punksPolitics
+  m_Name: C3apunksPolitics
   m_EditorClassIdentifier: 
   requiredSwitches: 
   RepIrs: 0
   RepPunks: 0
   RepShake: 0
   RepGuard: 0
-  timeOfDay: 1
+  timeOfDay: 0
   storyPhase: 0
   location: 
-  backgroundImage: {fileID: 21300000, guid: 8378fa802b5596e4fbe764c349e9d44c, type: 3}
+  backgroundImage: {fileID: 21300000, guid: d0ca947ecc4d047469793ffc64a64c18, type: 3}
   foregroundImage: {fileID: 0}
   flipForegroundImageRight: 0
   setRightAsSpeaker: 0
@@ -33,16 +33,14 @@ MonoBehaviour:
   flipForegroundImageBig: 0
   setBigAsSpeaker: 0
   foregroundItemImage: {fileID: 0}
-  bgMusic: {fileID: 8300000, guid: 75a6ead9f3b0c244ab4f4bd518a4f668, type: 3}
-  bgAmbientAudio: {fileID: 8300000, guid: 5dfb97e1a794231408631318b95322c4, type: 3}
-  musicDecrease: 0.7
+  bgMusic: {fileID: 0}
+  bgAmbientAudio: {fileID: 0}
+  musicDecrease: 0
   ambientDecrease: 0
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: Punk
-  cardText: 'A punk drops his full tray next to you while sitting down.
-
-    "Hey, new guy! I''m Zack. What do you think of Mikhail Bakunin?"'
+  cardTextPerson: Zack
+  cardText: '"He''s the grandaddy of anarchism. That''s all I know and all I care"'
   logText: 
   endCard: 0
   timeCard: 0
@@ -98,7 +96,7 @@ MonoBehaviour:
   option5GuardReputation: 0
   option5ObtainedSwitches: 
   option5RemovedSwitches: 
-  option5FollowCard: {fileID: 11400000, guid: a2066d791dd697a4ea198bac8f2135a9, type: 2}
+  option5FollowCard: {fileID: 11400000, guid: 80d3e9998dd6914459df3eb0857e5cae, type: 2}
   isTimeBasedCard: 0
   sfxPrewait: 0
   sfx: {fileID: 0}
@@ -106,10 +104,10 @@ MonoBehaviour:
   sfxFadeOutAt: 0
   sfxFadeOutSpeed: 0
   sfxAfterWait: 0
-  ppsHasFadeIn: 1
+  ppsHasFadeIn: 0
   ppsFadeMode: 0
-  blackScreenStart: 1
-  blackScreenTime: 0.2
+  blackScreenStart: 0
+  blackScreenTime: 0
   ppsFadeInSpeed: 0
   ppsShowCard: 0
   ppsHasFadeOut: 0

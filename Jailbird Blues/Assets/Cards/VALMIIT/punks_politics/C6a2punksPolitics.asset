@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: C3bpunksPolitics
+  m_Name: C6a2punksPolitics
   m_EditorClassIdentifier: 
   requiredSwitches: 
   RepIrs: 0
@@ -19,13 +19,13 @@ MonoBehaviour:
   timeOfDay: 0
   storyPhase: 0
   location: 
-  backgroundImage: {fileID: 21300000, guid: 8378fa802b5596e4fbe764c349e9d44c, type: 3}
+  backgroundImage: {fileID: 21300000, guid: d0ca947ecc4d047469793ffc64a64c18, type: 3}
   foregroundImage: {fileID: 0}
   flipForegroundImageRight: 0
   setRightAsSpeaker: 0
-  foregroundImage2: {fileID: 21300000, guid: f79744b0fd1740d468ebc8044591e682, type: 3}
+  foregroundImage2: {fileID: 0}
   flipForegroundImageLeft: 0
-  setLeftAsSpeaker: 1
+  setLeftAsSpeaker: 0
   foregroundImage3: {fileID: 0}
   flipForegroundImageCenter: 0
   setCenterAsSpeaker: 0
@@ -35,16 +35,16 @@ MonoBehaviour:
   foregroundItemImage: {fileID: 0}
   bgMusic: {fileID: 0}
   bgAmbientAudio: {fileID: 0}
-  musicDecrease: 0.7
+  musicDecrease: 0
   ambientDecrease: 0
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: Zack
-  cardText: '"I aint tellin'' you. You''ll just agree with me without thinking for
-    yourself like the rest of the sheeple"'
+  cardTextPerson: 
+  cardText: Zack stands up and leaves with his tray, leaving you alone for a silent
+    contemplation.
   logText: 
-  endCard: 0
-  timeCard: 0
+  endCard: 1
+  timeCard: 1
   onTop: 0
   repeatable: 0
   endOfGame: 0
@@ -97,7 +97,7 @@ MonoBehaviour:
   option5GuardReputation: 0
   option5ObtainedSwitches: 
   option5RemovedSwitches: 
-  option5FollowCard: {fileID: 11400000, guid: 80d3e9998dd6914459df3eb0857e5cae, type: 2}
+  option5FollowCard: {fileID: 0}
   isTimeBasedCard: 0
   sfxPrewait: 0
   sfx: {fileID: 0}
@@ -111,5 +111,5 @@ MonoBehaviour:
   blackScreenTime: 0
   ppsFadeInSpeed: 0
   ppsShowCard: 0
-  ppsHasFadeOut: 0
+  ppsHasFadeOut: 1
   fadeOutSpeed: 0
