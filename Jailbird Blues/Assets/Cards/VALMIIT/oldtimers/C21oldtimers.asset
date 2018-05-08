@@ -19,7 +19,7 @@ MonoBehaviour:
   timeOfDay: 0
   storyPhase: 0
   location: 
-  backgroundImage: {fileID: 21300000, guid: 013584fb9b3867548a06364b64007f2a, type: 3}
+  backgroundImage: {fileID: 21300000, guid: 7c5e619a5c03cc943a4b68321a14beb1, type: 3}
   foregroundImage: {fileID: 21300000, guid: 60c5302a1c8acf24fa976f1e8da49a6a, type: 3}
   flipForegroundImageRight: 0
   setRightAsSpeaker: 1
@@ -35,17 +35,16 @@ MonoBehaviour:
   foregroundItemImage: {fileID: 0}
   bgMusic: {fileID: 0}
   bgAmbientAudio: {fileID: 0}
-  musicDecrease: 0.7
-  ambientDecrease: 0.585
+  musicDecrease: 0
+  ambientDecrease: 0
   musicOff: 0
   ambientOff: 0
   cardTextPerson: Jacob
-  cardText: "\"Even if you don't smoke, it can be used as a currency in here. We have
-    saved up a few packs for a rainy day.\"\nYou put the chess board back on the table.
-    \rRest of the yard time passes peacefully."
+  cardText: '"Even if you don''t smoke, it can be used as a currency in here. We have
+    saved up a few packs for a rainy day."'
   logText: 
-  endCard: 1
-  timeCard: 1
+  endCard: 0
+  timeCard: 0
   onTop: 0
   repeatable: 0
   endOfGame: 0
@@ -98,7 +97,7 @@ MonoBehaviour:
   option5GuardReputation: 0
   option5ObtainedSwitches: 
   option5RemovedSwitches: 
-  option5FollowCard: {fileID: 0}
+  option5FollowCard: {fileID: 11400000, guid: 89225e8899da63f4cb1f9a0abe653485, type: 2}
   isTimeBasedCard: 0
   sfxPrewait: 0
   sfx: {fileID: 0}

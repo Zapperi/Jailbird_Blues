@@ -19,20 +19,24 @@ MonoBehaviour:
   timeOfDay: 0
   storyPhase: 0
   location: 
-  backgroundImage: {fileID: 21300000, guid: 013584fb9b3867548a06364b64007f2a, type: 3}
-  foregroundImage: {fileID: 21300000, guid: f79744b0fd1740d468ebc8044591e682, type: 3}
+  backgroundImage: {fileID: 21300000, guid: 7c5e619a5c03cc943a4b68321a14beb1, type: 3}
+  foregroundImage: {fileID: 21300000, guid: 52e7abf680408794e8f8e9feb7d30fe0, type: 3}
   flipForegroundImageRight: 0
-  foregroundImage2: {fileID: 21300000, guid: 60c5302a1c8acf24fa976f1e8da49a6a, type: 3}
-  flipForegroundImageLeft: 0
+  setRightAsSpeaker: 0
+  foregroundImage2: {fileID: 21300000, guid: 89385801449f122468be8cd2264fd34f, type: 3}
+  flipForegroundImageLeft: 1
+  setLeftAsSpeaker: 0
   foregroundImage3: {fileID: 0}
   flipForegroundImageCenter: 0
+  setCenterAsSpeaker: 0
   foregroundBigImage: {fileID: 0}
   flipForegroundImageBig: 0
+  setBigAsSpeaker: 0
   foregroundItemImage: {fileID: 0}
   bgMusic: {fileID: 0}
   bgAmbientAudio: {fileID: 0}
-  musicDecrease: 0.7
-  ambientDecrease: 0.585
+  musicDecrease: 0
+  ambientDecrease: 0
   musicOff: 0
   ambientOff: 0
   cardTextPerson: What do you do?
@@ -49,8 +53,8 @@ MonoBehaviour:
   option1ReqSwitches: 
   option1text: Stand up.
   option1IrsReputation: 0
-  option1PunkReputation: 0
-  option1ShakeReputation: 2
+  option1PunkReputation: -2
+  option1ShakeReputation: 1
   option1GuardReputation: 2
   option1ObtainedSwitches: 
   option1RemovedSwitches: 
