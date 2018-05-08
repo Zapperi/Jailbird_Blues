@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: CellShiv02
+  m_Name: C16aCellShiv
   m_EditorClassIdentifier: 
   requiredSwitches: 
   RepIrs: 0
@@ -33,18 +33,18 @@ MonoBehaviour:
   flipForegroundImageBig: 0
   setBigAsSpeaker: 0
   foregroundItemImage: {fileID: 0}
-  bgMusic: {fileID: 8300000, guid: 7eea11dbcecd56a43ade0ca1a2990976, type: 3}
+  bgMusic: {fileID: 0}
   bgAmbientAudio: {fileID: 0}
   musicDecrease: 0.5
   ambientDecrease: 0.7
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: Inmate
-  cardText: "After a little while you hear someone whisper\r \"Yo dude you gotta sharpen
-    that \xC4shiv\xD6 more silently, someone may hear you\"\r"
-  logText: 
-  endCard: 0
-  timeCard: 0
+  cardTextPerson: Punk
+  cardText: "\"I know someone few cells over called the guard. We'll \xC4find out\xD6
+    who you are!\""
+  logText: I ratted out some punks, but they didn't know it was me.
+  endCard: 1
+  timeCard: 1
   onTop: 0
   repeatable: 0
   endOfGame: 0
@@ -97,7 +97,7 @@ MonoBehaviour:
   option5GuardReputation: 0
   option5ObtainedSwitches: 
   option5RemovedSwitches: 
-  option5FollowCard: {fileID: 11400000, guid: 1b328c627054b8b4bac1701b17d57bbc, type: 2}
+  option5FollowCard: {fileID: 0}
   isTimeBasedCard: 0
   sfxPrewait: 0
   sfx: {fileID: 0}
@@ -111,5 +111,5 @@ MonoBehaviour:
   blackScreenTime: 0
   ppsFadeInSpeed: 0
   ppsShowCard: 0
-  ppsHasFadeOut: 0
+  ppsHasFadeOut: 1
   fadeOutSpeed: 0

@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: CellShiv11
+  m_Name: C08CellShiv
   m_EditorClassIdentifier: 
   requiredSwitches: 
   RepIrs: 0
@@ -40,8 +40,7 @@ MonoBehaviour:
   musicOff: 0
   ambientOff: 0
   cardTextPerson: Guard
-  cardText: "\"Just what I thought, \xC4a shiv\xD6 under the matress. We'll continue
-    this in the morning but you fellows are in big trouble!\""
+  cardText: "\"Allright fellows, time for a checkup!\"\r\n"
   logText: 
   endCard: 0
   timeCard: 0
@@ -97,7 +96,7 @@ MonoBehaviour:
   option5GuardReputation: 0
   option5ObtainedSwitches: 
   option5RemovedSwitches: 
-  option5FollowCard: {fileID: 11400000, guid: de85ee039539ee147a08f3ab01450ccc, type: 2}
+  option5FollowCard: {fileID: 11400000, guid: c19d4f14458857843ac8daf0d0030ec0, type: 2}
   isTimeBasedCard: 0
   sfxPrewait: 0
   sfx: {fileID: 0}

@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: CellShiv06a.2
+  m_Name: C04aCellShiv
   m_EditorClassIdentifier: 
   requiredSwitches: 
   RepIrs: 0
@@ -26,25 +26,24 @@ MonoBehaviour:
   foregroundImage2: {fileID: 0}
   flipForegroundImageLeft: 0
   setLeftAsSpeaker: 0
-  foregroundImage3: {fileID: 21300000, guid: 3e2e9c18828a06f4990bd032f1e8a016, type: 3}
+  foregroundImage3: {fileID: 0}
   flipForegroundImageCenter: 0
-  setCenterAsSpeaker: 1
+  setCenterAsSpeaker: 0
   foregroundBigImage: {fileID: 0}
   flipForegroundImageBig: 0
   setBigAsSpeaker: 0
   foregroundItemImage: {fileID: 0}
   bgMusic: {fileID: 0}
-  bgAmbientAudio: {fileID: 0}
+  bgAmbientAudio: {fileID: 8300000, guid: 13d38308477f3ee4f81aaf468c6b972a, type: 3}
   musicDecrease: 0.5
   ambientDecrease: 0.7
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: Guard
-  cardText: "\"A pig... you're the one grovelling in filth here.\" \nThe guard mumbles
-    while locking the cell door."
-  logText: 
-  endCard: 0
-  timeCard: 0
+  cardTextPerson: 
+  cardText: You turn on to your other side and slowly drift back into sleep..
+  logText: Heard something in the night, ignored it and went back to sleep.
+  endCard: 1
+  timeCard: 1
   onTop: 0
   repeatable: 0
   endOfGame: 0
@@ -97,10 +96,10 @@ MonoBehaviour:
   option5GuardReputation: 0
   option5ObtainedSwitches: 
   option5RemovedSwitches: 
-  option5FollowCard: {fileID: 11400000, guid: b75965792fc7efe48984d405303e3a9d, type: 2}
+  option5FollowCard: {fileID: 0}
   isTimeBasedCard: 0
   sfxPrewait: 0
-  sfx: {fileID: 8300000, guid: 76bb84c9582a99f4eb011b0df627c700, type: 3}
+  sfx: {fileID: 0}
   sfxHasFadeOut: 0
   sfxFadeOutAt: 0
   sfxFadeOutSpeed: 0
@@ -111,5 +110,5 @@ MonoBehaviour:
   blackScreenTime: 0
   ppsFadeInSpeed: 0
   ppsShowCard: 0
-  ppsHasFadeOut: 0
+  ppsHasFadeOut: 1
   fadeOutSpeed: 0

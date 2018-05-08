@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: CellShiv04a
+  m_Name: C11CellShiv
   m_EditorClassIdentifier: 
   requiredSwitches: 
   RepIrs: 0
@@ -34,16 +34,17 @@ MonoBehaviour:
   setBigAsSpeaker: 0
   foregroundItemImage: {fileID: 0}
   bgMusic: {fileID: 0}
-  bgAmbientAudio: {fileID: 8300000, guid: 13d38308477f3ee4f81aaf468c6b972a, type: 3}
+  bgAmbientAudio: {fileID: 0}
   musicDecrease: 0.5
   ambientDecrease: 0.7
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: 
-  cardText: You turn on to your other side and slowly drift back into sleep..
-  logText: Heard something in the night, ignored it and went back to sleep.
-  endCard: 1
-  timeCard: 1
+  cardTextPerson: Guard
+  cardText: "\"Just what I thought, \xC4a shiv\xD6 under the matress. We'll continue
+    this in the morning but you fellows are in big trouble!\""
+  logText: 
+  endCard: 0
+  timeCard: 0
   onTop: 0
   repeatable: 0
   endOfGame: 0
@@ -96,7 +97,7 @@ MonoBehaviour:
   option5GuardReputation: 0
   option5ObtainedSwitches: 
   option5RemovedSwitches: 
-  option5FollowCard: {fileID: 0}
+  option5FollowCard: {fileID: 11400000, guid: de85ee039539ee147a08f3ab01450ccc, type: 2}
   isTimeBasedCard: 0
   sfxPrewait: 0
   sfx: {fileID: 0}
@@ -110,5 +111,5 @@ MonoBehaviour:
   blackScreenTime: 0
   ppsFadeInSpeed: 0
   ppsShowCard: 0
-  ppsHasFadeOut: 1
+  ppsHasFadeOut: 0
   fadeOutSpeed: 0

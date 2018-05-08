@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: CellShiv06a
+  m_Name: C13CellShiv
   m_EditorClassIdentifier: 
   requiredSwitches: 
   RepIrs: 0
@@ -20,9 +20,9 @@ MonoBehaviour:
   storyPhase: 0
   location: 
   backgroundImage: {fileID: 21300000, guid: 45101871e12fb8544924d61ab153420b, type: 3}
-  foregroundImage: {fileID: 21300000, guid: 3abad9b8a54f9084aa98005e16ffd4a3, type: 3}
+  foregroundImage: {fileID: 0}
   flipForegroundImageRight: 0
-  setRightAsSpeaker: 1
+  setRightAsSpeaker: 0
   foregroundImage2: {fileID: 0}
   flipForegroundImageLeft: 0
   setLeftAsSpeaker: 0
@@ -40,12 +40,10 @@ MonoBehaviour:
   musicOff: 0
   ambientOff: 0
   cardTextPerson: 
-  cardText: "The guard opens the door and hits you in the stomach with a baton. You
-    fall to the floor coughing blood.\r \"A pig... you're the one grovelling in filth
-    here.\" The guard mumbles while walking away."
+  cardText: A few minutes later.
   logText: 
-  endCard: 1
-  timeCard: 1
+  endCard: 0
+  timeCard: 0
   onTop: 0
   repeatable: 0
   endOfGame: 0
@@ -98,19 +96,19 @@ MonoBehaviour:
   option5GuardReputation: 0
   option5ObtainedSwitches: 
   option5RemovedSwitches: 
-  option5FollowCard: {fileID: 0}
+  option5FollowCard: {fileID: 11400000, guid: 386640de5877d4f4fa8f9dc3a9250a78, type: 2}
   isTimeBasedCard: 0
   sfxPrewait: 0
-  sfx: {fileID: 8300000, guid: f397d54ed96fed1479844f64e7fc1754, type: 3}
+  sfx: {fileID: 0}
   sfxHasFadeOut: 0
   sfxFadeOutAt: 0
   sfxFadeOutSpeed: 0
   sfxAfterWait: 0
   ppsHasFadeIn: 0
   ppsFadeMode: 0
-  blackScreenStart: 0
-  blackScreenTime: 0
+  blackScreenStart: 1
+  blackScreenTime: 1
   ppsFadeInSpeed: 0
   ppsShowCard: 0
-  ppsHasFadeOut: 1
+  ppsHasFadeOut: 0
   fadeOutSpeed: 0

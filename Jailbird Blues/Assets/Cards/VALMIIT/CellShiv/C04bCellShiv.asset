@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: CellShiv14
+  m_Name: C04bCellShiv
   m_EditorClassIdentifier: 
   requiredSwitches: 
   RepIrs: 0
@@ -20,9 +20,9 @@ MonoBehaviour:
   storyPhase: 0
   location: 
   backgroundImage: {fileID: 21300000, guid: 45101871e12fb8544924d61ab153420b, type: 3}
-  foregroundImage: {fileID: 0}
+  foregroundImage: {fileID: 21300000, guid: 3e2e9c18828a06f4990bd032f1e8a016, type: 3}
   flipForegroundImageRight: 0
-  setRightAsSpeaker: 0
+  setRightAsSpeaker: 1
   foregroundImage2: {fileID: 0}
   flipForegroundImageLeft: 0
   setLeftAsSpeaker: 0
@@ -39,9 +39,10 @@ MonoBehaviour:
   ambientDecrease: 0.7
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: Punk
-  cardText: "You hear shouting from few cells away:\n\"Okay what the hell, do we have
-    \xC4a rat\xD6 in here?!\""
+  cardTextPerson: Guard
+  cardText: 'A guard comes next to your celldoor.
+
+    "What''s going on here? Some inmates are trying to sleep!"'
   logText: 
   endCard: 0
   timeCard: 0
@@ -66,17 +67,17 @@ MonoBehaviour:
   option2IrsReputation: 0
   option2PunkReputation: 0
   option2ShakeReputation: 0
-  option2GuardReputation: 0
+  option2GuardReputation: 5
   option2ObtainedSwitches: 
   option2RemovedSwitches: 
   option2FollowCard: {fileID: 0}
   Option3On: 0
   option3ReqSwitches: 
   option3text: 
-  option3IrsReputation: 0
-  option3PunkReputation: 0
-  option3ShakeReputation: 0
-  option3GuardReputation: 0
+  option3IrsReputation: 2
+  option3PunkReputation: 2
+  option3ShakeReputation: 2
+  option3GuardReputation: -6
   option3ObtainedSwitches: 
   option3RemovedSwitches: 
   option3FollowCard: {fileID: 0}
@@ -97,7 +98,7 @@ MonoBehaviour:
   option5GuardReputation: 0
   option5ObtainedSwitches: 
   option5RemovedSwitches: 
-  option5FollowCard: {fileID: 11400000, guid: 93684d6be9d10a149b4dd4e8df2bef4b, type: 2}
+  option5FollowCard: {fileID: 11400000, guid: e9e3b97d2ee239942890c6250280602d, type: 2}
   isTimeBasedCard: 0
   sfxPrewait: 0
   sfx: {fileID: 0}

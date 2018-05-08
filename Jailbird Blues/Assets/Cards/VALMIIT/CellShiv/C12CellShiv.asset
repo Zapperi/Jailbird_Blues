@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: CellShiv15a
+  m_Name: C12CellShiv
   m_EditorClassIdentifier: 
   requiredSwitches: 
   RepIrs: 0
@@ -40,11 +40,11 @@ MonoBehaviour:
   musicOff: 0
   ambientOff: 0
   cardTextPerson: Punk
-  cardText: '"I know someone few cells over called the guard. We''ll find out who
-    you are"'
+  cardText: '"Screw you pigs, don''t you have better things to do, like rolling in
+    mud? Oink oink oink..."'
   logText: 
-  endCard: 1
-  timeCard: 1
+  endCard: 0
+  timeCard: 0
   onTop: 0
   repeatable: 0
   endOfGame: 0
@@ -97,10 +97,10 @@ MonoBehaviour:
   option5GuardReputation: 0
   option5ObtainedSwitches: 
   option5RemovedSwitches: 
-  option5FollowCard: {fileID: 0}
+  option5FollowCard: {fileID: 11400000, guid: ef6905e78805c0948ba0f56fcb96aa0a, type: 2}
   isTimeBasedCard: 0
   sfxPrewait: 0
-  sfx: {fileID: 0}
+  sfx: {fileID: 8300000, guid: e09ebb996e54e50438706d513510c9da, type: 3}
   sfxHasFadeOut: 0
   sfxFadeOutAt: 0
   sfxFadeOutSpeed: 0

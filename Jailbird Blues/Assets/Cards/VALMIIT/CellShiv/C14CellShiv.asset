@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: CellShiv13
+  m_Name: C14CellShiv
   m_EditorClassIdentifier: 
   requiredSwitches: 
   RepIrs: 0
@@ -39,8 +39,9 @@ MonoBehaviour:
   ambientDecrease: 0.7
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: 
-  cardText: A few minutes later.
+  cardTextPerson: Punk
+  cardText: "You hear shouting from few cells away:\n\"Okay what the hell, do we have
+    \xC4a rat\xD6 in here?!\""
   logText: 
   endCard: 0
   timeCard: 0
@@ -96,7 +97,7 @@ MonoBehaviour:
   option5GuardReputation: 0
   option5ObtainedSwitches: 
   option5RemovedSwitches: 
-  option5FollowCard: {fileID: 11400000, guid: 386640de5877d4f4fa8f9dc3a9250a78, type: 2}
+  option5FollowCard: {fileID: 11400000, guid: 93684d6be9d10a149b4dd4e8df2bef4b, type: 2}
   isTimeBasedCard: 0
   sfxPrewait: 0
   sfx: {fileID: 0}
@@ -106,8 +107,8 @@ MonoBehaviour:
   sfxAfterWait: 0
   ppsHasFadeIn: 0
   ppsFadeMode: 0
-  blackScreenStart: 1
-  blackScreenTime: 1
+  blackScreenStart: 0
+  blackScreenTime: 0
   ppsFadeInSpeed: 0
   ppsShowCard: 0
   ppsHasFadeOut: 0

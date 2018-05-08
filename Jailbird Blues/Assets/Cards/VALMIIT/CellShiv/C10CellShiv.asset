@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: CellShiv09
+  m_Name: C10CellShiv
   m_EditorClassIdentifier: 
   requiredSwitches: 
   RepIrs: 0
@@ -39,8 +39,8 @@ MonoBehaviour:
   ambientDecrease: 0.7
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: Punk
-  cardText: '"What the hell pigs, we got nothing!"'
+  cardTextPerson: Guard
+  cardText: '"Yeah we''ll see about that."'
   logText: 
   endCard: 0
   timeCard: 0
@@ -96,10 +96,10 @@ MonoBehaviour:
   option5GuardReputation: 0
   option5ObtainedSwitches: 
   option5RemovedSwitches: 
-  option5FollowCard: {fileID: 11400000, guid: e30ce158ecd3bfe48b304676d520aea6, type: 2}
+  option5FollowCard: {fileID: 11400000, guid: 2493cfd61d5f6884aab9040eac5d6e47, type: 2}
   isTimeBasedCard: 0
   sfxPrewait: 0
-  sfx: {fileID: 0}
+  sfx: {fileID: 8300000, guid: d77afd3229493144d88b1115f166af44, type: 3}
   sfxHasFadeOut: 0
   sfxFadeOutAt: 0
   sfxFadeOutSpeed: 0

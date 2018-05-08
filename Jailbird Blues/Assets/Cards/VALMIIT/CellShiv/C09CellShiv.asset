@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: CellShiv16a
+  m_Name: C09CellShiv
   m_EditorClassIdentifier: 
   requiredSwitches: 
   RepIrs: 0
@@ -40,11 +40,10 @@ MonoBehaviour:
   musicOff: 0
   ambientOff: 0
   cardTextPerson: Punk
-  cardText: "\"I know someone few cells over called the guard. We'll \xC4find out\xD6
-    who you are!\""
-  logText: I ratted out some punks, but they didn't know it was me.
-  endCard: 1
-  timeCard: 1
+  cardText: '"What the hell pigs, we got nothing!"'
+  logText: 
+  endCard: 0
+  timeCard: 0
   onTop: 0
   repeatable: 0
   endOfGame: 0
@@ -97,7 +96,7 @@ MonoBehaviour:
   option5GuardReputation: 0
   option5ObtainedSwitches: 
   option5RemovedSwitches: 
-  option5FollowCard: {fileID: 0}
+  option5FollowCard: {fileID: 11400000, guid: e30ce158ecd3bfe48b304676d520aea6, type: 2}
   isTimeBasedCard: 0
   sfxPrewait: 0
   sfx: {fileID: 0}
@@ -111,5 +110,5 @@ MonoBehaviour:
   blackScreenTime: 0
   ppsFadeInSpeed: 0
   ppsShowCard: 0
-  ppsHasFadeOut: 1
+  ppsHasFadeOut: 0
   fadeOutSpeed: 0

@@ -9,16 +9,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: CellShiv01
+  m_Name: C15bCellShiv
   m_EditorClassIdentifier: 
   requiredSwitches: 
   RepIrs: 0
   RepPunks: 0
   RepShake: 0
   RepGuard: 0
-  timeOfDay: 3
+  timeOfDay: 0
   storyPhase: 0
-  location: Cell - Night
+  location: 
   backgroundImage: {fileID: 21300000, guid: 45101871e12fb8544924d61ab153420b, type: 3}
   foregroundImage: {fileID: 0}
   flipForegroundImageRight: 0
@@ -34,17 +34,17 @@ MonoBehaviour:
   setBigAsSpeaker: 0
   foregroundItemImage: {fileID: 0}
   bgMusic: {fileID: 0}
-  bgAmbientAudio: {fileID: 8300000, guid: 13d38308477f3ee4f81aaf468c6b972a, type: 3}
-  musicDecrease: 0
+  bgAmbientAudio: {fileID: 0}
+  musicDecrease: 0.5
   ambientDecrease: 0.7
-  musicOff: 1
+  musicOff: 0
   ambientOff: 0
-  cardTextPerson: 
-  cardText: "It's late in the evening, moonlight glows through the window into the
-    silent hall.\r\nYou hear a \xC4faint schreeching\xD6 coming from a few cells over.\r"
+  cardTextPerson: Punk
+  cardText: "\"Whoah, the nerve. You are in big trouble dude, you'll be sorry for
+    ratting us out.\"\r You go to sleep while hearing faint cursing in the distance."
   logText: 
-  endCard: 0
-  timeCard: 0
+  endCard: 1
+  timeCard: 1
   onTop: 0
   repeatable: 0
   endOfGame: 0
@@ -97,7 +97,7 @@ MonoBehaviour:
   option5GuardReputation: 0
   option5ObtainedSwitches: 
   option5RemovedSwitches: 
-  option5FollowCard: {fileID: 11400000, guid: 6bb82c6c85d756549b41235495c8f803, type: 2}
+  option5FollowCard: {fileID: 0}
   isTimeBasedCard: 0
   sfxPrewait: 0
   sfx: {fileID: 0}
@@ -105,11 +105,11 @@ MonoBehaviour:
   sfxFadeOutAt: 0
   sfxFadeOutSpeed: 0
   sfxAfterWait: 0
-  ppsHasFadeIn: 1
+  ppsHasFadeIn: 0
   ppsFadeMode: 0
-  blackScreenStart: 1
-  blackScreenTime: 0.2
+  blackScreenStart: 0
+  blackScreenTime: 0
   ppsFadeInSpeed: 0
   ppsShowCard: 0
-  ppsHasFadeOut: 0
+  ppsHasFadeOut: 1
   fadeOutSpeed: 0
