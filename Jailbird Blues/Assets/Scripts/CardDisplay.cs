@@ -15,6 +15,7 @@ public class CardDisplay : MonoBehaviour
     public Text button3text;
     public Text button4text;
     public Text topBar;                    // Topbar text field, use example "Day 1, Yard"
+    string newTopBarText;
     public Text logPageDayText;
 
     public Button button1;
@@ -573,9 +574,8 @@ public class CardDisplay : MonoBehaviour
     public void UpdateImages()   // Function that updates the card images, hides if there is nothing to show.
     {
         if (currentCard.location != "")
-            topBar.text = "Day " + GameController.gameController.day + ", " + currentCard.location;
-        else
-            topBar.text = "Day " + GameController.gameController.day;
+            newTopBarText = "Day " + GameController.gameController.day + ", " + currentCard.location;
+        topBar.text = newTopBarText;            
         background.sprite = currentCard.backgroundImage;
         foregroundImage1.sprite = currentCard.foregroundImage;
         foregroundImage2.sprite = currentCard.foregroundImage2;
@@ -635,9 +635,9 @@ public class CardDisplay : MonoBehaviour
         else
             foregroundImage3.gameObject.SetActive(true);
         if (!foregroundBigImage.sprite)
-            foregroundBigImage.gameObject.SetActive(false);
+            foregroundBigImage.transform.parent.gameObject.SetActive(false);
         else
-            foregroundBigImage.gameObject.SetActive(true);
+            foregroundBigImage.transform.parent.gameObject.SetActive(true);
     }
 
     public void FlipImages()
