@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: C4Cellfight1
+  m_Name: C4c1Cellfight1
   m_EditorClassIdentifier: 
   requiredSwitches: 
   RepIrs: 0
@@ -22,59 +22,64 @@ MonoBehaviour:
   backgroundImage: {fileID: 21300000, guid: 1be209411c3441a45b447a959d362a33, type: 3}
   foregroundImage: {fileID: 0}
   flipForegroundImageRight: 0
+  setRightAsSpeaker: 0
   foregroundImage2: {fileID: 0}
   flipForegroundImageLeft: 0
+  setLeftAsSpeaker: 0
   foregroundImage3: {fileID: 0}
   flipForegroundImageCenter: 0
+  setCenterAsSpeaker: 0
   foregroundBigImage: {fileID: 0}
   flipForegroundImageBig: 0
+  setBigAsSpeaker: 0
   foregroundItemImage: {fileID: 0}
   bgMusic: {fileID: 0}
   bgAmbientAudio: {fileID: 0}
   musicDecrease: 0
-  ambientDecrease: 0.5
+  ambientDecrease: 0.7
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: What do you do?
-  cardText: 
-  logText: 
+  cardTextPerson: 
+  cardText: The fight keeps going in the background for a while as you lay in your
+    bed.
+  logText: Prison is noisy sometimes at night.
   endCard: 0
   timeCard: 0
   onTop: 0
   repeatable: 0
   endOfGame: 0
   SkipCard: {fileID: 0}
-  OptionsOn: 1
-  Option1On: 1
+  OptionsOn: 0
+  Option1On: 0
   option1ReqSwitches: 
-  option1text: '"Fight! Fight!"'
+  option1text: 
   option1IrsReputation: 0
   option1PunkReputation: 0
   option1ShakeReputation: 0
   option1GuardReputation: 0
   option1ObtainedSwitches: 
   option1RemovedSwitches: 
-  option1FollowCard: {fileID: 11400000, guid: 583ca4ed60c141746ad86af7bda3c6bc, type: 2}
-  Option2On: 1
+  option1FollowCard: {fileID: 0}
+  Option2On: 0
   option2ReqSwitches: 
-  option2text: Call the guard
+  option2text: 
   option2IrsReputation: 0
   option2PunkReputation: 0
   option2ShakeReputation: 0
   option2GuardReputation: 0
   option2ObtainedSwitches: 
   option2RemovedSwitches: 
-  option2FollowCard: {fileID: 11400000, guid: 185185fa57761f7418c78f190336fc19, type: 2}
-  Option3On: 1
+  option2FollowCard: {fileID: 0}
+  Option3On: 0
   option3ReqSwitches: 
-  option3text: Ignore
+  option3text: 
   option3IrsReputation: 0
   option3PunkReputation: 0
   option3ShakeReputation: 0
   option3GuardReputation: 0
   option3ObtainedSwitches: 
   option3RemovedSwitches: 
-  option3FollowCard: {fileID: 11400000, guid: 9932e8b560c33ff49a810cbf5b01d6be, type: 2}
+  option3FollowCard: {fileID: 0}
   Option4On: 0
   option4ReqSwitches: 
   option4text: 
@@ -85,14 +90,14 @@ MonoBehaviour:
   option4ObtainedSwitches: 
   option4RemovedSwitches: 
   option4FollowCard: {fileID: 0}
-  Option5On: 0
+  Option5On: 1
   option5IrsReputation: 0
   option5PunkReputation: 0
   option5ShakeReputation: 0
-  option5GuardReputation: 0
+  option5GuardReputation: 2
   option5ObtainedSwitches: 
   option5RemovedSwitches: 
-  option5FollowCard: {fileID: 0}
+  option5FollowCard: {fileID: 11400000, guid: 8f0407895abf03d47b5775372e5a3356, type: 2}
   isTimeBasedCard: 0
   sfxPrewait: 0
   sfx: {fileID: 0}
