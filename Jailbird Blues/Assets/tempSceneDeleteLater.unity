@@ -419,13 +419,19 @@ Prefab:
         type: 2}
       propertyPath: currentCard
       value: 
-      objectReference: {fileID: 11400000, guid: cb2651b7189735b4b81de470bbcc6e19,
+      objectReference: {fileID: 11400000, guid: ed420e7336fe3be43921360da4b31df6,
         type: 2}
     - target: {fileID: 114743166947194950, guid: a5ca0da45ae9cf94f8ba95b70b239f82,
         type: 2}
       propertyPath: schedule
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114743166947194950, guid: a5ca0da45ae9cf94f8ba95b70b239f82,
+        type: 2}
+      propertyPath: allItemList.Array.data[4].itemIcon
+      value: 
+      objectReference: {fileID: 21300000, guid: 2d56f8bd67feb0941a7d195579e305f1,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a5ca0da45ae9cf94f8ba95b70b239f82, type: 2}
   m_IsPrefabParent: 0
@@ -675,7 +681,7 @@ Prefab:
     - target: {fileID: 224860783692420092, guid: df67972d0e99a6d428df8e1f930ac1a0,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -170
       objectReference: {fileID: 0}
     - target: {fileID: 224860783692420092, guid: df67972d0e99a6d428df8e1f930ac1a0,
         type: 2}
@@ -685,7 +691,7 @@ Prefab:
     - target: {fileID: 224860783692420092, guid: df67972d0e99a6d428df8e1f930ac1a0,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 320
       objectReference: {fileID: 0}
     - target: {fileID: 224820963609722240, guid: df67972d0e99a6d428df8e1f930ac1a0,
         type: 2}
@@ -695,17 +701,17 @@ Prefab:
     - target: {fileID: 224820963609722240, guid: df67972d0e99a6d428df8e1f930ac1a0,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 310
       objectReference: {fileID: 0}
     - target: {fileID: 114399365377797168, guid: df67972d0e99a6d428df8e1f930ac1a0,
         type: 2}
       propertyPath: currentCard
       value: 
-      objectReference: {fileID: 11400000, guid: cb2651b7189735b4b81de470bbcc6e19,
+      objectReference: {fileID: 11400000, guid: ed420e7336fe3be43921360da4b31df6,
         type: 2}
     - target: {fileID: 1014170443296230, guid: df67972d0e99a6d428df8e1f930ac1a0, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: df67972d0e99a6d428df8e1f930ac1a0, type: 2}
