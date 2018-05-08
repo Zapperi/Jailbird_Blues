@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: C03Shakersweight
+  m_Name: C13b.1Shakersweight
   m_EditorClassIdentifier: 
   requiredSwitches: 
   RepIrs: 0
@@ -20,27 +20,27 @@ MonoBehaviour:
   storyPhase: 0
   location: 
   backgroundImage: {fileID: 21300000, guid: e34e2dc729b5acd42b383971c725e4f1, type: 3}
-  foregroundImage: {fileID: 21300000, guid: d2a87112952ce9847918b64eebab23a5, type: 3}
+  foregroundImage: {fileID: 0}
   flipForegroundImageRight: 0
   setRightAsSpeaker: 0
-  foregroundImage2: {fileID: 21300000, guid: 945920bdbc98f5e49a76f1e66adc9166, type: 3}
+  foregroundImage2: {fileID: 0}
   flipForegroundImageLeft: 0
   setLeftAsSpeaker: 0
   foregroundImage3: {fileID: 0}
   flipForegroundImageCenter: 0
   setCenterAsSpeaker: 0
-  foregroundBigImage: {fileID: 0}
+  foregroundBigImage: {fileID: 21300000, guid: 9080cd5bf9da0e648b88b2bb996b8a12, type: 3}
   flipForegroundImageBig: 0
-  setBigAsSpeaker: 0
+  setBigAsSpeaker: 1
   foregroundItemImage: {fileID: 0}
   bgMusic: {fileID: 0}
   bgAmbientAudio: {fileID: 0}
-  musicDecrease: 0.5
-  ambientDecrease: 0.5
+  musicDecrease: 0
+  ambientDecrease: 0
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: 
-  cardText: "\xC4\rThey notice you\xD6 and turn to your direction."
+  cardTextPerson: Shaker Goon
+  cardText: "\"Already? \xC4That's weak\xD6 little bro...\""
   logText: 
   endCard: 0
   timeCard: 0
@@ -48,7 +48,7 @@ MonoBehaviour:
   repeatable: 0
   endOfGame: 0
   SkipCard: {fileID: 0}
-  OptionsOn: 0
+  OptionsOn: 1
   Option1On: 0
   option1ReqSwitches: 
   option1text: 
@@ -89,14 +89,14 @@ MonoBehaviour:
   option4ObtainedSwitches: 
   option4RemovedSwitches: 
   option4FollowCard: {fileID: 0}
-  Option5On: 1
+  Option5On: 0
   option5IrsReputation: 0
   option5PunkReputation: 0
   option5ShakeReputation: 0
   option5GuardReputation: 0
   option5ObtainedSwitches: 
   option5RemovedSwitches: 
-  option5FollowCard: {fileID: 11400000, guid: 1d4c95e2e8c6fa344835e1f1755025c8, type: 2}
+  option5FollowCard: {fileID: 11400000, guid: e9b75c15b8b9f964b8bca58a532c98e1, type: 2}
   isTimeBasedCard: 0
   sfxPrewait: 0
   sfx: {fileID: 0}
