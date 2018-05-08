@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: C2a.1_CleaningWork
+  m_Name: C2c.1_CleaningWork
   m_EditorClassIdentifier: 
   requiredSwitches: 
   RepIrs: 0
@@ -19,7 +19,7 @@ MonoBehaviour:
   timeOfDay: 0
   storyPhase: 0
   location: 
-  backgroundImage: {fileID: 21300000, guid: 214f46d9c96dad347aa99d8654cd4a4e, type: 3}
+  backgroundImage: {fileID: 21300000, guid: 98e6a69ad23deed4e832c2c3f4ef8a9a, type: 3}
   foregroundImage: {fileID: 0}
   flipForegroundImageRight: 0
   setRightAsSpeaker: 0
@@ -36,12 +36,13 @@ MonoBehaviour:
   bgMusic: {fileID: 0}
   bgAmbientAudio: {fileID: 0}
   musicDecrease: 0
-  ambientDecrease: 0.5
+  ambientDecrease: 0
   musicOff: 0
   ambientOff: 0
   cardTextPerson: 
-  cardText: "You shout to the guard leaning against the wall \rat the end of the hallway.\r"
-  logText: 
+  cardText: "There is someone\u2019s stash hidden in here. \xC4A shiv!\xD6 Finders
+    keepers!\r Hopefully it\u2019s former owner doesn\u2019t find out...\r\n"
+  logText: I found a shiv hidden in a cleaning cart.
   endCard: 0
   timeCard: 0
   onTop: 0
@@ -76,7 +77,7 @@ MonoBehaviour:
   option3PunkReputation: 0
   option3ShakeReputation: 0
   option3GuardReputation: 0
-  option3ObtainedSwitches: 
+  option3ObtainedSwitches: 05000000
   option3RemovedSwitches: 
   option3FollowCard: {fileID: 0}
   Option4On: 0
@@ -96,7 +97,7 @@ MonoBehaviour:
   option5GuardReputation: 0
   option5ObtainedSwitches: 
   option5RemovedSwitches: 
-  option5FollowCard: {fileID: 11400000, guid: 33ab476312030804caabac912a122362, type: 2}
+  option5FollowCard: {fileID: 11400000, guid: 79b37b6b8a991d0488ca544c278aa8e9, type: 2}
   isTimeBasedCard: 0
   sfxPrewait: 0
   sfx: {fileID: 0}
