@@ -38,7 +38,7 @@ MonoBehaviour:
   musicDecrease: 0
   ambientDecrease: 0
   musicOff: 0
-  ambientOff: 0
+  ambientOff: 1
   cardTextPerson: Jabari
   cardText: A huge shirtless shaker stands infront of you. Was his name Jabari? "Hey
     newbie check how hard my biceps are"
@@ -105,10 +105,10 @@ MonoBehaviour:
   sfxFadeOutAt: 0
   sfxFadeOutSpeed: 0
   sfxAfterWait: 0
-  ppsHasFadeIn: 0
+  ppsHasFadeIn: 1
   ppsFadeMode: 0
-  blackScreenStart: 0
-  blackScreenTime: 0
+  blackScreenStart: 1
+  blackScreenTime: 0.2
   ppsFadeInSpeed: 0
   ppsShowCard: 0
   ppsHasFadeOut: 0
