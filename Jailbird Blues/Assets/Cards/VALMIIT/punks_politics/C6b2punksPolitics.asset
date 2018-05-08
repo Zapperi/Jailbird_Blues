@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: C5punksPolitics
+  m_Name: C6b2punksPolitics
   m_EditorClassIdentifier: 
   requiredSwitches: 
   RepIrs: 0
@@ -19,73 +19,78 @@ MonoBehaviour:
   timeOfDay: 0
   storyPhase: 0
   location: 
-  backgroundImage: {fileID: 21300000, guid: 8378fa802b5596e4fbe764c349e9d44c, type: 3}
+  backgroundImage: {fileID: 21300000, guid: d0ca947ecc4d047469793ffc64a64c18, type: 3}
   foregroundImage: {fileID: 0}
   flipForegroundImageRight: 0
-  foregroundImage2: {fileID: 21300000, guid: f79744b0fd1740d468ebc8044591e682, type: 3}
+  setRightAsSpeaker: 0
+  foregroundImage2: {fileID: 0}
   flipForegroundImageLeft: 0
+  setLeftAsSpeaker: 0
   foregroundImage3: {fileID: 0}
   flipForegroundImageCenter: 0
+  setCenterAsSpeaker: 0
   foregroundBigImage: {fileID: 0}
   flipForegroundImageBig: 0
+  setBigAsSpeaker: 0
   foregroundItemImage: {fileID: 0}
   bgMusic: {fileID: 0}
   bgAmbientAudio: {fileID: 0}
-  musicDecrease: 0.7
+  musicDecrease: 0
   ambientDecrease: 0
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: What do you say?
-  cardText: 
+  cardTextPerson: 
+  cardText: Zack violently stands up spitting into your food and leaves without his
+    tray. Good thing he didn't touch it and you get to eat uncontaminated food.
   logText: 
-  endCard: 0
-  timeCard: 0
+  endCard: 1
+  timeCard: 1
   onTop: 0
   repeatable: 0
   endOfGame: 0
   SkipCard: {fileID: 0}
-  OptionsOn: 1
-  Option1On: 1
+  OptionsOn: 0
+  Option1On: 0
   option1ReqSwitches: 
-  option1text: '"I don''t really care about politics."'
+  option1text: 
   option1IrsReputation: 0
-  option1PunkReputation: -2
+  option1PunkReputation: 0
   option1ShakeReputation: 0
-  option1GuardReputation: 1
+  option1GuardReputation: 0
   option1ObtainedSwitches: 
   option1RemovedSwitches: 
-  option1FollowCard: {fileID: 11400000, guid: 97575977ec9d45c4b89c5e104a64f67d, type: 2}
-  Option2On: 1
+  option1FollowCard: {fileID: 0}
+  Option2On: 0
   option2ReqSwitches: 
-  option2text: '"Anarchism is not sustainable on a nationwide scale."'
-  option2IrsReputation: 3
-  option2PunkReputation: -4
+  option2text: 
+  option2IrsReputation: 0
+  option2PunkReputation: 0
   option2ShakeReputation: 0
   option2GuardReputation: 0
   option2ObtainedSwitches: 
   option2RemovedSwitches: 
-  option2FollowCard: {fileID: 11400000, guid: d32676f1e7851424fb34313edc4181d0, type: 2}
-  Option3On: 1
+  option2FollowCard: {fileID: 0}
+  Option3On: 0
   option3ReqSwitches: 
-  option3text: '"Anarchism is the only form of governance that makes sense."'
-  option3IrsReputation: -3
-  option3PunkReputation: 1
+  option3text: 
+  option3IrsReputation: 0
+  option3PunkReputation: 0
   option3ShakeReputation: 0
   option3GuardReputation: 0
   option3ObtainedSwitches: 
   option3RemovedSwitches: 
-  option3FollowCard: {fileID: 11400000, guid: 9efa4626779646a498ef7206915921ad, type: 2}
-  Option4On: 1
+  option3FollowCard: {fileID: 0}
+  Option4On: 0
   option4ReqSwitches: 
-  option4text: Tell him what you feel.
+  option4text: 
   option4IrsReputation: 0
-  option4PunkReputation: 4
+  option4PunkReputation: 0
   option4ShakeReputation: 0
   option4GuardReputation: 0
   option4ObtainedSwitches: 
   option4RemovedSwitches: 
-  option4FollowCard: {fileID: 11400000, guid: 00544964c5a6392419ccf7803627fd69, type: 2}
-  Option5On: 0
+  option4FollowCard: {fileID: 0}
+  Option5On: 1
   option5IrsReputation: 0
   option5PunkReputation: 0
   option5ShakeReputation: 0
@@ -106,5 +111,5 @@ MonoBehaviour:
   blackScreenTime: 0
   ppsFadeInSpeed: 0
   ppsShowCard: 0
-  ppsHasFadeOut: 0
+  ppsHasFadeOut: 1
   fadeOutSpeed: 0
