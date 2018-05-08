@@ -35,8 +35,8 @@ MonoBehaviour:
   foregroundItemImage: {fileID: 0}
   bgMusic: {fileID: 0}
   bgAmbientAudio: {fileID: 0}
-  musicDecrease: 0
-  ambientDecrease: 0
+  musicDecrease: 0.5
+  ambientDecrease: 0.5
   musicOff: 0
   ambientOff: 0
   cardTextPerson: 
@@ -106,9 +106,9 @@ MonoBehaviour:
   sfxAfterWait: 0
   ppsHasFadeIn: 1
   ppsFadeMode: 0
-  blackScreenStart: 0
-  blackScreenTime: 0
-  ppsFadeInSpeed: 1.3
+  blackScreenStart: 1
+  blackScreenTime: 0.5
+  ppsFadeInSpeed: 0
   ppsShowCard: 0
   ppsHasFadeOut: 0
   fadeOutSpeed: 0

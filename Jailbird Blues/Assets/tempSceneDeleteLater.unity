@@ -419,7 +419,7 @@ Prefab:
         type: 2}
       propertyPath: currentCard
       value: 
-      objectReference: {fileID: 11400000, guid: ed420e7336fe3be43921360da4b31df6,
+      objectReference: {fileID: 11400000, guid: cb2651b7189735b4b81de470bbcc6e19,
         type: 2}
     - target: {fileID: 114743166947194950, guid: a5ca0da45ae9cf94f8ba95b70b239f82,
         type: 2}
@@ -681,7 +681,7 @@ Prefab:
     - target: {fileID: 224860783692420092, guid: df67972d0e99a6d428df8e1f930ac1a0,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -170
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224860783692420092, guid: df67972d0e99a6d428df8e1f930ac1a0,
         type: 2}
@@ -691,7 +691,7 @@ Prefab:
     - target: {fileID: 224860783692420092, guid: df67972d0e99a6d428df8e1f930ac1a0,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 320
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224820963609722240, guid: df67972d0e99a6d428df8e1f930ac1a0,
         type: 2}
@@ -701,17 +701,17 @@ Prefab:
     - target: {fileID: 224820963609722240, guid: df67972d0e99a6d428df8e1f930ac1a0,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 310
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114399365377797168, guid: df67972d0e99a6d428df8e1f930ac1a0,
         type: 2}
       propertyPath: currentCard
       value: 
-      objectReference: {fileID: 11400000, guid: ed420e7336fe3be43921360da4b31df6,
+      objectReference: {fileID: 11400000, guid: cb2651b7189735b4b81de470bbcc6e19,
         type: 2}
     - target: {fileID: 1014170443296230, guid: df67972d0e99a6d428df8e1f930ac1a0, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: df67972d0e99a6d428df8e1f930ac1a0, type: 2}
