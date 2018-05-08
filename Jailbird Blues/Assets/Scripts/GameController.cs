@@ -801,6 +801,7 @@ public class GameController : MonoBehaviour {
                 if (allSwitches[3] == true)                             // If obtained switch was obtain cig..
                 {
                     AddCig();                                           // Add the cig to player inventory
+                    PlayItemObtained(4);
                     allSwitches[3] = false;                             // Set the cig obtained boolean back to false
                 }
             }
@@ -905,9 +906,10 @@ public class GameController : MonoBehaviour {
             {
                 PlayItemLost(dictionary[optionIndex][i]);               // If switch is an item, play lost animation
                 allSwitches[dictionary[optionIndex][i]] = false;        // Set the switch to false to remove it
-                if (allSwitches[3] == false)                            // If obtain cig was set to false..
+                if (allSwitches[3] == false && cigaretteCount > 0)                            // If obtain cig was set to false..
                 {
                     RemoveCig();                                        // Remove cig from player
+                    PlayItemLost(4);
                     allSwitches[3] = true;                              // Set obtained cig back to true.
                 }
             }

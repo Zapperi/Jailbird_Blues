@@ -42,7 +42,7 @@ public class InventoryPage : MonoBehaviour {
         for (int i = 0; i < itemList.Count; i++)                                                    // Cycle the throught whole itemlist
         {
             Item item = itemList[i];                                                                // Set the current item..
-            if (gameController.GetComponent<GameController>().allSwitches[item.itemSwitchIndex])    // Check if player has obtained item in question
+            if (gameController.GetComponent<GameController>().allSwitches[item.itemSwitchIndex] && i != 2)    // Check if player has obtained item in question
             {
                 GameObject newItem = itemPool.GetObject();                                          // Place the item into an object from itempool
                 newItem.transform.SetParent(parentObject);                                          // Set the location of the item 
