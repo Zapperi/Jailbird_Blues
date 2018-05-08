@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: C03Shakersweight
+  m_Name: C08b.3Shakersweight_END
   m_EditorClassIdentifier: 
   requiredSwitches: 
   RepIrs: 0
@@ -20,10 +20,10 @@ MonoBehaviour:
   storyPhase: 0
   location: 
   backgroundImage: {fileID: 21300000, guid: e34e2dc729b5acd42b383971c725e4f1, type: 3}
-  foregroundImage: {fileID: 21300000, guid: d2a87112952ce9847918b64eebab23a5, type: 3}
+  foregroundImage: {fileID: 0}
   flipForegroundImageRight: 0
   setRightAsSpeaker: 0
-  foregroundImage2: {fileID: 21300000, guid: 945920bdbc98f5e49a76f1e66adc9166, type: 3}
+  foregroundImage2: {fileID: 0}
   flipForegroundImageLeft: 0
   setLeftAsSpeaker: 0
   foregroundImage3: {fileID: 0}
@@ -35,15 +35,15 @@ MonoBehaviour:
   foregroundItemImage: {fileID: 0}
   bgMusic: {fileID: 0}
   bgAmbientAudio: {fileID: 0}
-  musicDecrease: 0.5
-  ambientDecrease: 0.5
+  musicDecrease: 0
+  ambientDecrease: 0
   musicOff: 0
   ambientOff: 0
   cardTextPerson: 
-  cardText: "\xC4\rThey notice you\xD6 and turn to your direction."
-  logText: 
-  endCard: 0
-  timeCard: 0
+  cardText: "You walk away from the exercise area, little less proud of \xC4your spaghettis.\xD6"
+  logText: Protein Shakers laughed at my arms.. maybe I should work out more?
+  endCard: 1
+  timeCard: 1
   onTop: 0
   repeatable: 0
   endOfGame: 0
@@ -96,7 +96,7 @@ MonoBehaviour:
   option5GuardReputation: 0
   option5ObtainedSwitches: 
   option5RemovedSwitches: 
-  option5FollowCard: {fileID: 11400000, guid: 1d4c95e2e8c6fa344835e1f1755025c8, type: 2}
+  option5FollowCard: {fileID: 0}
   isTimeBasedCard: 0
   sfxPrewait: 0
   sfx: {fileID: 0}

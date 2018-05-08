@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: C03Shakersweight
+  m_Name: C06a.2Shakersweight_CHOICE
   m_EditorClassIdentifier: 
   requiredSwitches: 
   RepIrs: 0
@@ -20,13 +20,13 @@ MonoBehaviour:
   storyPhase: 0
   location: 
   backgroundImage: {fileID: 21300000, guid: e34e2dc729b5acd42b383971c725e4f1, type: 3}
-  foregroundImage: {fileID: 21300000, guid: d2a87112952ce9847918b64eebab23a5, type: 3}
+  foregroundImage: {fileID: 0}
   flipForegroundImageRight: 0
   setRightAsSpeaker: 0
-  foregroundImage2: {fileID: 21300000, guid: 945920bdbc98f5e49a76f1e66adc9166, type: 3}
+  foregroundImage2: {fileID: 0}
   flipForegroundImageLeft: 0
   setLeftAsSpeaker: 0
-  foregroundImage3: {fileID: 0}
+  foregroundImage3: {fileID: 21300000, guid: d2a87112952ce9847918b64eebab23a5, type: 3}
   flipForegroundImageCenter: 0
   setCenterAsSpeaker: 0
   foregroundBigImage: {fileID: 0}
@@ -35,12 +35,12 @@ MonoBehaviour:
   foregroundItemImage: {fileID: 0}
   bgMusic: {fileID: 0}
   bgAmbientAudio: {fileID: 0}
-  musicDecrease: 0.5
-  ambientDecrease: 0.5
+  musicDecrease: 0
+  ambientDecrease: 0
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: 
-  cardText: "\xC4\rThey notice you\xD6 and turn to your direction."
+  cardTextPerson: You
+  cardText: 
   logText: 
   endCard: 0
   timeCard: 0
@@ -48,27 +48,27 @@ MonoBehaviour:
   repeatable: 0
   endOfGame: 0
   SkipCard: {fileID: 0}
-  OptionsOn: 0
-  Option1On: 0
+  OptionsOn: 1
+  Option1On: 1
   option1ReqSwitches: 
-  option1text: 
+  option1text: '"Yeah sure, why not."'
   option1IrsReputation: 0
   option1PunkReputation: 0
-  option1ShakeReputation: 0
+  option1ShakeReputation: 2
   option1GuardReputation: 0
   option1ObtainedSwitches: 
   option1RemovedSwitches: 
-  option1FollowCard: {fileID: 0}
-  Option2On: 0
+  option1FollowCard: {fileID: 11400000, guid: 691334853fefa9c498db84b845c342dc, type: 2}
+  Option2On: 1
   option2ReqSwitches: 
-  option2text: 
+  option2text: '"I don''t know.."'
   option2IrsReputation: 0
   option2PunkReputation: 0
   option2ShakeReputation: 0
   option2GuardReputation: 0
   option2ObtainedSwitches: 
   option2RemovedSwitches: 
-  option2FollowCard: {fileID: 0}
+  option2FollowCard: {fileID: 11400000, guid: 3e0aa2336231e0441b9b7cca9ab3cabd, type: 2}
   Option3On: 0
   option3ReqSwitches: 
   option3text: 
@@ -89,14 +89,14 @@ MonoBehaviour:
   option4ObtainedSwitches: 
   option4RemovedSwitches: 
   option4FollowCard: {fileID: 0}
-  Option5On: 1
+  Option5On: 0
   option5IrsReputation: 0
   option5PunkReputation: 0
   option5ShakeReputation: 0
   option5GuardReputation: 0
   option5ObtainedSwitches: 
   option5RemovedSwitches: 
-  option5FollowCard: {fileID: 11400000, guid: 1d4c95e2e8c6fa344835e1f1755025c8, type: 2}
+  option5FollowCard: {fileID: 0}
   isTimeBasedCard: 0
   sfxPrewait: 0
   sfx: {fileID: 0}

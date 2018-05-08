@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: C03Shakersweight
+  m_Name: C02Shakersweight
   m_EditorClassIdentifier: 
   requiredSwitches: 
   RepIrs: 0
@@ -23,9 +23,9 @@ MonoBehaviour:
   foregroundImage: {fileID: 21300000, guid: d2a87112952ce9847918b64eebab23a5, type: 3}
   flipForegroundImageRight: 0
   setRightAsSpeaker: 0
-  foregroundImage2: {fileID: 21300000, guid: 945920bdbc98f5e49a76f1e66adc9166, type: 3}
+  foregroundImage2: {fileID: 21300000, guid: 8645f82f413c63b4bbead91bea01e49d, type: 3}
   flipForegroundImageLeft: 0
-  setLeftAsSpeaker: 0
+  setLeftAsSpeaker: 1
   foregroundImage3: {fileID: 0}
   flipForegroundImageCenter: 0
   setCenterAsSpeaker: 0
@@ -39,8 +39,8 @@ MonoBehaviour:
   ambientDecrease: 0.5
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: 
-  cardText: "\xC4\rThey notice you\xD6 and turn to your direction."
+  cardTextPerson: Shaker Goon
+  cardText: "\r\"Yeah bro, today I lifted at least 35 sets on the...\"\r"
   logText: 
   endCard: 0
   timeCard: 0
@@ -96,7 +96,7 @@ MonoBehaviour:
   option5GuardReputation: 0
   option5ObtainedSwitches: 
   option5RemovedSwitches: 
-  option5FollowCard: {fileID: 11400000, guid: 1d4c95e2e8c6fa344835e1f1755025c8, type: 2}
+  option5FollowCard: {fileID: 11400000, guid: 1a4259649f2a4a949bb2b8bef07b2caf, type: 2}
   isTimeBasedCard: 0
   sfxPrewait: 0
   sfx: {fileID: 0}

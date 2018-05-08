@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: C03Shakersweight
+  m_Name: C17a.1Shakersweight
   m_EditorClassIdentifier: 
   requiredSwitches: 
   RepIrs: 0
@@ -18,12 +18,12 @@ MonoBehaviour:
   RepGuard: 0
   timeOfDay: 0
   storyPhase: 0
-  location: 
-  backgroundImage: {fileID: 21300000, guid: e34e2dc729b5acd42b383971c725e4f1, type: 3}
-  foregroundImage: {fileID: 21300000, guid: d2a87112952ce9847918b64eebab23a5, type: 3}
+  location: Dreamland
+  backgroundImage: {fileID: 21300000, guid: 1be209411c3441a45b447a959d362a33, type: 3}
+  foregroundImage: {fileID: 0}
   flipForegroundImageRight: 0
   setRightAsSpeaker: 0
-  foregroundImage2: {fileID: 21300000, guid: 945920bdbc98f5e49a76f1e66adc9166, type: 3}
+  foregroundImage2: {fileID: 0}
   flipForegroundImageLeft: 0
   setLeftAsSpeaker: 0
   foregroundImage3: {fileID: 0}
@@ -35,12 +35,12 @@ MonoBehaviour:
   foregroundItemImage: {fileID: 0}
   bgMusic: {fileID: 0}
   bgAmbientAudio: {fileID: 0}
-  musicDecrease: 0.5
-  ambientDecrease: 0.5
+  musicDecrease: 0.8
+  ambientDecrease: 0
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: 
-  cardText: "\xC4\rThey notice you\xD6 and turn to your direction."
+  cardTextPerson: Shaker Goon
+  cardText: "\"Bro, bro, hey bro you gotta \xC4wake up\xD6 bro...\"\r"
   logText: 
   endCard: 0
   timeCard: 0
@@ -96,7 +96,7 @@ MonoBehaviour:
   option5GuardReputation: 0
   option5ObtainedSwitches: 
   option5RemovedSwitches: 
-  option5FollowCard: {fileID: 11400000, guid: 1d4c95e2e8c6fa344835e1f1755025c8, type: 2}
+  option5FollowCard: {fileID: 11400000, guid: f55315fde9940a8488e0690d8c2ceaae, type: 2}
   isTimeBasedCard: 0
   sfxPrewait: 0
   sfx: {fileID: 0}
@@ -104,11 +104,11 @@ MonoBehaviour:
   sfxFadeOutAt: 0
   sfxFadeOutSpeed: 0
   sfxAfterWait: 0
-  ppsHasFadeIn: 0
+  ppsHasFadeIn: 1
   ppsFadeMode: 0
-  blackScreenStart: 0
-  blackScreenTime: 0
-  ppsFadeInSpeed: 0
+  blackScreenStart: 1
+  blackScreenTime: 1.5
+  ppsFadeInSpeed: 2
   ppsShowCard: 0
   ppsHasFadeOut: 0
   fadeOutSpeed: 0
