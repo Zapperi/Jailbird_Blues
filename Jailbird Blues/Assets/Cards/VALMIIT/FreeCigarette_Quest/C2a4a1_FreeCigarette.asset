@@ -40,8 +40,8 @@ MonoBehaviour:
   musicOff: 0
   ambientOff: 0
   cardTextPerson: Shaker bro
-  cardText: "Two huge guys turn your direction.\r\n\"Sup bro.\" You point at the \xC4shady
-    guy\xD6 at the IRS table."
+  cardText: "Two huge guys turn your direction.\r\n\"Sup bro.\" \nYou point at the
+    \xC4shady guy\xD6 at the IRS table."
   logText: 
   endCard: 0
   timeCard: 0

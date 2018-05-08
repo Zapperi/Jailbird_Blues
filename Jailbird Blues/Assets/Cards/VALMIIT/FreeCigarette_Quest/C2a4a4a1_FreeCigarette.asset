@@ -22,12 +22,16 @@ MonoBehaviour:
   backgroundImage: {fileID: 21300000, guid: e34e2dc729b5acd42b383971c725e4f1, type: 3}
   foregroundImage: {fileID: 21300000, guid: 6109d7406609bfd4fb0a2171b361d52d, type: 3}
   flipForegroundImageRight: 0
+  setRightAsSpeaker: 0
   foregroundImage2: {fileID: 21300000, guid: 8645f82f413c63b4bbead91bea01e49d, type: 3}
   flipForegroundImageLeft: 0
+  setLeftAsSpeaker: 0
   foregroundImage3: {fileID: 0}
   flipForegroundImageCenter: 0
+  setCenterAsSpeaker: 0
   foregroundBigImage: {fileID: 0}
   flipForegroundImageBig: 0
+  setBigAsSpeaker: 0
   foregroundItemImage: {fileID: 0}
   bgMusic: {fileID: 0}
   bgAmbientAudio: {fileID: 0}
@@ -50,7 +54,7 @@ MonoBehaviour:
   option1text: Attack them.
   option1IrsReputation: 0
   option1PunkReputation: 0
-  option1ShakeReputation: 5
+  option1ShakeReputation: 0
   option1GuardReputation: 0
   option1ObtainedSwitches: 
   option1RemovedSwitches: 

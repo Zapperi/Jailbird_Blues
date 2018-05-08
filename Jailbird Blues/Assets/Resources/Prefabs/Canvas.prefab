@@ -80,7 +80,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1017277343441152
 GameObject:
   m_ObjectHideFlags: 1
@@ -3824,7 +3824,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 45101871e12fb8544924d61ab153420b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 013584fb9b3867548a06364b64007f2a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4547,7 +4547,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   overLayingImage: {fileID: 0}
-  currentCard: {fileID: 11400000, guid: ed420e7336fe3be43921360da4b31df6, type: 2}
+  currentCard: {fileID: 11400000, guid: 892fcd297ddb2cb47aa78016f63abb80, type: 2}
   cardText: {fileID: 114480357465699000}
   cardPerson: {fileID: 114191142861193218}
   button1text: {fileID: 114139510603780042}
@@ -5358,9 +5358,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "You manage to get in your cell before \xC4Kowalski\xD6.\r\nWhile you're
-    waiting for the punishment of the day,\r\nyou hear a loud \xC4commotion\xD6 from
-    the hallway."
+  m_Text: You see a shady looking I.R.S. guy coming up to you.
 --- !u!114 &114521485187600664
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5994,7 +5992,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: ec7f3a9152691a345b794c0a29ce19b9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8885,8 +8883,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -13.700001, y: -7}
-  m_SizeDelta: {x: 250, y: 335}
+  m_AnchoredPosition: {x: -17.8, y: -7}
+  m_SizeDelta: {x: 283, y: 335}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224163371580377030
 RectTransform:

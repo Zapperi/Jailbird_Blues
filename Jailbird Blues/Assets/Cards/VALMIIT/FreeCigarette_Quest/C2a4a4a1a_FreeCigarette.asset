@@ -93,7 +93,7 @@ MonoBehaviour:
   Option5On: 1
   option5IrsReputation: 0
   option5PunkReputation: 0
-  option5ShakeReputation: 0
+  option5ShakeReputation: 5
   option5GuardReputation: 0
   option5ObtainedSwitches: 
   option5RemovedSwitches: 
