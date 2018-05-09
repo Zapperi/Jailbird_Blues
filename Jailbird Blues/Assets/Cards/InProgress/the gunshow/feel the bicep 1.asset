@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: feel the bicep
+  m_Name: feel the bicep 1
   m_EditorClassIdentifier: 
   requiredSwitches: 
   RepIrs: 0
@@ -28,7 +28,7 @@ MonoBehaviour:
   setLeftAsSpeaker: 0
   foregroundImage3: {fileID: 21300000, guid: 6109d7406609bfd4fb0a2171b361d52d, type: 3}
   flipForegroundImageCenter: 0
-  setCenterAsSpeaker: 0
+  setCenterAsSpeaker: 1
   foregroundBigImage: {fileID: 0}
   flipForegroundImageBig: 0
   setBigAsSpeaker: 0
@@ -39,12 +39,12 @@ MonoBehaviour:
   ambientDecrease: 0
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: 
-  cardText: You reach your hand onto the shaker's left bicep. "It is so big and rock
-    hard." You don't realise that you said that out loud before the shaker responds.
+  cardTextPerson: Jabari
+  cardText: '"See, told you so. If you work hard and eat right yours can be like this
+    too in no time"'
   logText: 
-  endCard: 0
-  timeCard: 0
+  endCard: 1
+  timeCard: 1
   onTop: 0
   repeatable: 0
   endOfGame: 0
@@ -97,7 +97,7 @@ MonoBehaviour:
   option5GuardReputation: 0
   option5ObtainedSwitches: 
   option5RemovedSwitches: 
-  option5FollowCard: {fileID: 11400000, guid: b6b7bb0dc9efe5c468b0c92e8c7278e3, type: 2}
+  option5FollowCard: {fileID: 0}
   isTimeBasedCard: 0
   sfxPrewait: 0
   sfx: {fileID: 0}
