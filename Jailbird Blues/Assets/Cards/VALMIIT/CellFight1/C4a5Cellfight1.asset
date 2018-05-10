@@ -38,7 +38,7 @@ MonoBehaviour:
   musicDecrease: 0
   ambientDecrease: 0
   musicOff: 0
-  ambientOff: 0
+  ambientOff: 1
   cardTextPerson: 
   cardText: "The guards walk the troublemakers past your cell and the \xC4guards give
     you\xD6 a dirty look for chanting along."
@@ -111,5 +111,5 @@ MonoBehaviour:
   blackScreenTime: 0
   ppsFadeInSpeed: 0
   ppsShowCard: 0
-  ppsHasFadeOut: 0
+  ppsHasFadeOut: 1
   fadeOutSpeed: 0
