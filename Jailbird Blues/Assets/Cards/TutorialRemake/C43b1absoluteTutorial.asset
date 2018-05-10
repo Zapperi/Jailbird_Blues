@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: C41absoluteTutorial 2
+  m_Name: C43b1absoluteTutorial
   m_EditorClassIdentifier: 
   requiredSwitches: 
   RepIrs: 0
@@ -40,8 +40,7 @@ MonoBehaviour:
   musicOff: 0
   ambientOff: 0
   cardTextPerson: Freddie
-  cardText: "\"You really don't look like you belong here. What\r happened to you?
-    Why're you here?\"\r"
+  cardText: "\"Still a sore subject? I won't pressure you\r then.\""
   logText: 
   endCard: 0
   timeCard: 0
@@ -97,7 +96,7 @@ MonoBehaviour:
   option5GuardReputation: 0
   option5ObtainedSwitches: 
   option5RemovedSwitches: 
-  option5FollowCard: {fileID: 11400000, guid: d51624e8c60b67b499945b7a23f88305, type: 2}
+  option5FollowCard: {fileID: 11400000, guid: ebc93208ed14d8e4eaf04b9ae42812cf, type: 2}
   isTimeBasedCard: 0
   sfxPrewait: 0
   sfx: {fileID: 0}

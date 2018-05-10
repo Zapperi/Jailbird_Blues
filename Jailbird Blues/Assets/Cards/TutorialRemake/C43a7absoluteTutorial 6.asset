@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: C41absoluteTutorial 2
+  m_Name: C43a7absoluteTutorial 6
   m_EditorClassIdentifier: 
   requiredSwitches: 
   RepIrs: 0
@@ -19,10 +19,10 @@ MonoBehaviour:
   timeOfDay: 0
   storyPhase: 0
   location: 
-  backgroundImage: {fileID: 21300000, guid: 7c5e619a5c03cc943a4b68321a14beb1, type: 3}
-  foregroundImage: {fileID: 21300000, guid: 620b51cd1d656184382e23faba513624, type: 3}
+  backgroundImage: {fileID: 21300000, guid: c45b1a34d08602d40947e22154ef31eb, type: 3}
+  foregroundImage: {fileID: 0}
   flipForegroundImageRight: 0
-  setRightAsSpeaker: 1
+  setRightAsSpeaker: 0
   foregroundImage2: {fileID: 0}
   flipForegroundImageLeft: 0
   setLeftAsSpeaker: 0
@@ -36,12 +36,12 @@ MonoBehaviour:
   bgMusic: {fileID: 0}
   bgAmbientAudio: {fileID: 0}
   musicDecrease: 0
-  ambientDecrease: 0
+  ambientDecrease: 1
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: Freddie
-  cardText: "\"You really don't look like you belong here. What\r happened to you?
-    Why're you here?\"\r"
+  cardTextPerson: 
+  cardText: "The courtroom is shocked to silence. The Ravenwood\r facility is the
+    most \xC4infamous\xD6 prison in the country\r so the sentence is a bit of an \xC4overkill\xD6."
   logText: 
   endCard: 0
   timeCard: 0
@@ -97,7 +97,7 @@ MonoBehaviour:
   option5GuardReputation: 0
   option5ObtainedSwitches: 
   option5RemovedSwitches: 
-  option5FollowCard: {fileID: 11400000, guid: d51624e8c60b67b499945b7a23f88305, type: 2}
+  option5FollowCard: {fileID: 11400000, guid: e5833582066de1c43998a4b83092a3a2, type: 2}
   isTimeBasedCard: 0
   sfxPrewait: 0
   sfx: {fileID: 0}

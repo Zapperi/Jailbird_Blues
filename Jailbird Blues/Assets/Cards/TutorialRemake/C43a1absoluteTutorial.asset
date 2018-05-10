@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: C41absoluteTutorial 2
+  m_Name: C43a1absoluteTutorial
   m_EditorClassIdentifier: 
   requiredSwitches: 
   RepIrs: 0
@@ -20,9 +20,9 @@ MonoBehaviour:
   storyPhase: 0
   location: 
   backgroundImage: {fileID: 21300000, guid: 7c5e619a5c03cc943a4b68321a14beb1, type: 3}
-  foregroundImage: {fileID: 21300000, guid: 620b51cd1d656184382e23faba513624, type: 3}
+  foregroundImage: {fileID: 21300000, guid: 6a075baf7d81b704382ee2f31ff28893, type: 3}
   flipForegroundImageRight: 0
-  setRightAsSpeaker: 1
+  setRightAsSpeaker: 0
   foregroundImage2: {fileID: 0}
   flipForegroundImageLeft: 0
   setLeftAsSpeaker: 0
@@ -39,9 +39,8 @@ MonoBehaviour:
   ambientDecrease: 0
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: Freddie
-  cardText: "\"You really don't look like you belong here. What\r happened to you?
-    Why're you here?\"\r"
+  cardTextPerson: 
+  cardText: You tell the sordid tale of your sentencing...
   logText: 
   endCard: 0
   timeCard: 0
@@ -97,7 +96,7 @@ MonoBehaviour:
   option5GuardReputation: 0
   option5ObtainedSwitches: 
   option5RemovedSwitches: 
-  option5FollowCard: {fileID: 11400000, guid: d51624e8c60b67b499945b7a23f88305, type: 2}
+  option5FollowCard: {fileID: 11400000, guid: 53da14bee98cf7c4b8144965c1330387, type: 2}
   isTimeBasedCard: 0
   sfxPrewait: 0
   sfx: {fileID: 0}
@@ -111,5 +110,5 @@ MonoBehaviour:
   blackScreenTime: 0
   ppsFadeInSpeed: 0
   ppsShowCard: 0
-  ppsHasFadeOut: 0
+  ppsHasFadeOut: 1
   fadeOutSpeed: 0
