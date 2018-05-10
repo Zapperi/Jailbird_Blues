@@ -36,7 +36,7 @@ MonoBehaviour:
   bgMusic: {fileID: 8300000, guid: 267a97e21f8e84142bed948aad38eae8, type: 3}
   bgAmbientAudio: {fileID: 0}
   musicDecrease: 0.5
-  ambientDecrease: 0.7
+  ambientDecrease: 0.8
   musicOff: 0
   ambientOff: 0
   cardTextPerson: Mr.Shady
@@ -111,5 +111,5 @@ MonoBehaviour:
   blackScreenTime: 0
   ppsFadeInSpeed: 0
   ppsShowCard: 0
-  ppsHasFadeOut: 0
+  ppsHasFadeOut: 1
   fadeOutSpeed: 0

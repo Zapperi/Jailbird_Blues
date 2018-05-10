@@ -35,9 +35,9 @@ MonoBehaviour:
   foregroundItemImage: {fileID: 0}
   bgMusic: {fileID: 0}
   bgAmbientAudio: {fileID: 0}
-  musicDecrease: 0
-  ambientDecrease: 0
-  musicOff: 1
+  musicDecrease: 0.2
+  ambientDecrease: 0.5
+  musicOff: 0
   ambientOff: 0
   cardTextPerson: Shaker bro
   cardText: "\"Your taxman isn't the smartest one, but he sure \xC4has spirit.\xD6\"\r\nThe

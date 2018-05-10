@@ -36,7 +36,7 @@ MonoBehaviour:
   bgMusic: {fileID: 0}
   bgAmbientAudio: {fileID: 0}
   musicDecrease: 0.5
-  ambientDecrease: 0.7
+  ambientDecrease: 0.8
   musicOff: 0
   ambientOff: 0
   cardTextPerson: Mr.Shady
