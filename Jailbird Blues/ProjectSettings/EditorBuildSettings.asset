@@ -8,6 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Menu.unity
     guid: 5c0d55b77905a70459b48b1ac4c80986
-  - enabled: 1
+  - enabled: 0
     path: Assets/tempSceneDeleteLater.unity
     guid: 31fdc8563e1952041abc93d0f557fef8
+  - enabled: 1
+    path: Assets/MobileScene.unity
+    guid: f3c32720f18909e4e938aae19d49e518
+  m_configObjects: {}

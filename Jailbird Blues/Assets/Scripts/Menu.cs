@@ -40,8 +40,8 @@ public class Menu : MonoBehaviour {
 		Debug.Log ("start press");
         GetComponent<OptionsSliders>().RememberSettings();
         RememberSettings();
-		SceneManager.LoadScene("tempSceneDeleteLater");
-	}
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
 	public void OnQuit(){
 
 #if UNITY_EDITOR
