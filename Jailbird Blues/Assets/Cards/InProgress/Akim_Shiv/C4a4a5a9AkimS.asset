@@ -60,15 +60,15 @@ MonoBehaviour:
   option1RemovedSwitches: 
   option1FollowCard: {fileID: 11400000, guid: 2a47e217709ec774abcdefdb338732d3, type: 2}
   Option2On: 1
-  option2ReqSwitches: 
+  option2ReqSwitches: 04000000
   option2text: Yes
   option2IrsReputation: 0
   option2PunkReputation: 0
   option2ShakeReputation: 0
   option2GuardReputation: 0
   option2ObtainedSwitches: 
-  option2RemovedSwitches: 
-  option2FollowCard: {fileID: 0}
+  option2RemovedSwitches: 03000000
+  option2FollowCard: {fileID: 11400000, guid: 8dc5ce802449a8f45bdbafa4360351fd, type: 2}
   Option3On: 0
   option3ReqSwitches: 
   option3text: 

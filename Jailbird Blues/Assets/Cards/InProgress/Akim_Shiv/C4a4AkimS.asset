@@ -68,7 +68,7 @@ MonoBehaviour:
   option2GuardReputation: 0
   option2ObtainedSwitches: 
   option2RemovedSwitches: 
-  option2FollowCard: {fileID: 0}
+  option2FollowCard: {fileID: 11400000, guid: 8d6c22345e4591b4cad1c959bf4bbf09, type: 2}
   Option3On: 1
   option3ReqSwitches: 
   option3text: Hide the shiv in the toilet.
@@ -78,7 +78,7 @@ MonoBehaviour:
   option3GuardReputation: 0
   option3ObtainedSwitches: 
   option3RemovedSwitches: 
-  option3FollowCard: {fileID: 0}
+  option3FollowCard: {fileID: 11400000, guid: 3a8c79d1c6beaf44d8fa379726b2ae3d, type: 2}
   Option4On: 0
   option4ReqSwitches: 
   option4text: 

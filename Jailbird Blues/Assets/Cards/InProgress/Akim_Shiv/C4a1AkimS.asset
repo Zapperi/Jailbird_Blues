@@ -41,7 +41,7 @@ MonoBehaviour:
   ambientOff: 0
   cardTextPerson: Akim
   cardText: "\"Good, I owe you a \xC4favour\xD6.\"\r"
-  logText: 
+  logText: You took akims shiv, he owes you a favor
   endCard: 0
   timeCard: 0
   onTop: 0
@@ -90,9 +90,9 @@ MonoBehaviour:
   option4RemovedSwitches: 
   option4FollowCard: {fileID: 0}
   Option5On: 1
-  option5IrsReputation: 0
-  option5PunkReputation: 0
-  option5ShakeReputation: 0
+  option5IrsReputation: 1
+  option5PunkReputation: 1
+  option5ShakeReputation: 1
   option5GuardReputation: 0
   option5ObtainedSwitches: 
   option5RemovedSwitches: 

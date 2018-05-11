@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: C4AkimS
+  m_Name: C4a4a5b4AkimS
   m_EditorClassIdentifier: 
   requiredSwitches: 
   RepIrs: 0
@@ -18,9 +18,9 @@ MonoBehaviour:
   RepGuard: 0
   timeOfDay: 0
   storyPhase: 0
-  location: 
-  backgroundImage: {fileID: 21300000, guid: 98e6a69ad23deed4e832c2c3f4ef8a9a, type: 3}
-  foregroundImage: {fileID: 21300000, guid: 346da817f234e5942a1ee17834e4a98a, type: 3}
+  location: Solitary cell
+  backgroundImage: {fileID: 21300000, guid: 023f458b247eb054f806e049b97306d9, type: 3}
+  foregroundImage: {fileID: 0}
   flipForegroundImageRight: 0
   setRightAsSpeaker: 0
   foregroundImage2: {fileID: 0}
@@ -37,48 +37,50 @@ MonoBehaviour:
   bgAmbientAudio: {fileID: 0}
   musicDecrease: 0
   ambientDecrease: 0
-  musicOff: 0
+  musicOff: 1
   ambientOff: 0
-  cardTextPerson: Do you help Akim?
-  cardText: 
-  logText: 
-  endCard: 0
-  timeCard: 0
+  cardTextPerson: 
+  cardText: "The guards take you to \xC4solitary\xD6 confinement. It's\r\ncolder,
+    rougher and darker, but on the bright side\r\nthere's \xC4no Kowalski\xD6 and
+    you get to sleep a\r\npeaceful night."
+  logText: Arrived to the solitary cell
+  endCard: 1
+  timeCard: 1
   onTop: 0
   repeatable: 0
   endOfGame: 0
   SkipCard: {fileID: 0}
-  OptionsOn: 1
-  Option1On: 1
+  OptionsOn: 0
+  Option1On: 0
   option1ReqSwitches: 
-  option1text: Take the shiv.
+  option1text: 
   option1IrsReputation: 0
   option1PunkReputation: 0
   option1ShakeReputation: 0
   option1GuardReputation: 0
   option1ObtainedSwitches: 
   option1RemovedSwitches: 
-  option1FollowCard: {fileID: 11400000, guid: ea6be8f6f491545468001b8800389f5c, type: 2}
-  Option2On: 1
+  option1FollowCard: {fileID: 0}
+  Option2On: 0
   option2ReqSwitches: 
-  option2text: Call the guards.
+  option2text: 
   option2IrsReputation: 0
   option2PunkReputation: 0
   option2ShakeReputation: 0
   option2GuardReputation: 0
   option2ObtainedSwitches: 
   option2RemovedSwitches: 
-  option2FollowCard: {fileID: 11400000, guid: c0fea5b5972d01e47840c5c51b6a5bf3, type: 2}
-  Option3On: 1
+  option2FollowCard: {fileID: 0}
+  Option3On: 0
   option3ReqSwitches: 
-  option3text: Do nothing.
+  option3text: 
   option3IrsReputation: 0
   option3PunkReputation: 0
   option3ShakeReputation: 0
   option3GuardReputation: 0
   option3ObtainedSwitches: 
   option3RemovedSwitches: 
-  option3FollowCard: {fileID: 11400000, guid: 622f639b68ccaf349a2b9b7f0c9ddd00, type: 2}
+  option3FollowCard: {fileID: 0}
   Option4On: 0
   option4ReqSwitches: 
   option4text: 
@@ -89,7 +91,7 @@ MonoBehaviour:
   option4ObtainedSwitches: 
   option4RemovedSwitches: 
   option4FollowCard: {fileID: 0}
-  Option5On: 0
+  Option5On: 1
   option5IrsReputation: 0
   option5PunkReputation: 0
   option5ShakeReputation: 0
@@ -99,16 +101,16 @@ MonoBehaviour:
   option5FollowCard: {fileID: 0}
   isTimeBasedCard: 0
   sfxPrewait: 0
-  sfx: {fileID: 0}
+  sfx: {fileID: 8300000, guid: 1ba36a154260e4440b3eac80fa5f6feb, type: 3}
   sfxHasFadeOut: 0
   sfxFadeOutAt: 0
   sfxFadeOutSpeed: 0
   sfxAfterWait: 0
-  ppsHasFadeIn: 0
+  ppsHasFadeIn: 1
   ppsFadeMode: 0
   blackScreenStart: 0
   blackScreenTime: 0
   ppsFadeInSpeed: 0
   ppsShowCard: 0
-  ppsHasFadeOut: 0
+  ppsHasFadeOut: 1
   fadeOutSpeed: 0
