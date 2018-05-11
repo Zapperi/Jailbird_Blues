@@ -35,10 +35,10 @@ MonoBehaviour:
   foregroundItemImage: {fileID: 0}
   bgMusic: {fileID: 8300000, guid: aa5c3fed5dc129640a56e62ef9106936, type: 3}
   bgAmbientAudio: {fileID: 0}
-  musicDecrease: 0
+  musicDecrease: 0.5
   ambientDecrease: 0
   musicOff: 0
-  ambientOff: 0
+  ambientOff: 1
   cardTextPerson: 
   cardText: "As you step inside your new home there's\r someone \xC4waiting\xD6. Your
     instincts kick in\r and tell you this means trouble."
@@ -105,10 +105,10 @@ MonoBehaviour:
   sfxFadeOutAt: 0
   sfxFadeOutSpeed: 0
   sfxAfterWait: 0
-  ppsHasFadeIn: 0
+  ppsHasFadeIn: 1
   ppsFadeMode: 0
-  blackScreenStart: 0
-  blackScreenTime: 0
+  blackScreenStart: 1
+  blackScreenTime: 1
   ppsFadeInSpeed: 0
   ppsShowCard: 0
   ppsHasFadeOut: 0

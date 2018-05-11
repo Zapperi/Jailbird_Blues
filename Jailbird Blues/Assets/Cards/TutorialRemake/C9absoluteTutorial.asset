@@ -34,9 +34,9 @@ MonoBehaviour:
   setBigAsSpeaker: 0
   foregroundItemImage: {fileID: 0}
   bgMusic: {fileID: 0}
-  bgAmbientAudio: {fileID: 0}
-  musicDecrease: 0
-  ambientDecrease: 0
+  bgAmbientAudio: {fileID: 8300000, guid: 5dfb97e1a794231408631318b95322c4, type: 3}
+  musicDecrease: 0.5
+  ambientDecrease: 0.5
   musicOff: 0
   ambientOff: 0
   cardTextPerson: 
