@@ -100,8 +100,8 @@ MonoBehaviour:
   option5FollowCard: {fileID: 11400000, guid: 762e40693448ee94482d8993ef4cb98f, type: 2}
   isTimeBasedCard: 0
   sfxPrewait: 0
-  sfx: {fileID: 8300000, guid: f0d6035390912134b9dbbeafb2087d99, type: 3}
-  sfxHasFadeOut: 1
+  sfx: {fileID: 0}
+  sfxHasFadeOut: 0
   sfxFadeOutAt: 0
   sfxFadeOutSpeed: 1
   sfxAfterWait: 0

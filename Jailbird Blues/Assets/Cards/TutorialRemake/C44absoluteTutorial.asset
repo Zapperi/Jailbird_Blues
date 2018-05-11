@@ -100,9 +100,9 @@ MonoBehaviour:
   isTimeBasedCard: 0
   sfxPrewait: 0
   sfx: {fileID: 8300000, guid: f0d6035390912134b9dbbeafb2087d99, type: 3}
-  sfxHasFadeOut: 1
+  sfxHasFadeOut: 0
   sfxFadeOutAt: 0
-  sfxFadeOutSpeed: 1
+  sfxFadeOutSpeed: 0
   sfxAfterWait: 0
   ppsHasFadeIn: 0
   ppsFadeMode: 0
