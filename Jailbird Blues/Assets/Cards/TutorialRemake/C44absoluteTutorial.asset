@@ -34,9 +34,9 @@ MonoBehaviour:
   setBigAsSpeaker: 0
   foregroundItemImage: {fileID: 0}
   bgMusic: {fileID: 0}
-  bgAmbientAudio: {fileID: 0}
-  musicDecrease: 0
-  ambientDecrease: 0
+  bgAmbientAudio: {fileID: 8300000, guid: f0d6035390912134b9dbbeafb2087d99, type: 3}
+  musicDecrease: 0.5
+  ambientDecrease: 0.5
   musicOff: 0
   ambientOff: 0
   cardTextPerson: 
@@ -99,15 +99,15 @@ MonoBehaviour:
   option5FollowCard: {fileID: 11400000, guid: d6b4c0042def3114598cddeb6d539e7e, type: 2}
   isTimeBasedCard: 0
   sfxPrewait: 0
-  sfx: {fileID: 8300000, guid: f0d6035390912134b9dbbeafb2087d99, type: 3}
+  sfx: {fileID: 0}
   sfxHasFadeOut: 0
   sfxFadeOutAt: 0
   sfxFadeOutSpeed: 0
   sfxAfterWait: 0
-  ppsHasFadeIn: 0
+  ppsHasFadeIn: 1
   ppsFadeMode: 0
-  blackScreenStart: 0
-  blackScreenTime: 0
+  blackScreenStart: 1
+  blackScreenTime: 0.2
   ppsFadeInSpeed: 0
   ppsShowCard: 0
   ppsHasFadeOut: 0

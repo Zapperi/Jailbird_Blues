@@ -18,7 +18,7 @@ MonoBehaviour:
   RepGuard: 0
   timeOfDay: 0
   storyPhase: 0
-  location: 
+  location: Courtroom
   backgroundImage: {fileID: 21300000, guid: c45b1a34d08602d40947e22154ef31eb, type: 3}
   foregroundImage: {fileID: 0}
   flipForegroundImageRight: 0
@@ -35,8 +35,8 @@ MonoBehaviour:
   foregroundItemImage: {fileID: 0}
   bgMusic: {fileID: 0}
   bgAmbientAudio: {fileID: 0}
-  musicDecrease: 1
-  ambientDecrease: 0
+  musicDecrease: 0.9
+  ambientDecrease: 0.9
   musicOff: 0
   ambientOff: 0
   cardTextPerson: 
