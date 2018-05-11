@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: check the bicep
+  m_Name: C03bicep_feel
   m_EditorClassIdentifier: 
   requiredSwitches: 
   RepIrs: 0
@@ -35,13 +35,12 @@ MonoBehaviour:
   foregroundItemImage: {fileID: 0}
   bgMusic: {fileID: 0}
   bgAmbientAudio: {fileID: 0}
-  musicDecrease: 0
+  musicDecrease: 0.5
   ambientDecrease: 0
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: 
-  cardText: You marvel at his humongous biceps. "That's some damn fine biceps right
-    there". Jabari looks pleased at your answer. "Wanna feel them?"
+  cardTextPerson: What do you do?
+  cardText: 
   logText: 
   endCard: 0
   timeCard: 0
@@ -49,18 +48,18 @@ MonoBehaviour:
   repeatable: 0
   endOfGame: 0
   SkipCard: {fileID: 0}
-  OptionsOn: 0
-  Option1On: 0
+  OptionsOn: 1
+  Option1On: 1
   option1ReqSwitches: 
-  option1text: 
+  option1text: '"nah I''m good"'
   option1IrsReputation: 0
   option1PunkReputation: 0
-  option1ShakeReputation: 0
+  option1ShakeReputation: -1
   option1GuardReputation: 0
   option1ObtainedSwitches: 
   option1RemovedSwitches: 
-  option1FollowCard: {fileID: 0}
-  Option2On: 0
+  option1FollowCard: {fileID: 11400000, guid: 9c81c86f152ce5542a40d5bfb137dd05, type: 2}
+  Option2On: 1
   option2ReqSwitches: 
   option2text: feel the bicep
   option2IrsReputation: 0
@@ -72,14 +71,14 @@ MonoBehaviour:
   option2FollowCard: {fileID: 11400000, guid: ea42f44be60850e4586a63cbe7840b46, type: 2}
   Option3On: 0
   option3ReqSwitches: 
-  option3text: nah I'm good
+  option3text: 
   option3IrsReputation: 0
   option3PunkReputation: 0
-  option3ShakeReputation: -1
+  option3ShakeReputation: 0
   option3GuardReputation: 0
   option3ObtainedSwitches: 
   option3RemovedSwitches: 
-  option3FollowCard: {fileID: 11400000, guid: 9c81c86f152ce5542a40d5bfb137dd05, type: 2}
+  option3FollowCard: {fileID: 0}
   Option4On: 0
   option4ReqSwitches: 
   option4text: 
@@ -97,7 +96,7 @@ MonoBehaviour:
   option5GuardReputation: 0
   option5ObtainedSwitches: 
   option5RemovedSwitches: 
-  option5FollowCard: {fileID: 11400000, guid: a670edebe8b2516459ef279a25281a1d, type: 2}
+  option5FollowCard: {fileID: 0}
   isTimeBasedCard: 0
   sfxPrewait: 0
   sfx: {fileID: 0}

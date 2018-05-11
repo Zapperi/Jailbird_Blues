@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: feel the bicep 1
+  m_Name: C01bicep feel
   m_EditorClassIdentifier: 
   requiredSwitches: 
   RepIrs: 0
@@ -26,50 +26,49 @@ MonoBehaviour:
   foregroundImage2: {fileID: 0}
   flipForegroundImageLeft: 0
   setLeftAsSpeaker: 0
-  foregroundImage3: {fileID: 21300000, guid: 6109d7406609bfd4fb0a2171b361d52d, type: 3}
+  foregroundImage3: {fileID: 21300000, guid: d2a87112952ce9847918b64eebab23a5, type: 3}
   flipForegroundImageCenter: 0
-  setCenterAsSpeaker: 1
+  setCenterAsSpeaker: 0
   foregroundBigImage: {fileID: 0}
   flipForegroundImageBig: 0
   setBigAsSpeaker: 0
   foregroundItemImage: {fileID: 0}
-  bgMusic: {fileID: 0}
+  bgMusic: {fileID: 8300000, guid: 45726ce628770f44cba823f4c1bdbbb0, type: 3}
   bgAmbientAudio: {fileID: 0}
-  musicDecrease: 0
+  musicDecrease: 0.5
   ambientDecrease: 0
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: Jabari
-  cardText: '"See, told you so. If you work hard and eat right yours can be like this
-    too in no time"'
+  cardTextPerson: What do you do?
+  cardText: 
   logText: 
-  endCard: 1
-  timeCard: 1
+  endCard: 0
+  timeCard: 0
   onTop: 0
   repeatable: 0
   endOfGame: 0
   SkipCard: {fileID: 0}
-  OptionsOn: 0
-  Option1On: 0
+  OptionsOn: 1
+  Option1On: 1
   option1ReqSwitches: 
-  option1text: 
+  option1text: '"umm..."'
   option1IrsReputation: 0
   option1PunkReputation: 0
-  option1ShakeReputation: 0
+  option1ShakeReputation: -2
   option1GuardReputation: 0
   option1ObtainedSwitches: 
   option1RemovedSwitches: 
-  option1FollowCard: {fileID: 0}
-  Option2On: 0
+  option1FollowCard: {fileID: 11400000, guid: e3faf9f33ea61df4ea5598703e00160a, type: 2}
+  Option2On: 1
   option2ReqSwitches: 
-  option2text: 
+  option2text: Check the bicep
   option2IrsReputation: 0
   option2PunkReputation: 0
-  option2ShakeReputation: 0
+  option2ShakeReputation: 2
   option2GuardReputation: 0
   option2ObtainedSwitches: 
   option2RemovedSwitches: 
-  option2FollowCard: {fileID: 0}
+  option2FollowCard: {fileID: 11400000, guid: ad10252822d488747958222f85a259e9, type: 2}
   Option3On: 0
   option3ReqSwitches: 
   option3text: 
@@ -90,7 +89,7 @@ MonoBehaviour:
   option4ObtainedSwitches: 
   option4RemovedSwitches: 
   option4FollowCard: {fileID: 0}
-  Option5On: 1
+  Option5On: 0
   option5IrsReputation: 0
   option5PunkReputation: 0
   option5ShakeReputation: 0
@@ -111,5 +110,5 @@ MonoBehaviour:
   blackScreenTime: 0
   ppsFadeInSpeed: 0
   ppsShowCard: 0
-  ppsHasFadeOut: 1
+  ppsHasFadeOut: 0
   fadeOutSpeed: 0

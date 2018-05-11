@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: Ignore
+  m_Name: C04bSmallPunkQuest
   m_EditorClassIdentifier: 
   requiredSwitches: 
   RepIrs: 0
@@ -39,11 +39,11 @@ MonoBehaviour:
   ambientDecrease: 0
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: 
-  cardText: He gives you a dirty look while you walk away.
+  cardTextPerson: Marcello
+  cardText: '"Well screw you then"'
   logText: 
-  endCard: 1
-  timeCard: 1
+  endCard: 0
+  timeCard: 0
   onTop: 0
   repeatable: 0
   endOfGame: 0
@@ -58,7 +58,7 @@ MonoBehaviour:
   option1GuardReputation: 0
   option1ObtainedSwitches: 
   option1RemovedSwitches: 
-  option1FollowCard: {fileID: 0}
+  option1FollowCard: {fileID: 11400000, guid: 13679125543b3fa429325e6b910b178f, type: 2}
   Option2On: 0
   option2ReqSwitches: 
   option2text: 
@@ -68,7 +68,7 @@ MonoBehaviour:
   option2GuardReputation: 0
   option2ObtainedSwitches: 
   option2RemovedSwitches: 
-  option2FollowCard: {fileID: 0}
+  option2FollowCard: {fileID: 11400000, guid: f869679608a18914bba3b0bc522fc73c, type: 2}
   Option3On: 0
   option3ReqSwitches: 
   option3text: 
@@ -96,7 +96,7 @@ MonoBehaviour:
   option5GuardReputation: 0
   option5ObtainedSwitches: 
   option5RemovedSwitches: 
-  option5FollowCard: {fileID: 0}
+  option5FollowCard: {fileID: 11400000, guid: 9b2636456e3efa5449f2a23736b3217e, type: 2}
   isTimeBasedCard: 0
   sfxPrewait: 0
   sfx: {fileID: 0}
@@ -110,5 +110,5 @@ MonoBehaviour:
   blackScreenTime: 0
   ppsFadeInSpeed: 0
   ppsShowCard: 0
-  ppsHasFadeOut: 1
+  ppsHasFadeOut: 0
   fadeOutSpeed: 0

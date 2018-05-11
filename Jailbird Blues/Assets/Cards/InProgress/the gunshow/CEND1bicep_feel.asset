@@ -9,14 +9,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: pro-sha bicep feel
+  m_Name: CEND1bicep_feel
   m_EditorClassIdentifier: 
   requiredSwitches: 
   RepIrs: 0
   RepPunks: 0
   RepShake: 0
   RepGuard: 0
-  timeOfDay: 2
+  timeOfDay: 0
   storyPhase: 0
   location: 
   backgroundImage: {fileID: 21300000, guid: e34e2dc729b5acd42b383971c725e4f1, type: 3}
@@ -28,23 +28,23 @@ MonoBehaviour:
   setLeftAsSpeaker: 0
   foregroundImage3: {fileID: 21300000, guid: d2a87112952ce9847918b64eebab23a5, type: 3}
   flipForegroundImageCenter: 0
-  setCenterAsSpeaker: 1
+  setCenterAsSpeaker: 0
   foregroundBigImage: {fileID: 0}
   flipForegroundImageBig: 0
   setBigAsSpeaker: 0
   foregroundItemImage: {fileID: 0}
-  bgMusic: {fileID: 8300000, guid: 45726ce628770f44cba823f4c1bdbbb0, type: 3}
+  bgMusic: {fileID: 0}
   bgAmbientAudio: {fileID: 0}
-  musicDecrease: 0
+  musicDecrease: 0.5
   ambientDecrease: 0
   musicOff: 0
-  ambientOff: 1
-  cardTextPerson: Jabari
-  cardText: A huge shirtless shaker stands infront of you. Was his name Jabari? "Hey
-    newbie check how hard my biceps are"
+  ambientOff: 0
+  cardTextPerson: 
+  cardText: The shakers stares at you like you just violated the etique at an victorian
+    tea-party.
   logText: 
-  endCard: 0
-  timeCard: 0
+  endCard: 1
+  timeCard: 1
   onTop: 0
   repeatable: 0
   endOfGame: 0
@@ -62,24 +62,24 @@ MonoBehaviour:
   option1FollowCard: {fileID: 0}
   Option2On: 0
   option2ReqSwitches: 
-  option2text: Check the bicep
+  option2text: 
   option2IrsReputation: 0
   option2PunkReputation: 0
-  option2ShakeReputation: 2
+  option2ShakeReputation: 0
   option2GuardReputation: 0
   option2ObtainedSwitches: 
   option2RemovedSwitches: 
-  option2FollowCard: {fileID: 11400000, guid: ad10252822d488747958222f85a259e9, type: 2}
+  option2FollowCard: {fileID: 0}
   Option3On: 0
   option3ReqSwitches: 
-  option3text: umm...
+  option3text: 
   option3IrsReputation: 0
   option3PunkReputation: 0
-  option3ShakeReputation: -2
+  option3ShakeReputation: 0
   option3GuardReputation: 0
   option3ObtainedSwitches: 
   option3RemovedSwitches: 
-  option3FollowCard: {fileID: 11400000, guid: e3faf9f33ea61df4ea5598703e00160a, type: 2}
+  option3FollowCard: {fileID: 0}
   Option4On: 0
   option4ReqSwitches: 
   option4text: 
@@ -90,14 +90,14 @@ MonoBehaviour:
   option4ObtainedSwitches: 
   option4RemovedSwitches: 
   option4FollowCard: {fileID: 0}
-  Option5On: 0
+  Option5On: 1
   option5IrsReputation: 0
   option5PunkReputation: 0
   option5ShakeReputation: 0
   option5GuardReputation: 0
   option5ObtainedSwitches: 
   option5RemovedSwitches: 
-  option5FollowCard: {fileID: 11400000, guid: 523af88ce664ac74ead445cb6d9dcb09, type: 2}
+  option5FollowCard: {fileID: 0}
   isTimeBasedCard: 0
   sfxPrewait: 0
   sfx: {fileID: 0}
@@ -105,11 +105,11 @@ MonoBehaviour:
   sfxFadeOutAt: 0
   sfxFadeOutSpeed: 0
   sfxAfterWait: 0
-  ppsHasFadeIn: 1
+  ppsHasFadeIn: 0
   ppsFadeMode: 0
-  blackScreenStart: 1
-  blackScreenTime: 0.2
+  blackScreenStart: 0
+  blackScreenTime: 0
   ppsFadeInSpeed: 0
   ppsShowCard: 0
-  ppsHasFadeOut: 0
+  ppsHasFadeOut: 1
   fadeOutSpeed: 0
