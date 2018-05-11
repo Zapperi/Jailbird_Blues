@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: pro-sha bicep feel 1
+  m_Name: C05SmallPunkQuest
   m_EditorClassIdentifier: 
   requiredSwitches: 
   RepIrs: 0
@@ -19,66 +19,68 @@ MonoBehaviour:
   timeOfDay: 0
   storyPhase: 0
   location: 
-  backgroundImage: {fileID: 21300000, guid: e34e2dc729b5acd42b383971c725e4f1, type: 3}
+  backgroundImage: {fileID: 21300000, guid: 7c5e619a5c03cc943a4b68321a14beb1, type: 3}
   foregroundImage: {fileID: 0}
   flipForegroundImageRight: 0
   setRightAsSpeaker: 0
-  foregroundImage2: {fileID: 0}
+  foregroundImage2: {fileID: 21300000, guid: 3abad9b8a54f9084aa98005e16ffd4a3, type: 3}
   flipForegroundImageLeft: 0
   setLeftAsSpeaker: 0
-  foregroundImage3: {fileID: 21300000, guid: d2a87112952ce9847918b64eebab23a5, type: 3}
+  foregroundImage3: {fileID: 0}
   flipForegroundImageCenter: 0
   setCenterAsSpeaker: 0
   foregroundBigImage: {fileID: 0}
   flipForegroundImageBig: 0
   setBigAsSpeaker: 0
   foregroundItemImage: {fileID: 0}
-  bgMusic: {fileID: 8300000, guid: 45726ce628770f44cba823f4c1bdbbb0, type: 3}
+  bgMusic: {fileID: 0}
   bgAmbientAudio: {fileID: 0}
   musicDecrease: 0
   ambientDecrease: 0
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: What do you do?
-  cardText: 
-  logText: 
-  endCard: 0
-  timeCard: 0
+  cardTextPerson: 
+  cardText: "You walk up to the guard slowly, acting just to pass by. Just when he
+    is not looking you kick him in the knee and he falls down. He sees you but can't
+    catch you and \xC4you get away.\xD6"
+  logText: You tripped stanley
+  endCard: 1
+  timeCard: 1
   onTop: 0
   repeatable: 0
   endOfGame: 0
   SkipCard: {fileID: 0}
-  OptionsOn: 1
-  Option1On: 1
+  OptionsOn: 0
+  Option1On: 0
   option1ReqSwitches: 
-  option1text: '"umm..."'
+  option1text: 
   option1IrsReputation: 0
   option1PunkReputation: 0
-  option1ShakeReputation: -2
+  option1ShakeReputation: 0
   option1GuardReputation: 0
   option1ObtainedSwitches: 
   option1RemovedSwitches: 
-  option1FollowCard: {fileID: 11400000, guid: e3faf9f33ea61df4ea5598703e00160a, type: 2}
-  Option2On: 1
+  option1FollowCard: {fileID: 0}
+  Option2On: 0
   option2ReqSwitches: 
-  option2text: Check the bicep
+  option2text: 
   option2IrsReputation: 0
   option2PunkReputation: 0
-  option2ShakeReputation: 2
+  option2ShakeReputation: 0
   option2GuardReputation: 0
   option2ObtainedSwitches: 
   option2RemovedSwitches: 
-  option2FollowCard: {fileID: 11400000, guid: ad10252822d488747958222f85a259e9, type: 2}
+  option2FollowCard: {fileID: 0}
   Option3On: 0
   option3ReqSwitches: 
-  option3text: umm...
+  option3text: 
   option3IrsReputation: 0
   option3PunkReputation: 0
-  option3ShakeReputation: -2
+  option3ShakeReputation: 0
   option3GuardReputation: 0
   option3ObtainedSwitches: 
   option3RemovedSwitches: 
-  option3FollowCard: {fileID: 11400000, guid: e3faf9f33ea61df4ea5598703e00160a, type: 2}
+  option3FollowCard: {fileID: 0}
   Option4On: 0
   option4ReqSwitches: 
   option4text: 
@@ -89,7 +91,7 @@ MonoBehaviour:
   option4ObtainedSwitches: 
   option4RemovedSwitches: 
   option4FollowCard: {fileID: 0}
-  Option5On: 0
+  Option5On: 1
   option5IrsReputation: 0
   option5PunkReputation: 0
   option5ShakeReputation: 0
@@ -99,7 +101,7 @@ MonoBehaviour:
   option5FollowCard: {fileID: 0}
   isTimeBasedCard: 0
   sfxPrewait: 0
-  sfx: {fileID: 0}
+  sfx: {fileID: 8300000, guid: f397d54ed96fed1479844f64e7fc1754, type: 3}
   sfxHasFadeOut: 0
   sfxFadeOutAt: 0
   sfxFadeOutSpeed: 0
@@ -110,5 +112,5 @@ MonoBehaviour:
   blackScreenTime: 0
   ppsFadeInSpeed: 0
   ppsShowCard: 0
-  ppsHasFadeOut: 0
+  ppsHasFadeOut: 1
   fadeOutSpeed: 0

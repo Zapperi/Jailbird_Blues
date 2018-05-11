@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: feel the bicep
+  m_Name: CEND1SmallPunkQuest
   m_EditorClassIdentifier: 
   requiredSwitches: 
   RepIrs: 0
@@ -19,14 +19,14 @@ MonoBehaviour:
   timeOfDay: 0
   storyPhase: 0
   location: 
-  backgroundImage: {fileID: 21300000, guid: e34e2dc729b5acd42b383971c725e4f1, type: 3}
-  foregroundImage: {fileID: 0}
+  backgroundImage: {fileID: 21300000, guid: 1893ac2562840144f95617afa0eb2ff1, type: 3}
+  foregroundImage: {fileID: 21300000, guid: d3e1a44396579f947b6d0dc7ab0b0d55, type: 3}
   flipForegroundImageRight: 0
   setRightAsSpeaker: 0
   foregroundImage2: {fileID: 0}
   flipForegroundImageLeft: 0
   setLeftAsSpeaker: 0
-  foregroundImage3: {fileID: 21300000, guid: 6109d7406609bfd4fb0a2171b361d52d, type: 3}
+  foregroundImage3: {fileID: 0}
   flipForegroundImageCenter: 0
   setCenterAsSpeaker: 0
   foregroundBigImage: {fileID: 0}
@@ -40,11 +40,10 @@ MonoBehaviour:
   musicOff: 0
   ambientOff: 0
   cardTextPerson: 
-  cardText: You reach your hand onto the shaker's left bicep. "It is so big and rock
-    hard." You don't realise that you said that out loud before the shaker responds.
+  cardText: He gives you a dirty look while you walk away.
   logText: 
-  endCard: 0
-  timeCard: 0
+  endCard: 1
+  timeCard: 1
   onTop: 0
   repeatable: 0
   endOfGame: 0
@@ -97,7 +96,7 @@ MonoBehaviour:
   option5GuardReputation: 0
   option5ObtainedSwitches: 
   option5RemovedSwitches: 
-  option5FollowCard: {fileID: 11400000, guid: b6b7bb0dc9efe5c468b0c92e8c7278e3, type: 2}
+  option5FollowCard: {fileID: 0}
   isTimeBasedCard: 0
   sfxPrewait: 0
   sfx: {fileID: 0}

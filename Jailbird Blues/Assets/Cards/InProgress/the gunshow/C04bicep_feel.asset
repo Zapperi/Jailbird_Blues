@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: check the bicep 1
+  m_Name: C04bicep_feel
   m_EditorClassIdentifier: 
   requiredSwitches: 
   RepIrs: 0
@@ -22,21 +22,26 @@ MonoBehaviour:
   backgroundImage: {fileID: 21300000, guid: e34e2dc729b5acd42b383971c725e4f1, type: 3}
   foregroundImage: {fileID: 0}
   flipForegroundImageRight: 0
+  setRightAsSpeaker: 0
   foregroundImage2: {fileID: 0}
   flipForegroundImageLeft: 0
-  foregroundImage3: {fileID: 21300000, guid: 9080cd5bf9da0e648b88b2bb996b8a12, type: 3}
+  setLeftAsSpeaker: 0
+  foregroundImage3: {fileID: 21300000, guid: 6109d7406609bfd4fb0a2171b361d52d, type: 3}
   flipForegroundImageCenter: 0
+  setCenterAsSpeaker: 0
   foregroundBigImage: {fileID: 0}
   flipForegroundImageBig: 0
+  setBigAsSpeaker: 0
   foregroundItemImage: {fileID: 0}
   bgMusic: {fileID: 0}
   bgAmbientAudio: {fileID: 0}
-  musicDecrease: 0
+  musicDecrease: 0.5
   ambientDecrease: 0
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: What do you do?
-  cardText: 
+  cardTextPerson: 
+  cardText: You reach your hand onto the shaker's left bicep. "It is so big and rock
+    hard." You don't realise that you said that out loud before the shaker responds.
   logText: 
   endCard: 0
   timeCard: 0
@@ -44,37 +49,37 @@ MonoBehaviour:
   repeatable: 0
   endOfGame: 0
   SkipCard: {fileID: 0}
-  OptionsOn: 1
-  Option1On: 1
+  OptionsOn: 0
+  Option1On: 0
   option1ReqSwitches: 
-  option1text: '"nah I''m good"'
+  option1text: 
   option1IrsReputation: 0
   option1PunkReputation: 0
-  option1ShakeReputation: -1
+  option1ShakeReputation: 0
   option1GuardReputation: 0
   option1ObtainedSwitches: 
   option1RemovedSwitches: 
-  option1FollowCard: {fileID: 11400000, guid: 9c81c86f152ce5542a40d5bfb137dd05, type: 2}
-  Option2On: 1
+  option1FollowCard: {fileID: 0}
+  Option2On: 0
   option2ReqSwitches: 
-  option2text: feel the bicep
+  option2text: 
   option2IrsReputation: 0
   option2PunkReputation: 0
-  option2ShakeReputation: 3
+  option2ShakeReputation: 0
   option2GuardReputation: 0
   option2ObtainedSwitches: 
   option2RemovedSwitches: 
-  option2FollowCard: {fileID: 11400000, guid: ea42f44be60850e4586a63cbe7840b46, type: 2}
+  option2FollowCard: {fileID: 0}
   Option3On: 0
   option3ReqSwitches: 
-  option3text: nah I'm good
+  option3text: 
   option3IrsReputation: 0
   option3PunkReputation: 0
-  option3ShakeReputation: -1
+  option3ShakeReputation: 0
   option3GuardReputation: 0
   option3ObtainedSwitches: 
   option3RemovedSwitches: 
-  option3FollowCard: {fileID: 11400000, guid: 9c81c86f152ce5542a40d5bfb137dd05, type: 2}
+  option3FollowCard: {fileID: 0}
   Option4On: 0
   option4ReqSwitches: 
   option4text: 
@@ -85,14 +90,14 @@ MonoBehaviour:
   option4ObtainedSwitches: 
   option4RemovedSwitches: 
   option4FollowCard: {fileID: 0}
-  Option5On: 0
+  Option5On: 1
   option5IrsReputation: 0
   option5PunkReputation: 0
   option5ShakeReputation: 0
   option5GuardReputation: 0
   option5ObtainedSwitches: 
   option5RemovedSwitches: 
-  option5FollowCard: {fileID: 0}
+  option5FollowCard: {fileID: 11400000, guid: b6b7bb0dc9efe5c468b0c92e8c7278e3, type: 2}
   isTimeBasedCard: 0
   sfxPrewait: 0
   sfx: {fileID: 0}
@@ -106,5 +111,5 @@ MonoBehaviour:
   blackScreenTime: 0
   ppsFadeInSpeed: 0
   ppsShowCard: 0
-  ppsHasFadeOut: 0
+  ppsHasFadeOut: 1
   fadeOutSpeed: 0
