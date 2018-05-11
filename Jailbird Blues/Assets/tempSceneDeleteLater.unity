@@ -307,6 +307,21 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114743166947194950, guid: a5ca0da45ae9cf94f8ba95b70b239f82,
+        type: 2}
+      propertyPath: allCards.Array.size
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114743166947194950, guid: a5ca0da45ae9cf94f8ba95b70b239f82,
+        type: 2}
+      propertyPath: morningRepeatables.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114743166947194950, guid: a5ca0da45ae9cf94f8ba95b70b239f82,
+        type: 2}
+      propertyPath: eveningRepeatables.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4985295824015644, guid: a5ca0da45ae9cf94f8ba95b70b239f82, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -438,6 +453,28 @@ Prefab:
       value: 
       objectReference: {fileID: 11400000, guid: 250f754cff976a749a8cf714ec130957,
         type: 2}
+    - target: {fileID: 114743166947194950, guid: a5ca0da45ae9cf94f8ba95b70b239f82,
+        type: 2}
+      propertyPath: morningRepeatables.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 46c86312a62c0c248b8c3a64ba17b265,
+        type: 2}
+    - target: {fileID: 114743166947194950, guid: a5ca0da45ae9cf94f8ba95b70b239f82,
+        type: 2}
+      propertyPath: eveningRepeatables.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 0f4cb513e323d0c46bb4ba4556bfb86f,
+        type: 2}
+    - target: {fileID: 114743166947194950, guid: a5ca0da45ae9cf94f8ba95b70b239f82,
+        type: 2}
+      propertyPath: allCards.Array.data[15]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114743166947194950, guid: a5ca0da45ae9cf94f8ba95b70b239f82,
+        type: 2}
+      propertyPath: allCards.Array.data[16]
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a5ca0da45ae9cf94f8ba95b70b239f82, type: 2}
   m_IsPrefabParent: 0

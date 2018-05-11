@@ -24,11 +24,14 @@ public class GameController : MonoBehaviour {
 
     public List<bool> allSwitches;
     public List<CardValues> allCards;
-    public List<CardValues> yardCards;												//list of cards in the yard time deck
-	public List<CardValues> messCards;                                              //list of cards in the lunchtime deck
-    public List<CardValues> eveningCellCards;											//list of cards in the workshop time deck
-	public List<CardValues> cellCards;												//list of cards in the cell time deck
-	public CardValues currentCard;                                                  //the card that is currently active in the scene
+    //public List<CardValues> yardCards;												//list of cards in the yard time deck
+	//public List<CardValues> messCards;                                              //list of cards in the lunchtime deck
+    //public List<CardValues> eveningCellCards;											//list of cards in the workshop time deck
+	//public List<CardValues> cellCards;                                              //list of cards in the cell time deck
+    public List<CardValues> tempDeck;
+    public List<CardValues> morningRepeatables;
+    public List<CardValues> eveningRepeatables;
+    public CardValues currentCard;                                                  //the card that is currently active in the scene
     public CardValues previousCard;
     public bool endcardOn;
     public CardValues endOfGameCard;
@@ -183,80 +186,191 @@ public class GameController : MonoBehaviour {
 
 	public void GetNextCard()														//activates the next card from a new deck after the previous card has been resolved
 	{
-        int nextScheludeTime;
+        int nextEventTime;
+        int nextEventDay;
         if (schedule < scheduleSize - 1)
         {
-            nextScheludeTime = schedule + 1;
+            nextEventTime = schedule + 1;
+            nextEventDay = day;
         }
         else
         {
-            nextScheludeTime = 0;
+            nextEventTime = 0;
+            nextEventDay = day + 1;
         }
+
+        if (StoryEvent(nextEventTime, nextEventDay))
+        {
+            return;
+        }
+        else if (RandomEvent(nextEventTime))
+        {
+            return;
+        }
+        else if (RepeatableEvent(nextEventTime))
+        {
+            return;
+        }
+        else
+        {
+            SetCurrentCard(endOfGameCard);
+            cardDisplay.typeTextNewTextDone = false;
+        }
+    }
+
+    public bool StoryEvent(int nextCardtTime, int nextCardDay)
+    {
+        return false;
+        //tänne kaikki tapaukset
+    }
+
+    public bool RandomEvent(int nextCardTime)
+    {
+        tempDeck.Clear();
+        bool addToDeck;
+        for (int i = 0; i < allCards.Count; i++)
+        {
+            addToDeck = true;
+            if (allCards[i].timeOfDay == nextCardTime && EnoughReputations(i))
+            {
+                for (int j = 0; j < allCards[i].requiredSwitches.Count; j++)
+                {
+                    if (!allSwitches[allCards[i].requiredSwitches[j]])
+                    {
+                        addToDeck = false;
+                        break;
+                    }
+                }
+                if (addToDeck)
+                {
+                    tempDeck.Add(allCards[i]);
+                }
+            }
+        }
+        if (tempDeck.Count == 0)
+        {
+            return false;
+        }
+        else
+        {
+            Debug.Log("tänne");
+            int index = Random.Range(0, tempDeck.Count);
+            CardValues next = tempDeck[index];
+            SetCurrentCard(next);
+            cardDisplay.typeTextNewTextDone = false;
+            return true;
+        }
+    }
+
+    private bool EnoughReputations(int i)
+    {
+        if (allCards[i].RepGuard == 0 && allCards[i].RepIrs == 0 && allCards[i].RepPunks == 0 && allCards[i].RepShake == 0)
+        {
+            return true;
+        }
+        else
+        {
+            int repCheck;
+            if (allCards[i].RepGuard != 0)
+            {
+                repCheck = allCards[i].RepGuard;
+                if (repCheck < 0 && guardsRep > repCheck)
+                {
+                    return false;
+                }
+                else if (repCheck > 0 && guardsRep < repCheck)
+                {
+                    return false;
+                }
+            }
+            if (allCards[i].RepIrs != 0)
+            {
+                repCheck = allCards[i].RepIrs;
+                if (repCheck < 0 && irsRep > repCheck)
+                {
+                    return false;
+                }
+                else if (repCheck > 0 && irsRep < repCheck)
+                {
+                    return false;
+                }
+            }
+            if (allCards[i].RepPunks != 0)
+            {
+                repCheck = allCards[i].RepPunks;
+                if (repCheck < 0 && punksRep > repCheck)
+                {
+                    return false;
+                }
+                else if (repCheck > 0 && punksRep < repCheck)
+                {
+                    return false;
+                }
+            }
+            if (allCards[i].RepShake != 0)
+            {
+                repCheck = allCards[i].RepShake;
+                if (repCheck < 0 && shakersRep > repCheck)
+                {
+                    return false;
+                }
+                else if (repCheck > 0 && shakersRep < repCheck)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+    }
+
+    public bool RepeatableEvent(int nextCardTime)
+    {
+
         CardValues next;
-		switch (nextScheludeTime)															//chooses the deck based on schedule
-		{
-        case (0):
-                BuildDeck(cellCards);                                               //builds a new card deck from scratch
-                int index = Random.Range(0, cellCards.Count);                       //picks a random number using the amount of cards in the deck as the range
-                if (cellCards.Count == 0)
-                {
-                    next = endOfGameCard;
-                } else
-                {
-                    next = cellCards[index];
-                }
+        int index;
+
+        if (nextCardTime == 0)
+        {
+            if (morningRepeatables.Count == 0)
+            {
+                return false;
+            }
+            else
+            {
+                index = Random.Range(0, morningRepeatables.Count);
+                next = morningRepeatables[index];
                 SetCurrentCard(next);
                 cardDisplay.typeTextNewTextDone = false;
-                break;
-            case (1):
-                BuildDeck(messCards);
-                index = Random.Range(0, messCards.Count);
-                if (messCards.Count == 0)
-                {
-                    next = endOfGameCard;
-                }
-                else
-                {
-                    next = messCards[index];
-                }
+                return true;
+            }
+        }
+        if (nextCardTime == 1)
+        {
+            return false;
+        }
+        if (nextCardTime == 2)
+        {
+            return false;
+        }
+        if (nextCardTime == 3)
+        {
+            if (eveningRepeatables.Count == 0)
+            {
+                return false;
+            }
+            else
+            {
+                index = Random.Range(0, eveningRepeatables.Count);
+                next = eveningRepeatables[index];
                 SetCurrentCard(next);
                 cardDisplay.typeTextNewTextDone = false;
-                break;
-            case (2):
-                BuildDeck(yardCards);
-                index = Random.Range(0, yardCards.Count);
-                if (yardCards.Count == 0)
-                {
-                    next = endOfGameCard;
-                }
-                else
-                {
-                    next = yardCards[index];
-                }
-                SetCurrentCard(next);
-                cardDisplay.typeTextNewTextDone = false;
-                break;
-		
-		case (3):
-                BuildDeck(eveningCellCards);
-                index = Random.Range(0, eveningCellCards.Count);
-                if (eveningCellCards.Count == 0)
-                {
-                    next = endOfGameCard;
-                } else
-                {
-                    next = eveningCellCards[index];
-                }
-                SetCurrentCard(next);
-                cardDisplay.typeTextNewTextDone = false;
-                break;
-		//case (4):
-  //              BuildDeck(cellCards);
-  //              index = Random.Range(0, cellCards.Count);
-		//	    currentCard = cellCards[index];
-		//	    break;
-		}
-	}
+                return true;
+            }
+        }
+        return false;
+    }
+
+
 
     public void SetCurrentCard(int selectedOption)                            //This is where changing begins.
     {
@@ -500,7 +614,7 @@ public class GameController : MonoBehaviour {
         }
     }
 
-
+/*
         //Cycles through all the cards in the game and adds the possible cards to given parameter deck..
         public void BuildDeck(List<CardValues> targetDeck)
     {
@@ -672,6 +786,7 @@ public class GameController : MonoBehaviour {
 
         }
     }
+    */
     //checks if player has required switches for that option
     public bool Check1Switches()
     {
