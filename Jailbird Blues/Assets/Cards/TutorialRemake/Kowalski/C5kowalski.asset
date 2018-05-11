@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: C1absoluteTutorial
+  m_Name: C5kowalski
   m_EditorClassIdentifier: 
   requiredSwitches: 
   RepIrs: 0
@@ -18,68 +18,67 @@ MonoBehaviour:
   RepGuard: 0
   timeOfDay: 0
   storyPhase: 0
-  location: Hallway
-  backgroundImage: {fileID: 21300000, guid: 214f46d9c96dad347aa99d8654cd4a4e, type: 3}
+  location: Cell - Night
+  backgroundImage: {fileID: 21300000, guid: 45101871e12fb8544924d61ab153420b, type: 3}
   foregroundImage: {fileID: 0}
   flipForegroundImageRight: 0
   setRightAsSpeaker: 0
   foregroundImage2: {fileID: 0}
   flipForegroundImageLeft: 0
   setLeftAsSpeaker: 0
-  foregroundImage3: {fileID: 0}
+  foregroundImage3: {fileID: 21300000, guid: 1b9b6db40d9717940940af2b94a90d9d, type: 3}
   flipForegroundImageCenter: 0
   setCenterAsSpeaker: 0
   foregroundBigImage: {fileID: 0}
   flipForegroundImageBig: 0
   setBigAsSpeaker: 0
   foregroundItemImage: {fileID: 0}
-  bgMusic: {fileID: 8300000, guid: 7eea11dbcecd56a43ade0ca1a2990976, type: 3}
-  bgAmbientAudio: {fileID: 8300000, guid: cd0d6cd2d4deed344af83a8378cc00ad, type: 3}
+  bgMusic: {fileID: 0}
+  bgAmbientAudio: {fileID: 0}
   musicDecrease: 0
   ambientDecrease: 0
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: 
-  cardText: "You are led through the prison hallways.\r The echoes of closing doors
-    fade behind\r you, like the hopes of getting out of\r this \xC4hellhole\xD6.\r"
+  cardTextPerson: Give Kowalski your shoes?
+  cardText: 
   logText: 
   endCard: 0
   timeCard: 0
   onTop: 0
   repeatable: 0
   endOfGame: 0
-  SkipCard: {fileID: 11400000, guid: 762e40693448ee94482d8993ef4cb98f, type: 2}
-  OptionsOn: 0
-  Option1On: 0
+  SkipCard: {fileID: 0}
+  OptionsOn: 1
+  Option1On: 1
   option1ReqSwitches: 
-  option1text: 
+  option1text: Give the shoes.
   option1IrsReputation: 0
   option1PunkReputation: 0
   option1ShakeReputation: 0
   option1GuardReputation: 0
   option1ObtainedSwitches: 
   option1RemovedSwitches: 
-  option1FollowCard: {fileID: 0}
-  Option2On: 0
+  option1FollowCard: {fileID: 11400000, guid: 28cda39243e993f47a334464b21de371, type: 2}
+  Option2On: 1
   option2ReqSwitches: 
-  option2text: 
+  option2text: Don't give the shoes.
   option2IrsReputation: 0
   option2PunkReputation: 0
   option2ShakeReputation: 0
   option2GuardReputation: 0
   option2ObtainedSwitches: 
   option2RemovedSwitches: 
-  option2FollowCard: {fileID: 0}
-  Option3On: 0
+  option2FollowCard: {fileID: 11400000, guid: aa5ee6c9683cc61438a153e5a12b5ad3, type: 2}
+  Option3On: 1
   option3ReqSwitches: 
-  option3text: 
+  option3text: Call the guard.
   option3IrsReputation: 0
   option3PunkReputation: 0
   option3ShakeReputation: 0
   option3GuardReputation: 0
   option3ObtainedSwitches: 
   option3RemovedSwitches: 
-  option3FollowCard: {fileID: 0}
+  option3FollowCard: {fileID: 11400000, guid: e91bc6648e77926478d64ea01256ae89, type: 2}
   Option4On: 0
   option4ReqSwitches: 
   option4text: 
@@ -90,17 +89,17 @@ MonoBehaviour:
   option4ObtainedSwitches: 
   option4RemovedSwitches: 
   option4FollowCard: {fileID: 0}
-  Option5On: 1
+  Option5On: 0
   option5IrsReputation: 0
   option5PunkReputation: 0
   option5ShakeReputation: 0
   option5GuardReputation: 0
   option5ObtainedSwitches: 
   option5RemovedSwitches: 
-  option5FollowCard: {fileID: 11400000, guid: 0b73ea879e42c6a4b9d2e5902960bcf9, type: 2}
+  option5FollowCard: {fileID: 0}
   isTimeBasedCard: 0
   sfxPrewait: 0
-  sfx: {fileID: 8300000, guid: 344a84625cf265149a79d68dc4f9da5c, type: 3}
+  sfx: {fileID: 0}
   sfxHasFadeOut: 0
   sfxFadeOutAt: 0
   sfxFadeOutSpeed: 0

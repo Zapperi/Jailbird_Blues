@@ -47,7 +47,7 @@ MonoBehaviour:
   onTop: 0
   repeatable: 0
   endOfGame: 0
-  SkipCard: {fileID: 0}
+  SkipCard: {fileID: 11400000, guid: 762e40693448ee94482d8993ef4cb98f, type: 2}
   OptionsOn: 0
   Option1On: 0
   option1ReqSwitches: 

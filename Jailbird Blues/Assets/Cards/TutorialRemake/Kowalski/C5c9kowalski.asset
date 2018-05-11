@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: C1absoluteTutorial
+  m_Name: C5c9kowalski
   m_EditorClassIdentifier: 
   requiredSwitches: 
   RepIrs: 0
@@ -18,8 +18,8 @@ MonoBehaviour:
   RepGuard: 0
   timeOfDay: 0
   storyPhase: 0
-  location: Hallway
-  backgroundImage: {fileID: 21300000, guid: 214f46d9c96dad347aa99d8654cd4a4e, type: 3}
+  location: Cell - Night
+  backgroundImage: {fileID: 21300000, guid: 45101871e12fb8544924d61ab153420b, type: 3}
   foregroundImage: {fileID: 0}
   flipForegroundImageRight: 0
   setRightAsSpeaker: 0
@@ -29,26 +29,26 @@ MonoBehaviour:
   foregroundImage3: {fileID: 0}
   flipForegroundImageCenter: 0
   setCenterAsSpeaker: 0
-  foregroundBigImage: {fileID: 0}
+  foregroundBigImage: {fileID: 21300000, guid: 352587f64a829b74eb7cc6febe51d0b3, type: 3}
   flipForegroundImageBig: 0
-  setBigAsSpeaker: 0
+  setBigAsSpeaker: 1
   foregroundItemImage: {fileID: 0}
-  bgMusic: {fileID: 8300000, guid: 7eea11dbcecd56a43ade0ca1a2990976, type: 3}
-  bgAmbientAudio: {fileID: 8300000, guid: cd0d6cd2d4deed344af83a8378cc00ad, type: 3}
+  bgMusic: {fileID: 0}
+  bgAmbientAudio: {fileID: 0}
   musicDecrease: 0
   ambientDecrease: 0
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: 
-  cardText: "You are led through the prison hallways.\r The echoes of closing doors
-    fade behind\r you, like the hopes of getting out of\r this \xC4hellhole\xD6.\r"
+  cardTextPerson: Kowalski
+  cardText: "\"You better bring me more stuff at the end of\r \xC4each day\xD6, or
+    I'll have to kick your ass with\r your own shoes.\""
   logText: 
   endCard: 0
   timeCard: 0
   onTop: 0
   repeatable: 0
   endOfGame: 0
-  SkipCard: {fileID: 11400000, guid: 762e40693448ee94482d8993ef4cb98f, type: 2}
+  SkipCard: {fileID: 0}
   OptionsOn: 0
   Option1On: 0
   option1ReqSwitches: 
@@ -97,10 +97,10 @@ MonoBehaviour:
   option5GuardReputation: 0
   option5ObtainedSwitches: 
   option5RemovedSwitches: 
-  option5FollowCard: {fileID: 11400000, guid: 0b73ea879e42c6a4b9d2e5902960bcf9, type: 2}
+  option5FollowCard: {fileID: 11400000, guid: ed8fe751352b50f46b281ac51cd90a9a, type: 2}
   isTimeBasedCard: 0
   sfxPrewait: 0
-  sfx: {fileID: 8300000, guid: 344a84625cf265149a79d68dc4f9da5c, type: 3}
+  sfx: {fileID: 0}
   sfxHasFadeOut: 0
   sfxFadeOutAt: 0
   sfxFadeOutSpeed: 0
