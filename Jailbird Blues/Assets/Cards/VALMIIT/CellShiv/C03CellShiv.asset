@@ -71,7 +71,7 @@ MonoBehaviour:
   option2FollowCard: {fileID: 11400000, guid: 4c33bdc1b92eebd4dbd374ce2889ee2a, type: 2}
   Option3On: 0
   option3ReqSwitches: 
-  option3text: Ignore it
+  option3text: 
   option3IrsReputation: 0
   option3PunkReputation: 0
   option3ShakeReputation: 0

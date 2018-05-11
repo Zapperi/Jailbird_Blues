@@ -107,7 +107,7 @@ MonoBehaviour:
   ppsHasFadeIn: 1
   ppsFadeMode: 0
   blackScreenStart: 1
-  blackScreenTime: 1.5
+  blackScreenTime: 2
   ppsFadeInSpeed: 2
   ppsShowCard: 0
   ppsHasFadeOut: 0

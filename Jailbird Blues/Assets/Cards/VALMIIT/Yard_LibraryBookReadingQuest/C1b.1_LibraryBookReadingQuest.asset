@@ -35,9 +35,9 @@ MonoBehaviour:
   foregroundItemImage: {fileID: 0}
   bgMusic: {fileID: 0}
   bgAmbientAudio: {fileID: 0}
-  musicDecrease: 0
+  musicDecrease: 0.5
   ambientDecrease: 0
-  musicOff: 0
+  musicOff: 1
   ambientOff: 0
   cardTextPerson: 
   cardText: "The guard catches the book mid-air and gives you a dirty look.\r\n"
