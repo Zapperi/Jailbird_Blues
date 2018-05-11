@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 114691077099872550}
   - component: {fileID: 95642196939643868}
   m_Layer: 5
-  m_Name: ForegroundItemImage
+  m_Name: ItemAnimation_Mobile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46,6 +46,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114691077099872550
 MonoBehaviour:
   m_ObjectHideFlags: 1

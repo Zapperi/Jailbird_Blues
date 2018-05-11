@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 82732119072834322}
   - component: {fileID: 114852098042609194}
   m_Layer: 0
-  m_Name: GameController
+  m_Name: GameController_Mobile
   m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
