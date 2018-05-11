@@ -39,7 +39,7 @@ MonoBehaviour:
   ambientDecrease: 0.5
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: Freddie
+  cardTextPerson: Random inmate
   cardText: "\"Freddie boy! Heard you'll be flying away\r today. Don't forget you
     still owe me!\"\r"
   logText: 
