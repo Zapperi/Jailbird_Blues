@@ -58,7 +58,7 @@ MonoBehaviour:
   option1GuardReputation: 0
   option1ObtainedSwitches: 
   option1RemovedSwitches: 05000000
-  option1FollowCard: {fileID: 0}
+  option1FollowCard: {fileID: 11400000, guid: 709d19f9637751c4aacd78fc6b18a906, type: 2}
   Option2On: 1
   option2ReqSwitches: 
   option2text: "Give it to him \xC4HARD\xD6!"
@@ -68,7 +68,7 @@ MonoBehaviour:
   option2GuardReputation: 0
   option2ObtainedSwitches: 
   option2RemovedSwitches: 
-  option2FollowCard: {fileID: 0}
+  option2FollowCard: {fileID: 11400000, guid: 4a42b44d6fc632c48b2f117cbb14c565, type: 2}
   Option3On: 0
   option3ReqSwitches: 
   option3text: 

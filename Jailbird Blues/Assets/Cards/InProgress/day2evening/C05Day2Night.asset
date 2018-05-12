@@ -48,7 +48,7 @@ MonoBehaviour:
   repeatable: 0
   endOfGame: 0
   SkipCard: {fileID: 0}
-  OptionsOn: 0
+  OptionsOn: 1
   Option1On: 1
   option1ReqSwitches: 04000000
   option1text: A cigarette
@@ -58,7 +58,7 @@ MonoBehaviour:
   option1GuardReputation: 0
   option1ObtainedSwitches: 
   option1RemovedSwitches: 03000000
-  option1FollowCard: {fileID: 0}
+  option1FollowCard: {fileID: 11400000, guid: 3944c38e718bea7489c801d462a7419c, type: 2}
   Option2On: 1
   option2ReqSwitches: 05000000
   option2text: Shiv
@@ -68,7 +68,7 @@ MonoBehaviour:
   option2GuardReputation: 0
   option2ObtainedSwitches: 
   option2RemovedSwitches: 
-  option2FollowCard: {fileID: 0}
+  option2FollowCard: {fileID: 11400000, guid: 429a71dc5de265e499695fcce55406c9, type: 2}
   Option3On: 1
   option3ReqSwitches: 
   option3text: Nothing
@@ -78,7 +78,7 @@ MonoBehaviour:
   option3GuardReputation: 0
   option3ObtainedSwitches: 
   option3RemovedSwitches: 
-  option3FollowCard: {fileID: 0}
+  option3FollowCard: {fileID: 11400000, guid: ee4498d953581d94993ae9a71b6bb5f5, type: 2}
   Option4On: 0
   option4ReqSwitches: 
   option4text: 
@@ -89,7 +89,7 @@ MonoBehaviour:
   option4ObtainedSwitches: 
   option4RemovedSwitches: 
   option4FollowCard: {fileID: 0}
-  Option5On: 1
+  Option5On: 0
   option5IrsReputation: 0
   option5PunkReputation: 0
   option5ShakeReputation: 0
