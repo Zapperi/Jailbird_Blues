@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: C04bSmallPunkQuest
+  m_Name: C04b3SmallPunkQuest
   m_EditorClassIdentifier: 
   requiredSwitches: 
   RepIrs: 0
@@ -19,11 +19,11 @@ MonoBehaviour:
   timeOfDay: 0
   storyPhase: 0
   location: 
-  backgroundImage: {fileID: 21300000, guid: 1893ac2562840144f95617afa0eb2ff1, type: 3}
-  foregroundImage: {fileID: 21300000, guid: d3e1a44396579f947b6d0dc7ab0b0d55, type: 3}
+  backgroundImage: {fileID: 21300000, guid: 7c5e619a5c03cc943a4b68321a14beb1, type: 3}
+  foregroundImage: {fileID: 0}
   flipForegroundImageRight: 0
   setRightAsSpeaker: 0
-  foregroundImage2: {fileID: 0}
+  foregroundImage2: {fileID: 21300000, guid: 3e2e9c18828a06f4990bd032f1e8a016, type: 3}
   flipForegroundImageLeft: 0
   setLeftAsSpeaker: 0
   foregroundImage3: {fileID: 0}
@@ -33,14 +33,16 @@ MonoBehaviour:
   flipForegroundImageBig: 0
   setBigAsSpeaker: 0
   foregroundItemImage: {fileID: 0}
-  bgMusic: {fileID: 0}
+  bgMusic: {fileID: 8300000, guid: aa5c3fed5dc129640a56e62ef9106936, type: 3}
   bgAmbientAudio: {fileID: 0}
-  musicDecrease: 0
-  ambientDecrease: 0
-  musicOff: 0
+  musicDecrease: 0.5
+  ambientDecrease: 0.5
+  musicOff: 1
   ambientOff: 0
-  cardTextPerson: Marcello
-  cardText: '"Well screw you then"'
+  cardTextPerson: 
+  cardText: 'You walk up to the guard and tell him what the punks are planing.
+
+'
   logText: 
   endCard: 0
   timeCard: 0
@@ -58,7 +60,7 @@ MonoBehaviour:
   option1GuardReputation: 0
   option1ObtainedSwitches: 
   option1RemovedSwitches: 
-  option1FollowCard: {fileID: 11400000, guid: 13679125543b3fa429325e6b910b178f, type: 2}
+  option1FollowCard: {fileID: 0}
   Option2On: 0
   option2ReqSwitches: 
   option2text: 
@@ -68,7 +70,7 @@ MonoBehaviour:
   option2GuardReputation: 0
   option2ObtainedSwitches: 
   option2RemovedSwitches: 
-  option2FollowCard: {fileID: 11400000, guid: f869679608a18914bba3b0bc522fc73c, type: 2}
+  option2FollowCard: {fileID: 0}
   Option3On: 0
   option3ReqSwitches: 
   option3text: 
@@ -91,12 +93,12 @@ MonoBehaviour:
   option4FollowCard: {fileID: 0}
   Option5On: 1
   option5IrsReputation: 0
-  option5PunkReputation: 0
+  option5PunkReputation: -5
   option5ShakeReputation: 0
-  option5GuardReputation: 0
+  option5GuardReputation: 5
   option5ObtainedSwitches: 
   option5RemovedSwitches: 
-  option5FollowCard: {fileID: 11400000, guid: 9b2636456e3efa5449f2a23736b3217e, type: 2}
+  option5FollowCard: {fileID: 11400000, guid: 1f9dc571726696d448f0e26a0529ee1c, type: 2}
   isTimeBasedCard: 0
   sfxPrewait: 0
   sfx: {fileID: 0}
@@ -104,8 +106,8 @@ MonoBehaviour:
   sfxFadeOutAt: 0
   sfxFadeOutSpeed: 0
   sfxAfterWait: 0
-  ppsHasFadeIn: 0
-  ppsFadeMode: 0
+  ppsHasFadeIn: 1
+  ppsFadeMode: 1
   blackScreenStart: 0
   blackScreenTime: 0
   ppsFadeInSpeed: 0

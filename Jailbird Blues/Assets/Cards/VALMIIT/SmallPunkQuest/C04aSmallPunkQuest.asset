@@ -35,8 +35,8 @@ MonoBehaviour:
   foregroundItemImage: {fileID: 0}
   bgMusic: {fileID: 0}
   bgAmbientAudio: {fileID: 0}
-  musicDecrease: 0
-  ambientDecrease: 0
+  musicDecrease: 0.5
+  ambientDecrease: 0.5
   musicOff: 0
   ambientOff: 0
   cardTextPerson: Marcello
@@ -62,24 +62,24 @@ MonoBehaviour:
   option1FollowCard: {fileID: 0}
   Option2On: 0
   option2ReqSwitches: 
-  option2text: Do it
+  option2text: 
   option2IrsReputation: 0
-  option2PunkReputation: 3
+  option2PunkReputation: 0
   option2ShakeReputation: 0
-  option2GuardReputation: -3
+  option2GuardReputation: 0
   option2ObtainedSwitches: 
   option2RemovedSwitches: 
-  option2FollowCard: {fileID: 11400000, guid: 1f48e77556310554284f80627a5460f1, type: 2}
+  option2FollowCard: {fileID: 0}
   Option3On: 0
   option3ReqSwitches: 
-  option3text: Refuse
+  option3text: 
   option3IrsReputation: 0
   option3PunkReputation: 0
   option3ShakeReputation: 0
   option3GuardReputation: 0
   option3ObtainedSwitches: 
   option3RemovedSwitches: 
-  option3FollowCard: {fileID: 11400000, guid: 5179ab89870e47b45a8114bf41b38052, type: 2}
+  option3FollowCard: {fileID: 0}
   Option4On: 0
   option4ReqSwitches: 
   option4text: 

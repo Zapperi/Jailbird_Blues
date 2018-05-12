@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: punkCard3A3
+  m_Name: C04b2SmallPunkQuest
   m_EditorClassIdentifier: 
   requiredSwitches: 
   RepIrs: 0
@@ -35,8 +35,8 @@ MonoBehaviour:
   foregroundItemImage: {fileID: 0}
   bgMusic: {fileID: 0}
   bgAmbientAudio: {fileID: 0}
-  musicDecrease: 0
-  ambientDecrease: 0
+  musicDecrease: 0.5
+  ambientDecrease: 0.5
   musicOff: 0
   ambientOff: 0
   cardTextPerson: What do you do?
@@ -51,24 +51,24 @@ MonoBehaviour:
   OptionsOn: 1
   Option1On: 1
   option1ReqSwitches: 
-  option1text: Do it
+  option1text: Go tell the guard
   option1IrsReputation: 0
-  option1PunkReputation: 5
+  option1PunkReputation: 0
   option1ShakeReputation: 0
-  option1GuardReputation: -5
+  option1GuardReputation: 0
   option1ObtainedSwitches: 
   option1RemovedSwitches: 
-  option1FollowCard: {fileID: 11400000, guid: 1f48e77556310554284f80627a5460f1, type: 2}
+  option1FollowCard: {fileID: 11400000, guid: 13679125543b3fa429325e6b910b178f, type: 2}
   Option2On: 1
   option2ReqSwitches: 
-  option2text: Refuse
+  option2text: Walk away
   option2IrsReputation: 0
-  option2PunkReputation: 0
+  option2PunkReputation: -2
   option2ShakeReputation: 0
   option2GuardReputation: 0
   option2ObtainedSwitches: 
   option2RemovedSwitches: 
-  option2FollowCard: {fileID: 11400000, guid: 5179ab89870e47b45a8114bf41b38052, type: 2}
+  option2FollowCard: {fileID: 11400000, guid: f869679608a18914bba3b0bc522fc73c, type: 2}
   Option3On: 0
   option3ReqSwitches: 
   option3text: 

@@ -19,11 +19,11 @@ MonoBehaviour:
   timeOfDay: 0
   storyPhase: 0
   location: 
-  backgroundImage: {fileID: 21300000, guid: 7c5e619a5c03cc943a4b68321a14beb1, type: 3}
-  foregroundImage: {fileID: 0}
+  backgroundImage: {fileID: 21300000, guid: 1893ac2562840144f95617afa0eb2ff1, type: 3}
+  foregroundImage: {fileID: 21300000, guid: d3e1a44396579f947b6d0dc7ab0b0d55, type: 3}
   flipForegroundImageRight: 0
-  setRightAsSpeaker: 0
-  foregroundImage2: {fileID: 21300000, guid: 3abad9b8a54f9084aa98005e16ffd4a3, type: 3}
+  setRightAsSpeaker: 1
+  foregroundImage2: {fileID: 0}
   flipForegroundImageLeft: 0
   setLeftAsSpeaker: 0
   foregroundImage3: {fileID: 0}
@@ -35,17 +35,17 @@ MonoBehaviour:
   foregroundItemImage: {fileID: 0}
   bgMusic: {fileID: 0}
   bgAmbientAudio: {fileID: 0}
-  musicDecrease: 0
-  ambientDecrease: 0
+  musicDecrease: 0.5
+  ambientDecrease: 0.5
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: 
-  cardText: "You walk up to the guard slowly, acting just to pass by. Just when he
-    is not looking you kick him in the knee and he falls down. He sees you but can't
-    catch you and \xC4you get away.\xD6"
-  logText: You tripped stanley
-  endCard: 1
-  timeCard: 1
+  cardTextPerson: Marcello
+  cardText: "\"He has \xC4a bad knee\xD6, and I want you to go there and \xC4kick
+    him in the knee\xD6. That usually gives him a few days off so he doesn't bother
+    us then.\""
+  logText: 
+  endCard: 0
+  timeCard: 0
   onTop: 0
   repeatable: 0
   endOfGame: 0
@@ -63,24 +63,24 @@ MonoBehaviour:
   option1FollowCard: {fileID: 0}
   Option2On: 0
   option2ReqSwitches: 
-  option2text: 
+  option2text: 0
   option2IrsReputation: 0
   option2PunkReputation: 0
   option2ShakeReputation: 0
   option2GuardReputation: 0
   option2ObtainedSwitches: 
   option2RemovedSwitches: 
-  option2FollowCard: {fileID: 0}
+  option2FollowCard: {fileID: 11400000, guid: 1f48e77556310554284f80627a5460f1, type: 2}
   Option3On: 0
   option3ReqSwitches: 
-  option3text: 
+  option3text: 0
   option3IrsReputation: 0
   option3PunkReputation: 0
   option3ShakeReputation: 0
   option3GuardReputation: 0
   option3ObtainedSwitches: 
   option3RemovedSwitches: 
-  option3FollowCard: {fileID: 0}
+  option3FollowCard: {fileID: 11400000, guid: 5179ab89870e47b45a8114bf41b38052, type: 2}
   Option4On: 0
   option4ReqSwitches: 
   option4text: 
@@ -98,10 +98,10 @@ MonoBehaviour:
   option5GuardReputation: 0
   option5ObtainedSwitches: 
   option5RemovedSwitches: 
-  option5FollowCard: {fileID: 0}
+  option5FollowCard: {fileID: 11400000, guid: 8933df17793805d40a3bdcebaafe9a7c, type: 2}
   isTimeBasedCard: 0
   sfxPrewait: 0
-  sfx: {fileID: 8300000, guid: f397d54ed96fed1479844f64e7fc1754, type: 3}
+  sfx: {fileID: 0}
   sfxHasFadeOut: 0
   sfxFadeOutAt: 0
   sfxFadeOutSpeed: 0
@@ -112,5 +112,5 @@ MonoBehaviour:
   blackScreenTime: 0
   ppsFadeInSpeed: 0
   ppsShowCard: 0
-  ppsHasFadeOut: 1
+  ppsHasFadeOut: 0
   fadeOutSpeed: 0

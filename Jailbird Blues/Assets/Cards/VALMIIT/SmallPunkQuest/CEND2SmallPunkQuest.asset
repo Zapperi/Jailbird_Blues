@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: TellGuard
+  m_Name: CEND2SmallPunkQuest
   m_EditorClassIdentifier: 
   requiredSwitches: 
   RepIrs: 0
@@ -23,9 +23,9 @@ MonoBehaviour:
   foregroundImage: {fileID: 0}
   flipForegroundImageRight: 0
   setRightAsSpeaker: 0
-  foregroundImage2: {fileID: 21300000, guid: 3e2e9c18828a06f4990bd032f1e8a016, type: 3}
+  foregroundImage2: {fileID: 21300000, guid: 9a93f0d0635303f4aaca2de354cf764c, type: 3}
   flipForegroundImageLeft: 0
-  setLeftAsSpeaker: 0
+  setLeftAsSpeaker: 1
   foregroundImage3: {fileID: 0}
   flipForegroundImageCenter: 0
   setCenterAsSpeaker: 0
@@ -33,19 +33,18 @@ MonoBehaviour:
   flipForegroundImageBig: 0
   setBigAsSpeaker: 0
   foregroundItemImage: {fileID: 0}
-  bgMusic: {fileID: 8300000, guid: aa5c3fed5dc129640a56e62ef9106936, type: 3}
+  bgMusic: {fileID: 0}
   bgAmbientAudio: {fileID: 0}
-  musicDecrease: 0
-  ambientDecrease: 0
+  musicDecrease: 0.5
+  ambientDecrease: 0.5
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: 
-  cardText: 'You walk up to the guard and tell him what the punks are planing.
-
-'
+  cardTextPerson: Stanley
+  cardText: '"Well thank you, those punks sure are annoying, and they are always after
+    my knee. Now i know to be carefull today"'
   logText: 
-  endCard: 0
-  timeCard: 0
+  endCard: 1
+  timeCard: 1
   onTop: 0
   repeatable: 0
   endOfGame: 0
@@ -93,12 +92,12 @@ MonoBehaviour:
   option4FollowCard: {fileID: 0}
   Option5On: 1
   option5IrsReputation: 0
-  option5PunkReputation: -5
+  option5PunkReputation: 0
   option5ShakeReputation: 0
-  option5GuardReputation: 5
+  option5GuardReputation: 0
   option5ObtainedSwitches: 
   option5RemovedSwitches: 
-  option5FollowCard: {fileID: 11400000, guid: 1f9dc571726696d448f0e26a0529ee1c, type: 2}
+  option5FollowCard: {fileID: 0}
   isTimeBasedCard: 0
   sfxPrewait: 0
   sfx: {fileID: 0}
@@ -112,5 +111,5 @@ MonoBehaviour:
   blackScreenTime: 0
   ppsFadeInSpeed: 0
   ppsShowCard: 0
-  ppsHasFadeOut: 0
+  ppsHasFadeOut: 1
   fadeOutSpeed: 0
