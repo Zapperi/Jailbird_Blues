@@ -240,8 +240,8 @@ public class GameController : MonoBehaviour {
             //isEvent = true;
         } else if (nextCardDay == 3 && nextCardtTime == 0)
         {
-            //next = day3MorningCard;
-            //isEvent = true;
+            next = day3MorningCard;
+            isEvent = true;
         } else if (nextCardDay == 3 && nextCardtTime == 3)
         {
             //next = day3EveningCard;

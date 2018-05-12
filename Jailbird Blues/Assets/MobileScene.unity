@@ -499,6 +499,18 @@ Prefab:
       propertyPath: scaleSlider
       value: 
       objectReference: {fileID: 621891742}
+    - target: {fileID: 114743166947194950, guid: c13aeba8068565e49978c8b7924c3112,
+        type: 2}
+      propertyPath: day2MorningCard
+      value: 
+      objectReference: {fileID: 11400000, guid: 095748b661c43ee4aaceb459d1778110,
+        type: 2}
+    - target: {fileID: 114743166947194950, guid: c13aeba8068565e49978c8b7924c3112,
+        type: 2}
+      propertyPath: day3MorningCard
+      value: 
+      objectReference: {fileID: 11400000, guid: 3806b6788a10ff546b3e2a16f7755502,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c13aeba8068565e49978c8b7924c3112, type: 2}
   m_IsPrefabParent: 0
