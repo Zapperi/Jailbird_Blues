@@ -225,12 +225,12 @@ public class GameController : MonoBehaviour {
 
     public bool StoryEvent(int nextCardtTime, int nextCardDay)
     {
-        CardValues next;
+        CardValues next = null;
         bool isEvent = false;
         if (nextCardDay == 2 && nextCardtTime==0)
         {
-            //next = day2MorningCard;
-            //isEvent = true;
+            next = day2MorningCard;
+            isEvent = true;
         } else if (nextCardDay == 2 && nextCardtTime == 3)
         {
             //next = day2EveningCard;
@@ -246,8 +246,8 @@ public class GameController : MonoBehaviour {
         }
         if (isEvent)
         {
-            //SetCurrentCard(next);
-            //cardDisplay.typeTextNewTextDone = false;
+            SetCurrentCard(next);
+            cardDisplay.typeTextNewTextDone = false;
         }
         return isEvent;
     }

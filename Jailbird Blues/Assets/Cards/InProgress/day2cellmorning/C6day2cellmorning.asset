@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: C6day3cellmorning
+  m_Name: C6day2cellmorning
   m_EditorClassIdentifier: 
   requiredSwitches: 
   RepIrs: 0
@@ -35,8 +35,8 @@ MonoBehaviour:
   foregroundItemImage: {fileID: 0}
   bgMusic: {fileID: 0}
   bgAmbientAudio: {fileID: 0}
-  musicDecrease: 0
-  ambientDecrease: 0
+  musicDecrease: 0.5
+  ambientDecrease: 0.8
   musicOff: 0
   ambientOff: 0
   cardTextPerson: 

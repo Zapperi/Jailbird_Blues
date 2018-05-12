@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: C5day3cellmorning
+  m_Name: C7day2cellmorning
   m_EditorClassIdentifier: 
   requiredSwitches: 
   RepIrs: 0
@@ -26,21 +26,22 @@ MonoBehaviour:
   foregroundImage2: {fileID: 0}
   flipForegroundImageLeft: 0
   setLeftAsSpeaker: 0
-  foregroundImage3: {fileID: 21300000, guid: 352587f64a829b74eb7cc6febe51d0b3, type: 3}
+  foregroundImage3: {fileID: 0}
   flipForegroundImageCenter: 0
-  setCenterAsSpeaker: 1
-  foregroundBigImage: {fileID: 0}
+  setCenterAsSpeaker: 0
+  foregroundBigImage: {fileID: 21300000, guid: 1b9b6db40d9717940940af2b94a90d9d, type: 3}
   flipForegroundImageBig: 0
   setBigAsSpeaker: 0
   foregroundItemImage: {fileID: 0}
   bgMusic: {fileID: 0}
   bgAmbientAudio: {fileID: 0}
-  musicDecrease: 0
-  ambientDecrease: 0
+  musicDecrease: 0.5
+  ambientDecrease: 0.8
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: Kowalski
-  cardText: "\"Like my new shoes? I got them as a \xC4present\xD6.\""
+  cardTextPerson: 
+  cardText: "Kowalski suddenly \xC4grabs your throat\xD6 and comes\r awfully close
+    at your face He has a nasty breath."
   logText: 
   endCard: 0
   timeCard: 0
@@ -96,7 +97,7 @@ MonoBehaviour:
   option5GuardReputation: 0
   option5ObtainedSwitches: 
   option5RemovedSwitches: 
-  option5FollowCard: {fileID: 11400000, guid: c6346c704306c0e46bac592821a763db, type: 2}
+  option5FollowCard: {fileID: 11400000, guid: fee2642fef88c284991605b994871f6c, type: 2}
   isTimeBasedCard: 0
   sfxPrewait: 0
   sfx: {fileID: 0}
