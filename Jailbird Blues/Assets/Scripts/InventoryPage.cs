@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 // Create a simple item class that contains the information
 [System.Serializable]
@@ -25,7 +26,10 @@ public class InventoryPage : MonoBehaviour {
     void Start()
     {
         RefreshInventory();                                     // Call RefreshInventory function when invetory is opened
-        gameController = GameObject.Find("GameController");     // Set the reference to the GameController
+        if (SceneManager.GetActiveScene().name == "MobileScene")
+            gameController = GameObject.Find("GameController_Mobile");           
+        else
+            gameController = GameObject.Find("GameController");     // Set the reference to the GameController
         itemList = gameController.GetComponent<GameController>().allItemList;
     }
 

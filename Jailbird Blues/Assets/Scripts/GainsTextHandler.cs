@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 public class GainsTextHandler : MonoBehaviour {
@@ -11,8 +12,13 @@ public class GainsTextHandler : MonoBehaviour {
     public static void Initialize()                                                         // Sets up information for the text object.
     {
         spawnPoint = GameObject.Find("GainedAnimationSpawnpoint");                                                 // Find the canvas, later used for it's location.
-        if (!floatingText)                                                                  // If there is no text yet..
-            floatingText = Resources.Load<GainTextGeneration>("Prefabs/GainTextParent");    // Go find the prefab from the resources that contains the elements.
+        if (!floatingText)
+        {                                                                  // If there is no text yet..
+            if (SceneManager.GetActiveScene().name == "MobileScene")
+                floatingText = Resources.Load<GainTextGeneration>("Prefabs_Mobile/GainTextParent_Mobile");
+            else
+                floatingText = Resources.Load<GainTextGeneration>("Prefabs/GainTextParent");    // Go find the prefab from the resources that contains the elements.
+        }
     }
 
     public static void CreateGainsText(int[] repAmount, Transform location)                     // Creates floating text object
