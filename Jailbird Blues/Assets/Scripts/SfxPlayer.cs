@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 
 public class SfxPlayer : MonoBehaviour
 {
@@ -45,6 +46,7 @@ public class SfxPlayer : MonoBehaviour
     public float currentAmbientVolume;
     public float currentTimedVolume;
 
+    //public AudioMixer audioMixer;
 
     private void Awake()
     {
@@ -56,13 +58,14 @@ public class SfxPlayer : MonoBehaviour
         timedIsWaiting = false;
         timedIsAfterWaiting = false;
 
-        currentSfxVolume = PersistentData.persistentValues.sfxVolume;
-        currentTimedVolume = PersistentData.persistentValues.sfxVolume;
+        
     }
 
     private void Start()
     {
         SetVolumesAndSliders();
+        currentSfxVolume = PersistentData.persistentValues.sfxVolume;
+        currentTimedVolume = PersistentData.persistentValues.sfxVolume;
     }
 
     private void Update()
@@ -465,12 +468,12 @@ public class SfxPlayer : MonoBehaviour
 
     public void SetMusicModifier(float value)
     {
-        musicModifier = value;
+        musicModifier = value;        
     }
 
     public void SetSfxModifier(float value)
     {
-        sfxModifier = value;
+        sfxModifier = value;        
     }
 
     public void SetVolumesAndSliders()
@@ -481,7 +484,9 @@ public class SfxPlayer : MonoBehaviour
         masterSlider.value = masterVolume;
         musicSlider.value = musicModifier;
         sfxSlider.value = sfxModifier;
-
+        //audioMixer.SetFloat("masterVol", masterVolume);
+        //audioMixer.SetFloat("musicVol", musicVolume);
+        //audioMixer.SetFloat("sfxVol", sfxModifier);
     }
 
 

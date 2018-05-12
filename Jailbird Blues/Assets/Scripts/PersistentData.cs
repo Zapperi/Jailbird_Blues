@@ -27,9 +27,10 @@ public class PersistentData : MonoBehaviour
             scale = 1f;
 
         }
-        else if (persistentValues != this)
+        else
         {
             Destroy(gameObject);
+            return;
         }
     }
 

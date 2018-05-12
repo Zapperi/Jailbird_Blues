@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class CardDisplay : MonoBehaviour
 {
@@ -31,6 +32,7 @@ public class CardDisplay : MonoBehaviour
     public Image foregroundBigImage;        // Big center foreground image slot
     public Image speechBubbleSpike;         // Image that indicates who is speaking.
     private Transform newBubbleTransform;
+    private float bubbleYPos;   
     public GameObject noteBook;
     private bool typeTextRunning;           // Used to track if typeTextCoroutine is still running.
 	public static float textScrollSpeed;    // Used to control the speed of TypeText coroutine (text speed)
@@ -95,6 +97,10 @@ public class CardDisplay : MonoBehaviour
         overLayingImage = GameObject.Find("PlayerBlocker").GetComponent<Image>();   // At scene launch, get reference to the overLayingImage from scene. 
         overLayingImage.gameObject.SetActive(false);                                // Deactivate the gameobject, because it had to be active in order to find it.
         highlightColorHex = ColorUtility.ToHtmlStringRGB(highlightColor);
+        if (SceneManager.GetActiveScene().name == "MobileScene")
+            bubbleYPos = 232f;
+        else
+            bubbleYPos = 160f;
     }
 
     void Start()
@@ -522,7 +528,6 @@ public class CardDisplay : MonoBehaviour
     }
     public void SkipTutorial()                          //skips tutorial
     {
-        Debug.Log("Skipped tutorial");
         skipYes.onClick.RemoveAllListeners();           //Removes listeners from buttons
         skipNo.onClick.RemoveAllListeners();
         skipTutorial.onClick.RemoveAllListeners();
@@ -534,7 +539,6 @@ public class CardDisplay : MonoBehaviour
 
     public void ReturnToGame()                          // dont skip tutorial
     {
-        //Debug.Log("Return to game");
         skipYes.onClick.RemoveAllListeners();           // Removes listeners from buttons
         skipNo.onClick.RemoveAllListeners();
         UnblockButtons();                               //Unlocks all other buttons
@@ -543,7 +547,6 @@ public class CardDisplay : MonoBehaviour
 
     public void SkipConfirmation()
     {
-        //Debug.Log("Skip button enabled");
         skipQuestion.SetActive(true);
         skipYes.onClick.AddListener(SkipTutorial);  //adds listeners to buttons
         skipNo.onClick.AddListener(ReturnToGame);
@@ -588,6 +591,7 @@ public class CardDisplay : MonoBehaviour
 
     private void SetSpeaker()   // Function that changes Speech bubble spike's position and rotation
     {
+        
         Vector3 newPosition = Vector3.zero;                 // Create new temp vector3 for position, set it to zero.
         Vector3 newAngle = Vector3.zero;                    // Create new temp vector3 for angle, set it to zero.
         bool _active = false;                               // Track if the spike should be active
@@ -595,19 +599,19 @@ public class CardDisplay : MonoBehaviour
         if (currentCard.setLeftAsSpeaker)                   // Check if the speaker is on the left..
         {
             _active = true;                                 // Object should be active
-            newPosition = speechBubbleSpike.transform.TransformPoint(-215f, 160f, 0f);// Save the local coordinate inside bubblespike transform into world space. 
+            newPosition = speechBubbleSpike.transform.TransformPoint(-215f, bubbleYPos, 0f);// Save the local coordinate inside bubblespike transform into world space. 
             newAngle.y = 180f;                              // Rotate the object.
         }
         if (currentCard.setRightAsSpeaker)                  // Same as for before, but new coordinates and rotation
         {
             _active = true;
-            newPosition = speechBubbleSpike.transform.TransformPoint(215f, 160f, 0f);
+            newPosition = speechBubbleSpike.transform.TransformPoint(215f, bubbleYPos, 0f);
             newAngle.y = 0f;
         }
         if (currentCard.setCenterAsSpeaker ||currentCard.setBigAsSpeaker) // Same as for before, but new coordinates and rotation
         {
             _active = true;
-            newPosition = speechBubbleSpike.transform.TransformPoint(-130f, 160f, 0f);
+            newPosition = speechBubbleSpike.transform.TransformPoint(-130f, bubbleYPos, 0f);
             newAngle.y = 180f;
         }
         if (!_active)                                       // If object was not triggered--
@@ -619,6 +623,8 @@ public class CardDisplay : MonoBehaviour
             speechBubbleSpike.transform.eulerAngles = newAngle;// Set new rotation
         }
     }
+
+   
 
     private void SetImageStatus()
     {

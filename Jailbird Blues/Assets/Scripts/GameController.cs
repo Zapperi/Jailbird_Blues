@@ -65,6 +65,7 @@ public class GameController : MonoBehaviour {
     public CardValues day3MorningCard;
     public CardValues day3EveningCard;
 
+    private bool mobileVersionInUse;
 
 
     void Awake()																	//when the game starts
@@ -74,6 +75,8 @@ public class GameController : MonoBehaviour {
         GainsTextHandler.Initialize();                                              // Activates the floating reputation gain element
         if (gameController == null)													//if there is no gamecontroller
 		{
+            if (SceneManager.GetActiveScene().name == "MobileScene")
+                mobileVersionInUse = true;
             //// !! DISABLED FOR DEBUGGIN !!
             for (int i = 0; i < allSwitches.Count; i++)                             // At the start of the game, make sure all switches are set to false.
                 allSwitches[i] = false;
@@ -727,7 +730,13 @@ public class GameController : MonoBehaviour {
             {
                 GameObject obtainedItem = Instantiate(itemImage, gainedAnimationSpawnpoint.transform);   // Spawn an item object
                 itemAnimator = obtainedItem.GetComponent<Animator>();                       // Access the animator component
-                itemAnimator.SetBool("ItemGained", true);                                   // Play the animation
+                if (mobileVersionInUse)
+                {
+                    Debug.Log("Playing Mobile Item Gain");
+                    itemAnimator.SetBool("ItemGainedMobile", true);
+                }
+                else    
+                    itemAnimator.SetBool("ItemGained", true);                                   // Play the animation
                 obtainedItem.GetComponent<Image>().sprite = allItemList[i].itemIcon;        // Set the item icon              
                 ItemReceivedAudioPlay();
                 Destroy(obtainedItem, 4f);                                                  // Destroy object after 3 seconds
