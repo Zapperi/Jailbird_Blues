@@ -18,7 +18,7 @@ MonoBehaviour:
   RepGuard: 0
   timeOfDay: 0
   storyPhase: 0
-  location: Cell
+  location: Cell - Morning
   backgroundImage: {fileID: 21300000, guid: 45101871e12fb8544924d61ab153420b, type: 3}
   foregroundImage: {fileID: 0}
   flipForegroundImageRight: 0
@@ -37,10 +37,10 @@ MonoBehaviour:
   bgAmbientAudio: {fileID: 0}
   musicDecrease: 0
   ambientDecrease: 0
-  musicOff: 0
-  ambientOff: 0
+  musicOff: 1
+  ambientOff: 1
   cardTextPerson: 
-  cardText: You wake up and head to the yard.
+  cardText: You wake up to a new day.
   logText: 
   endCard: 1
   timeCard: 1
@@ -104,11 +104,11 @@ MonoBehaviour:
   sfxFadeOutAt: 0
   sfxFadeOutSpeed: 0
   sfxAfterWait: 0
-  ppsHasFadeIn: 0
+  ppsHasFadeIn: 1
   ppsFadeMode: 0
   blackScreenStart: 0
   blackScreenTime: 0
   ppsFadeInSpeed: 0
   ppsShowCard: 0
-  ppsHasFadeOut: 0
+  ppsHasFadeOut: 1
   fadeOutSpeed: 0

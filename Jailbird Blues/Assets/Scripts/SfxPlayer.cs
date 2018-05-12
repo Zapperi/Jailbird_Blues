@@ -552,6 +552,7 @@ public class SfxPlayer : MonoBehaviour
     {
         if (timedIsWaiting)
         {
+            Debug.Log("waiting");
             timedIsWaiting = false;
             timeUntilStart = 0f;
             timeUntilFadeOut = 0f;
@@ -559,7 +560,7 @@ public class SfxPlayer : MonoBehaviour
             GameController.gameController.SFXFadesDone();
             return;
         }
-        if (timedSfxPlaying)
+        else if (timedSfxPlaying)
         {
             timedSfxPlaying = false;
             timedSfxIsFadingOut = true;
@@ -567,10 +568,13 @@ public class SfxPlayer : MonoBehaviour
             timedHasAfterWait = false;
             afterWaitTime = 0f;
         }
-        if (timedIsAfterWaiting)
+        else if (timedIsAfterWaiting)
         {
             afterWaitTime = 0f;
 
+        } else
+        {
+            GameController.gameController.SFXFadesDone();
         }
 
     }
