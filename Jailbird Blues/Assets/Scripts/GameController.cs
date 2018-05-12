@@ -90,14 +90,11 @@ public class GameController : MonoBehaviour {
 			day = 1;																//the game starts at day 1
             cigaretteCount = 0;
 			schedule = 3;     //Sets intro time                                                      //the day begins with the first activity in the schedule 
-            SetBackgroundAudio();
-            AddLogEvent();
-            topBar = cardDisplay.topBar;
-            logCurrentDayText = cardDisplay.logPageDayText;
+            
+           
             waitingForPPS = false;
             waitingForSFX = false;
-            cleaningUpFades = false;
-            GetComponent<OptionsSliders>().LoadSettings();
+            cleaningUpFades = false; 
             dayChangeCardDisplayed = false;
 
             //GetNextCard();
@@ -111,6 +108,11 @@ public class GameController : MonoBehaviour {
 
     private void Start()
     {
+        SetBackgroundAudio();
+        AddLogEvent();
+        logCurrentDayText = cardDisplay.logPageDayText;
+        topBar = cardDisplay.topBar;
+        GetComponent<OptionsSliders>().LoadSettings();
         gainedAnimationSpawnpoint = GameObject.Find("GainedAnimationSpawnpoint");
         lostAnimationSpawnpoint = GameObject.Find("LostAnimationSpawnpoint");
     }
