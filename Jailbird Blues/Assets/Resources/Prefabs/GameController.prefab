@@ -217,6 +217,10 @@ MonoBehaviour:
   dayChangeImage: {fileID: 0}
   dayChangeText: {fileID: 0}
   dayChangeCardDisplayed: 0
+  day2MorningCard: {fileID: 11400000, guid: 095748b661c43ee4aaceb459d1778110, type: 2}
+  day2EveningCard: {fileID: 11400000, guid: e6b89ec204cf8024c99765bc38a8f942, type: 2}
+  day3MorningCard: {fileID: 11400000, guid: 3806b6788a10ff546b3e2a16f7755502, type: 2}
+  day3EveningCard: {fileID: 0}
 --- !u!114 &114852098042609194
 MonoBehaviour:
   m_ObjectHideFlags: 1
