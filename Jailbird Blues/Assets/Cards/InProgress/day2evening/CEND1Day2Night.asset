@@ -36,9 +36,9 @@ MonoBehaviour:
   bgMusic: {fileID: 0}
   bgAmbientAudio: {fileID: 0}
   musicDecrease: 0
-  ambientDecrease: 0
-  musicOff: 0
-  ambientOff: 0
+  ambientDecrease: 0.8
+  musicOff: 1
+  ambientOff: 1
   cardTextPerson: 
   cardText: "Kowalski's sense of \xC4'fun'\xD6 differs from what\r\nyou've been accustomed
     to and you have \xC4nightmares\xD6\r of what the next day entails."

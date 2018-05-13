@@ -36,9 +36,9 @@ MonoBehaviour:
   bgMusic: {fileID: 0}
   bgAmbientAudio: {fileID: 0}
   musicDecrease: 0
-  ambientDecrease: 0
-  musicOff: 0
-  ambientOff: 0
+  ambientDecrease: 0.8
+  musicOff: 1
+  ambientOff: 1
   cardTextPerson: 
   cardText: "With \xC4effort\xD6 you manage to climb on your bed.\r Normally you would
     probably see \xC4nightmares\xD6 about\r Kowalski's sense of 'fun', but luckily

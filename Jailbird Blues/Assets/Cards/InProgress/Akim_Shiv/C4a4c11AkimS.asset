@@ -35,8 +35,8 @@ MonoBehaviour:
   foregroundItemImage: {fileID: 0}
   bgMusic: {fileID: 0}
   bgAmbientAudio: {fileID: 0}
-  musicDecrease: 0.5
-  ambientDecrease: 0.5
+  musicDecrease: 0.7
+  ambientDecrease: 0.7
   musicOff: 0
   ambientOff: 0
   cardTextPerson: 

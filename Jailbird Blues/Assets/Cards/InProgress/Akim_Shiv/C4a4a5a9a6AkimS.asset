@@ -33,9 +33,9 @@ MonoBehaviour:
   flipForegroundImageBig: 0
   setBigAsSpeaker: 0
   foregroundItemImage: {fileID: 0}
-  bgMusic: {fileID: 0}
+  bgMusic: {fileID: 8300000, guid: 1621388a37035e443a361e14f9bc7fde, type: 3}
   bgAmbientAudio: {fileID: 0}
-  musicDecrease: 0
+  musicDecrease: 0.5
   ambientDecrease: 0
   musicOff: 0
   ambientOff: 0
@@ -111,5 +111,5 @@ MonoBehaviour:
   blackScreenTime: 0
   ppsFadeInSpeed: 0
   ppsShowCard: 0
-  ppsHasFadeOut: 0
-  fadeOutSpeed: 0
+  ppsHasFadeOut: 1
+  fadeOutSpeed: 4

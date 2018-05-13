@@ -34,11 +34,11 @@ MonoBehaviour:
   setBigAsSpeaker: 0
   foregroundItemImage: {fileID: 0}
   bgMusic: {fileID: 0}
-  bgAmbientAudio: {fileID: 0}
+  bgAmbientAudio: {fileID: 8300000, guid: 13d38308477f3ee4f81aaf468c6b972a, type: 3}
   musicDecrease: 0
-  ambientDecrease: 0
+  ambientDecrease: 0.6
   musicOff: 1
-  ambientOff: 1
+  ambientOff: 0
   cardTextPerson: 
   cardText: "You would prefer not to go to your \xC4cell\xD6, but\r\nthis is prison
     and you have \xC4no choices\xD6."

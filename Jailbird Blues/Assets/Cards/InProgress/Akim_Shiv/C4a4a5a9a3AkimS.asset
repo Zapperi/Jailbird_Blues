@@ -33,9 +33,9 @@ MonoBehaviour:
   flipForegroundImageBig: 0
   setBigAsSpeaker: 0
   foregroundItemImage: {fileID: 0}
-  bgMusic: {fileID: 0}
+  bgMusic: {fileID: 8300000, guid: 7c345fbdd94e0574f8d286db2363b13a, type: 3}
   bgAmbientAudio: {fileID: 0}
-  musicDecrease: 0
+  musicDecrease: 0.5
   ambientDecrease: 0
   musicOff: 0
   ambientOff: 0

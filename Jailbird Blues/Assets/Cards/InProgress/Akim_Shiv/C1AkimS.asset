@@ -35,10 +35,10 @@ MonoBehaviour:
   foregroundItemImage: {fileID: 0}
   bgMusic: {fileID: 8300000, guid: 7eea11dbcecd56a43ade0ca1a2990976, type: 3}
   bgAmbientAudio: {fileID: 0}
-  musicDecrease: 0
+  musicDecrease: 0.5
   ambientDecrease: 0
   musicOff: 0
-  ambientOff: 0
+  ambientOff: 1
   cardTextPerson: 
   cardText: "You manage to get in your cell before \xC4Kowalski\xD6.\r\nWhile you're
     waiting for the punishment of the day,\r\nyou hear a loud \xC4commotion\xD6 from
@@ -106,10 +106,10 @@ MonoBehaviour:
   sfxFadeOutAt: 0
   sfxFadeOutSpeed: 0
   sfxAfterWait: 0
-  ppsHasFadeIn: 0
+  ppsHasFadeIn: 1
   ppsFadeMode: 0
-  blackScreenStart: 0
-  blackScreenTime: 0
+  blackScreenStart: 1
+  blackScreenTime: 0.2
   ppsFadeInSpeed: 0
   ppsShowCard: 0
   ppsHasFadeOut: 0
