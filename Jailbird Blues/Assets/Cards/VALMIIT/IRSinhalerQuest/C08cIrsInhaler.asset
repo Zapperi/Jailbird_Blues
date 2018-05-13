@@ -41,7 +41,7 @@ MonoBehaviour:
   ambientOff: 0
   cardTextPerson: Zack
   cardText: '"Sure, that''s more usefull than a lousy inhaler"'
-  logText: 
+  logText: You traded a cigarette for inhaler
   endCard: 0
   timeCard: 0
   onTop: 0

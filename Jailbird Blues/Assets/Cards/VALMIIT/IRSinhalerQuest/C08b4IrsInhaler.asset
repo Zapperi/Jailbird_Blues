@@ -42,7 +42,7 @@ MonoBehaviour:
   cardTextPerson: 
   cardText: "Guards run over to break off the fight and you get to slip away.\r\nThe
     punk threaten you while you run out."
-  logText: 
+  logText: Punks threatened you
   endCard: 0
   timeCard: 0
   onTop: 0

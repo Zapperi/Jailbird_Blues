@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: C0day2cellmorning
+  m_Name: C1day2cellmorning
   m_EditorClassIdentifier: 
   requiredSwitches: 
   RepIrs: 0
@@ -40,8 +40,8 @@ MonoBehaviour:
   musicOff: 1
   ambientOff: 0
   cardTextPerson: 
-  cardText: "You wake up in your dull grey \xC4cell\xD6. Still sore\r from the \xC4whomp\xD6
-    Kowalski gave you the night\r before."
+  cardText: "You wake up in your dull grey \xC4cell\xD6. You couldn't\r sleep well
+    for the expectation of sudden violence."
   logText: 
   endCard: 0
   timeCard: 0
@@ -108,7 +108,7 @@ MonoBehaviour:
   ppsHasFadeIn: 1
   ppsFadeMode: 0
   blackScreenStart: 1
-  blackScreenTime: 1
+  blackScreenTime: 2
   ppsFadeInSpeed: 0
   ppsShowCard: 0
   ppsHasFadeOut: 0

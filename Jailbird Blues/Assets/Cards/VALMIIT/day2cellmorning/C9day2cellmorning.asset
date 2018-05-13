@@ -42,7 +42,7 @@ MonoBehaviour:
   cardTextPerson: 
   cardText: "Kowalski let's you go and barges out of the cell.\r Your body shivers
     at the promise of a new day in\r the \xC4prison\xD6."
-  logText: 
+  logText: Kowalski needs a new payment
   endCard: 1
   timeCard: 1
   onTop: 0
