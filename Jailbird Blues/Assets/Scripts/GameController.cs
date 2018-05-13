@@ -1076,7 +1076,7 @@ public class GameController : MonoBehaviour {
     public void ReturnToMenu()
     {
         RememberSettings();                 //"save" the current values
-        SceneManager.LoadScene("Menu");     //change the scene
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex -1);     //change the scene
     }
 
 }
