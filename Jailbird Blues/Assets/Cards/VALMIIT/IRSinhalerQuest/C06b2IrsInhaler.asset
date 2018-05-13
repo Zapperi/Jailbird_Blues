@@ -40,8 +40,7 @@ MonoBehaviour:
   musicOff: 0
   ambientOff: 0
   cardTextPerson: You
-  cardText: "\"Can I have the inhaler and teach him a lesson?\"\r \nYou receive the
-    \xC4inhaler\xD6."
+  cardText: "\"Can I have the inhaler and teach him a lesson?\"\r "
   logText: 
   endCard: 0
   timeCard: 0
@@ -97,7 +96,7 @@ MonoBehaviour:
   option5GuardReputation: 0
   option5ObtainedSwitches: 
   option5RemovedSwitches: 
-  option5FollowCard: {fileID: 11400000, guid: 171d7394aaf4b2443b9fbe4a40cc0bd2, type: 2}
+  option5FollowCard: {fileID: 11400000, guid: ba34c9e59d564e3458c24226818a3620, type: 2}
   isTimeBasedCard: 0
   sfxPrewait: 0
   sfx: {fileID: 0}

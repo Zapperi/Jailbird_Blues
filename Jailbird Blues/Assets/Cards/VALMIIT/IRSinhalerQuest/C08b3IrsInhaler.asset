@@ -40,8 +40,8 @@ MonoBehaviour:
   musicOff: 0
   ambientOff: 0
   cardTextPerson: 
-  cardText: "A punk guy gets you in an armlock and other guy punches you in the stomach.\r\nThey
-    throw you on the floor and kick you."
+  cardText: "A punk guy gets you in an armlock and other guy punches you in the stomach.\r
+    They throw you on the floor and kick you."
   logText: 
   endCard: 0
   timeCard: 0

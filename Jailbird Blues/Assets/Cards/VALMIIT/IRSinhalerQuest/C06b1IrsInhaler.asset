@@ -40,7 +40,7 @@ MonoBehaviour:
   musicOff: 0
   ambientOff: 0
   cardTextPerson: You
-  cardText: "\"Haha that nerd wanted me to get his inhaler.\" \r\nPunks laugh."
+  cardText: "\"Haha that nerd wanted me to get his inhaler.\" \r\n"
   logText: 
   endCard: 0
   timeCard: 0

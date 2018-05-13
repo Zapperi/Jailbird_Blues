@@ -40,9 +40,9 @@ MonoBehaviour:
   musicOff: 0
   ambientOff: 0
   cardTextPerson: Zack
-  cardText: He lets go "Yeah, you would make a rad punk, that's for sure. We'll keep
-    an eye on you"
-  logText: 
+  cardText: '"Yeah, you would make a rad punk, that''s for sure. We''ll keep an eye
+    on you"'
+  logText: Punks like your style
   endCard: 0
   timeCard: 0
   onTop: 0

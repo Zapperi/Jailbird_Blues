@@ -41,7 +41,7 @@ MonoBehaviour:
   ambientOff: 0
   cardTextPerson: 
   cardText: "You look at Simon with a smirk on your face. You throw the inhaler on
-    the floor and smash it to pieces.\r\nSimon starts crying and runs away."
+    the floor and smash it to pieces.\r Simon starts crying and runs away."
   logText: 
   endCard: 0
   timeCard: 0

@@ -40,8 +40,7 @@ MonoBehaviour:
   musicOff: 0
   ambientOff: 0
   cardTextPerson: Zack
-  cardText: "\"Damn dude, that... was... brutal!\"\r He grabs your hair and mumbles
-    \"Yeah that would make a nice mohawk...\""
+  cardText: '"Damn dude, that... was... brutal!"'
   logText: 
   endCard: 0
   timeCard: 0
