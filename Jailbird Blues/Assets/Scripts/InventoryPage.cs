@@ -24,13 +24,10 @@ public class InventoryPage : MonoBehaviour {
     
 
     void Start()
-    {
-        RefreshInventory();                                     // Call RefreshInventory function when invetory is opened
-        if (SceneManager.GetActiveScene().name == "MobileScene")
-            gameController = GameObject.Find("GameController_Mobile");           
-        else
-            gameController = GameObject.Find("GameController");     // Set the reference to the GameController
+    {                                 
+        gameController = GameObject.Find("GameController");     // Set the reference to the GameController
         itemList = gameController.GetComponent<GameController>().allItemList;
+        RefreshInventory();                                         // Call RefreshInventory function when invetory is opened
     }
 
     // Refresh inventory by removing all items and calling AddItems function..

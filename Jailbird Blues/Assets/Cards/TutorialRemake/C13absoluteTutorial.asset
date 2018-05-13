@@ -40,7 +40,7 @@ MonoBehaviour:
   musicOff: 0
   ambientOff: 0
   cardTextPerson: Freddie
-  cardText: "The financial heavyweights \xC4I.R.S.\xD6,\r musclebound \xC4Protein
+  cardText: "\"The financial heavyweights \xC4I.R.S.\xD6,\r musclebound \xC4Protein
     shakers\xD6 and the\r chaotic \xC4Punks\xD6.\"\r\n"
   logText: 
   endCard: 0

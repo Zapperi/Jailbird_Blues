@@ -40,7 +40,7 @@ MonoBehaviour:
   musicOff: 0
   ambientOff: 0
   cardTextPerson: 
-  cardText: "Finally your tray get's slopped with mushy\r nutrition and you see \xC4Freddie\xD6
+  cardText: "Finally your tray gets slopped with mushy\r nutrition and you see \xC4Freddie\xD6
     standing and\r waiting for you.\r"
   logText: 
   endCard: 0
