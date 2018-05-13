@@ -78,6 +78,8 @@ public class GameController : MonoBehaviour {
 		{
             if (SceneManager.GetActiveScene().name == "MobileScene")
                 mobileVersionInUse = true;
+            else
+                keysEnabled = true;
             //// !! DISABLED FOR DEBUGGIN !!
             for (int i = 0; i < allSwitches.Count; i++)                             // At the start of the game, make sure all switches are set to false.
                 allSwitches[i] = false;
