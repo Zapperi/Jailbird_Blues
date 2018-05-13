@@ -426,6 +426,9 @@ public class CardDisplay : MonoBehaviour
 
     private void CheckKeyPresses()                              // Function that checks for notebook keyboard shortcuts. Also update notebook whenever a key is pressed.
     {
+        if (!GameController.gameController.keysEnabled)
+            return;
+
         if (Input.GetButtonDown("Notebook"))
         {
             noteBook.GetComponent<NoteBook>().UpdateNotebook();

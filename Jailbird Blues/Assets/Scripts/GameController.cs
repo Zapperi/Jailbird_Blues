@@ -64,7 +64,8 @@ public class GameController : MonoBehaviour {
     public CardValues day2EveningCard;
     public CardValues day3MorningCard;
     public CardValues day3EveningCard;
-
+    [HideInInspector]
+    public bool keysEnabled;
     private bool mobileVersionInUse;
 
 
