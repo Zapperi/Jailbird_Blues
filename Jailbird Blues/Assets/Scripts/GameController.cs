@@ -64,6 +64,8 @@ public class GameController : MonoBehaviour {
     public CardValues day2EveningCard;
     public CardValues day3MorningCard;
     public CardValues day3EveningCard;
+    public CardValues day4MorKowGone;
+    public CardValues day4MorKowHere;
     [HideInInspector]
     public bool keysEnabled;
     private bool mobileVersionInUse;
@@ -250,6 +252,16 @@ public class GameController : MonoBehaviour {
         } else if (nextCardDay == 3 && nextCardtTime == 3)
         {
             next = day3EveningCard;
+            isEvent = true;
+        } else if (nextCardDay == 4 && nextCardtTime == 0)
+        {
+            if (allSwitches[7])
+            {
+                next = day4MorKowGone;
+            } else
+            {
+                next = day4MorKowHere;
+            }
             isEvent = true;
         }
         if (isEvent)

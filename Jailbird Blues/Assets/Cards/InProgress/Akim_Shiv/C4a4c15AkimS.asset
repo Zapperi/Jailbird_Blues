@@ -95,7 +95,7 @@ MonoBehaviour:
   option5PunkReputation: 0
   option5ShakeReputation: 0
   option5GuardReputation: 0
-  option5ObtainedSwitches: 
+  option5ObtainedSwitches: 07000000
   option5RemovedSwitches: 
   option5FollowCard: {fileID: 0}
   isTimeBasedCard: 0
