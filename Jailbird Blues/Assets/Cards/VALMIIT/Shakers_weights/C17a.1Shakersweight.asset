@@ -37,9 +37,9 @@ MonoBehaviour:
   bgAmbientAudio: {fileID: 0}
   musicDecrease: 0.5
   ambientDecrease: 0.5
-  musicOff: 0
+  musicOff: 1
   ambientOff: 0
-  cardTextPerson: Shaker Goon
+  cardTextPerson: Jabari
   cardText: "\"Bro, bro, hey bro you gotta \xC4wake up\xD6 bro...\"\r"
   logText: 
   endCard: 0

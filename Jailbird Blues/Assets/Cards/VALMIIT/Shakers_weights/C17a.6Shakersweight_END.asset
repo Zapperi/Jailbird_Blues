@@ -37,11 +37,11 @@ MonoBehaviour:
   bgAmbientAudio: {fileID: 0}
   musicDecrease: 0.5
   ambientDecrease: 0.5
-  musicOff: 0
-  ambientOff: 0
+  musicOff: 1
+  ambientOff: 1
   cardTextPerson: 
   cardText: "You rise up and legs wobbling walk away. Maybe you pushed it a little
-    too much, but those brutes \xC4sure seemed pleased.\xD6\r\n"
+    too much, but those brutes \xC4sure seemed pleased\xD6\r.\n"
   logText: I lifted with the Protein Shakers today, I pushed my limits and blacked
     out. They seemed to pleased thought.
   endCard: 1

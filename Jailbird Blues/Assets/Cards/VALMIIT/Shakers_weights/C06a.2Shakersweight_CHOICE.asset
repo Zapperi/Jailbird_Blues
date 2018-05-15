@@ -39,7 +39,7 @@ MonoBehaviour:
   ambientDecrease: 0.5
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: You
+  cardTextPerson: How do you respond?
   cardText: 
   logText: 
   endCard: 0
@@ -52,7 +52,7 @@ MonoBehaviour:
   Option1On: 1
   option1ReqSwitches: 
   option1text: '"Yeah sure, why not."'
-  option1IrsReputation: 0
+  option1IrsReputation: -2
   option1PunkReputation: 0
   option1ShakeReputation: 2
   option1GuardReputation: 0

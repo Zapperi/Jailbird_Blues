@@ -39,7 +39,7 @@ MonoBehaviour:
   ambientDecrease: 0.5
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: You
+  cardTextPerson: How do you respond?
   cardText: 
   logText: 
   endCard: 0

@@ -37,8 +37,8 @@ MonoBehaviour:
   bgAmbientAudio: {fileID: 0}
   musicDecrease: 0.5
   ambientDecrease: 0.5
-  musicOff: 0
-  ambientOff: 0
+  musicOff: 1
+  ambientOff: 1
   cardTextPerson: 
   cardText: "You walk away from the exercise area, feeling the burn on your arms.
     \xC4That was your absolute limit\xD6, you think you could have passed out if you

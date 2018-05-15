@@ -39,7 +39,7 @@ MonoBehaviour:
   ambientDecrease: 0.5
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: Shaker goon
+  cardTextPerson: Jabari
   cardText: "\r\"So you \xC4wanna lift\xD6 some weights little bro?\""
   logText: 
   endCard: 0

@@ -39,7 +39,7 @@ MonoBehaviour:
   ambientDecrease: 0.5
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: You
+  cardTextPerson: What do you say?
   cardText: 
   logText: 
   endCard: 0
@@ -52,9 +52,9 @@ MonoBehaviour:
   Option1On: 1
   option1ReqSwitches: 
   option1text: '"Yeah, why not."'
-  option1IrsReputation: 0
+  option1IrsReputation: -1
   option1PunkReputation: 0
-  option1ShakeReputation: 2
+  option1ShakeReputation: 1
   option1GuardReputation: 0
   option1ObtainedSwitches: 
   option1RemovedSwitches: 
@@ -62,7 +62,7 @@ MonoBehaviour:
   Option2On: 1
   option2ReqSwitches: 
   option2text: '"I like my spaghettis.."'
-  option2IrsReputation: 0
+  option2IrsReputation: 2
   option2PunkReputation: 0
   option2ShakeReputation: -4
   option2GuardReputation: 0

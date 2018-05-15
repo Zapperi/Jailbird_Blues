@@ -39,7 +39,7 @@ MonoBehaviour:
   ambientDecrease: 0.5
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: 'Random inmate:'
+  cardTextPerson: Random inmate
   cardText: "\"Yeah, I guess that's close enough for the debt.\r Consider my lenience
     as a parting gift.\"\r\n"
   logText: 

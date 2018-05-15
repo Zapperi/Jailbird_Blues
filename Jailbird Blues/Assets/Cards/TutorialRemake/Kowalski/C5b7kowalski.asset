@@ -41,7 +41,7 @@ MonoBehaviour:
   ambientOff: 0
   cardTextPerson: Kowalski
   cardText: "\"Just making clear that this is \xC4my cell\xD6 and\r you're just the
-    tenant. Which means you pay\r me at the end of each day.\""
+    tenant. Which means you pay\r me at the \xC4end of each day\xD6.\""
   logText: 
   endCard: 0
   timeCard: 0

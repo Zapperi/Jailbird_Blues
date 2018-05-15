@@ -19,7 +19,7 @@ MonoBehaviour:
   timeOfDay: 0
   storyPhase: 0
   location: Messhall
-  backgroundImage: {fileID: 21300000, guid: 86e5709f7c480c24da9b550ac6d54641, type: 3}
+  backgroundImage: {fileID: 21300000, guid: 7fb1c552b903e4a448858101c4ac6fba, type: 3}
   foregroundImage: {fileID: 0}
   flipForegroundImageRight: 0
   setRightAsSpeaker: 0

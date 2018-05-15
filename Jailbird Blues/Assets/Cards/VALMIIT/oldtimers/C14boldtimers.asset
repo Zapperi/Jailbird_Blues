@@ -20,7 +20,7 @@ MonoBehaviour:
   storyPhase: 0
   location: 
   backgroundImage: {fileID: 21300000, guid: 7c5e619a5c03cc943a4b68321a14beb1, type: 3}
-  foregroundImage: {fileID: 21300000, guid: 60c5302a1c8acf24fa976f1e8da49a6a, type: 3}
+  foregroundImage: {fileID: 21300000, guid: b5d5daf05e8b01744a64f2d0cf7316f0, type: 3}
   flipForegroundImageRight: 0
   setRightAsSpeaker: 0
   foregroundImage2: {fileID: 21300000, guid: 3242392f481b5424893e956bd29406a1, type: 3}
