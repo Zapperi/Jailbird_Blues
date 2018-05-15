@@ -40,8 +40,8 @@ MonoBehaviour:
   musicOff: 0
   ambientOff: 0
   cardTextPerson: 
-  cardText: He gets up and goes behind the shelves. The guard returns with a book
-    in hand.
+  cardText: He gets up and goes behind the shelves. Stanley returns with a book in
+    hand.
   logText: 
   endCard: 0
   timeCard: 0

@@ -52,9 +52,9 @@ MonoBehaviour:
   Option1On: 1
   option1ReqSwitches: 
   option1text: '"Yes."'
-  option1IrsReputation: 0
-  option1PunkReputation: 0
-  option1ShakeReputation: 0
+  option1IrsReputation: -3
+  option1PunkReputation: -3
+  option1ShakeReputation: -3
   option1GuardReputation: 10
   option1ObtainedSwitches: 
   option1RemovedSwitches: 

@@ -52,20 +52,20 @@ MonoBehaviour:
   Option1On: 1
   option1ReqSwitches: 
   option1text: '"The hell are you looking at?!"'
-  option1IrsReputation: 3
-  option1PunkReputation: 3
-  option1ShakeReputation: 3
-  option1GuardReputation: -5
+  option1IrsReputation: 2
+  option1PunkReputation: 2
+  option1ShakeReputation: 2
+  option1GuardReputation: -4
   option1ObtainedSwitches: 
   option1RemovedSwitches: 
   option1FollowCard: {fileID: 11400000, guid: fd54cb939e51ee3499404a0c76aed4ab, type: 2}
   Option2On: 1
   option2ReqSwitches: 
   option2text: '"Do I need to call a guard?"'
-  option2IrsReputation: -3
-  option2PunkReputation: -3
-  option2ShakeReputation: -3
-  option2GuardReputation: 5
+  option2IrsReputation: -2
+  option2PunkReputation: -2
+  option2ShakeReputation: -2
+  option2GuardReputation: 4
   option2ObtainedSwitches: 
   option2RemovedSwitches: 
   option2FollowCard: {fileID: 11400000, guid: 37989157b51c4d047be18ad4ff80647d, type: 2}

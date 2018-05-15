@@ -39,7 +39,7 @@ MonoBehaviour:
   ambientDecrease: 0.5
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: Shaker Goon
+  cardTextPerson: Jabari
   cardText: "\u201CPfft, you suck bro.\u201D"
   logText: 
   endCard: 0

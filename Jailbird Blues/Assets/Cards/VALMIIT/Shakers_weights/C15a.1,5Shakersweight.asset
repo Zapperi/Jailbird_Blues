@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: C13a.2Shakersweight
+  m_Name: C15a.1,5Shakersweight
   m_EditorClassIdentifier: 
   requiredSwitches: 
   RepIrs: 0
@@ -40,7 +40,7 @@ MonoBehaviour:
   musicOff: 0
   ambientOff: 0
   cardTextPerson: Jabari
-  cardText: "\"Good good, you can do it bro! \xC4I'll add some weights now.\xD6\"\r\n"
+  cardText: "\"Yeah bro keep it up!\"\r"
   logText: 
   endCard: 0
   timeCard: 0
@@ -96,7 +96,7 @@ MonoBehaviour:
   option5GuardReputation: 0
   option5ObtainedSwitches: 
   option5RemovedSwitches: 
-  option5FollowCard: {fileID: 11400000, guid: 556e107ca0c07ac439ddee1d1846c3dd, type: 2}
+  option5FollowCard: {fileID: 11400000, guid: 5236562e7fb9583449a5c7b1cbe7c50e, type: 2}
   isTimeBasedCard: 0
   sfxPrewait: 0
   sfx: {fileID: 0}
@@ -107,7 +107,7 @@ MonoBehaviour:
   ppsHasFadeIn: 0
   ppsFadeMode: 0
   blackScreenStart: 0
-  blackScreenTime: 0
+  blackScreenTime: 1
   ppsFadeInSpeed: 0
   ppsShowCard: 0
   ppsHasFadeOut: 0

@@ -61,7 +61,7 @@ MonoBehaviour:
   option1FollowCard: {fileID: 11400000, guid: cae973452a505674abb993a662edbaa7, type: 2}
   Option2On: 1
   option2ReqSwitches: 
-  option2text: The Protein shakers
+  option2text: The Protein shakers.
   option2IrsReputation: 0
   option2PunkReputation: 0
   option2ShakeReputation: 0

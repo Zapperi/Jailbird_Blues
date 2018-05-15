@@ -39,7 +39,7 @@ MonoBehaviour:
   ambientDecrease: 0.5
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: Shaker Goon
+  cardTextPerson: Jabari
   cardText: "\u201CYeah you better go, \xC4this is our turf!\xD6\u201D\r\n"
   logText: 
   endCard: 0

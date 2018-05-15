@@ -61,9 +61,9 @@ MonoBehaviour:
   option1FollowCard: {fileID: 11400000, guid: c37c65e1b8aedb641840303e6724390a, type: 2}
   Option2On: 1
   option2ReqSwitches: 
-  option2text: Throw a book at him
+  option2text: Throw a book at him.
   option2IrsReputation: 0
-  option2PunkReputation: 0
+  option2PunkReputation: 3
   option2ShakeReputation: 0
   option2GuardReputation: -3
   option2ObtainedSwitches: 
@@ -71,7 +71,7 @@ MonoBehaviour:
   option2FollowCard: {fileID: 11400000, guid: 61039ca9ebfd4514ba60aac4c67dd25b, type: 2}
   Option3On: 1
   option3ReqSwitches: 
-  option3text: Read quietly
+  option3text: Read quietly.
   option3IrsReputation: 0
   option3PunkReputation: 0
   option3ShakeReputation: 0
