@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f0ae9092cd86842a7463fd06b122b3, type: 3}
-  m_Name: C2a1_FreeCigarette
+  m_Name: C2a1_FreeCigarette 1
   m_EditorClassIdentifier: 
   requiredSwitches: 
   RepIrs: 0
@@ -25,7 +25,7 @@ MonoBehaviour:
   setRightAsSpeaker: 0
   foregroundImage2: {fileID: 21300000, guid: ec7f3a9152691a345b794c0a29ce19b9, type: 3}
   flipForegroundImageLeft: 0
-  setLeftAsSpeaker: 0
+  setLeftAsSpeaker: 1
   foregroundImage3: {fileID: 0}
   flipForegroundImageCenter: 0
   setCenterAsSpeaker: 0
@@ -39,9 +39,8 @@ MonoBehaviour:
   ambientDecrease: 0.8
   musicOff: 0
   ambientOff: 0
-  cardTextPerson: 
-  cardText: "As you finish the cigarette, you cough and spit with the taste of tar
-    in your mouth.\r"
+  cardTextPerson: Mr.Shady
+  cardText: '"Now, there is something I need you to do for me as you owe me a favour."'
   logText: 
   endCard: 0
   timeCard: 0
@@ -97,7 +96,7 @@ MonoBehaviour:
   option5GuardReputation: 0
   option5ObtainedSwitches: 
   option5RemovedSwitches: 
-  option5FollowCard: {fileID: 11400000, guid: 337d8c90751a1b449a9a162d59923c4d, type: 2}
+  option5FollowCard: {fileID: 11400000, guid: 4f27501c4ab9dca41b409f02b2ab0b68, type: 2}
   isTimeBasedCard: 0
   sfxPrewait: 0
   sfx: {fileID: 0}
