@@ -40,10 +40,8 @@ MonoBehaviour:
   musicOff: 0
   ambientOff: 0
   cardTextPerson: 
-  cardText: 'As the guard walks away, you gather youself up and get back into the
-    bed.
-
-    You are unable to get a good sleep due to agonizing pain in your abdomen.'
+  cardText: As the guard walks away, you gather youself up and get back into the bed.
+    You are unable to get a good sleep due to agonizing pain in your abdomen.
   logText: I got hit by a guard for calling him a pig.
   endCard: 1
   timeCard: 1

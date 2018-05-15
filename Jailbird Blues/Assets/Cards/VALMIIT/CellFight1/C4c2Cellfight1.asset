@@ -19,7 +19,7 @@ MonoBehaviour:
   timeOfDay: 0
   storyPhase: 0
   location: 
-  backgroundImage: {fileID: 21300000, guid: 1be209411c3441a45b447a959d362a33, type: 3}
+  backgroundImage: {fileID: 21300000, guid: 41378df58de6f1f488db315787fdc115, type: 3}
   foregroundImage: {fileID: 0}
   flipForegroundImageRight: 0
   setRightAsSpeaker: 0
@@ -37,8 +37,8 @@ MonoBehaviour:
   bgAmbientAudio: {fileID: 0}
   musicDecrease: 0
   ambientDecrease: 0.7
-  musicOff: 0
-  ambientOff: 0
+  musicOff: 1
+  ambientOff: 1
   cardTextPerson: 
   cardText: "The guards take note that \xC4you did not take part\xD6 in the chanting."
   logText: 
