@@ -68,7 +68,7 @@ public class GameController : MonoBehaviour {
     public CardValues day4MorKowHere;
     [HideInInspector]
     public bool keysEnabled;
-    private bool mobileVersionInUse;
+    public bool mobileVersionInUse;
 
 
     void Awake()																	//when the game starts
@@ -754,7 +754,7 @@ public class GameController : MonoBehaviour {
                 }
                 else    
                     itemAnimator.SetBool("ItemGained", true);                                   // Play the animation
-                obtainedItem.GetComponent<Image>().sprite = allItemList[i].itemIcon;        // Set the item icon              
+                obtainedItem.transform.Find("Image").GetComponent<Image>().sprite = allItemList[i].itemIcon;        // Set the item icon              
                 ItemReceivedAudioPlay();
                 Destroy(obtainedItem, 4f);                                                  // Destroy object after 3 seconds
             }
@@ -770,8 +770,8 @@ public class GameController : MonoBehaviour {
                 GameObject lostItem = Instantiate(itemImage, lostAnimationSpawnpoint.transform);   // Spawn the object under canvas
                 itemAnimator = lostItem.GetComponent<Animator>();                       // Reference to animator
                 itemAnimator.SetBool("ItemLost", true);                                     // Play animation
-                lostItem.GetComponent<Image>().sprite = allItemList[i].itemIcon;        // Get the icon of the item
-                Destroy(lostItem, 4f);                                                  // Destroy the object in 3 seconds.
+                lostItem.transform.Find("Image").GetComponent<Image>().sprite = allItemList[i].itemIcon;        // Get the icon of the item
+                Destroy(lostItem, 4f);                                                  // Destroy the object in 4 seconds.
             }
         }
     }

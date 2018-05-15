@@ -18,8 +18,8 @@ public class ItemDescriptionPopUp : MonoBehaviour, IPointerEnterHandler, IPointe
     // At the start, get the references from the objects.
     void OnEnable()
     {
-        ItemDescBackground = gameObject.transform.Find("ItemImageBackground").GetComponent<Image>();
-        ItemDescText = gameObject.transform.Find("ItemImageBackground").transform.Find("ItemImageText").GetComponent<Text>();
+        ItemDescBackground = gameObject.transform.Find("ItemDescBackground").GetComponent<Image>();
+        ItemDescText = gameObject.transform.Find("ItemDescBackground").transform.Find("ItemDescText").GetComponent<Text>();
     }
 
     // When mouse is over the object..
