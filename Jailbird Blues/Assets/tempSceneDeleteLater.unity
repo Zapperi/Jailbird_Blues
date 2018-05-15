@@ -331,6 +331,12 @@ Prefab:
       propertyPath: m_Value
       value: 0.01
       objectReference: {fileID: 0}
+    - target: {fileID: 114694709980897720, guid: df67972d0e99a6d428df8e1f930ac1a0,
+        type: 2}
+      propertyPath: currentCard
+      value: 
+      objectReference: {fileID: 11400000, guid: a99245e1b8cc5bf4dabfd2cdf1c12f75,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: df67972d0e99a6d428df8e1f930ac1a0, type: 2}
   m_IsPrefabParent: 0
@@ -593,6 +599,12 @@ Prefab:
       propertyPath: scaleSlider
       value: 
       objectReference: {fileID: 1246805457}
+    - target: {fileID: 114743166947194950, guid: a5ca0da45ae9cf94f8ba95b70b239f82,
+        type: 2}
+      propertyPath: currentCard
+      value: 
+      objectReference: {fileID: 11400000, guid: a99245e1b8cc5bf4dabfd2cdf1c12f75,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a5ca0da45ae9cf94f8ba95b70b239f82, type: 2}
   m_IsPrefabParent: 0

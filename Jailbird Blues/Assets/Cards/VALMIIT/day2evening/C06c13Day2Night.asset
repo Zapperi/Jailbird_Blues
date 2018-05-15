@@ -105,7 +105,7 @@ MonoBehaviour:
   sfxFadeOutAt: 0
   sfxFadeOutSpeed: 0
   sfxAfterWait: 0
-  ppsHasFadeIn: 1
+  ppsHasFadeIn: 0
   ppsFadeMode: 0
   blackScreenStart: 0
   blackScreenTime: 0
