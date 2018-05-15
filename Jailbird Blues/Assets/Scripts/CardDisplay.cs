@@ -685,7 +685,10 @@ public class CardDisplay : MonoBehaviour
         {
             if (!GameController.gameController.previousCard.endCard)    //if previous card was not an endCard
             {
-                popUpText.fontSize = 20;
+                if (GameController.gameController.mobileVersionInUse)
+                    popUpText.fontSize = 30;
+                else
+                    popUpText.fontSize = 20;
                 if (GameController.gameController.previousCard.cardText == "")
                     popUpText.text = "You chose: <color=#" + highlightColorHex + ">" + previousChoice + " </color>";
                 else
