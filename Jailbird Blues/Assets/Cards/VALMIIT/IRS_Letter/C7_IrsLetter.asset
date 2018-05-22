@@ -69,7 +69,7 @@ MonoBehaviour:
   option2ObtainedSwitches: 
   option2RemovedSwitches: 
   option2FollowCard: {fileID: 11400000, guid: efc07faeab05feb4eab8e0d54893805a, type: 2}
-  Option3On: 1
+  Option3On: 0
   option3ReqSwitches: 
   option3text: 
   option3IrsReputation: 0
@@ -79,7 +79,7 @@ MonoBehaviour:
   option3ObtainedSwitches: 
   option3RemovedSwitches: 
   option3FollowCard: {fileID: 0}
-  Option4On: 1
+  Option4On: 0
   option4ReqSwitches: 
   option4text: 
   option4IrsReputation: 0
