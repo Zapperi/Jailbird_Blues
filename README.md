@@ -1,3 +1,6 @@
+PC build download link: https://drive.google.com/open?id=1NoMcmAfFRuBorPCnouRa11yOSAlI4mWE
+Android build download link: https://drive.google.com/open?id=1T2fFsQKbASntSGz4FCN8Y0a50KOXJFO4
+
 Made by
 
 Designers:
